@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Відомість про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Відомості про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Відомість про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Відомості про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Відомості про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Відомостей про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Відомості про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Відомостям про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Відомістю про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Відомостями про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Відомості про оптимізацію</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Відомостях про оптимізацію</value>
+    </caseValues>
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Номер оптимізації даних</nameFieldLabel>
+</CustomObjectTranslation>

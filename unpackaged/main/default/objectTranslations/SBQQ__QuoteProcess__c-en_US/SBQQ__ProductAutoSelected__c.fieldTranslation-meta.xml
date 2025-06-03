@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox to determine whether the product is auto selected if it&apos;s the only one returned by a search. --></help>
+        <label><!-- Auto Select Product? --></label>
+        <name>SBQQ__ProductAutoSelected__c</name>
+    </CustomFieldTranslation>

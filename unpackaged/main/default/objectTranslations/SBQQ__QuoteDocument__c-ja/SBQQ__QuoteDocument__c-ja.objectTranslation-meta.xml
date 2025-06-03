@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積ドキュメント</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <nameFieldLabel>ドキュメント名</nameFieldLabel>
+    <webLinks>
+        <label><!-- Email --></label>
+        <name>SBQQ__Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View --></label>
+        <name>SBQQ__View</name>
+    </webLinks>
+</CustomObjectTranslation>

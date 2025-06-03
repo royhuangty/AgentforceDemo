@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si el Aprobador es un grupo en vez de un único usuario, rellene con el Id. de grupo</help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </CustomFieldTranslation>

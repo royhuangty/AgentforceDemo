@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzenie FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzenia FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzenie FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzenia FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzenia FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzeń FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzeniu FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzeniom FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzeniem FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzeniami FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value><!-- Wydarzeniu FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value><!-- Wydarzeniach FSLHealth --></value>
+    </caseValues>
+    
+    
+    <gender><!-- Neuter --></gender>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Der Modus &quot;Extern&quot; stellt eine Erstattung dar, die in einem externen System vorgenommen wurde, und &quot;Elektronisch&quot; bezeichnet eine Erstattung, die von Salesforce verarbeitet wird.</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </CustomFieldTranslation>

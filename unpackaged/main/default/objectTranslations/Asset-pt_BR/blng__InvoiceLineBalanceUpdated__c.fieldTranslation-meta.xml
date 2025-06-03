@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O horário em que os saldos de linha da fatura foram atualizados pela última vez com sucesso.</help>
+        <label><!-- Invoice Line Balance Updated --></label>
+        <name>blng__InvoiceLineBalanceUpdated__c</name>
+    </CustomFieldTranslation>

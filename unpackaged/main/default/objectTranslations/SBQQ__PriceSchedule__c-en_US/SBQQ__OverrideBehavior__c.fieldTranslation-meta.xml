@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Determines if the current Discount Tier that the product falls within is editable, if all Discount Tiers are editable, or none. --></help>
+        <label><!-- Override Behavior --></label>
+        <name>SBQQ__OverrideBehavior__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current Tier Only</masterLabel>
+            <translation><!-- Current Tier Only --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

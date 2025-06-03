@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>カスタムスクリプト</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Custom Script Layout</layout>
+        <sections>
+            <label>変換</label>
+            <section>Transpiling</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>スクリプト名</nameFieldLabel>
+</CustomObjectTranslation>

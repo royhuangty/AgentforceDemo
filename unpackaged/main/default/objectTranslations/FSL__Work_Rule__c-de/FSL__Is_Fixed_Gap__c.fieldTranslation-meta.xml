@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wenn aktiviert, basiert der Zeitabstand zwischen den Serviceeinsätzen auf dem Feld für den Mindestabstand, ohne den Weg zu berechnen.</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

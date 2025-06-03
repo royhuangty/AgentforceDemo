@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>SDO Professional Guest Users</audienceName>
+    <container>OldProf3</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>UserType</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Guest</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>1f3d18e6-6579-473b-bed7-1bebaa88197c$#$693d7400-8ac1-499d-b652-e56f4c6b1642</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>guestscheduling_Flow_Component</targetValue>
+        </target>
+        <target>
+            <groupName>19496873-f678-4dc7-ac65-6edd8b42c177$#$07c4c5d5-f1e6-4483-9b5d-5f1cd60d13e4</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Flex_Rich_Content_Editor_1_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

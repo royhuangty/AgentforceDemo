@@ -1,0 +1,109 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: #9faab5;
+    padding-left: 5px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-left {
+    /*top: -27px;*/
+    bottom: auto;
+    right: 128%;  
+}
+
+.tooltip-left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
+
+.slds-scope .slds-input.short-input {
+    max-width: 72px;
+}
+
+.slds-scope .slds-select.short-input {
+    max-width: 64px;
+}
+
+.slds-scope .live-summary-event_header {
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid $color-border;
+    background-color: $page-header-color-background;
+
+    .slds-icon.ma-icon {
+        font-size: 24px;
+        line-height: 1;
+        color: rgb(112, 110, 107);
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.slds-scope .live-summary-event_body {
+    border-radius: 0 0 4px 4px;
+}
+
+.stopAssociationDiv {
+    
+    td {
+        padding-right: 8px;
+        padding-bottom: 3px;
+        padding-top: 3px;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.slds-scope .slds-page-header {
+    z-index: 2 !important;
+}
+
+.slds-scope #start-date.slds-input[readonly],
+.slds-scope #end-date.slds-input[readonly] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 219, 218);
+    padding: 0 1rem 0 .75rem;
+}
+
+#datepicker-group .slds-form-element.slds-size_1-of-2:nth-child(2){
+    margin-left: .5rem;
+    padding-left: 0;
+}
+
+//growl - toast errors
+.growl-notice {
+    background: $color-green !important;
+}
+.growl-error {
+    background: $color-red !important;
+}
+
+#growls-default {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+}

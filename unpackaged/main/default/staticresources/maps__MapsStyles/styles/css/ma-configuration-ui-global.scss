@@ -1,0 +1,18 @@
+@import 'modules/colors.scss';
+@import 'modules/mixins.scss';
+@import 'modules/flexbox.scss';
+@import 'modules/breakpoints.scss';
+
+//salesforce lightning design system-specific overrides
+@import 'partials/slds-navigation.scss';
+@import 'partials/slds-new-styles.scss';
+@import 'partials/slds-modals.scss';
+
+//salesforce-specific overrides
+@import 'partials/sf-layout.scss';
+
+//Maps-specific overrides
+@import 'partials/ma-page-headers';
+
+//Maps configuration-specific 
+@import 'partials/ma-configuration-page.scss';

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Process(es) Impacted --></label>
+        <name>inov8__Processes_Impacted__c</name>
+        <picklistValues>
+            <masterLabel>Accruals</masterLabel>
+            <translation><!-- Accruals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation><!-- Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commissions</masterLabel>
+            <translation><!-- Commissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comp &amp; Ben</masterLabel>
+            <translation><!-- Comp &amp; Ben --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Assets</masterLabel>
+            <translation><!-- Fixed Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inter-Co</masterLabel>
+            <translation><!-- Inter-Co --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prepaids</masterLabel>
+            <translation><!-- Prepaids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revenue</masterLabel>
+            <translation><!-- Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>T&amp;E</masterLabel>
+            <translation><!-- T&amp;E --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

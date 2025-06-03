@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Para su uso en cálculos de impuestos. Código postal/ZIP de destino para este producto.</help>
+        <label><!-- Tax Postal Code --></label>
+        <name>blng__TaxZipCode__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>FSL__Status__c</name>
+        <picklistValues>
+            <masterLabel>Aborted</masterLabel>
+            <translation>Zrušené</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Dokončené</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed First Optimization Day</masterLabel>
+            <translation>Dokončené – prvý deň optimalizácie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>Zlyhalo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalizing</masterLabel>
+            <translation>Dokončuje sa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Podržať</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Prebieha</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>Otvorené</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Processing</masterLabel>
+            <translation>Následné spracovanie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>V poradí</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

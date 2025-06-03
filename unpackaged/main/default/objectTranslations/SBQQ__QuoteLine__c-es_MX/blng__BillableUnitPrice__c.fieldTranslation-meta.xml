@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>El importe sin prorratear que se facturará cada periodo de facturación. Es igual a ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)).</help>
+        <label><!-- Billable Unit Price --></label>
+        <name>blng__BillableUnitPrice__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- LineEditor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor --></label>
+        <name>SBQQ__SegmentedLineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor Summary --></label>
+        <name>SBQQ__SegmentedLineEditorSummary</name>
+    </fieldSets>
+    <layouts>
+        <layout>Web Quote Line Layout</layout>
+        <sections>
+            <label><!-- Discount Information --></label>
+            <section>Discount Information</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Subscription Information --></label>
+            <section>Subscription Information</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

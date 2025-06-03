@@ -1,0 +1,36 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Search",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "fd02bf29-97b7-43bf-a52f-f21831d0978e"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "98ecfaf7-5269-46eb-84b3-205922099a57"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Ajout...",
+          "addToCartButtonText" : "Ajouter au panier",
+          "incrementValueGuideText" : "La quantité incrémentielle est {0}",
+          "maximumValueGuideText" : "La quantité maximale est {0}",
+          "minimumValueGuideText" : "La quantité minimale est {0}",
+          "quantitySelectorLabel" : "Qté",
+          "viewOptionsButtonText" : "Voir les options"
+        },
+        "id" : "d4144761-fe15-467a-8493-9a6abeff993c"
+      }, {
+        "attributes" : {
+          "headerText" : "Recommandations pour vous"
+        },
+        "id" : "070aaa34-ee4c-47f7-9267-847114391fca"
+      } ]
+    }
+  },
+  "urlName" : "search"
+}

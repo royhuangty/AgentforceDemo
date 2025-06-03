@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_URL</name>
+        <label>Get URL</label>
+        <locationX>176</locationX>
+        <locationY>647</locationY>
+        <actionName>FSAA__TouchlessSignGetUrlController</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Document_Recipient</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SiteURL</name>
+            <value>
+                <elementReference>domainURL</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>FSAA__TouchlessSignGetUrlController</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_URL</name>
+        <label>Send URL</label>
+        <locationX>308</locationX>
+        <locationY>1079</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>Get_Contact.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sdo@salesforce.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Sign your document</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Get_URL</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Send_via_SMS_or_Email</name>
+        <label>Send via SMS or Email?</label>
+        <locationX>176</locationX>
+        <locationY>971</locationY>
+        <defaultConnector>
+            <targetReference>Send_URL</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SMS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varSendSMS</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>get_Messaging_Channel</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>SMS</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>Leveraged in the APEX Action to generate a secure URL. This formula should represent the signature page you are sending to your customers.</description>
+        <name>domainURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://&quot;&amp;
+left(
+IF(OR(BEGINS({!$Api.Partner_Server_URL_540}, &quot;http://www&quot;),BEGINS({!$Api.Partner_Server_URL_540}, &quot;https://www&quot;), BEGINS({!$Api.Partner_Server_URL_540}, &quot;www.&quot;)),
+    SUBSTITUTE({!$Api.Partner_Server_URL_540}, LEFT({!$Api.Partner_Server_URL_540}, FIND(&quot;.&quot;, {!$Api.Partner_Server_URL_540})), NULL),
+        IF(BEGINS({!$Api.Partner_Server_URL_540}, &quot;http://&quot;),
+            MID({!$Api.Partner_Server_URL_540}, FIND(&#39;http://&#39;, {!$Api.Partner_Server_URL_540}, 1)+7, (LEN({!$Api.Partner_Server_URL_540}) - FIND(&#39;http://&#39;, {!$Api.Partner_Server_URL_540}, 1)+7)),
+                IF(BEGINS({!$Api.Partner_Server_URL_540}, &quot;https://&quot;),
+                    MID({!$Api.Partner_Server_URL_540}, FIND(&#39;https://&#39;, {!$Api.Partner_Server_URL_540}, 1)+8, (LEN({!$Api.Partner_Server_URL_540}) - FIND(&#39;https://&#39;, {!$Api.Partner_Server_URL_540}, 1)+8)),
+                        {!$Api.Partner_Server_URL_540}
+                )
+        )
+)
+
+,FIND(&#39;.&#39;,
+
+IF(OR(BEGINS({!$Api.Partner_Server_URL_540}, &quot;http://www&quot;),BEGINS({!$Api.Partner_Server_URL_540}, &quot;https://www&quot;), BEGINS({!$Api.Partner_Server_URL_540}, &quot;www.&quot;)),
+    SUBSTITUTE({!$Api.Partner_Server_URL_540}, LEFT({!$Api.Partner_Server_URL_540}, FIND(&quot;.&quot;, {!$Api.Partner_Server_URL_540})), NULL),
+        IF(BEGINS({!$Api.Partner_Server_URL_540}, &quot;http://&quot;),
+            MID({!$Api.Partner_Server_URL_540}, FIND(&#39;http://&#39;, {!$Api.Partner_Server_URL_540}, 1)+7, (LEN({!$Api.Partner_Server_URL_540}) - FIND(&#39;http://&#39;, {!$Api.Partner_Server_URL_540}, 1)+7)),
+                IF(BEGINS({!$Api.Partner_Server_URL_540}, &quot;https://&quot;),
+                    MID({!$Api.Partner_Server_URL_540}, FIND(&#39;https://&#39;, {!$Api.Partner_Server_URL_540}, 1)+8, (LEN({!$Api.Partner_Server_URL_540}) - FIND(&#39;https://&#39;, {!$Api.Partner_Server_URL_540}, 1)+8)),
+                        {!$Api.Partner_Server_URL_540}
+                )
+        )
+)
+ )-1)
+&amp;&quot;.my.site.com/professional/s/sfs-contactless-signature?drId=&quot;&amp;{!$Record.Id}&amp;&quot;&amp;expiration=60&amp;type=Default&quot;</expression>
+    </formulas>
+    <interviewLabel>SDO_SFS Generate and send URL to Contact {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SDO_SFS Generate and send URL to Contact</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Content_Distribution</name>
+        <label>Create Content Distribution</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContentVersionId</field>
+            <value>
+                <elementReference>Get_Service_Report.ContentVersionDocumentId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>Service Report</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowPDFDownload</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowViewInBrowser</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesLinkLatestVersion</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesNotifyOnVisit</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesPasswordRequired</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>ContentDistribution</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_URL</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RecipientId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_Messaging_Channel</name>
+        <label>get Messaging Channel</label>
+        <locationX>176</locationX>
+        <locationY>863</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_via_SMS_or_Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MessageType</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Text</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>MessagingChannel</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Service_Report</name>
+        <label>Get Service Report</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Content_Distribution</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.DocumentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ServiceReport</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>ContentVersionDocumentId</queriedFields>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Document_Recipient</name>
+        <label>Update Document Recipient with URL</label>
+        <locationX>176</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>get_Messaging_Channel</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>DigitalSignatureUrl</field>
+            <value>
+                <elementReference>Get_URL</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SDO_SFS_ContactFirstName__c</field>
+            <value>
+                <elementReference>Get_Contact.FirstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Service_Report</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Delivered</stringValue>
+            </value>
+        </filters>
+        <object>DocumentRecipient</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varSendSMS</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,15 @@
+{
+  "componentVariants" : [ {
+    "id" : "ed867735-e111-47c9-9b9c-64b663e02d8a",
+    "propertyOverrides" : {
+      "componentAttributes" : {
+        "config/dataProviderDefinition/attributes/dataProviderInfo/apiName" : "Home_Gold_Partner_Program"
+      }
+    },
+    "targetId" : "4d413730-80d0-4b61-8e6f-2ef7d07e00c6",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Home_Flex_CMS_Collection_3_Component_Properties",
+  "id" : "1a2ad2cb-c04b-48fe-8342-df72ff7c25a5",
+  "type" : "experienceVariation"
+}

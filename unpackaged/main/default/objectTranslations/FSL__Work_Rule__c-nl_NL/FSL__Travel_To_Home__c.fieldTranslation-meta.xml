@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bepaalt hoeveel minuten na het einde van de dag van de resource in agenda beschikbaar zullen zijn om te reizen (op kosten van de resource).
+Indien leeg is elke hoeveelheid reizen na het einde van de werkdag geldig.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

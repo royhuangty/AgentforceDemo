@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Type de fact. qui définit à quel moment la fact. doit avoir lieu. La fact. anticipée vous permet de facturer vos clients avant de livrer les produits ou services commandés et la fact. différée vous permet de les facturer après.</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </CustomFieldTranslation>

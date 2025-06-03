@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益トランザクションの予想件数</help>
+        <label><!-- Estimated Revenue Transaction Count --></label>
+        <name>blng__EstimatedRevenueTransactionCount__c</name>
+    </CustomFieldTranslation>

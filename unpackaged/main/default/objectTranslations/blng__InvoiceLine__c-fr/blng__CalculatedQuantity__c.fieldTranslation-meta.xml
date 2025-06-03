@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ceci indique le nombre de fois que les frais sont appliqués pour la ligne. Si vous facturez une facture mensuelle pendant 45 jours, cette valeur sera de 1,5</help>
+        <label><!-- Calculated Quantity --></label>
+        <name>blng__CalculatedQuantity__c</name>
+    </CustomFieldTranslation>

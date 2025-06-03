@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Sets the scheduling to include or exclude from minimize travel considerations the first and last travel of the day, to and from the service resource home base --></help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

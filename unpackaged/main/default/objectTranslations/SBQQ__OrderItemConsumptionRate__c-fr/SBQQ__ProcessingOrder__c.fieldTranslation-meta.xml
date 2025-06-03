@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>L&#39;ordre de traitement du taux d&#39;utilisation entre des taux multiples. Ces taux de consommation sont évalués en commençant par l&#39;ordre de traitement le plus faible.</help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </CustomFieldTranslation>

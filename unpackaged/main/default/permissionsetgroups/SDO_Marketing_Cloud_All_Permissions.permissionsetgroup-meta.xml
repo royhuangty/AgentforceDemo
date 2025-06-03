@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permission sets for Marketing Cloud Demos/integrations. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Marketing Cloud - All Permissions</label>
+    <permissionSets>SDO_Marketing_Base_Access</permissionSets>
+    <permissionSets>et4ae5__ExactTarget_Integration</permissionSets>
+    <permissionSets>et4ae5__ExactTarget_Integration_Admin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

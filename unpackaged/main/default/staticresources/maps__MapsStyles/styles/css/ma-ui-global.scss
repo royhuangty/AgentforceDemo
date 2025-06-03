@@ -1,0 +1,54 @@
+// compiles to ma-ui.css
+
+@import 'modules/colors.scss';
+@import 'modules/mixins.scss';
+@import 'modules/flexbox.scss';
+@import 'modules/breakpoints.scss';
+@import 'modules/shadows.scss';
+
+//salesforce lightning design system-specific overrides
+@import 'partials/slds-badges.scss';
+@import 'partials/slds-tooltips.scss';
+@import 'partials/slds-tiles.scss';
+@import 'partials/slds-icons.scss';
+@import 'partials/slds-button-icons.scss';
+@import 'partials/slds-button-groups.scss';
+@import 'partials/slds-buttons.scss';
+@import 'partials/slds-comboboxes.scss';
+@import 'partials/slds-dueling-picklist.scss';
+@import 'partials/slds-forms.scss';
+@import 'partials/slds-input.scss';
+@import 'partials/slds-menus.scss';
+@import 'partials/slds-modals.scss';
+@import 'partials/slds-notifications.scss';
+@import 'partials/slds-panels.scss';
+@import 'partials/slds-tabs.scss';
+@import 'partials/slds-text.scss';
+@import 'partials/slds-pills.scss';
+@import 'partials/slds-popovers.scss';
+@import 'partials/slds-utilities.scss';
+@import 'partials/slds-tables.scss';
+@import 'partials/slds-toasts.scss';
+@import 'partials/slds-new-styles.scss';
+
+// ma-specific
+@import 'partials/ma-layout.scss';
+@import 'partials/ma-forms.scss';
+@import 'partials/ma-proximity.scss';
+@import 'partials/ma-search.scss';
+@import 'partials/ma-selects.scss';
+@import 'partials/ma-infowindows.scss';
+@import 'partials/ma-routes.scss';
+@import 'partials/ma-routes-index.scss';
+@import 'partials/ma-layers.scss';
+@import 'partials/ma-navigation.scss';
+@import 'partials/ma-modals.scss';
+@import 'partials/ma-shape-builder.scss';
+@import 'partials/ma-tables.scss';
+@import 'partials/ma-toasts.scss';
+@import 'partials/ma-utilities.scss';
+@import 'partials/ma-datepicker.scss';
+@import 'partials/ma-overrides.scss';
+
+// @import 'partials/ma-main-navbar.scss';
+@import 'partials/select2.scss';

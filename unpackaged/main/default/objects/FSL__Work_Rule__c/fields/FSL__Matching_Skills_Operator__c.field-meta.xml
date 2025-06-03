@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Matching_Skills_Operator__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Skill Type Logic</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Match_And</fullName>
+                <default>false</default>
+                <label>All Skills Match (AND)</label>
+            </value>
+            <value>
+                <fullName>Match_Or</fullName>
+                <default>false</default>
+                <label>At Least One Skill Matches (OR)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

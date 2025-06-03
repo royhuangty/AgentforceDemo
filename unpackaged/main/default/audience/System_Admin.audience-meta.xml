@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>System Admin</audienceName>
+    <container>[Do Not Use] SDO - B2B Commerce</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>admin</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>73dde723-4e83-4d72-969c-ec15f4bfa9f3$#$a97c425e-ae0f-4a66-bbc6-0eea5451537e</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Page_Flex_Rich_Content_Editor_1_Component</targetValue>
+        </target>
+        <target>
+            <groupName>8e0e7f06-304f-4fec-a0dd-4fbef3f2111c$#$c7715832-caa5-4e26-8c61-a57113c0db51</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Rich_Content_Editor_1_Component</targetValue>
+        </target>
+        <target>
+            <groupName>8e0e7f06-304f-4fec-a0dd-4fbef3f2111c$#$1e7e193d-b579-40c8-8318-a25b85670ae1</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>73dde723-4e83-4d72-969c-ec15f4bfa9f3$#$1cd8e056-b1f6-4e6a-aeb3-373cd72df631</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Page_Flex_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>4f755d56-de7c-4448-9ac6-0f739df20c1c$#$68ac2ba2-3438-43a4-ad8e-43c677132858</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Page_Guest_SMB_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>73dde723-4e83-4d72-969c-ec15f4bfa9f3$#$47c80cd2-82e1-4746-b93b-2f3960c7c5f6</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Page_Flex_Rich_Content_Editor_5_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

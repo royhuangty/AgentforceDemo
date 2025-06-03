@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier&apos;s value --></help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation><!-- Range --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation><!-- Slab --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

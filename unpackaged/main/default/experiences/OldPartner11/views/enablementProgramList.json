@@ -1,0 +1,187 @@
+{
+  "appPageId" : "e0fc7900-a10c-4a56-88d5-3300b25fd224",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "0bc03a83-909e-4085-9ad0-da080f34505b",
+  "label" : "Enablement Program List",
+  "regions" : [ {
+    "id" : "7b3ab90f-af44-4ce9-8e08-c5d98af5b9c6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "73558216-741c-4e21-bf3b-b10f7a3a080c",
+          "columns" : [ {
+            "UUID" : "b531ee6b-73c0-49c5-b899-06070a6401d7",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "richTextValue" : "<h1><span style=\"font-size: 36px;\">Enablement Programs</span></h1>",
+                "sfdc:identifier" : "forceCommunity_richTextInline"
+              },
+              "fqn" : "forceCommunity:richTextInline"
+            }, {
+              "attributes" : {
+                "ctaAlignment" : "center",
+                "ctaLabel" : "View More",
+                "ctaMode" : "query-more",
+                "ctaTarget" : "_self",
+                "ctaUrl" : "",
+                "defaultFilter" : "InProgress",
+                "displayAsCard" : "false",
+                "layout" : "grid",
+                "limit" : "3",
+                "pageSize" : "9",
+                "sfdc:identifier" : "runtime_ses_ext_programCollectionCard",
+                "showAllFilter" : "false",
+                "showAssignedFilter" : "true",
+                "showAvailableForSelfEnrollmentFilter" : "false",
+                "showCompletedFilter" : "true",
+                "showDescription" : "true",
+                "showDueDate" : "true",
+                "showFilters" : "true",
+                "showIcon" : "true",
+                "showInProgressFilter" : "true",
+                "showSelfEnrolledFilter" : "true",
+                "title" : "Enrolled Programs",
+                "titleHeadingLevel" : "h2",
+                "titleStyle" : "medium"
+              },
+              "fqn" : "runtime_ses_ext:programCollectionCard"
+            }, {
+              "attributes" : {
+                "ctaAlignment" : "center",
+                "ctaLabel" : "View More",
+                "ctaMode" : "query-more",
+                "ctaTarget" : "_self",
+                "ctaUrl" : "",
+                "defaultFilter" : "AvailableForSelfEnrollment",
+                "displayAsCard" : "false",
+                "layout" : "grid",
+                "limit" : "3",
+                "pageSize" : "9",
+                "sfdc:identifier" : "runtime_ses_ext_programCollectionCard2",
+                "showAllFilter" : "true",
+                "showAssignedFilter" : "true",
+                "showAvailableForSelfEnrollmentFilter" : "true",
+                "showCompletedFilter" : "true",
+                "showDescription" : "true",
+                "showDueDate" : "true",
+                "showFilters" : "false",
+                "showIcon" : "true",
+                "showInProgressFilter" : "true",
+                "showSelfEnrolledFilter" : "true",
+                "title" : "Available Programs",
+                "titleHeadingLevel" : "h2",
+                "titleStyle" : "medium"
+              },
+              "fqn" : "runtime_ses_ext:programCollectionCard"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "73558216-741c-4e21-bf3b-b10f7a3a080c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1><span style=\"font-size: 36px;\">Enablement Programs</span></h1>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d1c71db9-988a-45e6-8b0e-6571c3bc8b0e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "ctaAlignment" : "center",
+            "ctaLabel" : "View More",
+            "ctaMode" : "query-more",
+            "ctaTarget" : "_self",
+            "ctaUrl" : "",
+            "defaultFilter" : "InProgress",
+            "displayAsCard" : false,
+            "layout" : "grid",
+            "limit" : 3,
+            "pageSize" : 9,
+            "showAllFilter" : false,
+            "showAssignedFilter" : true,
+            "showAvailableForSelfEnrollmentFilter" : false,
+            "showCompletedFilter" : true,
+            "showDescription" : true,
+            "showDueDate" : true,
+            "showFilters" : true,
+            "showIcon" : true,
+            "showInProgressFilter" : true,
+            "showSelfEnrolledFilter" : true,
+            "title" : "Enrolled Programs",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "medium"
+          },
+          "componentName" : "runtime_ses_ext:programCollectionCard",
+          "id" : "2dfd0529-f92b-4cb0-b009-b65a1bc3a1e5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "ctaAlignment" : "center",
+            "ctaLabel" : "View More",
+            "ctaMode" : "query-more",
+            "ctaTarget" : "_self",
+            "ctaUrl" : "",
+            "defaultFilter" : "AvailableForSelfEnrollment",
+            "displayAsCard" : false,
+            "layout" : "grid",
+            "limit" : 3,
+            "pageSize" : 9,
+            "showAllFilter" : true,
+            "showAssignedFilter" : true,
+            "showAvailableForSelfEnrollmentFilter" : true,
+            "showCompletedFilter" : true,
+            "showDescription" : true,
+            "showDueDate" : true,
+            "showFilters" : false,
+            "showIcon" : true,
+            "showInProgressFilter" : true,
+            "showSelfEnrolledFilter" : true,
+            "title" : "Available Programs",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "medium"
+          },
+          "componentName" : "runtime_ses_ext:programCollectionCard",
+          "id" : "4335f204-9200-4506-b18d-b9e5027da98c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b531ee6b-73c0-49c5-b899-06070a6401d7",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "02b4267a-eea4-4a83-bbb7-0afadeb3efb0",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "d797bb84-9d8d-4796-9fb9-58641670ee3f",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-0Qo"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Đặt lên lịch để có bao gồm hoặc không bao gồm cân nhắc trừ ngày di chuyển đầu tiên và ngày cuối cùng, tới và từ trụ sở của nhân sự dịch vụ</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

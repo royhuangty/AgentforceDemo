@@ -1,0 +1,85 @@
+{
+  "appPageId" : "5d2865d8-ea34-49f2-a9c1-c9696cb5a9de",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "87f3a3de-dfb2-4851-8e96-e7fcfb92974b",
+  "label" : "Register",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "salesforceIdentity:communityLogo2",
+      "id" : "ec40ff88-249b-457a-8f06-ef26591b905d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"text-align: center;\" class=\"inverseTextColor\">Join the community to receive personalized information and customer support.</div>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "054599cf-a250-4600-a1ab-294c4902cff3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "confirmPasswordLabel" : "Confirm Password",
+        "emailLabel" : "Email",
+        "extraFieldsFieldSet" : "",
+        "firstnameLabel" : "First Name",
+        "includePasswordField" : false,
+        "lastnameLabel" : "Last Name",
+        "passwordLabel" : "Create Password",
+        "regConfirmUrl" : "./CheckPasswordResetEmail",
+        "startUrl" : "",
+        "submitButtonLabel" : "Sign Up"
+      },
+      "componentName" : "salesforceIdentity:selfRegister2",
+      "id" : "a69b44ea-def3-467e-9a2a-4c541818ff56",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "headerText" : "",
+        "showHeader" : false,
+        "useCommunityDomainSso" : false
+      },
+      "componentName" : "salesforceIdentity:socialLogin2",
+      "id" : "1ae9f02a-b2a3-4563-97de-d9ab90afd7a1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"text-align: center;\"><a class=\"inverseTextColor\" href=\"./\">Already have an account?</a></div>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "8580cc98-b55e-4b96-9369-f71779973507",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "11d86bfd-7efd-4a45-9358-7ab6e8025164",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Register"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "17b1074c-c304-468c-8277-75bd826cc784",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4cb7ab41-413c-4b66-b6ed-ed8c114345ee",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "self-register"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Deployment status of this template. Change to &quot;Deployed&quot; to make this template visible to non-admin users. --></help>
+        <label><!-- Deployment Status --></label>
+        <name>SBQQ__DeploymentStatus__c</name>
+        <picklistValues>
+            <masterLabel>Deployed</masterLabel>
+            <translation><!-- Deployed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

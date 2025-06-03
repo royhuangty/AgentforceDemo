@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Objek yang berisi bidang isian khusus yang digunakan untuk penghitungan.</help>
+        <label><!-- Count object --></label>
+        <name>FSL__CountObject__c</name>
+        <picklistValues>
+            <masterLabel>Service Appointment</masterLabel>
+            <translation>Janji Temu Layanan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order</masterLabel>
+            <translation>Perintah Kerja</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order Line Item</masterLabel>
+            <translation>Item Jalur Perintah Kerja</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

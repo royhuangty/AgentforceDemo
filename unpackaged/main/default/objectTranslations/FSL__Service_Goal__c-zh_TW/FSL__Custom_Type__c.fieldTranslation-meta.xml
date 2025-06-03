@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Custom Objective Type --></label>
+        <name>FSL__Custom_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation>盡快</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Engineer Idle Time</masterLabel>
+            <translation>最小化工程師空閒時間</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Overtime</masterLabel>
+            <translation>最小化加班</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Travel</masterLabel>
+            <translation>最小化出差路途時間</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Use Of Elasticity</masterLabel>
+            <translation>最小化彈性使用</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Resource</masterLabel>
+            <translation>偏好資源</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority By Distance To Engineer</masterLabel>
+            <translation>依照與工程師距離的優先順序</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Priority</masterLabel>
+            <translation>資源優先順序</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skill Level</masterLabel>
+            <translation>技能等級</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Priority</masterLabel>
+            <translation>工作優先順序</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel From Home Base</masterLabel>
+            <translation>從總部啟程出差路途時間</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

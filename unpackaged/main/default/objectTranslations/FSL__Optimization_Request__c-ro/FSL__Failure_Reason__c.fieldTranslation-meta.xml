@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Failure Reason --></label>
+        <name>FSL__Failure_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Already Running</masterLabel>
+            <translation>Deja în execuție</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click Authorize</masterLabel>
+            <translation>Faceți clic pe Autorizare</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupted data</masterLabel>
+            <translation>Date deterioate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability Rule</masterLabel>
+            <translation>Regulă pentru lipsă disponibilitate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Necunoscut</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Aborted</masterLabel>
+            <translation>Anulat de utilizator</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

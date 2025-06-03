@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Das Enddatum kann auf dem Enddatum des Objekts basieren oder manuell eingegeben werden. Für die vollständige Umsatzrealisierung
+        setzen Sie den Wert auf &quot;Kein&quot;.</help>
+        <label><!-- Revenue Schedule Term End Date --></label>
+        <name>blng__RevenueScheduleTermEndDate__c</name>
+    </CustomFieldTranslation>

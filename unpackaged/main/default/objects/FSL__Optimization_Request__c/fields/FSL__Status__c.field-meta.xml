@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Queued</fullName>
+                <default>false</default>
+                <label>Queued</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Finalizing</fullName>
+                <default>false</default>
+                <label>Finalizing</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+                <label>Aborted</label>
+            </value>
+            <value>
+                <fullName>Completed First Optimization Day</fullName>
+                <default>false</default>
+                <label>Completed First Optimization Day</label>
+            </value>
+            <value>
+                <fullName>Post Processing</fullName>
+                <default>false</default>
+                <label>Post Processing</label>
+            </value>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

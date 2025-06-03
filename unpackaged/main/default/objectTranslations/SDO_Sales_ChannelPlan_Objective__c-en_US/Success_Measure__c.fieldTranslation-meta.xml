@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Success Measure --></label>
+        <name>Success_Measure__c</name>
+        <picklistValues>
+            <masterLabel>Brand Recognition</masterLabel>
+            <translation><!-- Brand Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Satisfaction</masterLabel>
+            <translation><!-- Customer Satisfaction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Growth</masterLabel>
+            <translation><!-- Growth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Knowledge</masterLabel>
+            <translation><!-- Product Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revenue</masterLabel>
+            <translation><!-- Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trained Employees</masterLabel>
+            <translation><!-- Trained Employees --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

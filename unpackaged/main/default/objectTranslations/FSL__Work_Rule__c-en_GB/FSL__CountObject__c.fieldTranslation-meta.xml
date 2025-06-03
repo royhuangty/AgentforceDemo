@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>The object containing the custom field that&#39;s used for the count.</help>
+        <label><!-- Count object --></label>
+        <name>FSL__CountObject__c</name>
+        <picklistValues>
+            <masterLabel>Service Appointment</masterLabel>
+            <translation>Service Appointment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order</masterLabel>
+            <translation>Work Order</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order Line Item</masterLabel>
+            <translation>Work Order Line Item</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

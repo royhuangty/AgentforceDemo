@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Quote line field used for roll-up. All lines where this field returns the same value will be rolled up into the first line where the value occurs. --></help>
+        <label><!-- Roll-Up Field --></label>
+        <name>SBQQ__RollUpField__c</name>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

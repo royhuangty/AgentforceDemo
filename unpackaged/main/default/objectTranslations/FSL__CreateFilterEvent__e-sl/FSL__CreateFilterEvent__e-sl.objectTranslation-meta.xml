@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanje dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanja dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanja dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanje dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanja dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanja dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanja dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanj dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanj dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanju dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanjem dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanjem dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanjem dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanji dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanji dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanju dogodka filtra --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value><!-- Ustvarjanjih dogodkov filtrov --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value><!-- Ustvarjanjih dogodkov filtrov --></value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    <gender><!-- Neuter --></gender>
+</CustomObjectTranslation>

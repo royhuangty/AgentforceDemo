@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>对于可添加到班组的额外服务资源，要限制其数量，请输入数字。若要添加任意数量的服务资源，请留空。</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Het kruisobject dat is gebruikt voor het koppelen van serviceresources aan het object waarnaar het veld voor het koppelen van serviceafspraken verwijst</help>
+        <label><!-- Linking Object --></label>
+        <name>FSL__Enhanced_Match_Linking_Object__c</name>
+    </CustomFieldTranslation>

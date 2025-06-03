@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>サービスリソースの対応可能状況の開始から許容される最も遅い休憩開始時刻までの分数。たとえば、その日の開始から 5 時間以内に昼休みが終了するようにスケジュールするには、「300」と入力します。</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

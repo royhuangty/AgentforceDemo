@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Evidence</fullName>
+        <default>false</default>
+        <label>Evidence</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Implicated</fullName>
+        <default>false</default>
+        <label>Implicated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mitigation</fullName>
+        <default>false</default>
+        <label>Mitigation</label>
+    </standardValue>
+</StandardValueSet>

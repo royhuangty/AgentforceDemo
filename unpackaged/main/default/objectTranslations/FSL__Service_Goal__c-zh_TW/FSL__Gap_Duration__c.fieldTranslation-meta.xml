@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>輸入表示服務約會之間空閒時間間隔的分鐘數。此目標是最小化間隔以等於或高於輸入的值。</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

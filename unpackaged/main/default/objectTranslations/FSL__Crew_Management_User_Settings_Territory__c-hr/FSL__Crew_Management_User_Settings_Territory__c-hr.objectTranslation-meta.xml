@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Korisnička postavka upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Korisničke postavke upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Korisničku postavku upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Korisničke postavke upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Korisničke postavke upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Korisničkih postavki upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Korisničkoj postavci upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Korisničkim postavkama upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Korisničkom postavkom upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Korisničkim postavkama upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Korisničkoj postavci upravljanja ekipom za područje</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Korisničkim postavkama upravljanja ekipom za područje</value>
+    </caseValues>
+    
+    
+    <gender>Neuter</gender>
+    <nameFieldLabel>Naziv područja za korisničke postavke za</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<template>
+
+    <template if:true={title}>
+
+        <lightning-card title={title}>
+
+            <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
+
+        </lightning-card>
+
+    </template>
+
+    <template if:false={title}>
+
+        {label.lookingForContent}
+
+    </template>
+    
+</template>

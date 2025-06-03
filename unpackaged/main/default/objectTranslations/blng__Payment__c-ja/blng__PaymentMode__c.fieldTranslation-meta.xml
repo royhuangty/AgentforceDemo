@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Salesforce Billing を使用して支払を実行する場合は [電子] を選択し、他の場所で処理する支払を手動で入力するには [外部] を選択します。</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>QBrix-1-xDO-Enhanced-Bot-Base</label>
+    <protected>true</protected>
+    <values>
+        <field>xDO_Content_Type__c</field>
+        <value xsi:type="xsd:string">Metadata_and_Record_Data</value>
+    </values>
+    <values>
+        <field>xDO_Description__c</field>
+        <value xsi:type="xsd:string">WHO: Jory Dean
+                        WHAT: This base brix is leveraged as a shared asset amongst Enhanced Bots for The SDO. This repo should serve as a governance layer to ensure that all shared assets such as ML domains, flows, and Omni-layer assets are not overwritten by a new bot or enhancement. 
+                        WHEN: May 2025</value>
+    </values>
+    <values>
+        <field>xDO_Documentation_Link__c</field>
+        <value xsi:type="xsd:string">www.confluence.co</value>
+    </values>
+    <values>
+        <field>xDO_Publisher__c</field>
+        <value xsi:type="xsd:string">Jory Dean</value>
+    </values>
+    <values>
+        <field>xDO_Repository_URL__c</field>
+        <value xsi:type="xsd:string">https://github.com/sfdc-qbranch-emu/QBrix-1-xDO-Enhanced-Bot-Base</value>
+    </values>
+    <values>
+        <field>xDO_Type__c</field>
+        <value xsi:type="xsd:string">Base xDO Component</value>
+    </values>
+    <values>
+        <field>xDO_Version__c</field>
+        <value xsi:type="xsd:string">c6109e05e1f2b8b973f1af67ed5fd2b65aacceea</value>
+    </values>
+</CustomMetadata>

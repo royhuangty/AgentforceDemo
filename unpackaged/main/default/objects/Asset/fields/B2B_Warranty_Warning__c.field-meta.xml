@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2B_Warranty_Warning__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(Entitlement_Status__c, &#39;30 Day Warning&#39;), &#39;Act Now&#39;, &#39;&#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>B2B Warranty Warning</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

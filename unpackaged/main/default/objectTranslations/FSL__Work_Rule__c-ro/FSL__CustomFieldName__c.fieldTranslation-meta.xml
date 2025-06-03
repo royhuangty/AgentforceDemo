@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Numele API al câmpului personalizat în obiectul de contorizare.</help>
+        <label><!-- Custom Field Name --></label>
+        <name>FSL__CustomFieldName__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permissions for Sales and HVS demos. Who: Jesse Chase. When: Sept, 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales - All Permissions</label>
+    <permissionSets>SDO_Sales_Base_Access</permissionSets>
+    <permissionSets>SDO_Sales_ServicePerms</permissionSets>
+    <permissionSets>SDO_Sales_UserPsl</permissionSets>
+    <permissionSets>SDO_Salesforce_Mobile_App_Native_Seller_Experience</permissionSets>
+    <permissionSets>force__CallCoachingIntegrationUser</permissionSets>
+    <permissionSets>force__CallCoachingUser</permissionSets>
+    <permissionSets>force__RevenueIntelligenceAdmin</permissionSets>
+    <permissionSets>force__SalesCloudEinsteinAll</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

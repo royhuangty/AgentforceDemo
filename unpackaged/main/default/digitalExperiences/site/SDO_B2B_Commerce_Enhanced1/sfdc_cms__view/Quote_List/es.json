@@ -1,0 +1,60 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Quote List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "86e3b2e4-183b-4d2a-86de-2515bcc4c3e0"
+      }, {
+        "attributes" : {
+          "text" : "Mis presupuestos"
+        },
+        "id" : "c5da4198-3950-4b51-8e22-3e42d45cf115"
+      }, {
+        "attributes" : {
+          "text" : "Número de presupuesto"
+        },
+        "id" : "589e0b48-15af-4dad-aba7-a3b2d0bf0d9e"
+      }, {
+        "attributes" : {
+          "text" : "{!Item.Name}"
+        },
+        "id" : "769f2a2b-3c07-4a2e-b048-b28480e46ad5"
+      }, {
+        "attributes" : {
+          "text" : "Fecha de caducidad"
+        },
+        "id" : "26ca812d-ed17-42f0-8bd5-f92dbf7d7968"
+      }, {
+        "attributes" : {
+          "text" : "{!Item.ExpirationDate}"
+        },
+        "id" : "c11afc93-3baa-414e-8d52-1623d1abddd0"
+      }, {
+        "attributes" : {
+          "text" : "Precio total"
+        },
+        "id" : "25628637-edbc-40a4-a9a9-242a6dd374cb"
+      }, {
+        "attributes" : {
+          "text" : "{!Item.TotalPrice}"
+        },
+        "id" : "e202b9bd-7e99-4066-b2c7-7cffd4695133"
+      }, {
+        "attributes" : {
+          "text" : "Ver presupuesto"
+        },
+        "id" : "8c7ea9bd-c081-4eac-8c2c-2f931feb048e"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "7eb0caf0-6b79-4175-a16b-308ca421d31f"
+      } ]
+    }
+  },
+  "urlName" : "quote-list"
+}

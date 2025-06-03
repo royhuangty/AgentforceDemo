@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益認識ルールを無効化するには、このチェックボックスをオフにします。これは、このルールを参照している
+        待機中または過去のトランザクションに影響しません。</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </CustomFieldTranslation>

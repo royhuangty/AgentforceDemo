@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この項目を使用して、計算済み請求可能単価を手動で上書きます。</help>
+        <label><!-- Override Billable Unit Price --></label>
+        <name>blng__OverrideBillableUnitPrice__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Hide the Submit button on the Preview page if the record is Pending or Approved. --></help>
+        <label><!-- Hide Submit Button on Preview Page --></label>
+        <name>sbaa__HideSubmitOnPreview__c</name>
+    </CustomFieldTranslation>

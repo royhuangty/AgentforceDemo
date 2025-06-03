@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Marque para reavaliar condições de Aprovação Inteligente mesmo se Condições atendidas esteja definido como Todas ou Personalizado. Se qualquer Condição de Aprovação Inteligente retornar Verdadeiro, a reavaliação será interrompida e as Condições da regra serão consideradas atendidas.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </CustomFieldTranslation>

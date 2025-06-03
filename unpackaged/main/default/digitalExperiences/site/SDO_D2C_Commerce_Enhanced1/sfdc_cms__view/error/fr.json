@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Error",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/w24-product/error_image.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "0c416dd9-ab13-4ab4-9ddb-1f063171c601"
+      }, {
+        "attributes" : {
+          "text" : "Libérez la puissance des problèmes !"
+        },
+        "id" : "c3f37038-e78c-4eec-bec3-5cf1668277f1"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p>Oups&nbsp;! Il semblerait que nos elfes énergétiques prennent une pause-café. Nos magiciens de l'énergie vont régler ce problème en un clin d'œil. Veuillez réessayer plus tard.</p>"
+        },
+        "id" : "f1e42a3d-b227-4510-ac5f-62e89f6fc2ec"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Erreur"
+        },
+        "id" : "f19ab51b-258b-4e5c-bfe9-12cd12df4620"
+      } ]
+    }
+  },
+  "urlName" : "error"
+}

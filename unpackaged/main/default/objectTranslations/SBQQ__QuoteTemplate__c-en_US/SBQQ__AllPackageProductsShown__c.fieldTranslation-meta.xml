@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox if all package products should be printed on quote documents; otherwise, only ones that are non-zero are printed. --></help>
+        <label><!-- Show All Package Product --></label>
+        <name>SBQQ__AllPackageProductsShown__c</name>
+    </CustomFieldTranslation>

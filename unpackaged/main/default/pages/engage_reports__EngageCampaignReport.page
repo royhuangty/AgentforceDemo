@@ -1,0 +1,27 @@
+<apex:page sidebar="false" controller="engage_reports.EngageCampaignReport">
+    <apex:slds />
+    <apex:stylesheet value="{!URLFOR($Resource.engage_reports__EngageCampaignReport, 'css/main.css')}" />
+    <div id="engage_campaign_report_container"></div>
+    <script>
+        window.EngageCampaigns = {
+            sessionId: '{!$Api.Session_ID}',
+            sldsAssetPath: '{!URLFOR($Asset.SLDS, 'assets')}',
+            userTimezoneOffsetInHours: '{!userTimezoneOffsetInHours}',
+            easternTimezoneOffsetInHours: '{!easternTimezoneOffsetInHours}',
+            // Salesforce locales are en_US, javascript date formatting uses en-US
+            userLocale: '{!userLocale}'.replace('_', '-'),
+            userIdHash: '{!userIdHash}',
+            userId: '{!$User.Id}',
+            remoteActions: {
+                getIsPardotPackageInstalled: '{!$RemoteAction.EngageCampaignReport.getIsPardotPackageInstalled}',
+                getEngageStatsForSendIds: '{!$RemoteAction.EngageCampaignReport.getEngageStatsForSendIds}',
+                getLeadDetails: '{!$RemoteAction.EngageCampaignReport.getLeadDetails}',
+                getContactDetails: '{!$RemoteAction.EngageCampaignReport.getContactDetails}',
+                getCompletedReportInstance: '{!$RemoteAction.EngageCampaignReport.getCompletedReportInstance}',
+                getReport: '{!$RemoteAction.EngageCampaignReport.getReport}',
+                runReport: '{!$RemoteAction.EngageCampaignReport.runReport}'
+            }
+        }
+    </script>
+    <apex:includeScript value="{!URLFOR($Resource.engage_reports__EngageCampaignReport, 'js/report_main.js')}"/>
+</apex:page>

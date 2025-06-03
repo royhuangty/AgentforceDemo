@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter the order that the process input should be displayed. --></help>
+        <label><!-- Display Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </CustomFieldTranslation>

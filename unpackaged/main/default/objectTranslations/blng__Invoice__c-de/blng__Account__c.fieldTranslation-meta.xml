@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nachschlagevorgang zum Account, für den diese Rechnung ausgestellt wird.</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </CustomFieldTranslation>

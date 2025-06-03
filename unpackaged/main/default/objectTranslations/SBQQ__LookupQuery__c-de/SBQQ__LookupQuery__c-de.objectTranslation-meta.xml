@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Nachschlageabfragen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Nachschlageabfragen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Nachschlageabfragen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Nachschlageabfrage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Nachschlageabfragen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Lookup Query Layout</layout>
+        <sections>
+            <label>Informationen nachschlagen</label>
+            <section>Lookup Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nummer der Nachschlageabfrage</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Testing Configuration Attributes is only supported for Lookup Queries associated with Product Rules. --></errorMessage>
+        <name>SBQQ__Configuration_Attribute_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Associate a lookup object on the product rule before creating a Lookup Query. --></errorMessage>
+        <name>SBQQ__LookupObjectMustExist</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tested Value is required if Match Type = Static Value. Tested Object and Tested Field are required if Match Type = Field Value. Tested Configuration Attribute is required if Match Type = Configuration Attribute. --></errorMessage>
+        <name>SBQQ__Match_Type_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>HMO</fullName>
+        <default>false</default>
+        <label>HMO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PPO</fullName>
+        <default>false</default>
+        <label>PPO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EPO</fullName>
+        <default>false</default>
+        <label>EPO</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value><!-- Begivenhed for opdatering af pakkecache --></value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value><!-- Begivenhed for opdatering af pakkecache --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- Begivenheden for opdatering af pakkecache --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value><!-- Begivenheder for opdatering af pakkecache --></value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value><!-- Begivenheder for opdatering af pakkecache --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- Begivenhederne for opdatering af pakkecache --></value>
+    </caseValues>
+    
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_Perform_Status__c</fullName>
+    <description>Used by SMS Process Builder to fire message notification when Performace_Status__c = Low</description>
+    <inlineHelpText>Used by SMS Process Builder to fire message notification when Performace_Status__c = Low</inlineHelpText>
+    <label>Performance Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

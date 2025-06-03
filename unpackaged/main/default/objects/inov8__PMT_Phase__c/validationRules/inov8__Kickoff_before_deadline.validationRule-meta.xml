@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Kickoff_before_deadline</fullName>
+    <active>true</active>
+    <description>Phase Start date must be earlier than end date</description>
+    <errorConditionFormula>NOT(ISNULL(inov8__Start_Date_Rollup__c)) &amp;&amp; 
+NOT(ISNULL(inov8__End_Date_Rollup__c)) &amp;&amp; 
+inov8__Start_Date_Rollup__c&gt;inov8__End_Date_Rollup__c</errorConditionFormula>
+    <errorMessage>Phase End Date must be after Phase Start date.</errorMessage>
+</ValidationRule>

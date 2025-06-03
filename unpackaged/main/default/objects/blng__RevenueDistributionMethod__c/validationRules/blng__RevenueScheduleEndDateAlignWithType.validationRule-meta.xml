@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>blng__RevenueScheduleEndDateAlignWithType</fullName>
+    <active>true</active>
+    <description>Revenue Schedule End Date should align with Type.</description>
+    <errorConditionFormula>(ISPICKVAL(blng__Type__c, &#39;Order&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Invoice Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Credit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Debit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Invoice&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Order Product End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Credit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Debit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Credit Note&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Debit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Invoice Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Order Product End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Debit Note&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Credit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Invoice Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Order Product End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Other&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Credit Note Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Invoice Line End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Order Product End Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &#39;Debit Note Line End Date&#39;))
+)</errorConditionFormula>
+    <errorMessage>Revenue Schedule End Date should be aligned with Type</errorMessage>
+</ValidationRule>

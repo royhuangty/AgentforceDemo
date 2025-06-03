@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The stacktrace of the background job performed if no job id was specified. --></help>
+        <label><!-- Stacktrace --></label>
+        <name>SBQQ__Stacktrace__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina o que é cobrado.
+        Produtos de pedidos ativos, resumos de uso ou transações de faturamento com uma Data do próximo faturamento/Substituir próxima data de faturamento anterior ou igual ao Prazo serão faturados.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

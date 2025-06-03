@@ -1,0 +1,555 @@
+%slds-input {
+  background-color: #fff;
+  color: #16325c;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  width: 100%;
+  transition: border .1s linear,background-color .1s linear;
+  display: inline-block;
+  padding: 0 16px 0 12px;
+  line-height: 29px;
+  height: 32px;
+}
+
+.ma-form-control-wrap-range {
+  position: relative;
+
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+  /* Special styling for WebKit/Blink */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 17px;
+    width: 17px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+    transition: all .15s;
+
+    &:hover {
+      box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+      border-color: $medium-gray;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0,0,0,0.32);
+      border-color: $medium-gray;
+      margin-top: -8px;
+      height: 21px;
+      width: 21px;
+    }
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $blue;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]::-ms-fill-lower {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: $blue;
+  }
+  input[type=range]::-ms-fill-upper {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: $blue;
+  }
+}
+
+.slds-scope {
+  .slds-card {
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+.slds-scope .slds-form-element__label.slds-form-element__label-inverse {
+  color: $transparent-white-75;
+}
+
+.slds-scope {
+  .slds-modal__content {
+    #newevent-assignto-wrapper .ma-table .ma-icon {
+      @media screen and (min-width: 769px) {
+        font-size: 12px !important;
+        position: absolute;
+        right: 11px;
+        margin: 0;
+        pointer-events: none;
+        cursor: pointer;
+        top: 1px !important;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 2px);
+      }
+    }
+
+    .customDisWrapper {
+      margin-top: 20px;
+    }
+  
+    .fieldLabel {
+      font-size: 12px;
+      color: #54698d;
+      margin-bottom: 4px;
+    }
+    
+    .datePick {
+      width: 150px;
+    }
+    
+    .fieldInput[data-type="boolean"] {
+      display: inline-block;
+      float: left;
+    }
+    
+    .fieldInput {
+      input[type=checkbox] {
+        width: auto !important;
+        margin: 3px 5px 0px 4px;
+      }
+    }
+      
+      .slds-form-element__control {
+        margin-bottom: 8px;
+      }
+      
+      div[data-type="picklist"] {
+        select.slds-input {
+          height: 32px;
+        }
+      }
+      
+      div[data-type="reference"] {
+        div.slds-input {
+          padding:0;
+          border:0;
+          background:transparent;
+        }
+      }
+      
+      div[data-type="datetime"], div[data-type="date"] {
+        
+        .dateFormat {
+          float: left;
+          clear: both;
+          font-size: 12px;
+          letter-spacing: 0;
+          margin-top: 4px;
+        }
+        
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+      
+      div[data-type="datetime"], div[data-type="date"] {
+        
+        input.slds-input {
+            width: 100% !important;
+        }
+      }
+      
+      div[data-type="date"] {
+        input.datePick {
+          @extend %slds-input;
+        }
+      }
+      
+      div[data-type="multipicklist"] {
+        position: relative;
+        margin-bottom: 44px;
+        
+        .multiSelectPicklistTable td {
+            border-top: 0;
+            
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:first-child, &:last-child {
+              width: 45%;
+            }
+        }
+        
+        .multiSelectPicklistRow {
+          
+          select {
+            width: 100% !important;
+            height: auto;
+          }
+        }
+        
+        .multiSelectPicklistCell {
+          width: 10%;
+          
+          .picklistArrowRight, .picklistArrowLeft {
+            padding: 0;
+            border: 0;
+            height: 20px !important;
+            background-color: transparent !important;
+            width: 24px !important;
+            overflow: hidden !important;
+            min-height: 0;
+            max-width: none;
+          }
+        }
+        
+        div[class$="selected_hint"] {
+          clear: both;
+          position: absolute;
+          /* float: left; */
+          width: 100%;
+          top: 100%;
+          left: 0;
+          text-align: center;
+          font-size: 11px;
+        }
+        
+        div[class$="unselected_hint"] {
+          clear: both;
+          position: absolute;
+          /* float: left; */
+          width: 100%;
+          top: calc(100% + 14px);
+          left: 0;
+          text-align: center;
+          font-size: 11px;
+        }
+  }
+  
+    .lookupInput {
+      display: flex;
+      input {
+        width: 100%;
+      }
+      a {
+        width: auto;
+        background: #fff;
+        height: 32px;
+        width: 32px;
+        padding: 4px;
+        margin-left: 8px;
+        border-radius: 4px;
+        border: 1px solid $color-border;
+      }
+    }
+    
+    //polymorphic case owner id
+    .OwnerId.slds-input {
+      background-color: transparent !important;
+      
+      > select {
+        background-color: #fff;
+        color: #16325c;
+        border: 1px solid $color-border;
+        border-radius: 4px;
+        width: 100%;
+        transition: border .1s linear,background-color .1s linear;
+        display: inline-block;
+        padding: 0 16px 0 12px;
+        line-height: 29px;
+        height: 32px;
+        
+      }
+        
+      .lookupInput {
+        margin-top: 4px;
+        border-radius: 4px;
+        padding: 0;
+        height: 32px;
+        
+        input {
+          background-color: #fff;
+          color: #16325c;
+          border: 1px solid $color-border;
+          border-radius: 4px;
+          width: 100%;
+          transition: border .1s linear,background-color .1s linear;
+          display: inline-block;
+          padding: 0 16px 0 12px;
+          line-height: 29px;
+          height: 32px;
+        }
+      }
+    }
+    
+    select.slds-input {
+      height: 32px;
+    }
+  }
+  
+}
+
+//jquery form element overrides 
+.ui-multiselect-menu.ui-widget.ui-widget-content {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+  background: white;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+
+    .ui-widget-header {
+      background: none;
+      border: none;
+      padding: .5rem;
+
+      .ui-icon {
+        background-image: none;
+        text-indent: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+          font-family: "ma-icons-2" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        &.ui-icon-check {
+          &::before {
+            content: "\55";
+          }
+        }
+
+        &.ui-icon-closethick {
+          &::before {
+            content: "\34";
+          }
+        }
+
+        &.ui-icon-circle-close {
+          &::before {
+            content: "\30";
+          }
+        } 
+      }
+
+      input {
+        background-color: white;
+        border: 1px solid #dddbda;
+        border-radius: 0.25rem;
+        width: 101px;
+        -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+        transition: border 0.1s linear, background-color 0.1s linear;
+        display: inline-block;
+        padding: 0 1rem 0 0.75rem;
+        line-height: 1.875rem;
+        min-height: calc(1.875rem + (1px * 2));
+        font-size: 0.8125rem;
+        font-family: "Salesforce Sans", Arial, sans-serif;
+        font-weight: normal;
+      }
+
+      .ui-multiselect-filter {
+        color: $color-text-weak;
+        padding-bottom: .5rem;
+        font-size: .75rem;
+        font-weight: normal;
+      }
+    }
+
+    .ui-helper-reset li {
+      margin-left: 0;
+
+      a {
+        text-decoration: none;
+        color: $color-text-weak;
+      }
+    }
+
+    .ui-multiselect-checkboxes {
+      li {
+        border: none;
+        padding: 0;
+
+        label {
+          padding: 0.5rem 0.75rem;
+          border-radius: 0;
+          border: none;
+
+          input {
+            font-family: "Salesforce Sans", Arial, sans-serif;
+          }
+
+          &:hover {
+            background: none;
+            background-color: $color-background;
+            text-decoration: none;
+            border: none;
+          }
+
+          &.ui-state-hover {
+            background: none;
+            background-color: $color-background;
+          }
+        }
+      }  
+    }
+}
+
+		
+		.slds-scope .slds-modal__content .mass-update-row {
+			margin-bottom: 12px;
+		}		
+		
+		.slds-scope .slds-modal__content .mass-row-update-group .slds-form-element__control {
+			margin-bottom: 0;
+			  min-width: 200px;
+		}
+		
+		.slds-scope .slds-modal__content .mass-row-update-group .ui-autocomplete-input,
+		.slds-scope .slds-modal__content .mass-row-update-group .ui-multiselect {
+		    background: white;
+		    border: 1px solid #dddbda;
+		    border-radius: 0.25rem;
+		    width: 100%;
+		    transition: border 0.1s linear, background-color 0.1s linear;
+		    display: inline-block;
+		    padding: 0 1rem 0 0.75rem;
+		    line-height: 1.875rem;
+		    min-height: calc(1.875rem + (1px * 2));
+		    font-family: "Salesforce Sans";
+		    font-size: 13px;
+		    max-width: 200px;
+		    font-weight: 400 !important;
+		    
+		    .ui-icon-triangle-2-n-s {
+		      position: absolute;
+		      top: 7px;
+		      right: 4px;
+		    }
+		}
+		
+		.slds-scope .slds-modal__content .mass-row-update-group textarea.ma-input {
+		  padding-top: 8px;
+		}		
+		
+		.slds-scope .slds-modal__content .mass-row-update-group .ma-input {
+		  font-size: 13px;
+		}		
+		
+		.slds-scope .slds-modal__content .mass-row-update-group .ui-combobox {
+		  width: 100%;
+		  font-weight: 400 !important;
+		}
+		
+		.slds-scope .slds-modal__content .mass-row-update-group input[type="checkbox"] {
+      height: 32px;
+		}
+

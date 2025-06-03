@@ -1,0 +1,510 @@
+<apex:page standardstylesheets="false" controller="maps.ClickToCreateForm" showHeader="false" sidebar="false"  showChat="false">
+    <apex:variable var="RequestPlatform" value="{!IF($CurrentPage.parameters.platform == null || $CurrentPage.parameters.platform == 'null', 'tablet', LOWER($CurrentPage.parameters.platform))}" />
+
+    <style>
+        .ClickToCreateFormTable .datePick.datepicker {
+            height: calc(1.875rem + (1px * 2));
+            padding-left: 0.75rem;
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        .ClickToCreateFormTable .timeColon {
+            padding: 0 .25em;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .ClickToCreateFormTable .datetimepicker-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .ClickToCreateFormTable .currentDate, .ClickToCreateFormTable .currentDateTime {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .ClickToCreateFormTable .hr, .ClickToCreateFormTable .min, .ClickToCreateFormTable .am-pm {
+            min-height: calc(1.875rem + (1px * 2)) !important;
+            line-height: unset !important;
+        }
+
+        #createArcLayerRecord .updateFields-datetime-template, #createArcLayerRecord .datetimepicker-now-option {
+            display: none !important;
+        }
+
+        #createDataLayerRecordV2 .updateFields-datetime-template, #createDataLayerRecordV2 .datetimepicker-now-option {
+            display: none !important;
+        }
+
+        .ui-datepicker-year, .ui-datepicker-month {
+            min-width: 100px !important;
+        }
+    </style>
+
+    <apex:form >
+        <div class="ClickToCreateFormTable fieldSetTable">
+            <apex:outputPanel rendered="{!missingFieldSet}">
+                <div id="missingFieldSet" style="padding-top: 1rem; padding-bottom: 1rem;">
+                     The field set(s) that was associated with this data layer has either been renamed or deleted. Please contact your Salesforce Administrator.
+                </div>
+            </apex:outputPanel>
+            <apex:repeat value="{!fields}" var="f">
+                <apex:outputPanel rendered="{! IF(RequestPlatform == 'tablet' && f.typeAsString == 'REFERENCE', false, true)}" layout="none">
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'DATE' || f.typeAsString == 'DATETIME'}">
+                        <div class="slds-form-element slds-m-top_x-small slds-grid slds-grid_vertical">
+                            <label class="fieldLabel dateLabel slds-form-element__label">{!f.Label}
+                                <apex:outputText value="*" rendered="{!f.Required || f.DBRequired}"/>
+                                <apex:outputText value="@" rendered="{!arcgisMapped[f.fieldPath]}"/>
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div class="datetimepicker-container slds-grid slds-gutters">
+                                    <div class="dateInput slds-col">
+                                        <apex:inputText value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} datePick datepicker" rendered="{!!locked[f.fieldPath]}" />
+                                        <apex:outputText value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} datePick" rendered="{!locked[f.fieldPath]}" html-disabled="disabled" />
+                                    </div>
+                                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'DATETIME' && !locked[f.fieldPath]}">
+                                        <div class="updateFields-datetime-template">
+                                            <div class="slds-grid slds-grid_vertical-align-center date-time-v2-selector">
+                                                <div style="width: 1rem;"></div>
+                                                <div>
+                                                    <select class="hr" title="Hour"></select>
+                                                </div>
+                                                <div>
+                                                    <span class="timeColon">:</span>
+                                                </div>
+                                                <div>
+                                                    <select class="min" title="Minute"></select>
+                                                </div>
+                                                <div style="width: 1rem;"></div>
+                                                <div>
+                                                    <select class="am-pm" title="AM/PM">
+                                                        <option value="AM">AM</option>
+                                                        <option value="PM">PM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>
+                                </div>
+                                <div class="datetimepicker-now-option">
+                                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'DATE' && !locked[f.fieldPath]}">
+                                        [<span class="currentDate"></span>]
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'DATETIME' && !locked[f.fieldPath]}">
+                                        [<span class="currentDateTime"></span>]
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'BOOLEAN'}">
+                        <div class="slds-form-element slds-m-top_x-small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                <apex:outputText value="@" rendered="{!arcgisMapped[f.fieldPath]}"/>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath}" rendered="{!!locked[f.fieldPath]}" />
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath}" rendered="{!locked[f.fieldPath]}" html-disabled="disabled" />
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString != 'DATE' && f.typeAsString !='DATETIME' && f.typeAsString != 'BOOLEAN' && f.typeAsString != 'MULTIPICKLIST'}">
+                        <div class="slds-form-element slds-m-top_x-small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                <apex:outputText value="@" rendered="{!arcgisMapped[f.fieldPath]}"/>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} slds-input" rendered="{!!locked[f.fieldPath]}" />
+                                </div>
+                                <apex:outputPanel rendered="{!locked[f.fieldPath]}">
+                                    <div class="slds-form-element--has-hover-tooltip">
+                                        <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} slds-input" html-disabled="disabled" />
+                                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-left" role="tooltip" aria-live="polite">
+                                            <div class="slds-popover__body slds-text-longform">
+                                                <p>Your administrator has predetermined these fields for you.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'MULTIPICKLIST'}">
+                        <div class="slds-form-element slds-m-top_x-small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                <apex:outputText value="@" rendered="{!arcgisMapped[f.fieldPath]}"/>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:selectList value="{!obj[f.fieldPath]}" multiselect="true" styleClass="{!f.fieldPath} get-input" rendered="{!!locked[f.fieldPath]}">
+                                        <apex:selectOptions value="{!multiSelectFields[f.fieldPath]}"/>
+                                    </apex:selectList>
+                                </div>
+                                <apex:outputPanel rendered="{!locked[f.fieldPath]}">
+                                    <div class="slds-form-element--has-hover-tooltip">
+                                        <apex:selectList value="{!obj[f.fieldPath]}" multiselect="true" styleClass="{!f.fieldPath} get-input">
+                                            <apex:selectOptions value="{!multiSelectFields[f.fieldPath]}"/>
+                                        </apex:selectList>
+                                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-left" role="tooltip" aria-live="polite">
+                                            <div class="slds-popover__body slds-text-longform">
+                                                <p>Your administrator has predetermined these fields for you.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+
+
+                    </apex:outputPanel>
+
+                </apex:outputPanel>
+
+            </apex:repeat>
+            <div style="display:{!IF($CurrentPage.parameters.arcgisFieldMappings == null, 'none', 'block')}">
+                <div colspan="2"><span style="font-size:10px;">@= ArcGIS fields</span></div>
+            </div>
+        </div>
+
+        <script>
+        try {
+            $(function () {
+                try {
+                    setTimeout(function() {
+                        picklist.initialized = false;
+                        picklist.initAll();
+                        $('.fieldSetTable select:not(.hr, .min, .am-pm)').addClass('slds-select');
+                        $('.fieldSetTable select:not(.hr, .min, .am-pm)').parent('div').addClass('slds-select_container');
+                        $('.lookupInput input').addClass('slds-input');
+                        $('.multiSelectPicklistCell img').removeClass('slds-input');
+
+                        // this is used to fix breaking scrolling when selecting anything on the jquery datepicker on ios mobile
+                        $('#ui-datepicker-div a').on('click', function() {
+                            setTimeout(function() {
+                                $('.createrecord-step').closest('.ma-modal-content').attr('style', 'overflow: auto !important');
+                            });
+                        });
+                    }, 500);
+
+                }
+                catch(e) {
+                    console.warn(e);
+                }
+
+                // this is needed to prevent keyboard from covering calendar in mobile
+                $('.dateInput input').prop('readonly', true);
+                $('.dateInput input').addClass('slds-input');
+
+                let dateFormat = 'YYYY-MM-DD'; //Universal date format
+                if (MAPS) {
+                    // This is used for MapsV2
+                    const userFormat = MAPS?.currentUser?.dateFormat;
+                    dateFormat = userFormat.replace('yyyy','yy');
+                    if(userFormat.indexOf('M/') >= 0) {
+                        dateFormat = dateFormat.replace('M','mm');
+                    }
+                    if (userFormat.indexOf('yyyy') >= 0) {
+                        dateFormat = dateFormat.replace('yyyy', 'yy');
+                    }
+                } else {
+                    dateFormat = formatUserLocaleDate({datepicker: true});
+                }
+                
+                // for maps v2 we will inject the date picker in vue
+                if (!MAPS) {
+                    attachDatePickerToDom();
+
+                    $('.ClickToCreateFormTable .datetimepicker-container .hr').append(buildHours());
+                    $('.ClickToCreateFormTable .datetimepicker-container .min').append(buildMinutes());
+
+                    setCurrentMomentDateTime();
+                }
+                
+                //rich text stuff
+                try {
+                    setTimeout(function() {
+                        if(typeof CKEDITOR != 'undefined') {
+                            var richTextInstances = CKEDITOR.instances || {};
+                            for(var key in richTextInstances) {
+                                var richTextObj = richTextInstances[key];
+
+                                if(!richTextObj.readOnly) {
+                                    //let's show the text field
+                                    var element = richTextObj.element.$;
+                                    $(element).addClass('get-input');
+                                    if($( "[id*='"+richTextObj.name+"']" ).length == 1) {
+                                        $(element).show();
+                                        $(element).css({'height':'100px','visibility':'visible','width':'200px'});
+                                    }
+                                }
+                            }
+                        }
+                    },500);
+                }
+                catch(e) {
+                    console.warn('richText',e)
+                }              
+
+                // if mobile, handle lookup fields using our logic (sf popup fails)
+                try {
+                    if (MA && MA.isMobile) {
+                        // find all lookup inputs and remove the popup button
+                        var $lookupRows = $('.fieldInput[data-type="REFERENCE"]');
+                        $lookupRows.each(function(i, row) {
+                            var $row = $(row);
+                            // grab the field name
+                            var fieldAPI = $row.attr('data-field');
+                            $row.addClass('slds-input-has-icon slds-input-has-icon_right');
+                            // empty out the field container and create new row html
+                            var rowHTML = '<input class="actual-form-value" style="display:none;"/><input style="border: 1px solid #dddbda;padding-left: 0.75rem;" readonly="readonly" class="get-input '+fieldAPI+' slds-input" maxlength="255" size="20" type="text"/><div style="color: #b0adab;" class="slds-icon slds-input__icon slds-input__icon_right ma-icon icon-left ma-icon-search"></div>';
+                            $row.empty().html(rowHTML);
+
+                            // attach listener to input to show our search popup
+                            attachSalesforceSearchPopup($row, fieldAPI);
+                        });
+
+                        // read only input for mobile
+                        $('.dateInput input').prop('readonly', true);
+
+                    }
+                } catch (e) {}
+            });
+        }
+        catch(e) {
+
+        }
+        function attachSalesforceSearchPopup($row, fieldAPI) {
+            $row.on('click', '.get-input',function() {
+                // each modal using this look will need a class of 'js-search-modal-wrapper'
+                $('.js-search-modal-wrapper').hide();
+                MALayers.showModal('dynamicSearchModal');
+                $('#dynamicSearchModal').removeData();
+
+                //keep track of origin
+                $('#dynamicSearchModal').data('domOrigin',$(this));
+                //clear any previous
+                $('#searchDynamicInput').val('');
+                var $searchModal = $('#dynamicSearchModal');
+                $searchModal.find('.search-empty-state').removeClass('hidden');
+                $searchModal.find('.search-results-wrapper').addClass('hidden');
+                $('#searchDynamicInput').focus();
+
+                //remove any previous event listener
+                $('#dynamicSearchModal').off('keyup','#searchDynamicInput');
+
+                //attach event listener to input
+                $('#dynamicSearchModal').on('keyup','#searchDynamicInput',function () {
+                    var $input = $(this);
+                    var searchTerm = $input.val();
+                    var $searchModal = $('#dynamicSearchModal');
+                    var $searchResults = $searchModal.find('.search-table-view').empty();
+                    if (searchTimeout !== null) {
+                        clearTimeout(searchTimeout);
+                    }
+
+                    if(searchTerm === '') {
+                        $searchModal.find('.search-empty-state').removeClass('hidden');
+                        $searchModal.find('.search-results-wrapper').addClass('hidden');
+                        return;
+                    }
+
+                    searchTimeout = setTimeout(function() {
+                        searchTimeout = null;
+                        var $favLoading = MAToastMessages.showLoading({message:'{!JSENCODE($Label.maps__MA_Loading)}',timeOut:0,extendedTimeOut:0});
+
+                        searchLookupOptions_Id(fieldAPI, searchTerm).then(function(res) {
+                            $searchModal.find('.search-empty-state').addClass('hidden');
+                            $searchModal.find('.search-results-wrapper').removeClass('hidden');
+                            MAToastMessages.hideMessage($favLoading);
+                            $favLoading = null;
+                            if(res.success) {
+                                var resultHTML = '';
+                                var resultData = res.lookupOptions || [];
+                                var resultHTML = '';
+                                if(resultData.length === 0) {
+                                    //show no results
+                                    $searchResults.html('<li class="table-view-cell">No Results</li>');
+                                }
+                                else {
+                                    $.each(resultData, function (index, data) {
+                                        resultHTML += '<li class="table-view-cell dataSuccess" data-id="'+htmlEncode(data.value)+'">'+htmlEncode(data.label)+'</li>';
+                                    });
+
+                                    $searchResults.html(resultHTML);
+
+                                    //attach click handler to rows
+                                    $searchResults.off('click','.dataSuccess');
+                                    $searchResults.on('click','.dataSuccess',function () {
+                                        var $row = $(this);
+                                        var dataId = $row.attr('data-id');
+                                        var rowVal = $row.text();
+
+                                        var $searchOriginLocation = $('#dynamicSearchModal').data('domOrigin');
+                                        // update with text and update the hidden input with actual value
+                                        $searchOriginLocation.attr('data-id',dataId).val(rowVal);
+                                        // using hidden input to keep code change to minimum to match current sf flow
+                                        $searchOriginLocation.parent().find('.actual-form-value').val(dataId);
+
+                                        //hide modal
+                                        MALayers.hideModal('dynamicSearchModal',false);
+                                        $('.js-search-modal-wrapper').show();
+                                    });
+                                }
+                            }
+                            else {
+                                $searchResults.html('<li class="table-view-cell">No Results</li>');
+                            }
+                        });
+                    },500);
+                });
+
+                $('#dynamicSearchModal').off('click','.clearOriginInput');
+                $('#dynamicSearchModal').on('click','.clearOriginInput',function () {
+                    var $searchOriginLocation = $('#dynamicSearchModal').data('domOrigin');
+                    $searchOriginLocation.removeAttr('data-id').val('');
+                    $searchOriginLocation.parent().find('.actual-form-value').val('');
+                });
+
+                //add modal hide functionality
+                $('#dynamicSearchModal').off('click','.hideDynamicModal');
+                $('#dynamicSearchModal').on('click','.hideDynamicModal',function() {
+                    MALayers.hideModal('dynamicSearchModal', false);
+                    $('.js-search-modal-wrapper').show();
+                });
+            });
+        }
+        function searchLookupOptions_Id (fieldName, searchTerm) {
+            var dfd = $.Deferred();
+            var processData = {
+                ajaxResource: 'TooltipAJAXResources',
+                action: 'get_lookup_options',
+                baseObject: '{!objectName}',
+                fieldName: fieldName,
+                term: searchTerm
+            };
+
+            Visualforce.remoting.Manager.invokeAction('maps.RemoteFunctions.processAJAXRequest',
+                processData,
+                function(res, event) {
+                    if(event.status) {
+                        if (res && res.success) {
+                            dfd.resolve(res);
+                        } else {
+                            console.warn(res);
+                            dfd.resolve({lookupOptions: []});
+                        }
+                    } else {
+                        console.warn(res, event);
+                        dfd.resolve({lookupOptions: []});
+                    }
+                },{buffer:false,escape:false}
+            );
+            return dfd.promise();
+        }
+
+        function showAmPmCheck() {
+            var timeType = MAPS ? MAPS.currentUser?.timeFormat : getProperty(MASystem, 'User.timeFormat');
+            return timeType === 'hh:mm a' || timeType === 'h:mm a';
+        }
+
+        function buildHours() {
+            var showAM_PM = showAmPmCheck();
+
+            var i = showAM_PM ? 1 : 0;
+            var endHour = showAM_PM ? 13 : 24;
+            if(!showAM_PM) {
+                $('.ClickToCreateFormTable .datetimepicker-container .am-pm').parent().hide();
+            }
+            
+            var optionsList = '';
+            for(i; i < endHour; i++) {
+                if(i < 10) {
+                    i = '0' + i;
+                }
+                optionsList += '<option value="' + i + '">' + i + '</option>';
+            }
+            return optionsList;
+        }
+
+        function buildMinutes() {
+            var optionsList = '';
+            for(var i = 0; i < 60; i++) {
+                if(i < 10) {
+                    i = '0' + i;
+                }
+                optionsList += '<option value="' + i + '">' + i + '</option>';
+            }
+            return optionsList;
+        }
+
+        function setCurrentMomentDateTime() {
+            var rightNow = moment();
+            var showAM_PM = showAmPmCheck();
+            var hourFormat = showAM_PM ? 'hh' : 'HH';
+            var dateFormatted = rightNow.format(formatUserLocaleDate({datepicker: true}).replace('yy', 'YYYY').replace('mm', 'MM').replace('dd', 'DD'));
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDate').text(dateFormatted);
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDate').attr('date', dateFormatted);
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDateTime').text(rightNow.format(formatUserLocaleDate({moment: true})));
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDateTime').attr('date', dateFormatted);
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDateTime').attr('hr', rightNow.format(hourFormat));
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDateTime').attr('min', rightNow.format('mm'));
+            $('.ClickToCreateFormTable .datetimepicker-now-option .currentDateTime').attr('am-pm', rightNow.format('a').toUpperCase());
+
+            $('.ClickToCreateFormTable .currentDate, .ClickToCreateFormTable .currentDateTime').on('click', function() {
+                $(this).closest('.fieldInput').find('.datePick').val($(this).attr('date'));
+                $(this).closest('.fieldInput').find('.hr').val($(this).attr('hr'));
+                $(this).closest('.fieldInput').find('.min').val($(this).attr('min'));
+                $(this).closest('.fieldInput').find('.am-pm').val($(this).attr('am-pm'));
+            });
+        }
+
+        function attachDatePickerToDom() {
+            let dateFormat = 'YYYY-MM-DD'; //Universal date format
+            if (MAPS) {
+                // This is used for MapsV2
+                const userFormat = MAPS?.currentUser?.dateFormat;
+                dateFormat = userFormat.replace('yyyy','yy');
+                if(userFormat.indexOf('M/') >= 0) {
+                    dateFormat = dateFormat.replace('M','mm');
+                }
+                if (userFormat.indexOf('yyyy') >= 0) {
+                    dateFormat = dateFormat.replace('yyyy', 'yy');
+                }
+            } else {
+                dateFormat = formatUserLocaleDate({datepicker: true});
+            }
+
+            $('.ClickToCreateFormTable .datePick.datepicker').datepicker({
+                changeYear: true,
+                changeMonth: true,
+                dateFormat,
+                yearRange: "-100:+30"
+            });
+        }
+    </script>
+
+    </apex:form>
+
+</apex:page>

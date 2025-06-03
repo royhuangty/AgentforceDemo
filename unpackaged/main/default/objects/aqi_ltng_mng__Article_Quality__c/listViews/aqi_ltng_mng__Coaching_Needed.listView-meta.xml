@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aqi_ltng_mng__Coaching_Needed</fullName>
+    <columns>NAME</columns>
+    <columns>aqi_ltng_mng__Article_Title__c</columns>
+    <columns>aqi_ltng_mng__Article_Number__c</columns>
+    <columns>aqi_ltng_mng__Article_Version__c</columns>
+    <columns>aqi_ltng_mng__Agent__c</columns>
+    <columns>aqi_ltng_mng__Action_Assigned_To__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>aqi_ltng_mng__Last_Modified_By__c</columns>
+    <columns>aqi_ltng_mng__Last_Modified_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>aqi_ltng_mng__Action_Needed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>aqi_ltng_mng__Action_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Coaching Needed</label>
+</ListView>

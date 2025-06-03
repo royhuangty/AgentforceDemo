@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O BIN do cartão. Primeiros 6 dígitos do cartão</help>
+        <label><!-- Card BIN --></label>
+        <name>blng__CardBIN__c</name>
+    </CustomFieldTranslation>

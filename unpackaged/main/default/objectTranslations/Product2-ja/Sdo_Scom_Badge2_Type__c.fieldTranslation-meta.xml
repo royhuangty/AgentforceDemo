@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Badge2_Type --></label>
+        <name>Sdo_Scom_Badge2_Type__c</name>
+        <picklistValues>
+            <masterLabel>Free Shipping Badge</masterLabel>
+            <translation><!-- Free Shipping Badge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generic Badge</masterLabel>
+            <translation><!-- Generic Badge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Discount Badge</masterLabel>
+            <translation><!-- Price Discount Badge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Quantity Badge</masterLabel>
+            <translation><!-- Product Quantity Badge --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

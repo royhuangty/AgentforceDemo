@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Quote Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Détail du devis"
+        },
+        "id" : "aa12f058-438e-40ce-af20-e313a8c36cd3"
+      }, {
+        "attributes" : {
+          "text" : "Découvrez la répartition détaillée de vos devis sur cette page. Obtenez un aperçu des services proposés, des coûts associés et de la validité de chaque devis. Parcourez les sections ci-dessous pour comprendre les détails des termes et conditions proposés. Si vous avez des questions ou avez besoin d’informations supplémentaires, n’hésitez pas à contacter notre équipe dédiée. Nous sommes là pour garantir la clarté et répondre à toutes vos questions concernant vos devis."
+        },
+        "id" : "8fa739cf-5660-4c4a-938a-d993009a4b8c"
+      }, {
+        "attributes" : {
+          "mainTitleText" : "Détail du devis"
+        },
+        "id" : "7adcfa68-6723-4613-8e20-643095f8d9d1"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "2a587096-1e2d-41cc-b846-3c1910c49bc3"
+      } ]
+    }
+  },
+  "urlName" : "quote-detail"
+}

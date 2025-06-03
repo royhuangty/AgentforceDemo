@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>OldPartner1</container>
+    <containerType>Network</containerType>
+    <label>PartnerCentralNavigation</label>
+    <navigationMenuItem>
+        <label>Learn</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Partner Enablement</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/enablementprogram/EnablementProgram/Default</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Market</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Campaign Marketplace</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/marketing-home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Funds &amp; Requests</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/funds-and-requests</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Collateral</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/product-collateral</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Sell</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Sales Home</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/sales</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Performance</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/measure</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <defaultListViewId>My_Plans_Company</defaultListViewId>
+                <label>Channel Plans</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>SFDC_Channel_Account_Plan__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Support</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Support Home</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/support</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Field Service Home</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/field-service-home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Community</label>
+        <position>5</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/community</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Partner Blog</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>https://cirruschannel.wordpress.com/</target>
+        <type>ExternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

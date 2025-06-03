@@ -1,0 +1,160 @@
+<messaging:emailTemplate subject="Rejected Quote: {!relatedTo.Quote__r.Name}" recipientType="User" relatedToType="sbaa__Approval__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <div id="logo"><img height="50px" src="{!$Setup.Q2C_Demo_Settings__c.Company_Image_URL__c}" alt="Company Logo" /></div>
+        
+        <h3 style="color:#c42127;">Management has rejected your approval request for Quote: {!relatedTo.Quote__r.Name}</h3>
+        <h4>Rejection Notes: {!relatedTo.sbaa__CommentsLong__c}</h4>
+
+       <table style="border-collapse:collapse; width:100%;">
+            <thead>
+                <tr style="width:100%;">
+                    <th colspan="5" style="width:5%; background-color:#c60015; color:#fff; padding:5px; border:solid 1pt #c60015;">
+                        Deal Information
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Account
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.Account__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Quote Amount
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        <apex:outputText value="{0, number, currency}">
+                            <apex:param value="{!relatedTo.Quote_Amount__c}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Date Requested
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        <apex:outputText value="{0,date,M / d / y }">
+                            <apex:param value="{!relatedTo.Date_Requested__c}" />
+                        </apex:outputText>
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Discount %
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        <apex:outputText value="{0, number}">
+                            <apex:param value="{!relatedTo.Quote_Discount__c}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Stage
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.Opp_Stage__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Payment Terms
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.Payment_Terms__c}
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Reason
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.Reason__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Approval Status
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.sbaa__Status__c}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p></p>
+        
+<!--
+        <table style="border-collapse:collapse; width:100%;">
+            <thead>
+                <tr style="width:100%;">
+                    <th style="width:5%; background-color:#05a0df; color:#fff; padding:5px; border:solid 1pt #05a0df;">Qty</th>
+                    <th style="width:50%; background-color:#05a0df; color:#fff; padding:5px; border:solid 1pt #05a0df;">Product</th>
+                    <th style="width:15%; background-color:#05a0df; color:#fff; padding:5px; border:solid 1pt #05a0df;">List</th>
+                    <th style="width:15%; background-color:#05a0df; color:#fff; padding:5px; border:solid 1pt #05a0df;">Discount</th>
+                    <th style="width:15%; background-color:#05a0df; color:#fff; padding:5px; border:solid 1pt #05a0df;">Net</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!relatedTo.SBQQ__LineItems__r}" var="line">
+                    <tr>
+                        <td style="text-align:center; border:solid 1pt #7c8488; padding:5px;">
+                            <apex:outputText value="{0, number, 0}">
+                                <apex:param value="{!line.SBQQ__Quantity__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="border:solid 1pt #7c8488; padding:5px;">
+                            <apex:outputText value="{!line.SBQQ__Product__r.Name}"/>
+                        </td>
+                        <td style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                            <apex:outputText value="{0, number, currency}">
+                                <apex:param value="{!line.SBQQ__ListTotal__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                            <apex:outputText value="{0, number, currency}" rendered="{!IF(line.SBQQ__AdditionalDiscount__c != 0,true,false)}">
+                                <apex:param value="{!line.SBQQ__AdditionalDiscount__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                            <apex:outputText value="{0, number, currency}">
+                                <apex:param value="{!line.SBQQ__NetTotal__c}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+            <tfoot>
+                <th style="text-align:right; border:solid 1pt #7c8488; padding:5px;" colspan="2">TOTALS</th>
+                <th style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                    <apex:outputText value="{0, number, currency}">
+                        <apex:param value="{!relatedTo.SBQQ__ListAmount__c}" />
+                    </apex:outputText>
+                </th>
+                <th style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                    <apex:outputText value="{0, number, currency}">
+                        <apex:param value="{!relatedTo.SBQQ__AdditionalDiscountAmount__c}" />
+                    </apex:outputText>
+                </th>
+                <th style="text-align:right; border:solid 1pt #7c8488; padding:5px;">
+                    <apex:outputText value="{0, number, currency}">
+                        <apex:param value="{!relatedTo.SBQQ__NetAmount__c}" />
+                    </apex:outputText>
+                </th>
+            </tfoot>
+
+
+        </table>
+        -->
+        <p>Click <a href="https://na35.salesforce.com/{!relatedTo.Quote__c}">here</a> to go to view the Quote.</p>
+        
+    </body>
+</html> 
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

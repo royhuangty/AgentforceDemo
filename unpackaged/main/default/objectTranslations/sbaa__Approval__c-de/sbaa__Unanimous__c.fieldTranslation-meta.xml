@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wenn &quot;Genehmiger&quot; eine Gruppe ist, wird diese Option aktiviert, wenn alle Gruppenmitglieder zustimmen müssen, damit die Genehmigung den Status &quot;Genehmigt&quot; erhält</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </CustomFieldTranslation>

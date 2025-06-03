@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Account Plan Walkthrough</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Let&#39;s learn how to create an account plan from Account record page&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>Account Planning</header>
+        <isPublished>true</isPublished>
+        <masterLabel>Account Plan Walkthrough Step 1</masterLabel>
+        <publishedDate>2024-02-07</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2024-01-09</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Account</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Account Plan is the key to success</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://www.youtube.com/embed/7ymt9ntAU_0?si=Kq4S8scE75tUPtrC</videoLink>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Make sure you are on the record page of your Tier 1 account&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Account Plan Walkthrough Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Account</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>On your Tier 1 account?</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Select &lt;strong&gt;A &lt;/strong&gt;from the picklist to tag this account as a Tier 1 account&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Account Plan Walkthrough Step 3</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:RecordField.Account.Tier__c&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_detailPanel&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;detailTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Account</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Account.SDO_Account_Simple</targetRecordType>
+        <title>Tag your Tier 1 account</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Put your account plan here with SMART action goals&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Account Plan Walkthrough Step 4</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:RecordField.Account.SDO_Sales_Account_Plan_Details__c&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_detailPanel&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;detailTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Account</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Account.SDO_Account_Simple</targetRecordType>
+        <title>Fill in Account Plan Details</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

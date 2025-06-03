@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SDO B2B Commerce - Guest Access</label>
+    <permissionSets>B2B_Commerce_Guest_Browser_Access</permissionSets>
+    <permissionSets>B2B_Cross_Sell_Recommendations_User</permissionSets>
+    <permissionSets>B2B_LE_Bundle_Product_User</permissionSets>
+    <permissionSets>B2B_LE_PDP_Inventory</permissionSets>
+    <permissionSets>B2B_LE_Video_Player_Reader</permissionSets>
+    <permissionSets>SDO_B2BCommerce_Featured_Products_Component</permissionSets>
+    <permissionSets>SDO_OMS_Additional_Demo_Permissions</permissionSets>
+    <permissionSets>SDO_SCOM_OOA_User_Registration</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

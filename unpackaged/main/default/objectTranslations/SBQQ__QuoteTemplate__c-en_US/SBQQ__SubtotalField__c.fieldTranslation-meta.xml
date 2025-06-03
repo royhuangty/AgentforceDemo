@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select a Field to sum and display as group/quote subtotal. --></help>
+        <label><!-- Subtotal Field --></label>
+        <name>SBQQ__SubtotalField__c</name>
+        <picklistValues>
+            <masterLabel>Customer Total</masterLabel>
+            <translation><!-- Customer Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List Total</masterLabel>
+            <translation><!-- List Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net Total</masterLabel>
+            <translation><!-- Net Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular Total</masterLabel>
+            <translation><!-- Regular Total --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

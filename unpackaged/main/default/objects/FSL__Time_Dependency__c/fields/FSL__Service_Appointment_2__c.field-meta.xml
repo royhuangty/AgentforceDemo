@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Service_Appointment_2__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Service Appointment 2</label>
+    <referenceTo>ServiceAppointment</referenceTo>
+    <relationshipName>Time_Dependencies_2</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

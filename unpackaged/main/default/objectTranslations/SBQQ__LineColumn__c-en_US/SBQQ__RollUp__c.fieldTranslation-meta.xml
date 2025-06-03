@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates whether this field should be rolled up into master line. Only applicable if Roll-Up Field is specified on the template. --></help>
+        <label><!-- Roll Up --></label>
+        <name>SBQQ__RollUp__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Request Type --></label>
+        <name>FSL__Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appointment Booking</masterLabel>
+            <translation>Rezervare întâlnire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatch</masterLabel>
+            <translation>Trimitere</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get Candidates</masterLabel>
+            <translation>Preluare candidați</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule</masterLabel>
+            <translation>Program</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UnSchedule</masterLabel>
+            <translation>Anulare programare</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Root_Service_Appointment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Root Service Appointment</label>
+    <referenceTo>ServiceAppointment</referenceTo>
+    <relationshipLabel>Appointment Dependencies (Root Service Appointment)</relationshipLabel>
+    <relationshipName>Time_Dependencies1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

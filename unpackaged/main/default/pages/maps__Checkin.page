@@ -1,0 +1,306 @@
+<apex:page controller="maps.Checkin" extensions="maps.RemoteFunctions">
+    <apex:variable var="RequestPlatform" value="{!IF($CurrentPage.parameters.platform == null || $CurrentPage.parameters.platform == 'null', 'tablet', LOWER($CurrentPage.parameters.platform))}" />
+  
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-3.6.0.min.js')}"></script> 
+        <apex:slds />
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-ui.min.js')}"></script>
+        <apex:stylesheet value="{!URLFOR($Resource.maps__Maps3rdPartyPlugins, 'jquery/jquery-ui.css')}"/>
+        <script>
+            var recId = '{!JSENCODE($CurrentPage.parameters.recordId)}';
+            var baseObjectId = '{!JSENCODE($CurrentPage.parameters.baseObjectId)}';
+            var userId = '{!JSENCODE($User.Id)}';
+            var fieldsetName = '{!JSENCODE(fieldSetName)}';
+            var tooltip1 = '{!JSENCODE(tooltipOne)}';
+            var autoCheckout = {!autoCheckout};
+            var recordData = [];
+            var updateFields = false;
+            var checkInId = '{!checkinId}';
+            var somethingWentWrongLabel = "{!JSENCODE($Label.maps__MA_Something_Went_Wrong)}";
+            var successfulCheckOutLabel = "{!JSENCODE($Label.maps__ActionFramework_Successful_Check_Out)}";
+            var successfulCheckInLabel = "{!JSENCODE($Label.maps__ActionFramework_Successful_Check_In)}";
+            $( document ).ready(function() {
+                requestData = {
+                    SavedQueryId: '',
+                    id: userId,
+                    lid:recId,
+                    tooltip1: tooltip1 != null && tooltip1 != '' ? tooltip1 : 'N/A',
+                    clat: '',
+                    clong: '',
+                    caccuracy: '',
+                    length: '',
+                    ajaxResource : 'TooltipAJAXResources',
+                    action: 'verifycheckin',
+                };
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.RemoteFunctions.processAJAXRequest}',
+                    requestData,
+                    function(res, event){
+                        if({!showMe}){
+                            recordData = JSON.parse('{!JSENCODE(recordOutput)}');
+                            recordData.forEach(function(field) {
+                                $('.' + field.name).val(field.value);
+                            })
+                        } else {
+                            checkIn();
+                        }
+                    },{buffer:false,escape:false}
+                );
+            });
+            
+
+            function checkIn() {
+                
+                var requestData = {
+                    action      : 'check_in',
+                    SavedQueryId: '',
+                    id: userId,
+                    lid:recId,
+                    tooltip1: tooltip1 != null && tooltip1 != '' ? tooltip1 : 'N/A',
+                    clat: '',
+                    clong: '',
+                    caccuracy: '',
+                    length: '',
+                    isMapItRecord: true,
+                    mapItBaseObject: baseObjectId,
+                    fieldSet: fieldsetName,
+                    ajaxResource : 'TooltipAJAXResources'
+                };
+                
+                if(autoCheckout) {
+                    var inputFields = $('.fieldInput');
+                    var fields = [];
+                    inputFields.each(function(v,k){
+                        var fieldName = $(k).attr('data-field');
+                        var fieldValue = $(k).find('.' + fieldName).val();
+                        if(fieldName != undefined) {
+                            fields.push({
+                                name: fieldName,
+                                value: fieldValue
+                            });
+                        }
+                    });
+                    requestData.fields = JSON.stringify(fields);
+                }
+                
+
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.RemoteFunctions.processAJAXRequest}',requestData,
+                function(json, event) {
+                    if(event.status) {
+                        var response = event.result;
+                        if(response.success) {
+                            var displayProps = {
+                                success:true,
+                                action: 'checkin',
+                                displayMessage: successfulCheckInLabel
+                            }
+                            toggleShowMe(JSON.stringify(displayProps));
+                            updateFields = true;
+                        } else {
+                            var displayProps = {
+                                success:false,
+                                action: 'checkin',
+                                displayMessage: response.error || somethingWentWrongLabel
+                            }
+                            if (response.errMsgs) {
+                                displayProps.subMessages = response.errMsgs
+                            }
+                            ToggleShowErrors(JSON.stringify(displayProps));
+                        }
+                    }
+                    
+                });
+
+
+
+            }
+
+            function checkOut() {
+                
+                recordData.forEach(function(field) {
+                    field.value = $('.' + field.name).val();
+                })
+                var requestData = {
+                    action      : 'check_out',
+                    checkInId   : checkInId,
+                    lid         : recId,
+                    postTo      : 'Chatter|Task',
+                    SavedQueryId: '',
+                    clat        : '',
+                    clong       : '',
+                    caccuracy   : '',
+                    distance    : '',
+                    fields      : JSON.stringify(recordData),
+                    fieldSet    : fieldsetName === 'Select' ? '' : fieldsetName,         
+                    ajaxResource : 'TooltipAJAXResources'
+                };
+
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.RemoteFunctions.processAJAXRequest}',requestData,
+                function(json, event) {
+                    if(event.status) {
+                        var response = event.result;
+                        if(response.success) {
+                            var displayProps = {
+                                success:true,
+                                action: 'checkout',
+                                displayMessage: successfulCheckOutLabel
+                            }
+                            toggleShowMe(JSON.stringify(displayProps));
+                        } else {
+                            var displayProps = {
+                                success:false,
+                                action: 'checkout',
+                                displayMessage: response.error || somethingWentWrongLabel
+                            }
+                            if (response.errMsgs) {
+                                displayProps.subMessages = response.errMsgs
+                            }
+                            ToggleShowErrors(JSON.stringify(displayProps));
+                        }
+                    }                
+                });
+            }
+        </script>
+    
+  
+        <apex:form >
+            <apex:actionFunction action="{!ToggleShowMe}" name="toggleShowMe" reRender="actionWindow, Errors">
+                <apex:param name="displayProperties" value="" />
+            </apex:actionFunction>
+            <apex:actionFunction action="{!ToggleShowErrors}" name="ToggleShowErrors" reRender="Errors">
+                <apex:param name="displayProperties" value="" />
+            </apex:actionFunction>
+        </apex:form>
+        <apex:outputPanel id="Errors" > 
+        <apex:form rendered="{!hasError}">
+            
+            <!-- Error Message -->
+            <apex:pageBlock >
+                <div class="slds-card slds-p-around_large has-error">
+                    <div class="slds-text-color_error error-message">{!displayMessage}<div>{!subMessages}</div></div>
+                </div>
+            </apex:pageBlock>
+        </apex:form>
+        </apex:outputPanel>
+
+        <apex:outputPanel id="actionWindow" > 
+        <script>
+            recordData = JSON.parse('{!JSENCODE(recordOutput)}');
+            checkInId = '{!checkinId}';
+
+            if (updateFields) {
+                recordData.forEach(function(field) {
+                    $('.' + field.name).val(field.value);
+                });
+                
+                updateFields = false;
+            }
+
+        </script>
+        <apex:form rendered="{!ShowMe}">
+
+            <div class="CustomDispositionFormTable fieldSetTable slds-p-around--medium">
+                <apex:repeat value="{!IF(defaultFields != null,defaultFields,defaultFields)}" var="f">
+                    <apex:outputPanel rendered="{! IF(RequestPlatform == 'tablet' && LOWER(f.fieldType) == 'reference', false, true)}" layout="none">
+                        <apex:outputPanel layout="none" rendered="{!LOWER(f.fieldType) == 'date'}">
+                            <div class="slds-form-element slds-m-vertical_small">
+                                <label class="fieldLabel dateLabel slds-form-element__label">{!f.Label}<apex:outputText value="*" rendered="{!f.Required || f.DBRequired}"/></label>
+
+                                <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.fieldType}" data-field="{!f.fieldPath}">
+                                    <div>
+                                        <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} datePick slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="none" rendered="{!LOWER(f.fieldType) == 'boolean'}">
+                            <div class="slds-form-element slds-m-top_small">
+                                <label class="fieldLabel type-{!f.fieldType} slds-form-element__label">
+                                    <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                        <abbr class='slds-required' title='required'>*</abbr>
+                                    </apex:outputText>
+                                    {!f.Label}
+                                </label>
+
+                                <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.fieldType}" data-field="{!f.fieldPath}">
+                                    <div>
+                                        <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="none" rendered="{!LOWER(f.fieldType) == 'multipicklist'}">
+                            <div class="fieldInput slds-form-element__control slds-m-vertical_small">
+                                <label class="fieldLabel type-{!f.fieldType} slds-form-element__label">
+                                    <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                        <abbr class='slds-required' title='required'>*</abbr>
+                                    </apex:outputText>
+                                    {!f.Label}
+                                </label>
+
+                                <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.fieldType}" data-field="{!f.fieldPath}">
+                                    <div>
+                                        <apex:selectList value="{!obj[f.fieldPath]}" multiselect="true" styleClass="{!f.fieldPath} get-input">
+                                            <apex:selectOptions value="{!multiSelectFields[f.fieldPath]}"/>
+                                        </apex:selectList>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="none" rendered="{!LOWER(f.fieldType) != 'date' && LOWER(f.fieldType) != 'boolean' && LOWER(f.fieldType) != 'multipicklist'}">
+                            <div class="fieldInput slds-form-element__control slds-m-vertical_small">
+                                <label class="fieldLabel type-{!f.fieldType} slds-form-element__label">
+                                    <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                        <abbr class='slds-required' title='required'>*</abbr>
+                                    </apex:outputText>
+                                    {!f.Label}
+                                </label>
+
+                                <div class="field::{!f.fieldPath}  fieldInput slds-form-element__control" data-type="{!f.fieldType}" data-field="{!f.fieldPath}">
+                                    <div>
+                                        <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} slds-input slds-m-bottom_x-small" />
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>                
+                </apex:repeat>
+                <input type="button" class="slds-button slds-button_brand" value="Save" onclick="checkOut()" />
+            </div>
+
+
+        </apex:form>
+        <apex:form rendered="{!!ShowMe}">
+
+            <!-- Success Message -->
+            <apex:pageBlock rendered="{!hasSuccess}">
+                <div class="slds-card slds-p-around_large has-success">
+                    <div class="slds-text-color_success success-message">{!displayMessage}</div>
+                </div>
+            </apex:pageBlock>
+        </apex:form>
+        </apex:outputPanel>
+            <script>
+            jQuery(function () {
+                var IsMobile = false;
+                picklist.initialized = false;
+                picklist.initAll();
+                 $('.fieldSetTable select').addClass('slds-select');
+                $('.fieldSetTable select').parent('div').addClass('slds-select_container');
+                $('.lookupInput input').addClass('slds-input');
+                $('.multiSelectPicklistCell img').removeClass('slds-input');
+                //init datepicker if desktop
+                if(IsMobile == false) {
+                    //format for jquery ui datepicker
+                    var dateFormat = UserContext.dateFormat.replace(/M/g,'m').replace('yyyy','yy');
+                    $('.datePick').datepicker({
+                        changeMonth: true,
+                        changeYear: true,
+                        dateFormat : dateFormat
+                    });
+                }
+                // adding grid class to input containers to date input doesn't stretch outside window
+                $('.dateInput').addClass('slds-grid');
+                $('.dateInput .dateFormat').addClass('slds-align-middle');
+            });
+        </script>
+</apex:page>

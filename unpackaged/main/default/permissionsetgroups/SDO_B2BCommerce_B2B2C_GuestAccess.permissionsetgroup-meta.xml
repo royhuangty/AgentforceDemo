@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: includes all permissions needed to access B2B2C Storefront for Guests.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>B2B Commerce - B2B2C Storefront Guests</label>
+    <permissionSets>SDO_B2BCommerce_B2B2C_Storefront_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

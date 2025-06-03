@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter a Discount (%), based on the field, when the product referenced for this option is offered standalone. But, you&apos;ll need to extend a discount if purchased a part of this product bundled. --></help>
+        <label><!-- Discount (%) --></label>
+        <name>SBQQ__Discount__c</name>
+    </CustomFieldTranslation>

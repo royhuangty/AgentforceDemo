@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Failure Reason --></label>
+        <name>FSL__Failure_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Already Running</masterLabel>
+            <translation>Hiện Đang Chạy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click Authorize</masterLabel>
+            <translation>Nhấp Vào Ủy Quyền</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupted data</masterLabel>
+            <translation>Dữ liệu bị lỗi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability Rule</masterLabel>
+            <translation>Không Có Quy Tắc Khả Dụng</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Không Xác Định</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Aborted</masterLabel>
+            <translation>Người Dùng Đã Hủy</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

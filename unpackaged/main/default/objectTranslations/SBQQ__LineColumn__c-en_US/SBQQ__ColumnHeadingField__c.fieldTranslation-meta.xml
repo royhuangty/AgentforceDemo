@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The field that sources the dynamic heading for this column. --></help>
+        <label><!-- Column Heading Field --></label>
+        <name>SBQQ__ColumnHeadingField__c</name>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation><!-- Type --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Skill Type Logic --></label>
+        <name>FSL__Matching_Skills_Operator__c</name>
+        <picklistValues>
+            <masterLabel>All Skills Match (AND)</masterLabel>
+            <translation>Alle kvalifikasjoner samsvarer (AND)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>At Least One Skill Matches (OR)</masterLabel>
+            <translation>Minst én kvalifikasjon samsvarer (OR)</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Geben Sie einen Pauschalbetrag ein.</help>
+        <label><!-- Flat Amount --></label>
+        <name>blng__FlatAmount__c</name>
+    </CustomFieldTranslation>

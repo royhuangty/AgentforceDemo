@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CspTrustedSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canAccessCamera>false</canAccessCamera>
+    <canAccessMicrophone>false</canAccessMicrophone>
+    <context>Communities</context>
+    <description>sdodemo_main_166ce2cf6b6_172_17af813c46b_force_com Trusted Site Added Via Community Builder</description>
+    <endpointUrl>https://sdodemo-main-166ce2cf6b6-172-17af813c46b.force.com</endpointUrl>
+    <isActive>true</isActive>
+    <isApplicableToConnectSrc>true</isApplicableToConnectSrc>
+    <isApplicableToFontSrc>true</isApplicableToFontSrc>
+    <isApplicableToFrameSrc>true</isApplicableToFrameSrc>
+    <isApplicableToImgSrc>true</isApplicableToImgSrc>
+    <isApplicableToMediaSrc>true</isApplicableToMediaSrc>
+    <isApplicableToStyleSrc>true</isApplicableToStyleSrc>
+</CspTrustedSite>

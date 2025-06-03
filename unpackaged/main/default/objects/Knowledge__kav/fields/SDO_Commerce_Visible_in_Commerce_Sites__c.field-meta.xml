@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Commerce_Visible_in_Commerce_Sites__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Visible in Commerce Sites</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

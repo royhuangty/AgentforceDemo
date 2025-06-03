@@ -1,0 +1,252 @@
+#scheduleWrap {
+	
+	.labor-law-notification {
+		display: none;
+	}
+	
+	&.labor-law-notification-in {
+		
+		.labor-law-notification {
+			display:block;
+		}
+		
+		#scheduleBody {
+			top: 189px;
+			max-height: calc(100% - 246px);
+			
+			@media screen and (min-width: 769px) {
+                max-height: calc(100% - 189px);
+            }
+		}
+	}
+}
+
+#scheduleBody {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 158px;
+    z-index: 10;
+    max-height: calc(100% - 215px);
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width: 769px) {
+        max-height: calc(100% - 158px);
+    }
+    
+    .panel-bottom-bar {
+        width: 100%;
+        flex-shrink: 0;
+        z-index: 50;
+        padding: 12px 16px;
+        background-color: #ffffff;
+        box-shadow: 0 -2px 0 0 #d8dde6;
+        position: relative;
+    }
+}
+
+.event-items-wrap {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 32px 0 16px;
+}
+
+.event-item {
+	display: flex;
+	padding: 0 12px 20px;
+}
+
+.event-time-wrap {
+    flex-shrink: 0;
+    width: 120px;
+    padding-right: 8px;
+    padding-top: 10px;
+}
+
+.event-time {
+	font-size: 11px;
+	flex-shrink: 0;
+	color: $color-text-default;
+    padding-top:4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+
+    &:active {
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
+.event-block {
+	border-radius: 4px;
+	background-color: $blue;
+    position: relative;
+    padding: 10px 12px 12px;
+    flex-grow: 1;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.event-block_waypoint {
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
+    font-size: 11px;
+    margin: -2px 12px 0 -2px;
+}
+
+.nonspacial-icon { 
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
+    font-size: 16px;
+    margin: -2px 12px 0 -2px;
+}
+
+.event-block_body {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.event-title {
+	font-size: 16px;
+	color: #fff;
+	line-height: 1.2;
+	padding-right: 22px;    
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    display: block;
+}
+
+.event-address {
+	font-size: 11px;
+	color: #fff;
+	line-height: 1.2;
+}
+
+.event-overflow-actions-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	
+	.ma-icon {
+	    width: 16px;
+        height: 16px;
+        display: block;
+        line-height: 1;
+        font-size: 16px;
+        margin: 8px 0 0 8px;
+        color: #fff;
+	}
+}
+
+.event-item.event-item_nonspacial {
+    
+    .event-block {
+        background-color: $text-sf;
+    }
+    
+    .nonspacial-icon {
+        
+        .ma-icon {
+	        font-size: 20px;
+	        color: #fff;
+        }
+    }
+}
+
+.que-item-wrap {
+    margin: 16px 0;
+    padding: 0 12px;
+}
+
+.to-be-scheduled-area {
+    border-top: 1px solid $color-border;
+    padding: 12px 12px 4px;
+
+    .to-be-scheduled-text {
+        padding-top: 10px;
+        padding-right: 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: $text-sf;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+}
+
+.event-queue-item {
+    border-radius: 4px;
+    background-color: #ecebea;
+    position: relative;
+    padding: 10px 12px 12px;
+    margin: 0 0 16px;
+    flex-grow: 1;
+    display: flex;
+
+    .event-queue-item-title {
+        flex-grow: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-right: 32px;
+        font-size: 16px;
+    }
+
+    .ma-icon-remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 43px;
+        height: 43px;
+        line-height: 45px;
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+        color: #706e6b;
+    }
+}
+
+#scheduleEditBottomBar {
+    
+    .routeBottomButton {
+        text-align: center;
+        flex: 1 0 0px;
+        line-height: 1;
+        font-size: .625rem;
+        padding: .5rem 0;
+        border-top: 3px solid transparent;
+    }
+}
+
+.route-drive-text {
+    display: flex;
+    padding-left: 128px;
+    margin-bottom: 16px;
+    line-height: 1;
+    font-size: 12px;
+    color: $text-sf;
+
+    .ma-icon {
+        padding-right: 8px;
+    }
+}

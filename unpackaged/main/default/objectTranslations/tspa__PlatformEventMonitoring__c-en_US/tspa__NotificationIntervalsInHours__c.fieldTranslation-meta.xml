@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The settings set the maximum frequency that the email notification will be sent, set in hours. the recommended value is 12 hours. Minimum value is 1 hour. --></help>
+        <label><!-- Notification interval in hours --></label>
+        <name>tspa__NotificationIntervalsInHours__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programación de ingresos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programaciones de ingresos</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>Fechas de ingresos</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>Mediciones de ingresos</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Registros de origen</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>Información de resumen</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: All Field Service Base Permissions for demo assets. Who: Chan. When: Dec, 2023.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Field Service - Base Permissions</label>
+    <permissionSets>FSL_Admin_License</permissionSets>
+    <permissionSets>FSL_Admin_Permissions</permissionSets>
+    <permissionSets>FSL_Dispatcher_License</permissionSets>
+    <permissionSets>FSL_Dispatcher_Permissions</permissionSets>
+    <permissionSets>FSL_Mobile_License</permissionSets>
+    <permissionSets>FSL_Resource_License</permissionSets>
+    <permissionSets>FSL_Resource_Permissions</permissionSets>
+    <permissionSets>xDO_FieldService_Base_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

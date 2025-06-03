@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Uso</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Usos</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Usage Layout</layout>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Usage Information --></label>
+            <section>Usage Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº do uso</nameFieldLabel>
+</CustomObjectTranslation>

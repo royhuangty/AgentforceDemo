@@ -1,0 +1,451 @@
+<apex:page standardController="OperatingHours" sidebar="false" showHeader="false" extensions="FSL.Ctrl023_CalendarEditor">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <apex:includeScript value="{!$Resource.FSL__MomentJS}"/>
+    <apex:includeScript value="{!$Resource.FSL__jQuery}"/>
+    <apex:includeScript value="{!$Resource.FSL__DefineMomentTimezones}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__FontAwesome44, 'css/font-awesome.min.css')}"/>
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'dhtmlxscheduler.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlxMenuStd51, 'codebase/dhtmlxmenu.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'dhtmlxscheduler.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_limit.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_timeline.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_tooltip.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_key_nav.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxMenuStd51, 'codebase/dhtmlxmenu.js')}"/>
+    <apex:includeScript value="{!$Resource.FSL__CalendarEditor}"/>
+
+    <script src="/xdomain/xdomain.js" type="text/javascript"></script>
+    <script type='text/javascript' src='/support/console/42.0/integration.js'/>
+    <script src="/soap/ajax/32.0/connection.js" type="text/javascript"></script>
+
+    <apex:form id="form">
+        <apex:actionFunction action="{!saveCalendar}" name="saveCalendar" reRender="form"
+                             oncomplete="refreshPage('{!OperatingHours.Id}')">
+            <apex:param name="daysMap" value=""/>
+        </apex:actionFunction>
+    </apex:form>
+
+    <script>
+      function setRFCValue(e) {
+        let TimeSlotRFCId = $("[name$='theLookupLink_lkid']").val();
+        let TimeSlotRFCName = $("[name$='theLookupLink_lkold']").val();
+
+        if (rfcs[TimeSlotRFCId] != null) {
+          idMap = idMap || {};
+          idMap[selectId] = [TimeSlotRFCId, TimeSlotRFCName];
+
+          var slot = scheduler._events[selectId];
+          for (var slotId in idMap) {
+            if (slotId == slot.id) {
+                slot[fieldNames.TimeSlot.RecordsetFilterCriteriaId] = idMap[slotId][0];
+                scheduler.updateView();
+                return;
+            }
+          }
+        }
+        else {
+          alert(customLabels.DesignatedWorkInvalidRfcSelected);
+          scheduler.updateView();
+        }
+      }
+
+    </script>
+
+    <div>
+      <apex:form style="width: 0; height: 0;">
+        <apex:pageBlock >
+          <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+              <apex:inputField id="theLookupLink"  onchange="setRFCValue();"  value="{!currentTimeSlot.RecordsetFilterCriteriaId}"/>
+            </apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+      </apex:form>
+    </div>
+
+    <body>
+    <div class="slds">
+        <div class="slds-page-header slds-page-header--object-home" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container">
+                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-today">
+                      <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#today')}"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-title--caps slds-line-height--reset">{!$ObjectType.TimeSlot.labelPlural}</p>
+                  <button class="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+              <div class="slds-button">
+                    <button onclick="saveCalenderClick()" class="slds-button slds-button--neutral">{!$Label.Save}</button>
+                </div>
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+              <p class="slds-text-body--small">{!$Label.Drag_and_drop_on_a_timespan_to} <br/>{!$Label.Right_click_an_interval_to_toggle}</p>
+            </div>
+            <div class="slds-col slds-align-bottom">
+                <div class="slds-form-element">
+                  <span class="slds-form-element__label">{!$Label.Clipboard}</span>
+                  <div class="clipboard-control">
+                    <div class="clipboard-explained">
+                        <svg aria-hidden="true" class="slds-icon clipboard-copy">
+                          <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#copy')}"></use>
+                        </svg>
+                        <span class="clipboard-explained-txt">{!$Label.Right_click_a_Time_slot_to_copy}</span>
+                    </div>
+                
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!--         <button onclick="saveCalenderClick()" style="margin-left: 50%; margin-top: 66px;">{!$Label.Save}</button> -->
+        <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:70%;'>
+            <div class="dhx_cal_navline">
+
+                <div class="dhx_cal_date"></div>
+            </div>
+            <div class="dhx_cal_header"></div>
+            <div class="dhx_cal_data" style="height: inherit !important;"></div>
+        </div>
+        <!-- <div id="instructions"></div> -->
+    </body>
+
+
+    <style type="text/css" media="screen">
+        #instructions {
+            position: fixed;
+            top: 48px;
+            font-size: 14px;
+            max-width: 500px;
+            line-height: 21px;
+        }
+
+        .clipboard-control {
+            border:1px dashed #232323;
+            font-size: 10px;
+            padding: 5px;
+        }
+
+        .clipboard-copy {
+            width: 12px !important;
+            fill: #54698d !important;
+            margin-right: 5px;
+        }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            overflow: hidden;
+            /*margin-top: -39px;*/
+        }
+
+        .dhx_cal_navline {
+            display: none;
+        }
+
+        .dhx_cal_editor {
+            display: none;
+        }
+
+        .dhx_cal_event_line {
+            background: rgba(6, 129, 182, 0.8) !important;
+        }
+
+        .working {
+            background: rgba(26, 76, 123, 0.8) !important;
+        }
+
+        .optional {
+            background: rgba(255, 87, 34, 0.8) !important;
+        }
+
+        .slot-Red {
+            background-color: #E53935 !important;
+        }
+        .slot-Pink {
+            background-color: #D81B60 !important;
+        }
+        .slot-Purple {
+            background-color: #8E24AA !important;
+        }
+        .slot-Indigo {
+            background-color: #3949AB !important;
+        }
+        .slot-Blue {
+            background-color: #1E88E5 !important;
+        }
+        .slot-Cyan {
+            background-color: #00ACC1 !important;
+        }
+        .slot-Teal {
+            background-color: #00897B !important;
+        }
+        .slot-Green {
+            background-color: #43A047 !important;
+        }
+        .slot-Lime {
+            background-color: #C0CA33 !important;
+        }
+        .slot-Yellow {
+            background-color: #FDD835 !important;
+        }
+        .slot-Amber {
+            background-color: #FFB300 !important;
+        }
+        .slot-Orange {
+            background-color: #FB8C00 !important;
+        }
+        .slot-Brown {
+            background-color: #6D4C41 !important;
+        }
+        .slot-Grey {
+            background-color: #757575 !important;
+        }
+        .slot-Asphalt {
+            background-color: #546E7A !important;
+        }
+        .slot-Black {
+            background-color: #000 !important;
+        }
+
+        .slot-Default {
+            background-color: rgba(26, 76, 123, 0.8);
+        }
+
+        .fa-times {
+            color: #fff;
+            border-radius: 3px;
+            padding: 2px 3px;
+            margin: 4px 5px 0 0;
+            cursor: pointer;
+            font-size: 10px;
+            float: right;
+        }
+
+        .designatedIcon {
+            color: #fff;
+            padding: 2px 3px;
+            margin: 4px 5px 0 0;
+            cursor: pointer;
+            font-size: 10px;
+            float: left;
+        }
+
+        .rdbt_0, .rdbt_1 {
+            display: none;
+        }
+
+        .colorbox {
+            border-radius: 3px;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+            top: 1px;
+            background-color: rgba(26, 76, 123, 0.8);
+        }
+
+        .times {
+            position: relative;
+            top: 4px;
+        }
+
+        .fa-times:hover {
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub_item_hk {
+            display: none !important;
+        }
+
+        .sub_item_icon i {
+            font-size: 12px !important;
+        }
+
+        .sub_item_text {
+            padding: 0px !important;
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            cursor: pointer !important;
+        }
+
+        .sub_item_text .sub_item_text {
+            padding: 4px 2px 4px 0px !important;
+            margin-right: 20px !important;
+            width: 100%;
+        }
+
+        .sub_item_text .fa {
+            margin-right: 3px;
+        }
+
+        .dhtmlxMenu_material_SubLevelArea_Polygon td.sub_item_icon {
+            width: 10px !important;
+            text-align: center;
+        }
+
+        .sub_item_selected .sub_item_icon {
+            background: #ebebeb !important;
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            box-shadow: inset 2px 0 0 rgba(8, 119, 189, 1);
+        }
+
+        .dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon {
+            border: 1px solid rgb(207, 215, 219) !important;
+            border-top-left-radius: 3px !important;
+            border-top-right-radius: 3px !important;
+            border-bottom-right-radius: 3px !important;
+            border-bottom-left-radius: 3px !important;
+            box-shadow: rgba(10, 10, 10, 0.14) !important;
+            padding: 0px !important;
+            background: rgb(255, 255, 255) !important;
+        }
+
+        .dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon:nth-child(1),
+        .dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon:nth-child(2) {
+            margin-left: -15px !important;
+        }
+
+        .slds {
+            position: relative;
+            z-index: 5;
+        }
+        .slds-icon-standard-today {
+            fill: #fab24c;
+        }
+
+        .dhx_cal_container {
+            top: -40px;
+            z-index: 1;
+        }
+
+        .des-work-carret {
+            position: absolute;
+            right: 4px;
+            margin-top: 6px;
+        }
+
+        .dhtmlxMenu_material_SubLevelArea_Polygon td.sub_item_text div.sub_item_text {
+            position: relative;
+            line-height: 23px !important;
+            height: 25px !important;
+        }
+
+        .dhtmlxMenu_material_SubLevelArea_Polygon td.sub_item_text div.sub_item_text {
+            font-size: 12px;
+        }
+    </style>
+
+
+    <script>
+
+        var sunday = '{!JSENCODE($Label.Sunday)}',
+            monday = '{!JSENCODE($Label.Monday)}',
+            tuesday = '{!JSENCODE($Label.Tuesday)}',
+            wednesday = '{!JSENCODE($Label.Wednesday)}',
+            thursday = '{!JSENCODE($Label.Thursday)}',
+            friday = '{!JSENCODE($Label.Friday)}',
+            saturday = '{!JSENCODE($Label.Saturday)}',
+            isTwelveHours = '{!isTwelveHoursClock}',
+            calender = JSON.parse('{!JSENCODE(calendar)}'),
+            rfcs = JSON.parse('{!JSENCODE(rfcs)}'),
+            isO2ForAllTerritoriesOn = {!isO2ForAllTerritoriesOn},
+            isO2Enabled = {!isO2Enabled},
+            isInCommunity = "{!isInCommunity}",
+            isTwelveHours = "{!isTwelveHours}" === "true" ? true : false,
+            userLocale = "{!userLocale}",
+            startOnMonday = {!firstDayOfTheWeek};
+
+            // To support also rfcs with 15 chars
+            for (const rfc in rfcs) {
+              rfcs[rfc.substring(0, 15)] = rfcs[rfc];
+            }
+
+        var fieldNames = {
+            TimeSlot: {
+                StartTime: '{!$ObjectType.TimeSlot.Fields.StartTime.Name}',
+                EndTime: '{!$ObjectType.TimeSlot.Fields.EndTime.Name}',
+                DayOfWeek: '{!$ObjectType.TimeSlot.Fields.DayOfWeek.Name}',
+                Type: '{!$ObjectType.TimeSlot.Fields.Type.Name}',
+                OperatingHours: '{!$ObjectType.TimeSlot.Fields.OperatingHoursId.Name}',
+                Designated_Work_Boolean_Fields__c: '{!$ObjectType.TimeSlot.Fields.Designated_Work_Boolean_Fields__c.Name}',
+                RecordsetFilterCriteriaId: '{!$ObjectType.TimeSlot.Fields.RecordsetFilterCriteriaId.Name}',
+                Slot_Color__c: '{!$ObjectType.TimeSlot.Fields.Slot_Color__c.Name}',
+            },
+            OperatingHours: {
+                TimeSlots: '{!TimeSlotRelationshipName}'
+            }
+        };
+
+        var customLabels = {
+            Copy_to_next_day:                       "{!JSENCODE($Label.Copy_to_next_day)}",
+            Normal:                                 "{!JSENCODE($Label.Normal)}",
+            Paste:                                  "{!JSENCODE($Label.Paste)}",
+            Copy:                                   "{!JSENCODE($Label.Copy)}",
+            DesignateWork:                          "{!JSENCODE($Label.DesignateWork)}",
+            Time_Slot_Color:                        "{!JSENCODE($Label.Time_Slot_Color)}",
+            Default:                                "{!JSENCODE($Label.Default)}",
+            IntersectingEventsCalEdit:              "{!JSENCODE($Label.IntersectingEventsCalEdit)}",
+            Designated_work_field_set_is_empty:     "{!JSENCODE($Label.Designated_work_field_set_is_empty)}",
+            SlotColorBlack:                         "{!JSENCODE($Label.SlotColorBlack)}",
+            SlotColorAsphalt:                       "{!JSENCODE($Label.SlotColorAsphalt)}",
+            SlotColorGrey:                          "{!JSENCODE($Label.SlotColorGrey)}",
+            SlotColorBrown:                         "{!JSENCODE($Label.SlotColorBrown)}",
+            SlotColorOrange:                        "{!JSENCODE($Label.SlotColorOrange)}",
+            SlotColorAmber:                         "{!JSENCODE($Label.SlotColorAmber)}",
+            SlotColorYellow:                        "{!JSENCODE($Label.SlotColorYellow)}",
+            SlotColorLime:                          "{!JSENCODE($Label.SlotColorLime)}",
+            SlotColorGreen:                         "{!JSENCODE($Label.SlotColorGreen)}",
+            SlotColorTeal:                          "{!JSENCODE($Label.SlotColorTeal)}",
+            SlotColorPurple:                        "{!JSENCODE($Label.SlotColorPurple)}",
+            SlotColorIndigo:                        "{!JSENCODE($Label.SlotColorIndigo)}",
+            SlotColorCyan:                          "{!JSENCODE($Label.SlotColorCyan)}",
+            SlotColorBlue:                          "{!JSENCODE($Label.SlotColorBlue)}",
+            SlotColorPink:                          "{!JSENCODE($Label.SlotColorPink)}",
+            SlotColorRed:                           "{!JSENCODE($Label.SlotColorRed)}",
+            Copy_to_next_day:                       "{!JSENCODE($Label.Copy_to_next_day)}",
+            Extended:                               "{!JSENCODE($Label.Extended)}",
+            Normal:                                 "{!JSENCODE($Label.Normal)}",
+            Paste:                                  "{!JSENCODE($Label.Paste)}",
+            Copy:                                   "{!JSENCODE($Label.Copy)}",
+            DesignateWork:                          "{!JSENCODE($Label.DesignateWork)}",
+            O2DesignateWork:                        "{!JSENCODE($Label.O2DesignateWork)}",
+            EnhancedDesignatedWorkCalEditor:        "{!JSENCODE($Label.EnhancedDesignatedWorkCalEditor)}",
+            DesignatedWorkInvalidRfcSelected:       "{!JSENCODE($Label.DesignatedWorkInvalidRfcSelected)}",
+            Time_Slot_Color:                        "{!JSENCODE($Label.Time_Slot_Color)}",
+            Default:                                "{!JSENCODE($Label.Default)}",
+            IntersectingEventsCalEdit:              "{!JSENCODE($Label.IntersectingEventsCalEdit)}",
+            Designated_work_field_set_is_empty:     "{!JSENCODE($Label.Designated_work_field_set_is_empty)}",
+            Timeslot:                               "{!JSENCODE($Label.Timeslot)}",
+            DesignatedWorkCalEditor:                "{!JSENCODE($Label.DesignatedWorkCalEditor)}",
+        }
+
+        var remoteActions = {
+            getDesignatedWorkFields: '{!$RemoteAction.Ctrl023_CalendarEditor.getDesignatedWorkFieldsMap}',
+        };
+
+        init();
+    </script>
+    </html>
+</apex:page>

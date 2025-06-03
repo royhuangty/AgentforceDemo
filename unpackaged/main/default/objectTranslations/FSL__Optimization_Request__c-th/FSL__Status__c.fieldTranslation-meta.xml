@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>FSL__Status__c</name>
+        <picklistValues>
+            <masterLabel>Aborted</masterLabel>
+            <translation>ยกเลิกแล้ว</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>เสร็จสิ้น</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed First Optimization Day</masterLabel>
+            <translation>วันที่เพิ่มประสิทธิภาพครั้งแรกเป็นผลสำเร็จ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>ล้มเหลว</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalizing</masterLabel>
+            <translation>การสรุปขั้นตอนสุดท้าย</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>หยุดรอ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>กำลังดำเนินการ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>เปิด</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Processing</masterLabel>
+            <translation>โพสต์การประมวลผล</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>อยู่ในคิวแล้ว</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

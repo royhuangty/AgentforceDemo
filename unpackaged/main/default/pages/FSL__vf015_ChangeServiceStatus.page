@@ -1,0 +1,78 @@
+<apex:page StandardController="ServiceAppointment" extensions="FSL.Ctrl015_ChangeServiceStatus" showHeader="false" applyBodyTag="false" applyHtmlTag="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+        <apex:stylesheet value="{!$Resource.FSL__GeneralActionStyles}" />
+        <apex:stylesheet value="{!$Resource.FSL__vf015_ChangeServiceStatusCss}" />
+        <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+        <apex:includeScript value="{!$Resource.FSL__dropdown}" />
+        <apex:includeScript value="/canvas/sdk/js/publisher.js" />
+        <script type='text/javascript' src='/support/console/31.0/integration.js' />
+        <apex:includeScript value="{!$Resource.FSL__quickaction_utils_js}" />
+        <apex:includeScript value="{!$Resource.FSL__VF015_JS}" />
+        <!-- <apex:outputField value="{!currentService.Status}" /> -->
+        <!-- <apex:outputField value="{!currentService.Pinned__c}" /> -->
+        <script type="text/javascript">
+
+            var RemoteActions = {
+                updateService : '{!$RemoteAction.Ctrl015_ChangeServiceStatus.updateService}',
+                getServiceLegalStatuses : '{!$RemoteAction.Ctrl015_ChangeServiceStatus.getServiceLegalStatuses}'
+            };
+
+            var serviceId = '{!ServiceAppointment.Id}';
+            var serviceStatus = '{!JSENCODE(ServiceAppointment.Status)}';
+            var servicePinned = '{!ServiceAppointment.Pinned__c}';
+            var UserUITheme = '{!$User.UIThemeDisplayed }';
+
+            var labels = {
+                updateSuccessfully: '{!JSENCODE($Label.Updated_status_successfully)}',
+                updateFailed: '{!JSENCODE($Label.FailedToUpdateStatus)}'
+            }
+
+            Sfdc.canvas.publisher.subscribe({name: "publisher.showPanel", onData:function(e) {
+                Sfdc.canvas.publisher.publish({name:"publisher.setValidForSubmit", payload:"true"});
+            }});
+
+            Sfdc.canvas.publisher.subscribe({ name: "publisher.post", onData: function(e) {
+                mobileViewPrepareToSave();
+            }});
+        </script>
+    </head>
+
+
+    <body>
+        <div id='PinnedService' style="display:none">
+            <i class="fa fa-thumb-tack"></i>
+            <div id="PinnedText">{!JSENCODE($Label.PinnedServiceChangeStatus)}</div>
+        </div>
+        <div class="bs" style="display:none">
+            <header>
+                <h1>{!$Label.Change_status}</h1>
+                <span id="BackToTheFirstPage">{!JSENCODE($Label.Back)}</span>
+            </header>
+            <div id="noStatusTransition">
+                {!JSENCODE($Label.ChangeStatus_NoStatusToChangeTo)}
+            </div>
+            <div class="statuses-container text-center">
+            </div>
+            <div class="inputLabel dn" role="alert">
+                <span class="sr-only"></span>
+                {!JSENCODE($Label.Cannot_change_status_from_status)} "{!JSENCODE(currentService.Status)}".
+            </div>
+            <div class="success-msg-container text-center dn">
+                <div id="UpdatedStatusSeccessfully">
+                    <span id="SuccessUpdateMessage" class="sr-only"></span>
+                    <span>{!JSENCODE($Label.Updated_status_successfully)}</span>
+                </div>
+            </div>
+            <div id="UpdatedStatusFailed"  style="display:none">
+                <div class="inputLabel no-legal-statuses " role="alert" style="text-align: center; font-size:15px;"> 
+                    <span>{!JSENCODE($Label.FailedToUpdateStatus)}</span>
+                </div>
+            </div>
+        </div> 
+        <apex:form >
+            <apex:outputPanel id="pd"></apex:outputPanel> 
+        </apex:form>
+    </body>
+</apex:page>

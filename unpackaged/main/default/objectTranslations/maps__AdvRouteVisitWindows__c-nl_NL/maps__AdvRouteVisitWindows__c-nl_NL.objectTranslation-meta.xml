@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bezoekvenster route Maps Advanced</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bezoekvensters route Maps Advanced</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Maps Advanced Route Visit Windows Layout</layout>
+        <sections>
+            <label>Vrijdag</label>
+            <section>Friday</section>
+        </sections>
+        <sections>
+            <label>Maandag</label>
+            <section>Monday</section>
+        </sections>
+        <sections>
+            <label>Zaterdag</label>
+            <section>Saturday</section>
+        </sections>
+        <sections>
+            <label>Zondag</label>
+            <section>Sunday</section>
+        </sections>
+        <sections>
+            <label>Donderdag</label>
+            <section>Thursday</section>
+        </sections>
+        <sections>
+            <label>Dinsdag</label>
+            <section>Tuesday</section>
+        </sections>
+        <sections>
+            <label>Geldige dagen/data</label>
+            <section>Valid Days/Dates</section>
+        </sections>
+        <sections>
+            <label>Woensdag</label>
+            <section>Wednesday</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Naam bezoekvensters route Maps Advanced</nameFieldLabel>
+</CustomObjectTranslation>

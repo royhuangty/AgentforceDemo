@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Choose &quot;Always&quot; to display subtotal, discounts and grand total regardless of any other settings. Choose &quot;Never&quot; to never display regardless of other settings. Leaving this field blank will render summary as defined by template fields. --></help>
+        <label><!-- Summary Display --></label>
+        <name>SBQQ__SummaryDisplay__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation><!-- Always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

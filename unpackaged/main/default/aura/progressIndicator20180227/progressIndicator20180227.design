@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="steps" label="Comma-separated Steps"/>
+    <design:attribute name="currentStep" label="Current Step"/>
+</design:component>

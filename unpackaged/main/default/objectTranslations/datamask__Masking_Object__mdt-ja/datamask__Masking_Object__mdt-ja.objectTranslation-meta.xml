@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- マスキングオブジェクト --></value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Masking Object Layout</layout>
+        <sections>
+            <label>事前処理</label>
+            <section>Pre-Processing</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

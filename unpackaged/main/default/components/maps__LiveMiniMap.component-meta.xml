@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>Small map component with one marker and name popover</description>
+    <label>LiveMiniMap</label>
+</ApexComponent>

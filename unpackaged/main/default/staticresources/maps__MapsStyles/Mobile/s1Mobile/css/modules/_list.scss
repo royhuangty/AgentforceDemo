@@ -1,0 +1,541 @@
+// #listWrap {
+// 	&.in {
+// 		z-index: 750;
+// 	}
+
+// 	.ma-top-bar-title--left {
+// 		padding-left: 16px;
+// 	}
+
+// 	.ma-top-bar-row.ma-top-bar-row-pad-bottom {
+// 		padding-bottom: 8px;
+// 	}
+// }
+
+// #listBody {
+// 	position: relative;
+// }
+
+// #listLayerSelector {
+//     padding: 11px 13px;
+
+// 	.ma-button--icon-border {
+// 	    width: 26px;
+// 	    height: 26px;
+// 	    padding-top:3px;
+// 	    line-height:1;
+
+// 	    .ma-icon {   	
+// 		    font-size: 14px;
+// 		    line-height: 1;
+// 		    width: 14px;
+// 		    height: 14px;
+// 		    color: $text-sf;
+// 	    }
+// 	}
+
+// 	.dropdown-button-label {
+// 	    display: inline-block;
+// 	    padding-left: 6px;
+// 	    transform: translate(0, 2px);
+// 	    color: $text-sf;
+// 	    font-size: 14px;
+// 	}
+// }
+
+// .ma-listview-item {
+// 	@include flexbox();
+// 	@include flexDirection(row);
+
+// 	.ma-listview-checkbox-wrap {
+// 		@include flex(0 1 auto);
+// 		order: 1;
+
+// 		.ma-checkbox {
+// 		    width: 52px;
+// 		    height: 55px;
+// 		    padding: 19px 16px 16px;
+// 		}
+// 	}
+
+// 	.ma-listview-content-wrap {
+// 		@include flex(1 1 auto);
+// 		order: 2;
+
+// 		.ma-listview-content-wrap-inner {
+// 			@include flexbox();
+
+// 			.ma-listview-item-icon {
+// 				@include flex(0 1 auto);
+// 				font-size: 28px;
+// 			    width: 46px;
+// 			    line-height: 12px;
+// 			    height: 60px;
+// 			    padding: 16px 8px;
+// 			}
+
+// 			.ma-listview-item-text {
+// 				@include flex(1 1 auto);
+// 			    font-size: 16px;
+// 			    line-height: 1.4;
+// 			    padding: 16px 8px;
+// 			    color: $dark-blue;
+// 			}
+
+// 			.ma-listview-item-subtext {
+// 			    font-size: 12px;
+// 			    display:block;
+// 			    color: $text-sf;
+// 			}
+
+// 			.ma-listview-item-markerlayer {
+// 			    font-size: 12px;
+// 			    display:block;
+// 			    color: $text-sf;
+// 			    margin-top: 5px;
+
+// 			    .ma-icon {	
+// 				    float: left;
+// 				    margin-right: 6px;
+// 				    color: $medium-gray;
+// 				    margin-top:1px;
+// 			    }
+// 			}
+
+// 			.ma-listview-item-meta {
+// 				@include flex(0 1 auto);
+// 			    font-size: 12px;
+// 			    line-height: 1.4;
+// 			    text-align: right;
+// 			    padding: 16px 8px;
+
+// 			    .ma-icon-chevronright {
+// 				    margin-left: 4px;
+// 				    display: inline-block;
+// 				    transform: translate(0, 1px);
+// 			    }
+// 			}
+
+// 			.ma-listview-distance {
+// 			    padding-top: 3px;
+// 			    white-space: nowrap;
+// 			}
+// 		}
+// 	}
+// }
+
+// #listBodyInner {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	left:0;
+// 	top: 0;
+
+// 	.list-body-fixed-header {
+// 	    padding: 8px 0 7px;
+// 	    background: $gray;
+// 	    position: relative;
+// 	    height: 51px;
+
+// 	    .ma-checkbox-faux {
+// 	    	margin: 7px 12px 8px 16px;
+// 		}
+
+// 	    .ma-checkbox-label {
+// 		    padding: 7px 0 0 0;
+// 		    color: $dark-blue;
+// 		}
+
+// 	    .ma-checkbox-wrap {
+// 	    	margin-top: 0;
+// 	    }
+// 	}
+
+// 	.list-body-scrolling-body {
+// 		position: relative;
+// 		height: calc(100% - 51px);
+// 		overflow-y:auto;
+// 		padding: 10px 0;
+
+// 		.list-body-scrolling-fix {
+// 		    position: relative;
+// 		    width: 100%;
+// 		    height: calc(100% + 32px);
+// 		    top: 0;
+// 		    left: 0;
+// 		}
+// 	}
+// }
+
+// @media screen and (min-width: 769px) {
+
+// #listWrap {
+// 	&.in {
+// 		z-index: 1250;
+// 	}
+
+// 	.ma-top-bar-row.ma-top-bar-row-pad-bottom {
+// 		padding-bottom: 12px;
+// 	}
+// }
+
+// #listBodyInner {
+
+// 	.list-body-scrolling-body {
+
+// 		.list-body-scrolling-fix {
+// 			height:100%;
+// 		}
+// 	}
+// }
+
+// #listLayerSelector {
+//     padding: 0 13px 11px;
+// }
+
+// }
+// //end media query
+
+#listWrap {
+	&.in {
+		z-index: 750;
+	}
+
+	.ma-top-bar-title--left {
+		padding-left: 16px;
+		@include transition(.22s padding);
+	}
+
+	.ma-top-bar-row.ma-top-bar-row-pad-bottom {
+		padding-bottom: 8px;
+	}
+
+	#listScrollingBodyFull {
+	    visibility: hidden;
+	    opacity:0;
+	    @include transition(.22s opacity 0s, 0s visibility .22s);
+	}	
+		#listScrollingBody {
+		    visibility: visible;
+		    opacity:1;
+		    @include transition(.22s opacity 0s, 0s visibility 0s);
+		}
+
+.panel-title-row {
+	.list-view-full-content.ma-top-bar-button--fullsize {
+		overflow:hidden;
+		padding-left:0;
+		padding-right:0;
+		border-left:0;
+		border-bottom:0;
+		max-width:0;
+		width:52px;
+		@include transition(.22s padding 0s, .22s max-width 0s, 0s visibility .22s);
+		visibility: hidden;
+	}
+	.list-view-small-content.ma-top-bar-button--fullsize {		
+		overflow:hidden;
+		padding-left:16px;
+		padding-right:16px;
+		max-width:52px;
+		width:52px;
+		visibility: visible;
+		@include transition(.22s padding 0s, .22s max-width 0s, 0s visibility 0s);
+	}
+}
+
+#listLayerSelectorTop {
+	opacity:0;
+	visibility:hidden;
+	@include transition(.22s opacity 0s, 0s visibility .22s);
+}
+
+.ma-top-bar-row.list-view-small-content {
+	padding-top:auto;
+	padding-bottom:auto;
+	max-height:48px;
+	height:100px;
+	overflow: visible;
+	opacity: 1;
+	@include transition(.22s all);
+}
+
+	&.sidebar-panel-full-width {
+
+			.ma-top-bar-title--left {
+				padding-left: 0;
+				@include transition(.22s padding);
+			}
+
+		.ma-top-bar-row.list-view-small-content {
+			padding-top:0;
+			padding-bottom:0;
+			max-height:0;
+			height:100px;
+			border-top:0;
+			border-bottom:0;
+			@include transition(.22s all);
+		}
+
+		.panel-title-row {
+			.list-view-full-content.ma-top-bar-button--fullsize {
+				overflow:hidden;
+				padding-left:16px;
+				padding-right:16px;
+				max-width:52px;
+				width:52px;
+				visibility: visible;
+				@include transition(.22s padding 0s, .22s max-width 0s, 0s visibility 0s);
+			}
+			.list-view-small-content.ma-top-bar-button--fullsize {
+				overflow:hidden;
+				padding-left:0;
+				padding-right:0;
+				border-left:0;
+				border-bottom:0;
+				max-width:0;
+				width:52px;
+				@include transition(.22s padding 0s, .22s max-width 0s, 0s visibility .22s);
+				visibility: hidden;
+			}
+		}
+
+		#listLayerSelectorTop {
+			opacity:1;
+			visibility:visible;
+			@include transition(.22s opacity 0s, 0s visibility 0s);
+		}
+
+		.ma-top-bar-title--left {
+			padding-left: 0;
+			flex-grow:0;
+		}
+
+		.ma-top-bar-row.list-view-small-content {
+			padding-top:0;
+			padding-bottom:0;
+			max-height:0;
+			height:100px;
+			border-top:0;
+			border-bottom:0;
+			opacity: 0;
+			@include transition(.22s all);
+		}
+
+		#listScrollingBodyFull {
+		    visibility: visible;
+		    opacity:1;
+		    @include transition(.22s opacity 0s, 0s visibility 0s);
+		}
+
+		#listScrollingBody {
+		    visibility: hidden;
+		    opacity:0;
+		    @include transition(.22s opacity 0s, 0s visibility .22s);
+		}
+
+	}
+	
+}
+
+#listBody {
+	position: relative;
+}
+
+#listLayerSelector, #listLayerSelectorTop {
+    padding: 11px 13px;
+
+	.ma-button--icon-border {
+	    width: 26px;
+	    height: 26px;
+	    padding-top:3px;
+	    line-height:1;
+
+	    .ma-icon {   	
+		    font-size: 14px;
+		    line-height: 1;
+		    width: 14px;
+		    height: 14px;
+		    color: $text-sf;
+	    }
+	}
+
+	.dropdown-button-label {
+	    display: inline-block;
+	    padding-left: 6px;
+	    transform: translate(0, 2px);
+	    color: $text-sf;
+		font-size: 14px;
+		width: calc(75% - 35px);
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.ma-listview-item {
+	@include flexbox();
+	@include flexDirection(row);
+
+	.ma-listview-checkbox-wrap {
+		@include flex(0 1 auto);
+		order: 1;
+
+		.ma-checkbox {
+		    width: 52px;
+		    height: 55px;
+		    padding: 19px 16px 16px;
+		}
+	}
+
+	.ma-listview-content-wrap {
+		@include flex(1 1 auto);
+		order: 2;
+
+		.ma-listview-content-wrap-inner {
+			@include flexbox();
+
+			.ma-listview-item-icon {
+				@include flex(0 1 auto);
+				font-size: 28px;
+			    width: 46px;
+			    line-height: 12px;
+			    height: 60px;
+			    padding: 16px 8px;
+			}
+
+			.ma-listview-item-text {
+				@include flex(1 1 auto);
+			    font-size: 16px;
+			    line-height: 1.4;
+			    padding: 16px 8px;
+			    color: $dark-blue;
+			}
+
+			.ma-listview-item-subtext {
+			    font-size: 12px;
+			    display:block;
+			    color: $text-sf;
+			}
+
+			.ma-listview-item-markerlayer {
+			    font-size: 12px;
+			    display:block;
+			    color: $text-sf;
+			    margin-top: 5px;
+
+			    .ma-icon {	
+				    float: left;
+				    margin-right: 6px;
+				    color: $medium-gray;
+				    margin-top:1px;
+			    }
+			}
+
+			.ma-listview-item-meta {
+				@include flex(0 1 auto);
+			    font-size: 12px;
+			    line-height: 1.4;
+			    text-align: right;
+			    padding: 16px 8px;
+
+			    .ma-icon-chevronright {
+				    margin-left: 4px;
+				    display: inline-block;
+				    transform: translate(0, 1px);
+			    }
+			}
+
+			.ma-listview-distance {
+			    padding-top: 3px;
+			    white-space: nowrap;
+			}
+		}
+	}
+}
+
+#listBodyInner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:0;
+	top: 0;
+
+	.list-body-fixed-header {
+	    padding: 8px 0 7px;
+		background: #fff;
+		box-shadow: 0 1px 0 0 $color-border inset, 0 -1px 0 0 $color-border inset;
+	    position: relative;
+	    height: 51px;
+
+	    .ma-checkbox-faux {
+	    	margin: 7px 12px 8px 16px;
+		}
+
+	    .ma-checkbox-label {
+		    padding: 7px 0 0 0;
+		    color: $dark-blue;
+		}
+
+	    .ma-checkbox-wrap {
+	    	margin-top: 0;
+	    }
+	}
+
+	.list-body-scrolling-body {
+		position: relative;
+		height: calc(100% - 51px);
+		overflow-y:auto;
+
+		.list-body-scrolling-fix {
+		    position: relative;
+		    width: 100%;
+		    height: calc(100% + 32px);
+		    top: 0;
+		    left: 0;
+		}
+	}
+}
+
+
+.expand-list-results {
+	display:none;
+}
+
+
+
+
+@media screen and (min-width: 769px) {
+
+
+.expand-list-results {
+	display: block;
+}
+
+#listWrap {
+	&.in {
+		z-index: 1250;
+	}
+
+	.ma-top-bar-row.ma-top-bar-row-pad-bottom {
+		padding-bottom: 12px;
+	}
+}
+
+#listBodyInner {
+
+	.list-body-scrolling-body {
+
+		.list-body-scrolling-fix {
+			height:100%;
+		}
+	}
+}
+
+#listLayerSelectorTop {
+    padding: 12px 0 0 32px;
+}
+
+}
+//end media query

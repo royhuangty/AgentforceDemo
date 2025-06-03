@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Discount off the Price Book price (percent) represented by this Contracted Price. Either this field or Price should be set but not both. --></help>
+        <label><!-- Discount --></label>
+        <name>SBQQ__Discount__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestemmer minimumsgapet mellom tjenester. Hvis fast gap er aktivert, bestemmer det gapet mellom tjenestene.</help>
+        <label><!-- Minimum Gap (minutes) --></label>
+        <name>FSL__Minimum_Gap__c</name>
+    </CustomFieldTranslation>

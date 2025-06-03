@@ -1,0 +1,92 @@
+.ma-list {
+    margin: 0;
+    border-top: 1px solid $border-gray;
+    border-bottom: 1px solid $border-gray;
+}
+
+.ma-list-header {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+    margin: 0;
+    width: 100%;
+    padding: .75rem .5rem;
+    background-color: $white;
+	border-bottom: 2px solid $border-gray;
+}
+
+.ma-list-header .ma-list-item-name {
+	font-weight:700;
+}
+
+.ma-list-item {
+	@include flexbox();
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+    background-color: $white;
+}
+
+.ma-list-item:hover {
+	background-color: $light-gray;
+    border-color: $border-gray;
+    cursor: pointer;
+}
+
+.ma-list-item:active {
+    background-color: $gray;
+    box-shadow: $border-gray 0 -1px 0 inset;
+}
+
+.ma-list.ma-list-border .ma-list-item {
+    border-bottom: 1px solid $border-gray;
+}
+
+.ma-list-item-name {
+    color: $dark-blue;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.ma-list-item-subtext {
+    color: $text-sf;
+    font-size: .75rem;
+}
+
+.ma-list-item .float-right, .ma-list-item .pull-right, .ma-list-header .float-right, .ma-list-header .pull-right {
+	float:none;
+	margin-left:auto;
+}
+
+.ma-list-icon {
+	width: 2rem;
+    height: 2rem;
+    border-radius: .25rem;
+}
+
+.ma-list-icon-left {
+	margin-right: .75rem;
+	-webkit-align-self: flex-start;
+   align-self: flex-start;
+}
+
+.ma-list-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ma-list-icon-left .img-profile-circle {
+    width: 45px;
+    height: 45px;
+}
+
+.ma-list-item-meta {
+	margin-left: auto;
+	font-size: .75rem;
+	color: $text-sf;
+	padding-left: 1rem;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Holds the current status of the onboarding plan for the contact. Key field to drive business process based on journey status. Use it to trigger notifications, posts, requesting of funds etc. --></help>
+        <label><!-- Onboarding Status --></label>
+        <name>Ptnr_Onbd_Fmwk__Onboarding_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

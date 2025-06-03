@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The pricing guidance that contains this tier. --></help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Détermine les factures à payer en fonction de la date cible définie dans les paramètres de configuration de facturation. La date cible peut être à ou après la date de la facture ou la date d&#39;échéance de la facture.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <description>Strategy to promote remote asset diagnostics flow</description>
+    <label>Asset Diagnostics</label>
+    <recommendationLoad>
+        <label>Diagnostics</label>
+        <name>Diagnostics</name>
+        <condition>
+            <field>Recommendation.Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Remote Diagnostics</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Diagnostics</childNode>
+        <label>Output</label>
+        <name>Output_9be7fd72606f45f19342f92342b6afb0</name>
+    </union>
+</RecommendationStrategy>

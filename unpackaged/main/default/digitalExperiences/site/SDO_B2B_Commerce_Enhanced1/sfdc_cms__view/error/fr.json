@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Error",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Libérer la puissance des bugs !"
+        },
+        "id" : "f9d7629e-0b9a-485c-9082-4b5c389fc81c"
+      }, {
+        "id" : "60f745c6-fa4f-4c99-93ab-d97335d61b70",
+        "attributes" : {
+          "richTextValue" : "<p>Oups ! On dirait que nos lutins de l'énergie prennent une pause café. Nos sorciers de la technique vont vite corriger ce bug. Veuillez réessayer plus tard.</p>"
+        }
+      }, {
+        "id" : "0b44735d-7ef9-4824-818e-ee64aef5292d",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/w24-product/error_image.png\",\"altText\":\"\",\"contentKey\":\" \",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "dc4918fa-b073-4785-8ac1-45ef712db1af",
+        "attributes" : {
+          "pageTitle" : "Erreur"
+        }
+      } ]
+    }
+  },
+  "urlName" : "error"
+}

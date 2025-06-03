@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL_Work_Types</fullName>
+    <columns>Name</columns>
+    <columns>DurationType</columns>
+    <columns>DurationInMinutes</columns>
+    <columns>FSL__Due_Date_Offset__c</columns>
+    <columns>ShouldAutoCreateSvcAppt</columns>
+    <columns>EstimatedDuration</columns>
+    <columns>Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Field Service Lightning (FSL)</value>
+    </filters>
+    <label>FSL Work Types</label>
+</ListView>

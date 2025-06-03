@@ -1,0 +1,61 @@
+<apex:page showHeader="false" sidebar="false" standardController="WorkOrderLineItem" lightningStylesheets="true" extensions="FSL.ctrl0998_WorkOrderLineItemLightbox" >
+
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+
+
+    <style>
+        body {
+            margin-top: -8px !important;
+        }
+    
+        body .bPageBlock {
+            background: #fff !important;
+            border: 0 !important;
+        }
+
+        input[type=submit] {
+/*            margin-left: 130px !important;
+            padding: 6px 10px !important;*/
+            margin-top: 3px !important;
+        }
+        
+        .message {
+            margin-top: 8px !important;
+        }
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+/*        .pbBottomButtons .pbButtonb {
+            text-align: right !important;
+            padding-right: 16px;
+        }*/
+    </style>
+
+
+        <div id="CKSW_AccountDetailsForm">
+
+            <apex:form >
+
+                <apex:pageMessages ></apex:pageMessages>
+
+                <apex:pageBlock mode="edit">
+
+                    <apex:pageBlockButtons >
+                        <apex:commandButton action="{!save}" value="{!$Label.FSL__SaveChanges}" />
+                    </apex:pageBlockButtons>
+
+                    <apex:pageBlockSection title="{!$Label.FSL__WOLIFull}" columns="2">
+                        <apex:repeat value="{!$ObjectType.WorkOrderLineItem.FieldSets.FSL__Gantt_Lightbox}" var="d">
+                            <apex:inputField value="{!WorkOrderLineItem[d]}" required="{!d.Required}"/>
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+
+                </apex:pageBlock>
+
+            </apex:form>
+
+        </div>
+
+</apex:page>

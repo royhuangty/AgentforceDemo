@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If flagged while setting the Quote to &quot;Ordered&quot;, an Order will be created for each Quote Line Group with their associated Quote Lines. --></help>
+        <label><!-- Order By Quote Line Group --></label>
+        <name>SBQQ__OrderByQuoteLineGroup__c</name>
+    </CustomFieldTranslation>

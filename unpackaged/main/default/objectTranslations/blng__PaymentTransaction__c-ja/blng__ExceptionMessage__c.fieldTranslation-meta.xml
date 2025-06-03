@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>例外メッセージ
+請求書に対して、トランザクションが作成され、支払が作成されていません</help>
+        <label><!-- Exception Message --></label>
+        <name>blng__ExceptionMessage__c</name>
+    </CustomFieldTranslation>

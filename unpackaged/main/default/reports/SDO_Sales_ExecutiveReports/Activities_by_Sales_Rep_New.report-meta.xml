@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Activity$OwnerId$Subject</field>
+    </columns>
+    <columns>
+        <field>User.Activity$OwnerId$Account</field>
+    </columns>
+    <columns>
+        <field>User.Activity$OwnerId$ActivityDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User$LastName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>East,West,Central</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Activity$OwnerId$Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Activities by Sales Rep</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SDO_Sales_Activities_and_Users__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User.Activity$OwnerId$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

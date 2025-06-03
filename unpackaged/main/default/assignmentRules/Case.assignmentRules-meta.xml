@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Einstein Case Routing Only</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>SDO_Service_Priority</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Critical</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsEscalated</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>SDO_Service_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.SDO_Sub_Type__c</field>
+                <operation>equals</operation>
+                <value>Billing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>SDO_Service_Turbine</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Product_Family_KB__c</field>
+                <operation>equals</operation>
+                <value>Turbine</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>SDO_Service_Battery</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Product_Family_KB__c</field>
+                <operation>equals</operation>
+                <value>Battery</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

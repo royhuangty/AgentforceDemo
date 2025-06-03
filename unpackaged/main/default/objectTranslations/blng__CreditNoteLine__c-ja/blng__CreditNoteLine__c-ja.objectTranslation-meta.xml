@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>クレジットノート品目</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Credit Note Line Layout</layout>
+        <sections>
+            <label>収益メトリクス</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>ルールと処理</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>住所(税金)</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>品目番号</nameFieldLabel>
+</CustomObjectTranslation>

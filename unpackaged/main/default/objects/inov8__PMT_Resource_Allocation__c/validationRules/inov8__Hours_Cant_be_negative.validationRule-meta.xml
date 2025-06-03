@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Hours_Cant_be_negative</fullName>
+    <active>true</active>
+    <errorConditionFormula>inov8__Jan_Hours__c &lt; 0 ||
+inov8__Feb_Hours__c &lt; 0 ||
+inov8__Mar_Hours__c &lt; 0 ||
+inov8__Apr_Hours__c &lt; 0 ||
+inov8__May_Hours__c &lt; 0 ||
+inov8__Jun_Hours__c &lt; 0 ||
+inov8__Jul_Hours__c &lt; 0 ||
+inov8__Aug_Hours__c &lt; 0 ||
+inov8__Sep_Hours__c &lt; 0 ||
+inov8__Oct_Hours__c &lt; 0 ||
+inov8__Nov_Hours__c &lt; 0 ||
+inov8__Dec_Hours__c &lt; 0</errorConditionFormula>
+    <errorMessage>Actual hours worked cannot be negative numbers</errorMessage>
+</ValidationRule>

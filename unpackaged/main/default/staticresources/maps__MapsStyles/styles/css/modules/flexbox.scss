@@ -1,0 +1,61 @@
+.flex-horizontal, .flex-row {
+	@include flexbox();
+	@include flex-direction(row);
+
+	.flex-end {
+		margin-left: auto;
+	}
+	
+	&.justify-content-center {
+		justify-content: center;
+	}
+
+	&.align-items-center {
+		align-items: center;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+}
+
+.flex-vertical, .flex-column {
+	@include flexbox();
+	@include flex-direction(column);
+
+	.flex-end {
+		margin-top: auto;
+	}
+
+	.overflow-scroll-y {
+		overflow-y: auto;
+	}
+	
+	&.justify-content-center {
+		justify-content: center;
+	}
+
+	&.align-items-center {
+		align-items: center;
+	}
+
+	&.full-height {
+		height: 100%;
+	}
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.flex-grow-2 {
+	flex-grow: 2;
+}
+
+.flex-basis-0 {
+	flex-basis: 0;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0;
+}

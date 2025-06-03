@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>FSL__Status__c</name>
+        <picklistValues>
+            <masterLabel>Aborted</masterLabel>
+            <translation>Ματαιώθηκε</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Ολοκληρώθηκε</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed First Optimization Day</masterLabel>
+            <translation>Ολοκληρώθηκε η πρώτη ημέρα βελτιστοποίησης</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>Απέτυχε</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalizing</masterLabel>
+            <translation>Οριστικοποίηση</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Αναμονή</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Σε εξέλιξη</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>Ανοικτό</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Processing</masterLabel>
+            <translation>Μετά την επεξεργασία</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>Σε ουρά αναμονής</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

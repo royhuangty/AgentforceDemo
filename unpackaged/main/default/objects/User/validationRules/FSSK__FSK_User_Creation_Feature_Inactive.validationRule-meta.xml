@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSSK__FSK_User_Creation_Feature_Inactive</fullName>
+    <active>true</active>
+    <description>A Field Service Starter Kit package validation rule:
+The validation rule prevents the insertion of new records if the SFS Resource Type field is filled out but the Field Service users automation feature is not turned on.</description>
+    <errorConditionFormula>IF(AND(NOT($Setup.FSSK__FSK_FSL_Starter_Kit__c.FSSK__Create_FSL_Resource_From_User__c),
+			ISNEW(),
+			OR(TEXT(FSSK__FSK_FSL_Resource_Type__c) == NULL,
+			   TEXT(FSSK__FSK_FSL_Resource_Type__c) == &#39;&#39;)),
+	false,
+	IF(AND(ISCHANGED(FSSK__FSK_FSL_Resource_Type__c),
+	   NOT($Setup.FSSK__FSK_FSL_Starter_Kit__c.FSSK__Create_FSL_Resource_From_User__c)),
+	   true,
+	   false)
+)</errorConditionFormula>
+    <errorDisplayField>FSSK__FSK_FSL_Resource_Type__c</errorDisplayField>
+    <errorMessage>FSSK Package: SFS Resource Type should only be used when the Field Service users automation feature in the Field Service Starter Kit Package is activated</errorMessage>
+</ValidationRule>

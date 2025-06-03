@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <automatedResponses>
+        <response>You&#39;ve opted out of receiving messages from us, so we won&#39;t contact you again.</response>
+        <type>OptOutConfirmation</type>
+    </automatedResponses>
+    <automatedResponses>
+        <response>Text STOP to opt out of further messages.</response>
+        <type>HelpResponse</type>
+    </automatedResponses>
+    <masterLabel>Messaging for In-App &amp; Web</masterLabel>
+    <messagingChannelType>EmbeddedMessaging</messagingChannelType>
+    <sessionHandlerFlow>SDO_Service_MIAW_Omni_Flow</sessionHandlerFlow>
+    <sessionHandlerQueue>SDO_Service_Messaging</sessionHandlerQueue>
+    <sessionHandlerType>Flow</sessionHandlerType>
+    <standardParameters>
+        <actionParameterMappings>
+            <actionParameterName>lastName</actionParameterName>
+        </actionParameterMappings>
+        <parameterType>LastName</parameterType>
+    </standardParameters>
+    <standardParameters>
+        <actionParameterMappings>
+            <actionParameterName>firstName</actionParameterName>
+        </actionParameterMappings>
+        <parameterType>FirstName</parameterType>
+    </standardParameters>
+    <standardParameters>
+        <actionParameterMappings>
+            <actionParameterName>subject</actionParameterName>
+        </actionParameterMappings>
+        <parameterType>Subject</parameterType>
+    </standardParameters>
+    <standardParameters>
+        <actionParameterMappings>
+            <actionParameterName>email</actionParameterName>
+        </actionParameterMappings>
+        <parameterType>Email</parameterType>
+    </standardParameters>
+</MessagingChannel>

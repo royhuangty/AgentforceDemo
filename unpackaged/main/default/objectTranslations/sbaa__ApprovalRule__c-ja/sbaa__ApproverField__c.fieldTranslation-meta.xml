@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>動的承認で使用、このルールで使用する承認者値が含まれる項目</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>作成者</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

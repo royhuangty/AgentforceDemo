@@ -1,0 +1,241 @@
+.proximity.layer {
+  background-color: #fff;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); }
+  .proximity.layer .plotted-boundary-unit-pad {
+    border-top: 1px solid #E8E8E8;
+    position: relative;
+    padding: 12px 12px 12px 16px !important; }
+  .proximity.layer .plotted-boundary-unit-pad-bottom-0 {
+    position: relative;
+    padding: 12px 12px 0 16px; }
+  .proximity.layer .plotted-boundary-unit-partial-divider {
+    height: 1px;
+    background-color: #d8dde6;
+    width: calc(100% - 16px);
+    margin-left: 16px; }
+  .proximity.layer table.plotted-boundary-unit-table tr td {
+    padding: 4px; }
+    .proximity.layer table.plotted-boundary-unit-table tr td .slds-form-element__label {
+      margin-right: 8px; }
+    .proximity.layer table.plotted-boundary-unit-table tr td.radius-traffic-day-wrap {
+      padding-top: 8px; }
+    .proximity.layer table.plotted-boundary-unit-table tr td.radius-traffic-time-range {
+      padding-top: 8px; }
+    .proximity.layer table.plotted-boundary-unit-table tr td:first-child {
+      padding-left: 0; }
+    .proximity.layer table.plotted-boundary-unit-table tr td:last-child {
+      padding-right: 0; }
+    .proximity.layer table.plotted-boundary-unit-table tr td.plotted-radius-travel-type-wrap {
+      width: 95px; }
+
+.lds .radius-fill-color-input .slds-input {
+  width: 80px;
+  padding: 0 8px;
+  text-align: center;
+  background-color: #3083d3;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.16); }
+.lds .radius-border-color-input .slds-input {
+  width: 80px;
+  padding: 0 8px;
+  text-align: center;
+  background-color: #16325c;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.16); }
+.lds .radius-time-field .slds-input {
+  width: 50px;
+  padding: 0 8px 0 12px; }
+
+td.radius-traffic-value {
+  color: #16325c;
+  text-align: left;
+  vertical-align: top;
+  padding-top: 9px !important;
+  width: 150px; }
+
+.plotted-radius-traffic-toggle-label {
+  padding-top: 4px; }
+
+.radius-traffic-day-wrap {
+  vertical-align: top; }
+  .radius-traffic-day-wrap > div {
+    float: left;
+    width: 21px;
+    text-align: center;
+    height: 21px;
+    cursor: pointer;
+    line-height: 21px;
+    color: #16325c;
+    border-radius: 24px;
+    margin-right: 2px; }
+    .radius-traffic-day-wrap > div:hover {
+      background-color: #e0e5ee; }
+    .radius-traffic-day-wrap > div.active, .radius-traffic-day-wrap > div:active {
+      background-color: #4194e4;
+      color: #fff; }
+.radius-traffic-time {
+  background: #4194e4;
+  height: 7px;
+}
+.radius-traffic-time .ui-slider-handle{
+  border-radius: 10px;
+  background: white;
+}
+.radius-traffic-time-scale {
+  position: relative;}
+  .radius-traffic-time-scale div {
+    text-align: center;
+    width: 25%;
+    float: left;
+    font-size: 9px;
+    position: relative;
+    padding-top: 10px; }
+    .radius-traffic-time-scale div::after {
+      content: ' ';
+      position: absolute;
+      left: calc(50% - 1px);
+      height: 6px;
+      width: 1px;
+      background-color: #5876a3;
+      opacity: .5;
+      top: 0; }
+
+.lds .slds-button--neutral.slds-button--icon-border {
+  padding-left: 0;
+  padding-right: 0; }
+.lds .plotted-radius-remove-button {
+  position: absolute;
+  top: 2px;
+  right: 2px; }
+.lds .plotted-boundary-radius-unit.slds-card + .plotted-boundary-radius-unit.slds-card {
+  margin-top: 8px; }
+.lds .plotted-boundary-traffic-table {
+  margin-top: 16px; }
+
+.ma-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d8dde6; }
+
+.ma-form-control-wrap-range {
+  position: relative;
+  /* Special styling for WebKit/Blink */
+  /* All the same stuff for Firefox */
+  /* All the same stuff for IE */ }
+  .ma-form-control-wrap-range input[type=range] {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    width: 100%;
+    /* Specific width is required for Firefox. */
+    background: transparent;
+    /* Otherwise white in Chrome */ }
+  .ma-form-control-wrap-range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; }
+  .ma-form-control-wrap-range input[type=range]:focus {
+    outline: none;
+    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+  .ma-form-control-wrap-range input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent; }
+  .ma-form-control-wrap-range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #d8dde6;
+    height: 17px;
+    width: 17px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -6px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    transition: all .15s; }
+    .ma-form-control-wrap-range input[type=range]::-webkit-slider-thumb:hover {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+      border-color: #a7b8d1; }
+    .ma-form-control-wrap-range input[type=range]::-webkit-slider-thumb:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.32);
+      border-color: #a7b8d1;
+      margin-top: -8px;
+      height: 21px;
+      width: 21px; }
+  .ma-form-control-wrap-range input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #d8dde6;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); }
+  .ma-form-control-wrap-range input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #d8dde6;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); }
+  .ma-form-control-wrap-range input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #4194e4;
+    border-radius: 4px;
+    border: 0; }
+  .ma-form-control-wrap-range input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #3083d3; }
+  .ma-form-control-wrap-range input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #4194e4;
+    border-radius: 4px;
+    border: 0; }
+  .ma-form-control-wrap-range input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #4194e4;
+    border-radius: 4px;
+    border: 0; }
+  .ma-form-control-wrap-range input[type=range]::-ms-fill-lower {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #4194e4;
+    border-radius: 4px;
+    border: 0; }
+  .ma-form-control-wrap-range input[type=range]:focus::-ms-fill-lower {
+    background: #3083d3; }
+  .ma-form-control-wrap-range input[type=range]::-ms-fill-upper {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #4194e4;
+    border-radius: 4px;
+    border: 0; }
+  .ma-form-control-wrap-range input[type=range]:focus::-ms-fill-upper {
+    background: #3083d3; }
+
+/*# sourceMappingURL=ui-proximity.css.map */

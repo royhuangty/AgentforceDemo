@@ -1,0 +1,4 @@
+<!--THIS PAGE HAS BEEN REPURPOSED TO HANDLE KML EXPORTS DO NOT CHANGE -->
+<apex:page cache="true" contentType="application/octet-stream#Maps_export.kml" controller="maps.ExportAJAXResources" action="{!StartUpAction}" showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:outputText value="{!Output}"/>
+</apex:page>

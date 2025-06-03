@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求書の請求書品目に割り当てられた支払金額の合計。</help>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </CustomFieldTranslation>

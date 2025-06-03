@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Introduceți un număr dacă doriți să limitați numărul de resurse de servicii suplimentare ce pot fi adăugate în echipă. Lăsați necompletat dacă se poate adăuga orice număr de resurse de servicii.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

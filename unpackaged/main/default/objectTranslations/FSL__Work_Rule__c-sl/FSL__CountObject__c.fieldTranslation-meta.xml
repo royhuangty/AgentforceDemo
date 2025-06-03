@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Predmet, ki vsebuje polje po meri, uporabljeno za štetje.</help>
+        <label><!-- Count object --></label>
+        <name>FSL__CountObject__c</name>
+        <picklistValues>
+            <masterLabel>Service Appointment</masterLabel>
+            <translation>Storitveni sestanek</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order</masterLabel>
+            <translation>Delovni nalog</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order Line Item</masterLabel>
+            <translation>Postavka delovnega naloga</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

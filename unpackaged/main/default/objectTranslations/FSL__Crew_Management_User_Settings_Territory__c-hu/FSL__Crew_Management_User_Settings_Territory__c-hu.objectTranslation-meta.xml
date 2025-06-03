@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási terület</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területei</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területet</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeket</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemet</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimet</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területét</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeit</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területnek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeknek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemnek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimnek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területének</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeinek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területében</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiben</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területéből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiből</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területbe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekbe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területembe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimbe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területébe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeibe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területektől</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemtől</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimtől</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területétől</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeitől</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területhez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekhez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemhez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimhez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területéhez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeihez</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területté</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekké</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemmé</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimmé</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területévé</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeivé</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területtel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekkel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemmel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimmel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területével</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeivel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területre</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekre</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemre</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimre</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területére</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeire</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeken</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területén</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területein</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területéről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiről</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területéért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területekig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területemig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területéig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területenként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeimként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területek</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területeiként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Személyzetkezelési felhasználói beállítási területek</value>
+    </caseValues>
+    
+    
+    <nameFieldLabel>Személyzetkezelési felhasználói beállítá</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

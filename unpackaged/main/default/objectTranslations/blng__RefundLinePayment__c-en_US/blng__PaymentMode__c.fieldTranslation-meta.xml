@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Mode of Payment.
+ 1. &apos;Electronic&apos;, whenever Payments/ Refunds are done via Payment Gateway.
+ 2. &apos;External&apos;, whenever Payments/ Refunds are manually done with Cash/ Check Payment. --></help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

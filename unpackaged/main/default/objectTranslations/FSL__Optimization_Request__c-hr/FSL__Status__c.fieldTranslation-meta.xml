@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>FSL__Status__c</name>
+        <picklistValues>
+            <masterLabel>Aborted</masterLabel>
+            <translation>Prekinuto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Dovršeno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed First Optimization Day</masterLabel>
+            <translation>Dan dovršene prve optimizacije</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>Neuspješno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalizing</masterLabel>
+            <translation>Dovršavanje</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Zadrži</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>U tijeku</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>Otvoreno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Processing</masterLabel>
+            <translation>Obrada objave</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>U redu čekanja</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

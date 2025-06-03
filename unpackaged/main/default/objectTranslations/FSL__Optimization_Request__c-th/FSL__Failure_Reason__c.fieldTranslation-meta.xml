@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Failure Reason --></label>
+        <name>FSL__Failure_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Already Running</masterLabel>
+            <translation>กำลังทำงาน</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click Authorize</masterLabel>
+            <translation>คลิกเพื่ออนุมัติ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupted data</masterLabel>
+            <translation>ข้อมูลที่เสียหาย</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability Rule</masterLabel>
+            <translation>ไม่มีกฎความพร้อมใช้งาน</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>ไม่รู้จัก</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Aborted</masterLabel>
+            <translation>ผู้ใช้ยกเลิก</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

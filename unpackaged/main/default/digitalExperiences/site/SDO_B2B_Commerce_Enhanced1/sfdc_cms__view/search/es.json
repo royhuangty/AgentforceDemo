@@ -1,0 +1,44 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Search",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "overflowMenuLabel" : "Más",
+          "tabsetConfig" : "{\"UUID\":\"50c16b9b-ea25-434d-ba7f-fbee4dca7a97\",\"activeTab\":null,\"useOverflowMenu\":null,\"tabs\":[{\"UUID\":\"49254b91-b433-4755-b33f-f300106e6515\",\"tabName\":\"Productos encontrados\",\"tabKey\":\"tab1\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"7c88a7cf-bbde-46b5-a692-2f4bc763c059\",\"tabName\":\"Búsqueda global\",\"tabKey\":\"tab2\",\"locked\":false,\"allowGuestUser\":false}]}"
+        },
+        "id" : "50c16b9b-ea25-434d-ba7f-fbee4dca7a97"
+      }, {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "704fcbde-463b-4895-a6f4-d01715a6dcfd"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "f1cc1e6e-5f79-4653-836e-76d24e12cd2d"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "incrementValueGuideText" : "En incrementos de {0}",
+          "maximumValueGuideText" : "Cantidad máxima: {0}",
+          "minimumValueGuideText" : "Cantidad mínima: {0}",
+          "quantitySelectorLabel" : "CANT.",
+          "subscriptionOptionsText" : "Opciones de suscripción disponibles",
+          "viewOptionsButtonText" : "Ver opciones"
+        },
+        "id" : "8e80d2ed-db2d-448f-93bc-4e79e0508331"
+      }, {
+        "attributes" : {
+          "addToCartButtonText" : "AÑADIR A CARRITO",
+          "viewOptionsButtonText" : "VER OPCIONES"
+        },
+        "id" : "75bd2e8d-69da-4617-b9f9-82083ce76e7a"
+      } ]
+    }
+  },
+  "urlName" : "search"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Legt die Planung so fest, dass die erste und letzte Reise des Tages vom Ausgangspunkt der Ressource und dahin zurück für den Mindestreiseaufwand berücksichtigt bzw. nicht berücksichtigt werden.</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

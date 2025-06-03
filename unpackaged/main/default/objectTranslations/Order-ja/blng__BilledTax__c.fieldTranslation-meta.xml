@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この注文の請求書で課せられる、すべての税金の合計。</help>
+        <label><!-- Billed Tax --></label>
+        <name>blng__BilledTax__c</name>
+    </CustomFieldTranslation>

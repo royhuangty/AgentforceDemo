@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- What group is most directly responsible for this project? --></help>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <picklistValues>
+            <masterLabel>Applications</masterLabel>
+            <translation><!-- Applications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apps</masterLabel>
+            <translation><!-- Apps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Sales</masterLabel>
+            <translation><!-- Corporate Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demand Generation</masterLabel>
+            <translation><!-- Demand Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Services</masterLabel>
+            <translation><!-- Employee Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise Sales</masterLabel>
+            <translation><!-- Enterprise Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation><!-- Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global</masterLabel>
+            <translation><!-- Global --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Services</masterLabel>
+            <translation><!-- Implementation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interactive</masterLabel>
+            <translation><!-- Interactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London</masterLabel>
+            <translation><!-- London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform</masterLabel>
+            <translation><!-- Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premiere Support</masterLabel>
+            <translation><!-- Premiere Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recruiting</masterLabel>
+            <translation><!-- Recruiting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Support</masterLabel>
+            <translation><!-- Standard Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney</masterLabel>
+            <translation><!-- Sydney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tokyo</masterLabel>
+            <translation><!-- Tokyo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toronto</masterLabel>
+            <translation><!-- Toronto --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

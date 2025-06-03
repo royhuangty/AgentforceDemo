@@ -1,0 +1,1 @@
+const e={Picklist:{cancel:"Cancel",clearTitle:"Clear",clearAssistiveText:"Clear",loading:"Loading",noSearchResults:"No Search Results",placeholder:"Select a value",removeTitle:"Remove",removeAssistiveText:"Remove",required:"Required",save:"Save",search:"Search",comboboxSearchAssistiveText:"Search"}};export{e as default};

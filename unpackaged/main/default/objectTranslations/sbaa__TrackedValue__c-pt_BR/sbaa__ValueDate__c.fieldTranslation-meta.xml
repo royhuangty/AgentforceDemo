@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Valor armazenado se o tipo de dado for uma data</help>
+        <label><!-- Value (Date) --></label>
+        <name>sbaa__ValueDate__c</name>
+    </CustomFieldTranslation>

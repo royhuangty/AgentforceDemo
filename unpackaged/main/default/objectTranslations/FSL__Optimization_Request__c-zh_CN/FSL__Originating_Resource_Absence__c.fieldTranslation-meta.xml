@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Originating Resource Absence --></label>
+        <name>FSL__Originating_Resource_Absence__c</name>
+        <relationshipLabel><!-- Optimization Requests --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Hiermit überschreiben Sie Produkte, die bei der Berechnung von &quot;Prozent vom Gesamtwert&quot; berücksichtigt werden. Verweisen Sie die Nachschlagefunktion auf ein Produkt mit dem gewünschten Listenpreis für aktuelle &quot;Prozent vom Gesamtwert&quot;-Berechnungen.</help>
+        <label><!-- Percent Of Total Target --></label>
+        <name>SBQQ__SubscriptionTarget__c</name>
+        <relationshipLabel><!-- Subscription Targeting Products --></relationshipLabel>
+    </CustomFieldTranslation>

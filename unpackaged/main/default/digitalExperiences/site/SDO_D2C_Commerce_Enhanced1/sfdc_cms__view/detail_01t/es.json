@@ -1,0 +1,86 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "N.º de SKU",
+          "productDetailSummaryFieldMapping" : "[]"
+        },
+        "id" : "1ffb2efd-9dfc-41ea-8412-03b0c411d246"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Name}"
+        },
+        "id" : "a4ef1e2b-70af-4861-b80f-ddf094c0c4e1"
+      }, {
+        "attributes" : {
+          "text" : "Opciones de producto:"
+        },
+        "id" : "a32ceee3-478d-474d-89c6-a50fb633d64d"
+      }, {
+        "attributes" : {
+          "negotiatedPriceLabel" : "Su precio",
+          "originalPriceLabel" : "Precio original",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "3e0b9814-6d3d-4d0f-b0ae-931e08f99800"
+      }, {
+        "attributes" : {
+          "discountRowLabel" : "Descuentos por unidad",
+          "quantityRowLabel" : "Cantidad"
+        },
+        "id" : "76211a02-49e9-4a87-9927-49070d64aa78"
+      }, {
+        "attributes" : {
+          "text" : "Descuentos de nivel"
+        },
+        "id" : "a0b440fd-c511-4922-a165-9a12cc0f472b"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "addToListButtonText" : "Añadir a la lista",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Fuera de stock",
+          "quantitySelectorLabel" : "CANT."
+        },
+        "id" : "5d6e9da5-796d-479d-9e83-c429ac232555"
+      }, {
+        "attributes" : {
+          "text" : "La cantidad mínima es {!Product.Details.purchaseQuantityRule.minimumNumber} • La cantidad máxima es {!Product.Details.purchaseQuantityRule.maximumNumber} • Vendido en incrementos de {!Product.Details.purchaseQuantityRule.incrementNumber}"
+        },
+        "id" : "174cbe3f-2c71-40a0-9906-8e487308abe9"
+      }, {
+        "attributes" : {
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Fuera de stock",
+          "quantitySelectorLabel" : "CANT."
+        },
+        "id" : "5472653e-6a02-4312-b4fd-097a81b6bd2c"
+      }, {
+        "attributes" : {
+          "headerText" : "Productos parecidos"
+        },
+        "id" : "b30f98c8-7881-499a-a254-a9cf99912263"
+      }, {
+        "attributes" : {
+          "headerText" : "Productos complementarios"
+        },
+        "id" : "e44dc8e2-f545-447b-b344-8af0abf0de40"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "c1a3a25c-1632-4832-882d-e5b9eb7832dd"
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

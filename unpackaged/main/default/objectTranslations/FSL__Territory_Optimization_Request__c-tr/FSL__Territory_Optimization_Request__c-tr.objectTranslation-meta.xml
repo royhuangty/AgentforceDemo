@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteği</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İstekleri</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğiniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İstekleriniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteğini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteklerini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğimi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerimi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğinizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteklerinizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteğinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteklerinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğimin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerimin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğinizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteklerinizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteğine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteklerine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğime</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerime</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğinize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteklerinize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteğinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteklerinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğimden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerimden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğinizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteklerinizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteğinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Bölge Optimizasyon İsteklerinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteğimde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Bölge Optimizasyon İsteklerimde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteğinizde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Bölge Optimizasyon İsteklerinizde</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <nameFieldLabel>Bölge Optimizasyon İsteği Numarası</nameFieldLabel>
+</CustomObjectTranslation>

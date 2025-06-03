@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Orange = active invoice with a balance;  Green = no balance due; Red = past due; White = canceled --></help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </CustomFieldTranslation>

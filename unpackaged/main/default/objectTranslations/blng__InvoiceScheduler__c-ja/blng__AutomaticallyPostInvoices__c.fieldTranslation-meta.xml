@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求書をデフォルトで転記する必要がある場合、選択します。選択しない場合、請求書はドラフトとして生成されます。</help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </CustomFieldTranslation>

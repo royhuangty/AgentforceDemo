@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Quando o Desconto é escolhido, a Variável de lista e a Variável líquida devem ser preenchidas. Quando o Resumo é escolhido, as opções Agregar campo e Agregar função devem ser preenchidas.</help>
+        <label><!-- Type --></label>
+        <name>sbaa__Type__c</name>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation>Desconto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary</masterLabel>
+            <translation>Resumo</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

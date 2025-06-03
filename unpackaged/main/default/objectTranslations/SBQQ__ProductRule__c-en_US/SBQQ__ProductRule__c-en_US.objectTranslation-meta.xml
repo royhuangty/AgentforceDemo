@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Product Rule Layout</layout>
+        <sections>
+            <label><!-- Lookup Query Information --></label>
+            <section>Lookup Query Information</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- The Scope field must point to &apos;Product&apos; for Filter type Product Rules. --></errorMessage>
+        <name>SBQQ__FilterTypeScope</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only rules with Scope &apos;Product&apos; can have Evaluation Events of type &apos;Edit&apos; or &apos;Load&apos; --></errorMessage>
+        <name>SBQQ__ProductEvaluationEventValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Evaluation Event field must be populated with a value. --></errorMessage>
+        <name>SBQQ__RequiredEvaluationEvent</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

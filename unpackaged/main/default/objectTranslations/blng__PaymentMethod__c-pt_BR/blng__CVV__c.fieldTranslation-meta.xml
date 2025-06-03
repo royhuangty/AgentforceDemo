@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>CVV do cartão do endereço de faturamento do cartão</help>
+        <label><!-- Card CVV --></label>
+        <name>blng__CVV__c</name>
+    </CustomFieldTranslation>

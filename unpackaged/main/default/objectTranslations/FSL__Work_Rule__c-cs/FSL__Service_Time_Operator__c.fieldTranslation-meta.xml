@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Time Operator --></label>
+        <name>FSL__Service_Time_Operator__c</name>
+        <picklistValues>
+            <masterLabel>Before</masterLabel>
+            <translation>Před</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before or Equal to</masterLabel>
+            <translation>Před nebo rovnající se</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equal to</masterLabel>
+            <translation>Rovnající se</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Later than or Equal to</masterLabel>
+            <translation>Později než nebo Rovnající se</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

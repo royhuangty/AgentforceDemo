@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Dependency --></label>
+        <name>FSL__Dependency__c</name>
+        <picklistValues>
+            <masterLabel>Immediately Follow</masterLabel>
+            <translation>Seguir inmediatamente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Start</masterLabel>
+            <translation>Mismo inicio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start After Finish</masterLabel>
+            <translation>Inicio tras finalización</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start After Finish And Same Day</masterLabel>
+            <translation>Inicio tras finalización y mismo día</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

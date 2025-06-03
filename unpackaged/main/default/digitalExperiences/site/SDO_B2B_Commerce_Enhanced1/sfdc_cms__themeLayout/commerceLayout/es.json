@@ -1,0 +1,52 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Commerce Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 12px; color: rgb(255, 255, 255);\">¡Ahorre 10 % en todas las baterías!</strong></p>"
+        },
+        "id" : "5b9d3aa5-fd95-45e7-a553-d226c1cb4573"
+      }, {
+        "attributes" : {
+          "placeholderText" : "¿Qué quieres buscar?"
+        },
+        "id" : "00cbed88-113c-4962-86ac-8f82952747d2"
+      }, {
+        "attributes" : {
+          "logOutLabel" : "Cerrar sesión",
+          "loginLinkText" : "Iniciar sesión"
+        },
+        "id" : "3a48ead3-16ea-4957-b994-56fe3939e0b4"
+      }, {
+        "attributes" : {
+          "text" : "Acerca de nosotros"
+        },
+        "id" : "d94216e7-201e-4307-abb3-7cb7ffa5fff5"
+      }, {
+        "attributes" : {
+          "text" : "Estamos comprometidos a brindar productos de calidad, servicios fiables y soluciones innovadoras para satisfacer sus necesidades."
+        },
+        "id" : "1c5715d9-3f72-4b49-8519-089201e64f93"
+      }, {
+        "attributes" : {
+          "text" : "Categorías"
+        },
+        "id" : "add51293-3c58-4c00-a83e-b5440aba2531"
+      }, {
+        "attributes" : {
+          "headingLabelText" : "Seleccione su ubicación",
+          "pickerButtonLabelText" : "Cambiar ubicación"
+        },
+        "id" : "d7d180a6-fa3e-4c7e-89f6-5cf193b6b70c"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">© Copyright 2025 Salesforce.com, inc. | Esta es una empresa ficticia. </span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">Se utiliza para demostraciones de Salesforce. No se porcesará ningún pedido.</span></p>"
+        },
+        "id" : "ad11f646-5caa-44a4-b92b-5e3204d88e7b"
+      } ]
+    }
+  },
+  "urlName" : "commerce-layout"
+}

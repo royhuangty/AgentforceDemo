@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Se verificado, o intervalo entre os serviços será baseado no campo de intervalo mínimo, sem cálculos de viagens.</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

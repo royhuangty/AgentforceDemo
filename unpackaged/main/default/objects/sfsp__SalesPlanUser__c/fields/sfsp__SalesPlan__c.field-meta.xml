@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfsp__SalesPlan__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Sales Plan</label>
+    <referenceTo>sfsp__SalesPlan__c</referenceTo>
+    <relationshipLabel>Sales Plan Users</relationshipLabel>
+    <relationshipName>SalesPlanUsers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

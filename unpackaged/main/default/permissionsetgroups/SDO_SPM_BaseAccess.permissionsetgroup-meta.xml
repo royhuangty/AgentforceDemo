@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set used to grant base access to the Sales Performance Management demo script</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Performance Management Base Access</label>
+    <permissionSets>SDO_SPM_Base_Access</permissionSets>
+    <permissionSets>sfsp__SalesPlanning</permissionSets>
+    <permissionSets>sfsp__SalesPlanningAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

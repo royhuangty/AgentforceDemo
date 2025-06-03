@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>FSL__Type__c</name>
+        <picklistValues>
+            <masterLabel>Automated Bundling</masterLabel>
+            <translation>Empaquetado automatizado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fill-In Schedule</masterLabel>
+            <translation>Programación de relleno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fix Overlaps</masterLabel>
+            <translation>Solucionar solapamientos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Optimization</masterLabel>
+            <translation>Optimización global</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Nearby SAs</masterLabel>
+            <translation>Agrupar citas de servicio cercanas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Bundling</masterLabel>
+            <translation>Empaquetado en vivo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Schedule Optimization</masterLabel>
+            <translation>Optimización de programación de recursos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Reshuffle</masterLabel>
+            <translation>Reorganizar cita de servicio</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

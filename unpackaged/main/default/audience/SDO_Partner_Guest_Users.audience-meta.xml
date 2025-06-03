@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>SDO Partner Guest Users</audienceName>
+    <container>SDO - Partner Central</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>Profile.UserType</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Guest</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>374e47ce-b461-4060-b2e6-76d2f091afd2$#$bf4d6e50-ed56-4316-9f2f-2a50eba3c376</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Support_HTML_Editor_3_Component</targetValue>
+        </target>
+        <target>
+            <groupName>374e47ce-b461-4060-b2e6-76d2f091afd2$#$35d93122-f344-4555-bfe0-d57abc93d129</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Support_HTML_Editor_1_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

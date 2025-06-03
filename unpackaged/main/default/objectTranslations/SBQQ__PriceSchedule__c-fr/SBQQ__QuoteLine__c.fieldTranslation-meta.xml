@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ligne de devis à laquelle ce barème de prix s&#39;applique. Utilisée uniquement avec l&#39;option Remplacement du barème de prix dans l&#39;interface utilisateur de l&#39;éditeur de ligne de devis.</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Price Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

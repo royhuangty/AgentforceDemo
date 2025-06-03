@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Depot_Repair_Status__c</fullName>
+    <label>Depot Repair Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Received</fullName>
+                <default>false</default>
+                <label>Received</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+                <label>Inspection</label>
+            </value>
+            <value>
+                <fullName>Disassembly</fullName>
+                <default>false</default>
+                <label>Disassembly</label>
+            </value>
+            <value>
+                <fullName>Awaiting Authorization</fullName>
+                <default>false</default>
+                <label>Awaiting Authorization</label>
+            </value>
+            <value>
+                <fullName>Awaiting Parts</fullName>
+                <default>false</default>
+                <label>Awaiting Parts</label>
+            </value>
+            <value>
+                <fullName>Repairing</fullName>
+                <default>false</default>
+                <label>Repairing</label>
+            </value>
+            <value>
+                <fullName>Assembly</fullName>
+                <default>false</default>
+                <label>Assembly</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Shipped</fullName>
+                <default>false</default>
+                <label>Shipped</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

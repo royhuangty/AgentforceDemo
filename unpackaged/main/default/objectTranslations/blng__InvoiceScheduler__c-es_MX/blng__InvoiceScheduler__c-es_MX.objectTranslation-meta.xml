@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programador de facturas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programadores de facturas</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Invoice Scheduler Layout</layout>
+        <sections>
+            <label>Configuración mensual</label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label>Configuración semanal</label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de programador de facturas</nameFieldLabel>
+</CustomObjectTranslation>

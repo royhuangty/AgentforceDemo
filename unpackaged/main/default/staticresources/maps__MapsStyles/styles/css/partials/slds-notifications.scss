@@ -1,0 +1,23 @@
+.slds-scope {
+    .slds-notify_container--inline {
+        margin-bottom: 1.5rem;
+        position: relative;
+        width: auto;
+        z-index: 0;
+        h4 {
+            font-size: 1.125rem;
+            line-height: 1.714;
+            font-weight: 400;
+            text-transform: none;
+            color: $color-text-weak;
+        }
+        p {
+            color: $color-text-weak;
+            font-size: 13px;
+        }
+        .notification-graphic--medium {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}

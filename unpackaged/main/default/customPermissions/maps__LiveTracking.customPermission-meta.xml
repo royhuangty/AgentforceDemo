@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants access to functionality that requires a license of Salesforce Maps Live Tracking</description>
+    <isLicensed>false</isLicensed>
+    <label>Live Tracking</label>
+</CustomPermission>

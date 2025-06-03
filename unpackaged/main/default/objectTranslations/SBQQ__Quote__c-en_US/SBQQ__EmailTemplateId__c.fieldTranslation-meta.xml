@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If you have a specific email template to use for documents generated and emailed from this quote, enter the email template ID here. --></help>
+        <label><!-- Email Template Id --></label>
+        <name>SBQQ__EmailTemplateId__c</name>
+    </CustomFieldTranslation>

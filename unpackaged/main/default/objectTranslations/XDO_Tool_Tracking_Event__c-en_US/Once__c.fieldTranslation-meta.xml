@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Only raise a single instance of the event determined by the value in the Action property --></help>
+        <label><!-- Once? --></label>
+        <name>Once__c</name>
+    </CustomFieldTranslation>

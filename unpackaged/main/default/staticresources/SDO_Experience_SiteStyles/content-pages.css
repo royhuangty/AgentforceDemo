@@ -1,0 +1,1189 @@
+/*
+ * COMPONENT STYLES
+ * 
+ * This CSS file contains styles that reference the Experience Cloud's primary Experience Cloud 
+ * components. 
+ *
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+/* Home Page */
+@media only screen and (min-width: 961px) {
+  .comm-page-home .forceCommunityDashboard {
+    margin-bottom: -100px;
+  }
+  .comm-page-home .forceCommunityDashboard .desktopDashboardsDashboard .dashboardContainer {
+    margin-top: -100px;
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 961px) {
+  .comm-page-home .forceCommunityDashboard header .header {
+    display: none;
+  }
+  .comm-page-home .forceCommunityDashboard .dashboardsEclairComponent h2.header {
+    font-size: var(--font-size-base);
+  }
+}
+.comm-page-home .cb-section.forceCommunitySection .cb-section_row {
+  /* Media query for tablet devices */
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 960px) {
+  .comm-page-home .cb-section.forceCommunitySection .cb-section_row .slds-large-size_8-of-12 {
+    order: 2;
+  }
+  .comm-page-home .cb-section.forceCommunitySection .cb-section_row .slds-large-size_4-of-12 {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .cb-section.forceCommunitySection .cb-section_row .slds-large-size_8-of-12 {
+    order: 2;
+  }
+  .comm-page-home .cb-section.forceCommunitySection .cb-section_row .slds-large-size_4-of-12 {
+    order: 1;
+  }
+}
+.comm-page-home .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 .forceCommunityBannerLayout .js-content {
+  background-color: var(--hero-background-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, var(--hero-box-shadow-transparency)) inset;
+  padding: 40px;
+  margin-left: 8%;
+}
+@media only screen and (max-width: 961px) {
+  .comm-page-home .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 .forceCommunityBannerLayout .js-content {
+    width: auto !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 .forceCommunityBannerLayout .js-content .js-content-navButton.bannerLayoutButton {
+    padding: 10px 13px;
+  }
+}
+.comm-page-home .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 .forceCommunityBannerLayout .js-content .js-content-navButton.bannerLayoutButton {
+  padding: 10px 40px;
+}
+.comm-page-home .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 .forceCommunityBannerLayout .slds-template__container .slds-grid_vertical-align-center {
+  justify-content: left;
+}
+.comm-page-home .forceCommunityDynamicCollectionGrid .viewMoreButton {
+  font-size: var(--font-size-sm);
+}
+.comm-page-home .forceCommunityLeadInbox .slds-text-heading--small {
+  font-size: var(--font-size-md);
+}
+.comm-page-home .forceCommunityLeadInbox .slds-dropdown-trigger_click button {
+  border-color: #747474;
+}
+.comm-page-home .forceCommunityLeadInbox .forceCommunityLeadInboxStencil .primaryField {
+  max-width: 70% !important;
+  padding: 0em 0.7em;
+}
+.comm-page-home .forceCommunityLeadInbox .forceCommunityLeadInboxStencil .primaryField .emailuiFormattedEmail {
+  color: var(--lwc-colorBrand);
+}
+.comm-page-home .keyAreas {
+  margin-bottom: 40px;
+}
+.comm-page-home .keyAreas ul > li:before {
+  content: none !important;
+}
+.comm-page-home .keyAreas .topicItem {
+  height: fit-content !important;
+  width: 33.33%;
+}
+.comm-page-home .keyAreas .topicItem div.topicImage {
+  font-size: 20px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.comm-page-home .keyAreas .topicItem div.topicContent {
+  background-color: transparent !important;
+  text-align: center;
+}
+.comm-page-home .keyAreas .topicItem div.topicContent div.topicLabel {
+  font-size: var(--font-size-sm);
+  color: var(--text-default-color);
+  font-weight: var(--font-weight-normal) !important;
+  padding: 0;
+}
+.comm-page-home .register-button {
+  margin-bottom: 40px;
+  padding: 0em 3em;
+}
+.comm-page-home .register-button a {
+  display: block;
+  width: 100%;
+}
+.comm-page-home .register-button a button {
+  font-size: var(--font-size-md);
+  height: 40px;
+  width: 100%;
+}
+
+/* My Account - User Settings Page */
+.forceCommunityUserSettingsCustomizable .accountSection,
+.forceCommunityUserSettingsCustomizable .locationSection,
+.forceCommunityUserSettingsCustomizable .profileVisibilitySection,
+.forceCommunityUserSettingsCustomizable .emailNotificationsSection {
+  border-top: 1px solid var(--light-gray-border-color);
+  padding: 25px 0;
+}
+.forceCommunityUserSettingsCustomizable h2.texttitle {
+  color: var(--lwc-colorBrand) !important;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+.forceCommunityUserSettingsCustomizable input[type=checkbox]:checked {
+  background: transparent !important;
+  border: 1px solid var(--light-gray-border-color) !important;
+  color: var(--medium-gray-color) !important;
+}
+.forceCommunityUserSettingsCustomizable input[type=checkbox]:checked:after,
+.forceCommunityUserSettingsCustomizable input[type=checkbox]:checked:disabled:after {
+  height: 5px;
+  width: 10px;
+  border-bottom: 2px solid var(--dark-gray-color) !important;
+  border-left: 2px solid var(--dark-gray-color) !important;
+}
+.forceCommunityUserSettingsCustomizable input[type=checkbox]:disabled {
+  background: var(--light-gray-background-color) !important;
+  border: 1px solid var(--light-gray-border-color) !important;
+}
+
+/* My Account - User Profile */
+.forceCommunityUserProfileBody .cProfileViewBody {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: var(--border-radius-none) !important;
+  overflow: auto;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon {
+  margin-top: 0;
+  padding: 0;
+  padding-top: 0;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cProfileHeaderCon {
+  padding-left: 0;
+  padding-right: 0;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large .profileDetailView .userDetailHeader {
+  margin-bottom: 20px;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large .profileDetailView .userDetailHeader h1 .profileName {
+  font-size: var(--font-size-xl);
+  color: var(--lwc-colorBrand);
+  font-weight: var(--font-weight-bold);
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large .profileDetailView .slds-p-vertical--medium {
+  padding-top: 0;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large .profileDetailView .detailsData .forcePageBlockSectionRow.slds-gutters_small {
+  margin-bottom: 10px;
+}
+.forceCommunityUserProfileBody .cProfileViewBody .cUserProfileCon .cUserProfileDetailCon.large .profileDetailView .detailsData .forcePageBlockItemView.full {
+  padding-right: 10px;
+}
+
+/* My Account - Left Column Navigation */
+.forceCommunitySection .comm-tile-menu__item.slds-size_6-of-12, .forceCommunitySection .comm-tile-menu__item.slds-size--6-of-12 {
+  width: 100% !important;
+}
+.forceCommunitySection .comm-tile-menu__item.slds-p-around_small, .forceCommunitySection .comm-tile-menu__item.slds-p-around--small {
+  padding: 0;
+}
+.forceCommunitySection .comm-tile-menu__item .comm-tile-menu__item-link {
+  max-width: 100% !important;
+  display: block;
+}
+.forceCommunitySection .comm-tile-menu__item .comm-tile-menu__item-link .comm-tile-menu__item-tile {
+  border-bottom: 1px solid var(--light-gray-border-color);
+  height: 40px !important;
+}
+
+/* My Account - Home */
+.comm-page-my-account .comm-tile-menu__item {
+  margin-bottom: 10px;
+}
+.comm-page-my-account .comm-tile-menu__item.slds-size_6-of-12, .comm-page-my-account .comm-tile-menu__item.slds-size--6-of-12 {
+  width: 100% !important;
+}
+.comm-page-my-account .comm-tile-menu__item.slds-p-around_small, .comm-page-my-account .comm-tile-menu__item.slds-p-around--small {
+  padding: 0;
+}
+.comm-page-my-account .comm-tile-menu__item .comm-tile-menu__item-link {
+  border: 1px solid #dddddd;
+  border-radius: var(--border-radius-lg);
+  max-width: 100% !important;
+}
+.comm-page-my-account .comm-tile-menu__item .comm-tile-menu__item-link .comm-tile-menu__item-tile {
+  border-bottom: none;
+  height: 60px !important;
+}
+
+/* My Account - Account Information Page */
+.comm-page-custom-account-information header.forceCommunityRecordHeadline {
+  background-color: var(--light-gray-background-color);
+  border-radius: var(--border-radius-md);
+  padding: 10px;
+}
+.comm-page-custom-account-information header.forceCommunityRecordHeadline .slds-page-header__detail-row {
+  background-color: transparent !important;
+}
+.comm-page-custom-account-information .forceCommunityRecordHomeTabs .recordHomePrimaryContent,
+.comm-page-custom-account-information .forceCommunityRecordHomeTabs .recordHomeSecondaryContent {
+  width: 100%;
+}
+.comm-page-custom-account-information button.slds-section__title-action {
+  margin-top: 20px;
+}
+.comm-page-custom-account-information button.slds-section__title-action .test-id__section-header-title {
+  color: var(--lwc-colorBrand) !important;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+/* My Account - Security & Privacy (User Settings) */
+.comm-page-usersettings .forceCommunityUserSettingsCustomizable .row {
+  border-bottom: none !important;
+  margin-bottom: 0;
+}
+.comm-page-usersettings .forceCommunityUserSettingsCustomizable .row h1.texttitle {
+  display: none;
+}
+.comm-page-usersettings .forceCommunityUserSettingsInternal .row.slds-m-top--medium {
+  margin-top: 0;
+}
+.comm-page-usersettings .forceCommunityUserSettingsInternal .row.slds-m-top--medium .paddingcancelsave {
+  margin-top: 0;
+}
+
+/* My Account - Member Management */
+.comm-page-custom-member-directory .forceCommunityRelatedList {
+  min-height: 400px !important;
+}
+.comm-page-custom-member-directory .forceCommunityRelatedList .test-listViewManager .slds-page-header {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.comm-page-custom-member-directory .forceCommunityRelatedList .test-listViewManager.slds-card {
+  border: none !important;
+}
+
+/* Search Page */
+.forceCommunitySearch {
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.forceCommunitySearch .slds-medium-size_1-of-6 {
+  width: 250px !important;
+}
+.forceCommunitySearch .slds-nav-vertical__section .slds-nav-vertical__title {
+  display: none;
+}
+.forceCommunitySearch .slds-nav-vertical__section .scopesBlock .slds-nav-vertical__item:hover:before,
+.forceCommunitySearch .slds-nav-vertical__section .scopesBlock .slds-nav-vertical__item.slds-is-active:before {
+  background: var(--light-gray-background-color);
+}
+.forceCommunitySearch .slds-nav-vertical__section .scopesBlock .slds-nav-vertical__item {
+  border-bottom: 1px solid var(--light-gray-border-color);
+}
+.forceCommunitySearch .slds-nav-vertical__action:hover {
+  box-shadow: none;
+}
+.forceCommunitySearch .slds-border_right {
+  border-right: none;
+}
+.forceCommunitySearch .forceSearchSearchResultsGridHeader .slds-page-header__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+}
+
+/* Appointment Confirmation Page */
+.comm-page-custom-appointment-confirmation h1.headline, .comm-page-custom-sfs-appointment-confirmation h1.headline {
+  display: none;
+}
+.comm-page-custom-appointment-confirmation .info-container .info-title, .comm-page-custom-sfs-appointment-confirmation .info-container .info-title {
+  color: var(--lwc-colorBrand);
+}
+.comm-page-custom-appointment-confirmation .info-container .info-item, .comm-page-custom-sfs-appointment-confirmation .info-container .info-item {
+  color: var(--text-default-color);
+  font-size: var(--font-size-sm);
+}
+
+/* Contactless Signature */
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC], .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] {
+  margin-bottom: auto;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] h1.title, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] h1.title {
+  display: none;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] label, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] label {
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] button.report, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] button.report {
+  border: 1px solid var(--light-gray-border-color);
+  border-radius: 8px;
+  padding: 12px 28px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] button.report .report-meta, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] button.report .report-meta {
+  font-size: var(--font-size-xs);
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input {
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input label.slds-form-element__label, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input label.slds-form-element__label {
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input input.slds-input, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.name-input input.slds-input {
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-sm);
+  height: 40px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container {
+  margin: 0;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container .checkbox-label-container, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container .checkbox-label-container {
+  margin-top: 10px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container .checkbox-label-container .slds-form-element__label, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] div.checkbox-container .checkbox-label-container .slds-form-element__label {
+  color: var(--medium-gray-color);
+  font-size: var(--font-size-sm) !important;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] p.sig-label, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] p.sig-label {
+  color: var(--medium-gray-color);
+  font-size: var(--font-size-sm);
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] canvas[FSAA-tsSignatureCapture_tsSignatureCapture], .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] canvas[FSAA-tsSignatureCapture_tsSignatureCapture] {
+  background: var(--light-gray-background-color);
+  border: 1px solid var(--light-gray-border-color);
+  border-radius: 10px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .canvas_box .canvas-water-mark p.canvas-text, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .canvas_box .canvas-water-mark p.canvas-text {
+  color: #aaaaaa;
+  font-family: cursive;
+  font-size: var(--font-size-xxxl);
+  height: 120px;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .bottom, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .bottom {
+  position: relative !important;
+}
+.comm-page-custom-contactless-signature div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .bottom .next:enabled, .comm-page-custom-sfs-appointment-confirmation div[data-component-label="Contactless Signature"] .main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] .bottom .next:enabled {
+  background-color: var(--lwc-colorBrand);
+}
+
+/* Library - Home */
+.comm-page-custom-learning {
+  /* Dynamic Learning Section */
+}
+.comm-page-custom-learning .dynamic-articles {
+  margin: 20px;
+}
+@media only screen and (min-width: 961px) {
+  .comm-page-custom-learning .dynamic-articles {
+    margin-top: 40px;
+  }
+}
+.comm-page-custom-learning .dynamic-articles .copy h2 {
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-md);
+}
+.comm-page-custom-learning .dynamic-articles .copy p {
+  color: var(--medium-gray-color);
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-learning .dynamic-articles .button a button {
+  height: 40px;
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-custom-learning .dynamic-articles .button {
+    margin: 20px 0;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .comm-page-custom-learning .dynamic-articles .button {
+    margin: 20px 0;
+  }
+}
+@media only screen and (min-width: 961px) {
+  .comm-page-custom-learning .dynamic-articles .button {
+    padding-left: 20px;
+  }
+}
+
+/* Self-Service Scheduling */
+.comm-page-custom-self-service-scheduling .slds-box {
+  border: none;
+  padding: 0;
+}
+
+/* 'Blog' page || Articles Landing page */
+.comm-page-custom-blog .forceCommunityRichText h2 {
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-custom-blog .selfServiceTopicArticleList .selfServiceArticleListItem {
+    margin: 0px;
+  }
+}
+
+/* CMS content detail - news, video, flex, blogs */
+.comm-page-managed-content-news .forceCommunityDynamicCollectionGrid,
+.comm-page-managed-content-Blogs .forceCommunityDynamicCollectionGrid,
+.comm-page-managed-content-flexContent .forceCommunityDynamicCollectionGrid,
+.comm-page-managed-content-externalVideo .forceCommunityDynamicCollectionGrid {
+  padding: 60px 40px;
+  background-color: var(--light-gray-background-color);
+  border-radius: var(--border-radius-lg);
+}
+.comm-page-managed-content-news .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout,
+.comm-page-managed-content-Blogs .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout,
+.comm-page-managed-content-flexContent .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout,
+.comm-page-managed-content-externalVideo .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout {
+  margin-top: 10px;
+}
+.comm-page-managed-content-news .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout div:first-child,
+.comm-page-managed-content-Blogs .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout div:first-child,
+.comm-page-managed-content-flexContent .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout div:first-child,
+.comm-page-managed-content-externalVideo .forceCommunityDynamicCollectionGrid .forceCommunityTileLayout.forceCommunityFlexTileLayout div:first-child {
+  box-shadow: none;
+}
+.comm-page-managed-content-news .forceCommunityDynamicCollectionGrid h1.slds-text-heading_medium,
+.comm-page-managed-content-Blogs .forceCommunityDynamicCollectionGrid h1.slds-text-heading_medium,
+.comm-page-managed-content-flexContent .forceCommunityDynamicCollectionGrid h1.slds-text-heading_medium,
+.comm-page-managed-content-externalVideo .forceCommunityDynamicCollectionGrid h1.slds-text-heading_medium {
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+.comm-page-managed-content-news .slds-rich-text-editor__output,
+.comm-page-managed-content-Blogs .slds-rich-text-editor__output,
+.comm-page-managed-content-flexContent .slds-rich-text-editor__output,
+.comm-page-managed-content-externalVideo .slds-rich-text-editor__output {
+  line-height: 32px;
+  font-size: var(--font-size-base);
+}
+
+/* Documentation */
+.comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container .mediaContainer {
+  margin-top: 20px;
+}
+.comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container .mediaContainer .contentImage {
+  background-size: auto !important;
+}
+.comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container div:nth-child(2) {
+  padding: 20px 20px 20px 0px;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container .mediaContainer {
+    margin-top: inherit;
+  }
+  .comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container .mediaContainer .contentImage {
+    background-color: var(--light-gray-background-color) !important;
+  }
+  .comm-page-custom-documentation .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container div:nth-child(2) {
+    padding: 20px;
+  }
+}
+
+/* 'Topic Detail' Page */
+.comm-page-topic .forceCommunityHeadline {
+  margin-bottom: -30px;
+}
+.comm-page-topic .forceCommunityHeadline h1.headlineTitle {
+  font-size: var(--font-size-xxl);
+  text-align: left;
+  font-weight: var(--font-weight-light);
+  color: var(--base-color-black);
+  padding: 0;
+}
+.comm-page-topic .forceCommunityTopicDescription {
+  padding: 0;
+  font-size: var(--font-size-base);
+}
+.comm-page-topic .forceTopicFeaturedTopics ul.topicList {
+  gap: 30px;
+  /* Media query for tablet devices */
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 768px) {
+  .comm-page-topic .forceTopicFeaturedTopics ul.topicList {
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-topic .forceTopicFeaturedTopics ul.topicList {
+    gap: 15px;
+  }
+  .comm-page-topic .forceTopicFeaturedTopics ul.topicList li.topicItem {
+    width: 50% !important;
+  }
+}
+.comm-page-topic .forceTopicFeaturedTopics ul.topicList li.topicItem {
+  height: 99px;
+  max-width: auto;
+  min-width: auto;
+  padding: 9px 0;
+  width: 14.5%;
+}
+.comm-page-topic .forceTopicFeaturedTopics ul.topicList li.topicItem .topicImage {
+  padding-top: 4rem;
+}
+.comm-page-topic .forceTopicFeaturedTopics ul.topicList li.topicItem .topicLabel {
+  margin-top: 2rem;
+  font-size: var(--font-size-xs);
+}
+.comm-page-topic .cms-content-block .cms-card {
+  padding: 0;
+  border-radius: var(--border-radius-xl);
+}
+.comm-page-topic .cms-content-block .cms-card .cms-card-image {
+  padding: 0;
+}
+.comm-page-topic .cms-content-block .cms-card .cms-card-image img {
+  border-radius: var(--border-radius-xl) var(--border-radius-xl) var(--border-radius-none) var(--border-radius-none);
+}
+.comm-page-topic .cms-content-block .cms-card .cms-card-footer {
+  display: none;
+}
+
+/* 'Training Courses List' Page styles */
+.comm-page-list-a1R .forceCommunitySection .cb-section_column.slds-large-size_6-of-12:first-child {
+  padding: 16px 20px 16px 16px;
+}
+.comm-page-list-a1R .forceCommunitySection .cb-section_column.slds-large-size_6-of-12:last-child {
+  padding: 16px 20px 16px 20px;
+}
+.comm-page-list-a1R .forceCommunityRecordListStandard a {
+  font-size: var(--font-size-sm);
+}
+.comm-page-list-a1R .forceCommunityRecordListStandard .listTitle {
+  display: none;
+  text-transform: capitalize !important;
+}
+.comm-page-list-a1R .forceCommunityRecordListStandard .forceBaseListView thead th {
+  border-top: 1px solid var(--lwc-colorBorder);
+  border-right: 1px solid var(--lwc-colorBorder);
+  line-height: 20px;
+  letter-spacing: -0.25px;
+}
+.comm-page-list-a1R .forceCommunityRecordListStandard .viewAllLink {
+  text-align: center;
+}
+.comm-page-list-a1R .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 100px !important;
+}
+.comm-page-list-a1R .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer .js-content-subtitle {
+  font-size: var(--font-size-sm);
+}
+.comm-page-list-a1R .js-dynamic-collection .forceCommunityDynamicCollectionGrid .resetMarginLeft {
+  gap: 0;
+}
+.comm-page-list-a1R .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space {
+  padding: 0 !important;
+}
+.comm-page-list-a1R .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space .js-content-eyebrow {
+  margin-top: 0 !important;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-list-a1R .forceCommunityCarousel .forceCommunityCardLayout .slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center {
+    padding: 0;
+  }
+  .comm-page-list-a1R .forceCommunityCarousel a.previousAction {
+    margin-right: 0;
+  }
+  .comm-page-list-a1R .forceCommunityCarousel a.nextAction {
+    margin-left: 0;
+  }
+}
+
+/* Support | Support Search */
+.comm-page-global-search .kbStencilRecord .formattedTextLookupTitle,
+.comm-page-custom-support .kbStencilRecord .formattedTextLookupTitle {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* 'Events' page styles */
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--base-color-white) !important;
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+}
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] .eventHeader {
+  padding: 0px;
+}
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] .eventHeader .titleH2Container h2 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--lwc-dxpGBrand);
+}
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] .cccalendar_modal__content {
+  padding: 0px;
+}
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] .cccalendar_modal__content .slds-size_12-of-12 {
+  padding: 0;
+}
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] .cccalendar_modal__content .slds-size_12-of-12 .cccalendar_eventButtonSpan {
+  margin-top: 20px;
+  padding: 3px 30px;
+}
+
+/* 'Support' | Support Home & Community Home Page styles */
+.comm-page-custom-help-center,
+.comm-page-custom-community-home,
+.comm-page-custom-support {
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 960px) {
+  .comm-page-custom-help-center .forceCommunitySection .cb-section_row .cb-section_column:only-child,
+  .comm-page-custom-community-home .forceCommunitySection .cb-section_row .cb-section_column:only-child,
+  .comm-page-custom-support .forceCommunitySection .cb-section_row .cb-section_column:only-child {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .comm-page-custom-help-center .forceCommunitySection .cb-section_row .cb-section_column:only-child .contentImage,
+  .comm-page-custom-community-home .forceCommunitySection .cb-section_row .cb-section_column:only-child .contentImage,
+  .comm-page-custom-support .forceCommunitySection .cb-section_row .cb-section_column:only-child .contentImage {
+    background-size: cover !important;
+  }
+}
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout,
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout > .slds-grid,
+.comm-page-custom-community-home .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout,
+.comm-page-custom-community-home .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout > .slds-grid,
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout,
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .forceCommunityFlexTileLayout > .slds-grid {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 1px 6px 0px rgba(153, 153, 153, 0.2);
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard h2.listTitle,
+.comm-page-custom-help-center .forceCommunityRecordListCompact h2.listTitle,
+.comm-page-custom-community-home .forceCommunityRecordListStandard h2.listTitle,
+.comm-page-custom-community-home .forceCommunityRecordListCompact h2.listTitle,
+.comm-page-custom-support .forceCommunityRecordListStandard h2.listTitle,
+.comm-page-custom-support .forceCommunityRecordListCompact h2.listTitle {
+  display: none;
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard .listContent,
+.comm-page-custom-help-center .forceCommunityRecordListCompact .listContent,
+.comm-page-custom-community-home .forceCommunityRecordListStandard .listContent,
+.comm-page-custom-community-home .forceCommunityRecordListCompact .listContent,
+.comm-page-custom-support .forceCommunityRecordListStandard .listContent,
+.comm-page-custom-support .forceCommunityRecordListCompact .listContent {
+  border-top: 1px solid var(--light-gray-border-color);
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template,
+.comm-page-custom-help-center .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template,
+.comm-page-custom-community-home .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template,
+.comm-page-custom-community-home .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template,
+.comm-page-custom-support .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template,
+.comm-page-custom-support .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template {
+  border-color: var(--light-gray-border-color);
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField,
+.comm-page-custom-help-center .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField,
+.comm-page-custom-community-home .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField,
+.comm-page-custom-community-home .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField,
+.comm-page-custom-support .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField,
+.comm-page-custom-support .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .primaryField {
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after,
+.comm-page-custom-help-center .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after,
+.comm-page-custom-community-home .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after,
+.comm-page-custom-community-home .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after,
+.comm-page-custom-support .forceCommunityRecordListStandard .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after,
+.comm-page-custom-support .forceCommunityRecordListCompact .listContent .forceCommunityRecordListCompactCard.forceRecordLayout .template .secondaryFields li::after {
+  font-weight: var(--font-weight-bold);
+}
+.comm-page-custom-help-center .forceCommunityRecordListStandard .viewAllLink,
+.comm-page-custom-help-center .forceCommunityRecordListCompact .viewAllLink,
+.comm-page-custom-community-home .forceCommunityRecordListStandard .viewAllLink,
+.comm-page-custom-community-home .forceCommunityRecordListCompact .viewAllLink,
+.comm-page-custom-support .forceCommunityRecordListStandard .viewAllLink,
+.comm-page-custom-support .forceCommunityRecordListCompact .viewAllLink {
+  text-align: center;
+}
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .resetMarginLeft .slds-text-heading_small,
+.comm-page-custom-community-home .forceCommunityDynamicCollectionGrid .resetMarginLeft .slds-text-heading_small,
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .resetMarginLeft .slds-text-heading_small {
+  font-size: var(--font-size-sm) !important;
+}
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top_small,
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top--small,
+.comm-page-custom-community-home .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top_small,
+.comm-page-custom-community-home .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top--small,
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top_small,
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout ul.slds-m-top--small {
+  margin-top: 0;
+}
+.comm-page-custom-help-center .forceListRecord .tableRowGroup,
+.comm-page-custom-community-home .forceListRecord .tableRowGroup,
+.comm-page-custom-support .forceListRecord .tableRowGroup {
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 960px) {
+  .comm-page-custom-help-center .forceListRecord .tableRowGroup,
+  .comm-page-custom-community-home .forceListRecord .tableRowGroup,
+  .comm-page-custom-support .forceListRecord .tableRowGroup {
+    margin-bottom: 10px;
+  }
+}
+.comm-page-custom-help-center .forceListRecord .itemTitle,
+.comm-page-custom-community-home .forceListRecord .itemTitle,
+.comm-page-custom-support .forceListRecord .itemTitle {
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 960px) {
+  .comm-page-custom-help-center .forceListRecord .itemTitle,
+  .comm-page-custom-community-home .forceListRecord .itemTitle,
+  .comm-page-custom-support .forceListRecord .itemTitle {
+    font-size: var(--font-size-md);
+    margin-bottom: 10px;
+  }
+}
+.comm-page-custom-help-center .slds-large-size_4-of-12 .ui-widget:not(:last-child),
+.comm-page-custom-community-home .slds-large-size_4-of-12 .ui-widget:not(:last-child),
+.comm-page-custom-support .slds-large-size_4-of-12 .ui-widget:not(:last-child) {
+  margin-bottom: 0 !important;
+}
+.comm-page-custom-help-center .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child,
+.comm-page-custom-community-home .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child,
+.comm-page-custom-support .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child {
+  background-color: transparent;
+  border: none !important;
+}
+.comm-page-custom-help-center .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child div.slds-p-around_medium,
+.comm-page-custom-community-home .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child div.slds-p-around_medium,
+.comm-page-custom-support .slds-large-size_4-of-12 .js-content.forceCommunityTileLayout > div:first-child div.slds-p-around_medium {
+  padding: 0;
+}
+.comm-page-custom-help-center .forceCommunityHtmlBlock .support-button,
+.comm-page-custom-help-center .forceCommunityHtmlBlock .register-button,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .support-button,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .register-button,
+.comm-page-custom-support .forceCommunityHtmlBlock .support-button,
+.comm-page-custom-support .forceCommunityHtmlBlock .register-button {
+  display: block;
+  width: 100%;
+}
+.comm-page-custom-help-center .forceCommunityHtmlBlock .support-button.slds-grid_align-center,
+.comm-page-custom-help-center .forceCommunityHtmlBlock .register-button.slds-grid_align-center,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .support-button.slds-grid_align-center,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .register-button.slds-grid_align-center,
+.comm-page-custom-support .forceCommunityHtmlBlock .support-button.slds-grid_align-center,
+.comm-page-custom-support .forceCommunityHtmlBlock .register-button.slds-grid_align-center {
+  justify-content: flex-start;
+}
+.comm-page-custom-help-center .forceCommunityHtmlBlock .support-button button,
+.comm-page-custom-help-center .forceCommunityHtmlBlock .register-button button,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .support-button button,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .register-button button,
+.comm-page-custom-support .forceCommunityHtmlBlock .support-button button,
+.comm-page-custom-support .forceCommunityHtmlBlock .register-button button {
+  border-radius: 4px;
+  height: 32px;
+  width: 100%;
+}
+.comm-page-custom-help-center .forceCommunityHtmlBlock .register-button,
+.comm-page-custom-community-home .forceCommunityHtmlBlock .register-button,
+.comm-page-custom-support .forceCommunityHtmlBlock .register-button {
+  margin-top: 20px;
+}
+.comm-page-custom-help-center .need-support-container,
+.comm-page-custom-community-home .need-support-container,
+.comm-page-custom-support .need-support-container {
+  align-items: center;
+  background-color: var(--light-gray-background-color);
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-custom-help-center .need-support-container,
+  .comm-page-custom-community-home .need-support-container,
+  .comm-page-custom-support .need-support-container {
+    margin-bottom: 40px;
+  }
+}
+.comm-page-custom-help-center .need-support-container .slds-large-size_3-of-12,
+.comm-page-custom-community-home .need-support-container .slds-large-size_3-of-12,
+.comm-page-custom-support .need-support-container .slds-large-size_3-of-12 {
+  padding-right: 20px;
+  width: fit-content;
+}
+.comm-page-custom-help-center .need-support-container .slds-large-size_3-of-12 button.slds-button,
+.comm-page-custom-community-home .need-support-container .slds-large-size_3-of-12 button.slds-button,
+.comm-page-custom-support .need-support-container .slds-large-size_3-of-12 button.slds-button {
+  min-width: 150px;
+}
+.comm-page-custom-help-center .need-support-container h4,
+.comm-page-custom-community-home .need-support-container h4,
+.comm-page-custom-support .need-support-container h4 {
+  margin-bottom: 0 !important;
+  font-size: var(--font-size-base);
+}
+.comm-page-custom-help-center .need-support-container p,
+.comm-page-custom-community-home .need-support-container p,
+.comm-page-custom-support .need-support-container p {
+  font-size: var(--font-size-sm);
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card {
+  border: none;
+  box-shadow: none;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__header,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__header,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__header {
+  padding: 0;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__header h2,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__header h2,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__header h2 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-top: 60px;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body.slds-m-horizontal_x-small,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body.slds-m-horizontal_x-small,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body.slds-m-horizontal_x-small {
+  margin-left: 0;
+  margin-right: 0;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box {
+  background-color: var(--light-gray-background-color);
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-evenly;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button {
+  width: 48%;
+  display: inline-block;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-acceptButton,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-acceptButton,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-acceptButton {
+  background-color: var(--lwc-dxpGBrand);
+  border-color: var(--lwc-dxpGBrand);
+  color: white;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-rejectButton,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-rejectButton,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-box .nbaAcceptRejectBlock button.test-rejectButton {
+  background-color: white;
+  border-color: var(--lwc-dxpGBrand);
+  color: var(--lwc-dxpGBrand);
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-m-horizontal_x-small,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-m-horizontal_x-small,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .slds-m-horizontal_x-small {
+  margin-left: 0;
+  margin-right: 0;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaDescription,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaDescription,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaDescription {
+  font-size: var(--font-size-base);
+  color: var(--text-default-color);
+  margin-bottom: 30px;
+}
+.comm-page-custom-help-center article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaImage,
+.comm-page-custom-community-home article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaImage,
+.comm-page-custom-support article.forceCommunityNbaWidget.slds-card .slds-card__body ul li .nbaImage {
+  height: 115px;
+  border-radius: var(border-radius-xl);
+}
+
+.comm-page-custom-support .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .slds-is-relative.slds-col.slds-no-space.slds-p-around_medium,
+.comm-page-custom-help-center .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .slds-is-relative.slds-col.slds-no-space.slds-p-around_medium {
+  padding: 1rem 0rem !important;
+}
+
+/* Community Home' Page styles */
+.comm-page-custom-community-home .forceCommunityRecordListCompact,
+.comm-page-custom-community-groups .forceCommunityRecordListCompact {
+  border-top: 1px solid #dddddd;
+}
+.comm-page-custom-community-home .forceCommunityRecordListCompact .listTitleContainer,
+.comm-page-custom-community-groups .forceCommunityRecordListCompact .listTitleContainer {
+  display: none;
+}
+.comm-page-custom-community-home .forceCommunityRecordListCompact .viewAllLink,
+.comm-page-custom-community-groups .forceCommunityRecordListCompact .viewAllLink {
+  text-align: center;
+  font-size: 14px;
+}
+.comm-page-custom-community-home .compactFeedList .compactFeedItem .titleContainer p .title.uiOutputText,
+.comm-page-custom-community-groups .compactFeedList .compactFeedItem .titleContainer p .title.uiOutputText {
+  font-size: var(--font-size-sm);
+}
+
+/* 'Register' Page styles */
+@media only screen and (min-width: 768px) {
+  .comm-page-self-register .salesforceIdentitySelfRegister2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .comm-page-self-register .salesforceIdentitySelfRegister2 .inputContainer {
+    margin: 10px 5px;
+    width: 47%;
+  }
+  .comm-page-self-register .salesforceIdentitySelfRegister2 div:has(button) {
+    display: contents;
+  }
+}
+
+/* Login pages */
+.comm-page-login-home #centerPanel,
+.comm-page-self-register #centerPanel,
+.comm-page-forgot-password #centerPanel,
+.comm-page-check-password #centerPanel,
+.salesforceIdentityLoginBody2 #centerPanel {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.15);
+  max-width: 550px !important;
+  padding: 2em;
+  color: var(--medium-gray-color) !important;
+}
+@media only screen and (min-width: 768px) {
+  .comm-page-login-home #centerPanel,
+  .comm-page-self-register #centerPanel,
+  .comm-page-forgot-password #centerPanel,
+  .comm-page-check-password #centerPanel,
+  .salesforceIdentityLoginBody2 #centerPanel {
+    min-width: 500px;
+  }
+}
+.comm-page-login-home #centerPanel .inverseTextColor,
+.comm-page-self-register #centerPanel .inverseTextColor,
+.comm-page-forgot-password #centerPanel .inverseTextColor,
+.comm-page-check-password #centerPanel .inverseTextColor,
+.salesforceIdentityLoginBody2 #centerPanel .inverseTextColor {
+  color: var(--medium-gray-color);
+}
+.comm-page-login-home #centerPanel .uiButton,
+.comm-page-self-register #centerPanel .uiButton,
+.comm-page-forgot-password #centerPanel .uiButton,
+.comm-page-check-password #centerPanel .uiButton,
+.salesforceIdentityLoginBody2 #centerPanel .uiButton {
+  border-radius: var(--border-radius-xl) !important;
+}
+.comm-page-login-home #centerPanel h2,
+.comm-page-login-home #centerPanel h2 span,
+.comm-page-self-register #centerPanel h2,
+.comm-page-self-register #centerPanel h2 span,
+.comm-page-forgot-password #centerPanel h2,
+.comm-page-forgot-password #centerPanel h2 span,
+.comm-page-check-password #centerPanel h2,
+.comm-page-check-password #centerPanel h2 span,
+.salesforceIdentityLoginBody2 #centerPanel h2,
+.salesforceIdentityLoginBody2 #centerPanel h2 span {
+  color: t(colorTextWeak);
+  font-size: var(--font-size-lg);
+}
+.comm-page-login-home #centerPanel p,
+.comm-page-self-register #centerPanel p,
+.comm-page-forgot-password #centerPanel p,
+.comm-page-check-password #centerPanel p,
+.salesforceIdentityLoginBody2 #centerPanel p {
+  color: token(colorTextDefault);
+  font-size: var(--font-size-sm);
+  margin-bottom: 20px;
+}
+
+/* Work Orders */
+.comm-page-list-0WO .forceCommunityRecordListStandard {
+  margin-top: -15px;
+}
+.comm-page-list-0WO .forceCommunityRecordListStandard .listTitle {
+  display: none;
+}
+.comm-page-list-0WO .forceCommunityRecordListStandard .forceBaseListView thead th {
+  border-top: none;
+  border-right: none;
+}
+
+/* Resources */
+.comm-page-files div[data-fqn="forceCommunity:workspacesList"] .test-listViewManager.slds-card {
+  background-color: transparent !important;
+  border: none;
+}
+.comm-page-files div[data-fqn="forceCommunity:workspacesList"] .test-listViewManager .slds-theme_default,
+.comm-page-files div[data-fqn="forceCommunity:workspacesList"] .test-listViewManager .slds-theme--default {
+  background-color: transparent !important;
+}
+
+/* Funds & Requests */
+.comm-page-custom-funds-and-requests .sf_flowmodalCcp_launchFlowModal .slds-p-vertical_medium,
+.comm-page-custom-funds-and-requests .sf_flowmodalCcp_launchFlowModal .slds-p-vertical--medium {
+  padding-top: 50px;
+}
+.comm-page-custom-funds-and-requests .campaign-TemplateTile-NoImageUpperBorder {
+  border-top: 1px solid var(--light-gray-border-color) !important;
+  border-top-width: 1px !important;
+}
+
+/* Marketing Home - Partners */
+.comm-page-custom-marketing-home .forceCommunitySection .cb-section_column:first-child {
+  padding: 16px;
+}
+.comm-page-custom-marketing-home .forceCommunityCampaignTileList > .slds-card {
+  border: none;
+}
+.comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceChatterObjectHomeTileView section {
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1063px) {
+  .comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate.slds-p-around_small, .comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate.slds-p-around--small {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1063px) {
+  .comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate.slds-size--1-of-1 {
+    margin-bottom: 20px;
+    width: 48%;
+  }
+}
+.comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate .campaign-TemplateTile-Border {
+  border-radius: 12px;
+  border-color: var(--light-gray-border-color);
+}
+.comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate .campaign-TemplateTile-Border div.highlight-text {
+  background-color: var(--lwc-colorBrand) !important;
+}
+.comm-page-custom-marketing-home .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate .hero-image-icon {
+  border-radius: 12px 12px 0 0;
+}
+
+/* Error Pages */
+.comm-page-too-many-requests .themeLayoutStarterWrapper > .footer,
+.comm-page-service-not-available .themeLayoutStarterWrapper > .footer {
+  display: none;
+}
+
+/* Campaign List */
+div[data-component-label="Campaign Marketplace"] h1.slds-page-header__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+}
+div[data-component-label="Campaign Marketplace"] h1.slds-p-horizontal_small {
+  padding-left: 0;
+  padding-right: 0;
+}
+div[data-component-label="Campaign Marketplace"] .forceCommunityCampaignTileList .slds-card {
+  border: none;
+  border-style: none !important;
+  box-shadow: none;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+div[data-component-label="Campaign Marketplace"] .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate:first-child {
+  padding-left: 0 !important;
+}
+div[data-component-label="Campaign Marketplace"] .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate:last-child {
+  padding-right: 0 !important;
+}
+div[data-component-label="Campaign Marketplace"] .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate .campaign-TemplateTile-Border {
+  border-radius: 12px;
+}
+div[data-component-label="Campaign Marketplace"] .forceCommunityCampaignTileList .forceCommunityCampaignTileTemplate .hero-image-icon {
+  border-radius: 12px 12px 0 0;
+}
+
+/* Campaign Detail */
+header.forceCommunityRecordHeadline {
+  background-color: var(--light-gray-background-color);
+  border: 1px solid var(--light-gray-border-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+header.forceCommunityRecordHeadline ul.slds-page-header__detail-row {
+  background-color: transparent;
+}
+
+/* My Profile Tile Menu Nav Highlight */
+.comm-page-custom-account-information .comm-tile-menu a[href*="/account-settings/account-information"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-usersettings .comm-tile-menu a[href*="/settings/home"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-detail-005 .comm-tile-menu a[href*="/personal-settings/profile/home"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-messages .comm-tile-menu a[href*="/personal-settings/messages/home"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-account-branding .comm-tile-menu a[href*="/account-settings/account-branding"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-member-directory .comm-tile-menu a[href*="/account-settings/member-management"],
+.comm-page-custom-member-management .comm-tile-menu a[href*="/account-settings/member-management"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-order-history .comm-tile-menu a[href*="/account-settings/order-history"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-assets .comm-tile-menu a[href*="/account-settings/assets"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-invoices .comm-tile-menu a[href*="/account-settings/invoices"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+.comm-page-custom-cases .comm-tile-menu a[href*="/account-settings/cases"] {
+  box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+}
+
+/* END of My Profile Tile Menu Nav Highlight */

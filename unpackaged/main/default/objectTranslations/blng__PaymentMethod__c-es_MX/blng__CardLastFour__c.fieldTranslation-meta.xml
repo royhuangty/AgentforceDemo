@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Solo se almacenarán los 4 dígitos</help>
+        <label><!-- Card Last 4 --></label>
+        <name>blng__CardLastFour__c</name>
+    </CustomFieldTranslation>

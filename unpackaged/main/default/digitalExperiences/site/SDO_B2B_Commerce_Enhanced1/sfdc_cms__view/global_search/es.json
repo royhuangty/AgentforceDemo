@@ -1,0 +1,37 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Search",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "e2b9412a-2705-457f-801c-54ff4c7f063c"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "a082b053-d5d3-43bb-8328-19ff92a7a6d9"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "quantitySelectorLabel" : "CANT.",
+          "subscriptionOptionsText" : "Opciones de suscripción disponibles",
+          "viewOptionsButtonText" : "Ver opciones"
+        },
+        "id" : "78e4c16e-bc58-48a5-82e2-74c04fd50625"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; height: 50vh; justify-content: center;\">\n <h1 class=\"slds-text-heading_large\" style=\"margin-bottom: 20px; font-weight: bold;\">Lo sentimos</h1>\n <p class=\"slds-text-heading_small\" style=\"margin-bottom: 5px;\">Parece que no podemos encontrar ningún producto que coincida con su búsqueda.</p>\n <p class=\"slds-text-heading_small\">Pruebe una nueva búsqueda usando menos palabras</p>\n <div style=\"background: url({!Site.basePath}/assets/images/empty-search.svg) center no-repeat; background-size: contain; margin-top:25px; height: 200px; width: 50%;\"></div>\n</div>"
+        },
+        "id" : "5a698499-bc2f-498d-b3ab-ae012951a687"
+      } ]
+    }
+  },
+  "urlName" : "search"
+}

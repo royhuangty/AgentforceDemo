@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Stabilește programarea pentru a include sau a exclude din considerațiile de deplasare minime prima sau ultima deplasare din zi, către și de la domiciliul de bază al resursei de serviciu</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Discount tier used by this line item. This field is only populated if a volume discounted was applied and discount schedule is of type &quot;Range&quot;. --></help>
+        <label><!-- Discount Tier --></label>
+        <name>SBQQ__DiscountTier__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </CustomFieldTranslation>

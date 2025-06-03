@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>条件に一致したときに更新する項目を選択します。</help>
+        <label><!-- Target Field --></label>
+        <name>SBQQ__Field__c</name>
+        <picklistValues>
+            <masterLabel>Discount (%)</masterLabel>
+            <translation>割引 (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount (Amt)</masterLabel>
+            <translation>割引 (金額)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanation</masterLabel>
+            <translation>説明</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Floor (%)</masterLabel>
+            <translation>フロア (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup (%)</masterLabel>
+            <translation>マークアップ (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup (Amt)</masterLabel>
+            <translation>マークアップ (金額)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norm (%)</masterLabel>
+            <translation>基準値 (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Target (%)</masterLabel>
+            <translation>目標値 (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Price</masterLabel>
+            <translation>単価</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>追跡項目が存在するオブジェクト</help>
+        <label><!-- Tracked Object --></label>
+        <name>sbaa__TrackedObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>商談</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

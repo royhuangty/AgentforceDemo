@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>デフォルトでは、ある承認申請を承認すると、同じユーザに割り当てられている他のすべての承認申請も自動的に承認されます。このボックスをオンにすると、このルールから発生した承認申請は自動的には承認されなくなるため、明示的に承認する必要があります。</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </CustomFieldTranslation>

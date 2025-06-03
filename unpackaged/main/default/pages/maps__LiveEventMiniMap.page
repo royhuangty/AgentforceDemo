@@ -1,0 +1,23 @@
+<apex:page standardController="maps__LiveAssetDailySummaryEvent__c" extensions="maps.LiveAPI">
+
+    <apex:outputPanel layout="none" rendered="{! !featureEnabled }">
+        <!-- <div style="text-align: center; padding-top: 1rem;">
+            You do not have a license to use this feature
+        </div> -->
+        <c:MissingLicense />
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!featureEnabled}">
+        <style>
+            #map {
+                top: 0;
+                right: 0;
+                height: 200px;
+                width: 300px;
+            }
+        </style>
+
+        <c:LiveMiniMap Name="{!maps__LiveAssetDailySummaryEvent__c.Name}" Lat="{!maps__LiveAssetDailySummaryEvent__c.maps__Position__Latitude__s}" Long="{!maps__LiveAssetDailySummaryEvent__c.maps__Position__Longitude__s}" Tooltip="{!maps__LiveAssetDailySummaryEvent__c.Name}"/>
+    </apex:outputPanel>
+
+</apex:page>

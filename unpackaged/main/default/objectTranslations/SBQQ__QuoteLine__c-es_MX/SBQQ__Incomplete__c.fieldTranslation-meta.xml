@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Se establece internamente por la lógica al guardar una partida en una base de datos incompleta. Ocurre al evaluar reglas de precios. Pruébelo en reglas para no desencadenarlo de forma prematura. NO agregar a un formato de página ni actualizarlo.</help>
+        <label><!-- Incomplete --></label>
+        <name>SBQQ__Incomplete__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>What: Used to Submit a Quote for CPQ. Who; CPQ Team</description>
+    <label>SubmitQuote</label>
+    <packageVersions>
+        <majorNumber>242</majorNumber>
+        <minorNumber>2</minorNumber>
+        <namespace>SBQQ</namespace>
+    </packageVersions>
+</ApexPage>

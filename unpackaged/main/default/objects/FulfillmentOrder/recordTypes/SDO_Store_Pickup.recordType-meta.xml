@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Store_Pickup</fullName>
+    <active>true</active>
+    <label>SDO Store Pickup</label>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Arrived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fulfilled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pickpack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Pickpack</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Download</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Store Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

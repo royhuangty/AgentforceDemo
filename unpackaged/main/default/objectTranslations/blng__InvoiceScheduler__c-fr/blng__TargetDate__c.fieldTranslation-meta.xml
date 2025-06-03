@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Détermine les éléments facturés.
+        Les produits de commande, résumés d&#39;utilisation ou transactions de facturation actifs avec une Prochaine date de facturation ou un Remplacement prochaine date facturation antérieur ou égal à la Date cible sont facturés.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt die zu zahlenden Rechnungen anhand des Zieldatums, das in den Einstellungen der Abrechnungskonfiguration festgelegt ist. Als Zieldatum kann das Rechnungsdatum oder Fälligkeitsdatum bzw. ein späteres Datum verwendet werden.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

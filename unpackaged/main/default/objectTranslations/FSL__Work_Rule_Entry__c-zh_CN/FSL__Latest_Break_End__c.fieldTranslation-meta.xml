@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>从服务资源的可用性开始到最后允许的休息结束时间的分钟数。例如，输入 300，计划午休时间在一天开始后不超过 5 个小时内结束。</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

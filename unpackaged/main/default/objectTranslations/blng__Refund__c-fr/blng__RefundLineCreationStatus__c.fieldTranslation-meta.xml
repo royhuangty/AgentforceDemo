@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Un statut Échec signifie que la ligne de remboursement n&#39;a pas pu être créée. Vérifiez la configuration du système.</help>
+        <label><!-- Refund Line Creation Status --></label>
+        <name>blng__RefundLineCreationStatus__c</name>
+    </CustomFieldTranslation>

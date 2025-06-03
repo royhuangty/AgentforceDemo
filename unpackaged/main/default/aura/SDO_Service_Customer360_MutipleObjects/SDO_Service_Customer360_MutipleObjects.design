@@ -1,0 +1,122 @@
+<design:component label="Customer 360 - Highlight Card Multiple Objects (SDO_Customer360_MultipleObjects)">    
+    <design:attribute name="backgroundHexColor" 
+                      label="Background Hex Color" 
+                      default="#0070d2"
+                      description="Set a background color with a hex code, must remove the image from above field, examples
+                                     ScienceBlue = #0070d2, MidnightBlue = #00396b, ServicePurple = # 963cbd" 
+                      />
+    <design:attribute name="backgroundImageUrl" 
+                      label="Background Image URL" 
+                      default=""
+                      description="URL for background image, for best results use image with height of 100px and at least 620px wide,
+                                   overwrites background color"
+                      />
+    <design:attribute name="hideMetrics"
+                      label="Hide Customer Metrics"
+                      default="true"
+                      description="Hide customer metrics for usecases where it does not make sense."
+                      />
+    <design:attribute name="metric1Label"
+                      label="Label for first customer metric"
+                      default="Loyalty Status"
+                      description="set label for the first customer 360 metric"
+                      />  
+    <design:attribute name="metric1Icon"
+                      label="Icon name for first customer metric"
+                      default="standard:reward"
+                      description="set icon name to change the icon for the first customer 360 metric"
+                      />
+    <design:attribute name="metric1IconSize"
+                      label="First metric icon size"
+                      default="large"
+                      description="Set the size of the icon, utility icons render larger than standard and custom so use this to match sizes"
+                      datasource="small,medium,large"
+                      />
+    <design:attribute name="metric2Label"
+                      label="Label for second customer metric"
+                      default="Lifetime Value"
+                      description="set label for the second customer 360 metric"
+                      /> 
+    <design:attribute name="metric2Icon"
+                      label="Icon name for second customer metric"
+                      default="custom:custom93"
+                      description="set icon name to change the icon for the second customer 360 metric"
+                      />
+    <design:attribute name="metric2IconSize"
+                      label="Second metric icon size"
+                      default="large"
+                      description="Set the size of the icon, utility icons render larger than standard and custom so use this to match sizes"
+                      datasource="small,medium,large"
+                      />          
+    <design:attribute name="hideCust360Id"
+                      label="Hide Customer360 Id Card"
+                      default="true"
+                      description="Hide Customer360 Id card for usecases where it does not make sense."
+                      />
+    <design:attribute name="hideChurn"
+                      label="Hide Prediction Card"
+                      default="true"
+                      description="Hide prediction card for usecases where it does not make sense."
+                      />
+    <design:attribute name="thresholdTitle"
+                      label="Threshold title"
+                      default="Predicted Churn Risk:"
+                      description="set title for prediction card."
+                      />
+    <design:attribute name="threshold1Label"
+                      label="Lower threshold label"
+                      default="This customer is highly active and engaged with your brand. Low risk for attrition."
+                      description="set label for lower prediction card threshold"
+                      /> 
+    <design:attribute name="threshold2Label"
+                      label="Middle threshold label"
+                      default="This customer is less active or engaged with your brand. Some risk for attrition."
+                      description="set label for mid-range prediction card threshold"
+                      /> 
+    <design:attribute name="threshold3Label"
+                      label="High threshold label"
+                      default="This customer is not active or engaged with your brand. Likely risk of attrition."
+                      description="set label for upper prediction card threshold"
+                      /> 
+    <design:attribute name="threshold1"
+                      label="Prediction lower threshold"
+                      default="20"
+                      description="Prediction risk lower threshold, values less than or equal will be GREEN"
+                      />
+    <design:attribute name="threshold2"
+                      label="Prediction middle threshold"
+                      default="50"
+                      description="Prediction risk upper threshold, values less than or equal will be YELLOW, values greater than will be RED"
+                      />
+    <design:attribute name="reverseColor"
+                      label="Reverse Threshold Colors"
+                      default="false"
+                      description="This reverses the threshold colors, upper threshold colors will be green."
+                      />
+    <design:attribute name="iconColor"
+                      label="Einstein icon color"
+                      default="#0070d2"
+                      description="Set hex color for einstein icon"
+                      />
+    <design:attribute name="hideViewCustomer"
+                      label="Hide view customer button"
+                      default=
+                      "true"/>
+        <design:attribute name="pullMargin"
+                      label="Pull Margin to Edge"
+                      default="false"
+                      description="Use this toggle when added to pinned left sidebar to pull margin to the edge of the sidebar"
+                      />
+
+    <sfdc:objects>
+        <sfdc:object>VoiceCall</sfdc:object>
+        <sfdc:object>LiveChatTranscript</sfdc:object>
+        <sfdc:object>MessagingSession</sfdc:object>
+        <sfdc:object>Case</sfdc:object>
+        <sfdc:object>Account</sfdc:object>
+        <sfdc:object>Contact</sfdc:object>
+    </sfdc:objects>              
+    
+    
+    
+</design:component>

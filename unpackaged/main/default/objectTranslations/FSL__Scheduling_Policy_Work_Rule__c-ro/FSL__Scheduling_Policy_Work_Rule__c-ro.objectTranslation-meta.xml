@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Regula de lucru pentru politica de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Regulă de lucru pentru politica de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Regulile de lucru pentru politicile de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Reguli de lucru pentru politici de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Regulii de lucru pentru politica de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Regulii de lucru pentru politica de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Regulilor de lucru pentru politicilor de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Regulilor de lucru pentru politicilor de programare</value>
+    </caseValues>
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nume regulă de lucru pentru politica de </nameFieldLabel>
+</CustomObjectTranslation>

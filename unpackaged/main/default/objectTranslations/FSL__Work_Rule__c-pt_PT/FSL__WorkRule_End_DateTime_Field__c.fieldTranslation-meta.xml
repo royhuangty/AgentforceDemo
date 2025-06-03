@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O nome do campo de Data/hora no Objeto de ligação que representa a respetiva hora de fim</help>
+        <label><!-- End Date Field Name --></label>
+        <name>FSL__WorkRule_End_DateTime_Field__c</name>
+    </CustomFieldTranslation>

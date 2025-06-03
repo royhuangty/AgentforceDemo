@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Custom Objective Type --></label>
+        <name>FSL__Custom_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation>Så hurtigt som muligt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Engineer Idle Time</masterLabel>
+            <translation>Minimer ledig til for tekniker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Overtime</masterLabel>
+            <translation>Minimer overtid</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Travel</masterLabel>
+            <translation>Minimer rejser</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Use Of Elasticity</masterLabel>
+            <translation>Minimer brug af elasticitet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Resource</masterLabel>
+            <translation>Foretrukket ressource</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority By Distance To Engineer</masterLabel>
+            <translation>Prioritet efter afstand til tekniker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Priority</masterLabel>
+            <translation>Ressourceprioritet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skill Level</masterLabel>
+            <translation>Færdighedsniveau</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Priority</masterLabel>
+            <translation>Opgaveprioritet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel From Home Base</masterLabel>
+            <translation>Rejse fra hjemmebase</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

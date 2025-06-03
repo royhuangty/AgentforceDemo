@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtuma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumat --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtuman --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumien --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumieni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumiesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumassa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumissa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumassani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumissani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumassasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumissasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumasta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumista --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumastani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumistani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumastasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumistasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumaan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumiin --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumaani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumiini --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumaasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumiisi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumalla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumilla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumallani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumillani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumallasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumillasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumalta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumilta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumaltani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumiltani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumaltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumiltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumalle --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumille --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumalleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumilleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumallesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumillesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumana --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumina --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumanani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtuminani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumanasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtuminasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumaksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumiksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumakseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumikseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumaksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumiksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumaa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Pakettitapahtumia --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumaani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Pakettitapahtumiani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumaasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Pakettitapahtumiasi --></value>
+    </caseValues>
+    
+    
+</CustomObjectTranslation>

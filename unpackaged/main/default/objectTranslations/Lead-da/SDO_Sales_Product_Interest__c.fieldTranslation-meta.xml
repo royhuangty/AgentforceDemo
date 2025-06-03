@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Product Interest --></label>
+        <name>SDO_Sales_Product_Interest__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products</masterLabel>
+            <translation><!-- Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

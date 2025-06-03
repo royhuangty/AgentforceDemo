@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Crew_Resources_Availability__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>When checked, compare the Minimum Crew Size field on the Work Order or Work Order Line Item to the actual available Service Crew Members. 
+Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service Crew.</inlineHelpText>
+    <label>Consider Service Crew Membership</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

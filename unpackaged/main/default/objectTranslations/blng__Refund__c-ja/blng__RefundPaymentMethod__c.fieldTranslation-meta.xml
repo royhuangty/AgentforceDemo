@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この支払方法は、支払処理で使用できるクレジットカード情報または銀行情報を表します。</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </CustomFieldTranslation>

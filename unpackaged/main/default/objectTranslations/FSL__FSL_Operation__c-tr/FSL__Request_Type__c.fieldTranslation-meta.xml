@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Request Type --></label>
+        <name>FSL__Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appointment Booking</masterLabel>
+            <translation>Randevu Rezervasyonu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatch</masterLabel>
+            <translation>Yolla</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get Candidates</masterLabel>
+            <translation>Aday Al</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule</masterLabel>
+            <translation>Zamanla</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UnSchedule</masterLabel>
+            <translation>Zamanlamayı Kaldır</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

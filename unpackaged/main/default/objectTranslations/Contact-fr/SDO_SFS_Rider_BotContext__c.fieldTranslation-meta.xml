@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- A reference to the most recent service appointment an outbound notification was sent about --></help>
+        <label><!-- Rider Context --></label>
+        <name>SDO_SFS_Rider_BotContext__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </CustomFieldTranslation>

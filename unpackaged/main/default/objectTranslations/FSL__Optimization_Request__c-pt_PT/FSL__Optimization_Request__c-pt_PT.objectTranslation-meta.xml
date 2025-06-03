@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pedido de otimização</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pedidos de otimização</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Número do pedido de otimização</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- Related Service Territory --></label>
+        <name>FSL__Related_Service_Territory</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- Related Service Territory Member --></label>
+        <name>FSL__Related_Service_Territory_Member</name>
+    </sharingReasons>
+</CustomObjectTranslation>

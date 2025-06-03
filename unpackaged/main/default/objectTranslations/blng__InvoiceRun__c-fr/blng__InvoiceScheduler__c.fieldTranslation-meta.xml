@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Invoice Scheduler --></label>
+        <name>blng__InvoiceScheduler__c</name>
+        <relationshipLabel><!-- Invoice Runs --></relationshipLabel>
+    </CustomFieldTranslation>

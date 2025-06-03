@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Objekt obsahujúci vlastné pole, ktoré je použité pre výpočet.</help>
+        <label><!-- Count object --></label>
+        <name>FSL__CountObject__c</name>
+        <picklistValues>
+            <masterLabel>Service Appointment</masterLabel>
+            <translation>Servisné stretnutie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order</masterLabel>
+            <translation>Pracovná objednávka</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order Line Item</masterLabel>
+            <translation>Riadková položka pracovného príkazu</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

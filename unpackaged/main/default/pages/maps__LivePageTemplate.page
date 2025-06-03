@@ -1,0 +1,317 @@
+<!--
+    This template provides top header with buttons,
+    sidebar if necessary,
+    and notifications at top of page.
+    Additionally this loads jQuery, moment, notify, aljs, sidebar & Live utilities libraries
+    and lightning, MA styles, and MA UI CSS
+-->
+<apex:page controller="maps.LiveAPI">
+
+    <apex:outputPanel layout="none" rendered="{! !featureEnabled }">
+        <!-- <div style="text-align: center; padding-top: 1rem;">
+            You do not have a license to use this feature
+        </div> -->
+        <c:MissingLicense />
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!featureEnabled}">
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins,'jquery/jquery.min.js')}"></script>
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins,'jquery/moment-with-locales.min.js')}"></script>
+        <script type='text/javascript' src="{!URLFOR($Resource.MapsJS,'ma.sidebar.js')}"></script><!-- sidebar nav -->
+        <script type='text/javascript' src="{!URLFOR($Resource.MapsJS,'malive.cardbuilder.js')}"></script><!-- simple slds card creator -->
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins,'notify/notify.min.js')}"></script><!-- jQuery Notify (growl messages) -->
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins,'jquery/jquery.growl.js')}"></script><!-- jQuery Notify (growl messages) -->
+        <script type='text/javascript' src="{!URLFOR($Resource.MapsJS,'malive.utilities.js')}"></script>
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins,'jquery/jquery.aljs-all.min.js')}"></script>
+
+        <apex:slds />
+    
+        <!-- Maps Configuration Page Styling -->
+        <apex:stylesheet value="{!URLFOR($Resource.maps__MapsFonts, 'styles.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.maps__MapsStyles, 'styles/css/ma-configuration-ui.css')}"/>
+        <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.MapsStyles,'style.css')}" /><!--iconfont-->
+        <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.MapsStyles,'LiveTracking/styles/css/ma-ui.css')}" /><!--css shared across all MA Live visualforce pages-->
+        <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.MapsStyles,'LiveTracking/styles/css/growl/jquery.growl.css')}" /><!--css for growl notifications (Should be styled with SLDS next) -->
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+            .bodyDiv .outerNoSidebar {
+                padding-bottom: 0;
+            }
+
+            .noSidebarCell, .sidebarCell .fixed {
+                padding: 0px;
+            }
+
+            /*.notifyjs-foo-base {
+                opacity: 0.85;
+                width: 200px;
+                background: #F5F5F5;
+                padding: 5px;
+                border-radius: 10px;
+            }*/
+
+            .notifyjs-corner {
+                left: auto!important;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .notifyjs-corner .notifyjs-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .notifyjs-corner .notifyjs-wrapper .notifyjs-container {
+                width: auto;
+                padding: 2px 18px;
+            }
+
+            .notifyjs-corner .notifyjs-wrapper .notifyjs-container .notifyjs-bootstrap-base {
+                white-space: normal;
+                overflow: hidden;
+            }
+
+            .notifyjs-foo-base .title {
+                width: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+                text-align: right;
+            }
+
+            .notifyjs-foo-base .buttons {
+                width: 70px;
+                float: right;
+                font-size: 9px;
+                padding: 5px;
+                margin: 2px;
+            }
+
+            .notifyjs-foo-base button {
+                font-size: 9px;
+                padding: 5px;
+                margin: 2px;
+                width: 60px;
+            }
+
+        /* slds brand band */
+            .slds-scope .slds-brand-band::before {
+                z-index: 0;
+            }
+
+            .slds-scope .slds-brand-band::after {
+                z-index: 0;
+            }
+
+            .slds-scope .slds-page-header {
+                z-index: 1;
+            }
+
+        #content-wrapper {
+            z-index: 1;
+            background-color: #fff;
+            border-radius: 0 0 4px 4px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #content-wrapper #maBodyContent {
+            overflow: scroll;
+        }
+
+        body .bodyDiv, .slds-scope .slds-brand-band {
+            background-color: rgba(176, 196, 223, 1.0) !important;
+        };
+
+        .slds-brand-band {
+            min-height: 100%;
+        }
+
+        .slds-scope.noSidebarCell .slds-brand-band {
+            height: calc(100vh - 205px);
+        }
+
+            .ma-modals {
+                position: absolute;
+            }
+
+            .ma-modals .slds-modal__content, .ma-modals .slds-modal__content form, .ma-modals .slds-modal__content form .slds-form, .ma-modals .slds-modal__content form .slds-form > .slds-grid {
+                height: 100%;
+                overflow-y: hidden;
+            }
+
+            #datemodal .slds-modal__content {
+                overflow-y: scroll;
+            }
+
+            .ma-modals .slds-modal__content form .slds-form > .slds-grid #maBodyContent {
+                overflow-y: scroll;
+            }
+
+            .slds-datepicker td.slds-is-selected-multi + .slds-is-selected-multi > .slds-day:before {
+                -webkit-transform: translateX(-0.5rem);
+            }
+
+    </style>
+
+    <apex:slds />
+
+    <div class="slds-brand slds-brand-band slds-brand-band_medium slds-template_bottom-magnet slds-p-around_medium">
+        <!-- begin page header -->
+        <div id="maPageHeader" class="slds-page-header slds-has-bottom-magnet">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <span id="liveLogoPageHeaderIcon" class="slds-icon_container">
+                                <span class="slds-icon ma-icon ma-icon-live-logo"></span>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-line-height_reset"><apex:insert name="title" /></p>
+                            <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"><apex:insert name="subtitle" /></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                    <apex:insert name="headerButtons" />
+                </div>
+            </div>
+        </div>
+        <!-- end page header -->
+
+
+        <div class="slds-grid" id="content-wrapper">
+            <div class="slds-col">
+                <!-- begin body content -->
+                <div id="maBodyContent">
+                    <apex:insert name="body" />
+                </div>
+                <!-- end body content -->
+            </div>
+        </div>
+    </div><!-- end slds-scope -->
+
+
+    <script>
+
+            function displayNotification(title, message, type) {
+                if(title == null) {
+                    $.notify(message, type);
+                }
+                else {
+                    $.notify({
+                        title: title,
+                        button: 'Confirm'
+                    }, {
+                        style: 'foo',
+                        autoHide: false,
+                        clickToHide: false
+                    });
+                }
+            }
+
+
+
+            $(function() {
+
+                /* data example to pass in:
+                    var PageTemplateSettings = {
+                        sectionRef: 'sidebar-1'
+                        menuItems:[
+                            {label: 'Dashboard', isActive: false, div: 'dashboard-div'},
+                            {label: 'Details',
+                                nested: [
+                                    {label: 'Details', isActive: false, div: 'details-div'},
+                                    {label: 'Devices', isActive: true, div: 'devices-div'},
+                                    {label: 'Events', isActive: false, div: 'events-div'},
+                                ]
+                            },
+                            {label: 'Errors', isActive: false, div: 'errors-div'},
+                        ]
+                    };
+                */
+                if (typeof PageTemplateSettings !== 'undefined') { // Creates Sidebar Nav
+
+                    var LiveNav = new MASidebarNav(PageTemplateSettings);
+
+                }
+
+
+                function getNotifyStyle(messageType) {
+                    return "<div>" +
+                                "<div class='ma-notification-icon'>" +
+                                    "<span class='ma-icon ma-icon-" + messageType + "'></span>" +
+                                "</div>" +
+                                "<div class='ma-notification-content'>" +
+                                    "<h2 class='slds-text-heading_small'><span data-notify-text/></h2>" +
+                                "</div>" +
+                                "<div>" +
+                                    "<button class='ma-notification-close-button'>" +
+                                        "<span class='ma-icon ma-icon-close'></span>" +
+                                    "</button>" +
+                                "</div>" +
+                            "</div>";
+                }
+
+                $.notify.defaults({
+                    elementPosition: 'top center',
+                    globalPosition: 'top center'
+                });
+
+                // notify slds classes
+                $.notify.addStyle('foo', {
+                html:
+                    "<div>" +
+                    "<div class='clearfix'>" +
+                        "<div class='title' data-notify-html='title'/>" +
+                        "<div class='buttons'>" +
+                        "<button class='no'>Cancel</button>" +
+                        "<button class='yes' data-notify-text='button'></button>" +
+                        "</div>" +
+                    "</div>" +
+                    "</div>"
+                });
+
+                $.notify.addStyle('slds', {
+                    html: getNotifyStyle('info')
+                });
+
+                $.notify.addStyle('slds-success', {
+                    html: getNotifyStyle('success')
+                });
+
+                $.notify.addStyle('slds-warning', {
+                    html: getNotifyStyle('warning')
+                });
+
+                $.notify.addStyle('slds-error', {
+                    html: getNotifyStyle('error')
+                });
+
+                //listen for click events from this style
+                $('.notifyjs-foo-base .no').on('click', function() {
+                    //programmatically trigger propogating hide event
+                    $(this).trigger('notify-hide');
+                });
+                $('.notifyjs-foo-base .yes').on('click', function() {
+                    //show button text
+                    alert($(this).text() + " clicked!");
+                    //hide notification
+                    $(this).trigger('notify-hide');
+                });
+
+
+            });
+
+        </script>
+
+    </apex:outputPanel>
+
+</apex:page>

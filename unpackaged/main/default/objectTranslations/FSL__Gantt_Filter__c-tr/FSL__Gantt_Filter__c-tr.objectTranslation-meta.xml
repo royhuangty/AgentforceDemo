@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtreleri</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtreniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtreleriniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtrelerini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtremi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerimi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrenizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrelerinizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtrelerinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtremin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerimin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrenizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrelerinizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtrelerine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtreme</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerime</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrenize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrelerinize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtrelerinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtremden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerimden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrenizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrelerinizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtresinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Gantt Filtrelerinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtremde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Gantt Filtrelerimde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrenizde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Gantt Filtrelerinizde</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <nameFieldLabel>Gantt Filtre Adı</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Custom Filter --></label>
+        <name>FSL__FSL_Public_Custom_Filter</name>
+    </sharingReasons>
+</CustomObjectTranslation>

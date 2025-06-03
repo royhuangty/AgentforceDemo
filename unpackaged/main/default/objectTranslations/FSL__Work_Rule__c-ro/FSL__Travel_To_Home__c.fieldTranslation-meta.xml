@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determină câte minute după ora de sfârșit de zi din calendarul resursei vor fi disponibile pentru deplasări (pe cheltuiala resursei).
+Dacă nu completați câmpul, orice valoare introdusă, după sfârșitul de zi, este corectă.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

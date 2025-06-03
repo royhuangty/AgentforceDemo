@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Title of the section that displays the Notes field. To display no title, leave this field blank. --></help>
+        <label><!-- Notes Title --></label>
+        <name>SBQQ__NotesTitle__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Minimum_Gap_Positive</fullName>
+    <active>true</active>
+    <description>Resource availability, min gap shouldn&#39;t be negative</description>
+    <errorConditionFormula>RecordType.DeveloperName  = &#39;Gap_Rule_Service&#39;  &amp;&amp;  FSL__Minimum_Gap__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>FSL__Minimum_Gap__c</errorDisplayField>
+    <errorMessage>Minimum gap should not be negative</errorMessage>
+</ValidationRule>

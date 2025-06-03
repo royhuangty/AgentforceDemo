@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Denotes if the Contact is allowed to interact with Rider --></help>
+        <label><!-- Rider Enabled --></label>
+        <name>SDO_SFS_Rider_Enabled__c</name>
+    </CustomFieldTranslation>

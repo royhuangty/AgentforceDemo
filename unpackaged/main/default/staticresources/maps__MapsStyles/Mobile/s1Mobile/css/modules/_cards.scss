@@ -1,0 +1,27 @@
+/* Cards */
+
+.ma-card {
+    background-color: $white;
+    border: 1px solid $border-gray;
+    border-radius: $radius;
+}
+
+.ma-card-body {
+	padding: .5rem .75rem .75rem;
+}
+
+.ma-card .ma-list-item {
+    padding: 0 0 .5rem 0;
+    border-bottom: 0;
+    cursor: default;
+}
+
+.ma-card .ma-list-item:active, .ma-card .ma-list-item:focus, .ma-card .ma-list-item:hover {
+	background-color: transparent;
+	box-shadow:none;
+}
+
+.ma-card p {
+    margin: 0 0 .5rem;
+    line-height: 1.25rem;
+}

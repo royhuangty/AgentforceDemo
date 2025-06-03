@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>ServiceAppointment$FSL_FTFR_Count__c</field>
+    </columns>
+    <description>Report for Service Manager Dashboard</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>ServiceAppointment$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SFS First Time Fix Rate</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SDO_SFS_Service_Appointment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ServiceAppointment$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

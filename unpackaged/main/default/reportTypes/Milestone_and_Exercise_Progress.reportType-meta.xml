@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>LearningItemAssignment</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on milestones and exercises progress. Overall program progress isn’t captured in this report.</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>EnblProgramTaskProgress</relationship>
+    </join>
+    <label>Milestone and Exercise Progress</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days to Complete</displayNameOverride>
+            <field>CompletedOnDay</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Completion Rate</displayNameOverride>
+            <field>CompletedPercent</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsCompleted</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Result</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Target Day</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Day</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Exercises and Milestones</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Name</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Task Category</displayNameOverride>
+            <field>EnblProgramTaskDefinition.TaskCategory</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Milestone Target</displayNameOverride>
+            <field>EnblProgramTaskDefinition.MilestoneTarget</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Name</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnablementProgram.Name</field>
+            <table>LearningItemAssignment.EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days in Progress</displayNameOverride>
+            <field>Progress.DaysInProgress</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Assignee</displayNameOverride>
+            <field>Assignee.Name</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>Assignee.Email</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Manager</displayNameOverride>
+            <field>Assignee.Manager.Name</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Progress.Status</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <masterLabel>Task Progress</masterLabel>
+    </sections>
+</ReportType>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- B2B Access --></label>
+        <name>SDO_SCOM_OOA_Access__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buyer</masterLabel>
+            <translation><!-- Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viewer</masterLabel>
+            <translation><!-- Viewer --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

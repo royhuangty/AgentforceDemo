@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Zahlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Zahlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zahlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Zahlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Zahlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Zahlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Zahlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Zahlungen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Payment Layout</layout>
+        <sections>
+            <label>Zuordnungen/Aufgehobene Zuordnungen</label>
+            <section>Allocations / Unallocations</section>
+        </sections>
+        <sections>
+            <label>Saldo</label>
+            <section>Balance</section>
+        </sections>
+        <sections>
+            <label>Informationen zum Zahlungslauf</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>Erstattungen</label>
+            <section>Refunds</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Zahlungsnummer</nameFieldLabel>
+    <quickActions>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+</CustomObjectTranslation>

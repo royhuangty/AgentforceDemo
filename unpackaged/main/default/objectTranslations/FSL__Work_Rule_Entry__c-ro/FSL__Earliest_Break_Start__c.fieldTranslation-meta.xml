@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Numărul de minute între începutul disponibilității resursei de servicii și cel mai timpuriu început de pauză permis. De exemplu, introduceți 120 pentru a programa o pauză la cel puțin două ore după începerea zilei.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

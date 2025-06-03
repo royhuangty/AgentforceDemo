@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Lookup the discount schedule to be applied to the product selected by this option. This discount schedule overrides the discount schedule selected on the product or feature. --></help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Product Options --></relationshipLabel>
+    </CustomFieldTranslation>

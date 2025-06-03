@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>[外部] モードは外部システムで作成された返金を表し、[電子] は Salesforce によって処理される返金を表します。</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </CustomFieldTranslation>

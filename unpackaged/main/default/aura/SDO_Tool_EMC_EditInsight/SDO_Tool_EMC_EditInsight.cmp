@@ -1,0 +1,10 @@
+<aura:component controller="SDO_Tool_EMC_InsightsCtrl">
+    <aura:attribute name="insight" type="Object"></aura:attribute>
+    <aura:attribute name="supportingDataFields" type="Object"></aura:attribute>
+    
+    <div>
+        <aura:iteration items="{!v.supportingDataFields}" var="supportingDataField">
+            <c:SDO_Tool_EMC_InsightField field="{!supportingDataField}" lookupField="{!supportingDataField.lookupField}"></c:SDO_Tool_EMC_InsightField>
+        </aura:iteration>
+    </div>
+</aura:component>

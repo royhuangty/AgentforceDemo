@@ -1,0 +1,116 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "Referencia",
+          "productDetailSummaryFieldMapping" : "[{\"name\":\"Descripción\",\"label\":\"\",\"type\":\"TEXTAREA\"}]"
+        },
+        "id" : "f6c5b24f-7cde-47a7-9a5d-d9cf1ec11a1e"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Name}"
+        },
+        "id" : "04832ee5-b4d6-4120-a098-3c4612debf6b"
+      }, {
+        "attributes" : {
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "slot3PriceLabel" : "Precio final",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "e206ae2b-6aa5-4f9a-8e3b-13756692a2e5"
+      }, {
+        "attributes" : {
+          "text" : "Opciones disponibles"
+        },
+        "id" : "44dc30c0-2d38-45ad-adf4-5a0dc33bfedf"
+      }, {
+        "attributes" : {
+          "discountRowLabel" : "Descuentos por unidad",
+          "quantityRowLabel" : "Cantidad"
+        },
+        "id" : "911c7903-3bef-4e96-977d-1efe5acedc06"
+      }, {
+        "attributes" : {
+          "text" : "Descuentos por volumen"
+        },
+        "id" : "5d952da4-c604-4822-86e1-bb1d566f2b0a"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "addToListButtonText" : "❤️",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Fuera de stock",
+          "quantitySelectorLabel" : "Cantidad"
+        },
+        "id" : "21d7f9fa-75ea-4ccc-b8a1-e66d7559b7a8"
+      }, {
+        "attributes" : {
+          "text" : "La cantidad mínima es {!Product.Details.purchaseQuantityRule.minimum} • La cantidad máxima es {!Product.Details.purchaseQuantityRule.maximum} • Vendido en incrementos de {!Product.Details.purchaseQuantityRule.increment}"
+        },
+        "id" : "8c08f224-335f-40e2-93ad-b59374e528bb"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p><span style=\"font-size: 14px;\">{!Product.Details.fields.RT_Description__c}</span></p>"
+        },
+        "id" : "e7564bd0-c815-437c-9448-34938d1925b3"
+      }, {
+        "attributes" : {
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Sin existencias",
+          "quantitySelectorLabel" : "CANT."
+        },
+        "id" : "12fead69-5cf9-4c2a-9bec-c4a853e67e11"
+      }, {
+        "attributes" : {
+          "text" : "Detalles técnicos"
+        },
+        "id" : "61889398-8f1d-4419-a3be-092cd2c182c4"
+      }, {
+        "attributes" : {
+          "productDetailDataContentMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Código de producto\",\"type\":\"STRING\"},{\"name\":\"Family\",\"label\":\"Familia de productos\",\"type\":\"PICKLIST\"},{\"name\":\"Power_Source__c\",\"label\":\"Fuente de alimentación\",\"type\":\"PICKLIST\"},{\"name\":\"GFCI_Safety_Circuit__c\",\"label\":\"Disyuntor de seguridad GFCI\",\"type\":\"PICKLIST\"},{\"name\":\"Warranty__c\",\"label\":\"Garantía\",\"type\":\"PICKLIST\"}]"
+        },
+        "id" : "09ae1d9b-252a-46d0-bcbe-a4fc1cb7e7ce"
+      }, {
+        "attributes" : {
+          "overflowMenuLabel" : "Más"
+        },
+        "id" : "913f5ad7-38a2-48b6-a4a7-475a4ce7ce88"
+      }, {
+        "attributes" : {
+          "text" : "¿Qué es Commerce Cloud?"
+        },
+        "id" : "6c9e920f-9155-4f8d-81eb-a6af3cc2d298"
+      }, {
+        "attributes" : {
+          "text" : "Commerce Cloud es una solución digital completa diseñada para respaldar su negocio en cada paso del recorrido de comercio digital de sus clientes, sin importar en qué canales se encuentren."
+        },
+        "id" : "593777b0-3d98-4f54-9daf-cbb9b224467d"
+      }, {
+        "attributes" : {
+          "buttonLabel" : "Añadir productos al carrito"
+        },
+        "id" : "2d0d4974-9919-4bcb-89ee-66dec690d9c8"
+      }, {
+        "attributes" : {
+          "text" : "Comprado frecuentemente junto con"
+        },
+        "id" : "c03a0adf-194a-406e-8fbf-ea468ffa56f2"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "ada21197-22ec-414f-b98f-26e517fea8bb"
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

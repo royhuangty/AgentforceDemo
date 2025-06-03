@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.A</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(84, 151, 227)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.B</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(58, 5, 199)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>C</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.C</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.A</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(84, 151, 227)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.B</field>
+        <isDerived>false</isDerived>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(58, 5, 199)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>C</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.C</field>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>Aggregated_Chart.sum_AvailableTotalCountRounded</field>
+        <isDerived>false</isDerived>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>Aggregated_Chart.sum_AssignedTotalCountRounded</field>
+        <isDerived>false</isDerived>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>Aggregated_Chart.sum_TotalCount</field>
+        <isDerived>false</isDerived>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>Trellis_Chart.sum_TotalCount</field>
+        <isDerived>false</isDerived>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Omni_Channel_Plan</waveVisualization>
+</WaveXmd>

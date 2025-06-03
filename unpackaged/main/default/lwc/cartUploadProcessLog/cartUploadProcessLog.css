@@ -1,0 +1,12 @@
+.msgErr {
+    color: #c23934;
+}
+.msgSuccess {
+    color: #04844b;
+}
+.msgWarn {
+    color: #ffb75d;
+}
+.msgInfo {
+    color: #000;
+}

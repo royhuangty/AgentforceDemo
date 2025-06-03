@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認条件</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Approval Condition Layout</layout>
+        <sections>
+            <label>絞り込まれた情報</label>
+            <section>Filtered Information</section>
+        </sections>
+        <sections>
+            <label>テスト対象情報</label>
+            <section>Tested Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>条件名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- You may specify only one type of filter and it must match Filter Type. --></errorMessage>
+        <name>sbaa__Filter_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide a value for either Tested Field or Tested Variable. --></errorMessage>
+        <name>sbaa__Tested_Target_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

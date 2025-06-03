@@ -1,0 +1,104 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment">
+
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+
+
+
+    <script>
+        $(function() {
+
+            $('.btn').hide();
+
+
+            var newServiceId = '{!ServiceAppointment.Id}';
+            var newServiceName = '{!ServiceAppointment.AppointmentNumber}';
+            window.parent.$('#CreateServiceLightboxHeader h1').text('Service ' + newServiceName + ':');
+
+
+            if (window.parent.sforce.console.isInConsole()) {
+
+                //window.parent.openConsoleTab()
+                var allLinks = $('a');
+
+                for (var i=0; i<allLinks.length; i++) {
+                    (function(j) {
+                        $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                            e.preventDefault();
+                            window.parent.openConsoleTabFromModal(e.data.url);
+                            return;
+                        });
+
+                    }(i));
+                }
+
+                return;
+            }
+
+
+            $('a').attr('target','_blank');
+
+            $('a').on('mouseover',function() {
+                $(this).attr('target','_blank');
+            });
+
+
+            window.navigateToUrl = function(url) {
+                if (window.parent.sforce.console.isInConsole()) {
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                } else {
+                    window.open(url);
+                }
+            };
+
+            // prevent popups on lookup fields
+            window.LookupHoverDetail.getHover = function() {
+                return {
+                    show: function() {},
+                    hide: function() {},
+                }
+            };
+
+        });
+
+
+
+    </script>
+
+    <style>
+        body .bPageBlock {
+            background: #fff !important;
+            border: 0 !important;
+        }
+
+        input[type=submit] {
+            margin-left: 130px !important;
+            padding: 6px 10px !important;
+        }
+
+        input[type=submit]:last-child {
+            margin-left: 6px !important;
+        }
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+    </style>
+
+
+    <apex:form >
+
+        <apex:pageBlock mode="maindetail">
+
+            <apex:pageBlockSection columns="2">
+                <apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__CrewManagement}" var="ad">
+                    <apex:outputField value="{!ServiceAppointment[ad]}"/>
+                </apex:repeat>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+
+    </apex:form>
+
+</apex:page>

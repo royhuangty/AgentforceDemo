@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>リソースのカレンダーの終業時間後の移動に利用できる分数を指定します (勤務時間に含まれない)。
+空の場合、作業終了時間後のすべての移動時間が有効になります。</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

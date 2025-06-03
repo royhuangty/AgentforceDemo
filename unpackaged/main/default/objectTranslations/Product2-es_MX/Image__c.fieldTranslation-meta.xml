@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Post an image (200px wide, transparent .PNG recommended) in the &quot;Product Images&quot; folder of Documents.  Copy the Record ID (in the URL) of the new document and paste it here. --></help>
+        <label><!-- Image ID --></label>
+        <name>Image__c</name>
+    </CustomFieldTranslation>

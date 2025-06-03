@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die Summe aller gebuchten Rechnungspostensalden für diesen Vermögenswert.</help>
+        <label><!-- Invoice Line Balance --></label>
+        <name>blng__InvoiceLineBalance__c</name>
+    </CustomFieldTranslation>

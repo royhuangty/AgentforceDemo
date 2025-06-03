@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>FSL__Status__c</name>
+        <picklistValues>
+            <masterLabel>Aborted</masterLabel>
+            <translation>İptal Edildi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Tamamlandı</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed First Optimization Day</masterLabel>
+            <translation>İlk Optimizasyon Günü Tamamlandı</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>Başarısız</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalizing</masterLabel>
+            <translation>Sonuçlandırılıyor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Tut</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Süreçte</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>Açık</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Processing</masterLabel>
+            <translation>İşlem sonrası</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>Sırada</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

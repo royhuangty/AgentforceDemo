@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminto --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnot --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintosi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintosi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnon --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintojen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintojeni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintosi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintojesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnossa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoissa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnossani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoissani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnossasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoissasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnosta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoista --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnostani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoistani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnostasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoistasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintoon --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintoihin --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintooni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoihini --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintoosi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintoihisi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnolla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoilla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnollani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoillani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnollasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoillasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnolta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoilta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoltani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoitalni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoiltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnolle --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoille --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnolleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoilleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnollesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoillesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintona --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintoina --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintonani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoinani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintonasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintoinasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoiminnoiksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnokseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoiminnoikseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoiminnoiksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintoa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA-laskemistoimintoja --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintoani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA-laskemistoimintojani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintoasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA-laskemistoimintojasi --></value>
+    </caseValues>
+    
+</CustomObjectTranslation>

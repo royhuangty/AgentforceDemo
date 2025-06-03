@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- When None or Save is selected, the Configurator scoped price rules will fire on save.  When Edit is selected, the Configurator scoped price rules will fire on edit and save. --></help>
+        <label><!-- Configurator Evaluation Event --></label>
+        <name>SBQQ__ConfiguratorEvaluationEvent__c</name>
+        <picklistValues>
+            <masterLabel>Edit</masterLabel>
+            <translation><!-- Edit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Save</masterLabel>
+            <translation><!-- Save --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

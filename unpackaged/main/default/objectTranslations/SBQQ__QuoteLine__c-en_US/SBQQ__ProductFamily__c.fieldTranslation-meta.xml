@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- How you would categorize/group/organize this within Salesforce (whether it&apos;s a new or existing Product Family). Additionally, this field can be used during product selection to filter to the correct product or product SKU. --></help>
+        <label><!-- Product Family --></label>
+        <name>SBQQ__ProductFamily__c</name>
+    </CustomFieldTranslation>

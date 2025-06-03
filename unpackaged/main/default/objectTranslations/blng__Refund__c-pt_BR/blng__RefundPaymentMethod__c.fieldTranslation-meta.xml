@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O método de pagamento representa um cartão de crédito ou informações bancárias que podem ser usadas para processar um pagamento</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </CustomFieldTranslation>

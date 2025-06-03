@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reference to the parent custom action that this action is grouped under. --></help>
+        <label><!-- Parent Custom Action --></label>
+        <name>SBQQ__ParentCustomAction__c</name>
+        <relationshipLabel><!-- Custom Actions --></relationshipLabel>
+    </CustomFieldTranslation>

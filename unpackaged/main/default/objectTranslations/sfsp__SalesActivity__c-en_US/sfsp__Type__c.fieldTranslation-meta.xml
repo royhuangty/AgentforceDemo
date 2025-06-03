@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sales Activity Type --></label>
+        <name>sfsp__Type__c</name>
+        <picklistValues>
+            <masterLabel>Allocation</masterLabel>
+            <translation><!-- Allocation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approval Process</masterLabel>
+            <translation><!-- Approval Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assignment</masterLabel>
+            <translation><!-- Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hierarchy</masterLabel>
+            <translation><!-- Hierarchy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Status</masterLabel>
+            <translation><!-- Status --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

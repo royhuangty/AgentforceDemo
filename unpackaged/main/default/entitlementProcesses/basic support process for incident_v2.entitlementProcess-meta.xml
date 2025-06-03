@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Incident</SObjectType>
+    <active>true</active>
+    <businessHours>24/7 Follow-The-Sun Service</businessHours>
+    <description>Standard support process used for incidents.</description>
+    <entryStartDateField>Incident.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Incident.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.Priority</field>
+            <operation>equals</operation>
+            <value>Critical, High</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.IsMajorIncident</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>120</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.Priority</field>
+            <operation>equals</operation>
+            <value>Moderate, Low</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.IsMajorIncident</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.Type</field>
+            <operation>equals</operation>
+            <value>Incident, Assistance/Inquiry</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Under Investigation</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneName>Solution Proposed</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.Priority</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Incident Closed</milestoneName>
+        <minutesToComplete>1920</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Incident.Priority</field>
+            <operation>equals</operation>
+            <value>Moderate, Low</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Incident Closed</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

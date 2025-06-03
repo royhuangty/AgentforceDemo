@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>デビットノート割り当て (クレジットノート品目)</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
+        <sections>
+            <label>請求ルールと処理</label>
+            <section>Billing Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>税金ルールと処理</label>
+            <section>Tax Rules and Treatments</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>デビットノート割り当て (クレジットノート品目)</nameFieldLabel>
+</CustomObjectTranslation>

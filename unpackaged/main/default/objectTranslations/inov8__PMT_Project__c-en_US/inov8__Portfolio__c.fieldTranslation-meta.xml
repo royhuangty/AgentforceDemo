@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Portfolio --></label>
+        <name>inov8__Portfolio__c</name>
+        <picklistValues>
+            <masterLabel>F&amp;S</masterLabel>
+            <translation><!-- F&amp;S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Entity</masterLabel>
+            <translation><!-- New Entity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2P</masterLabel>
+            <translation><!-- P2P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q2O</masterLabel>
+            <translation><!-- Q2O --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R2R</masterLabel>
+            <translation><!-- R2R --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

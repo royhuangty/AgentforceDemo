@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Para desactivar el libro de finanzas, deje en blanco esta casilla de verificación. Esto no afectará a transacciones existentes que hagan referencia al libro.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <quickActions>
+        <label><!-- Complete Task --></label>
+        <name>inov8__Complete_Task</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- On Hold Reason should not be Blank if Status is &apos;On Hold&apos;. --></errorMessage>
+        <name>inov8__Task_On_hold_Reason_not_null_if_On_Hold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date must be after Start Date. --></errorMessage>
+        <name>inov8__Task_start_date_less_than_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

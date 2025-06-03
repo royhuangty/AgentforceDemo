@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Paleta de Gantt</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Paletas de Gantt</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de paleta de gantt</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Gantt Palette --></label>
+        <name>FSL__FSL_Public_Gantt_Palette</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
+        <name>FSL__Color_Level_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

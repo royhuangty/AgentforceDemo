@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <description>Standard support process used by basic service products and warranties.</description>
+    <entryStartDateField>Case.DateTime_Opened_c__c</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <exitCriteriaFilterItems>
+        <field>Case.Status</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email, Website</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Critical</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>120</minutesToComplete>
+        <successActions>
+            <name>SDO_Service_Set_Case_Status_to_Working</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <timeLength>-10</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>SDO_Service_Milestone_1st_Response_VIOLATION</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>SDO_Service_Mark_Case_as_Non_Compliant</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>SDO_Service_Set_Case_Escalated_to_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>SDO_Service_Set_Case_Status_to_Escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>High, Medium, Low</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email, Website</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <successActions>
+            <name>SDO_Service_Set_Case_Status_to_Working</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <timeLength>-15</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>SDO_Service_Milestone_1st_Response_VIOLATION</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>SDO_Service_Set_Case_Escalated_to_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>SDO_Service_Set_Case_Status_to_Escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>15</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Technical Issue</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Under Investigation</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneName>Solution Proposed</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <successActions>
+            <name>SDO_Service_Status_Waiting_on_Customer</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>SDO_Service_Stop_SLA_Clock_on_Case</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Critical</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Closed</milestoneName>
+        <minutesToComplete>1920</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>High, Medium, Low</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Closed</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

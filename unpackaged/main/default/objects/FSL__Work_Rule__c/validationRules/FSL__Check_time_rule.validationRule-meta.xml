@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Check_time_rule</fullName>
+    <active>true</active>
+    <description>If record type is Time_Rule_Service, Service_Schedule_Time_Property__c is SchedEndTime, then Service_Time_Operator__c must be &quot;Before or Equal to&quot;</description>
+    <errorConditionFormula>RecordType.DeveloperName  = &#39;Time_Rule_Service&#39; &amp;&amp;  ISPICKVAL(FSL__Service_Schedule_Time_Property__c, &#39;SchedEndTime&#39;)  &amp;&amp; (  !ISPICKVAL(FSL__Service_Time_Operator__c , &#39;Before or Equal to&#39;)  )</errorConditionFormula>
+    <errorMessage>Time Operator should be &#39;Before or Equal To&#39; when Service Schedule Time Property is &#39;SchedEndTime&#39;</errorMessage>
+</ValidationRule>

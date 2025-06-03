@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Custom Objective Type --></label>
+        <name>FSL__Custom_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation>Što prije</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Engineer Idle Time</masterLabel>
+            <translation>Minimalizirajte vrijeme neaktivnosti inženjera</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Overtime</masterLabel>
+            <translation>Smanjivanje prekovremenog rada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Travel</masterLabel>
+            <translation>Smanjivanje putovanja</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Use Of Elasticity</masterLabel>
+            <translation>Minimalizirajte upotrebu elastičnosti</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Resource</masterLabel>
+            <translation>Povlašteni izvor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority By Distance To Engineer</masterLabel>
+            <translation>Prioritet po udaljenosti do inženjera</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Priority</masterLabel>
+            <translation>Prioritet izvora</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skill Level</masterLabel>
+            <translation>Razina vještine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Priority</masterLabel>
+            <translation>Prioritet zadatka</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel From Home Base</masterLabel>
+            <translation>Putovanje od sjedišta</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

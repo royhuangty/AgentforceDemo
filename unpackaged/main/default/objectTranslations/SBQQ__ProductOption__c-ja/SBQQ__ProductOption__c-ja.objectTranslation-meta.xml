@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>商品オプション</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- OptionConfiguration --></label>
+        <name>SBQQ__OptionConfiguration</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- OptionLookup --></label>
+        <name>SBQQ__OptionLookup</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SearchFilters --></label>
+        <name>SBQQ__SearchFilters</name>
+    </fieldSets>
+    <layouts>
+        <layout>Product Option Layout</layout>
+        <sections>
+            <label>高度な設定</label>
+            <section>Advanced Settings</section>
+        </sections>
+        <sections>
+            <label>オプション SKU の情報</label>
+            <section>Optional SKU Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>オプション名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- The &apos;Apply Immediately&apos; field must be checked before providing an &apos;Apply Immediately Context&apos;. Otherwise, please change the &apos;Apply Immediately Context&apos; field to ‘None&apos;. --></errorMessage>
+        <name>SBQQ__Apply_Immediately_Context_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can’t include evergreen and renewable products in the same bundle. --></errorMessage>
+        <name>SBQQ__Cannot_Bundle_Evergreen_Renewable_SKUs</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can’t include evergreen and renewable products in the same bundle. --></errorMessage>
+        <name>SBQQ__Cannot_Have_RenewableEvergreen_In_Bundle</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

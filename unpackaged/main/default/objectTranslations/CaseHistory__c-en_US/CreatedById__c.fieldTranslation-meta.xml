@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Created By ID --></label>
+        <name>CreatedById__c</name>
+        <relationshipLabel><!-- CaseHistory__c --></relationshipLabel>
+    </CustomFieldTranslation>

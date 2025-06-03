@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assetIcon>/analytics/wave/web/proto/images/app/icons/21.png</assetIcon>
+    <folder>DefaultForecastingAnalytics</folder>
+    <masterLabel>Einstein Forecasting</masterLabel>
+    <shares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>AllInternalUsers</sharedTo>
+        <sharedToType>Organization</sharedToType>
+    </shares>
+    <templateOrigin>sfdc_internal__ForecastingAnalytics</templateOrigin>
+    <templateVersion>6.0</templateVersion>
+</WaveApplication>

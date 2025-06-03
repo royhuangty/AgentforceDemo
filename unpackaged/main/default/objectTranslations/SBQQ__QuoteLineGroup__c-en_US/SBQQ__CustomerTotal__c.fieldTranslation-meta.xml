@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Total for this group&apos;s line items before any partner discounts are applied. --></help>
+        <label><!-- Customer Total --></label>
+        <name>SBQQ__CustomerTotal__c</name>
+    </CustomFieldTranslation>

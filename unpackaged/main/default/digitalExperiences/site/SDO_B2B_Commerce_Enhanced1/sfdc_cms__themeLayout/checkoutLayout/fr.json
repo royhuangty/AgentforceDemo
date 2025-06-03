@@ -1,0 +1,26 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Checkout Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<p>© Copyright 2024 <span style=\"color: rgb(255, 255, 255);\">Salesforce.com, inc. | Ceci n'est pas une entreprise réelle.</span></p><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255);\">Il est utilisé pour les démonstrations de Salesforce. Aucune commande ne sera traitée.</span></p>"
+        },
+        "id" : "ef8f2777-0592-40ed-9ea6-fe0c56383ae5"
+      }, {
+        "id" : "d8358992-9745-4da2-bf2f-c08bde4c0f74",
+        "attributes" : {
+          "pickerButtonLabelText" : "Changer d'emplacement",
+          "headingLabelText" : "Sélectionnez votre emplacement"
+        }
+      }, {
+        "id" : "4051622c-fc8b-4771-9ece-be58041cc556",
+        "attributes" : {
+          "richTextValue" : "<div class=\"social-media-icons\">\n <div class=\"social-media-icon facebook\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/facebook-icon.png\">\n </div>\n <div class=\"social-media-icon twitter\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/x-icon.png\">\n </div>\n <div class=\"social-media-icon instagram\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/instagram-icon.png\">\n </div>\n</div>"
+        }
+      } ]
+    }
+  },
+  "urlName" : "checkout-layout"
+}

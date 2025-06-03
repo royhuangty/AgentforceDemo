@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specifies the order in which the terms are printed on quote document. --></help>
+        <label><!-- Print Order --></label>
+        <name>SBQQ__PrintOrder__c</name>
+    </CustomFieldTranslation>

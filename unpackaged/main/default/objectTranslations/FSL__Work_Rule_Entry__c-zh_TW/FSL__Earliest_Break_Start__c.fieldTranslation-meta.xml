@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>從服務資源的可用性開始到最早的允許休息開始時間的分鐘數。例如，輸入 120 以排程在一天開始後至少兩小時休息。</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This will be used to receive all the notification from streaming api and will act accordingly</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is the source message</description>
+        <fieldName>source</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Notification Type</description>
+        <fieldName>Type</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Notification Data</description>
+        <fieldName>JsonData</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>RecordId of the object on which component is attached</description>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>To detect the component receive value</description>
+        <fieldName>value</fieldName>
+    </lightningMessageFields>
+    <masterLabel>VideoChannel</masterLabel>
+</LightningMessageChannel>

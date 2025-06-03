@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <measures>
+        <field>Avg_CSAT_Day_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg of CSAT</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>CSAT_by_Week_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg of CSAT</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>CSAT_by_Month_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg of CSAT</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Average_CSAT</waveVisualization>
+</WaveXmd>

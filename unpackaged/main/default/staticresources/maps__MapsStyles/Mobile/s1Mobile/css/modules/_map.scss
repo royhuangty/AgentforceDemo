@@ -1,0 +1,432 @@
+#mapWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.in {
+        z-index: 650;
+    }
+
+    #mapWrapSelector {
+	    width: 100%;
+	    height: 100%;
+	}
+
+    .ma-button {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        &.ma-button--icon-square {
+            font-size: 21px;
+            width: 44px;
+            line-height: 1;
+            padding-left: 0;
+            height: 43px;
+            text-align: center;
+            padding-right: 0;
+        }
+    }
+}
+
+#topBarMapWrap {
+	position: fixed;
+	width:100%;
+	height:52px;
+	z-index: 1500;
+	background-color: $bottom-bar-blue;
+	left:0;
+	top:0;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+
+    .ma-icon {
+    	color: $white;
+    }
+
+    #searchInput {
+    	background-color: rgba(0,0,0,0.5);
+    	border-color: rgba(0,0,0,0.1);
+    }
+}
+
+.map-secondary-view-button {
+    position: fixed;
+    transform: translate(0, -65px);
+    left: 16px;
+    border-color: transparent;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    margin: 0;
+    bottom: -50px;
+    z-index: 90;
+    transform: translate(0,0);
+    @include transition(0s visibility .2s, .2s transform 0s);
+
+    + .ma-button {
+        margin-left:0;
+    }
+
+    &.in {
+        bottom: 16px;
+        visibility: visible;
+        @include transition(.2s bottom 0s, 0s visibility 0s);
+    }
+}
+
+#mapToolbarButtons {
+    display: none;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+
+    .ma-button:first-child {
+        border-top: $white;
+        border-bottom: $white;
+        border-left: $white;
+    }
+
+    .ma-button:last-child {
+        border-top: $white;
+        border-bottom: $white;
+        border-right: $white;
+    }
+}
+
+#mapMarkerRefreshButton {
+    border-width: 0;
+    position: fixed;
+    bottom: 77px;
+    visibility: hidden;
+    right: -100px;
+    z-index: 100;  
+
+    @include transition(.2s right 0s, 0s visibility .2s);
+
+    &.in {
+        visibility: visible;
+        right: 16px;
+        @include transition(.2s right 0s, 0s visibility 0s);
+    }
+}
+
+.ma-marker-dot {
+    width: 22px;
+    height: 22px;
+    margin:3px;
+    border-radius: 22px;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+        box-shadow:0 0 0 1px #fff;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        left: 6px;
+        top: 6px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.ma-marker-square {
+    width: 22px;
+    height: 22px;
+    margin:3px;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+        box-shadow:0 0 0 1px #fff;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        left: 6px;
+        top: 6px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.map-marker{
+
+    &.marker--red { background-color: $red; }
+    &.marker--orange { background-color: $orange; }
+    &.marker--yellow { background-color: $yellow; }
+    &.marker--green { background-color: $green; }
+    &.marker--blue { background-color: $blue; }
+    &.marker--indigo { background-color: $indigo; }
+    &.marker--violet { background-color: $violet; }
+    &.marker--text-sf { background-color: $text-sf; }
+    &.marker--black { background-color: $black; }
+    &.marker--brown { background-color: $brown; }
+    &.marker--lime { background-color: $lime; }
+    &.marker--black { background-color: $black;
+        &:after {
+            background-color: #fff;
+        }
+     }
+    &.marker--peach { background-color: $peach; }
+    &.marker--teal { background-color: $teal; }
+    &.marker--gray { background-color: $gray; }
+    &.marker--gold { background-color: $gold; }
+    &.marker--light-blue { background-color: $light-blue; }
+}
+
+
+#maMasterWrap {
+
+//list button placement 
+
+    #mapListButton {
+        left: 16px;
+        bottom: 0;
+        @include transition(.2s left, .2s bottom);
+    }
+
+//marker legend button placement
+
+    #mapLegendButton {
+        left: 83px;
+        @include transition(.2s left, .2s bottom);
+    }
+
+//marker legend button placement when list in
+
+    &.has-list-results {
+
+        #mapLegendButton {
+            left: 130px;
+            @include transition(.2s left, .2s bottom);
+        }
+
+        #mapListButton {
+            bottom: 73px;
+            @include transition(.2s left, .2s bottom);
+        }
+    }
+
+    &.has-marker-legend {
+
+        #mapLegendButton {
+            bottom: 73px;
+            @include transition(.2s left, .2s bottom);
+        }
+    }
+}
+
+    #maMasterWrap.marker-tooltip-in #mapMarkerNavigate {
+        visibility: visible;
+    }
+
+#mapMarkerNavigate {
+    position: fixed;
+    visibility: hidden;
+    right: 119px;
+    top: 100px;
+    z-index: 100000;
+
+        button {
+            display: block;
+            padding-left: 16px;
+            width: 130px;
+            height: 43px;
+            background-color: $light-blue !important;
+            padding-right: 16px;
+
+        &:before {
+            content: ' ';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 12px 0 12px;
+            border-color: $light-blue transparent transparent transparent;
+            position: absolute;
+            left: 50%;
+            margin-left: -12px;
+            bottom:-15px;
+        }
+    }
+}
+
+#routeMarkersImage {
+    background-image: url('../images/route_graphic.png');
+    background-size: 309px 362px;
+    background-repeat: no-repeat;
+    width: 309px;
+    height: 362px;
+    position: absolute;
+    right: 100px;
+    top: 20%;
+}
+
+@media screen and (min-width: 769px) {
+
+
+
+#mapMarkerNavigate {
+    right: 222px;
+    top: 282px;
+}
+
+#maMasterWrap {
+
+
+//list button placement 
+
+    #mapListButton {
+        left: 83px;
+        bottom: -50px;
+        @include transition(.2s left, .2s bottom);
+    }
+
+    &.sidebar-in {
+        #mapListButton {
+            left: 507px;
+        }
+    }
+
+    &.sidebar-over-in {
+        #mapListButton {
+            left: 275px;
+        }
+    }
+
+    &.has-list-results {
+
+        #mapListButton {
+            bottom: 16px;
+        }  
+    }
+
+
+//marker legend button placement
+
+    #mapLegendButton {
+        left: 83px;
+        @include transition(.2s left, .2s bottom);
+    }
+
+    &.sidebar-in {
+        #mapLegendButton {
+            left: 507px;
+        }
+    }
+
+    &.sidebar-over-in {
+        #mapLegendButton {
+            left: 275px;
+        }
+    }
+
+    &.has-list-results, &.has-marker-legend {
+
+        #mapLegendButton {
+            bottom: 16px;
+        }  
+
+        &.tooltip-in {
+
+            #mapLegendButton {
+                left: 440px;
+            }
+        }
+    }
+
+//marker legend button placement when list in
+
+    &.has-list-results {
+
+        #mapLegendButton {
+            left: 197px;
+            @include transition(.2s left, .2s bottom);
+        }
+
+        &.sidebar-in {
+            #mapLegendButton {
+                left: 621px;
+            }
+        }
+
+        &.sidebar-over-in {
+            #mapLegendButton {
+                left: 275px;
+            }
+        }
+
+        &.has-list-results {
+
+            #mapLegendButton {
+                bottom: 16px;
+            }  
+        }
+
+        &.tooltip-in {
+
+            #mapLegendButton {
+                left: 554px;
+            }
+
+            #mapListButton {
+                left: 440px;
+            }
+        }
+    }
+}
+
+#mapMarkerRefreshButton {
+    bottom: 16px;
+}
+
+#mapToolbarButtons {
+    display: block;
+    position: fixed;
+    right: 16px;
+    top: 16px;
+}
+
+#mapWrap {
+    z-index: 750;
+}
+
+#mapActionButtons {
+    left: 80px;
+    bottom: 16px;
+    @include transition(.22s transform ease);
+    transform: translate(0, 0);
+}
+
+#maMasterWrap.sidebar-in #mapActionButtons {
+    transform: translate(375px, 0);
+}
+
+#maMasterWrap.sidebar-in.sidebar-over-in #mapActionButtons {
+    transform: translate(0, 0);
+}
+
+#mapSearchButton {
+    position: fixed;
+    top: 16px;
+    right: 80px;
+    z-index: 100;
+    border-color: transparent;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+}
+
+#mapMyLocationButton {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    border-color: transparent;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+}
+
+
+}

@@ -1,0 +1,13 @@
+<aura:component
+  controller="SDO_Tool_Insights_InsightGeneratorCtrl"
+  implements="c:SDO_Tool_Insights_InsightInterface"
+>
+  <aura:attribute name="recordId" type="string"></aura:attribute>
+  <aura:attribute name="insights" type="map[]"></aura:attribute>
+  <aura:attribute name="contactSuggestions" type="map[]"></aura:attribute>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+
+  <div class="row flex-between">
+    This feature has been deprecated and is no longer being sold.
+  </div>
+</aura:component>

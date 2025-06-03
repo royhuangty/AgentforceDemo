@@ -1,0 +1,250 @@
+// Menu bars
+
+.ma-menu-bar {
+	background-color: $light-gray;
+    border-bottom: 2px solid $border-gray;
+    @include flexbox();
+}
+
+.ma-menu-item {
+	@include flexbox();
+	@include flex(0 0 auto);
+	@include flexAlign(center);
+	font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 .75rem;
+    color: #54698d;
+}
+
+.ma-menu-item--right {
+	margin-left:auto !important;
+	@include flexbox();
+}
+
+.ma-menu-item:hover {
+	background-color: $menu-bar-hover-gray;
+}
+
+.ma-menu-item.active {
+	background-color: $border-gray;
+	color:$dark-blue;
+}
+
+.ma-has-menu-item-icon-left img {
+    max-width: 1rem;
+    height: auto;
+    margin:0 .5rem 0 0;
+}
+
+// blue menu bar
+
+.ma-menu-bar.background--blue {
+	background-color: $blue;
+}
+
+.ma-menu-bar.background--blue .ma-menu-item {
+	color:#fff;
+}
+
+.ma-menu-bar.background--blue .ma-menu-item:hover {
+	background-color: $blue-2;
+}
+
+.ma-menu-bar.background--blue .ma-menu-item.active, .ma-menu-bar.background--blue .ma-menu-item:active {
+	background-color: $blue-3;
+}
+
+.ma-menu-bar.background--blue .ma-menu-item.ma-dropdown--click:active {
+    background-color: $blue-2;
+}
+
+// blue secondary
+
+.ma-menu-bar.ma-menu-bar-has-secondary.background--blue {
+    border-bottom-color: $blue-3;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--blue {
+	background-color: $blue-3;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--blue .ma-menu-item {
+    background-color: transparent;
+    color: $transparent-white;
+    border-bottom:3px solid transparent;
+    padding-top: 3px;
+    height: 2.875rem;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--blue .ma-menu-item.active, .ma-menu-bar.ma-menu-bar-secondary.background--blue .ma-menu-item:active {
+    background-color: transparent;
+    color: $white;
+    border-bottom:3px solid $white;
+}
+
+.ma-menu-bar.ma-menu-bar-has-secondary.background--blue .ma-menu-item.active, .ma-menu-bar.ma-menu-bar-has-secondary.background--blue .ma-menu-item:active  {
+    background-color: $blue-2;
+}
+
+// white menu bar
+
+.ma-menu-bar.background--white {
+	background-color: $white;
+}
+
+.ma-menu-bar.background--white .ma-menu-item:hover {
+	background-color: $light-gray;
+}
+
+.ma-menu-bar.background--white .ma-menu-item.active, .ma-menu-bar.background--white .ma-menu-item:active {
+	background-color: $menu-bar-hover-gray;
+	color: $blue-3;
+}
+
+.ma-menu-bar.background--white .ma-menu-item.ma-dropdown--click:active, .ma-menu-bar.background--white .ma-menu-item.ma-dropdown--hover:active {
+    background-color: $light-gray;
+}
+
+.ma-menu-bar .ma-form-control {
+    margin: 0.5625rem;
+}
+
+.ma-menu-bar.background--blue .ma-input	{
+	background-color: $blue-3;
+	color: $white;
+	border-color: $blue-3;
+}
+
+.ma-menu-bar.background--blue .ma-input.ma-expanding-search:focus {
+    background-color: $blue-4;
+    border-color: $blue-4;
+}
+
+.ma-menu-bar.ma-menu-bar--large .ma-form-control {
+    margin-top: .75rem;
+}
+
+// white secondary
+
+.ma-menu-bar.ma-menu-bar-has-secondary.background--white {
+    border-bottom-color: $menu-bar-hover-gray;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--white {
+    background-color: $menu-bar-hover-gray;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--white .ma-menu-item {
+    background-color: transparent;
+    border-bottom:3px solid transparent;
+    padding-top: 3px;
+    height: 2.875rem;
+}
+
+.ma-menu-bar.ma-menu-bar-secondary.background--white .ma-menu-item.active, .ma-menu-bar.ma-menu-bar-secondary.background--white .ma-menu-item:active {
+    background-color: transparent;
+    color: $dark-blue;
+    border-bottom:3px solid $light-blue;
+}
+
+.ma-menu-bar.ma-menu-bar-has-secondary.background--white .ma-menu-item.active, .ma-menu-bar.ma-menu-bar-has-secondary.background--white .ma-menu-item:active {
+    background-color: $light-gray;
+}
+
+.ma-menu-bar.background--blue .ma-input::-webkit-input-placeholder {
+   color: $transparent-white;
+}
+
+.ma-menu-bar.background--blue .ma-input:-moz-placeholder { /* Firefox 18- */
+   color: $transparent-white;
+}
+
+.ma-menu-bar.background--blue .ma-input::-moz-placeholder {  /* Firefox 19+ */
+   color: $transparent-white;
+}
+
+.ma-menu-bar.background--blue .ma-input:-ms-input-placeholder {  
+   color: $transparent-white;
+}
+
+.ma-menu-item.ma-dropdown--hover {
+    cursor: default;
+}
+
+.ma-dropdown-list .ma-checkbox-wrap {
+    display: block;
+    padding: .5rem .75rem;
+}
+
+.ma-menu-item.ma-dropdown--click.in {
+    cursor: default;
+}
+
+.ma-menu-item.inactive {
+    pointer-events: none;
+}
+
+.ma-menu-breadcrumbs {
+    @include flexbox();
+}
+
+.ma-menu-breadcrumbs .ma-menu-item {
+    position:relative;
+    margin-right: 1.25rem;
+}
+
+.ma-menu-breadcrumbs .ma-menu-item:after {
+    content: ' ';
+    background-image: url("../icons/utility/chevronright.svg");
+    width: .75rem;
+    height: .75rem;
+    background-size: .75rem;
+    background-position: 0 0;
+    position: absolute;
+    right: -1rem;
+    line-height: 1;
+    opacity: 0.8;
+    top: 50%;
+    margin-top: -.375rem;
+}
+
+.ma-menu-breadcrumbs .ma-menu-item:last-child {
+    pointer-events: none;
+}
+
+.ma-menu-breadcrumbs .ma-menu-item:last-child:after {
+    display:none;
+}
+
+.ma-menu-bar.ma-menu-bar--large .ma-menu-item {
+    height: 3.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 3.75rem;
+    padding: 0 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ma-menu-bar.ma-menu-bar--large .ma-menu-item-breadcrumb {
+    margin-right: 1.75rem;
+}
+
+.ma-menu-bar.ma-menu-bar--large .ma-menu-item-breadcrumb:after {
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
+    right: -1.375rem;
+    margin-top: -.5rem;
+}
+
+.ma-menu-bar.ma-menu-bar--large .ma-menu-item > .ma-icon {
+    width: 1.375rem;
+    height: 1.375rem;
+}

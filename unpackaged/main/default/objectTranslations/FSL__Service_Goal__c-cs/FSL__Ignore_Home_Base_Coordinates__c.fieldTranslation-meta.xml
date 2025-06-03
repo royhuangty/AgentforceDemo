@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nastaví plánování tak, že se zahrne nebo vyloučí z minimalizování úvah o cestě v první a poslední den cesty, do a z domácí základny zdroje služeb.</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

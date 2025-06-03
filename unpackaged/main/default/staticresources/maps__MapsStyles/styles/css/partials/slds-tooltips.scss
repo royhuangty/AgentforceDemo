@@ -1,0 +1,48 @@
+.slds-scope {
+
+	// selectors for legacy tooltip handling (non vue)
+	#CreateTerritoryPopup {
+
+		.slds-popover--tooltip, .slds-popover_tooltip {
+			max-width:0;
+			max-height:0;
+			visibility:hidden;
+			overflow:hidden;
+			opacity:0;
+			transition: 0s max-width 0.2s, 0s max-height 0.2s, 0s visibility 0.2s, 0s overflow 0.2s, 0.2s opacity 0s;
+
+			&.in,  {
+				max-width:20rem;
+				max-height:20rem;
+				visibility:visible;
+				overflow:visible;
+				opacity:1;
+				transition: 0s max-width 0s, 0s max-height 0s, 0s visibility 0s, 0s overflow 0s, 0.2s opacity 0s;
+			}
+
+			.tooltip-action-instruction {
+				padding: 4px 8px;
+				background: rgba(255,255,255,0.07);
+				border-radius: 3px;
+				font-size: 11px !important;
+			}
+		}
+	}
+
+	//ListHeader styles
+	.listview-header-wrap .slds-button + .slds-popover.slds-popover_tooltip {
+        display: none;
+        pointer-events: none;
+        position: absolute;
+        left: 56%;
+        top: calc(100% + 16px);
+        transform: translateX(-50%);
+    }
+    .listview-header-wrap .slds-button:hover + .slds-popover {
+        display: block;
+    }
+
+    .listview-header-wrap  .slds-popover__body {
+        white-space: nowrap;
+    }
+}

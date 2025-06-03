@@ -1,0 +1,460 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/solarEnergy.jpeg\",\"altText\":\"Pancarta de pods\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "67281c30-f488-4074-a181-3fcbb883a5e8"
+      }, {
+        "attributes" : {
+          "text" : "Energía solar"
+        },
+        "id" : "b382ee9a-62a8-4360-bf6b-8aedfc7aebec"
+      }, {
+        "attributes" : {
+          "text" : "Almacene el exceso de energía para operaciones ininterrumpidas. Nuestras baterías garantizan un suministro de energía constante, además de resiliencia operativa."
+        },
+        "id" : "3abb2568-7c87-4ddd-8068-8bf479a01153"
+      }, {
+        "attributes" : {
+          "text" : "Comprar ahora"
+        },
+        "id" : "afc1c5af-5b79-48a7-929f-bc9197b16ab6"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "ffb46dcf-df87-4f9e-ac61-64dc137c909c"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/free-shipping-icon.svg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "444b44e8-70db-4d84-8cd4-104958eaf20d"
+      }, {
+        "attributes" : {
+          "text" : "Envío gratuito"
+        },
+        "id" : "09d20068-f29b-4cb3-93d8-51198b888b22"
+      }, {
+        "attributes" : {
+          "text" : "Obtenga el envío gratuito en todos los pedidos superiores a 75 dólares y devoluciones gratuitas"
+        },
+        "id" : "ff034c23-a282-40da-aa6f-7b28fa9ce8fa"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "9c9e69e9-a578-4893-be53-8405b581569b"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "c9f420c8-dce4-489b-909c-2820d1519f89"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/customer-service-icon.svg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "16150dbf-543e-4967-bf6e-095f0651c94d"
+      }, {
+        "attributes" : {
+          "text" : "Servicio excepcional"
+        },
+        "id" : "820df048-f3be-4046-afba-df522b74ab6f"
+      }, {
+        "attributes" : {
+          "text" : "Nuestra principal prioridad es la satisfacción del cliente, en todo momento"
+        },
+        "id" : "b030169a-7a78-43a7-908a-c27a25141dab"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "0bc83c84-df02-4423-926b-b492bd009f59"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "ef9b8ad4-ccbf-4743-be95-fc008bf9e98d"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/international-shipping-icon.svg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "d48baaa7-3ef6-4ec9-8432-758e47103945"
+      }, {
+        "attributes" : {
+          "text" : "Envíos internacionales"
+        },
+        "id" : "6a123cc9-f0a6-4b9d-99b9-d655be0005c8"
+      }, {
+        "attributes" : {
+          "text" : "Entrega global: llegamos a cualquier sitio, se lo llevamos."
+        },
+        "id" : "267a5d38-cd0f-40b5-a692-cd21f8f0a35a"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "187b4b93-662d-48dd-aa46-948435ffd71e"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "dca20045-c03d-45e2-9624-7f997fb8e18d"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/cashback-icon.svg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "2b256a7f-cc2e-4704-90fb-ca3ca4fb14e3"
+      }, {
+        "attributes" : {
+          "text" : "Bonificación para su tarjeta"
+        },
+        "id" : "6a023b11-d18d-4ca8-8b8e-ef5c9d8d4485"
+      }, {
+        "attributes" : {
+          "text" : "¡Gane recompensas y desbloquee beneficios con nuestro programa de fidelización!"
+        },
+        "id" : "e6231b0d-f38b-4742-af08-0d86b62ca097"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "ca2944bf-7f00-4aae-bfa6-29b523606363"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "24a45162-647e-4e52-a0ab-8cb35f8554be"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/vehicleCharging.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "d83978ed-cfa8-4fab-98e5-16520881b650"
+      }, {
+        "attributes" : {
+          "text" : "Soluciones para el hogar"
+        },
+        "id" : "222e9a46-d56b-4be7-9993-4cc895b8d294"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "732fc2ca-9f37-4ff8-92fe-95db3a72f320"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "e0bba224-8209-40a3-8c72-8218c70bbd97"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/energyStorage.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "27c69939-0618-4744-8ee1-de2e592634d4"
+      }, {
+        "attributes" : {
+          "text" : "Estaciones de carga"
+        },
+        "id" : "8eaeb42b-14ef-4eb7-b787-0380f4885387"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "cb579413-17f2-46bc-846a-f0ec73f81866"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "aae6f3d9-cfaa-4e08-91b1-e7b623b3648c"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/batteries-b2b.jpg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "2e66992e-06da-45d0-af1c-7d84b5d54b00"
+      }, {
+        "attributes" : {
+          "text" : "Todos los productos"
+        },
+        "id" : "6483e91d-0413-4828-91fb-d3cf99a68347"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "cc0d7970-3618-465f-8270-03ad4b25fb06"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "c864d657-b6f7-4baa-9308-b906bfbe4ad8"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/windEnergy.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "5c6e894f-dc98-48fb-852c-c733bafc619a"
+      }, {
+        "attributes" : {
+          "text" : "Servicios"
+        },
+        "id" : "ff96bf12-4a74-4479-847f-8b643f41547e"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "217f2896-06ab-4835-9438-bd33358d9190"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "cda80341-01b6-4360-a699-1880b3f543b1"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/smartHome.jpg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "baa74952-9a95-4d9f-9f31-6ddea27bed32"
+      }, {
+        "attributes" : {
+          "text" : "Supervisión"
+        },
+        "id" : "ed65f01b-9aab-4439-b95c-a520f743e58c"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "3a281834-5d00-4fe9-b34d-8870417db7ea"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "a081ea6c-f234-4c67-bd1e-3f6c3dea4d3f"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/emergencyPrep.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "b14135cb-14a5-4bed-9cf8-cd6e67abe456"
+      }, {
+        "attributes" : {
+          "text" : "Estilo de vida"
+        },
+        "id" : "84e81011-9d8a-4136-a77f-fbe1f6756078"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "e98ddebf-ca4e-43da-9ea4-a7db937b09d4"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "60a3abb4-af12-4d84-b099-3a4cd0c0080a"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/thanksBoxes.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "cfe3fd4a-9b46-480c-be34-c83ff285acd3"
+      }, {
+        "attributes" : {
+          "text" : "¡Gracias por ser un cliente leal! Introduzca el cupón a continuación para ahorrar 15 dólares en su próxima compra."
+        },
+        "id" : "96b44723-9bd1-4f89-bba0-11d9b33e5fe5"
+      }, {
+        "attributes" : {
+          "text" : "15OFF"
+        },
+        "id" : "b5e551d5-e94a-4dd4-b05c-a81743c43866"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "95d7561b-ab7e-428e-ae3b-810ca7858bcc"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "e37908c3-225b-4425-8136-4430da55cfa0"
+      }, {
+        "attributes" : {
+          "headerText" : "Recomendaciones para usted"
+        },
+        "id" : "92ef4490-62a2-492b-91ce-d59e018ca45a"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/buyersGuide.jpeg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "95b531de-4de2-4ea0-9ee1-94333111d1d5"
+      }, {
+        "attributes" : {
+          "text" : "¿No está seguro de lo que necesita o de cómo empezar? Obtenga la..."
+        },
+        "id" : "19dbfc84-a920-4ebb-aa11-f916a21d2f3a"
+      }, {
+        "attributes" : {
+          "text" : "GUÍA DEL COMPRADOR DE ENERGÍA SOLAR"
+        },
+        "id" : "92180fd5-197a-4887-ac1e-59507f3bb031"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "9991dc30-eb3c-4add-b1b5-838588ea6db2"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "42a64931-b8e7-4801-aeb3-aef18fc0cc19"
+      }, {
+        "attributes" : {
+          "text" : "Novedades"
+        },
+        "id" : "aa45c0d6-b3a0-4a29-aea2-4d81227a5575"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/news1.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "808e47a5-c809-4936-98fa-97dcdc35f193"
+      }, {
+        "attributes" : {
+          "text" : "¡Innovaciones en energías renovables que transforman los hogares!"
+        },
+        "id" : "ae2a141d-071d-46c6-89c5-f0cb69207f40"
+      }, {
+        "attributes" : {
+          "text" : "Descubra los últimos avances en tecnología solar en Cirrus Energy Store. Revolucionamos las soluciones de energía doméstica para un futuro sostenible."
+        },
+        "id" : "21baa3d8-6898-4726-ac42-b170b619d742"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "9ab48262-c442-4327-bb16-bef6a4a1bdc3"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "600a8775-fd8b-4bc1-b376-21043a5b93f2"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/news2.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "fd099f37-eb1d-4340-abb0-989f7ebc5b78"
+      }, {
+        "attributes" : {
+          "text" : "¡Soluciones de energía ecológicas que impulsan el éxito de las pequeñas empresas!"
+        },
+        "id" : "93c8d6b0-bc72-4ac8-82f7-d0bf6622d97a"
+      }, {
+        "attributes" : {
+          "text" : "Las soluciones de energía sostenible que ofrece Cirrus Energy Store ayudan a las empresas a prosperar; optimizando las operaciones y reduciendo la huella de carbono para un mañana más verde."
+        },
+        "id" : "1494d262-25b2-4925-9000-31049128d92c"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "59f86cf5-3698-4e58-98f5-412e608c8824"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "4f863451-acb1-4192-b84c-eade6bc54a71"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/news3.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "95ccd001-2022-4aac-97fa-8bb963520012"
+      }, {
+        "attributes" : {
+          "text" : "Solar Power: Transformando los espacios urbanos"
+        },
+        "id" : "0011dea7-f979-41a5-987c-a490962ba42b"
+      }, {
+        "attributes" : {
+          "text" : "Descubra cómo los habitantes de las ciudades están adoptando soluciones solares de Cirrus Energy Store, adaptando los paisajes urbanos para aprovechar la energía renovable para la vida moderna."
+        },
+        "id" : "fbd21bd5-e882-46e4-b504-bdca8ae4d044"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "27045535-2a55-4e72-a4d4-c168335a728f"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "a0434f72-5447-4421-8b81-aef36da5525c"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/news4.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "3b7a8723-4dac-4889-851c-9136763d7bbc"
+      }, {
+        "attributes" : {
+          "text" : "Los innovadores sistemas de almacenamiento de energía simplifican la vida energéticamente autónoma"
+        },
+        "id" : "eae9204a-d58a-4d0e-bf98-6e5defa7352c"
+      }, {
+        "attributes" : {
+          "text" : "Conozca las soluciones de vanguardia que le permitirán vivir de forma autónoma gracias a la tecnología de almacenamiento de energía eficiente de Cirrus Energy Store."
+        },
+        "id" : "34404c72-cab1-492d-833e-e8ece0cdf748"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "bf492619-d3e0-4bf8-8d95-58bfce8d5a8e"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "12a5ac84-6efb-458b-834d-ff1a86419b17"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/jumperCirrus.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "df81347f-21b3-43c1-8a81-6e04ff5d0c61"
+      }, {
+        "attributes" : {
+          "text" : "Tienda de prendas de vestir"
+        },
+        "id" : "c93a3578-9540-4093-adaf-b5bc11107329"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "0e8975fc-491c-4f8b-b70b-0f49ef1179dc"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "59c7afb0-137f-4af0-b484-e2f8679540a6"
+      }, {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/sdo-experiences/d2c/solarStarter.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "d82858f4-377d-4c72-9352-e6bcfe5585b6"
+      }, {
+        "attributes" : {
+          "text" : "Kit de inicio solar"
+        },
+        "id" : "b31d22c2-e9bf-48fe-9118-b6cc2e67d432"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "6cca2b17-103c-49ee-9edf-f035ffc943b8"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "4fb0137c-bb46-45c1-94ef-44fff07ae789"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Inicio"
+        },
+        "id" : "5cda2072-5916-4f26-aea0-0dd46a3b26b0"
+      } ]
+    }
+  },
+  "urlName" : "home"
+}

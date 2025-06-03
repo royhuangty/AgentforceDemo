@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For multi-segmented Products, this is the Column header label (e.g. &quot;Year 1&quot;) associated with this line. --></help>
+        <label><!-- Segment Label --></label>
+        <name>SBQQ__SegmentLabel__c</name>
+    </CustomFieldTranslation>

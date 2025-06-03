@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>用于将服务资源链接到其服务预约与字段参考相匹配的对象</help>
+        <label><!-- Linking Object --></label>
+        <name>FSL__Enhanced_Match_Linking_Object__c</name>
+    </CustomFieldTranslation>

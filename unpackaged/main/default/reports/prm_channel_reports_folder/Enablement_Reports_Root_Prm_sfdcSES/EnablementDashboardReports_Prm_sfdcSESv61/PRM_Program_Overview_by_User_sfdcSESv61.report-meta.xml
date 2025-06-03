@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>LearningItemAssignment.Assignee.Username:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Number of Users</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>LearningItemAssignment.Assignee.Account.Id:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Number of Partners</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$Progress.CompletedPercent</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$Progress.OutcomeProgressPercent</field>
+    </columns>
+    <description>Analyze how different users are progressing towards a program and its outcome.</description>
+    <filter>
+        <criteriaItems>
+            <column>LearningItemAssignment$LearningItem.EnablementProgram.Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>External</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$LearningItem.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$Assignee</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Program Overview by User</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>PRM_Program_Progress_sfdcSESv61__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

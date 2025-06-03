@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Work_Rule__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Work Rule</label>
+    <referenceTo>FSL__Work_Rule__c</referenceTo>
+    <relationshipLabel>Work Rule Entries</relationshipLabel>
+    <relationshipName>Work_Rule_Entry</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

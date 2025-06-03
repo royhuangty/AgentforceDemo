@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Określa minimalny odstęp między usługami. Jeśli włączony jest stały odstęp, określa odstęp między usługami.</help>
+        <label><!-- Minimum Gap (minutes) --></label>
+        <name>FSL__Minimum_Gap__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,40 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Lookup",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Detalles de pedido"
+        },
+        "id" : "fd760c22-935f-49d0-ba8e-3463d9379d45"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p class=\"slds-text-align_center\">Para buscar su pedido, introduzca los detalles de pedido o <a href=\"{!Site.basePath}/login?startURL={!Site.basePath}%2FOrderSummary%2FOrderSummary%2FDefault\">iniciar sesión</a>.</p>"
+        },
+        "id" : "0e82f923-5f69-4540-af65-ab268c8a5dcc"
+      }, {
+        "attributes" : {
+          "emailFieldLabel" : "Correo electrónico",
+          "lastNameFieldLabel" : "Apellidos",
+          "orderNumberFieldLabel" : "Número del pedido",
+          "orderNumberFieldTooltip" : "Introduzca el número del pedido desde su correo electrónico de confirmación.",
+          "phoneNumberFieldLabel" : "Número de teléfono",
+          "validationFailureMessage" : "Algo ha fallado. Compruebe su información e inténtelo de nuevo."
+        },
+        "id" : "8b96f787-70d8-498b-a9f2-17f3a577378d"
+      }, {
+        "attributes" : {
+          "text" : "Ver detalles de pedido"
+        },
+        "id" : "294b4a62-c242-4d02-84bb-4f5debd14ccf"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Búsqueda de pedido"
+        },
+        "id" : "e4a76fe3-cb85-4d8f-a684-2af43a3a027e"
+      } ]
+    }
+  },
+  "urlName" : "order-lookup"
+}

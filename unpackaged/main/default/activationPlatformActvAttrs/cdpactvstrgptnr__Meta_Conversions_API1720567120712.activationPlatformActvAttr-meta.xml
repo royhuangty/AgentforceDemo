@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__Meta_Conversions_API</activationPlatform>
+    <destinationName>action_source</destinationName>
+    <isFromSourceObject>true</isFromSourceObject>
+    <isRequired>true</isRequired>
+    <masterLabel>Action Source</masterLabel>
+</ActivationPlatformActvAttr>

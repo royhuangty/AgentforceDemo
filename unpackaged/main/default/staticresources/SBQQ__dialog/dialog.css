@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 2022, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+
+/** The dialog container and its overlay fills entire window */
+.sfdc-dialog-container,
+.sfdc-dialog-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/** Keep dialog container on top of the page, use flex container to easily center dialog. */
+.sfdc-dialog-container {
+	z-index: 50100;
+	display: flex;
+}
+
+/** Dialog is hidden */
+.sfdc-dialog-container[aria-hidden='true'] {
+	display: none;
+}
+
+/** The overlay/mask of the dialog */
+.sfdc-dialog-overlay {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/** The main content of the dialog. Center in page (vert & hor) */
+.sfdc-dialog-content {
+	margin: auto;
+	z-index: 50101;
+	position: relative;
+	padding: 1em 2em 1em 2em;
+	border-radius: 4px;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+	background-color: rgb(255, 255, 255);
+	color: rgb(24,24,24);
+	font-family: 'Salesforce Sans', Arial, serif;
+	min-width: 250px;
+	max-width: 50vw;
+}
+
+/** The message text of the dialog */
+.sfdc-dialog-content > p {
+	display: block;
+	overflow-y: auto;
+	max-height: 50vh;
+}
+
+/** The input for a prompt dialog */
+.sfdc-dialog-content > input {
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+/** The container of the buttons on bottom of dialog */
+.sfdc-dialog-content > .sfdc-dialog-buttons {
+	text-align: right;
+}
+
+/** A button in the bottom of the dialog */
+.sfdc-dialog-content > .sfdc-dialog-buttons > button {
+	font-family: inherit;
+	font-weight: normal;
+	border: 1px solid rgb(201,201,201);
+	border-radius: 3px;
+	background:rgb(255, 255, 255);
+	color: rgb(1,118,211);
+	line-height: 1.675rem;
+	padding: 0px 12px;
+	margin-left: 4px;
+}
+
+/** A button on hover */
+.sfdc-dialog-content > .sfdc-dialog-buttons > button:hover {
+	background-color: rgb(243,243,243);
+	color: rgb(1,68,134);
+}
+
+/** A primary button, e.g. "OK" */
+.sfdc-dialog-content > .sfdc-dialog-buttons > button.sfdc-dialog-button-primary {
+	background-color: rgb(1,118,211);
+	border: 1px solid rgb(1,118,211);
+	text-transform: capitalize;
+	color: rgb(255,255,255);
+}
+
+/** A primary button on hover, e.g. "OK" */
+.sfdc-dialog-content > .sfdc-dialog-buttons > button.sfdc-dialog-button-primary:hover {
+	background-color: rgb(53,93,150);
+	border: 1px solid rgb(24,107,184);
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>old prof.Featured:Getting Started</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Getting Started</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription>Get up and running quickly with advice from the Community.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>old prof.Featured:Solar</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Solar</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription>Energy production from the solar systems most abundant source. From panels to inverters to passive systems, this is your source.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>old prof.Featured:Storage</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Storage</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription>Flexible battery banks and energy management solutions to balance generation capacity with consumption.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>old prof.Featured:Wind</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Wind</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription>High output wind systems designed to help optimize your renewables mix.</topicDescription>
+    </managedTopic>
+</ManagedTopics>

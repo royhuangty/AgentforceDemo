@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Quando a opção Aprovações arquivadas é habilitada, isso indica que esta Aprovação está arquivada</help>
+        <label><!-- Archived --></label>
+        <name>sbaa__Archived__c</name>
+    </CustomFieldTranslation>

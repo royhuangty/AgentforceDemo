@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- ID of the Email Template associated with Approval Requests --></help>
+        <label><!-- Request Template Id --></label>
+        <name>sbaa__RequestTemplateId__c</name>
+    </CustomFieldTranslation>

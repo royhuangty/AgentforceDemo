@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina o que é cobrado com base no dia da próxima data de faturamento da semana.</help>
+        <label><!-- Target Day Of Week --></label>
+        <name>blng__TargetDayOfWeek__c</name>
+    </CustomFieldTranslation>

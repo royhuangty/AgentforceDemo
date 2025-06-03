@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die gültige Bankleitzahl der Bank, wird auch als BLZ bezeichnet.</help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </CustomFieldTranslation>

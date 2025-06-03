@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Dimensions within an MDQ Product that all each segment to be priced independently. Each Product may contain several Price Dimensions. Yearly Price Dimensions are treated as Subscriptions. --></help>
+        <label><!-- Price Dimension --></label>
+        <name>SBQQ__Dimension__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </CustomFieldTranslation>

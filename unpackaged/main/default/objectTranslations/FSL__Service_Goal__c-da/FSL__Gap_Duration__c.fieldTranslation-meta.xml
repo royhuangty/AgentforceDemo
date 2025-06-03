@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Angiv antallet af minutter, der repræsenterer et ledigt ophold mellem serviceaftaler. Denne målsætning minimerer huller, der er lig med eller større end den angivne værdi.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

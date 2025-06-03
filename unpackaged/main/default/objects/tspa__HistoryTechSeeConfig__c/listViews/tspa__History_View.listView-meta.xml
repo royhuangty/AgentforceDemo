@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__History_View</fullName>
+    <columns>NAME</columns>
+    <columns>tspa__Value__c</columns>
+    <columns>tspa__Data_Type__c</columns>
+    <columns>tspa__Description__c</columns>
+    <columns>tspa__Label__c</columns>
+    <columns>tspa__Sort_Order__c</columns>
+    <columns>tspa__Field_Api_Name__c</columns>
+    <columns>tspa__FaceMeet__c</columns>
+    <columns>tspa__Video_Session__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>History View</label>
+</ListView>

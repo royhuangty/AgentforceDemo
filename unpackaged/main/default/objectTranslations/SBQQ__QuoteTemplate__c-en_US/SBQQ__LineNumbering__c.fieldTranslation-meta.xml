@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify how to number line items on generated documents. &quot;Start at quote&quot; numbers all lines sequentially across groups (if any). &quot;Start at group&quot; resets numbers within each group. --></help>
+        <label><!-- Line Numbering --></label>
+        <name>SBQQ__LineNumbering__c</name>
+        <picklistValues>
+            <masterLabel>Start at group</masterLabel>
+            <translation><!-- Start at group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start at quote</masterLabel>
+            <translation><!-- Start at quote --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

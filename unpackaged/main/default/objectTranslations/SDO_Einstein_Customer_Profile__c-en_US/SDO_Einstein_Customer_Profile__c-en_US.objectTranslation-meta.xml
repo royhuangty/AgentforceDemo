@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Profile</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Profile</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Customer Profile Layout</layout>
+        <sections>
+            <label><!-- Payment --></label>
+            <section>Payment</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

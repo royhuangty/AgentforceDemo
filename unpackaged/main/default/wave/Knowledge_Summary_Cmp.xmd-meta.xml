@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>Pct_Articles_with_En_2.B</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Pct Engagement</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Cases without Attachments or Views</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_2.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Views</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_2.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments or Views</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_2.D</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Total Cases</label>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_2.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Attachments</label>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_2.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Engagements</label>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Engagements</label>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Attachments</label>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_1.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Engagements</label>
+        <sortIndex>10</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Attachments</label>
+        <sortIndex>11</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Total Cases</label>
+        <sortIndex>12</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_1.D</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments</label>
+        <sortIndex>13</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_1.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments or Views</label>
+        <sortIndex>14</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Views</label>
+        <sortIndex>15</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Cases without Attachments or Views</label>
+        <sortIndex>16</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Attachments</label>
+        <sortIndex>17</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_2.B</field>
+        <isDerived>false</isDerived>
+        <label>Engagements</label>
+        <sortIndex>18</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_3.A</field>
+        <isDerived>false</isDerived>
+        <label>Attachments</label>
+        <sortIndex>19</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_Attachme_3.B</field>
+        <isDerived>false</isDerived>
+        <label>Engagements</label>
+        <sortIndex>20</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_3.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Engagements</label>
+        <sortIndex>21</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_3.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Knowledge Attachments</label>
+        <sortIndex>22</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Interactio_3.A</field>
+        <isDerived>false</isDerived>
+        <label>Total Cases</label>
+        <sortIndex>23</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_3.D</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments</label>
+        <sortIndex>24</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_3.C</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Attachments or Views</label>
+        <sortIndex>25</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_3.B</field>
+        <isDerived>false</isDerived>
+        <label>Cases with Views</label>
+        <sortIndex>26</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Handle_Time_3.A</field>
+        <isDerived>false</isDerived>
+        <label>Cases without Attachments or Views</label>
+        <sortIndex>27</sortIndex>
+    </measures>
+    <measures>
+        <field>Pct_Articles_with_En_1.B</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Pct Engagement</label>
+        <sortIndex>28</sortIndex>
+    </measures>
+    <measures>
+        <field>Pct_Articles_with_En_3.B</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Pct Engagement</label>
+        <sortIndex>29</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Knowledge_Summary_Cmp</waveVisualization>
+</WaveXmd>

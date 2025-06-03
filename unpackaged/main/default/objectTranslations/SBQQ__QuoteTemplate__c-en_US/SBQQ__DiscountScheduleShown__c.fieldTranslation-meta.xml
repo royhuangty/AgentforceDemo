@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Choose how to display discount schedules on the quote document. Per Quote Line will show the discount schedule and Tiers right-aligned under each Quote Line. --></help>
+        <label><!-- Show Discount Schedule --></label>
+        <name>SBQQ__DiscountScheduleShown__c</name>
+        <picklistValues>
+            <masterLabel>Per Quote Line</masterLabel>
+            <translation><!-- Per Quote Line --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

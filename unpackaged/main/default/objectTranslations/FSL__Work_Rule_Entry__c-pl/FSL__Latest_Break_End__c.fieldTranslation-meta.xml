@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Liczba minut od początku dostępności środka usługowego do najpóźniejszej dozwolonej godziny zakończenia przerwy. Na przykład: wpisz 300, by zaplanować przerwę na obiad nie więcej niż pięć godzin po rozpoczęciu dnia.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

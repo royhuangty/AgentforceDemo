@@ -1,0 +1,24 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Login",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "forgotPasswordLabel" : "¿Ha olvidado su contraseña?",
+          "loginButtonLabel" : "Iniciar sesión",
+          "passwordLabel" : "Contraseña",
+          "selfRegisterLabel" : "¿No es miembro?",
+          "usernameLabel" : "Nombre de usuario"
+        },
+        "id" : "c8b8dbe7-71f2-4c7f-a434-c7c7383c6acc"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Iniciar sesión"
+        },
+        "id" : "dc1dae68-48f5-43bb-8109-540c0d62e316"
+      } ]
+    }
+  },
+  "urlName" : "login"
+}

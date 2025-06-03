@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Determines what gets billed.
+        Active order products, usage summaries, or billing transactions with a Next Billing Date/Override Next Billing Date before or equal to the Target Date will be invoiced. --></help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

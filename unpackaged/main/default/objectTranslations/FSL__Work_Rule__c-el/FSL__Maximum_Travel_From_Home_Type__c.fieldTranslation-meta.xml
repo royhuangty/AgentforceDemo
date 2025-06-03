@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Maximum Travel From Home Type --></label>
+        <name>FSL__Maximum_Travel_From_Home_Type__c</name>
+        <picklistValues>
+            <masterLabel>Distance</masterLabel>
+            <translation>Απόσταση</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Time</masterLabel>
+            <translation>Χρόνος μεταφοράς</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

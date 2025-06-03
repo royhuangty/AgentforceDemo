@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Matches the quote line start date by default. If blank, it will match the contract start date. --></help>
+        <label><!-- Subscription Start Date --></label>
+        <name>SBQQ__SubscriptionStartDate__c</name>
+    </CustomFieldTranslation>

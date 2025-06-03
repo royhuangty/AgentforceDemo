@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- User Type --></label>
+        <name>FSL__User_Type__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation>Správce</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation>Agent</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation>Komunita</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatcher</masterLabel>
+            <translation>Odesílatel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource</masterLabel>
+            <translation>Zdroj</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

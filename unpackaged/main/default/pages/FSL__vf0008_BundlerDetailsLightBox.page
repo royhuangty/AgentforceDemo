@@ -1,0 +1,348 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment"  lightningStylesheets="true" extensions="FSL.ctrl008_BundlerLightboxExt">
+
+	<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<script>
+
+		$(function() {
+
+            var allLinks = $('a');
+            allLinks.off('click');
+            var removeSelectedButtton = $('.removeSelected');
+            removeSelectedButtton.prop('disabled', true);
+
+            var saId = "{!ServiceAppointment}";
+
+            // Get work type skills
+            Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.ctrl008_BundlerLightboxExt.getWorkOrdersById}", saId ,function(res) {
+       //         Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.ctrl008_BundlerLightboxExt.getWorkOrders}" ,function(res) { 
+                if(res)
+                res.forEach(w =>  {
+                    if (w.SkillRequirements && ($('.' + w.Id).length > 0)) {
+                        var skills = [];
+                        for (let i=0; i < w.SkillRequirements.length; i++) {    
+                            skills.push(w.SkillRequirements[i].Skill.MasterLabel);  
+                        }
+                        $('.' + w.Id).text(skills);
+                        $('.' + w.Id).attr('title', skills);  
+                    }
+                });
+            });
+
+            // normal, tabbed view
+            for (var i=0; i<allLinks.length; i++) {
+
+                var currentLink = $(allLinks[i]);
+
+                // if the "show X more" is clicked, need to reattch handles as the DOM is destroyed and rebuilt
+                if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('showMoreList') > -1))) {
+
+                    (function(j) {
+                        $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                            e.preventDefault();
+                            window.parent.openConsoleTabFromModal(e.data.url);
+                            return;
+                        });
+                    }(i));
+
+                    continue;
+                }
+
+                currentLink.attr('target','_blank');
+            }
+
+
+            window.navigateToUrl = function(url) {
+                if (window.parent.sforce.console.isInConsole()) {
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                } else {
+                    window.open(url);
+                }
+            };
+
+            // prevent popups on lookup fields
+            window.LookupHoverDetail.getHover = function() {
+                return {
+                    show: function() {},
+                    hide: function() {},
+                }
+            };
+
+            window.detachSAFromBundle = function(ids, form, obj) {
+                let idsOfSelectAll = $('.saCheckbox').get().map(x => x.getAttribute('value'));
+                let allChecked = $('.saCheckbox:checkbox:checked');
+                let removeButton = $(obj).hasClass('removeButton');
+                let doesDeleteEmptyBundles = {!IF(doesDeleteEmptyBundles, true, false)};
+
+                const idsArr = Array.isArray(ids) ? ids : [ids];
+                const confirmAlert = (
+                    (allChecked.length === idsOfSelectAll.length && !removeButton) ||
+                    (idsOfSelectAll.length === 1 && removeButton)) && form === 'rerenderForm1'
+                    ? (doesDeleteEmptyBundles === true
+                            ? confirm("{!$Label.AreYouSureYouWantToRemoveFromBundler}")
+														: confirm("Removing all bundle members creates an empty bundle. Do you want to continue?")
+                    )
+                    : true;
+
+                if (confirmAlert) {
+                    Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.ctrl008_BundlerLightboxExt.detachSAFromBundle}", idsArr ,function(result,event){
+                        
+                        if(result &&  result.debugMode) {
+                            console.log('---detachSAFromBundle --- ');
+                            console.log(result);
+
+                            for (const property in result) {
+                                console.log(`${property}: ${result[property]}`);
+                            }
+
+                        }
+
+                        let reloadSpeed = 0;
+
+                         if (!result || result.REMOVE_STATUS != 'SUCCESS' || result.bundleStatus == 'BUNDLE_FAILED') {
+                             
+                            showMessage('We couldn\'t remove the service appointments from the bundle.');
+                            reloadSpeed = 3000; // when showing error msg, we need to let the user see it.
+
+                         }
+
+                        if (event.status) {                            
+                            switch(form) {
+                                case "rerenderForm1":
+
+                                    setTimeout(() => { rerenderForm1(); }, reloadSpeed);
+                                    
+                                    break;
+                                case "rerenderForm2":
+
+                                    setTimeout(() => { rerenderForm2(); }, reloadSpeed);
+
+                                    break;
+                                default:
+                                    return;
+                            }
+                        } else {
+                            console.log(event.message); 
+                        }    
+                    });
+                } else {
+                    return;
+                } 
+            }
+
+            window.detachSAFromBundleWithCheckbox = function(rerenderForm) {
+                let idsOfSelectAll = $('.saCheckbox').get().map(x => x.getAttribute('value'));
+                let allChecked = $('.saCheckbox:checkbox:checked');
+                let saIdsList = [];
+
+                if (allChecked.length == idsOfSelectAll.length) {
+                    saIdsList = idsOfSelectAll;
+                } else {
+                    saIdsList = $('.saCheckbox:checkbox:checked').get().map(x => x.getAttribute('value'));
+                }
+                detachSAFromBundle(saIdsList, rerenderForm, this);
+            }
+
+            window.selectAllRecords = function(c) {
+                let allCheckbox = $('input[type=checkbox].saCheckbox');
+                allCheckbox.prop("checked", $(c).prop("checked"));
+
+                if ($(allCheckbox).prop("checked")) {
+                    $('.removeSelected').prop('disabled', false);
+	            } else {
+                    $('.removeSelected').prop('disabled', true);
+                }
+            }
+
+            window.selectSAcheckbox = function (id) {
+                let selectAllCheckbox = $('#selectAll');
+                let allChecked = $('.saCheckbox:checkbox:checked');
+                let idsOfSelectAll = $('.saCheckbox').get().map(x => x.getAttribute('value'));
+                            
+                if (!$(id).prop("checked")) {
+                    selectAllCheckbox.prop("checked", false);
+                    if (allChecked.length > 0) {
+                        if (allChecked.length == idsOfSelectAll.length) {
+                            selectAllCheckbox.prop("checked", true);
+                        }
+                        $('.removeSelected').prop('disabled', false);
+                    } else {
+                        $('.removeSelected').prop('disabled', true);
+                    }
+	            } 
+            }
+
+        });
+
+    </script>
+
+	<style>
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+        }
+        
+        body .pbBody .slds-vf-data-table thead th {
+            background-color: #fff !important;
+        }
+		
+		body .pbBottomButtons {
+			display: none;
+		}
+
+		.pbSubheader h3 {
+			display: inline-block;
+		}
+
+		.shadowDiv {
+			display: none;
+        }
+        
+        .recordNumber {
+            color: #54698d;
+        }
+
+        .anLabel {
+            margin-left: 56px;
+        }
+        .anLink {
+            margin-left: 15px;
+            font-size: 12px;
+        }
+        .anLabelClassic {
+            margin-left: 65px;
+        }
+        .anLinkClassic {
+            margin-left: 15px;
+            font-weight: 400;
+            font-size: 12px;
+            padding-left: 3px
+        }
+        .bpLink {
+            font-size: .875rem;
+            margin-left: 15px;
+        }
+        .truncate {
+            width: 114px;
+            overflow: hidden;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+	</style>
+
+		<apex:form rendered="{!ServiceAppointment['IsBundleMember'] == true}" id="Form2">
+            <apex:actionFunction action="{!refresh}" name="rerenderForm2" rerender="Form2" immediate="true" oncomplete="$('.removeSelected').prop('disabled', true);"/>
+            
+            <apex:pageBlock mode="maindetail">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!refresh}" value="{!$Label.FSL__Refresh}"/>
+                </apex:pageBlockButtons>
+			    <apex:pageBlockSection title="{!$Label.FSL__BundlerDetails}" columns="2">
+                    <apex:outputLabel styleClass="{!anLabelCss}">{!$Label.FSL__AppointmentNumber}
+                        <apex:outputLink styleClass="{!anLinkCss}" value="/{!bundleService.Id}" target="_blank">{!bundleService.AppointmentNumber}</apex:outputLink>
+                    </apex:outputLabel>
+					<apex:repeat value="{!bundlerLightboxFieldsetList}" var="d">
+                        <apex:outputField value="{!bundleService[d]}" rendered="{!IF(d == 'AppointmentNumber' || d == 'BundlePolicyId' && isNativeMode == true, false, true)}"/>
+                    </apex:repeat>
+				</apex:pageBlockSection>
+            </apex:pageBlock>
+            
+            <apex:pageBlock title="{!$Label.FSL__AdditionalBundleMembers}" id="bundleMembersSibilingsBlock">
+                <apex:pageBlockButtons rendered="{!bundleMemberSiblings.size > 0}">
+                    <apex:commandButton value="{!$Label.FSL__RemoveMembers}" styleClass="removeSelected" onclick="detachSAFromBundleWithCheckbox('rerenderForm2'); return false;" rendered="{!bundleMemberSiblings.size > 0}"/>
+                </apex:pageBlockButtons>
+                <apex:variable var="i" value="{!1}"/>
+                <apex:pageBlockTable value="{!bundleMemberSiblings}" var="sa_siblings" rendered="{!bundleMemberSiblings.size > 0}">   
+                    <apex:column >
+                        <apex:outputText value="{!i}" styleClass="recordNumber"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">
+                            <input type="checkbox" onclick="selectAllRecords(this)" id="selectAll"/>
+                        </apex:facet>
+                        <input type="checkbox" onclick="selectSAcheckbox('{!sa_siblings.Id}')" value='{!sa_siblings.Id}' class="saCheckbox"/>
+                    </apex:column>     
+                    <apex:column headerValue="{!$Label.FSL__Action}">
+                        <apex:outputLink title="{!$Label.FSL__EditRecord} {!i} - {!sa_siblings.AppointmentNumber}" value="/lightning/r/{!sa_siblings.id}/edit?">{!$Label.FSL__Edit}</apex:outputLink>&nbsp;|&nbsp;
+                        <apex:outputLink title="{!$Label.FSL__RemoveRecord} {!i} - {!sa_siblings.AppointmentNumber}" target="_self" onclick="detachSAFromBundle('{!sa_siblings.Id}', 'rerenderForm2', this); return false;">{!$Label.FSL__RemoveAction}</apex:outputLink>
+                        <apex:variable var="i" value="{!i + 1}"/>
+                    </apex:column>
+					<apex:column headerValue="{!$Label.FSL__AppointmentNumber}">
+						<apex:outputLink value="/{!sa_siblings.Id}" target="_blank">{!sa_siblings.AppointmentNumber}</apex:outputLink>
+					</apex:column>
+					<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Bundle_Members_Siblings}" var="d">
+                        <apex:column rendered="{!IF(OR(d == 'AppointmentNumber', d == 'ParentRecordId'), false, true)}" value="{!sa_siblings[d]}"/>
+                    </apex:repeat>
+                    <apex:column headerValue="{!$Label.FSL__RequiredSkills}">
+                        <span class="truncate skills {!sa_siblings['ParentRecordId']}" title=""></span>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!bundleMemberSiblings}" var="sa_siblings" rendered="{!bundleMemberSiblings.size = 0}">   
+                    <apex:column headerValue="{!$Label.FSL__No_records}"/>
+                </apex:pageBlockTable>
+			</apex:pageBlock>
+
+        </apex:form>
+
+        
+		<apex:form rendered="{!ServiceAppointment['IsBundle'] == true}" id="Form1">
+
+            <apex:actionFunction name="showMessage" action="{!showMessage}" rerender="messages">
+                <apex:param name="messageName" assignTo="{!messageName}" value="" />
+            </apex:actionFunction>
+                
+            <apex:actionFunction action="{!refresh}" name="rerenderForm1" rerender="Form1" immediate="true" oncomplete="$('.removeSelected').prop('disabled', true);"/>
+            <apex:pageBlock mode="maindetail" rendered="{!IF(AND(bundlePolicyFieldExist == true , isNativeMode == false), true, false)}">
+                <apex:pageBlockSection title="{!$Label.FSL__BundleDetails}" columns="2">
+                    <apex:outputLabel styleClass="anLabel">{!$Label.FSL__BundlePolicyName}
+                        <!-- <apex:outputLink styleClass="bpLink" value="/{!bundleService['BundlePolicyId']}" target="_blank">{!ServiceAppointment.BundlePolicy.Name}</apex:outputLink> -->
+                        <apex:outputLink styleClass="bpLink" value="/{!bundleService['BundlePolicyId']}" target="_blank">{!$Label.FSL__BundleOpenPolicy}</apex:outputLink>
+                    </apex:outputLabel>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock title="{!$Label.FSL__BundleMembers}"> 
+
+                <apex:pageMessages id="messages" /> 
+
+                <apex:pageBlockButtons rendered="{!bundleChilds.size > 0}">
+                    <apex:commandButton value="{!$Label.FSL__RemoveMembers}" styleClass="removeSelected" onclick="detachSAFromBundleWithCheckbox('rerenderForm1'); return false;" rendered="{!bundleChilds.size > 0}"/>
+                    <apex:commandButton action="{!refresh}" value="{!$Label.FSL__Refresh}"/>
+                </apex:pageBlockButtons>
+                <apex:variable var="i" value="{!1}"/>
+                <apex:pageBlockTable value="{!bundleChilds}" var="sa_members" rendered="{!bundleChilds.size > 0}">   
+                    <apex:column >
+                        <apex:outputText value="{!i}" styleClass="recordNumber"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">
+                            <input type="checkbox" onclick="selectAllRecords(this)" id="selectAll"/>
+                        </apex:facet>
+                        <input type="checkbox" onclick="selectSAcheckbox('{!sa_members.Id}')" value='{!sa_members.Id}' class="saCheckbox"/>
+                    </apex:column> 
+                    <apex:column headerValue="{!$Label.FSL__Action}">
+                        <apex:outputLink title="{!$Label.FSL__EditRecord} {!i} - {!sa_members.AppointmentNumber}" value="/lightning/r/{!sa_members.id}/edit">{!$Label.FSL__Edit}</apex:outputLink>&nbsp;|&nbsp;
+                        <apex:outputLink title="{!$Label.FSL__RemoveRecord} {!i} - {!sa_members.AppointmentNumber}" styleClass="removeButton" target="_self" onclick="detachSAFromBundle('{!sa_members.Id}', 'rerenderForm1', this); return false;" >{!$Label.FSL__RemoveAction}</apex:outputLink>
+                        <apex:variable var="i" value="{!i + 1}"/>
+                    </apex:column>
+					<apex:column headerValue="{!$Label.FSL__AppointmentNumber}">
+						<apex:outputLink value="/{!sa_members.Id}" target="_blank">{!sa_members.AppointmentNumber}</apex:outputLink>
+					</apex:column>
+					<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Bundle_Members}" var="d">
+                        <apex:column rendered="{!IF(OR(d == 'AppointmentNumber', d == 'ParentRecordId'), false, true)}" value="{!sa_members[d]}"/>
+                    </apex:repeat>
+                    <apex:column headerValue="{!$Label.FSL__RequiredSkills}">
+                        <span class="truncate skills {!sa_members['ParentRecordId']}" title=""></span>
+                    </apex:column>
+                </apex:pageBlockTable>
+                
+                <apex:pageBlockTable value="{!bundleChilds}" var="sa_members" rendered="{!bundleChilds.size = 0}">   
+                    <apex:column headerValue="{!$Label.FSL__No_records}"/>
+                </apex:pageBlockTable>
+			</apex:pageBlock>
+		</apex:form>
+
+        <!--<apex:relatedList list="Service_Appointments1__r" rendered="{!ServiceAppointment.IsBundleMember == false}"/> -->
+        
+
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Zadajte číslo, ak chcete obmedziť počet ďalších servisných prostriedkov, ktoré možno pridať do tímu. Ak je možné pridať ľubovoľný počet servisných prostriedkov, nechajte prázdne.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

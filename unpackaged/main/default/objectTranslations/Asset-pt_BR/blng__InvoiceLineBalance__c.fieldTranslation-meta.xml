@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>A soma de todos os saldos de linha de fatura publicados para este ativo.</help>
+        <label><!-- Invoice Line Balance --></label>
+        <name>blng__InvoiceLineBalance__c</name>
+    </CustomFieldTranslation>

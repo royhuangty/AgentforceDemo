@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ReturnOrder$Name</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$Name</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$OrderSummary</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$Status</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$Account</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$Contact</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$Id</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$ReasonForReturn</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$Product2</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$Product2.StockKeepingUnit</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ReturnOrder.ReturnOrderLineItems$QuantityReceived</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ReturnOrder.ReturnOrderLineItems$QuantityExpected</field>
+    </columns>
+    <description>ES 12/14/21 IDO</description>
+    <format>Tabular</format>
+    <name>RMA Returns</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SDO_OMS_Returns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ReturnOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

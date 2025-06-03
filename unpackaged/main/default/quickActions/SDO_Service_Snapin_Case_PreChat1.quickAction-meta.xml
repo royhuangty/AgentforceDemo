@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Snapins_Case_PrechatQuickAction_08h1N0000004Dr6</description>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+    </fieldOverrides>
+    <label>SDO_Service_Snapin_Case_PreChat1</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsTopToBottom</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Subject</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Case</targetObject>
+    <type>Create</type>
+</QuickAction>

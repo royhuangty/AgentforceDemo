@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter the number of minutes that represent an idle time gap between service appointments. This objective minimizes gaps that are equal to or higher than the entered value. --></help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

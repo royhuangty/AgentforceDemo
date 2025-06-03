@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Panels</label>
+                <name>Panels</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Mounting Racks</label>
+                <name>Mounting_Racks</name>
+            </dataCategory>
+            <label>Solar Power</label>
+            <name>Solar_Power</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Wind Turbines</label>
+                <name>Wind_Turbines</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Turbine Accessories</label>
+                <name>Turbine_Accessories</name>
+            </dataCategory>
+            <label>Wind Generation</label>
+            <name>Wind_Generation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Services</label>
+            <name>Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Kits</label>
+            <name>Kits</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

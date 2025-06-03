@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Partner Certification --></label>
+        <name>SDO_Partner_Certification__c</name>
+        <picklistValues>
+            <masterLabel>Certified Partner</masterLabel>
+            <translation><!-- Certified Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elite Partner</masterLabel>
+            <translation><!-- Elite Partner --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Markup amount on this item. This value is automatically calculated by applying markup rate or absolute amount to the product cost. --></help>
+        <label><!-- Markup --></label>
+        <name>SBQQ__Markup__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>sfsp__Type__c</name>
+        <picklistValues>
+            <masterLabel>Allocation Metric</masterLabel>
+            <translation><!-- Allocation Metric --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assignment Object</masterLabel>
+            <translation><!-- Assignment Object --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reference Field</masterLabel>
+            <translation><!-- Reference Field --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

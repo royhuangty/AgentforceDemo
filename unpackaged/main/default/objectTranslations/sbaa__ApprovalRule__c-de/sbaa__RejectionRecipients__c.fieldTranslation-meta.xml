@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wählen Sie einen oder mehrere Empfänger für die Benachrichtigung per Ablehnungs-E-Mail aus.</help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Erstmalig eingereicht von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Datensatz erstellt von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Datensatzinhaber</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

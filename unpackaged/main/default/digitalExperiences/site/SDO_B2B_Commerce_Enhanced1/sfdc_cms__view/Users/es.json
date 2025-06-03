@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Users",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "c1800536-0acc-4fe4-9413-6cd18a6c8330"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Usuarios"
+        },
+        "id" : "627c1b0f-6e89-412f-bf54-11197fd6b510"
+      } ]
+    }
+  },
+  "urlName" : "users"
+}

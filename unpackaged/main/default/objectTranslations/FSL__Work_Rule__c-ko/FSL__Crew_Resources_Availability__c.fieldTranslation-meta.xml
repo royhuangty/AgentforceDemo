@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>이 옵션을 선택하면 작업 주문 또는 작업 주문 행 항목의 직원 최소 규모 필드를 실제 사용 가능한 서비스 직원 구성원과 비교합니다. 
+선택하지 않으면 직원 최소 규모를 서비스 직원의 직원 규모 필드와 비교합니다.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

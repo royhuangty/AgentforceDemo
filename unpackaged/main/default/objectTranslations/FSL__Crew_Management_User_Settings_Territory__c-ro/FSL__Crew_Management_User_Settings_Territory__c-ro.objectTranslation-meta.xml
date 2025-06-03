@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Teritoriul în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Teritoriu în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Teritoriile în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Teritorii în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Teritoriului în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Teritoriului în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Teritoriilor în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Teritoriilor în setările de utilizator referitoare la gestionarea echipei</value>
+    </caseValues>
+    
+    
+    <gender>Neuter</gender>
+    <nameFieldLabel>Nume teritoriu în setările utilizator re</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The API Name of a field that evaluates to TRUE when a record should be included in the plotted results --></help>
+        <label><!-- Inclusion Field --></label>
+        <name>bmpyrckt__Inclusion_Field__c</name>
+    </CustomFieldTranslation>

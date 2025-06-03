@@ -1,0 +1,105 @@
+<apex:page >Hello vf 017</apex:page><!--
+<apex:page StandardController="Service__c" extensions="Ctrl017_IncompleteReason">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <apex:stylesheet value="{!URLFOR($Resource.salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+        <apex:stylesheet value="{!$Resource.GeneralActionStyles}" />
+        <apex:stylesheet value="{!$Resource.vf015_ChangeServiceStatusCss}" />
+        <apex:includeScript value="{!$Resource.jQuery}" />
+        <apex:includeScript value="{!$Resource.dropdown}" />
+        <apex:includeScript value="/canvas/sdk/js/publisher.js" />
+        <script type='text/javascript' src='/support/console/31.0/integration.js' />
+        <apex:includeScript value="{!$Resource.quickaction_utils_js}" />
+        <apex:includeScript value="{!$Resource.VF017_JS}" />
+        <script type="text/javascript">
+        	
+            Sfdc.canvas.publisher.subscribe({name: "publisher.showPanel", onData:function(e) {
+                Sfdc.canvas.publisher.publish({name:"publisher.setValidForSubmit", payload:"true"});
+            }});
+
+            Sfdc.canvas.publisher.subscribe({ name: "publisher.post", onData: function(e) {
+                mobileViewPrepareToSave();
+            }});
+
+            var RemoteActions = {
+                updateService : '{!$RemoteAction.Ctrl017_IncompleteReason.updateService}'
+            };
+            $(document).ready(function(){
+                var status ='';
+                if(typeof Sfdc !== "undefined" && typeof sforce !== 'undefined' && sforce.one!==undefined){
+                    status=getQueryVariable('status');
+                }
+                else{
+                     status= $('.ToStatusVal').text();
+                }
+             
+
+               serviceWrapper.toStatus=status;
+                openReasonInput();
+            });
+
+        </script>
+    </head>
+
+
+    <body>
+
+    	<div id='PinnedService' style="display:none">
+	    	<i class="fa fa-thumb-tack"></i>
+			<div id="PinnedText">{!$Label.PinnedServiceChangeStatus}</div>
+    	</div>
+        <div style="display:none">
+            <span class="serviceId">{!Service__c.Id}</span>
+            <span class="serviceStatus">{!Service__c.Status__c}</span>
+            <span class="serviceResource">{!Service__c.Resource__c}</span>
+            <span class="servicePinned">{!Service__c.Pinned__c}</span>
+            <span class="incompletedValue">{!incompletedVal}</span>
+             <span class="ToStatusVal">{!ToStatusVal}</span>
+            <span class="currentLat"></span>
+            <span class="currentLon"></span>
+        </div>
+
+        <div class="bs" style="display:none">
+
+            <header>
+                <h1>{!$Label.Incomplete_Reason}</h1>
+               <!--  <span id="BackToTheFirstPage">{!$Label.Back}</span>
+                  --><!--
+            </header>
+            <div class="success-msg-container text-center dn">
+                <div id="UpdatedStatusSeccessfully">
+                    <span id="SuccessUpdateMessage" class="sr-only"></span>
+                    <span>{!$Label.Updated_status_successfully}</span>
+                   
+                </div>
+               
+            </div>
+            
+             <div id="UpdatedStatusFailed"  style="display:none">
+           		 <div  class="inputLabel no-legal-statuses " role="alert" style="text-align: center; font-size:15px;"> 
+					<span >{!$Label.FailedToUpdateStatus}</span>	
+				</div>
+			</div>
+        </div>
+            <div id="BackToTheFirstPage">{!$Label.Back}</div>
+            <div class="comment-container dn">
+                <div class="inputLabel">{!$Label.Select_a_reason}</div>
+                <select class="actionSelect">
+                    <apex:repeat value="{!incompleteReason}" var="reason">
+                        <option>{!reason.label}</option>
+                    </apex:repeat>
+                </select>
+                 <div class="other-reason-container">
+                    <span class="empty-reason dn" style="color: #a94442">{!$Label.Please_specify_a_reason}</span>
+                    <textarea class="validatedInput other-reason dn" rows="5" style="width:100%"></textarea>
+            	</div>
+                
+                <div class="save-incomp-btn globalBlueButton">{!$Label.Save}</div>
+	
+            </div>
+             <apex:form >
+                <apex:actionFunction action='{!back}' name="backTest" oncomplete="Back()"/>
+            </apex:form> 
+    </body>
+</apex:page> !-->

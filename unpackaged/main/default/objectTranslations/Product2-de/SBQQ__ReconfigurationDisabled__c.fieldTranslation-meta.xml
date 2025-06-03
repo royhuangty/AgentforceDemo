@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ist dieses Kontrollkästchen aktiviert, kann das Produkt nur beim erstmaligen Hinzufügen zu einem Angebot konfiguriert werden. Benutzer können nach dem Hinzufügen des Produkts auf der Seite &quot;Belegposten bearbeiten&quot; nicht auf &quot;Konfigurieren&quot; klicken.</help>
+        <label><!-- Disable Reconfiguration --></label>
+        <name>SBQQ__ReconfigurationDisabled__c</name>
+    </CustomFieldTranslation>

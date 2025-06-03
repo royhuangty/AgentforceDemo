@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-sl</name>
+    <style>none</style>
+    <subject>Povabilo za vizualnega oddaljenega pomočnika</subject>
+    <textOnly>Pozdravljeni,
+Za vas je načrtovan spletni sestanek na daljavo
+Kliknite gumb »Pridruži se«, da si ogledate podrobnosti sestanka in vstopite v sestanek.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the default field service entitlement to use for this account and all of its assets --></help>
+        <label><!-- Default Field Entitlement --></label>
+        <name>SDO_SFS_Default_Field_Entitlement__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </CustomFieldTranslation>

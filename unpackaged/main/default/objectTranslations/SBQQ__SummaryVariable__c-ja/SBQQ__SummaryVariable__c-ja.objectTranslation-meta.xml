@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>サマリー変数</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Summary Variable Layout</layout>
+        <sections>
+            <label>複合情報</label>
+            <section>Composite Information</section>
+        </sections>
+        <sections>
+            <label>条件情報</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>変数名</nameFieldLabel>
+</CustomObjectTranslation>

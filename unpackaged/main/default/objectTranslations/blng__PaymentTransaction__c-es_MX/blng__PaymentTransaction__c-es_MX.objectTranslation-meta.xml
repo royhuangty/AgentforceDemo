@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transacción de pago</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transacciones de pago</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Payment Transaction Layout</layout>
+        <sections>
+            <label>Detalles de ACH</label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label>Detalles de tarjeta de crédito</label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label>Respuesta de pasarela</label>
+            <section>Gateway Response</section>
+        </sections>
+        <sections>
+            <label>Información de solicitud de pago</label>
+            <section>Payment Request Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de transacción de pago</nameFieldLabel>
+    <quickActions>
+        <label><!-- Attempt Refund &amp; Unlock Invoice --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+</CustomObjectTranslation>

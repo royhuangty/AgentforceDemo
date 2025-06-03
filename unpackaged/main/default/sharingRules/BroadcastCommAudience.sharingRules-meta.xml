@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Broadcast_Communication_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Allows guest community users to view incident management broadcasts.</description>
+        <label>Broadcast Communication Guest User</label>
+        <sharedTo>
+            <guestUser>OldProf3</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>SiteBannerVisibility</field>
+            <operation>equals</operation>
+            <value>GuestUsers</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

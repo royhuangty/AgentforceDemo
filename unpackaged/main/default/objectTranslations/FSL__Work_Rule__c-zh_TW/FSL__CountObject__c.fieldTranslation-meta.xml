@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>包含用於計數之自訂欄位的物件。</help>
+        <label><!-- Count object --></label>
+        <name>FSL__CountObject__c</name>
+        <picklistValues>
+            <masterLabel>Service Appointment</masterLabel>
+            <translation>服務約會</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order</masterLabel>
+            <translation>工作指示</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Order Line Item</masterLabel>
+            <translation>工作指示條列項目</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

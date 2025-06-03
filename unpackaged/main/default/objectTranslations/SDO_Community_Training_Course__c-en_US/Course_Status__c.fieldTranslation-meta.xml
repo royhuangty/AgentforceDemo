@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Course status. Only courses that are Available for Registration should appear to end users. --></help>
+        <label><!-- Course Status --></label>
+        <name>Course_Status__c</name>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available for Registration</masterLabel>
+            <translation><!-- Available for Registration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

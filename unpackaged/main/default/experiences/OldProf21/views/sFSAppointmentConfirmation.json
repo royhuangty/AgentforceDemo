@@ -1,0 +1,88 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "ce14335c-5ebe-4d8d-a521-5d844ffca6ed",
+  "label" : "SFS Appointment Confirmation",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "31985cd0-6da0-4cc3-b440-dbd6735203bb",
+          "columns" : [ {
+            "UUID" : "61b404e9-6100-4152-8088-c90c2fbe698a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "31985cd0-6da0-4cc3-b440-dbd6735203bb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<ol><li><strong style=\"color: rgb(230, 0, 0); font-size: 20px;\">SE: Please replace this component with the Self-Service Scheduling Component and set the values to look like this: </strong></li><li class=\"ql-indent-1\">Operating Hours = Gold Appointments Calendar</li><li class=\"ql-indent-1\">Scheduling Policy = Customer First</li><li class=\"ql-indent-1\">Show Appointment Slots As = Arrival Windows</li><li class=\"ql-indent-1\">Show customer’s name = checked</li><li class=\"ql-indent-1\">Show customer’s address = checked</li><li class=\"ql-indent-1\">Scheduling Horizon Units = Days</li><li class=\"ql-indent-1\">Number of Scheduling Horizon Units = 7</li><li class=\"ql-indent-1\">Allow customers to add notes = checked</li><li class=\"ql-indent-1\">Allow customers to confirm the appointment = checked</li><li class=\"ql-indent-1\">Status After Confirmation = Dispatched</li><li class=\"ql-indent-1\">Statuses That Allow Rescheduling = Scheduled, Dispatched</li><li class=\"ql-indent-1\">Hours Before Appointment to Disable Rescheduling = 0</li><li class=\"ql-indent-1\">Status After Rescheduling = Scheduled</li><li class=\"ql-indent-1\">Let customers cancel appointments = checked</li><li class=\"ql-indent-1\">Statuses That Allow Canceling = Scheduled, Dispatched</li><li class=\"ql-indent-1\">Status After Canceling = Canceled</li></ol><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "63e47193-b10a-46a9-94c5-372966895946",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 18px;\">Your safety is our #1 Priority</strong></p><p><br></p><p><span style=\"font-size: 12px;\">We will send you a photo of your technician on the day of the service visit.</span></p><p><br></p><p><strong style=\"font-size: 18px;\">Covid Statement</strong></p><p><br></p><p><span style=\"color: rgb(68, 68, 68); font-size: 12px;\">We are actively monitoring the coronavirus (COVID-19) situation and have measures in place to ensure we continue to serve our customers in a way that is safe for both customers and our employees. We are committed to serving the needs of our customers while also having the privilege and responsibility of providing an essential service that our communities rely on.</span></p><p><br></p><p><span style=\"color: rgb(68, 68, 68); font-size: 12px;\">To help minimize impact to service, we will continue to refer to guidelines and protocol provided by the&nbsp;</span><a href=\"https://www.cdc.gov/\" rel=\"noopener noreferrer\" target=\"null\" style=\"color: rgb(0, 110, 156); font-size: 12px; background-color: rgb(255, 255, 255);\">CDC</a><span style=\"color: rgb(68, 68, 68); font-size: 12px;\">&nbsp;and local health officials in the areas we serve.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c3064dae-9796-4d16-86f5-be3830d88ba7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 16px; color: rgba(0, 0, 0, 0.91);\">Need a little extra help scheduling your service appointment? That's ok. Feel free to text with us or call us with the ? bubble in the lower part of your screen.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "64fefa3d-11f7-4d32-b88b-b39a4a11d438",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "61b404e9-6100-4152-8088-c90c2fbe698a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e962988e-8504-434b-babb-6953e9843d24",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "SFS Appointment Confirmation"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "42913d67-e87a-40bf-b70d-6d3454085559",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a86ef42a-e09e-4e5b-8503-506f3a4e2ec3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "custom-sfs-appointment-confirmation"
+}

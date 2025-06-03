@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Dentists</fullName>
+        <default>false</default>
+        <label>Dentists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physicians and surgeons</fullName>
+        <default>false</default>
+        <label>Physicians and surgeons</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physician assistants</fullName>
+        <default>false</default>
+        <label>Physician assistants</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physical therapists</fullName>
+        <default>false</default>
+        <label>Physical therapists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Respiratory therapists</fullName>
+        <default>false</default>
+        <label>Respiratory therapists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered nurses</fullName>
+        <default>false</default>
+        <label>Registered nurses</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurse midwives and nurse practitioners</fullName>
+        <default>false</default>
+        <label>Nurse midwives and nurse practitioners</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Health technologists and technicians (all)</fullName>
+        <default>false</default>
+        <label>Health technologists and technicians (all)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dental hygienists</fullName>
+        <default>false</default>
+        <label>Dental hygienists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Diagnostic related technologists and technicians</fullName>
+        <default>false</default>
+        <label>Diagnostic related technologists and technicians</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Licensed practical and licensed vocational nurses</fullName>
+        <default>false</default>
+        <label>Licensed practical and licensed vocational nurses</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Healthcare support occupations (all)</fullName>
+        <default>false</default>
+        <label>Healthcare support occupations (all)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nursing, psychiatric, and home health aides</fullName>
+        <default>false</default>
+        <label>Nursing, psychiatric, and home health aides</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Occupational and physical therapist assistants and aides</fullName>
+        <default>false</default>
+        <label>Occupational and physical therapist assistants and aides</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dental assistants</fullName>
+        <default>false</default>
+        <label>Dental assistants</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phlebotomists</fullName>
+        <default>false</default>
+        <label>Phlebotomists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pharmacists and pharmacy aides</fullName>
+        <default>false</default>
+        <label>Pharmacists and pharmacy aides</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other occupations within the healthcare sector</fullName>
+        <default>false</default>
+        <label>Other occupations within the healthcare sector</label>
+    </standardValue>
+</StandardValueSet>

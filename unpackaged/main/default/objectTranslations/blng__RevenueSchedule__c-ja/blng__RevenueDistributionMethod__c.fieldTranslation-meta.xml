@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益認識ルールで定義されている、複数の期間に収益をどのように分散するかを計算するための方法。</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

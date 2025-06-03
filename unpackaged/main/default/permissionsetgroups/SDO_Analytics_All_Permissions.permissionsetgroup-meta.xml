@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants permissions to all TCRM,Analytics Permissions. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Analytics - Demo Data Tool Permissions</label>
+    <permissionSets>Analytics_Demo_Data_Tool_Standard</permissionSets>
+    <permissionSets>SDO_TCRM_Analytics_Cloud_Integrations</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

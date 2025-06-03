@@ -1,0 +1,47 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mon Compte"
+        },
+        "id" : "b54f6cf3-cf71-4c72-9499-86e19dcfa20f"
+      }, {
+        "attributes" : {
+          "text" : "Historique des commandes"
+        },
+        "id" : "73d4f481-f233-4762-8771-aacf6363b59a"
+      }, {
+        "attributes" : {
+          "text" : "Nous n'avons trouvé aucune commande de cette période."
+        },
+        "id" : "50442c83-e3a2-4ba3-ae7f-30a88c89e6f0"
+      }, {
+        "attributes" : {
+          "text" : "Essayez de modifier vos paramètres de filtre."
+        },
+        "id" : "f8848e17-375c-48da-9d08-2ddd07bfb06a"
+      }, {
+        "attributes" : {
+          "text" : "Continuer mes achats"
+        },
+        "id" : "1896c854-8b78-4876-a1c3-48c66aff4ea6"
+      }, {
+        "attributes" : {
+          "orderSummaryFieldMapping" : "[{\"entity\":\"OrderSummary\",\"name\":\"OrderNumber\",\"label\":\"Numéro de commande\",\"type\":\"Text(255)\",\"expression\":\"{!OrderSummary.OrderSummary.OrderNumber}\"},{\"entity\":\"OrderSummary\",\"name\":\"GrandTotalAmount\",\"label\":\"Total\",\"type\":\"Formula (Currency)\",\"expression\":\"{!OrderSummary.OrderSummary.GrandTotalAmount}\"}]",
+          "reorderButtonLabel" : "Commander à nouveau",
+          "viewDetailsLinkLabel" : "Voir les détails"
+        },
+        "id" : "08cc89ed-766e-4e8d-9228-f19cf9e184ce"
+      }, {
+        "attributes" : {
+          "text" : "Numéro de Commande"
+        },
+        "id" : "1a7d6d02-719d-4203-8e35-8508aec764e3"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

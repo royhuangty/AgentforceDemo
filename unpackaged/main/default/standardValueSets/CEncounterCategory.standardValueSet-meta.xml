@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Ambulatory</fullName>
+        <default>false</default>
+        <label>Ambulatory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emergency</fullName>
+        <default>false</default>
+        <label>Emergency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Home Health</fullName>
+        <default>false</default>
+        <label>Home Health</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inpatient Encounter</fullName>
+        <default>false</default>
+        <label>Inpatient Encounter</label>
+    </standardValue>
+</StandardValueSet>

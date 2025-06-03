@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>サービス予定間のアイドル時間間隔を表す分数を入力します。入力された値以上の間隔を最小限に抑えることを目的としています。</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si está marcado, todas las aprobaciones de este paso se producen en paralelo. Este parámetro solo tiene efecto cuando se utilizan aprobaciones avanzadas con aprobaciones nativas.</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </CustomFieldTranslation>

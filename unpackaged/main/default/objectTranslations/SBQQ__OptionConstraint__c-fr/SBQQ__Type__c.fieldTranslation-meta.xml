@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Sélectionnez le comportement de cette contrainte : Dépendance signifie que l&#39;inclusion est requise, alors qu&#39;Exclusion signifie que la contrainte d&#39;option n&#39;est pas sélectionnée lorsque l&#39;option est contraignante et inversement.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Dependency</masterLabel>
+            <translation>Dépendance</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclusion</masterLabel>
+            <translation>Exclusion</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

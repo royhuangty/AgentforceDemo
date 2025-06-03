@@ -1,0 +1,11 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+Hola,<br>: se ha programado una reunión remota en línea para usted. <br> Haga clic en el botón "Unirse" para ver los detalles de la reunión e ingresar.
+
+<p><a href="{!meeting_url}" target="_blank">Unirse</a></p>
+</body>
+</html>

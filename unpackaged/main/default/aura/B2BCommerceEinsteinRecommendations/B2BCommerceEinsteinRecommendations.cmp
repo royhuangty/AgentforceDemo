@@ -1,0 +1,35 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" controller="recommendationController" access="global">
+    <aura:attribute name="title" type="String" default="B2B Commerce - Einstein Recommendations" required="true" />
+    <aura:attribute name="recommender" type="String" required="true" />
+    <aura:attribute name="anchorValues" type="String" default="" required="false" />
+    <aura:attribute name="uuid" type="String" default=""/>
+    <aura:attribute name="loading" type="boolean" default="false"/>
+    <aura:attribute name="showProducts" type="boolean" default="true"/>
+    <aura:attribute name="products" type="List" default="[]" />
+
+    <!-- Tag needed to import Commerce Activity Tracking-->
+    <commerce:activitiesApi aura:id="activitiesApi" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onLoadComponent}"/>
+
+    <div>
+        <aura:if isTrue="{!v.loading}">LOADING Einstein Recommendations...</aura:if>
+
+        <aura:if isTrue="{!v.showProducts}">
+            <div class="title">{!v.title}</div>
+            <div class="products">
+                <aura:if isTrue="{!not(empty(v.products))}">
+                    <aura:iteration items="{!v.products}" var="product">
+                        <div class="product">
+                            <img data-pid="{!product.id}" onclick="{!c.handleClickProduct}" src="{!product.defaultImage.url}"/>
+                            <a class="name" data-pid="{!product.id}" onclick="{!c.handleClickProduct}">{!product.name}</a>
+                        </div>
+                    </aura:iteration>
+                </aura:if>
+            </div>
+        </aura:if>
+    </div>
+
+    
+
+</aura:component>

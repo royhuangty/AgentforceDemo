@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Eveniment FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Evenimentul FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Evenimente FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Evenimentele FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Evenimentului FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Evenimentului FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Evenimentelor FSLHealth --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Evenimentelor FSLHealth --></value>
+    </caseValues>
+    
+    
+    <gender><!-- Neuter --></gender>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Case field the recommendation will be applied to. Must match the API name of the field (e.g. Name, CustomField__c, etc.). --></help>
+        <label><!-- Recommendation Field --></label>
+        <name>Recommendation_Field__c</name>
+    </CustomFieldTranslation>

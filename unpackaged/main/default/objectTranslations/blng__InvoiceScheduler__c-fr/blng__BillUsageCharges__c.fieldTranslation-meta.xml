@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Déterminez si le type de frais de votre produit de commande est Utilisation.</help>
+        <label><!-- Bill Usage Charges --></label>
+        <name>blng__BillUsageCharges__c</name>
+    </CustomFieldTranslation>

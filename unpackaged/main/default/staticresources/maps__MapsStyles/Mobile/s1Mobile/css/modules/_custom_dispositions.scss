@@ -1,0 +1,174 @@
+#customDis-fieldset {
+    overflow:visible;
+    
+}
+
+.disposition-row {
+    margin-bottom: 12px;
+    
+    .disposition-instruction label {
+        padding:8px;
+        color: #54698d;
+        font-weight:normal;
+        font-size: 16px;
+        padding:8px;
+        border-radius:4px;
+        border: 1px solid #d8dde6;
+        background-color: #f4f6f9;
+        
+        .disposition-instruction-subtext {
+            margin-top:4px;
+            font-size: 12px;
+        }
+    }
+        
+        .disposition-cell-input {
+            position: relative;
+            
+            span.dateFormat {
+                display: none;
+            }
+        }
+    
+    .fieldLabel {
+        font-size: 12px;
+        display: block;
+        color: #54698d;
+        margin-bottom: 4px;
+    }
+    
+    input.get-input {
+        -webkit-appearance: none;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        background-color: #ffffff;
+        background-color: #ffffff;
+        color: #16325c;
+        border: 1px solid #d8dde6;
+        border-radius: 0.25rem;
+        width: 100% !important;
+        -webkit-transition: 0.1s border linear, 0.1s background-color linear;
+        -moz-transition: 0.1s border linear, 0.1s background-color linear;
+        -ms-transition: 0.1s border linear, 0.1s background-color linear;
+        -o-transition: 0.1s border linear, 0.1s background-color linear;
+        transition: 0.1s border linear, 0.1s background-color linear;
+        display: inline-block;
+        padding: 0 14px;
+        line-height: 37px;
+        min-height: 39px;
+        font-size: 16px;
+                
+        &:focus {
+            border-color: #19AAE3;
+            outline: 0;
+            -webkit-outline: 0;
+        }    
+    }
+        
+        textarea.get-input {
+        -webkit-appearance: none;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        background-color: #ffffff;
+        background-color: #ffffff;
+        color: #16325c;
+        border: 1px solid #d8dde6;
+        border-radius: 0.25rem;
+        width: 100% !important;
+        -webkit-transition: 0.1s border linear, 0.1s background-color linear;
+        -moz-transition: 0.1s border linear, 0.1s background-color linear;
+        -ms-transition: 0.1s border linear, 0.1s background-color linear;
+        -o-transition: 0.1s border linear, 0.1s background-color linear;
+        transition: 0.1s border linear, 0.1s background-color linear;
+        display: inline-block;
+        padding: 0 14px;
+        line-height: 37px;
+        min-height: 39px;
+        font-size: 16px;
+                
+        &:focus {
+            border-color: #19AAE3;
+            outline: 0;
+            -webkit-outline: 0;
+        }
+    }   
+    
+    select.get-input {
+        -webkit-appearance: none;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        background-color: #ffffff;
+        background-color: #ffffff;
+        color: #16325c;
+        border: 1px solid #d8dde6;
+        border-radius: 0.25rem;
+        width: 100%;
+        -webkit-transition: 0.1s border linear, 0.1s background-color linear;
+        -moz-transition: 0.1s border linear, 0.1s background-color linear;
+        -ms-transition: 0.1s border linear, 0.1s background-color linear;
+        -o-transition: 0.1s border linear, 0.1s background-color linear;
+        transition: 0.1s border linear, 0.1s background-color linear;
+        display: inline-block;
+        padding: 0 14px;
+        line-height: 37px;
+        min-height: 39px;
+        font-size: 16px;
+        
+        &:focus {
+            border-color: #19AAE3;
+            outline: 0;
+            -webkit-outline: 0;
+        }
+    }
+    
+    .fieldInput[data-type="picklist"] {
+        position: relative;
+        
+        &:after {
+            position:absolute;    
+            top: 11px;
+            right: 14px;     
+            font-family: "ma-icons-2" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; 
+            content: "\e056";
+            font-size: 16px;
+            pointer-events: none;
+            color: #54698d;
+        }
+    }
+    
+    span.dateInput.dateOnlyInput {
+        position: relative;
+        display: block;
+        
+        input {
+            padding-right: 42px;
+        }
+        
+        &:after {
+             position:absolute;    
+            top: 11px;
+            right: 14px;     
+            font-family: "ma-icons-2" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; 
+            content: "\e114";
+            font-size: 16px;
+            pointer-events: none;
+            color: #9faab5;           
+        }
+    }
+}

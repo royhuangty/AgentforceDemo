@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayları --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayım --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarım --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınız --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınız --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayını --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olaylarını --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayımı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarımı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınızı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınızı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayının --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olaylarının --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayımın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarımın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınızın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınızın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayına --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olaylarına --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayıma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarıma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınıza --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınıza --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayından --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olaylarından --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayımdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarımdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınızdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınızdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olayında --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth Olaylarında --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olayımda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth Olaylarımda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olayınızda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth Olaylarınızda --></value>
+    </caseValues>
+    
+    
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt, wie viele Minuten vor Beginn des Kalendertags der Ressource für den Arbeitsweg verfügbar sind (auf Kosten der Ressource).
+Wenn dieses Feld leer gelassen wird, ist ein beliebiger Arbeitsweg vor Beginn des Arbeitstags gültig.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

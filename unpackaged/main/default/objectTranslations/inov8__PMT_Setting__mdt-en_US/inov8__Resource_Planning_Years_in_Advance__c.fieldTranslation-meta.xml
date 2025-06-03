@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The rolling number of years for which the availability is created by the scheduler in advance, so that resource planning can be done in advance for those many number of years --></help>
+        <label><!-- Resource Planning # Years in Advance --></label>
+        <name>inov8__Resource_Planning_Years_in_Advance__c</name>
+    </CustomFieldTranslation>

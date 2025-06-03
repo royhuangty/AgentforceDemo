@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Selecione se deve basear o catálogo de finanças em transações de receita ou em transações de contabilidade.</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </CustomFieldTranslation>

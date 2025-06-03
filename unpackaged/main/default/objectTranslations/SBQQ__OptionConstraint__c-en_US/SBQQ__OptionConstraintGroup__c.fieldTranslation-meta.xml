@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If multiple Option Constraints target the same Constrained Option, putting the Option Constraints in the same group will require ALL Constraining Options to be selected. --></help>
+        <label><!-- Option Constraint Group --></label>
+        <name>SBQQ__OptionConstraintGroup__c</name>
+    </CustomFieldTranslation>

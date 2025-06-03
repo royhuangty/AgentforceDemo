@@ -1,0 +1,997 @@
+<apex:page sidebar="false" title="Maps Live Stop Associations" controller="maps.LiveRemoteFunctions" extensions="maps.LiveAPI">
+
+    <apex:outputPanel layout="none" rendered="{! !featureEnabled }">
+        <c:MissingLicense />
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!featureEnabled}">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.MapsStyles,'LiveTracking/styles/css/ma-page-stop-associations.css')}" /><!--css specific to this page-->
+
+            <c:SpinnerFacet />
+
+            <apex:outputPanel layout="none" rendered="{!pendoEnabled}">
+                <script>
+                    (function(apiKey){
+                        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                        v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                        // Call this whenever information about your visitors becomes available
+                        // Please use Strings, Numbers, or Bools for value types.
+                        pendo.initialize({
+                            visitor: {
+                                id: '{!JSENCODE($User.Id)}',
+                                email: '{!JSENCODE($User.Email)}',
+                                firstName: '{!JSENCODE($User.FirstName)}',
+                                lastName: '{!JSENCODE($User.LastName)}'
+                            },
+                            account: {
+                                id: '{!JSENCODE($Organization.Id)}',
+                                name: '{!JSENCODE($Organization.Name)}'
+                            }
+                        });
+                    })('{!JSENCODE(pendoKey)}');
+                </script>
+            </apex:outputPanel>
+
+            <apex:composition template="maps__LivePageTemplate">
+                <apex:define name="title">
+                    Maps Live
+                </apex:define>
+                
+                <apex:define name="subtitle">
+                Stop Event Associations
+                </apex:define>
+                
+
+                <apex:define name="body">
+
+                    <!-- main content block -->
+                    <div class="slds-col slds-grid" style="height:100%">
+
+                        <div id="stopEventContent" class="slds-col slds-grid" style="width: 100%; display: none">
+                            <div class="slds-grid slds-col">
+
+                                <div class="slds-col slds-size_4-of-12 slds-grid slds-grid_vertical">
+                                    <div class="slds-grid slds-grid_vertical" style="height: 100%;">
+                                        
+                                        <div class="associated-records-header slds-grid slds-p-vertical_medium slds-p-right_small"></div>
+                                        <div class="stop-selection-list slds-col slds-scrollable"></div>
+
+                                        <div class="associated-records-footer slds-p-around_small slds-grid slds-grid_align-center slds-is-relative" style="border-top: 1px solid #dddbda">
+                                            <button class="slds-col slds-button slds-button_neutral" id="search-button" disabled="disabled">
+                                                <span class="slds-button__icon slds-button__icon_left ma-icon ma-icon-search"></span>
+                                                Search for a Record
+                                            </button>
+                                            <section class="slds-popover slds-nubbin_bottom slds-is-absolute" id="search-modal" style="height: 300px;bottom: calc(100% + 12px);left: 50%; transform: translate(-50%, 0); display: none;">
+                                                <div class="slds-popover__body">
+                                                    <div class="slds-form-element">
+                                                        <div class="slds-form-element__control">
+                                                            <div class="slds-combobox_container">
+
+                                                                <!-- sobject record search box -->
+                                                                <div id="autocompleteWrap" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-relative">
+                                                                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+                                                                        <span class="slds-icon slds-input__icon slds-input__icon_left ma-icon ma-icon-search"></span>
+                                                                        <input type="text" id="autocompleteInput" class="slds-input" placeholder="Search Salesforce" />
+                                                                        <button id="clearAutocompleteButton" class="slds-input__icon slds-input__icon_right slds-button slds-button_icon" disabled="disabled">
+                                                                            <span class="slds-button__icon ma-icon ma-icon-clear"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div id="search-list" role="listbox"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+
+                                    <!-- </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="map-container slds-col slds-size_8-of-12">
+                                    <c:LiveMiniMap Name="Association Minimap" Lat="0" Long="0" Tooltip=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="stopEventEmptyState" class="slds-grid slds-grid_vertical slds-grid_align-center slds-grid_vertical-align-center slds-col slds-scrollable">
+                            <div class="slds-notify_container--inline slds-notify_container--mobile slds-illustration_container slds-text-align_center slds-grid slds-grid_vertical">
+                                <figure class="slds-m-bottom_x-large">
+                                    <img src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/stop-event_empty-state.svg')}" alt="Stop Association Empty State" class="stop-event_empty-state"/>
+                                </figure>
+                                <div class="slds-text-heading_medium slds-m-bottom_x-small">Stop Event Associations will appear here.</div>
+                                <p class="slds-text-color_weak">Select an asset, then select a stop to view its associated records.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <script src="{!URLFOR($Resource.MapsJS,'ma.datatable.js')}"></script>
+
+                    <script>
+
+                        var stopResults = null, dataTable = null, markerArray = [], group, evtMarker, elementVal, assetId, hasMessages = false, messageText = "", alertType = ""; //var dateToSet
+
+                        function filterData(dateMillis) {
+                            $( '#data-table > tbody > tr' ).show();
+                            $( '#data-table > tbody > tr' ).filter(function (index) {
+                                var $row = $(this);
+                                var asset = $row.find('td:nth-child(1)').attr('sortable-value');
+                                var stopDate = $row.find('td:nth-child(2)').attr('sortable-value');
+                                var stopDateFilter = true;
+                                
+                                if (assetId) {
+                                    if (dateMillis) {
+                                        if (stopDate == dateMillis && asset == assetId) {
+                                            stopDateFilter = false;
+                                        }
+                                    }
+                                }
+                                return stopDateFilter;
+                                
+                            }).hide();
+                            
+                        }
+
+                        function removeAssocRecord( el ) {
+                            showSpinner();
+                            var recordsToDel = [];
+
+                            recordsToDel.push( $( el ).parents( 'div.stop-selection-list_item:first' ).attr( 'data-id' ) );
+                            if(recordsToDel.length) {
+                                Visualforce.remoting.Manager.invokeAction(
+                                    '{!$RemoteAction.LiveRemoteFunctions.reconcileAssociations}',
+                                    recordsToDel, function(result, event) {
+                                        hasMessages = true;
+                                        if (event.status) {
+                                            messageText = result.message;
+                                            alertType = 'success';
+                                            dataTable.RefreshData();
+                                        }
+                                        else if (event.type === 'exception') {
+                                            messageText = event.message;
+                                            alertType = 'error';
+                                            hideSpinner();
+                                        }
+                                        else {
+                                            messageText = event.message;
+                                            hideSpinner();
+                                            alertType = 'error';
+                                        }
+                                        checkForMessages();
+                                    }
+                                );
+                            }
+                        }
+
+                        function getRecords(searchStr, refrecords) {
+                            Visualforce.remoting.Manager.invokeAction(
+                                '{!$RemoteAction.LiveRemoteFunctions.searchForSObjects}',
+                                searchStr, refrecords, function(result, event) {
+                                    buildRecordList(result);
+                                }
+                            );
+                        }
+
+                        function buildRecordList(resultsArray) {
+                            var searchListHTML = '<ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-5" role="presentation">';
+                            if (resultsArray && resultsArray.length) {
+                                $.each( resultsArray, function( index, value ) {
+                                    searchListHTML += '<li role="presentation" class="slds-listbox__item" onclick="selectListItem(this.id);" id="' + value.id + '">'
+                                                        + '<div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">'
+                                                            + '<span class="slds-media__body">'
+                                                                + '<span class="slds-listbox__option-text slds-listbox__option-text_entity" title="Record Name">' + value.name + '</span>'
+                                                                + '<span class="slds-listbox__option-meta slds-listbox__option-meta_entity" title="Object Type">' + value.objtype + '</span>'
+                                                            + '</span>'
+                                                        + '</div>'
+                                                    + '</li>'
+                                });
+                            }
+                            else {
+                                searchListHTML += 'No matching records found';
+                            }
+                            searchListHTML += '</ul>';
+
+                            $( "#search-list" ).html('').append(searchListHTML);
+
+                            $.each( resultsArray, function( index, value ) {
+                                $( "#" + value.id ).data( "pos", { lat: value.lat, long: value.long, id: value.id, name: value.name, lookupfield: value.lookupfield } );
+                            });
+
+                        }
+
+                        function selectListItem(elemid) {
+                            var data = $( "#" + elemid ).data( "pos" );
+                            closeList( $( '#autocompleteWrap' ) );
+                            $( '#autocompleteInput' ).val( Utility.unescapeText(data.name) );
+                            $( "#search-list" ).html('');
+                            var evtId = $( ".associated-records-header" ).data( 'id' );
+                            data.evtid = evtId;
+                            var event = getStopEvent( evtId );
+                            data.evtLat = event.lat;
+                            data.evtLong = event.long;
+                            createNewAssociation( data );
+                        }
+
+                        function getAssets(searchStr) {
+                            Visualforce.remoting.Manager.invokeAction(
+                                '{!$RemoteAction.LiveRemoteFunctions.searchForAssets}',
+                                searchStr, function(result, event) {
+                                    buildAssetList(result);
+                                }
+                            );
+                        }
+
+                        function buildAssetList(resultsArray) {
+                            var searchListHTML = '<ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-5" role="presentation">';
+                            if (resultsArray.length) {
+                                $.each( resultsArray, function( index, value ) {
+                                    searchListHTML += '<li role="presentation" class="slds-listbox__item" onclick="selectAsset(this);" id="' + value.Id + '" data-name="' + value.Name + '">'
+                                                        + '<div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">'
+                                                            + '<span class="slds-media__body">'
+                                                                + '<span class="slds-listbox__option-text slds-listbox__option-text_entity" title="Asset Name">' + value.Name + '</span>'
+                                                            + '</span>'
+                                                        + '</div>'
+                                                    + '</li>'
+                                });
+                            }
+                            else {
+                                searchListHTML += 'No matching records found';
+                            }
+                            searchListHTML += '</ul>';
+
+                            $( "#asset-list" ).html('').append(searchListHTML);
+
+                        }
+
+                        function selectAsset( el ) {
+                            $( "#asset-search" ).html("").append('<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right" role="none">'
+                                + '<input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="combobox-unique-id-69" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Salesforce" readonly="" value="' + $( el ).data('name') + '">'
+                                + '<button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Remove selected option" onclick="removeAsset(this);">'
+                                    + '<svg class="slds-button__icon" aria-hidden="true">'
+                                        + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close"></use>'
+                                    + '</svg>'
+                                    + '<span class="slds-assistive-text">Remove selected option</span>'
+                                + '</button>'
+                            + '</div>');
+                            assetId = $(el).attr("id");
+                        }
+
+                        function removeAsset( el ) {
+                            resetPage();
+                            $( "#asset-search" ).html("").append('<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">'
+                                + '<input type="text" class="slds-input slds-combobox__input" id="asset-search-box" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Live asset..." />'
+                                + '<span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">'
+                                    + '<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">'
+                                        + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" />'
+                                    + '</svg>'
+                                + '</span>'
+
+                                + '<div id="asset-list" role="listbox"></div>'
+                            + '</div>');
+                        }
+
+                        function createNewAssociation(data) {
+                            showSpinner();
+                            Visualforce.remoting.Manager.invokeAction(
+                                '{!$RemoteAction.LiveRemoteFunctions.createNewAssociation}',
+                                data, function(result, event) {
+                                        hasMessages = true;
+                                        if (event.status) {
+                                            messageText = result.message;
+                                            alertType = 'success';
+                                            dataTable.RefreshData();
+                                        }
+                                        else if (event.type === 'exception') {
+                                            messageText = event.message;
+                                            alertType = 'error';
+                                            hideSpinner();
+                                        }
+                                        else {
+                                            messageText = event.message;
+                                            alertType = 'error';
+                                            hideSpinner();
+                                        }
+                                        checkForMessages();
+                                }
+                            );
+                        }
+
+                        function setupTableEventListeners() {
+                            $( '#data-table > tbody > tr' ).on('click', function(e) {
+
+                                if ($(this).hasClass('header-row')) {
+                                    e.stopPropagation();
+                                    resetEventCard();
+                                    $( "td" ).removeClass('highlighted');
+                                }
+                                else {
+                                    e.stopPropagation();
+                                    var dur = 0, start = 'not reported', end = 'not reported', address = '';
+                                    var eventId = $( this ).find("td:nth-child(3)").find('.hiddendata').html();
+                                    elementVal = eventId;
+                                    var event = getStopEvent(eventId);
+                                    var vehicle = {
+                                        get name() {
+                                            if(event.asset) {return event.asset;}
+                                            else if(event.deviceName) {return event.deviceName;}
+                                            else {return "";}
+                                    }};
+
+                                    resetEventCard();
+                                    createAssocRecList(event.assocRecords);
+                                    $( "td" ).removeClass('highlighted');
+                                    $( this ).find("td").addClass('highlighted');
+                                    $( "#search-button" ).attr('disabled', false);
+                                    
+                                    // open main content block
+                                    $( "#stopEventContent" ).toggle(true);
+                                    $( "#stopEventEmptyState" ).toggle(false);
+
+                                    // remove disabled tag from button and search box
+                                    // $( "#autocompleteInput" ).attr( "disabled", false );
+                                    $( "#clearAutocompleteButton" ).attr( "disabled", false );
+                                    $( "button.slds-button_success" ).prop( 'disabled', false );
+                                    
+                                    if ("assocRecords" in event) {
+                                        map.invalidateSize();
+                                        plotMarkers(event, eventId);
+                                    }
+
+                                    if (GetObjProperty(event, "evtduration") != undefined) {
+                                        dur = (event.evtduration).toFixed(2);
+                                    }
+                                    if (GetObjProperty(event, "starttime") != undefined) {
+                                        start = moment(event.starttime).format("h:mma");
+                                    }
+                                    if (GetObjProperty(event, "endtime") != undefined) {
+                                        end = moment(event.endtime).format("h:mma");
+                                    }
+                                    if (GetObjProperty(event, "address") != undefined) {
+                                        address = event.address;
+                                    }
+
+                                    /* Assoc Record List Header */
+                                    $( ".associated-records-header" ).append('<div class="associated-record-marker_container slds-grid slds-grid_align-center slds-grid_vertical-align-start">'
+                                            + '<img class="associated-record-marker_dot" src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/stop.svg')}" />' // stop event icon
+                                        + '</div>'
+                                        // stop event data
+                                        + '<div class="slds-col">'
+                                            + '<div class="slds-text-heading_small slds-m-bottom_x-small vehicleStopText"><a href="/' + eventId + '">Stop #' + event.order + '</a></div>'
+                                            + '<div class="slds-text-body_small slds-text-color_weak slds-grid">'
+                                                + '<div class="slds-p-right_xx-small">'
+                                                    + '<span class="slds-icon_container">'
+                                                        + '<span class="slds-icon slds-icon_x-small slds-icon-text-light ma-icon ma-icon-new-custom98" style="display: block;"></span>'
+                                                    + '</span>'
+                                                + '</div>'
+                                                + '<div>' + vehicle.name + '</div>'
+                                            + '</div>'
+                                            + '<div class="slds-text-body_small slds-text-color_weak slds-grid">'
+                                                + '<div class="slds-p-right_xx-small">'
+                                                    + '<span class="slds-icon_container">'
+                                                        + '<span class="slds-icon slds-icon_x-small slds-icon-text-light ma-icon ma-icon-clock" style="display: block;"></span>'
+                                                    + '</span>'
+                                                + '</div>'
+                                                + '<div>'
+                                                    + start + '-' + end + ' (' + dur + ' hours)'
+                                                + '</div>'
+                                            + '</div>'
+                                            + '<div class="slds-text-body_small slds-text-color_weak slds-grid">'
+                                                + '<div class="slds-p-right_xx-small">'
+                                                    + '<span class="slds-icon_container">'
+                                                        + '<span class="slds-icon slds-icon_x-small slds-icon-text-light ma-icon ma-icon-checkin" style="display: block;"></span>'
+                                                    + '</span>'
+                                                + '</div>'
+                                                + '<div>'
+                                                    + address
+                                                + '</div>'
+                                            + '</div>'
+                                        + '</div>').data('id', eventId).on('mouseover', function(event) {
+                                        mouseoverFunc(this);
+                                    });
+                                    
+                                    
+                                }
+                            });
+                        }
+
+                        
+                        function setupRecordSearchEventListeners() {
+                            $( '#autocompleteInput' ).on( 'keyup', function(e) {
+                                e.stopPropagation(); //prevent click from getting to document
+                                var code = e.keyCode || e.which;
+
+                                if (code == 9) {
+                                    //set tab key focus on search result item
+                                }
+                                else {
+                                    // $( "#search-list" ).html('');
+                                    if( $( '#autocompleteInput' ).val().length > 1 ) {
+                                        var evtId = $( ".associated-records-header" ).data('id');
+                                        var event = getStopEvent(evtId);
+                                        getRecords( $( '#autocompleteInput' ).val(), event.refrecords );
+                                        openList( $( '#autocompleteWrap' ) );
+                                    }
+                                    else {
+                                        closeList( $( '#autocompleteWrap' ) );
+                                    }
+                                }
+                            });
+
+                            $( '#clearAutocompleteButton' ).on('click', function(e){
+                                e.stopPropagation();
+                                $( '#autocompleteInput' ).val('').focus();
+                                $( "#search-list" ).html('');
+                                closeList( $( '#autocompleteWrap' ) );
+                            });
+
+                            $( '#autocompleteWrap' ).on('click', function(e){
+                                e.stopPropagation(); //prevent click from getting to document
+                            });
+
+                        }
+
+                        function getStopEvent(evtId) {
+                            for (var i in stopResults.stops) {
+                                if(stopResults.stops[i].id === evtId) {
+                                    return stopResults.stops[i];
+                                }
+                            }
+                        }
+
+                        function resetPage() {
+                            // $( '#dateSearchInput' ).val('');
+                            // $( '#data-table > tbody > tr' ).show();
+                            assetId = null;
+                            $( "#data-table" ).html('');
+                            // reset the datepicker component
+                            $( "#dateSearchInput" ).datepicker( "setSelectedFullDate" );
+                            resetEventCard();
+                        }
+
+                        function resetEventCard() {
+                            $( "button.slds-button_success" ).prop( 'disabled', true );
+                            $( ".associated-records-header" ).html('');
+                            $( ".vehicleStopText" ).html('');
+                            $( '.stop-selection-list' ).html('');
+                            // $( "#autocompleteInput" ).attr( "disabled", true );
+                            $( "#search-modal" ).toggle( false );
+                            $( "#search-button" ).attr( 'disabled', true );
+                            $( "#clearAutocompleteButton" ).attr( "disabled", true );
+                            if( evtMarker ) map.removeLayer( evtMarker );
+                            if( group ) group.clearLayers();
+                            $( "#stopEventContent" ).toggle(false);
+                            $( "#stopEventEmptyState" ).toggle(true);
+                        }
+
+                        function plotMarkers(event, eventId) {
+                            markerArray = [];
+                            var address = isValueEmptyProto(event.address) ? [] : (event.address).split(", "),
+                            oms = new OverlappingMarkerSpiderfier(map),
+                            aPopup = L.popup( {offset: new L.Point( 0, -34 )} ),
+                            stopIcon = L.icon({
+                                iconUrl: "{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/stop.svg')}",
+                                iconSize: [27, 41],
+                                iconAnchor: [13, 41]
+                            }),
+                            assocIcon = L.icon({
+                                iconUrl: "{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/marker_kelly_green.svg')}",
+                                iconSize: [27, 41],
+                                iconAnchor: [13, 41]
+                            }),
+                            smallIcon = L.icon({
+                                iconUrl: "{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/marker_kelly_green.svg')}",
+                                iconSize: [20, 30],
+                                iconAnchor: [10, 30]
+                            });
+
+                            // spiderfier events
+                            oms.addListener('click', function(marker) {
+                                aPopup.setLatLng( marker.getLatLng() );
+                                aPopup.setContent( marker.desc );
+                                map.openPopup(aPopup);
+                            });
+                            oms.addListener('spiderfy', function(markers) {
+                                for (var i = 0, len = markers.length; i < len; i ++) {
+                                    var icon = markers[i].options.icon;
+                                    icon.options.iconSize = [20, 30];
+                                    icon.options.iconAnchor = [10, 30];
+                                    markers[i].setIcon(icon);
+                                }
+                                map.closePopup();
+                            });
+                            oms.addListener('unspiderfy', function(markers) {
+                                for (var i = 0, len = markers.length; i < len; i ++) {
+                                    var icon = markers[i].options.icon;
+                                    icon.options.iconSize = [27, 41];
+                                    icon.options.iconAnchor = [13, 41];
+                                    markers[i].setIcon(icon);
+                                }
+                                map.closePopup();
+                            });
+
+                            evtMarker = L.marker( [event.lat, event.long], {title: 'Stop #' + event.order, icon: stopIcon} );
+                            evtMarker.desc = '<div>' + event.name + (isValueEmptyProto(address) ? '' : '</div><div>' + address[0] + '</div><div>' + address[1] + ', ' + address[2]) + '</div>';
+                            evtMarker.id = event.id;
+                            markerArray.push(evtMarker);
+                            oms.addMarker(evtMarker);
+
+                            event.assocRecords.forEach(function(val, index) {
+                                var latLong = [val.lat, val.long];
+                                var markerAddr = isValueEmptyProto( val.address ) ? [] : ( val.address ).split(",");
+                                var marker = L.marker( latLong, {title: val.name, icon: assocIcon} );
+                                marker.desc = '<div>' + val.name + (isValueEmptyProto( markerAddr ) ? '' : '</div><div>' + markerAddr[0] + '</div><div>' + markerAddr[1] + ', ' + markerAddr[2] + ' ' + markerAddr[3]) + '</div>';
+                                marker.id = val.id;
+                                markerArray.push(marker);
+                                oms.addMarker(marker);
+                            });
+
+                            group = new L.featureGroup( markerArray );
+                            group.addTo( map );
+                            map.fitBounds( group.getBounds() );//.pad(0.2);
+
+                            var popup = L.popup( {offset: new L.Point( 0, -34 )} )
+                                .setLatLng( evtMarker.getLatLng() )
+                                .setContent( evtMarker.desc )
+                                .openOn( map );
+                        }
+
+                        function plotIndividualMarker(rec) {
+                            L.marker( [rec.lat, rec.long] ).addTo( group )
+                                .bindPopup( rec.name )
+                                .openPopup();
+                            map.fitBounds( group.getBounds() );//.pad(0.5)
+                        }
+
+                        function mouseoverFunc(el) {
+                            markerArray.forEach(function(val, index) {
+                                var markerId = val.id;
+                                if (markerId == $( el ).data( 'id' )) {
+                                    var offSet = val.options.icon.options.iconSize[1] == 30 ? -22 : -34;
+                                    var popup = L.popup( {offset: new L.Point( 0, offSet )} )
+                                        .setLatLng( val.getLatLng() )
+                                        .setContent( val.desc );
+                                    // val.openPopup();
+                                    map.openPopup( popup );
+                                };
+                            });
+                        }
+                            
+                        function createAssocRecList(assocRecords) {
+                            var recordList = buildAssocRecList(assocRecords);
+                            $( '.stop-selection-list' ).append(recordList);
+                        }
+                        
+                        function buildAssocRecList(assocRecords) {
+                            var recordList = '<div class="slds-text-heading_small slds-p-left_large slds-p-top_large slds-p-right_small slds-p-bottom_small slds-text-title_caps">'
+                                            + 'Associated Records (' + assocRecords.length + ')'
+                                        + '</div>'
+
+                            assocRecords.forEach(function(val, index) {
+                                var distance = 0.0;
+                                if (val.dist) {distance = val.dist}
+                                var record = '<div class="slds-grid stop-selection-list_item slds-p-vertical_small slds-p-right_small slds-grid_vertical-align-center" onmouseover="mouseoverFunc(this)" data-id="' + val.id + '">'
+                                            + '<div class="associated-record-marker_container slds-grid slds-grid_align-center slds-grid_vertical-align-start">'
+                                                + '<img class="associated-record-marker_dot" src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/dot_kelly_green.svg')}" />'
+                                                + '<img class="associated-record-marker_pin" src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/marker_kelly_green.svg')}" />'
+                                            + '</div>'
+                                            + '<div class="slds-col slds-truncate marker_list">'
+                                                + '<div class="stop-selection-distance-title slds-text-heading_small slds-truncate">'
+                                                    + '<a href="/'+ val.id + '">' + val.name + '</a>'
+                                                + '</div>'
+                                                + '<div class="stop-selection-distance-label slds-text-color_weak slds-text-body_small slds-truncate">'
+                                                    + val.baseobj + '&nbsp;&bull;&nbsp;' + distance + ' ' + val.units + ' away'
+                                                + '</div>'
+                                            + '</div>'
+                                            + '<div class="slds-p-left_medium remove-button-hover">'
+                                                + '<button class="slds-button slds-button_icon slds-button_icon-container" onclick="removeAssocRecord(this)">'
+                                                    + '<span class="slds-button__icon ma-icon ma-icon-close">'
+                                                    + '</span>'
+                                                    + '<span class="slds-assistive-text">Remove</span>'
+                                                + '</button>'
+                                            + '</div>'
+                                        + '</div>'
+
+                                recordList += record;
+                            });
+
+                            /*recordList += '<div id="nearbyRecordsWrap">'
+                                            + '<div class="slds-text-heading_small slds-p-left_large slds-p-top_large slds-p-right_small slds-p-bottom_small slds-text-title_caps">'
+                                                + 'Nearby Records (3)'
+                                            + '</div>'
+                                            + '<div class="slds-grid stop-selection-list_item slds-p-vertical_small slds-p-right_small slds-grid_vertical-align-center">'
+                                                + '<div class="associated-record-marker_container slds-grid slds-grid_align-center slds-grid_vertical-align-start">'
+                                                    + '<img class="associated-record-marker_dot" src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/dot_azure.svg')}" />'
+                                                    + '<img class="associated-record-marker_pin" src="{!URLFOR($Resource.MapsStyles, 'LiveTracking/img/marker_azure.svg')}" />'
+                                                + '</div>'
+                                                + '<div class="slds-col slds-truncate">'
+                                                    + '<div class="stop-selection-distance-title slds-text-heading_small slds-truncate slds-p-bottom_xx-small">'
+                                                        + '<a href="#">'
+                                                            + 'Martin\'s Supply Co.'
+                                                        + '</a>'
+                                                    + '</div>'
+                                                    + '<div class="stop-selection-distance-label slds-text-color_weak slds-text-body_small slds-truncate">'
+                                                        + 'Account &nbsp;&bull;&nbsp; 0.3 miles away'
+                                                    + '</div>'
+                                                + '</div>'
+                                                + '<div class="slds-p-left_medium">'
+                                                    + '<button class="slds-button slds-button_neutral">'
+                                                    + 'Associate'
+                                                    + '</button>'
+                                                + '</div>'
+                                            + '</div>'
+                                        + '</div>';*/
+
+                            recordList += '</div>';
+                            return recordList;
+                        }
+
+                        function setupDatePickerComponent() {
+
+                            $.aljsInit({
+                                assetsLocation: '/apexpages/slds/latest',
+                                scoped: true,
+                                scopingClass: 'slds-scope'
+                            });
+                            
+                            $( '#dateSearchInput' ).datepicker({
+                                numYearsBefore: 1,
+                                numYearsAfter: 0,
+                                // initDate: moment(),
+                                onChange: function( datepicker ) {
+                                    var d;
+                                    var reportDt = $( '#dateSearchInput' ).datepicker( 'getDate' );
+                                    if(reportDt instanceof moment) {
+                                        d = reportDt.format('YYYY/MM/DD');
+                                    }
+                                    if (assetId && d) {
+                                        // filterData(d);
+                                        createSideBarEventsTable(assetId, d);
+                                        resetEventCard();
+                                        $( "#data-table" ).toggle( true );
+                                    }
+                                    else if (!assetId) {
+                                        $( "#dateSearchInput" ).val( "" );
+                                        addMessage( $( "#dateSearchInput" ), 'Please choose an asset first', 'error');
+                                    }
+                                },
+                                onSelect: function(datepicker, selectedDate) {}
+                            });
+                        }
+
+                        function addMessage(el, msg, type) {
+                            $( el ).notify( msg, {arrowShow: false, className : type, position : 'bottom center'} );
+                        }
+
+                        function createSideBarEventsTable(assetId, d) {
+                            showSpinner();
+                            var args = [assetId, d];
+                            $( "#data-table" ).html('');
+                            dataTable = new MADataTable({
+                                tableSelector :'#data-table',
+                                allowResizing: false,
+                                remoteFunction: {
+                                    path: '{!$RemoteAction.LiveRemoteFunctions.RetrieveAllStopEvents}',
+                                    arrayProperty: 'stops',
+                                    params: JSON.stringify(args)
+                                },
+                                separateTable: {
+                                    formatAs: function(obj) {
+                                        var d = moment(obj.reportdate);
+                                        return '<td role="gridcell" sortable-value="' + obj.assetid + '"><div class="slds-truncate"><div class="hiddendata">' + obj.assetid + '</div></div></td>'
+                                            + '<td role="gridcell" sortable-value="' + Date.UTC(d.year(), d.month(), d.date()) + '"><div class="slds-truncate"><div class="hiddendata">' + Date.UTC(d.year(), d.month(), d.date()) + '</div></div></td>'
+                                            + '<td role="gridcell" sortable-value="' + obj.id + '"><div class="slds-truncate"><div class="hiddendata">' + obj.id + '</div></div></td>'
+                                            + '<td role="gridcell" sortable-value="' + obj.order + '"><div class="slds-truncate"><div class="hiddendata">' + obj.order + '</div></div></td>'
+                                            + '<td colspan="5"><div class="slds-text-heading_small"><a href="/' + obj.summaryid + '">Stop Summary ' + obj.summaryname + '</a></div></td>';
+                                    },
+                                    separateBy: 'summaryid',
+                                    sortBy: 'order'
+                                },
+                                columns: [
+                                    {label: function(obj) {
+                                        return '<div class="hiddenheader"/>';
+                                        },
+                                        sortable: true, property: "assetid",
+                                        formatAs: function(obj) {
+                                            return '<div class="hiddendata">' + obj.assetid + '</div>';
+                                    }},
+                                    {label: function(obj) {
+                                        return '<div class="hiddenheader"/>';
+                                        },
+                                        sortable: true, property: function(obj) {
+                                            var d = moment(obj.reportdate);
+                                            return Date.UTC(d.year(), d.month(), d.date());
+                                        }, sortAs: "number",
+                                        formatAs: function(obj) {
+                                            var dateVal = 0;
+                                            if(obj.hasOwnProperty("reportdate")) {
+                                                dateVal = moment(obj.reportdate).format("MM/DD/YYYY");
+                                            }
+                                            return '<div class="hiddendata">' + dateVal + '</div>';
+                                    }},
+                                    {label: function(obj) {
+                                        return '<div class="hiddenheader"/>';
+                                        },
+                                        sortable: false, property: "id",
+                                        formatAs: function(obj) {
+                                            return '<div class="hiddendata">' + obj.id + '</div>';
+                                    }},
+                                    /*{label: "Vehicle", sortable: true, 
+                                        formatAs: function(obj) {
+                                            if(obj.hasOwnProperty("asset")) {return obj.asset;}
+                                            else if(obj.hasOwnProperty("deviceName")) {return obj.deviceName;}
+                                            else {return "";}
+                                    }},*/
+                                    {label: "Stop", sortable: false, property: "order"},
+                                    {label: "Start", sortable: false, property: "starttime",
+                                        formatAs: function(obj) {
+                                            var start = 'not reported';
+                                            if(obj.hasOwnProperty("starttime")) {
+                                                dateVal = moment(obj.starttime).format("h:mma");
+                                            }
+                                            return dateVal;
+                                    }},
+                                    {label: "End", sortable: false, property: "endtime",
+                                        formatAs: function(obj) {
+                                            var end = 'not reported';
+                                            if(obj.hasOwnProperty("endtime")) {
+                                                dateVal = moment(obj.endtime).format("h:mma");
+                                            }
+                                            return dateVal;
+                                    }},
+                                    {label: "Duration", sortable: false, property: "evtduration",
+                                        formatAs: function(obj) {
+                                            var dur = 0;
+                                            if(obj.hasOwnProperty("evtduration")) {
+                                                dur = (obj.evtduration).toFixed(2);
+                                            }
+                                            return dur + ' hours';
+                                    }},
+                                    {label: "Associations", sortable: false, property: "numOfAssoc", sortAs: "number",
+                                        formatAs: function(obj) {
+                                            if(obj.numOfAssoc != 1) {
+                                                return obj.numOfAssoc + '<div class="warning-icon" style="display: none"><span class="slds-icon slds-icon-text-warning ma-icon ma-icon-warning"></span></div>';
+                                            }
+                                            else {
+                                                return obj.numOfAssoc;
+                                            }
+                                    }}
+                                ],
+                                defaultSortIndex: 0,
+                                selectedSortIndex: null,
+                                selectedSortOrder: null,
+                                customSort: true,
+                                events: {
+                                    loading: function() {
+                                        // do nothing
+                                    },
+                                    loadingComplete: function(result) {
+                                        if (result.stops) {
+                                            stopResults = result;
+                                            if (result.stops.length == 0) {
+                                                $('#no-stop-config').show();
+                                                $('#stops-table').hide();
+                                            } else {
+                                                $('#no-stop-config').hide();
+                                                $('#stops-table').show();
+                                            }
+                                        }
+                                    },
+                                    loadingError: function(result, event) {
+                                        hasMessages = true;
+                                        messageText = event.message;
+                                        alertType = 'error';
+                                        hideSpinner();
+                                        checkForMessages();
+                                    },
+                                    tableCreated: function() { 
+                                        $( ".hiddenheader" ).closest("th").hide();
+                                        $( ".hiddendata" ).closest("td").hide();
+                                        // setupDatePickerComponent();
+                                        setupTableEventListeners();
+                                        /*$( '#dateSearchInput' ).datepicker('setDate', moment());
+                                        $( '#dateSearchInput' ).datepicker('setDate', moment(dateToSet));*/
+                                        // we need to check for a date, and filter the table if one exists
+                                        /*var d = $( '#dateSearchInput' ).datepicker('getDate');
+                                        if ( d instanceof moment && $( '#asset-search-box' ).val() ) {
+                                            filterData(Date.UTC(d.year(), d.month(), d.date()));
+                                        }*/
+                                        if(elementVal) {
+                                            $("td[sortable-value='" + elementVal + "']").trigger('click');
+                                        }
+                                        hideSpinner();
+                                    }
+                                }
+                            });
+                        }
+
+                        function closeList(el) {
+                            $( el ).removeClass('slds-is-open');
+                        }
+
+                        function openList(el) {
+                            $( el ).addClass('slds-is-open');
+                        }
+                            
+                        function setupAssetSearchEventListeners() {
+                            $( '#asset-search' ).on( 'click', function(e) {
+                                e.stopPropagation();
+                                $("#assetInputPopover").toggle(false);
+                            });
+
+                            $( '#asset-search' ).on( 'keyup', function(e) {
+                                // $( "#asset-list" ).html('');
+                                e.stopPropagation(); //prevent click from getting to document
+                                var code = e.keyCode || e.which;
+                                if (code == 9) {
+                                    //set tab key focus on search result item
+                                }
+                                else if (code == 27) { //close list on ESC keypress
+                                        closeList( $( "#asset-search" ) ); //.parents( 'div:first' )
+                                        $( "#asset-list" ).html('');
+                                        $( "#asset-search-box" ).val('');
+                                }
+                                else {
+                                    if( $( '#asset-search-box' ).val().length > 1 ) {
+                                        getAssets( $( '#asset-search-box' ).val() );
+                                        openList( $( "#asset-search" ) ); //.parents( 'div:first' )
+                                    }
+                                    else {
+                                        closeList( $( "#asset-search" ) ); //.parents( 'div:first' )
+                                    }
+                                }
+                            });
+                        }
+
+                        $(function() {
+                            // this section must be built after the Template is constructed
+                            var sideBar = '<div class="day-table-wrap slds-grid slds-grid_vertical slds-is-relative">'
+
+                                            // search boxes
+                                            + '<div class="slds-p-around_medium sidebar-header-wrap">'
+                                                
+                                                // asset search
+
+                                                + '<div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-p-right_xx-small">'
+                                                    + '<label class="slds-form-element__label" for="asset-search-box">Asset</label>'
+                                                    + '<div class="slds-form-element__control">'
+                                                        + '<div class="slds-combobox_container slds-has-inline-listbox">'
+
+                                                            + '<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="asset-search">'
+
+                                                                + '<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">'
+
+                                                                    + '<input type="text" class="slds-input slds-combobox__input" id="asset-search-box" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Live asset..." />'
+                                                                    + '<span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">'
+                                                                        + '<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">'
+                                                                            + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" />'
+                                                                        + '</svg>'
+                                                                    + '</span>'
+
+                                                                    + '<section id="assetInputPopover" class="slds-popover slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left" style="position: absolute; top: calc(100% + 12px); left: 0;width: 320px;">'
+                                                                    + '<div class="slds-popover__body">'
+                                                                        + '<div class="slds-media">'
+                                                                        + '<div class="slds-media__figure">'
+                                                                            + '<div class="slds-icon_container">'
+                                                                                + '<span class="slds-icon slds-icon_small slds-icon-text-default ma-icon ma-icon-touch-action" aria-hidden="true" style="font-size: 24px;"></span>'
+                                                                            + '</div>'
+                                                                        + '</div>'
+                                                                        + '<div class="slds-media__body">'
+                                                                            + '<p class="slds-text-heading_small">Select an Asset to see its recorded Stop Events.</p>'
+                                                                        + '</div>'
+                                                                        + '</div>'
+                                                                    + '</div>'
+                                                                    + '</section>'
+
+                                                                    + '<div id="asset-list" role="listbox"></div>'
+                                                                + '</div>'
+
+                                                            + '</div>'
+
+                                                        + '</div>'
+                                                    + '</div>'
+                                                + '</div>'
+
+
+                                                /*+ '<div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-p-right_xx-small">'
+                                                    + '<label class="slds-form-element__label" for="asset-search-box">Asset</label>'
+                                                    + '<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right" id="asset-search">'
+                                                        + '<input type="text" id="asset-search-box" placeholder="Live asset..." class="slds-input" value="" />'
+                                                        + '<button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Search for an asset">'
+                                                            + '<span class="slds-button__icon ma-icon ma-icon-search"></span>'
+                                                            + '<span class="slds-assistive-text">Search for an asset</span>'
+                                                        + '</button>'
+                                                        + '<section id="assetInputPopover" class="slds-popover slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left" style="position: absolute; top: calc(100% + 12px); left: 0;width: 320px;">'
+                                                        + '<div class="slds-popover__body">'
+                                                            + '<div class="slds-media">'
+                                                            + '<div class="slds-media__figure">'
+                                                                + '<div class="slds-icon_container">'
+                                                                    + '<span class="slds-icon slds-icon_small slds-icon-text-default ma-icon ma-icon-touch-action" aria-hidden="true" style="font-size: 24px;"></span>'
+                                                                + '</div>'
+                                                            + '</div>'
+                                                            + '<div class="slds-media__body">'
+                                                                + '<p class="slds-text-heading_small">Select an Asset to see it\'s recorded Stop Events.</p>'
+                                                            + '</div>'
+                                                            + '</div>'
+                                                        + '</div>'
+                                                        + '</section>'
+
+                                                        + '<div id="asset-list" role="listbox"></div>'
+
+                                                    + '</div>'
+                                                + '</div>'*/
+
+                                                // date search
+                                                + '<div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_xx-small slds-is-open">'
+                                                    + '<label class="slds-form-element__label" for="dateSearchInput">Date</label>'
+                                                    + '<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">'
+
+                                                        + '<svg aria-hidden="true" class="slds-input__icon slds-icon-text-default">'
+                                                            + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#event"></use>'
+                                                        + '</svg>'
+
+                                                        + '<input type="search" id="dateSearchInput" readonly="true" placeholder="- Select a Date -" class="slds-input slds-lookup__search-input date-picker__input" value="" />'
+                                                    + '</div>'
+                                                + '</div>'
+                                                
+                                            + '</div>'
+                                            // end search boxes
+
+                                            // stops list
+                                            + '<div id="stops-table" class="sidebar-table-wrap">'
+                                                + '<table class="sidebar-list-table" role="grid" id="data-table" style="display: none"></table>'
+                                            + '</div>'
+                                            // end stops list
+
+                                            + '<div id="no-stop-config" class="slds-p-around--medium slds-text-color--error" style="display: none; max-width: 35em; text-align: center;">'
+                                                + '<p>The asset and date selected is not part of a MapAnything Live Daily Summary Configuration with Stop Associations.</p>'
+                                            + '</div>'
+
+                                        + '</div>';
+
+                            // showSpinner();
+                            $( '#content-wrapper' ).prepend( sideBar );
+
+                            $( "#content-wrapper > div[class='slds-col']" ).addClass( "slds-theme_shade slds-p-around_large slds-grid" );
+
+                            $( "#maBodyContent" ).addClass( "slds-card slds-grid slds-grid_vertical" );
+
+                            // var mo = moment().hour(0).minute(0).second(0).millisecond(0);
+                            // dateToSet = mo.subtract(1, 'days');
+                            // createSideBarEventsTable();
+                            setupDatePickerComponent();
+                            setupRecordSearchEventListeners();
+                            setupAssetSearchEventListeners();
+                                
+                            $( "#search-button" ).on( 'click', function(e) {
+                                e.stopPropagation();
+                                $( '#clearAutocompleteButton' ).trigger( 'click' );
+                                $( "#search-modal" ).toggle();
+                            });
+
+                            /* Anything that gets to the document will hide the dropdowns */
+                            $( document ).click( function() {
+                                $( '#clearAutocompleteButton' ).trigger( 'click' );
+                                $( "#search-modal" ).toggle( false );
+                                $( "#asset-search" ).removeClass( 'slds-is-open' );
+                            });
+                            // hideSpinner();
+                        });
+
+
+                    </script>
+
+                </apex:define>
+            </apex:composition>
+    </apex:outputPanel>
+
+</apex:page>

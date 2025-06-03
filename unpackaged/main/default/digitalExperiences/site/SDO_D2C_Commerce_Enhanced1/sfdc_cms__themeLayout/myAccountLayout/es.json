@@ -1,0 +1,42 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "My Account Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\">¡Compre más y ahorre más!</p><p style=\"text-align: center;\">Ahorre 10 % en pedidos de más de 250 dólares</p>"
+        },
+        "id" : "7662ae93-9e30-4308-a481-86f69d0e8c4b"
+      }, {
+        "attributes" : {
+          "placeholderText" : "Introducir palabra clave"
+        },
+        "id" : "5cc65a50-884c-4956-a7f0-109c5c219064"
+      }, {
+        "attributes" : {
+          "logOutLabel" : "Cerrar sesión",
+          "loginLinkText" : "Iniciar sesión"
+        },
+        "id" : "6b50d299-5860-4a92-b3d3-b4499632d3bd"
+      }, {
+        "attributes" : {
+          "headingLabelText" : "Seleccione su ubicación",
+          "pickerButtonLabelText" : "Cambiar ubicación"
+        },
+        "id" : "1b4c7f67-47b1-4e07-b0e6-ab189a232b83"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">© Copyright 2024 Salesforce.com, inc. | Esta no es una empresa real. </span></p><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">It is used for Salesforce demos. No orders will be processed.</span></p>"
+        },
+        "id" : "173f5982-4276-4683-a21d-d53348e5d0b2"
+      }, {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "95f8742d-e1ff-49ee-9b7f-96b47e4b79cf"
+      } ]
+    }
+  },
+  "urlName" : "my-account-layout"
+}

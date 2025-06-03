@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Vorlagenabschnitt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Vorlagenabschnitte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Vorlagenabschnitt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Vorlagenabschnitte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Vorlagenabschnitts</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Vorlagenabschnitte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Vorlagenabschnitt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Vorlagenabschnitten</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Template Section Layout</layout>
+        <sections>
+            <label>Filterinformationen</label>
+            <section>Filtering Information</section>
+        </sections>
+        <sections>
+            <label>Seitenumbrüche</label>
+            <section>Page Breaks</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Abschnittsname</nameFieldLabel>
+    <webLinks>
+        <label><!-- IncludeDocument --></label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+</CustomObjectTranslation>

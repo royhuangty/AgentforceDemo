@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- End date can be based on the object&apos;s end date or entered manually. For full recognition,
+        set it to None. --></help>
+        <label><!-- Revenue Schedule Term End Date --></label>
+        <name>blng__RevenueScheduleTermEndDate__c</name>
+    </CustomFieldTranslation>

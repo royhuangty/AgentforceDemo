@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>FSL__Type__c</name>
+        <picklistValues>
+            <masterLabel>Automated Bundling</masterLabel>
+            <translation>Tạo Gói Tự Động</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fill-In Schedule</masterLabel>
+            <translation>Điền Vào Lịch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fix Overlaps</masterLabel>
+            <translation>Chỉnh Sửa Các Trùng Lặp</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Optimization</masterLabel>
+            <translation>Tối Ưu Hóa Toàn Cầu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Nearby SAs</masterLabel>
+            <translation>Nhóm SA Gần Đó</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Bundling</masterLabel>
+            <translation>Tạo Gói Trực Tiếp</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Schedule Optimization</masterLabel>
+            <translation>Tối Ưu Hóa Lên Lịch Cho Nhân Sự</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Reshuffle</masterLabel>
+            <translation>Sắp Xếp Lại SA</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Compares the Filter Field with this field instead of the Filter Value. --></help>
+        <label><!-- Value Field --></label>
+        <name>SBQQ__ValueField__c</name>
+        <picklistValues>
+            <masterLabel>Product Code</masterLabel>
+            <translation><!-- Product Code --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

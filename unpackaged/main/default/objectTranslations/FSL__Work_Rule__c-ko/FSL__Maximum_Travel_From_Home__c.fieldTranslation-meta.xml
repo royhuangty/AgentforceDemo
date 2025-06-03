@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>자원이 홈에서 서비스에 도달하기 위해 이동할 수 있는 거리 또는 분을 결정합니다.</help>
+        <label><!-- Maximum Travel From Home --></label>
+        <name>FSL__Maximum_Travel_From_Home__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,350 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "73eae1a2-9d43-42a1-bdab-7a937cfff9ee",
+  "label" : "Training Course List",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "config" : {
+          "contentItemContentKey" : "MCLDGA35GKRFCUFFJVZNBSG6PE5Q",
+          "layoutDefinition" : {
+            "attributes" : {
+              "additionalLinks" : "{}",
+              "backgroundPosition" : "center center",
+              "backgroundSize" : "cover",
+              "bannerAspectRatio" : "16:9",
+              "bannerHeight" : "160",
+              "bannerSubTitleTextColor" : "#ffffff",
+              "bannerTitleTextColor" : "#ffffff",
+              "callToActionButtonBackgroundColor" : "",
+              "callToActionButtonBackgroundColorHover" : "",
+              "callToActionButtonBorderColor" : "",
+              "callToActionButtonBorderColorHover" : "",
+              "callToActionButtonBorderStyles" : "",
+              "callToActionButtonTextColor" : "",
+              "callToActionButtonTextColorHover" : "",
+              "callToActionLabel" : "View",
+              "componentHoverEffect" : "none",
+              "contentWidth" : "92",
+              "dateFormat" : "none",
+              "datetime" : "",
+              "datetimeFontSize" : "regular",
+              "datetimeTextColor" : "#ffffff",
+              "datetimeTextDecoration" : "",
+              "defaultLinksOverrides" : "{}",
+              "displayDayOfWeek" : false,
+              "eyebrowFontSize" : "regular",
+              "eyebrowHighlightColor" : "",
+              "eyebrowText" : "",
+              "eyebrowTextColor" : "#ffffff",
+              "eyebrowTextDecoration" : "",
+              "flagAlignment" : "top left",
+              "flagBackgroundColor" : "#ff0000",
+              "flagBorderColor" : "#ffffff",
+              "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+              "flagRotation" : 0,
+              "flagSpacing" : "medium",
+              "flagText" : "",
+              "flagTextColor" : "#ffffff",
+              "flagTextDecoration" : "",
+              "hideTextElementsForVideo" : false,
+              "imageAltText" : "",
+              "imageUrl" : "{!CurrentItem.image.url}",
+              "metadata1HighlightColor" : "",
+              "metadata1Text" : "",
+              "metadata2HighlightColor" : "",
+              "metadata2Text" : "",
+              "metadataFontSize" : "regular",
+              "metadataTextColor" : "#ffffff",
+              "metadataTextDecoration" : "",
+              "overlayBackgroundColor" : "rgba(0, 0, 0, 0.4)",
+              "showButton" : false,
+              "showCaption" : true,
+              "showDateTime" : false,
+              "showEyebrow" : false,
+              "showEyebrowHighlight" : false,
+              "showFlag" : false,
+              "showMetadata1" : false,
+              "showMetadata1Highlight" : false,
+              "showMetadata2" : false,
+              "showMetadata2Highlight" : false,
+              "showTitle" : true,
+              "showTitleHighlight" : false,
+              "subTitle" : "{!CurrentItem.teaser}",
+              "subTitleFontSize" : "regular",
+              "textAlignment" : "center left",
+              "timeFormat" : "none",
+              "timeZoneDisplay" : "short",
+              "timeZoneOptions" : "none",
+              "title" : "{!CurrentItem.Title}",
+              "titleFontSize" : "large",
+              "titleHeadingTag" : "p",
+              "titleHighlightColor" : "",
+              "titleTextDecoration" : "",
+              "useAspectRatio" : false,
+              "videoUrl" : ""
+            },
+            "componentName" : "forceCommunity:bannerLayout"
+          },
+          "schemaVersion" : "V2.0"
+        }
+      },
+      "componentName" : "forceCommunity:managedContent",
+      "id" : "4b7abb6c-eed0-4975-a8a6-9f9786f4da47",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8f3dc90e-fcec-4de9-8524-45968019d60c",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "f5fbfffa-005d-46fc-bd3a-f189ce422888",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "d96c3d14-da0d-4fa3-ba2d-e8aa74adf904",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Featured"
+          }, {
+            "UUID" : "e87bbe6c-8efa-40e6-b35f-79e64e966893",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "All"
+          }, {
+            "UUID" : "e5dd2b4f-2963-4a6d-b79b-2d13fa4efb50",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "3",
+            "tabName" : "My Courses"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "f5fbfffa-005d-46fc-bd3a-f189ce422888",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "collectionLayoutDefinition" : {
+                "attributes" : {
+                  "collectionTitle" : "",
+                  "collectionTitleHeadingTag" : "h2",
+                  "columns" : "2",
+                  "rows" : 2,
+                  "showCollectionTitle" : true,
+                  "showViewMoreButton" : true,
+                  "spacing" : "medium",
+                  "viewMoreButtonBackgroundColor" : "",
+                  "viewMoreButtonBackgroundColorHover" : "",
+                  "viewMoreButtonBorderColor" : "",
+                  "viewMoreButtonBorderColorHover" : "",
+                  "viewMoreButtonLabel" : "More Courses",
+                  "viewMoreButtonPlacement" : "center",
+                  "viewMoreButtonRadius" : 4,
+                  "viewMoreButtonTextColor" : "",
+                  "viewMoreButtonTextColorHover" : ""
+                },
+                "componentName" : "forceCommunity:dynamicCollectionGrid"
+              },
+              "dataProviderDefinition" : {
+                "attributes" : {
+                  "dataProviderInfo" : {
+                    "apiName" : "Training_All_Available_Courses"
+                  },
+                  "dataProviderType" : "NamedCollection"
+                },
+                "componentName" : "forceCommunity:managedContentCollectionDataProvider"
+              },
+              "itemLayoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "cover",
+                  "borderColor" : "",
+                  "componentBorderStyles" : "",
+                  "componentHoverEffect" : "none",
+                  "componentPadding" : "none",
+                  "contentBackgroundColor" : "#ffffff",
+                  "contentOffset" : "0",
+                  "contentOffsetBackgroundColor" : "#ffffff",
+                  "contentOffsetPadding" : "medium",
+                  "contentPosition" : "center",
+                  "contentWidth" : 100,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagConstraints" : "media",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "{!CurrentItem.Course_Flag__c__l}",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "imageAlignment" : "top",
+                  "imageAltText" : "",
+                  "imageBorderColor" : "#ffffff",
+                  "imageBorderStyles" : "",
+                  "imageUrl" : "{!CurrentItem.Course_Image__c}",
+                  "mediaAspectRatio" : "16:9",
+                  "mediaHeight" : "276",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "",
+                  "metadataTextDecoration" : "",
+                  "showDateTime" : true,
+                  "showExcerpt" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFeaturedMedia" : true,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "{!CurrentItem.Short_Description__c}",
+                  "subTitleFontSize" : "regular",
+                  "subTitleTextColor" : "",
+                  "textAlignment" : "left",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "{!CurrentItem.Name}",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:flexTileLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:dynamicCollection",
+          "id" : "f3e152eb-6c30-415b-a7cf-e5341df1c567",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d96c3d14-da0d-4fa3-ba2d-e8aa74adf904",
+        "regionLabel" : "Featured",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "All_Available_Courses",
+            "layout" : "FULL",
+            "pageSize" : 10,
+            "scope" : "SDO_Community_Training_Course__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "9991bebd-5bf6-49af-8bb7-d0c1413f9718",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e87bbe6c-8efa-40e6-b35f-79e64e966893",
+        "regionLabel" : "All",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "My_Enrollments",
+            "layout" : "FULL",
+            "pageSize" : 25,
+            "scope" : "SDO_Community_Course_Enrollment__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "ccf923c5-14e9-4073-b629-9c13159b0150",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e5dd2b4f-2963-4a6d-b79b-2d13fa4efb50",
+        "regionLabel" : "My Courses",
+        "regionName" : "3",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c876bd17-68d4-4c6a-9ec7-d1b793c749c4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "49f71607-2dbd-46ea-9329-3191a30ef96c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h2><strong><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.AstroTrailheadXSmall.1}\" style=\"width: 50px; height: 64.9219px;\"> Salesforce SEs:</strong></h2>\n<p>Use this page to illustrate two important concepts for customers:</p>\n<ul>\n <li>External Learning Management System integration with Salesforce:</li>\n <li>Salesforce CMS and Custom Object Records:</li>\n</ul>\n<p>&nbsp;This page illustrates how <a href=\"https://help.salesforce.com/articleView?id=community_managed_content_overview.htm&amp;type=5\" rel=\"noopener noreferrer\" target=\"_blank\">Salesforce CMS</a> can take any object tracked in your Salesforce org and make it look like managed content. The items to the left live in the Training Course object, but have been configured into a <a href=\"https://help.salesforce.com/articleView?id=community_managed_content_creating_content-crm.htm&amp;type=5\" rel=\"noopener noreferrer\" target=\"_blank\">CMS collection</a> with images and styling. Click on the <strong>CMS Collection</strong> component to the left to see how it was set up!</p>\n<p><br></p>\n<p>Want to explore how we did this? Try the following:</p>\n<ol>\n <li>Click on the <u>CMS Collection</u> component showing <u>Featured Courses</u> to the left to see how it's configured. Note the Collection it's using. And check out the <u>Change Content Mapping</u> button to see how we made the object's fields display in our collection component!</li>\n <li>Get into this community's <u>Content Management</u> workspace, click the <u>Collections</u> tab, and check out the <u>Featured Courses</u> collection. You'll see that the items in the collection are driven by records in the <u>Training_Course__c</u> custom object. So if, for example, you had your Learning Management System pushing course records into Salesforce using that object, you could feature them in your community!</li>\n <li>The <u>All Courses</u> tab on this page has a Record List component that shows a list of records from that same object...just a different way to view the same data, just more...business-like!</li>\n <li>OPTIONAL: Add a new tab named \"New\" to the tab component. Add a <strong><u>CMS Collection</u></strong> component to that tab. Configure it to point to the <strong><u>Training: New Courses</u></strong> collection. Configure display options and field mapping according to your preferences.</li>\n</ol>\n<p><br></p>\n<p>As records are added to or updated the object in Salesforce (either manually or through an integration with another system) this list wil update acordingly. That allows you to put a fresh face on normally-mundane business data!</p>\n<p><br></p>\n<p>NOTE: You can also add myTrailhead for Communities components to this page with some setup. <a href=\"https://salesforce.quip.com/17abARF8ahjk\" rel=\"noopener noreferrer\" target=\"_blank\">Click here</a> for details!</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "5ab093d2-b530-4b01-822b-0bb808926099",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fa71f368-e107-4734-a270-b3a442f636e3",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a1R"
+}

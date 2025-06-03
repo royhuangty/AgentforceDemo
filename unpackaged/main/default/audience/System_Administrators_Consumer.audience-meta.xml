@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>System Administrators</audienceName>
+    <container>SDO - Consumer</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>admin</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>8b5b553a-fccb-4abf-86db-4712b6e8b26a$#$71d86555-5717-4d1a-81ac-1db17c4445cc</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Authenticated_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>8b5b553a-fccb-4abf-86db-4712b6e8b26a$#$3771b49b-3d1c-419d-939c-51ddbcbfa5b8</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Authenticated_Rich_Content_Editor_1_Component</targetValue>
+        </target>
+        <target>
+            <groupName>3bc1a289-584d-4a5f-9507-77d89c8d3d01$#$f630cc71-4f6f-45c3-bb9b-8f88045a1371</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Guest_Flexible_Layout_Rich_Content_Editor_2_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

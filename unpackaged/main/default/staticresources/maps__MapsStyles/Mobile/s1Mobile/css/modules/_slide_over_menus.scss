@@ -1,0 +1,102 @@
+.ma-so-menu-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	visibility: hidden;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	z-index: 1000;
+	@include transition( opacity 0s linear 0.3s, visibility 0s linear .3s);
+	
+
+	.ma-so-menu {
+		@include flexbox();
+		flex-flow: column wrap;
+		width: 300px;
+		height: 100%;
+		background-color: $white;
+		position:absolute;
+		z-index: 1200;
+		top:0;
+		left:0;
+		transform: translate(-300px,0);
+		@include transition( transform .25s ease);
+		box-shadow: $box-shadow-right;
+	}
+
+	&.in {
+		@include transition( opacity .15s linear 0s, visibility 0s linear 0s);
+	}
+
+	& .ma-overlay-mask {
+		visibility: hidden;
+		opacity:0;
+	    @include transition( opacity 3s ease 0s, visibility 0s linear 0s);
+	}
+
+	&.in {
+		visibility:visible;
+	}
+
+	&.in .ma-overlay-mask {
+		opacity: 1;
+		background-color: $transparent-gray;
+	    max-height: 100%;
+	    visibility: visible;
+	    @include transition( opacity .3s ease 0s, visibility 0s linear 0s);
+	}
+
+	&.in .ma-so-menu {
+		transform: translate(0,0);
+		@include transition( transform .3s ease 0s);
+	}
+
+	.ma-logo {
+	    margin: .5rem 0 1.25rem 1.5rem;
+	    max-width: 245px;
+	}
+}
+
+.ma-so-menu-item--bottom {
+	margin-top: auto;
+}
+
+.ma-so-menu-item {
+    @include flexbox();
+    @include flexAlign(center);
+    color: $light-blue;
+    text-transform: uppercase;
+    margin: .125rem 1rem;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: .0625em;
+    cursor: pointer;
+    border-radius: $radius;
+
+    &:active, &.active {
+    	background-color: $light-gray;
+    	color: $dark-blue;
+    }
+}
+
+.ma-so-menu.ma-so-menu--pad-vertical {
+    padding: 1rem 0;
+}
+
+.ma-so-menu-item > .ma-icon {
+    margin-right: .75rem;
+    font-size: 1.25rem;
+    line-height: 1rem;
+}
+
+.ma-so-menu-divider {
+    height: 2px;
+    width: 100%;
+    background-color: $border-gray;
+    margin: 1rem 0;
+}

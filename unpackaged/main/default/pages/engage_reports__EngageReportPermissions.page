@@ -1,0 +1,16 @@
+<apex:page sidebar="false" controller="engage_reports.EngageReportPermissionsController" action="{!init}">
+    <apex:slds />
+    <apex:stylesheet value="{!URLFOR($Resource.engage_reports__EngageCampaignReport, 'css/main.css')}" />
+    <div id="engage_report_permissions_container"></div>
+    <script>
+        window.EngageCampaigns = {
+            sessionId: '{!$Api.Session_ID}',
+            sldsAssetPath: '{!URLFOR($Asset.SLDS, 'assets')}',
+            userHasInsufficientAccess: {!userHasInsufficientAccess},
+            remoteActions: {
+                unassignReportsPermissionSetFromUsers: '{!$RemoteAction.EngageReportPermissionsController.unassignReportsPermissionSetFromUsers}'
+            }
+        }
+    </script>
+    <apex:includeScript value="{!URLFOR($Resource.engage_reports__EngageCampaignReport, 'js/permissions_main.js')}"/>
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Experience_PRM_AccountBrandSharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Used to grant access to Account Brand records for Experience Cloud Users</description>
+        <label>AccountBrand Sharing Rule</label>
+        <sharedTo>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

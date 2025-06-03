@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>EnblProgramTaskProgress.EnblProgramTaskDefinition.MinimumSampleSize:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <description>MinimumSampleSize</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Minimum Sample Size</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(EnblProgramTaskProgress.IsCompleted:SUM==0,0,EnblProgramTaskProgress.CompletedOnDay:SUM/EnblProgramTaskProgress.IsCompleted:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Average Days to Complete</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Days to Complete</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>EnblProgramTaskProgress.IsCompleted:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Assignee Completion Rate</description>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Assignee Completion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>1-(EnblProgramTaskProgress.IsCompleted:SUM/RowCount)</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Assignee Incompletion Rate</description>
+        <developerName>FORMULA4</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Assignee Incompletion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(CDF1:SUM==0,0,EnblProgramTaskProgress.Result:SUM/CDF1:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Measure progress (avg)</description>
+        <developerName>FORMULA5</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Measure progress (avg)</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.MilestoneTarget</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.Day</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$ContributingRecordCount</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(TEXT(EnblProgramTaskProgress.LearningItemProgress.Status)!=&#39;NotStarted&#39;,1,0)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Status</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>Analyze the overall progress of an outcome with key data and information such as milestone target, target day, completion rates, and more.</description>
+    <filter>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.TaskCategory</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Milestone</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.IsMilestoneAnOutcome</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Outcome Progress</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Program_Task_Progress_sfdcSESv58__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EnblProgramTaskProgress$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

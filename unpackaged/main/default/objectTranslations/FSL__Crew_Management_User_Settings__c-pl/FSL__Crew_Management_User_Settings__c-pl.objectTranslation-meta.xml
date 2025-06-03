@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Ustawienie użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Ustawienia użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Ustawienie użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Ustawienia użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Ustawienia użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Ustawień użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Ustawienu użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Ustawieniom użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Ustawieniem użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Ustawieniami użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Ustawieniu użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Ustawieniach użytkownika dla zarządzania zespołem</value>
+    </caseValues>
+    
+    
+    
+    
+    <gender>Neuter</gender>
+    <nameFieldLabel>Nazwa ustawień użytkownika zarządzania z</nameFieldLabel>
+</CustomObjectTranslation>

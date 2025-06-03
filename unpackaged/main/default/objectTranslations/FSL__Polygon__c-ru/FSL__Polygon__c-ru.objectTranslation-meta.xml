@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Многоугольник карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Многоугольники карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Многоугольник карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Многоугольники карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Многоугольника карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Многоугольников карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Многоугольнику карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Многоугольникам карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Многоугольником карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Многоугольниками карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value>Многоугольнике карты</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value>Многоугольниках карты</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Имя многоугольника</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
+        <name>FSL__Polygon_Color_HEX_Format</name>
+    </validationRules>
+</CustomObjectTranslation>

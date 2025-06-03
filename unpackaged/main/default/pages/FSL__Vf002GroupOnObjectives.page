@@ -1,0 +1,93 @@
+<apex:page standardController="FSL__Service_Goal__c" extensions="FSL.Ctrl001GroupOnRuleAndObjectives">
+ 
+  <apex:includeScript value="{!$Resource.FSL__angular150min}" />
+  <apex:includeScript value="{!$Resource.FSL__vf001GroupRuleAndObjectives}" />
+
+  <script>
+
+    var RemoteActions = {
+      GetObjectFields:                    '{!$RemoteAction.Ctrl001GroupOnRuleAndObjectives.GetObjectFields}',
+   		SaveFieldsNamesOnWorkRule:          '{!$RemoteAction.Ctrl001GroupOnRuleAndObjectives.SaveFieldsNamesOnWorkRule}'
+   	}
+   	
+   	var ObjectName = {
+      serviceObjectName:                  '{!$ObjectType.ServiceAppointment.Name}',
+      resourceObjectName:                 '{!$ObjectType.ServiceTerritoryMember.Name}'
+    }
+
+    var customLabels = {
+		  ServiceFieldLable:                  "{!JSENCODE($Label.Service_Field)}",
+		  ResourceFieldLable:                 "{!JSENCODE($Label.Resource_Field)}",
+		  SaveSuccessAlert:                   "{!JSENCODE($Label.Saved_successfully)}",
+		  All:			                          "{!JSENCODE($Label.All)}"
+    } 
+
+    var CurrentObjectName =               '{!JSENCODE(ObjectName)}';	
+    var strCurrentObject =                '{!JSENCODE(strCurrentObject)}'; 
+  	var ServiceGoalIdFieldName =          '{!$ObjectType.Service_Goal__c.fields.Id.Name}';
+  	var ServiceGoalResourceFieldName  =   '{!$ObjectType.Service_Goal__c.fields.Resource_Group_Field__c.Name}';
+  	var ServiceGoalObjectFieldName =      '{!$ObjectType.Service_Goal__c.fields.Object_Group_Field__c.Name}';
+    var CurrentObject = strCurrentObject;
+
+    isFieldExpert = true;
+
+    function initialize() {
+      strregularexpression = '&quot;';
+      re = new RegExp(strregularexpression,"g");
+      strAccountWithValidChars = CurrentObject.replace(re, '\"');
+      objFields = JSON.parse(strAccountWithValidChars);
+      ObjectId = objFields.Id;
+      // isFieldExpert = objFields.RecordType.Name.indexOf('FieldExpert') === 0;
+      objectField = objFields[ServiceGoalObjectFieldName];
+      resourceField = objFields[ServiceGoalResourceFieldName];
+    }
+    
+    initialize();
+  
+  </script>
+ 
+  <style>
+
+  	#ObjectFields {
+  		display:inline;
+  	}
+  	
+  	#ResourceFields {
+  		display:inline;
+  	}
+  	
+  	#SaveBtn {
+  	  cursor: pointer;
+  	  color: #333;
+  	  /* margin: 1px; */
+  	  padding: 2px 3px;
+  	  border: 1px solid #b5b5b5;
+  	  border-bottom-color: #7f7f7f;
+  	  background: #e8e8e9 url('/img/alohaSkin/btn_sprite.png') repeat-x right top;
+  	  font-weight: bold;
+  	  font-size: .9em;
+  	  -moz-border-radius: 3px;
+  	  -webkit-border-radius: 3px;
+  	  border-radius: 3px;
+	  }
+	  
+	  #ExternalScope{
+	  	  padding: 10px;
+	  }
+  </style>
+
+  <div ng-app="GroupRuleAndObjectives" id="ExternalScope">
+    <div ng-controller="groupController">
+        <div id='ResourceFields'>{!$Label.ServiceTerritoryMember}</div>
+  		<select ng-options="ResourceField  for ResourceField in ResourceFiledsArray" ng-model="selectedResourceFields"></select>
+        <br/><br/>
+
+        <div id="ObjectFields"> {{ObjectName}} </div>
+  		<select ng-options="ServiceField  for ServiceField in ServiceFiledsArray" ng-model="selectedServiceFields"></select>
+
+        <br/><br/>
+
+  		<button id="SaveBtn" ng-click="btnSaveClicked()">{!$Label.Save_Objective_Relevance_Group_btn}</button>
+  	</div>
+  </div>
+</apex:page>

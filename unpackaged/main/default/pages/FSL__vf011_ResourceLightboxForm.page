@@ -1,0 +1,94 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceResource" lightningStylesheets="true">
+
+	<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<apex:includeScript value="{!$Resource.FSL__CommonLightboxScripts}" />
+	
+	<script>
+
+	   
+		$(function() {
+			renderRTLElsDirection($(this));
+			if (window.parent.sforce.console.isInConsole()) {
+				
+				var allLinks = $('a');
+				
+				for (var i=0; i<allLinks.length; i++) {
+
+					(function(j) {
+						
+						$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+							e.preventDefault();
+							window.parent.openConsoleTabFromModal(e.data.url);
+							return;
+						});
+
+					}(i));
+				}
+					
+				return;
+			}
+
+			
+
+			$('a').attr('target','_blank');
+			
+			$('a').on('mouseover',function() {
+				$(this).attr('target','_blank');
+			})
+
+
+			window.navigateToUrl = function(url) {
+				if (window.parent.sforce.console.isInConsole()) {
+					window.parent.openConsoleTabFromModal(e.data.url);
+				} else {
+					window.open(url);
+				}
+			};
+
+			// prevent popups on lookup fields
+			window.LookupHoverDetail.getHover = function() {
+				return {
+					show: function() {},
+					hide: function() {},
+				}
+			};
+	    });
+		
+		
+		
+	
+	</script>
+
+	<style>
+		body {
+			margin-top: -4px !important;
+		}
+	
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+		}
+
+		.pbSubheader h3 {
+			display: inline-block;
+		}
+	</style>
+
+
+		<apex:form >
+			
+			<apex:pageBlock mode="detail">
+			   <apex:pageBlockSection columns="2">
+                    <apex:repeat value="{!$ObjectType.ServiceResource.FieldSets.FSL__Resource_Lightbox}" var="d">
+                        <apex:outputField value="{!ServiceResource[d]}"/>
+                    </apex:repeat> 
+                 </apex:pageBlockSection>
+			</apex:pageBlock>
+		   
+		 </apex:form>
+
+
+	
+	 
+	 
+</apex:page>

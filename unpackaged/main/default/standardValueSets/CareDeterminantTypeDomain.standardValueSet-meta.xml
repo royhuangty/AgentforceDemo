@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Access to health care</fullName>
+        <default>false</default>
+        <label>Access to health care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Child care</fullName>
+        <default>false</default>
+        <label>Child care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clothing</fullName>
+        <default>false</default>
+        <label>Clothing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employment</fullName>
+        <default>false</default>
+        <label>Employment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Finances</fullName>
+        <default>false</default>
+        <label>Finances</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Food</fullName>
+        <default>false</default>
+        <label>Food</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General (non-specific)</fullName>
+        <default>false</default>
+        <label>General (non-specific)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Housing</fullName>
+        <default>false</default>
+        <label>Housing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Immigration/Migration</fullName>
+        <default>false</default>
+        <label>Immigration/Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Incarceration</fullName>
+        <default>false</default>
+        <label>Incarceration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primary Language</fullName>
+        <default>false</default>
+        <label>Primary Language</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Race/Ethnicity</fullName>
+        <default>false</default>
+        <label>Race/Ethnicity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Residential Address</fullName>
+        <default>false</default>
+        <label>Residential Address</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Safety</fullName>
+        <default>false</default>
+        <label>Safety</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Connections/Isolation</fullName>
+        <default>false</default>
+        <label>Social Connections/Isolation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stress</fullName>
+        <default>false</default>
+        <label>Stress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transportation</fullName>
+        <default>false</default>
+        <label>Transportation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Utilities</fullName>
+        <default>false</default>
+        <label>Utilities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Veteran Status</fullName>
+        <default>false</default>
+        <label>Veteran Status</label>
+    </standardValue>
+</StandardValueSet>

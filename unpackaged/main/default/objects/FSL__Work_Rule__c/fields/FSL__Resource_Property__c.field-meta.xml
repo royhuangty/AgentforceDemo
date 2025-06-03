@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Resource_Property__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>A numeric field on the service resource to count against.</inlineHelpText>
+    <label>Resource Property</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IsActive</fullName>
+                <default>false</default>
+                <label>IsActive</label>
+            </value>
+            <value>
+                <fullName>IsCapacityBased</fullName>
+                <default>false</default>
+                <label>IsCapacityBased</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

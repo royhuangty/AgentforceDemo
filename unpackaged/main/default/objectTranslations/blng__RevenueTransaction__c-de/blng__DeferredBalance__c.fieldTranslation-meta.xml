@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Zurückgestellter Umsatzsaldo nach Erfassen des Umsatzes für diesen Zeitraum.</help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,48 @@
+$actionBarHeight : auto;
+
+	.action-bar-wrap {
+		@include flexbox();
+		@include flexDirection(row);
+		background-color: $light-blue;
+		padding: 0 8px;
+		height: $actionBarHeight;
+		z-index: 15;
+		flex-shrink: 0;
+		transition: .2s all 0s;
+
+		&.action-bar-wrap--white {
+			background-color: $white;
+
+			.action-bar-button {
+				color: $blue;
+			}
+		}
+
+		.action-bar-right {
+		    margin-left: auto;
+		}
+
+		.action-bar-toggle {
+    		padding: 12px 8px;
+
+			.ma-toggle-label {
+			    margin-top: 10px;
+			    float: left;
+			}
+
+			.action-bar-toggle-label {
+				font-size: 14px;
+			    margin-left: 10px;
+			    margin-top: 10px;
+			    display: inline-block;
+			    color: $white;
+			}
+
+			.ma-toggle + .ma-toggle-label:after, .ma-toggle + .ma-toggle-label:before {
+				border: 1px solid transparent;
+			}
+		}
+
+	}
+
+	

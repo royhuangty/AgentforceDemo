@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Quote field that sources default value for this input. --></help>
+        <label><!-- Default Field --></label>
+        <name>SBQQ__DefaultField__c</name>
+        <picklistValues>
+            <masterLabel>Bill To Country</masterLabel>
+            <translation><!-- Bill To Country --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ship To Country</masterLabel>
+            <translation><!-- Ship To Country --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

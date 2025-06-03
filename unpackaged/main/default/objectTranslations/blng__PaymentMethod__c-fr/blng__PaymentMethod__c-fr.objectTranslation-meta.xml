@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mode de paiement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Modes de paiement</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Method Layout</layout>
+        <sections>
+            <label>Détails ACH</label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label>Détails de l’adresse</label>
+            <section>Address Details</section>
+        </sections>
+        <sections>
+            <label>Détails de la carte de crédit</label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label>Détails personnels</label>
+            <section>Personal Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du mode de paiement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- NewPaymentMethodCreditCard --></label>
+        <name>blng__NewPaymentMethodCreditCard</name>
+    </webLinks>
+</CustomObjectTranslation>

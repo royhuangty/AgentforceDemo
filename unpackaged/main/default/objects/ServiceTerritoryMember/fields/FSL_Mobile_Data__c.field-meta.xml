@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL_Mobile_Data__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>FSL Mobile Data</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

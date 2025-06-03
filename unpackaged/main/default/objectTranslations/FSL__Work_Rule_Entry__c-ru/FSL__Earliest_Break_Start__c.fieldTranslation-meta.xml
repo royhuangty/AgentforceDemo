@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Количество минут от начала доступности сервисного ресурса до самого раннего разрешенного времени начала перерыва. Например, введите значение &quot;120&quot; для планирования перерыва как минимум через два часа после начала дня.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

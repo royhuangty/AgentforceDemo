@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For MDQ Products, the quantity corresponding to the segment&apos;s original Quote Line --></help>
+        <label><!-- Segment Quantity --></label>
+        <name>SBQQ__SegmentQuantity__c</name>
+    </CustomFieldTranslation>

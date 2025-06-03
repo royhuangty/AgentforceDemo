@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>工作规则计数项目的类型。</help>
+        <label><!-- Count Type --></label>
+        <name>FSL__CountType__c</name>
+        <picklistValues>
+            <masterLabel>Assignments</masterLabel>
+            <translation>分配</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Value</masterLabel>
+            <translation>自定义值</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration</masterLabel>
+            <translation>持续时间</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

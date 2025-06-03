@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Salesforce Maps Advanced Route Stopped</name>
+    <style>none</style>
+    <subject>{!JSENCODE($Label.maps__mapAnythingGuideStoppedGenerating)}</subject>
+    <textOnly>{!JSENCODE($Label.maps__yourMapAnythingGuideRouteStoppedGenerating)}
+
+{!JSENCODE($Label.maps__reason)}:
+{!maps__AdvRouteTemplateUser__c.maps__LastJobStoppedStatus__c}
+
+{!JSENCODE($Label.maps__templateCap)}:
+{!maps__AdvRouteTemplateUser__c.maps__AdvRouteTemplate__c}  {!JSENCODE($Label.maps__processingDate)}:
+{!maps__AdvRouteTemplateUser__c.maps__DateProcessing__c}
+
+{!JSENCODE($Label.maps__ifYouWantToMakeEdits)}:
+{!maps__AdvRouteTemplateUser__c.maps__BaseUrl__c}apex/maps__AdvRouteRep?id={!maps__AdvRouteTemplateUser__c.maps__AdvRouteTemplateId__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

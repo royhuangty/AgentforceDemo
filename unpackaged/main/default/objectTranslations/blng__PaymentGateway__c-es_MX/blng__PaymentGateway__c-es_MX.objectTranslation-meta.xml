@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pasarela de pago</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pasarelas de pago</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de pasarela de pago</nameFieldLabel>
+</CustomObjectTranslation>

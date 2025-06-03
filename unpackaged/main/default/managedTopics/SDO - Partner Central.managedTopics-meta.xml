@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Getting Started</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Getting Started</name>
+        <parentName></parentName>
+        <position>8</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Installation</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Installation</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Learning</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Learning</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Maintenance</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Maintenance</name>
+        <parentName></parentName>
+        <position>6</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Marketing</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Marketing</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Sales</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Sales</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Solar Power</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Solar Power</name>
+        <parentName></parentName>
+        <position>7</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Storage</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Storage</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Content:Wind</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Wind</name>
+        <parentName></parentName>
+        <position>9</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Getting Started</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Getting Started</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Installation</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Installation</name>
+        <parentName></parentName>
+        <position>7</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Maintenance</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Maintenance</name>
+        <parentName></parentName>
+        <position>8</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Solar Power</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Solar Power</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Storage</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Storage</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Featured:Wind</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Wind</name>
+        <parentName></parentName>
+        <position>6</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Navigational:Getting Started</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Getting Started</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Navigational:Learning</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Learning</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Navigational:Marketing</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Marketing</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Navigational:Sales</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Sales</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>SDO - Partner Central.Navigational:Solar Power</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Solar Power</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

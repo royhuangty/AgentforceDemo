@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the audience group the task is applicable for and pick a Seq# accordingly. By default actions are applicable to all audience groups in your partner&apos;s hierarchy if one exists --></help>
+        <label><!-- Which roles is this task for? --></label>
+        <name>Ptnr_Onbd_Fmwk__Which_roles_is_this_task_for__c</name>
+    </CustomFieldTranslation>

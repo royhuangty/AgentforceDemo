@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- What does this customer think of us? --></help>
+        <label><!-- Customer Satisfaction Index --></label>
+        <name>SDO_Service_Customer_Satisfaction_Index__c</name>
+        <picklistValues>
+            <masterLabel>A - Extremely Satisfied - Customer Evangelist</masterLabel>
+            <translation><!-- A - Extremely Satisfied - Customer Evangelist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B - Satisfied</masterLabel>
+            <translation><!-- B - Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C - Neutral</masterLabel>
+            <translation><!-- C - Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D - Dissatisfied - At risk of losing business</masterLabel>
+            <translation><!-- D - Dissatisfied - At risk of losing business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F - Unsatisfactory - Losing Business</masterLabel>
+            <translation><!-- F - Unsatisfactory - Losing Business --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

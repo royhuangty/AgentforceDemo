@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Emergency Account Fields --></label>
+        <name>FSL__Emergency_Account_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Gantt Lightbox --></label>
+        <name>FSL__Gantt_Lightbox</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- MapAnything Click2Create --></label>
+        <name>MapAnything_Click2Create</name>
+    </fieldSets>
+    <layouts>
+        <layout>Billing Account Layout</layout>
+        <sections>
+            <label>Información de renovación/Plazo compartido</label>
+            <section>Renewal/Co-Term Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Account Layout</layout>
+        <sections>
+            <label>Información de renovación/Plazo compartido</label>
+            <section>Renewal/Co-Term Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Account</layout>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Account Community</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Partner Account</layout>
+        <sections>
+            <label><!-- Partnership Information --></label>
+            <section>Partnership Information</section>
+        </sections>
+        <sections>
+            <label><!-- Scorecard --></label>
+            <section>Scorecard</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>qBrix CPQ Account Layout</layout>
+        <sections>
+            <label><!-- Renewal/Co-Term Information --></label>
+            <section>Renewal/Co-Term Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Key Account --></label>
+        <name>EMC__Einstein_Configuration_Key_Account_Insights</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Mass Edit Related Lists --></label>
+        <name>MERL__MassEditRelatedListsQA</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Contact --></label>
+        <name>SDO_Create_New_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Insights --></label>
+        <name>SDO_Einstein_Configuration_Insights</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Schedule Training --></label>
+        <name>SDO_Scheduler_Schedule_Training</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Account --></label>
+        <name>SDO_Service_UpdateAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Add to Nurture List --></label>
+        <name>pi__Add_to_Nurture_List</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Business Account --></label>
+        <name>Business_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Partner accounts with additional, channel-related information like the Partner Scorecard. --></description>
+        <label><!-- Partner --></label>
+        <name>SDO_Account_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Primary Account record type used for most account records. --></description>
+        <label><!-- Account --></label>
+        <name>SDO_Account_Simple</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_It --></label>
+        <name>Map_It</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Renew_Assets --></label>
+        <name>SBQQ__Renew_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SDO_OMS_Order_on_Behalf --></label>
+        <name>SDO_OMS_Order_on_Behalf</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreditCenter --></label>
+        <name>blng__CreditCenter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PaymentVirtualTerminal --></label>
+        <name>blng__PaymentVirtualTerminal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- AdvRouteVisitWindows --></label>
+        <name>maps__AdvRouteVisitWindows</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_Prospect_Insight --></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

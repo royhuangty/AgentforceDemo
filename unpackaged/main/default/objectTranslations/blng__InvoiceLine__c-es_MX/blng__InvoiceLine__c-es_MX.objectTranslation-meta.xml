@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partida de factura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partidas de facturas</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Line Layout</layout>
+        <sections>
+            <label>Saldo AR</label>
+            <section>AR Balance</section>
+        </sections>
+        <sections>
+            <label>Información de frecuencia de facturación</label>
+            <section>Billing Frequency Information</section>
+        </sections>
+        <sections>
+            <label>Información de regla de facturación</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Información de regla GL</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Pagos y reembolsos</label>
+            <section>Payments and Refunds</section>
+        </sections>
+        <sections>
+            <label>Información de los precios</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Información de reconocimiento de ingresos</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Información de impuestos</label>
+            <section>Tax Information</section>
+        </sections>
+        <sections>
+            <label>Información de regla de impuestos</label>
+            <section>Tax Rule Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre del producto</nameFieldLabel>
+</CustomObjectTranslation>

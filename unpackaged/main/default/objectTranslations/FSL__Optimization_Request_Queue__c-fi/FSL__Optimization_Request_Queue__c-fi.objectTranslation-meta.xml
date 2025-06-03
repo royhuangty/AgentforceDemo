@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jono</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonot</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jononi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jononi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonosi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonosi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonon</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonojen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jononi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonojeni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonosi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonojesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonossa</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoissa</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonossani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoissani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonossasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoissasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonosta</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoista</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonostani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoistani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonostasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoistasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonoon</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoihin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonooni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoihini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonoosi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoihisi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonolla</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoilla</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonollani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoillani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonollasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoillasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonolta</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoilta</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonoltani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoiltani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonoltasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoiltasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonolle</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoille</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonolleni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoilleni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonollesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoillesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonona</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoina</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jononani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoinani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jononasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoinasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonoksi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoiksi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonokseni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonoikseni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonoksesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonoiksesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyynnön jonoa</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimointipyyntöjen jonoja</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyynnön jonoani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimointipyyntöjen jonojani</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyynnön jonoasi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimointipyyntöjen jonojasi</value>
+    </caseValues>
+    
+    
+    
+    <nameFieldLabel>Optimoinnin jononumero</nameFieldLabel>
+</CustomObjectTranslation>

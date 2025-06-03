@@ -1,0 +1,80 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "0531b0c4-e525-4fde-9c10-e432a8c159d5",
+  "label" : "guestrescheduling",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "adb207d3-70ff-4d24-87e0-029c0a019035",
+          "columns" : [ {
+            "UUID" : "8d64dc14-ca4e-4db6-a57d-83a737aba12f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "adb207d3-70ff-4d24-87e0-029c0a019035",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong>Modify your Existing Appointment</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cec7946f-ba4f-43bf-bb79-79ba85a6e6da",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"anum\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!anum}\"}]",
+            "flowName" : "SDO_Scheduler_Inbound_Modify_Guest_Appointment"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "68df7975-632e-4fdb-b790-19c27b3ce102",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8d64dc14-ca4e-4db6-a57d-83a737aba12f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c940b0d6-ef06-4b8f-bda9-b64bcbbfcb43",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "guestrescheduling"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "69381e0d-fc43-401b-88f6-ca2e6779946b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "53873a7a-2536-452e-9226-b696aac1bcfa",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "sDgGxVNA6v1stbHPKFSfQpVgvVg6PR",
+  "type" : "view",
+  "viewType" : "custom-guestrescheduling"
+}

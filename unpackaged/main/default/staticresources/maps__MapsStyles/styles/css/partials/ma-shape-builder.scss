@@ -1,0 +1,346 @@
+.slds-scope {
+    #shapeSelectionDuelingPicklistButtonPositioner {
+        position: absolute;
+        right: -40px;
+        top: 32px;
+    }
+
+    #shapeBuilderDrawingModePanelWrap {
+        cursor: auto;
+        z-index: 120;
+        width: 320px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.32);
+        transform: translate(320px, 0);
+        transition: .35s all;
+
+        &.in {
+            transform: translate(0, 0);
+        }
+    }
+
+    #shapeBuilderDrawingModeTools {
+        z-index: 100;
+        right: 336px;
+        position: absolute;
+        top: 8px;
+        transform: translate(461px, 0);
+        transition: .35s all;
+
+        &.in {
+            transform: translate(0, 0);
+        }
+
+        .shape-builder-drawing-tool-button {
+            &:hover {
+                cursor: pointer !important;
+            }
+        }
+    }
+
+    #shapeBuilderPasteClipboardPopover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9000;
+
+        #shapeBuilderPasteClipboardTextArea {
+            height: 200px;
+        }
+
+        #shapeBuilderPasteClipboardProcessingWrap {
+            height: 200px;
+            position: relative;
+
+            .slds-spinner {
+                margin-top: -30px;
+            }
+
+            #shapeBuilderPasteClipboardProcessingLabel {
+                position: absolute;
+                top: 115px;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .shape-builder-drawing-button-tooltip {
+        position: absolute;
+        top: calc(100% + 16px);
+        left: auto;
+        right: -8px;
+        width: 255px;
+        text-align: left;
+        line-height: 1.35;
+        font-size: 12px;
+        hyphens: none;
+    }
+
+    #shapeBuilderButtonDefaultPointer {
+        .shape-builder-drawing-button-tooltip {
+            width: 125px;
+            text-align: center;
+        }
+    }
+
+    #shapeBuilderPasteClipboardProcessingSuccessTooltip {
+        position: absolute;
+        top: 62px;
+        right: calc(100% + 16px);
+        width: 300px;
+    }
+
+    #shapeBuilderDrawingModeNameTooltip {
+        position: absolute;
+        top:0;
+        right: calc(100% + 16px);
+        width: 200px;
+        display: none;
+
+        &.in {
+            display: inline-block;
+        }
+    }
+
+    #shapeBuilderSelectedShapesColumn {
+        background-color: $color-background;
+        border-left:1px solid $border-gray;
+    }
+
+    #shapeBuilderIWantToSeeTooltip {
+        position: absolute;
+        top: -8px;
+        left: calc(100% + 16px);
+        width: 275px;
+    }
+    
+    #shapeBuilderAddFilterButtonTooltip {
+        position: absolute;
+        width: 275px;
+        top: -16px;
+        left: calc(100% + 24px);
+    }
+}
+
+body {
+    &.shape-builder-drawing-tool--lasso-plus {
+        .slds-scope {
+            &:hover {
+                cursor: url("../../images/lasso-plus-cursor-2x.png"), auto;
+                cursor: -webkit-image-set(url("../../images/lasso-plus-cursor.png") 1x, url("../../images/lasso-plus-cursor-2x.png") 2x), auto;
+            }
+        }
+
+        &.shape-builder-drawing-tool--pointer-override {
+            .slds-scope {
+                &:hover {
+                    cursor: auto;
+                }
+            }
+        }
+    }
+
+    &.shape-builder-drawing-tool--lasso-minus {
+        .slds-scope {
+            &:hover {
+                cursor: url("../../images/lasso-minus-cursor-2x.png"), auto;
+                cursor: -webkit-image-set(url("../../images/lasso-minus-cursor.png") 1x, url("../../images/lasso-minus-cursor-2x.png") 2x), auto;
+            }
+        }
+
+        &.shape-builder-drawing-tool--pointer-override {
+            .slds-scope {
+                &:hover {
+                    cursor: auto;
+                }
+            }
+        }
+    }
+
+    &.shape-builder-drawing-tool--lasso-toggle {
+        .slds-scope {
+            &:hover {
+                cursor: url("../../images/lasso-toggle-cursor-2x.png"), auto;
+                cursor: -webkit-image-set(url("../../images/lasso-toggle-cursor.png") 1x, url("../../images/lasso-toggle-cursor-2x.png") 2x), auto;
+            }
+        }
+
+        &.shape-builder-drawing-tool--pointer-override {
+            .slds-scope {
+                &:hover {
+                    cursor: auto;
+                }
+            }
+        }
+    }
+}
+
+#shapeBuilderModalPositioner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    height: 0;  
+    display:none;
+    
+    &.in {
+        left:auto;
+        top:auto;
+        width:auto;
+        height:auto;
+        display:block;
+    }
+
+    #filterItemList {
+        li {
+            margin-left: 0;
+        }
+    }
+}
+
+#shapeBuilderBackdropPositioner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    height: 0;  
+    display:none;
+    
+    &.in {
+        left:auto;
+        top:auto;
+        width:auto;
+        height:auto;
+        display:block;
+    }
+}
+
+// .map-lasso-mode {
+//     max-width: calc(100% - 320px);
+// }
+
+#shapeBuilderDrawingPanelPositioner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    display:none;
+    
+    &.in {
+        left:auto;
+        top:auto;
+        width:325px;
+        height:100%;
+        display:block;
+    }
+    
+    &.overflow-visible {
+        overflow: visible;
+    }
+
+    #shapeBuilderDrawingModePanelWrap {
+        .shape-builder-header {
+            background-color: $color-background;
+            border-bottom: 1px solid $border-gray;
+        }
+
+        .blue-selection {
+            #shapeBuilderDrawingSelectionList {
+                .lasso-list-item {
+                    .slds-listbox__option:active {
+                        color: #fff;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+#shapeBuilderDrawingToolsPositioner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    display:none;
+    
+    &.in {
+        left: auto;
+        top: auto;
+        width: 500px;
+        height: 50px;
+        display: block;
+    }
+    
+    &.overflow-visible {
+        overflow: visible;
+        width: auto !Important;
+        height: auto !Important;
+    }
+
+    #shapeBuilderSearchContainer {
+        input {
+            border: none;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.32);
+        }
+    }
+}
+
+#shapeBuilderAvailableFilterCue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 32px 32px;
+    hyphens: none;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d8dde6;
+    
+    .slds-icon_container {
+        font-size: 32px;
+        line-height: 1;
+        color: $sf-text;
+        opacity: .24;
+    }
+}
+
+#filterItemValueDropdown {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+
+    .filter-line-item:first-child a {
+        position:relative;
+        padding-left: 1.75rem;
+
+        &::before {
+            position: absolute;
+            content: "\e003";
+            font-family: 'MAIcons';
+            top: 11px;
+            left: .75rem;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            text-rendering: auto;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}

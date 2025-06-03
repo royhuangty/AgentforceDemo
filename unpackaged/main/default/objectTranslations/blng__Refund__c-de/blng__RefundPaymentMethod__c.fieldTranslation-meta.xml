@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die Zahlungsmethode gibt eine Kreditkarte oder Bankinformationen an, die zum Verarbeiten einer Zahlung verwendet werden können.</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </CustomFieldTranslation>

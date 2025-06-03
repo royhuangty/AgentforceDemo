@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Compact_Sched_Pol_Rule</fullName>
+    <fields>FSL__Work_Rule__c</fields>
+    <fields>FSL__Scheduling_Policy__c</fields>
+    <fields>Name</fields>
+    <fields>CreatedById</fields>
+    <label>Compact_Sched_Pol_Rule</label>
+</CompactLayout>

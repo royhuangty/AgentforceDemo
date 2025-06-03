@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Set the value of this attribute when adding a product from a Dynamic Feature using the value of the added product&apos;s matching field. --></help>
+        <label><!-- Auto-Select --></label>
+        <name>SBQQ__AutoSelect__c</name>
+    </CustomFieldTranslation>

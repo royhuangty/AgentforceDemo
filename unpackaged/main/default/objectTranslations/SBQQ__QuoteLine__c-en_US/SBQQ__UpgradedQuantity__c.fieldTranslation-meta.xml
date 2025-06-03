@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Portion of this line&apos;s Prior Quantity being upgraded to another product. --></help>
+        <label><!-- Upgraded Quantity --></label>
+        <name>SBQQ__UpgradedQuantity__c</name>
+    </CustomFieldTranslation>

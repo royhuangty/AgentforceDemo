@@ -1,0 +1,208 @@
+.ma-flex-container {
+	@include flexbox();
+	@include flexDirection('row');
+}
+
+.clearfix:after, .clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.margin-0 {
+	margin: 0;
+}
+
+.margin-0-8-0-0 {
+	margin: 0 .5rem 0 0;
+}
+
+.margin-0-12-0-0 {
+	margin: 0 .75rem 0 0;
+}
+
+.margin-0-16-0-0 {
+	margin: 0 1rem 0 0;
+}
+
+.margin-8-8-16-8 {
+	margin: .5rem .5rem 1rem .5rem;
+}
+
+.margin-16-0 {
+	margin: 1rem 0;
+}
+
+.margin-16-0-0-0 {
+	margin: 1rem 0 0 0
+}
+
+.margin-32-0 {
+	margin: 32px 0;
+}
+
+.pad-0-32 {
+	padding:0 2rem;
+}
+
+.pad-8-12 {
+	padding: 8px 12px;
+}
+
+.pad-8-16 {
+	padding: 8px 16px;
+}
+
+.pad-8-16-16 {
+	padding: 8px 16px 16px;
+}
+
+.pad-8-16-22 {
+	padding: 8px 16px 22px;
+}
+
+.pad-8-16-32 {
+	padding: 8px 16px 32px;
+}
+
+.pad-16 {
+	padding: 1rem !important;
+}
+
+.pad-16-0 {
+	padding: 16px 0 !important;
+}
+.pad-16-0-0 {
+	padding: 16px 0 0;
+}
+
+.pad-16-0-32 {
+	padding: 16px 0 32px;
+}
+
+.pad-16-16-8 {
+	padding: 16px 16px 8px;
+}
+
+.pad-16-16-32 {
+	padding: 16px 16px 32px;
+}
+
+.pad-32 {
+	padding: 2rem;
+}
+
+.pad-32-0-64 {
+    padding: 2rem 0 4rem;
+}
+
+.pad-32-16  {
+	padding: 2rem 1rem;
+}
+
+.pad-32-32-64 {
+    padding: 2rem 2rem 4rem;
+}
+
+.pull-left, .float-left {
+	float:left;
+}
+
+.pull-right, .float-right {
+	float:right;
+}
+
+.background--white {
+	background-color: $white;
+}
+
+.background--light-blue {
+	background-color: $light-blue;
+	color: $white;
+}
+
+.background--blue {
+	background-color: $blue;
+	color: $white;
+}
+
+.background--dark-blue {
+	background-color: $dark-blue;
+	color: $white;
+}
+
+.background--light-gray {
+	background-color: $light-gray;
+}
+
+.background--gray {
+	background-color: $gray;
+}
+
+.background--medium-gray {
+	background-color: $medium-gray;
+	color: $white;
+}
+
+.background--dark-gray {
+	background-color: $dark-gray;
+	color: $white;
+}
+
+.background--black {
+	background-color: $black;
+	color: $white;
+}
+
+.background--red {
+	background-color: $red;
+	color: $white;
+}
+
+.background--green {
+	background-color: $green;
+	color: $white;
+}
+
+.background--yellow {
+	background-color: $yellow;
+	color: $dark-blue;
+}
+
+.background--orange {
+	background-color: $orange;
+	color: $dark-blue;
+}
+
+.img-profile-circle {
+    border-radius: 10000px;
+}
+
+.ma-hidden {
+	display:none !important;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+} 
+
+.momentum-scrolling-y {
+overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.ma-divider {
+	margin:8px 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0,5,10,.1);
+
+	&.compact {
+		margin: 0;
+	}
+}
+
+.text--dark-blue {
+	color: $dark-blue;
+}

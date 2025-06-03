@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Po zaškrtnutí porovnejte pole Minimální velikost posádky v pracovním příkazu nebo v řádku pracovního příkazu s akt. dostupnou službou členů servisu.
+V opačném případě porovnejte velikost členů servisu s polem velikost členů servisu v poli Členové servisu.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

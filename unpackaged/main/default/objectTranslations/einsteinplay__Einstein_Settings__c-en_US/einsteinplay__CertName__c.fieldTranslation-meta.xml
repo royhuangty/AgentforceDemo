@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- the Salesforce name of your security certificate --></help>
+        <label><!-- CertName --></label>
+        <name>einsteinplay__CertName__c</name>
+    </CustomFieldTranslation>

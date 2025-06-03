@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If this Quote record represents an Amend Re-Quote, use this field to link back to the original quote. --></help>
+        <label><!-- Original Quote --></label>
+        <name>SBQQ__OriginalQuote__c</name>
+        <relationshipLabel><!-- WebAmend: Re-Quotes --></relationshipLabel>
+    </CustomFieldTranslation>

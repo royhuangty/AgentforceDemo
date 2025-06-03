@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Resource Row Height --></label>
+        <name>FSL__Resource_Row_Height__c</name>
+        <picklistValues>
+            <masterLabel>large</masterLabel>
+            <translation>büyük</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>medium</masterLabel>
+            <translation>orta</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>small</masterLabel>
+            <translation>küçük</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>xsmall</masterLabel>
+            <translation>çok küçük</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

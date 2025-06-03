@@ -1,0 +1,25 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Approvals",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "546fe09f-e665-445a-88c4-c092d92696d5"
+      }, {
+        "attributes" : {
+          "text" : "Mis aprobaciones"
+        },
+        "id" : "82a8a037-0544-4595-ba30-affce725362d"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Aprobaciones"
+        },
+        "id" : "0178e1ec-3d0e-442a-bc09-a0a29e7c77e0"
+      } ]
+    }
+  },
+  "urlName" : "approvals"
+}

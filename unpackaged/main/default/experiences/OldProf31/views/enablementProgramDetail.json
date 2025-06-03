@@ -1,0 +1,132 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6e72d8ae-aed9-4910-b668-3a1edb4e6299",
+  "label" : "Enablement Program Detail",
+  "regions" : [ {
+    "id" : "b5cb6e3a-21a5-4af8-b2e4-8f3f4a9076b8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "96fdcc1b-25d3-4965-adeb-f979d8d8950b",
+          "columns" : [ {
+            "UUID" : "aaa12df8-7d32-4dfc-9c93-619b9e879006",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_programDetailHeader"
+              },
+              "fqn" : "runtime_ses_ext:programDetailHeader"
+            }, {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_programOutcomeCard"
+              },
+              "fqn" : "runtime_ses_ext:programOutcomeCard"
+            }, {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_programTaskListCard"
+              },
+              "fqn" : "runtime_ses_ext:programTaskListCard"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "96fdcc1b-25d3-4965-adeb-f979d8d8950b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "displayAsCard" : false,
+            "displayMode" : "expanded",
+            "recordId" : "{!recordId}",
+            "showDescription" : true,
+            "showDueDate" : true,
+            "titleHeadingLevel" : "h1"
+          },
+          "componentName" : "runtime_ses_ext:programDetailHeader",
+          "id" : "d613c3a6-7281-46b0-8eaa-442b54e009f5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "displayAsCard" : true,
+            "recordId" : "{!recordId}",
+            "showDescription" : true,
+            "showDueDate" : true,
+            "showIcon" : true,
+            "title" : "Program Outcome",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "small"
+          },
+          "componentName" : "runtime_ses_ext:programOutcomeCard",
+          "id" : "afc939a2-0832-4add-9764-fa1fe9c86355",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "displayAsCard" : true,
+            "recordId" : "{!recordId}",
+            "showDescription" : true,
+            "showDueDate" : true,
+            "showExpandOrCollapseButtons" : true,
+            "showIcons" : true,
+            "showProgress" : true,
+            "title" : "Milestones and Tasks",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "small"
+          },
+          "componentName" : "runtime_ses_ext:programTaskListCard",
+          "id" : "4570e9e7-c65c-45c7-863a-35a74b2d61dc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "aaa12df8-7d32-4dfc-9c93-619b9e879006",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9b43568f-c33f-4ab8-a9b5-0deb6f099821",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "e28f7629-182b-45d0-8558-c0608d1c61b9",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ceae1729-78c7-475c-a644-4192157322ba",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8987f440-978a-4c1a-a384-734da508e4c1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-0Qo"
+}

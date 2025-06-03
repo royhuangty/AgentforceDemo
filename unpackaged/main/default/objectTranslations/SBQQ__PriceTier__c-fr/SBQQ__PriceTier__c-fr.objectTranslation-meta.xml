@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Niveau de prix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Niveaux de prix</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Price Tier Layout</layout>
+        <sections>
+            <label>Informations sur les prix</label>
+            <section>Price Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du niveau</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

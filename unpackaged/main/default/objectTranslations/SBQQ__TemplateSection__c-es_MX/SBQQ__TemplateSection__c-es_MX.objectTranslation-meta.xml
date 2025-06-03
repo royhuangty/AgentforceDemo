@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sección de plantilla</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Secciones de plantillas</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Template Section Layout</layout>
+        <sections>
+            <label>Información de filtrado</label>
+            <section>Filtering Information</section>
+        </sections>
+        <sections>
+            <label>Saltos de página</label>
+            <section>Page Breaks</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de la sección</nameFieldLabel>
+    <webLinks>
+        <label><!-- IncludeDocument --></label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+</CustomObjectTranslation>

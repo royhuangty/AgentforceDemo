@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to all PMT Items.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Platform - PMT</label>
+    <permissionSets>SDO_PMT_Base</permissionSets>
+    <permissionSets>inov8__PMT_Global_Admin</permissionSets>
+    <permissionSets>inov8__PMT_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

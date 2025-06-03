@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>L&#39;augm. s&#39;applique en tant que % du prix de l&#39;année préc. Le prix qui en résulte est saisi dans le champ Prix normal en plus des prix spéc. ou contractés. Les augm. s&#39;ajoutent année après année. Une augm. ne peut pas s&#39;appliquer à la 1e année d&#39;un abon.</help>
+        <label><!-- Uplift --></label>
+        <name>SBQQ__Uplift__c</name>
+    </CustomFieldTranslation>

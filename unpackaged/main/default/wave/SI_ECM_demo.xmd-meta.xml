@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset>SI_ECM_demo</dataset>
+    <dates>
+        <alias>ssotReasonGroupTrainingDatec</alias>
+        <firstDayOfWeek>-1</firstDayOfWeek>
+        <fiscalMonthOffset>0</fiscalMonthOffset>
+        <label>Report Created Date</label>
+        <sortIndex>0</sortIndex>
+        <type xsi:nil="true"/>
+    </dates>
+    <dates>
+        <alias>ssotReportDefinitionEndDateTimec</alias>
+        <firstDayOfWeek>-1</firstDayOfWeek>
+        <fiscalMonthOffset>0</fiscalMonthOffset>
+        <label>Report Definition End Date</label>
+        <sortIndex>1</sortIndex>
+        <type xsi:nil="true"/>
+    </dates>
+    <dates>
+        <alias>ssotReportDefinitionStartDateTimec</alias>
+        <firstDayOfWeek>-1</firstDayOfWeek>
+        <fiscalMonthOffset>0</fiscalMonthOffset>
+        <label>Report Definition Start Date</label>
+        <sortIndex>2</sortIndex>
+        <type xsi:nil="true"/>
+    </dates>
+    <dimensions>
+        <field>ssotConversationReasonCategoryIdc</field>
+        <isDerived>false</isDerived>
+        <label>Reason Category Id</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotConversationReasonIdc</field>
+        <isDerived>false</isDerived>
+        <label>Reason Id</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotExcerptIdc</field>
+        <isDerived>false</isDerived>
+        <label>Excerpt Id</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotExcerptLanguageIdc</field>
+        <isDerived>false</isDerived>
+        <label>Language</label>
+        <members>
+            <label>English</label>
+            <member>en_US</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotExcerptTranscriptSourceIdc</field>
+        <isDerived>false</isDerived>
+        <label>Transcript Source Id</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotReportDefinitionNamec</field>
+        <isDerived>false</isDerived>
+        <label>Report Name</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotReasonGroupNamec</field>
+        <isDerived>false</isDerived>
+        <label>Topic</label>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotReasonGroupConvReasonReportDefinitionIDc</field>
+        <isDerived>false</isDerived>
+        <label>Report Definition Id</label>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotReasonSummaryTextc</field>
+        <isDerived>false</isDerived>
+        <label>Contact Reason</label>
+        <sortIndex>8</sortIndex>
+    </dimensions>
+    <measures>
+        <field>ssotReasonFrequencyPercentc</field>
+        <isDerived>false</isDerived>
+        <label>Frequency Percentage</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotExcerptDurationInSecondsc</field>
+        <isDerived>false</isDerived>
+        <label>Duration in Seconds</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotExcerptTurnCountc</field>
+        <isDerived>false</isDerived>
+        <label>Turn Count</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+</WaveXmd>

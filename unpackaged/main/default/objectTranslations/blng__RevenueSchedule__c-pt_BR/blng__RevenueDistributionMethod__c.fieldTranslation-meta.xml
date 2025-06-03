@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Conforme definido na regra de reconhecimento de receita, o método para calcular como a receita será distribuída em períodos de tempo.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O tipo de faturam. que define quando o faturam. ocorre. O faturam. antecip. permite que você fature seus clientes por produtos ou serviços antes de fornecê-los, já o faturam. atras. permite faturar os clientes depois do fornecim. de produtos ou serviços.</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </CustomFieldTranslation>

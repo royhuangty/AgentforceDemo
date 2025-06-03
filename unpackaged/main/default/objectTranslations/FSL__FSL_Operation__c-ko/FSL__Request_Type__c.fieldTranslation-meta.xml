@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Request Type --></label>
+        <name>FSL__Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appointment Booking</masterLabel>
+            <translation>약속 예약</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatch</masterLabel>
+            <translation>디스패치</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get Candidates</masterLabel>
+            <translation>후보자 받기</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule</masterLabel>
+            <translation>일정</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UnSchedule</masterLabel>
+            <translation>일정 예약 취소</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

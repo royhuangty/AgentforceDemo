@@ -1,0 +1,17 @@
+.slds-scope {
+	
+	select.ma-select-multiple {
+		border: 1px solid $color-border;
+		border-radius: 4px;
+
+		option {
+			font-size: 13px;
+			padding: 0.5rem 0.75rem;
+			color: $color-text-default-2;
+
+			&:hover {
+				background: $color-background;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>ICD-10 PCS</fullName>
+        <default>true</default>
+        <label>ICD-10 PCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ICD-9 PCS</fullName>
+        <default>false</default>
+        <label>ICD-9 PCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CPT</fullName>
+        <default>false</default>
+        <label>CPT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HCPCS</fullName>
+        <default>false</default>
+        <label>HCPCS</label>
+    </standardValue>
+</StandardValueSet>

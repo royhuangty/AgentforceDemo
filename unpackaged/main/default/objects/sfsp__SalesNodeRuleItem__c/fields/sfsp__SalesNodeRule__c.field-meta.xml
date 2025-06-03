@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfsp__SalesNodeRule__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Sales Node Rule</label>
+    <referenceTo>sfsp__SalesNodeRule__c</referenceTo>
+    <relationshipLabel>Sales Node Rule Items</relationshipLabel>
+    <relationshipName>SalesNodeRuleItems</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

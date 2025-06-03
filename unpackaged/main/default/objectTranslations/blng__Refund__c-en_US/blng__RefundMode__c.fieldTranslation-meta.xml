@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- External mode represents a refund that has been made in an external system and electronic represents a refund that is processed by Salesforce --></help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </CustomFieldTranslation>

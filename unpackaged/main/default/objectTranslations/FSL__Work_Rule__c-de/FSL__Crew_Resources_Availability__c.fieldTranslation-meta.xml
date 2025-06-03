@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wenn aktiviert, wird Feld für Mindestbelegschaftsgr. auf Arbeitsauftr. o. im Arbeitsauftragsbelegposten mit tats. verfügb. Mitgl. der Servicebelegschaft vergl. 
+Sonst wird Mindestbelegschaftsgr. mit Feld für Belegschaftsgr. der Servicebelegschaft vergl.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

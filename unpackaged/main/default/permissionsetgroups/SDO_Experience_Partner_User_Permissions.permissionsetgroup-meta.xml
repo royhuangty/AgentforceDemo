@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Required Site User permissions for the SDO Partner Central Brix</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SDO Experience - Partner Central User Permissions</label>
+    <permissionSets>SDO_Community_Partner_Community_Access</permissionSets>
+    <permissionSets>SDO_Experience_Events_Calendar_Permissions</permissionSets>
+    <permissionSets>SDO_Experience_Flow_Access_Permissions</permissionSets>
+    <permissionSets>SDO_PRM_Partner_CPQ</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select how revenue will be recognized — daily, monthly, or the total all at once --></help>
+        <label><!-- Distribution Method --></label>
+        <name>blng__DistributionMethod__c</name>
+    </CustomFieldTranslation>

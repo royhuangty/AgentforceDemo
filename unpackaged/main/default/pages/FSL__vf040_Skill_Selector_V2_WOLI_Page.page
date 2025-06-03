@@ -1,0 +1,5 @@
+<apex:page standardController="WorkOrderLineItem" extensions="FSL.Ctrl038_Skill_Selector_V2_Page">
+ <apex:form >
+  <c:vf037_Skill_Selector_V2 Ctrl="{!m_ComponenetCtrl}"></c:vf037_Skill_Selector_V2>
+ </apex:form>
+</apex:page>

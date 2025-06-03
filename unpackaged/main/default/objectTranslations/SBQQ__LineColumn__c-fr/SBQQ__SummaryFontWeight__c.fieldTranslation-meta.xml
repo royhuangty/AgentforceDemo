@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Spécifiez l&#39;épaisseur de police du texte de la ligne de résumé de cette colonne. Si vous laissez ce champ vide, l&#39;épaisseur de police de toute la colonne s&#39;applique par défaut.</help>
+        <label><!-- Summary Font Weight --></label>
+        <name>SBQQ__SummaryFontWeight__c</name>
+        <picklistValues>
+            <masterLabel>Bold</masterLabel>
+            <translation>Gras</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation>Normal</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

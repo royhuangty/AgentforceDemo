@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to send a confirmation email to a lead whenever a service appointment gets scheduled</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SDO_CorporateLogo</letterhead>
+    <name>SDO Guest Appointment Confirmation</name>
+    <style>formalLetter</style>
+    <subject>Thank you for scheduling an appointment with us</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

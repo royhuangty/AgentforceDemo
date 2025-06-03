@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積テンプレート</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Quote Template Layout</layout>
+        <sections>
+            <label>会社情報</label>
+            <section>Corporate Information</section>
+        </sections>
+        <sections>
+            <label>グループスタイル情報</label>
+            <section>Group Style Information</section>
+        </sections>
+        <sections>
+            <label>ヘッダー/フッター情報</label>
+            <section>Header/Footer Information</section>
+        </sections>
+        <sections>
+            <label>ページ情報</label>
+            <section>Page Information</section>
+        </sections>
+        <sections>
+            <label>出力オプション</label>
+            <section>Print Options</section>
+        </sections>
+        <sections>
+            <label>セクションタイトル</label>
+            <section>Section Titles</section>
+        </sections>
+        <sections>
+            <label>スタイル情報</label>
+            <section>Style Information</section>
+        </sections>
+        <sections>
+            <label>契約条件</label>
+            <section>Terms &amp; Conditions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>テンプレート名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Footer Height can not be blank if Page Number Position is set to Footer. --></errorMessage>
+        <name>SBQQ__Blank_Footer_Height</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Header Height can not be blank if Page Number Position is set to Header. --></errorMessage>
+        <name>SBQQ__Blank_Header_Height</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

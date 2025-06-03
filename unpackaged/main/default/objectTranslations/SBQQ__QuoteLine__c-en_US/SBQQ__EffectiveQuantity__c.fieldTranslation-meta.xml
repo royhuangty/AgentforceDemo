@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Effective quantity used in computing totals. Same as quantity unless the product is block priced, covered by &quot;Slab&quot; discount schedule, or an existing subscription. --></help>
+        <label><!-- Effective Quantity --></label>
+        <name>SBQQ__EffectiveQuantity__c</name>
+    </CustomFieldTranslation>

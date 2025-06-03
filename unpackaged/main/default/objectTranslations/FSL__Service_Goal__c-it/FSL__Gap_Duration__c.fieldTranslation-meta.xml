@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Immettere il numero di minuti che rappresentano un intervallo di tempo di inattività tra gli appuntamenti di servizio. Questo obiettivo riduce al minimo gli intervalli che sono uguali o maggiori del valore immesso.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

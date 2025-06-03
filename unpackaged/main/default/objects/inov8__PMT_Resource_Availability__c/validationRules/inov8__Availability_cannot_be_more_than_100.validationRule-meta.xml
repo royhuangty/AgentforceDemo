@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Availability_cannot_be_more_than_100</fullName>
+    <active>true</active>
+    <description>Validation to ensure availability</description>
+    <errorConditionFormula>inov8__Jan__c&lt;0 || inov8__Jan__c&gt;1 ||
+inov8__Feb__c&lt;0 || inov8__Feb__c&gt;1 ||
+inov8__Mar__c&lt;0 || inov8__Mar__c&gt;1 ||
+inov8__Apr__c&lt;0 || inov8__Apr__c&gt;1 ||
+inov8__May__c&lt;0 || inov8__May__c&gt;1 ||
+inov8__Jun__c&lt;0 || inov8__Jun__c&gt;1 ||
+inov8__Jul__c&lt;0 || inov8__Jul__c&gt;1 ||
+inov8__Aug__c&lt;0 || inov8__Aug__c&gt;1 ||
+inov8__Sep__c&lt;0 || inov8__Sep__c&gt;1 ||
+inov8__Oct__c&lt;0 || inov8__Oct__c&gt;1 ||
+inov8__Nov__c&lt;0 || inov8__Nov__c&gt;1 ||
+inov8__Dec__c&lt;0 || inov8__Nov__c&gt;1</errorConditionFormula>
+    <errorMessage>Availability must be in between 0 and 100</errorMessage>
+</ValidationRule>

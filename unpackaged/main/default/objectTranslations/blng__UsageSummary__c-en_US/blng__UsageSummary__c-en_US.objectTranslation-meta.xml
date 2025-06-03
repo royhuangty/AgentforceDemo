@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Usage Summary Layout</layout>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Date Information --></label>
+            <section>Summary Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- Usage Summary Information --></label>
+            <section>Usage Summary Information</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

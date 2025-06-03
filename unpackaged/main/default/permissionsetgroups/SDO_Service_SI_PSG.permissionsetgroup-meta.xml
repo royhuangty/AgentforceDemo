@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>PSG for service intelligence simulated component</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SDO_Service_SI_PSG</label>
+    <permissionSets>SDO_Service_MockEmbeddedDash_Perms</permissionSets>
+    <permissionSets>SDO_Service_SI_CRMA_Integ_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

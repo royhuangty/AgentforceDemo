@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>Användarinställningen</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value>En användarinställning</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>Användarinställning</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>Användarinställningarna</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value>Användarinställningar</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>Användarinställningar</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>User Setting Layout</layout>
+        <sections>
+            <label>Egna filter</label>
+            <section>Custom Filters</section>
+        </sections>
+        <sections>
+            <label>Preferenser för Gantt</label>
+            <section>Gantt Preferences</section>
+        </sections>
+        <sections>
+            <label>Preferenser för NA Dra&amp;släpp</label>
+            <section>NA Drag&amp;Drop Preferences</section>
+        </sections>
+        <sections>
+            <label>Preferenser för servicelista</label>
+            <section>Service List Prefernces</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Användarinställningsnamn</nameFieldLabel>
+</CustomObjectTranslation>

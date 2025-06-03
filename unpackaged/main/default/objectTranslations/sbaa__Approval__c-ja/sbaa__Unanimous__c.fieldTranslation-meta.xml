@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>承認者がグループの場合、承認済みとみなすためにメンバー全員の承認が必要ならオンにします。</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </CustomFieldTranslation>

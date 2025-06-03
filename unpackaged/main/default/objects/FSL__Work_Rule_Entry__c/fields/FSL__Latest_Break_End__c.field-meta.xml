@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Latest_Break_End__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of minutes from the start of the service resource&#39;s availability to the latest allowed break end time. For example, enter 300 to schedule a lunch break to end no more than five hours after the day starts.</inlineHelpText>
+    <label>Latest Break End (minutes)</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ParticipatingAccountId</fullName>
+    <inlineHelpText>The account of the claim participant, which can be the ship to or end customer, or the shipper or channel partner.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

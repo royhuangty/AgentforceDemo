@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ptnr_Onbd_Fmwk__Action_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Action Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Link</fullName>
+                <default>false</default>
+                <label>Link</label>
+            </value>
+            <value>
+                <fullName>Create Record</fullName>
+                <default>false</default>
+                <label>Create Record</label>
+            </value>
+            <value>
+                <fullName>Display Video</fullName>
+                <default>false</default>
+                <label>Display Video</label>
+            </value>
+            <value>
+                <fullName>Navigate to Object</fullName>
+                <default>false</default>
+                <label>Navigate to Object</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify how to aggregate quantities of quote lines for products using this schedule. By default quantity of each line (even for the same product) is considered independently. --></help>
+        <label><!-- Aggregation Scope --></label>
+        <name>SBQQ__AggregationScope__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

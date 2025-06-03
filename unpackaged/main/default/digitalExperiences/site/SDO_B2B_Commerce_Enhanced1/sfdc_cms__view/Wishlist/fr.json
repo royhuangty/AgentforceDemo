@@ -1,0 +1,59 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Wishlist",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mon compte"
+        },
+        "id" : "349ae4d0-d86d-4f83-a7c7-b59f2bc5228e"
+      }, {
+        "attributes" : {
+          "text" : "Ma liste"
+        },
+        "id" : "a3402f55-4b42-441a-aa99-fe6e2a5795d6"
+      }, {
+        "attributes" : {
+          "text" : "( 0 articles )"
+        },
+        "id" : "117e4a79-4290-4d98-9a30-9ce2fb26e77a"
+      }, {
+        "attributes" : {
+          "text" : "Ma liste est vide."
+        },
+        "id" : "91c51f88-e0fa-47d3-b8a4-f412c43775a6"
+      }, {
+        "attributes" : {
+          "text" : "Lorsque vous ajoutez des produits à Ma liste, ils apparaîtront ici."
+        },
+        "id" : "d508566b-5675-4264-9da2-9ff3a9cab5e6"
+      }, {
+        "attributes" : {
+          "text" : "Continuer vos achats"
+        },
+        "id" : "72bf57b1-80b4-4644-90ae-d8a98df86923"
+      }, {
+        "attributes" : {
+          "text" : "Ma liste"
+        },
+        "id" : "bdcd769b-824e-4523-bb83-25e211234dd2"
+      }, {
+        "attributes" : {
+          "text" : "( {!Wishlists.Details.summary.wishlistProductCount} éléments)"
+        },
+        "id" : "01b44323-b895-41f5-bd22-00dcef23f0f3"
+      }, {
+        "attributes" : {
+          "addToCartButtonLabel" : "Ajouter au panier",
+          "removeButtonLabel" : "Retirer",
+          "skuLabel" : "UGS :",
+          "unavailablePriceLabel" : "Prix indisponible",
+          "unavailableProductLabel" : "Article indisponible"
+        },
+        "id" : "cd0be674-5f7e-4ae2-b25a-070b4910219a"
+      } ]
+    }
+  },
+  "urlName" : "wishlist"
+}

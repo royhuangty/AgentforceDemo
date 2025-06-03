@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nachverfolgtes Feld, das diesen nachverfolgten Wert generiert hat</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </CustomFieldTranslation>

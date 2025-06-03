@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Saldo = Valor total - Pagamentos totais líquidos - Notas de crédito aplicadas + Notas de débito aplicadas + Conversões de linha negativas</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </CustomFieldTranslation>

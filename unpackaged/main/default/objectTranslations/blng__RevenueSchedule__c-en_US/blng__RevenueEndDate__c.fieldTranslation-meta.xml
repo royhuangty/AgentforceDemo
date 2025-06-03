@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Refers to the revenue term end date defined in the revenue rule. --></help>
+        <label><!-- Revenue End Date --></label>
+        <name>blng__RevenueEndDate__c</name>
+    </CustomFieldTranslation>

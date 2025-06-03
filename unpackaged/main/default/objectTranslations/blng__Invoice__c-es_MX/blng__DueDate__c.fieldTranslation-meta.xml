@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>La fecha cuando vence el pago de la factura.</help>
+        <label><!-- Due Date --></label>
+        <name>blng__DueDate__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntö</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntösi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntösi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännön</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöjen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöjeni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntösi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöjesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännössä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöissä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännössäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöissäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännössäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöissäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöstä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöistä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöstäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöistäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöstäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöistäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöön</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöihin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntööni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöihini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöösi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöihisi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöllä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöillä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännölläni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöilläni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännölläsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöilläsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöltä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöiltä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöltäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöiltäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöltäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöiltäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännölle</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöille</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännölleni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöilleni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöllesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöillesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntönä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöinä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntönäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöinäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntönäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöinäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöksi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsäännöiksi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännökseni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsäännöikseni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöksesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsäännöiksesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ajoituskäytännön työsääntöjä</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ajoituskäytännön työsääntöjäni</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöäsi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ajoituskäytännön työsääntöjäsi</value>
+    </caseValues>
+    
+    
+    
+    <nameFieldLabel>Ajoituskäytännön työsäännön nimi</nameFieldLabel>
+</CustomObjectTranslation>

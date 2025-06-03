@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Failure Reason --></label>
+        <name>FSL__Failure_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Already Running</masterLabel>
+            <translation>이미 실행 중</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click Authorize</masterLabel>
+            <translation>권한 부여 클릭</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupted data</masterLabel>
+            <translation>손상된 데이터</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability Rule</masterLabel>
+            <translation>가용성 규칙 없음</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>알 수 없음</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Aborted</masterLabel>
+            <translation>사용자 중단</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Solution --></label>
+        <name>Solution__c</name>
+        <picklistValues>
+            <masterLabel>Batteries</masterLabel>
+            <translation><!-- Batteries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Battery Tools</masterLabel>
+            <translation><!-- Battery Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kits</masterLabel>
+            <translation><!-- Kits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Licenses</masterLabel>
+            <translation><!-- Software Licenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turbines</masterLabel>
+            <translation><!-- Turbines --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

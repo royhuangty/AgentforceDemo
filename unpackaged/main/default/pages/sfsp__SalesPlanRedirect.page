@@ -1,0 +1,2 @@
+<apex:page standardController="sfsp__SalesPlan__c" extensions="sfsp.SalesPlanningHome" action="{!redirectPage}">
+</apex:page>

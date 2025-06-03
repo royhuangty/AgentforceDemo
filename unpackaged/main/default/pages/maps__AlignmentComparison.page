@@ -1,0 +1,358 @@
+<apex:page controller="maps.AlignmentComparison" action="{!checkPermissions}" extensions="maps.TPRemoteActions,maps.TPRemoteActionsSecured" title="Salesforce Maps Analyze and Compare" showHeader="false" sidebar="false" standardStyleSheets="false">
+    
+    <!-- if is sf classic 2019 -->
+    <apex:outputPanel layout="none" rendered="{! $User.UIThemeDisplayed == 'Theme3' }">
+        
+        <!-- styling for fullscreen app layout for SF classic -->
+        <style type="text/css">
+            .slds-scope .x-btn button,
+            .slds-scope .btn,
+            .slds-scope .btnImportant,
+            .slds-scope .btnDisabled,
+            .slds-scope .btnCancel,
+            .slds-scope .menuButton .menuButtonButton,
+            .slds-scope .menuButton .menuButtonMenu a,
+            .slds-scope .menuButton .menuButtonMenu input.theOption,
+            .slds-scope h1,
+            .slds-scope h2,
+            .slds-scope h3,
+            .slds-scope h4,
+            .slds-scope h5,
+            .slds-scope h6,
+            .slds-scope td,
+            .slds-scope,
+            #maRoot .x-btn button,
+            #maRoot .btn,
+            #maRoot .btnImportant,
+            #maRoot .btnDisabled,
+            #maRoot .btnCancel,
+            #maRoot .menuButton .menuButtonButton,
+            #maRoot .menuButton .menuButtonMenu a,
+            #maRoot .menuButton .menuButtonMenu input.theOption,
+            #maRoot h1,
+            #maRoot h2,
+            #maRoot h3,
+            #maRoot h4,
+            #maRoot h5,
+            #maRoot h6,
+            #maRoot td,
+            #maRoot {
+                font-family: "Salesforce Sans", Arial, sans-serif;
+            }
+            #maRoot {
+                height: 100%;
+            }
+    
+            .mainSplit {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            #contentWrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+    
+            .bPageFooter.noTableFooter {
+                padding-top: 6px;
+                margin-bottom: 1px;
+            }
+    
+            .bodyDiv {
+                position: relative;
+                float: none;
+                height: auto;
+                flex-grow: 1;
+                z-index: 0;
+            }
+    
+            #bodyTable {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+    
+            #bodyTable .noSidebarCell {
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+            html body.sfdcBody,
+            #maRoot .hasMotif {
+                padding: 0 10px;
+                margin: 0;
+            }
+
+            .slds-scope button,
+            #maRoot button {
+                /* margin: initial; */
+            }
+    
+            .slds-scope .slds-button,
+            #maRoot .slds-button {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            /* .slds-scope .slds-button+.slds-button,
+            #maRoot .slds-button+.slds-button {
+                margin-left: .25rem;
+            } */
+
+            .slds-scope .slds-button-group .slds-button+.slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button--last .slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button_last .slds-button,
+            .slds-scope .slds-button-group-list li+li .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button--last .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button_last .slds-button,
+            #maRoot .slds-button-group-list li+li .slds-button {
+                margin-left: -1px;
+            }
+
+            .slds-scope .slds-builder-header__nav-item, 
+            .slds-scope .slds-builder-header__utilities-item,
+            #maRoot .slds-builder-header__nav-item, 
+            #maRoot .slds-builder-header__utilities-item {
+                margin-left: 0;
+            }
+
+            .slds-scope ul li, 
+            .slds-scope ol li,
+            #maRoot ul li,
+            #maRoot ol li {
+                margin-left: initial;
+                /* padding-left: initial; */
+            }
+
+            #mapControls button {
+                margin: 0;
+            }
+
+        </style>
+    </apex:outputPanel>
+
+    <!-- JS -->
+    <script>
+        var MATA = Object.assign({
+            RemoteActions: {
+
+                //tp
+                GetDataSet: '{!$RemoteAction.TPRemoteActions.GetDataSet}',
+                GetAlignment: '{!$RemoteAction.TPRemoteActions.GetAlignment}',
+                GetAreasWithAccessByUser: '{!$RemoteAction.TPRemoteActions.GetAreasWithAccessByUser}',
+                GetContainerSets: '{!$RemoteAction.TPRemoteActions.GetContainerSets}',
+                GetContainers: '{!$RemoteAction.TPRemoteActions.GetContainers}',
+                GetDataSets: '{!$RemoteAction.TPRemoteActions.GetDataSets}',
+                GetAlignmentHierarchy: '{!$RemoteAction.TPRemoteActions.GetAlignmentHierarchy}',
+                GetUnitData: '{!$RemoteAction.TPRemoteActions.GetUnitData}',
+                UpsertUnitAssignmentBatch: '{!$RemoteAction.TPRemoteActions.UpsertUnitAssignmentBatch}',
+                DeleteObjects: '{!$RemoteAction.TPRemoteActions.DeleteObjects}',
+                StartBalance: '{!$RemoteAction.TPRemoteActions.StartBalance}',
+                GetRequestStatus: '{!$RemoteAction.TPRemoteActions.GetRequestStatus}',
+                GetStatusMATO: '{!$RemoteAction.TPRemoteActions.GetStatusMATO}',
+
+                //chatter
+                EditFeedItem: '{!$RemoteAction.TPRemoteActions.EditFeedItem}',
+                DeleteFeedItem: '{!$RemoteAction.TPRemoteActions.DeleteFeedItem}',
+                EditComment: '{!$RemoteAction.TPRemoteActions.EditComment}'
+            },
+            Labels: {
+
+                //Attribute Matching 
+                AnalyzeCompareAttributeMatchingModal_Header_AttributeMatching: '{!JSENCODE($Label.AnalyzeCompareAttributeMatchingModal_Header_AttributeMatching)}',
+                AnalyzeCompareAttributeMatchingModal_Body_ScopedNotificationText: '{!JSENCODE($Label.AnalyzeCompareAttributeMatchingModal_Body_ScopedNotificationText)}',
+                AnalyzeCompareAttributeMatchingModal_Body_Close: '{!JSENCODE($Label.AnalyzeCompareAttributeMatchingModal_Body_Close)}',
+                // Alignment Comparison Set Focus
+                AnalyzeCompareBuilder_Header_BackButton: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_BackButton)}',
+                AnalyzeCompareBuilder_Header_PrimaryAlignmentDropdown: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryAlignmentDropdown)}',
+                AnalyzeCompareBuilder_Header_PrimaryAlignmentDropdownAlignment: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryAlignmentDropdownAlignment)}',
+                AnalyzeCompareBuilder_Header_TerritoryPlanningProductName: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_TerritoryPlanningProductName)}',
+                AnalyzeCompareBuilder_Header_AnalyzeCompareProductName: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_AnalyzeCompareProductName)}',
+                AnalyzeCompareBuilder_Header_PrimaryAlignmentColorPicker: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryAlignmentColorPicker)}',
+                AnalyzeCompareBuilder_Header_PrimaryFocusDropdown: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryFocusDropdown)}',
+                AnalyzeCompareBuilder_Header_PrimaryFocusDropdownButton: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryFocusDropdownButton)}',
+                AnalyzeCompareBuilder_Header_PrimaryFocusDropdownDetails: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryFocusDropdownDetails)}',
+                AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdown: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdown)}',
+                AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownButton: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownButton)}',
+                AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownDetails: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownDetails)}',
+                AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownNone: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PrimaryHierarchyLevelDropdownNone)}',
+                AnalyzeCompareBuilder_Header_FocusDetailsNoAlignment: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_FocusDetailsNoAlignment)}',
+                AnalyzeCompareBuilder_Header_FocusDetailsTerritoryCount: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_FocusDetailsTerritoryCount)}',
+                AnalyzeCompareBuilder_Header_FocusDetailsNoneSelected: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_FocusDetailsNoneSelected)}',
+                AnalyzeCompareSetFocusModal_Header_ModalHeader: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Header_ModalHeader)}',
+                AnalyzeCompareSetFocusModal_Header_Tagline: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Header_Tagline)}',
+                AnalyzeCompareSetFocusModal_Header_InstructionScopedNotification: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Header_InstructionScopedNotification)}',
+                AnalyzeCompareSetFocusModal_Body_TreeClear: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_TreeClear)}',
+                AnalyzeCompareSetFocusModal_Body_QuickFind: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_QuickFind)}',
+                AnalyzeCompareSetFocusModal_Body_TreeExpandAll: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_TreeExpandAll)}',
+                AnalyzeCompareSetFocusModal_Body_TreeCollapseAll: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_TreeCollapseAll)}',
+                AnalyzeCompareSetFocusModal_Body_Tree: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_Tree)}',
+                AnalyzeCompareSetFocusModal_Body_TreeSelectAll: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_TreeSelectAll)}',
+                AnalyzeCompareSetFocusModal_Body_TreeNone: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Body_TreeNone)}',
+                AnalyzeCompareSetFocusModal_RequiredInputErrorPopover_PopoverHeader: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_RequiredInputErrorPopover_PopoverHeader)}',
+                AnalyzeCompareSetFocusModal_RequiredInputErrorPopover_ErrorText: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_RequiredInputErrorPopover_ErrorText)}',
+                AnalyzeCompareSetFocusModal_Footer_CancelButton: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Footer_CancelButton)}',
+                AnalyzeCompareSetFocusModal_Footer_ApplyButton: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Footer_ApplyButton)}',
+                AnalyzeCompareSetFocusModal_Processing_Spinner: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Processing_Spinner)}',
+                AnalyzeCompareSetFocusModal_Processing_CollectingContainerData: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Processing_CollectingContainerData)}',
+                AnalyzeCompareSetFocusModal_Processing_LoadingAlignmentHierarchy: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Processing_LoadingAlignmentHierarchy)}',
+                AnalyzeCompareSetFocusModal_Processing_SelectionDisabledMessage: '{!JSENCODE($Label.AnalyzeCompareSetFocusModal_Processing_SelectionDisabledMessage)}',
+                AnalyzeCompareSplashScreen_Body_AltText: '{!JSENCODE($Label.AnalyzeCompareSplashScreen_Body_AltText)}',
+                AnalyzeCompareBuilder_Header_PublishButton: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PublishButton)}',
+                AnalyzeCompareBuilder_Header_PublishAlignment: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PublishAlignment)}',
+                AnalyzeCompareBuilder_Header_PublishHierarchyLevel: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_PublishHierarchyLevel)}',
+                AnalyzeCompareBuilder_Header_AttributeMatchingSetupButtonIcon: '{!JSENCODE($Label.AnalyzeCompareBuilder_Header_AttributeMatchingSetupButtonIcon)}',
+                AnalyzeCompareBuilder_Map_ZoomInButtonIcon: '{!JSENCODE($Label.AnalyzeCompareBuilder_Map_ZoomInButtonIcon)}',
+                AnalyzeCompareBuilder_Map_ZoomToFitButtonIcon: '{!JSENCODE($Label.AnalyzeCompareBuilder_Map_ZoomToFitButtonIcon)}',
+                AnalyzeCompareBuilder_Map_ZoomOutButtonIcon: '{!JSENCODE($Label.AnalyzeCompareBuilder_Map_ZoomOutButtonIcon)}',
+                AnalyzeCompareBuilder_MapRoot_WarningMessage: '{!JSENCODE($Label.AnalyzeCompareBuilder_MapRoot_WarningMessage)}',
+                AnalyzeCompareBuilder_CompareTable_EmptyStateIllustration: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_EmptyStateIllustration)}',
+                AnalyzeCompareBuilder_CompareTable_Attribute: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Attribute)}',
+                AnalyzeCompareBuilder_CompareTable_Difference: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Difference)}',
+                AnalyzeCompareBuilder_CompareTable_PercentChange: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_PercentChange)}',
+                AnalyzeCompareBuilder_CompareTable_NumberofAreas: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_NumberofAreas)}',
+                AnalyzeCompareBuilder_CompareTable_Toggle: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Toggle)}',
+                AnalyzeCompareBuilder_CompareTable_Areas: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Areas)}',
+                AnalyzeCompareBuilder_CompareTable_InstructionText: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_InstructionText)}',
+                AnalyzeCompareBuilder_CompareTable_AddAlignmentButton: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_AddAlignmentButton)}',
+                AnalyzeCompareBuilder_CompareTable_Average: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Average)}',
+                AnalyzeCompareBuilder_CompareTable_Sum: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Sum)}',
+                AnalyzeCompareBuilder_CompareTable_Max: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Max)}',
+                AnalyzeCompareBuilder_CompareTable_Min: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_Min)}',
+                AnalyzeCompareBuilder_CompareTable_StandardDeviation: '{!JSENCODE($Label.AnalyzeCompareBuilder_CompareTable_StandardDeviation)}',
+                AnalyzeCompareBrowser_Header_ModalHeader: '{!JSENCODE($Label.AnalyzeCompareBrowser_Header_ModalHeader)}',
+                AnalyzeCompareBrowser_Header_DataSetAlignmentInContextSearch: '{!JSENCODE($Label.AnalyzeCompareBrowser_Header_DataSetAlignmentInContextSearch)}',
+                AnalyzeCompareBrowser_Header_ClearSearch: '{!JSENCODE($Label.AnalyzeCompareBrowser_Header_ClearSearch)}',
+                AnalyzeCompareBrowser_Body_ActiveGroupLabel: '{!JSENCODE($Label.AnalyzeCompareBrowser_Body_ActiveGroupLabel)}',
+                AnalyzeCompareBrowser_Body_ArchivedDataSetLabel: '{!JSENCODE($Label.AnalyzeCompareBrowser_Body_ArchivedDataSetLabel)}',
+                AnalyzeCompareBrowser_Footer_CloseButton: '{!JSENCODE($Label.AnalyzeCompareBrowser_Footer_CloseButton)}',
+                AnalyzeCompareBrowser_AreaValue: '{!JSENCODE($Label.AnalyzeCompareBrowser_AreaValue)}',
+                AnalyzeCompareStore_DataSource_Label: '{!JSENCODE($Label.AnalyzeCompareStore_DataSource_Label)}',
+                AnalyzeCompareStore_AreaName_Label: '{!JSENCODE($Label.AnalyzeCompareStore_AreaName_Label)}',
+                AnalyzeCompareStore_AreaLevel_Label: '{!JSENCODE($Label.AnalyzeCompareStore_AreaLevel_Label)}',
+                AnalyzeCompareStore_SpecialFields_Units: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Units)}',
+                AnalyzeCompareStore_SpecialFields_SpanOfControl: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_SpanOfControl)}',
+                AnalyzeCompareStore_SpecialFields_Points: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Points)}',
+                AnalyzeCompareStore_SpecialFields_Boundaries: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Boundaries)}',
+                AnalyzeCompareStore_SpecialFields_GeoProfile: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_GeoProfile)}',
+                AnalyzeCompareStore_SpecialFields_BalanceTarget: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_BalanceTarget)}',
+                AnalyzeCompareStore_SpecialFields_Owner: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Owner)}',
+                AnalyzeCompareStore_SpecialFields_OwnerId: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_OwnerId)}',
+                AnalyzeCompareStore_SpecialFields_Parent: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Parent)}',
+                AnalyzeCompareStore_SpecialFields_Description: '{!JSENCODE($Label.AnalyzeCompareStore_SpecialFields_Description)}',
+                AnalyzeCompareStore_Body_BuildingMapData: '{!JSENCODE($Label.AnalyzeCompareStore_Body_BuildingMapData)}',
+                AnalyzeCompareStore_CalculateAttributes_ErrorMessage: '{!JSENCODE($Label.AnalyzeCompareStore_CalculateAttributes_ErrorMessage)}',
+                AreaSelectorModal_Header_ModalHeader: '{!JSENCODE($Label.AreaSelectorModal_Header_ModalHeader)}',
+                AreaSelectorModal_Header_AlignmentLabel: '{!JSENCODE($Label.AreaSelectorModal_Header_AlignmentLabel)}',
+                AreaSelectorModal_Header_InstructionScopedNotification: '{!JSENCODE($Label.AreaSelectorModal_Header_InstructionScopedNotification)}',
+                AreaSelectorModal_Body_SearchPlaceholder: '{!JSENCODE($Label.AreaSelectorModal_Body_SearchPlaceholder)}',
+                AreaSelectorModal_Body_SearchClearIcon: '{!JSENCODE($Label.AreaSelectorModal_Body_SearchClearIcon)}',
+                AreaSelectorModal_Footer_CancelButton: '{!JSENCODE($Label.AreaSelectorModal_Footer_CancelButton)}',
+                AreaSelectorModal_Footer_SelectAreaButton: '{!JSENCODE($Label.AreaSelectorModal_Footer_SelectAreaButton)}',
+
+                // SLDS Labels
+                SLDS: {
+                    Picklist: {
+                        cancel: "{!JSENCODE($Label.slds_picklist_cancel)}",
+                        clear: "{!JSENCODE($Label.slds_picklist_clear)}",
+                        loading: "{!JSENCODE($Label.slds_picklist_loading)}",
+                        noSearchResults: "{!JSENCODE($Label.slds_picklist_no_results)}",
+                        placeholder: "{!JSENCODE($Label.slds_picklist_placeholder)}",
+                        removeTitle: "{!JSENCODE($Label.slds_picklist_remove)}",
+                        removeAssistiveText: "{!JSENCODE($Label.slds_picklist_remove_assistive)}",
+                        required: "{!JSENCODE($Label.slds_picklist_required)}",
+                        save: "{!JSENCODE($Label.slds_picklist_save)}",
+                        search: "{!JSENCODE($Label.slds_picklist_search)}",
+                        comboboxSearchAssistiveText: "{!JSENCODE($Label.slds_picklist_search_assistive)}"
+                    },
+                    DatePicker: {
+                        nextMonth: "{!JSENCODE($Label.slds_datepicker_next_month)}",
+                        pickYear: "{!JSENCODE($Label.slds_datepicker_pick_year)}",
+                        previousMonth: "{!JSENCODE($Label.slds_datepicker_previous_month)}",
+                        selectDate: "{!JSENCODE($Label.slds_datepicker_select_date)}",
+                        today: "{!JSENCODE($Label.slds_datepicker_today)}"
+                    },
+                    Popover: {
+                        close: "{!JSENCODE($Label.slds_popover_close_dialog)}"
+                    },
+                    ColorPicker: {
+                        default: "{!JSENCODE($Label.slds_color_picker_default)}",
+                        custom: "{!JSENCODE($Label.slds_color_picker_custom)}",
+                        hex: "{!JSENCODE($Label.slds_color_picker_hex)}",
+                        cancel: "{!JSENCODE($Label.slds_color_picker_cancel)}",
+                        done: "{!JSENCODE($Label.slds_color_picker_done)}",
+                        assistiveTextInstructions: "{!JSENCODE($Label.slds_color_picker_assistive_text_instructions)}",
+                        assistiveTextSaturation: "{!JSENCODE($Label.slds_color_picker_assistive_text_saturation)}",
+                        assistiveTextBrightness: "{!JSENCODE($Label.slds_color_picker_assistive_text_brightness)}",
+                        assistiveTextSelectHue: "{!JSENCODE($Label.slds_color_picker_assistive_text_select_hue)}",
+                        titleR: "{!JSENCODE($Label.slds_color_picker_title_r)}",
+                        titleG: "{!JSENCODE($Label.slds_color_picker_title_g)}",
+                        titleB: "{!JSENCODE($Label.slds_color_picker_title_b)}",
+                        assistiveTextRed: "{!JSENCODE($Label.slds_color_picker_assistive_text_red)}",
+                        assistiveTextGreen: "{!JSENCODE($Label.slds_color_picker_assistive_text_green)}",
+                        assistiveTextBlue: "{!JSENCODE($Label.slds_color_picker_assistive_text_blue)}"
+                    },
+                    Modal: {
+                        close: "{!JSENCODE($Label.slds_modal_close)}"
+                    }
+                }
+            }
+        }, JSON.parse("{!JSENCODE(viewData)}"));
+
+        if (MATA.betaFlags.TP_EnhancedSecurity) {
+            // SECURED REMOTE ACTIONS
+            MATA.RemoteActions['GetDataSet'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSet}',
+            MATA.RemoteActions['GetAlignment'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAlignment}',
+            MATA.RemoteActions['GetAreasWithAccessByUser'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAreasWithAccessByUser}',
+            MATA.RemoteActions['GetDataSets'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSets}',
+            MATA.RemoteActions['GetAlignmentHierarchy'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAlignmentHierarchy}',
+            MATA.RemoteActions['GetUnitData'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnitData}',
+            MATA.RemoteActions['UpsertUnitAssignmentBatch'] = '{!$RemoteAction.TPRemoteActionsSecured.UpsertUnitAssignmentBatch}',
+            MATA.RemoteActions['DeleteObjects'] = '{!$RemoteAction.TPRemoteActionsSecured.DeleteObjects}'
+            MATA.RemoteActions['StartBalance'] = '{!$RemoteAction.TPRemoteActionsSecured.StartBalance}'
+        }
+    </script>
+
+    <!-- App Root -->
+    <div id='mata-vue-root'></div>
+    <script src="{!resourcePath}/dist/bundle.js"></script>
+
+    <!-- MapBox Styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Pendo -->
+    <apex:outputPanel layout="none" rendered="{!pendoEnabled}">
+        <script>
+            (function(apiKey){
+                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                pendo.initialize({
+                    visitor: { 
+                        id: '{!JSENCODE($User.Id)}',
+                        email: '{!JSENCODE($User.Email)}',
+                        firstName: '{!JSENCODE($User.FirstName)}',
+                        lastName: '{!JSENCODE($User.LastName)}',
+                        userName: '{!JSENCODE($User.Username)}',
+                        userAgent: window.navigator.userAgent
+                    },
+                    account: { 
+                        id: '{!JSENCODE($Organization.Id)}',
+                        name: '{!JSENCODE($Organization.Name)}'
+                    }
+                });
+            })('{!JSENCODE(pendoKey)}');
+        </script>
+    </apex:outputPanel>
+
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify color (in Hex) for text in this column. Leaving blank inherits from the template. --></help>
+        <label><!-- Text Color --></label>
+        <name>SBQQ__TextColor__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_Live_Agent_LiveChatTranscript</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Chat</label>
+    <queue>SDO_Service_Live_Agent</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

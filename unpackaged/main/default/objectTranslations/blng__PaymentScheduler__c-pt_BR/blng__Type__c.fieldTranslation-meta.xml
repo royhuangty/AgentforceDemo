@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Tipo de agenda:
+Uma vez – O Agendador de pagamento será realizado apenas uma vez.
+Diário – O Agendador de pagamento será repetido continuamente todo dia</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

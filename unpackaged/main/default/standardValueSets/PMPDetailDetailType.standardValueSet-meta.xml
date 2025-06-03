@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Based On</fullName>
+        <default>false</default>
+        <label>Based On</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Part Of</fullName>
+        <default>false</default>
+        <label>Part Of</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Body Site</fullName>
+        <default>false</default>
+        <label>Body Site</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Complication</fullName>
+        <default>false</default>
+        <label>Complication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Complication Detail</fullName>
+        <default>false</default>
+        <label>Complication Detail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up</fullName>
+        <default>false</default>
+        <label>Follow Up</label>
+    </standardValue>
+</StandardValueSet>

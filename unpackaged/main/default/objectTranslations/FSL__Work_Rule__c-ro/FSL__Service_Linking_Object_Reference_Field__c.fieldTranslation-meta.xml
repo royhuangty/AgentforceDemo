@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Câmpul de referință al obiectului de legătură, folosit pentru potrivirea cu câmpul din rezervarea de servicii</help>
+        <label><!-- Linking Object Reference Field --></label>
+        <name>FSL__Service_Linking_Object_Reference_Field__c</name>
+    </CustomFieldTranslation>

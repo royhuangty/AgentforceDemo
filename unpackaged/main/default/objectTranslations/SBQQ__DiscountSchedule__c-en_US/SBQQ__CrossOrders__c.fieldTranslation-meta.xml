@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox if you want to extend volume discounts on total volume owned by customer (i.e. quantity quoted plus prior purchases). --></help>
+        <label><!-- Cross Orders --></label>
+        <name>SBQQ__CrossOrders__c</name>
+    </CustomFieldTranslation>

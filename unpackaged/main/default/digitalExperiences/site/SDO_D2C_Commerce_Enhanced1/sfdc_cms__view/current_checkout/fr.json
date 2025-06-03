@@ -1,0 +1,161 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Checkout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Coordonnées"
+        },
+        "id" : "af7e3c65-2cb1-49e9-9c5c-debaa5dab683"
+      }, {
+        "attributes" : {
+          "text" : "Changer"
+        },
+        "id" : "4403bb86-c3cd-4fe7-bc21-1abc16561b91"
+      }, {
+        "attributes" : {
+          "emailLabel" : "E-mail",
+          "phoneNumberLabel" : "Numéro de téléphone"
+        },
+        "id" : "91d7bdba-7790-4eb5-a456-5a411bee74d1"
+      }, {
+        "attributes" : {
+          "text" : "Procéder"
+        },
+        "id" : "191fb965-af5d-4f52-aa7e-09db74b48ae6"
+      }, {
+        "attributes" : {
+          "text" : "Expédition"
+        },
+        "id" : "4af89e0c-ede2-4504-b879-e134882f9ddf"
+      }, {
+        "attributes" : {
+          "text" : "Changer"
+        },
+        "id" : "0279156e-4d7e-4800-b6a5-79dbcefdabcd"
+      }, {
+        "attributes" : {
+          "componentHeaderEditAddressLabel" : "Modifier l'adresse",
+          "editAddressLabel" : "Modifier l'adresse",
+          "makeDefaultAddressLabel" : "En faire mon adresse par défaut",
+          "newAddressButtonLabel" : "Nouvelle adresse",
+          "showMoreButtonLabel" : "Afficher plus"
+        },
+        "id" : "b518c54b-0fa9-4473-b879-82f2bb7caf87"
+      }, {
+        "attributes" : {
+          "text" : "Instructions d'expédition"
+        },
+        "id" : "349d73d1-c5eb-4c4f-8c3c-16fe15de7380"
+      }, {
+        "attributes" : {
+          "text" : "Procéder"
+        },
+        "id" : "11f52f37-0056-4ed7-a5dc-1c40277d32b8"
+      }, {
+        "attributes" : {
+          "text" : "Options de livraison"
+        },
+        "id" : "b4af8bfb-909d-457c-b814-8e2a1b873631"
+      }, {
+        "attributes" : {
+          "text" : "Changer"
+        },
+        "id" : "923ca979-29f7-4d73-a681-b0ca6a1f9bbd"
+      }, {
+        "attributes" : {
+          "text" : "Procéder"
+        },
+        "id" : "9089ab0c-84d5-41b6-8031-c4b4dac2aefd"
+      }, {
+        "attributes" : {
+          "text" : "Paiement"
+        },
+        "id" : "4327c93f-e7fa-4b75-a026-45cdefe220d9"
+      }, {
+        "attributes" : {
+          "text" : "Changer"
+        },
+        "id" : "b6ba2514-0a52-4f8a-9a9d-2a20e25f099d"
+      }, {
+        "attributes" : {
+          "text" : "Carte de crédit"
+        },
+        "id" : "a1c5f689-3b7d-46eb-8729-8d6f80eb2709"
+      }, {
+        "attributes" : {
+          "billingAddressSameAsShippingAddressLabel" : "Identique à l'adresse de livraison"
+        },
+        "id" : "ac5e1cf8-fb4f-45cf-8478-db51333a1ac3"
+      }, {
+        "attributes" : {
+          "text" : "Adresse de facturation"
+        },
+        "id" : "84012421-1651-42d0-9e2e-4253b2f56441"
+      }, {
+        "attributes" : {
+          "text" : "Détails de la commande"
+        },
+        "id" : "afa53134-cbb3-4033-acbe-3179accbdadd"
+      }, {
+        "attributes" : {
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "incrementValueGuideText" : "Vendu par incréments de {0}",
+          "items" : "{!Cart.Items}",
+          "maximumValueGuideText" : "La quantité maximale est {0}",
+          "minimumValueGuideText" : "La quantité minimale est {0}",
+          "promotionsAppliedSavingsButtonText" : "{amount} Économisé",
+          "skuLabel" : "REF# {0}"
+        },
+        "id" : "321af065-ce27-4022-9e19-2eb7dad9f1ac"
+      }, {
+        "attributes" : {
+          "text" : "Afficher plus"
+        },
+        "id" : "74849b27-67e2-4214-9abf-bfb5562ecc65"
+      }, {
+        "attributes" : {
+          "text" : "Prix initial"
+        },
+        "id" : "f0bac906-a0e8-4bb9-b686-248817b30655"
+      }, {
+        "attributes" : {
+          "text" : "Promotions"
+        },
+        "id" : "87a430d3-f9d8-4e1f-be9b-1db5b2cae6ad"
+      }, {
+        "attributes" : {
+          "text" : "Expédition"
+        },
+        "id" : "6e72c12c-396b-40a6-8d3d-f3fec76cf3cf"
+      }, {
+        "attributes" : {
+          "text" : "Sous-total"
+        },
+        "id" : "e711720a-4e6f-4a47-8971-aa0bec6f58fe"
+      }, {
+        "attributes" : {
+          "text" : "Taxes incluses"
+        },
+        "id" : "b51b8662-6c0e-41ea-8548-a9ba823a7729"
+      }, {
+        "attributes" : {
+          "text" : "Taxes"
+        },
+        "id" : "77166ed5-e33f-4d9f-9b57-7b3d6f2e3e2a"
+      }, {
+        "attributes" : {
+          "text" : "Total"
+        },
+        "id" : "3781846e-1db3-4929-8b2c-724ecac16303"
+      }, {
+        "attributes" : {
+          "text" : "Passer commande"
+        },
+        "id" : "bddbfd6f-5a2e-44c1-bd22-d2ab1c42e8e5"
+      } ]
+    }
+  },
+  "urlName" : "checkout"
+}

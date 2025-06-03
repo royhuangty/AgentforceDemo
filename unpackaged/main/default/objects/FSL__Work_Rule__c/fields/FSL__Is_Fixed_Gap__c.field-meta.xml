@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Is_Fixed_Gap__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>If checked, gap between services will be based on the minimum gap field, without travel calculations.</inlineHelpText>
+    <label>Fixed Gap</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

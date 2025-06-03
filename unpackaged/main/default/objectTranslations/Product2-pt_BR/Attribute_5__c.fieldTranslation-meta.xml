@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service --></label>
+        <name>Attribute_5__c</name>
+        <picklistValues>
+            <masterLabel>Installation Services</masterLabel>
+            <translation><!-- Installation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protection Plans</masterLabel>
+            <translation><!-- Protection Plans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tech Support</masterLabel>
+            <translation><!-- Tech Support --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

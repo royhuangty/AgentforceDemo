@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Déterminez si les factures doivent être publiées par défaut. Sinon, elles sont générées au format brouillon.</help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </CustomFieldTranslation>

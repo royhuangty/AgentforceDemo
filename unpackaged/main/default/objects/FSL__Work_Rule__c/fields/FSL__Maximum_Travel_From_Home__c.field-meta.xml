@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Maximum_Travel_From_Home__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines what distance or how many minutes the resource can travel from home to reach a service</inlineHelpText>
+    <label>Maximum Travel From Home</label>
+    <precision>14</precision>
+    <required>false</required>
+    <scale>5</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <description>What: Strategy when Conversation Helpers are not setup. Currently not in use anywhere. Who: Service Cloud Team.</description>
+    <if>
+        <childNode>Turbine_Troubleshoot</childNode>
+        <childNode>Offer_Support_Package</childNode>
+        <childNode>Billing_Support</childNode>
+        <label>Case Classification Recommendation</label>
+        <name>Case_Classification_Recommendation</name>
+        <childNodeExpression>
+            <childName>Billing_Support</childName>
+            <expression>ISPICKVAL($Record.Type, &#39;Account Support&#39;)</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Offer_Support_Package</childName>
+            <expression>ISPICKVAL($Record.Product_Family_KB__c, &#39;Turbine&#39;)</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Turbine_Troubleshoot</childName>
+            <expression>ISPICKVAL($Record.SDO_Sub_Type__c, &#39;Troubleshooting&#39;)</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Service - Case Default</label>
+    <recommendationLoad>
+        <label>Turbine Troubleshoot</label>
+        <name>Turbine_Troubleshoot</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Remote Diagnostics</value>
+            </value>
+        </condition>
+        <condition>
+            <field>Ranking__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>NUMBER</type>
+                <value>1</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Offer Support Package</label>
+        <name>Offer_Support_Package</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>CSupport</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Billing Support</label>
+        <name>Billing_Support</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Billing</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Case_Classification_Recommendation</childNode>
+        <label>Output</label>
+        <name>Output_395e57c29fc741dc8b88124b0e259dc4</name>
+    </union>
+</RecommendationStrategy>

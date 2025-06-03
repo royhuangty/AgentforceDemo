@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label><!-- Revenue Dates --></label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue Metrics --></label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label><!-- Source Records --></label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Information --></label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

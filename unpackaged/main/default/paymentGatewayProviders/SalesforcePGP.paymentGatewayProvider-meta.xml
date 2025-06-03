@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentGatewayProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apexAdapter>SalesforceAdapter</apexAdapter>
+    <comments>Comments</comments>
+    <idempotencySupported>Yes</idempotencySupported>
+    <masterLabel>SalesforcePGP</masterLabel>
+</PaymentGatewayProvider>

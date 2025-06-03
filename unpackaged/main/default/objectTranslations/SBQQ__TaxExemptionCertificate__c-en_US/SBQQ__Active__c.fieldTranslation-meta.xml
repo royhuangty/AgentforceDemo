@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- An Active Certificate will make set the ‘Tax Exempt?’ field on the Active to true --></help>
+        <label><!-- Active --></label>
+        <name>SBQQ__Active__c</name>
+    </CustomFieldTranslation>

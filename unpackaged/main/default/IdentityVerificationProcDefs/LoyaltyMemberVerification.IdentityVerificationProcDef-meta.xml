@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IdentityVerificationProcDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityVerificationProcDtls>
+        <fullName>LoyaltyMemberSearch</fullName>
+        <dataSourceType>Salesforce</dataSourceType>
+        <developerName>LoyaltyMemberSearch</developerName>
+        <identityVerificationProcFlds>
+            <fullName>LoyaltyMemberMembershipNumber</fullName>
+            <dataSourceType>Salesforce</dataSourceType>
+            <developerName>LoyaltyMemberMembershipNumber</developerName>
+            <fieldName>MembershipNumber</fieldName>
+            <fieldType>requiredVerifier</fieldType>
+            <isActive>true</isActive>
+            <isManualInput>false</isManualInput>
+            <masterLabel>Membership Number</masterLabel>
+            <sequenceNumber>1</sequenceNumber>
+        </identityVerificationProcFlds>
+        <identityVerificationProcFlds>
+            <fullName>LoyaltyMemberEmail</fullName>
+            <dataSourceType>Salesforce</dataSourceType>
+            <developerName>LoyaltyMemberEmail</developerName>
+            <fieldName>Contact.Email</fieldName>
+            <fieldType>optionalVerifier</fieldType>
+            <isActive>true</isActive>
+            <isManualInput>false</isManualInput>
+            <masterLabel>Email</masterLabel>
+            <sequenceNumber>2</sequenceNumber>
+        </identityVerificationProcFlds>
+        <identityVerificationProcFlds>
+            <fullName>LoyaltyMemberPhone</fullName>
+            <dataSourceType>Salesforce</dataSourceType>
+            <developerName>LoyaltyMemberPhone</developerName>
+            <fieldName>Contact.Phone</fieldName>
+            <fieldType>optionalVerifier</fieldType>
+            <isActive>true</isActive>
+            <isManualInput>false</isManualInput>
+            <masterLabel>Phone</masterLabel>
+            <sequenceNumber>3</sequenceNumber>
+        </identityVerificationProcFlds>
+        <identityVerificationProcFlds>
+            <fullName>LoyaltyMemberMembershipNumberResult</fullName>
+            <dataSourceType>Salesforce</dataSourceType>
+            <developerName>LoyaltyMemberMembershipNumberResult</developerName>
+            <fieldName>MembershipNumber</fieldName>
+            <fieldType>resultField</fieldType>
+            <isActive>true</isActive>
+            <isManualInput>false</isManualInput>
+            <masterLabel>Membership Number</masterLabel>
+            <sequenceNumber>1</sequenceNumber>
+        </identityVerificationProcFlds>
+        <isActive>true</isActive>
+        <isRetryAllowedAfterLimit>false</isRetryAllowedAfterLimit>
+        <masterLabel>Loyalty Member Search</masterLabel>
+        <objectName>LoyaltyProgramMember</objectName>
+        <optionalVerifiersMinVerfCount>1</optionalVerifiersMinVerfCount>
+        <searchRecordUniqueIdField>Id</searchRecordUniqueIdField>
+        <searchSequenceNumber>1</searchSequenceNumber>
+        <searchType>Text-Based</searchType>
+    </identityVerificationProcDtls>
+    <masterLabel>Loyalty Member Verification</masterLabel>
+    <searchLayoutType>Tab</searchLayoutType>
+</IdentityVerificationProcDef>

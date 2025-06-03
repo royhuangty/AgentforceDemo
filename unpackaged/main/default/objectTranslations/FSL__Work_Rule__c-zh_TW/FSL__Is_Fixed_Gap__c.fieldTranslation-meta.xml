@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>如果勾選，則服務之間的間隔將以最小間隔欄位為基礎，且不會計算出差路途。</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,394 @@
+.slds-scope {
+    .slds-modal{
+        //Fade out left
+         @-webkit-keyframes fadeOutLeft {
+            0% {
+               opacity: 1;
+               -webkit-transform: translateX(0);
+            }
+            100% {
+               opacity: 0;
+               -webkit-transform: translateX(-20px);
+            }
+         }
+         
+         @keyframes fadeOutLeft {
+            0% {
+               opacity: 1;
+               transform: translateX(0);
+            }
+            100% {
+               opacity: 0;
+               transform: translateX(-20px);
+            }
+         }
+         
+         .fadeOutLeft {
+            -webkit-animation-name: fadeOutLeft;
+            animation-name: fadeOutLeft;
+            -webkit-animation-duration: .2s;
+            animation-duration: .2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         
+        //Fade in left
+         @-webkit-keyframes fadeInLeft {
+            0% {
+               opacity: 1;
+               -webkit-transform: translateX(500px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(0px);
+            }
+         }
+         
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 1;
+               transform: translateX(500px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px);
+            }
+         }
+         
+         .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+            -webkit-animation-duration: .75s;
+            animation-duration: .75s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            translate: all .75s linear;
+            display: block !important;
+         }
+         
+         //Fade in down
+         @-webkit-keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(20px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0px);
+            }
+         }
+         
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               transform: translateY(20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0px);
+            }
+         }
+         
+         .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            -webkit-animation-duration: .25s;
+            animation-duration: .25s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: block !important;
+         }
+    }
+}
+
+#queryeditor-modal {
+    .loadmask {
+        background-color: transparent;
+    }
+    
+    #savedqueryeditor {
+        width: 90% !important;
+        padding: 0 !important;
+        height: 100% !important;
+        max-width: 70rem !important;
+
+        > .slds-modal__content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            max-height: 576px;
+
+            > .slds-box {
+                padding: .25rem !important;
+                border-radius: .25rem !important;
+                border: 1px solid $color-border !important;
+                background-color: $color-background !important;
+                margin: 0 !important;
+
+                table.form {
+                    width: auto;
+                }
+            }
+
+            .tabs {
+                // display: flex;
+                // flex-direction: column;
+                height: 100%;
+                background-color: #fff;
+
+                ul.ui-tabs-nav {
+                    padding: 0;
+                    border-bottom: 2px solid #dddbda;
+
+                    li.ui-state-default {
+                        background: none;
+                        border: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        padding: 0 0.75rem;
+                        margin-bottom: -2px;
+                        float: none;
+                        color: $color-text-weak;
+                        top: 0;
+
+                        &.ui-tabs-active {
+                            color: $color-text-default;
+
+                            &::after {
+                                background-color: $color-brand;
+                            }
+
+                            a.ui-tabs-anchor {
+                                font-weight: 700;
+                            }
+                        }
+
+                        a.ui-tabs-anchor {
+                            color: inherit;
+                            float: none;
+                            padding: 0;
+
+                            &:hover {
+                                color: $color-brand-darker;
+                            }
+                        }
+                    }
+                }
+
+                > .ui-tabs-panel {
+                    height: auto;
+                    padding: .5rem;
+
+                    .filtericon {
+                        margin-top: .5rem;
+                    }
+
+                    &#tab-tooltips {
+                        .fieldoptions, .parentfieldoptions .select2-container {
+                            padding-bottom: .25rem;
+                        }
+
+                        .select2-container {
+                            width: 275px !important;
+                        }
+                    }
+
+                    &#tab-markers {
+                        max-width: 960px;
+
+                        .markergrid {
+                            .markergrid-row .comparevalue {
+                                white-space: normal;
+                                max-width: 200px;
+                            }
+                        }
+                    }
+
+                    #MarkerLayerRelatedList-list {
+                        .slds-box {
+                            background: #fff !important;
+                            box-shadow: none !important;
+                            margin-bottom: .75rem !important;
+                        }
+                    }
+
+                    .htab-content-wrapper {
+                        height: auto;
+
+                        &.slds-box {
+                            background: #fff !important;
+                            background-clip: padding-box !important;
+
+                            .htab-content-header, .htab-content-body, .section-body, .section-footer, .filterbyowner {
+                                padding: .75rem !important;
+                            }
+                        }
+
+                        &.slds-card {
+                            padding: 0 !important;
+                            background: #fff !important;
+                            border: 1px solid #dddbda !important;
+                            border-radius: .25rem !important;
+                            background-clip: padding-box !important;
+                            box-shadow: 0 2px 0 0 rgba(0,0,0,.1) !important;
+
+                            .htab-content-header, .htab-content-body, .section-body, .section-footer, .filterbyowner {
+                                padding: .75rem !important;
+                            }
+                        }
+
+                        .htab-content {
+                            display: flex;
+                            flex-direction: column;
+
+                            .section-body {
+                                max-height: none !important;
+                                overflow: auto;
+                            }
+
+                            .section-footer {
+                                position: relative !important;
+                                bottom: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            padding: 0;
+
+            .systeminfo {
+                right: auto;
+                left: 0;
+                text-align: left;
+            }
+
+            .MAbutton.slds-button {
+                box-shadow: none;
+            }
+        }
+    }
+}
+		
+#UpdateFieldPopup .slds-modal__container {
+    max-width: 768px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+#badAddressPopup, #unmetDeviceCriteriaPopup {
+    .ma2-dropdown.ma-dropdown-wrap .ma-dropdown-list {
+        bottom: 34px;
+        top: auto;
+    }
+
+    .missingAddress td {
+        min-width: 130px;
+
+        &.MAbutton {
+            text-align: center;
+        }
+    }
+}
+
+#listview-filter-popup {
+    background: none;
+
+    #listview-filters-table {
+        tr td {
+            padding: 0.125rem 0.5rem;
+        }
+
+        select.unit-input {
+            margin-left: 0;
+        }
+
+        .slds-form-element__legend {
+            font-weight: 700;
+            float: left;
+        }
+    }
+}
+
+#CustomDispositionPopup {
+    .dateInput {
+        white-space: normal;
+    }
+}
+
+.mass-action-modal {
+    position: fixed !important;
+    width: auto !important;
+    background: transparent !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 9001 !important;
+    max-height: none !important;
+
+    .slds-modal__content {
+        .popup-instructions {
+            font-size: 0.8125rem;
+        }
+    }
+
+    .slds-modal__footer {
+        .slds-button {
+            line-height: 1.875rem !important;
+            font-size: 0.8125rem !important;
+            box-shadow: none !important;
+            margin-right: 0;
+
+            &.slds-button_brand {
+                float: none;
+            }
+        }
+    }
+
+    &#ChatterPostPopup {
+        .grid-blue {
+            td {
+                padding: 0;
+                background-image: none;
+                border: none;
+            }
+        }
+    }
+
+    &#ClearCoordinatesPopup {
+        .slds-modal__container {
+            width: 70%;
+        }
+    }
+
+    &#ChangeOwnerPopup {
+        .slds-table_striped {
+            .slds-text-title_caps {
+                th {
+                    background: transparent;
+                    color: #514f4d;
+                    border-right: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+            }
+
+            .changeowner-row {
+                td {
+                    background-image: none;
+                    border-left: none;    
+                    border-right: none;    
+                    border-bottom: none;    
+                }
+
+                &:hover td {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}

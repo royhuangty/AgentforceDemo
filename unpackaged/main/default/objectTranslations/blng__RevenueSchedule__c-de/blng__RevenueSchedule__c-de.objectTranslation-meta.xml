@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Umsatzplans</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Umsatzplänen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>Umsatzdaten</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>Umsatzkennzahlen</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Quelldatensätze</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>Informationen zur Zusammenfassung</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

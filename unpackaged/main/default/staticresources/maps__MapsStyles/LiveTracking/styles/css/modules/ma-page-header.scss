@@ -1,0 +1,47 @@
+.page-header-inline-checkbox-toggle {
+	margin-top: 4px;
+	.slds-checkbox_faux {
+		float: right;
+	}
+
+	.slds-checkbox_on, .slds-checkbox_off {
+		float: left;
+		margin: 4px 6px 0 0;
+	}
+}
+
+#liveLogoPageHeaderIcon {
+	background-color: $color-brand;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+
+	.ma-icon {
+		color: #fff;
+	    font-size: 21px;
+	    line-height: 1;
+	    height: 21px;
+	    width: 21px;
+	    display: block;
+	    margin: 5px auto;
+	    float: none;
+	}
+}
+
+.page-header-dropdown-first {
+	.slds-button {
+		border-right:0;
+		border-radius: 4px 0 0 4px !important;
+		width: calc(2rem - 1px);
+
+		.ma-icon {
+			font-size: 14px;
+		    display: block;
+		    margin: auto;
+		}
+	}
+}
+
+#saveAndCloseButton {
+	color: #fff !important;
+}

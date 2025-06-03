@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>fr_FR</label>
+    <protected>false</protected>
+    <values>
+        <field>tspa__Value__c</field>
+        <value xsi:type="xsd:string">Bienvenue dans l&#39;assistance visuelle à distance. Cliquez sur ce lien pour rejoindre la séance : {tspa__customerLink__c}.Sharing code (pour le partage de bureau uniquement) : {tspa__desktopShareCode__c}</value>
+    </values>
+</CustomMetadata>

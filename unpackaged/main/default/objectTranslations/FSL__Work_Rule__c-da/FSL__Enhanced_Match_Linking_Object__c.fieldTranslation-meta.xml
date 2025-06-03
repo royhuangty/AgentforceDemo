@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Det samlingsobjekt, der blev brugt til at linke serviceressourcer til det objekt, som serviceaftalens matchningsfelt refererer til</help>
+        <label><!-- Linking Object --></label>
+        <name>FSL__Enhanced_Match_Linking_Object__c</name>
+    </CustomFieldTranslation>

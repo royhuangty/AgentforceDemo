@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(255, 8, 8);&quot;&gt;Please Read The Below Documentation Before Your Begin Your Demo:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;This copy of The SDO comes with v2 of Sales Planning installed. This means there are a few steps you need to follow in order to get Sales Planning v2 up and running for your demo. We are planning on future automation for these steps - we will update this document below once we have the automated script ready!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://salesforce.quip.com/kExwAQQBykPO&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 20px;&quot;&gt;Setup Script&lt;/a&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(68, 68, 68);&quot;&gt;Did you know we have Data Packs Available to provide a richer Sales Planning and Maps Demos?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Head over to Demo Wizard in the App Launcher, Select &quot;Sales Performance Management&quot; and deploy the relevant pack!&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>START HERE</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumnsStacked</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

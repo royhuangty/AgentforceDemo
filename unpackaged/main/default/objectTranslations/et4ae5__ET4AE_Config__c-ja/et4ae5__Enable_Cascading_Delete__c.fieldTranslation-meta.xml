@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>トラッキングデータクリーンアップツールを使用すると、自動的に親および子トラッキングデータレコードが削除されます。一括削除ジョブで Apex ガバナ制限に達しないようにするには、カスケード削除を無効にします。</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

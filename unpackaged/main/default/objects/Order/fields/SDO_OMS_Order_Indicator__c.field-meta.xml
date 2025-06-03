@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_OMS_Order_Indicator__c</fullName>
+    <description>This is an icon field indicating status, tied to the Order Status field.</description>
+    <externalId>false</externalId>
+    <formula>IMAGE(SDO_OMS_Order_URLsrc__c&amp;&quot;/servlet/servlet.ImageServer?id=&quot;&amp;CASE( Status, 
+&quot;Draft&quot;, &quot;015Hu000005qPCL&amp;oid=00DHu00000QCGcp&quot;, 
+&quot;Active&quot;, &quot;015Hu000005qPCM&amp;oid=00DHu00000QCGcp&quot;, 
+&quot;Activated&quot;, &quot;015Hu000005qPCM&amp;oid=00DHu00000QCGcp&quot;, 
+&quot;015Hu000005qPCM&amp;oid=00DHu00000QCGcp&quot;),&quot;Status&quot;,24,24)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

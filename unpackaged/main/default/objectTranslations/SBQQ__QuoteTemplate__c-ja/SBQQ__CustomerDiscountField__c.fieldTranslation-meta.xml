@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>割引を計算するために使用する見積品目項目。この項目の値が合計金額から差し引かれます。</help>
+        <label><!-- Customer Discount Field --></label>
+        <name>SBQQ__CustomerDiscountField__c</name>
+        <picklistValues>
+            <masterLabel>Total Discount (Amt)</masterLabel>
+            <translation>割引合計 (金額)</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

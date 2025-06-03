@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ak je zaškrtnuté, porovnajte minimálnu veľkosť tímu pracovného príkazu alebo položky riadka pracovného príkazu s aktuálne dostupnými členmi personálu. 
+Prípadne porovnajte minimálnu veľkosť tímu s poľom Veľkosť tímu v Tíme služby.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

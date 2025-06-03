@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkType$DurationInMinutes</field>
+    </columns>
+    <columns>
+        <field>WorkType$DurationType</field>
+    </columns>
+    <columns>
+        <field>WorkType$EstimatedDuration</field>
+    </columns>
+    <columns>
+        <field>WorkType.ProductsRequired$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>WorkType.ProductsRequired$QuantityRequired</field>
+    </columns>
+    <columns>
+        <field>WorkType.ProductsRequired$QuantityUnitOfMeasure</field>
+    </columns>
+    <description>Report for FSL System Admin</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkType$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkType.ProductsRequired$Product2</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FSL Product Required By Work Type</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FSL_Work_Type_With_or_Without_Product_Required__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkType$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

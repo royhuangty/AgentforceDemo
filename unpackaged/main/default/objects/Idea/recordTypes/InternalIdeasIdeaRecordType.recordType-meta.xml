@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InternalIdeasIdeaRecordType</fullName>
+    <active>true</active>
+    <description>Record Type used to associate ideas with a specific community</description>
+    <label>Internal Ideas: Idea Record Type</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Coming Soon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>It%27s Been Reviewed%2C But Not Feasible At This Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Yet Reviewed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Consideration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

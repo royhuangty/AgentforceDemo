@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Détermine le nombre des minutes disponibles pour le trajet après la fin de la journée du calendrier de la ressource (aux frais de la ressource).
+Lorsque ce champ est vide, tout trajet suivant la fin de la journée de travail est valide.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

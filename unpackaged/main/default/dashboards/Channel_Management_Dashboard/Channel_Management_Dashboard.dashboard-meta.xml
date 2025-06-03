@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardGridLayout>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Gauge</componentType>
+                <displayUnits>Auto</displayUnits>
+                <footer>How is the channel performing against its targets?</footer>
+                <gaugeMax>1500000.0</gaugeMax>
+                <gaugeMin>0.0</gaugeMin>
+                <groupingSortProperties />
+                <header>Closed Channels Business</header>
+                <indicatorBreakpoint1>500000.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>1000000.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#E2CE7D</indicatorMiddleColor>
+                <report>Channel_Management_Reports/Channel_Closed_Business</report>
+                <showPercentage>true</showPercentage>
+                <showRange>false</showRange>
+                <showTotal>true</showTotal>
+                <showValues>false</showValues>
+                <title>Closed Channels Business</title>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>Account.Value_Closed_Won_Opportunties__c</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Which Channel Partners are driving the most revenue?</footer>
+                <groupingColumn>ACCOUNT.NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Partner Leaderboard</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>Channel_Management_Reports/Channel_Partner_Leaderboard</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Channel Partner Leaderboard</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>Account.Number_Leads_Active__c</column>
+                </chartSummary>
+                <componentType>Donut</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Are we distributing our leads fairly among Channel Partners?</footer>
+                <groupingColumn>ACCOUNT.NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Lead Distribution by Channel Partner</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Active_Leads_by_Channel_Partner</report>
+                <showPercentage>true</showPercentage>
+                <showTotal>true</showTotal>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Lead Distribution by Channel Partner</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Funnel</componentType>
+                <displayUnits>Thousands</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>true</expandOthers>
+                <footer>Is there enough business in the pipeline to meet our targets?</footer>
+                <groupingColumn>STAGE_NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Sales Pipeline</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Pipeline</report>
+                <showPercentage>false</showPercentage>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Channel Sales Pipeline</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>4</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>What&#39;s the status of the deals we expect to close each month?</footer>
+                <groupingColumn>CLOSE_DATE</groupingColumn>
+                <groupingColumn>FORECAST_CATEGORY</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Forecast by Month</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>Channel_Management_Reports/Channel_Forecast</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Channel Forcast by Month</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>4</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <footer>Which Channel Partners are most successful at driving business?</footer>
+                <groupingSortProperties />
+                <header>Channel Win Rates</header>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>Channel_Management_Reports/Channel_Win_Rates</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Channel Win Rates</title>
+            </dashboardComponent>
+            <rowIndex>4</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>BarStacked</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Do our Channel Partners have healthy pipelines?</footer>
+                <groupingColumn>ROLLUP_DESCRIPTION</groupingColumn>
+                <groupingColumn>STAGE_NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Pipeline by Channel Partner</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Partner_Pipeline</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Pipeline by Channel Partner</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>BarStacked</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>How are the top Channel Sales Reps?</footer>
+                <groupingColumn>FULL_NAME</groupingColumn>
+                <groupingColumn>TYPE</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Sales Rep Leaderboard</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Sales_Rep_Leaderboard</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Channel Sales Rep Leaderboard</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <footer>Are Channel Partners successfully converting leads to opportunities?</footer>
+                <groupingSortProperties />
+                <header>Channel Lead Conversion Rates</header>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>Channel_Management_Reports/Channel_Lead_Conversion_Rates</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Channel Lead Conversion Rates</title>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>PartnerMarketingBudget.PartnerFundAllocations$Amount</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>PartnerMarketingBudget$Name</groupingColumn>
+                <groupingColumn>PartnerMarketingBudget.PartnerFundAllocations$ChannelPartner</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Marketing Budget by Partner</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Marketing_Budget_by_Partner</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Marketing Budget allocated by Partner</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>12</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>BarStacked</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>How is each Channel Sales Rep tracking toward their target?</footer>
+                <groupingColumn>FULL_NAME</groupingColumn>
+                <groupingColumn>STAGE_NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Pipeline by Channel Rep</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Pipeline_by_Rep</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Pipeline by Channel Rep</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>12</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Are our Channel Sales Reps engaged with our customers?</footer>
+                <groupingColumn>Account.Opportunities$Owner</groupingColumn>
+                <groupingSortProperties />
+                <header>Activity by Channel Sales Rep</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>Channel_Management_Reports/Activities_by_Channel_Rep</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Activity by Channel Sales Rep</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>12</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>PartnerFundRequest.PartnerFundClaims$Amount</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>PartnerFundRequest$Name</groupingColumn>
+                <groupingSortProperties />
+                <header>Partner Fund Claims Paid</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>Channel_Management_Reports/Partner_Fund_Claims_by_Account</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title>Amount Paid by Funds Requested</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>16</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Donut</componentType>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>CAMPAIGN_NAME</groupingColumn>
+                <groupingSortProperties />
+                <header>Campaigns by Type</header>
+                <legendPosition>Right</legendPosition>
+                <maxValuesDisplayed>6</maxValuesDisplayed>
+                <report>Channel_Management_Reports/Campaigns_by_Type</report>
+                <showPercentage>true</showPercentage>
+                <showTotal>true</showTotal>
+                <showValues>true</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title># of Campaigns by Type</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>16</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>ChannelProgram$Category</groupingColumn>
+                <groupingColumn>ChannelProgram$Name</groupingColumn>
+                <groupingSortProperties />
+                <header>Channel Program by Category</header>
+                <legendPosition>Right</legendPosition>
+                <report>Channel_Management_Reports/Channel_Programs_by_Category</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <title># of Partners in Programs by Category</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>20</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <numberOfColumns>9</numberOfColumns>
+        <rowHeight>80</rowHeight>
+    </dashboardGridLayout>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>true</isGridLayout>
+    <owner>roy.huang@lidd.com2025_06_1_18-35-54.demo</owner>
+    <runningUser>roy.huang@lidd.com2025_06_1_18-35-54.demo</runningUser>
+    <textColor>#000000</textColor>
+    <title>* Channel Management Dashboard</title>
+    <titleColor>#DDDDDD</titleColor>
+    <titleSize>8</titleSize>
+</Dashboard>

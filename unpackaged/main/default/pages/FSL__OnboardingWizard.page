@@ -1,0 +1,27 @@
+<apex:page sidebar="false" showheader="true" title="Field Service - Guided Setup" controller="FSL.OnboardingWizardController">
+
+    <c:OnboardingLabelsAndStuff ></c:OnboardingLabelsAndStuff>
+    <c:OnboardingRemoteActions ></c:OnboardingRemoteActions>
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__FontAwesome44, 'css/font-awesome.min.css')}" />  
+
+    <apex:includeScript value="/support/console/43.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<apex:includeScript value="{!$Resource.FSL__jqueryUI}" />
+    <apex:includeScript value="{!$Resource.FSL__tagglemin}" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.js')}" />
+    
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <meta charset="utf-8" /><link href="{!URLFOR($Resource.OnboardingWizardBuild, '/static/css/main.c1f2f214.css')}" rel="stylesheet" /></head>
+        <body>
+            <div id="OnboardingRoot"></div>
+            <script type="text/javascript" src="{!URLFOR($Resource.OnboardingWizardBuild, '/static/js/main.51217145.js')}"></script>
+        </body>
+    </html>
+</apex:page>

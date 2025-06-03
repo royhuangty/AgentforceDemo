@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Scenario Type --></label>
+        <name>FSL__Scenario_Type__c</name>
+        <picklistValues>
+            <masterLabel>Overlap (Post-Emergency Scheduling)</masterLabel>
+            <translation>Superponer (Programación posterior a emergencia)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overlap (SA Lengthened)</masterLabel>
+            <translation>Superponer (Cita de servicio alargada)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Canceled</masterLabel>
+            <translation>Cita de servicio cancelada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Shortened</masterLabel>
+            <translation>Cita de servicio acortada</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

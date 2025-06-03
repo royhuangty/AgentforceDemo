@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Statischer Wert, anhand dessen &quot;Getestetes Feld&quot;/&quot;Getestete Variable&quot; ausgewertet wird</help>
+        <label><!-- Filter Value --></label>
+        <name>sbaa__FilterValue__c</name>
+    </CustomFieldTranslation>

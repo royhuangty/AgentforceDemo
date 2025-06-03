@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <recordTypes>
+        <description><!-- Configuration Attribute associated to a product --></description>
+        <label><!-- Configuration Attribute --></label>
+        <name>SBQQ__Configuration_Attribute</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Definition of an Attribute Item --></description>
+        <label><!-- Global Attribute --></label>
+        <name>SBQQ__Global_Attribute</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Column Order is required. --></errorMessage>
+        <name>SBQQ__Column_Order_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Product is required. --></errorMessage>
+        <name>SBQQ__Product_is_required_if_not_global</name>
+    </validationRules>
+</CustomObjectTranslation>

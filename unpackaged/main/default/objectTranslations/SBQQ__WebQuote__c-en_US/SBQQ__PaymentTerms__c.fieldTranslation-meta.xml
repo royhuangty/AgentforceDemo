@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Terms that govern payment of the items in this quote. --></help>
+        <label><!-- Payment Terms --></label>
+        <name>SBQQ__PaymentTerms__c</name>
+        <picklistValues>
+            <masterLabel>Due on receipt</masterLabel>
+            <translation><!-- Due on receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 15</masterLabel>
+            <translation><!-- Net 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 45</masterLabel>
+            <translation><!-- Net 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 90</masterLabel>
+            <translation><!-- Net 90 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

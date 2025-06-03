@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- URL for active reject icon on Deal Desk page. --></help>
+        <label><!-- Active Reject Icon URL --></label>
+        <name>sbaa__DealDeskActiveRejectIconURL__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Indicator__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(CASE( Entitlement_Status__c, 
+&quot;Expired&quot;, &quot;https://sdo-master.s3.us-west-1.amazonaws.com/icons/error.png&quot;, 
+&quot;Active&quot;,&quot;https://sdo-master.s3.us-west-1.amazonaws.com/icons/check.png&quot;, 
+&quot;30 Day Warning&quot;, &quot;https://sdo-master.s3.us-west-1.amazonaws.com/icons/warning.png&quot;, 
+&quot;https://sdo-master.s3.us-west-1.amazonaws.com/icons/check.png&quot;),&quot;Active Contract?&quot;,24,24)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Warranty</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

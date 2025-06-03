@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>決定服務之間的最小間隔。如果啟用固定間隔，則會決定服務之間的間隔。</help>
+        <label><!-- Minimum Gap (minutes) --></label>
+        <name>FSL__Minimum_Gap__c</name>
+    </CustomFieldTranslation>

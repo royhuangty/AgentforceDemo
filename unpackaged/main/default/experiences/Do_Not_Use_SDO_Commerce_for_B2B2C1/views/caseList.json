@@ -1,0 +1,236 @@
+{
+  "appPageId" : "3a241bdb-3c0c-4a4f-b277-1b94130c2d69",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "43d4f636-7925-479f-95f5-197d9babb7e0",
+  "label" : "Case List",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"ae7ccc63-347a-4afb-98ec-1518a18260f9\",\"columns\":[{\"UUID\":\"3933febf-ce10-4a42-a5a7-f23087e83eaa\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "ae7ccc63-347a-4afb-98ec-1518a18260f9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "autoScrollToMostRecent" : true,
+            "backgroundColor" : "",
+            "borderColor" : "",
+            "borderRadius" : 0,
+            "borderWidth" : 0,
+            "dxp:dataProviders" : [ {
+              "componentAttributes" : {
+                "listViewApiName" : "MyCases",
+                "objectApiName" : "Case",
+                "pageSize" : 3,
+                "sfdcExpressionKey" : "Item"
+              },
+              "componentName" : "dxp:recordListViewDataProvider"
+            } ],
+            "itemSpacing" : "none",
+            "numberOfColumns" : 3,
+            "showPagination" : true,
+            "width" : 100
+          },
+          "componentName" : "dxp_content_layout:grid",
+          "id" : "e39978b3-c14e-423e-ae21-92f7a44e8ed7",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "borderColor" : "",
+                "borderRadius" : 0,
+                "borderWidth" : 0,
+                "buttonDirection" : "horizontal",
+                "buttonGroupAlignment" : "center",
+                "buttonGroupHeight" : 45,
+                "buttonGroupSpacingHorizontal" : "space-evenly",
+                "buttonGroupSpacingVertical" : "space-evenly",
+                "buttonGroupWidth" : 75,
+                "height" : 325,
+                "imageFit" : "contain",
+                "imageHeight" : 25,
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/media/5OU4S0000000Zdi/source?cb=05T4S00000Cyctz\",\"altText\":\"\",\"contentKey\":\"MCT5CYOFXEXBDOBL4CXDE6G6E5VQ\",\"contentType\":null}}",
+                "imagePosition" : "center center",
+                "isLink" : false,
+                "linkAssistiveText" : "",
+                "showButtons" : true,
+                "showSecondaryButton" : false,
+                "singleButtonAlignment" : "center",
+                "width" : 100
+              },
+              "componentName" : "dxp_content_layout:tile2",
+              "id" : "d2a1883d-9e6a-48e0-894b-cce449173566",
+              "regions" : [ {
+                "components" : [ {
+                  "componentAttributes" : {
+                    "backgroundColor" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "Case #{!Item.CaseNumber}",
+                    "textAlign" : "center",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"headingTag\": \"h2\", \"textStyle\": \"heading-large\"}"
+                  },
+                  "componentName" : "dxp_base:textBlock",
+                  "id" : "fabb55c9-5a55-4c48-80b5-fb6dcbbc1bfc",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                }, {
+                  "componentAttributes" : {
+                    "backgroundColor" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "{!Item.Subject}",
+                    "textAlign" : "center",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+                  },
+                  "componentName" : "dxp_base:textBlock",
+                  "id" : "304de7fa-a5ad-42f6-95bb-ba4cc0e7daea",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "46865eb6-9de8-4d05-8c72-ecbe8df5ba4a",
+                "regionName" : "topContentRegion",
+                "type" : "region"
+              }, {
+                "components" : [ {
+                  "componentAttributes" : {
+                    "backgroundColor" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "{!Item.Status}",
+                    "textAlign" : "center",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{}"
+                  },
+                  "componentName" : "dxp_base:textBlock",
+                  "id" : "3ed04d24-a2f2-46ee-97e3-face58e0c349",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "fc270621-e462-4a94-b09c-92f082185d00",
+                "regionName" : "contentRegion",
+                "type" : "region"
+              }, {
+                "components" : [ {
+                  "componentAttributes" : {
+                    "alignment" : "center",
+                    "size" : "standard",
+                    "stretch" : "standard",
+                    "text" : "Case Detail",
+                    "type" : "primary",
+                    "url" : "{\"linkInfo\":{\"pageReference\":{\"type\":\"standard__recordPage\",\"attributes\":{\"actionName\":\"view\",\"objectApiName\":\"Case\",\"recordId\":\"{!Item.Id}\"},\"state\":{\"recordName\":\"{!Item.Id}\"}}}}"
+                  },
+                  "componentName" : "dxp_base:button",
+                  "id" : "65532530-c99e-4d3c-bb86-f2bdd1eac19b",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "5659e810-0535-4509-b38e-30c18014e094",
+                "regionName" : "tilePrimaryButton",
+                "type" : "region"
+              }, {
+                "components" : [ {
+                  "componentAttributes" : {
+                    "alignment" : "center",
+                    "size" : "standard",
+                    "stretch" : "standard",
+                    "text" : "Contact Us",
+                    "type" : "secondary"
+                  },
+                  "componentName" : "dxp_base:button",
+                  "id" : "42065d20-ad91-4e64-ba03-589ebda79151",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "a603d50e-c777-4088-b4ec-9704aac8b404",
+                "regionName" : "tileSecondaryButton",
+                "type" : "region"
+              }, {
+                "components" : [ {
+                  "componentAttributes" : { },
+                  "componentName" : "dxp_page_layout:placeHolder",
+                  "id" : "ac82205b-13ea-45ab-81d3-4444b52e5971",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "56961c54-9d3f-4e6c-b0e6-05ba9cc22c6d",
+                "regionName" : "placeholder",
+                "type" : "region"
+              } ],
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "795eaffa-b13f-41b0-9792-776ad529b58d",
+            "regionName" : "sfdcRepeaterItem",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "horizontalAlignment" : "center",
+                "showMoreLabel" : "Show More",
+                "showMoreSize" : "standard",
+                "showMoreStyle" : "secondary",
+                "showMoreTextDecoration" : "{}",
+                "showMoreWidth" : "standard",
+                "variant" : "showmore",
+                "verticalPadding" : "none"
+              },
+              "componentName" : "dxp_content_layout:paginator",
+              "id" : "86cfc549-21be-4969-8fe3-3d6cbbdc0378",
+              "regions" : [ {
+                "components" : [ {
+                  "componentAttributes" : { },
+                  "componentName" : "dxp_page_layout:placeHolder",
+                  "id" : "1c5ccb03-0be4-4fe3-a401-3cb19c1ec405",
+                  "renderPriority" : "NEUTRAL",
+                  "renditionMap" : { },
+                  "type" : "component"
+                } ],
+                "id" : "9a8ccb8a-e92e-4770-a12c-9a9a050f4483",
+                "regionName" : "placeholder",
+                "type" : "region"
+              } ],
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "c9275f94-e99e-407c-a84a-186ded25e222",
+            "regionName" : "pagination",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3933febf-ce10-4a42-a5a7-f23087e83eaa",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "cb424192-56a2-46ae-889f-39431035e0df",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "MyAccount",
+  "type" : "view",
+  "viewType" : "list-500"
+}

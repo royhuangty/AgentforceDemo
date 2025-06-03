@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset>SI_AgentWork_demo</dataset>
+    <dates>
+        <alias>ssotRequestDateTimec</alias>
+        <firstDayOfWeek>-1</firstDayOfWeek>
+        <fiscalMonthOffset>0</fiscalMonthOffset>
+        <label>Requested Date</label>
+        <sortIndex>0</sortIndex>
+        <type xsi:nil="true"/>
+    </dates>
+    <dimensions>
+        <field>ssotUniqueUserNamec</field>
+        <isDerived>false</isDerived>
+        <label>Agent</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Requested Date</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotRelatedToObjectc</field>
+        <isDerived>false</isDerived>
+        <label>Object Type</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotRelatedObjectLabelc</field>
+        <isDerived>false</isDerived>
+        <label>Object Label</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotUserGroupAliasc</field>
+        <isDerived>false</isDerived>
+        <label>Queue</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotRelatedToIdc</field>
+        <isDerived>false</isDerived>
+        <label>Source Object</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ssotAgentWorkStatusc</field>
+        <isDerived>false</isDerived>
+        <label>Status</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <measures>
+        <field>ssotActiveTimeMinsc</field>
+        <isDerived>false</isDerived>
+        <label>Active Time (min)</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>% SLA Hit</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotCostc</field>
+        <isDerived>false</isDerived>
+        <label>Cost ($)</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg. Active Time (min)</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotCSATc</field>
+        <isDerived>false</isDerived>
+        <label>CSAT</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg. CSAT</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotHandleTimeMinsc</field>
+        <isDerived>false</isDerived>
+        <label>Handle Time (min)</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg. Handle Time (min)</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>ssotSpeedToAnswerSecondsc</field>
+        <isDerived>false</isDerived>
+        <label>SpeedToAnswer (sec)</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg. Speed to Answer (sec)</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Work Volume</field>
+        <isDerived>true</isDerived>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>5</sortIndex>
+    </measures>
+</WaveXmd>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>LearningItemSubmission</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on the feedback delivered to assignees by their peers and managers via the Feedback Request exercise.  Add details to your report such as assessment survey questions, ratings, short text responses, and the names of responders.</description>
+    <join>
+        <join>
+            <join>
+                <outerJoin>false</outerJoin>
+                <relationship>SurveyQuestionResponses</relationship>
+            </join>
+            <outerJoin>false</outerJoin>
+            <relationship>SurveyResponses</relationship>
+        </join>
+        <outerJoin>false</outerJoin>
+        <relationship>SurveySubject</relationship>
+    </join>
+    <label>Feedback Responses Spring &#39;24</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>User</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>LearningItemSubmission</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Feedback Request Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>LearningItemSubmission</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Name</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnablementProgram.Name</field>
+            <table>LearningItemSubmission</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Task</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Name</field>
+            <table>LearningItemSubmission</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Type</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnablementProgram.Type</field>
+            <table>LearningItemSubmission</table>
+        </columns>
+        <masterLabel>Learning Item Submissions</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Responder</displayNameOverride>
+            <field>Name</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses</table>
+        </columns>
+        <masterLabel>Survey Responses</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Question</displayNameOverride>
+            <field>Question.Name</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Response</displayNameOverride>
+            <field>ResponseValue</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rating (Number)</displayNameOverride>
+            <field>NumberValue</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Question Option</displayNameOverride>
+            <field>QuestionChoice.Name</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Question Type</displayNameOverride>
+            <field>Question.QuestionType</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Question Order</displayNameOverride>
+            <field>Question.QuestionOrder</field>
+            <table>LearningItemSubmission.SurveySubject.SurveyResponses.SurveyQuestionResponses</table>
+        </columns>
+        <masterLabel>Survey Question Responses</masterLabel>
+    </sections>
+</ReportType>

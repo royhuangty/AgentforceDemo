@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter values from the corresponding picklist field on Product Option object that you want to be shown on this bundle. --></help>
+        <label><!-- Shown Values --></label>
+        <name>SBQQ__ShownValues__c</name>
+    </CustomFieldTranslation>

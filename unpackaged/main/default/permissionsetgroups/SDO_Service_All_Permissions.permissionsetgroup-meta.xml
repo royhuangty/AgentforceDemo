@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permissions for Service Demos. Who: Jesse Chase. When: 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Service - All Permissions</label>
+    <permissionSets>SDO_SMS_Outbound_Permission</permissionSets>
+    <permissionSets>SDO_Service_Agent_Helper_PSL</permissionSets>
+    <permissionSets>SDO_Service_Assigned_Social_Accounts</permissionSets>
+    <permissionSets>SDO_Service_Base_Access</permissionSets>
+    <permissionSets>SDO_Service_Case_Classification</permissionSets>
+    <permissionSets>SDO_Service_Customer360</permissionSets>
+    <permissionSets>SDO_Service_IncidentManagementBase</permissionSets>
+    <permissionSets>SDO_Service_Lightning_Demo_CTI</permissionSets>
+    <permissionSets>SDO_Service_LiveMessage_Lightning</permissionSets>
+    <permissionSets>SDO_Service_Omni_Presence_Statuses</permissionSets>
+    <permissionSets>SDO_Service_SCV_Access</permissionSets>
+    <permissionSets>force__ContextServiceAdminPsl</permissionSets>
+    <permissionSets>force__ContextServiceRuntimePsl</permissionSets>
+    <permissionSets>force__IndustriesServiceExcellence</permissionSets>
+    <permissionSets>force__ProductCatalogManagementAdministrator</permissionSets>
+    <permissionSets>force__ProductCatalogManagementViewer</permissionSets>
+    <permissionSets>force__ProductDiscoveryUser</permissionSets>
+    <permissionSets>force__ScheduleCoordinator</permissionSets>
+    <permissionSets>force__ServiceAnalyticsAdmin</permissionSets>
+    <permissionSets>force__ServiceAnalyticsUser</permissionSets>
+    <permissionSets>force__ServiceCatalogBuilder</permissionSets>
+    <permissionSets>force__ServiceCatalogUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

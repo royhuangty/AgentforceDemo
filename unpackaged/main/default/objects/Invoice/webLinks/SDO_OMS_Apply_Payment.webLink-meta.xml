@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_OMS_Apply_Payment</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Apply Payment</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/flow/SDO_OMS_Invoice_Payments?retURL=3tt/o</url>
+</WebLink>

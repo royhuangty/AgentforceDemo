@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Aktivieren Sie dieses Kontrollkästchen, um Bedingungen für intelligente Genehmigungen neu auszuwerten, selbst wenn &quot;Erfüllte Bedingungen&quot; auf &quot;Alle&quot; oder &quot;Benutzerdefiniert&quot; eingestellt ist. Wenn eine Bedingung für intelligente Genehmigungen &quot;Wahr&quot; zurückgibt, wird die Neuauswertung angehalten und die Regelbedingung als erfüllt betrachtet.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </CustomFieldTranslation>

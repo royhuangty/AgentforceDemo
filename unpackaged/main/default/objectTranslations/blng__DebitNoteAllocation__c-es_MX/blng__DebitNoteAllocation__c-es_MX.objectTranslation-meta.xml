@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Asignación de nota de débito (Partida de factura)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Asignaciones de nota de débito (Partida de factura)</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Allocation Layout</layout>
+        <sections>
+            <label>Reglas y Tratamientos</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Reglas y Tratamientos de impuestos</label>
+            <section>Tax Rules and Treatments</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número de asignación</nameFieldLabel>
+</CustomObjectTranslation>

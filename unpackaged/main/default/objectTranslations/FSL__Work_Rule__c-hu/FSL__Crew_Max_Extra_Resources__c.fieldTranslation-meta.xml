@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Adjon meg egy számot, ha szeretné korlátozni a személyzethez adható egyéb szervizerőforrások számát. Hagyja üresen, ha bármekkora számú szervizerőforrás hozzáadható.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

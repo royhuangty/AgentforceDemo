@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <description>This flow sets the session type for the Support Request feature depending on user defined criteria</description>
+    <interviewLabel>VRA - Set Session Type for Support Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>VRA - Set Session Type for Support Request</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Session_Type</name>
+        <label>Set Session Type</label>
+        <locationX>176</locationX>
+        <locationY>314</locationY>
+        <inputAssignments>
+            <field>tspa__Session_Type__c</field>
+            <value>
+                <stringValue>Video</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Set_Session_Type</targetReference>
+        </connector>
+        <object>tspa__Visual_Support_Request__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

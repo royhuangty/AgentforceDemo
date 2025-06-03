@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Payment is in progress and the invoice is locked. Before unlocking it, check whether a payment has already been created against this invoice. --></help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </CustomFieldTranslation>

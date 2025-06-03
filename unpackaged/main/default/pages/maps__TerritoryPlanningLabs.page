@@ -1,0 +1,241 @@
+<apex:page controller="maps.TerritoryPlanningLabs" action="{!checkPermissions}" extensions="maps.TPRemoteActions" title="Labs | Salesforce Maps Territory Planning" sidebar="false" standardStyleSheets="false">
+    <style>
+        #maRoot {
+            min-width: 1150px;
+        }
+    </style>
+    
+    <!-- if is sf classic 2019 -->
+    <apex:outputPanel layout="none" rendered="{! $User.UIThemeDisplayed == 'Theme3' }">
+        
+        <!-- styling for fullscreen app layout for SF classic -->
+        <style type="text/css">
+            .slds-scope .x-btn button,
+            .slds-scope .btn,
+            .slds-scope .btnImportant,
+            .slds-scope .btnDisabled,
+            .slds-scope .btnCancel,
+            .slds-scope .menuButton .menuButtonButton,
+            .slds-scope .menuButton .menuButtonMenu a,
+            .slds-scope .menuButton .menuButtonMenu input.theOption,
+            .slds-scope h1,
+            .slds-scope h2,
+            .slds-scope h3,
+            .slds-scope h4,
+            .slds-scope h5,
+            .slds-scope h6,
+            .slds-scope td,
+            .slds-scope,
+            #maRoot .x-btn button,
+            #maRoot .btn,
+            #maRoot .btnImportant,
+            #maRoot .btnDisabled,
+            #maRoot .btnCancel,
+            #maRoot .menuButton .menuButtonButton,
+            #maRoot .menuButton .menuButtonMenu a,
+            #maRoot .menuButton .menuButtonMenu input.theOption,
+            #maRoot h1,
+            #maRoot h2,
+            #maRoot h3,
+            #maRoot h4,
+            #maRoot h5,
+            #maRoot h6,
+            #maRoot td,
+            #maRoot {
+                font-family: "Salesforce Sans", Arial, sans-serif;
+            }
+            #maRoot {
+                height: 100%;
+            }
+    
+            .mainSplit {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            #contentWrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+    
+            .bPageFooter.noTableFooter {
+                padding-top: 6px;
+                margin-bottom: 1px;
+            }
+    
+            .bodyDiv {
+                position: relative;
+                float: none;
+                height: auto;
+                flex-grow: 1;
+                z-index: 0;
+            }
+    
+            #bodyTable {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+    
+            #bodyTable .noSidebarCell {
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+            html body.sfdcBody,
+            #maRoot .hasMotif {
+                padding: 0 10px;
+                margin: 0;
+            }
+
+            .slds-scope button,
+            #maRoot button {
+                /* margin: initial; */
+            }
+    
+            .slds-scope .slds-button,
+            #maRoot .slds-button {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            /* .slds-scope .slds-button+.slds-button,
+            #maRoot .slds-button+.slds-button {
+                margin-left: .25rem;
+            } */
+
+            .slds-scope .slds-button-group .slds-button+.slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button--last .slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button_last .slds-button,
+            .slds-scope .slds-button-group-list li+li .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button--last .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button_last .slds-button,
+            #maRoot .slds-button-group-list li+li .slds-button {
+                margin-left: -1px;
+            }
+
+            .slds-scope .slds-builder-header__nav-item, 
+            .slds-scope .slds-builder-header__utilities-item,
+            #maRoot .slds-builder-header__nav-item, 
+            #maRoot .slds-builder-header__utilities-item {
+                margin-left: 0;
+            }
+
+            .slds-scope ul li, 
+            .slds-scope ol li,
+            #maRoot ul li,
+            #maRoot ol li {
+                margin-left: initial;
+                /* padding-left: initial; */
+            }
+
+            #mapControls button {
+                margin: 0;
+            }
+
+        </style>
+    </apex:outputPanel>
+
+    <!-- JS -->
+    <script>
+        var MATA = Object.assign({
+            RemoteActions: {
+
+                //tp
+                GetContainerSets: '{!$RemoteAction.TPRemoteActions.GetContainerSets}',
+                GetContainers: '{!$RemoteAction.TPRemoteActions.GetContainers}',
+                GetDataSets: '{!$RemoteAction.TPRemoteActions.GetDataSets}',
+                GetAlignmentHierarchy: '{!$RemoteAction.TPRemoteActions.GetAlignmentHierarchy}',
+                GetUnitData: '{!$RemoteAction.TPRemoteActions.GetUnitData}'
+            },
+            Labels: {
+                // SLDS Labels
+                SLDS: {
+                    Picklist: {
+                        cancel: "{!JSENCODE($Label.slds_picklist_cancel)}",
+                        clear: "{!JSENCODE($Label.slds_picklist_clear)}",
+                        loading: "{!JSENCODE($Label.slds_picklist_loading)}",
+                        noSearchResults: "{!JSENCODE($Label.slds_picklist_no_results)}",
+                        placeholder: "{!JSENCODE($Label.slds_picklist_placeholder)}",
+                        removeTitle: "{!JSENCODE($Label.slds_picklist_remove)}",
+                        removeAssistiveText: "{!JSENCODE($Label.slds_picklist_remove_assistive)}",
+                        required: "{!JSENCODE($Label.slds_picklist_required)}",
+                        save: "{!JSENCODE($Label.slds_picklist_save)}",
+                        search: "{!JSENCODE($Label.slds_picklist_search)}",
+                        comboboxSearchAssistiveText: "{!JSENCODE($Label.slds_picklist_search_assistive)}"
+                    },
+                    DatePicker: {
+                        nextMonth: "{!JSENCODE($Label.slds_datepicker_next_month)}",
+                        pickYear: "{!JSENCODE($Label.slds_datepicker_pick_year)}",
+                        previousMonth: "{!JSENCODE($Label.slds_datepicker_previous_month)}",
+                        selectDate: "{!JSENCODE($Label.slds_datepicker_select_date)}",
+                        today: "{!JSENCODE($Label.slds_datepicker_today)}"
+                    },
+                    Popover: {
+                        close: "{!JSENCODE($Label.slds_popover_close_dialog)}"
+                    },
+                    ColorPicker: {
+                        default: "{!JSENCODE($Label.slds_color_picker_default)}",
+                        custom: "{!JSENCODE($Label.slds_color_picker_custom)}",
+                        hex: "{!JSENCODE($Label.slds_color_picker_hex)}",
+                        cancel: "{!JSENCODE($Label.slds_color_picker_cancel)}",
+                        done: "{!JSENCODE($Label.slds_color_picker_done)}",
+                        assistiveTextInstructions: "{!JSENCODE($Label.slds_color_picker_assistive_text_instructions)}",
+                        assistiveTextSaturation: "{!JSENCODE($Label.slds_color_picker_assistive_text_saturation)}",
+                        assistiveTextBrightness: "{!JSENCODE($Label.slds_color_picker_assistive_text_brightness)}",
+                        assistiveTextSelectHue: "{!JSENCODE($Label.slds_color_picker_assistive_text_select_hue)}",
+                        titleR: "{!JSENCODE($Label.slds_color_picker_title_r)}",
+                        titleG: "{!JSENCODE($Label.slds_color_picker_title_g)}",
+                        titleB: "{!JSENCODE($Label.slds_color_picker_title_b)}",
+                        assistiveTextRed: "{!JSENCODE($Label.slds_color_picker_assistive_text_red)}",
+                        assistiveTextGreen: "{!JSENCODE($Label.slds_color_picker_assistive_text_green)}",
+                        assistiveTextBlue: "{!JSENCODE($Label.slds_color_picker_assistive_text_blue)}"
+                    },
+                    Modal: {
+                        close: "{!JSENCODE($Label.slds_modal_close)}"
+                    }
+                }
+            }
+        }, JSON.parse("{!JSENCODE(viewData)}"));
+    </script>
+
+    <!-- App Root -->
+    <div id='mata-vue-root'></div>
+    <script src="{!resourcePath}/dist/bundle.js"></script>
+
+    <!-- Pendo -->
+    <apex:outputPanel layout="none" rendered="{!pendoEnabled}">
+        <script>
+            (function(apiKey){
+                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                pendo.initialize({
+                    visitor: { 
+                        id: '{!JSENCODE($User.Id)}',
+                        email: '{!JSENCODE($User.Email)}',
+                        firstName: '{!JSENCODE($User.FirstName)}',
+                        lastName: '{!JSENCODE($User.LastName)}',
+                        userName: '{!JSENCODE($User.Username)}',
+                        userAgent: window.navigator.userAgent
+                    },
+                    account: { 
+                        id: '{!JSENCODE($Organization.Id)}',
+                        name: '{!JSENCODE($Organization.Name)}'
+                    }
+                });
+            })('{!JSENCODE(pendoKey)}');
+        </script>
+    </apex:outputPanel>
+
+</apex:page>

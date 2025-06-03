@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Partner Central Site Walkthrough</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Looks like you&#39;re new here. Click &lt;strong&gt;&lt;em&gt;&lt;u&gt;&quot;Next&quot;&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to take a quick trip around the community! &lt;/p&gt;</body>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>true</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 1</masterLabel>
+        <publishedDate>2025-05-05</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2023-12-26</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Home</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <timesToDisplay>30</timesToDisplay>
+        <title>Wanna Take a Tour?</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Check out the &lt;u&gt;Learn&lt;/u&gt; tab to access partner training and enablement. You should see your partner onboarding and registration programs already assigned to you to get started! &lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>EnablementProgram</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Partner Training</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Click on the &lt;u&gt;&quot;Market&quot;&lt;/u&gt; tab to access all things marketing like MDFs, campaign templates, and co-marketing assets. &lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Marketing_Home__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <title>Marketing</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;On to the good stuff...selling! Check the &lt;u&gt;&quot;Sales Home&quot;&lt;/u&gt; tab to view your pipeline and deal registration. Once inside you can also see how to convert leads to opportunities and create quotes. &lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 4</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Sales__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <title>Selling</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Interact with your fellow partners to collaborate and ask questions. &lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 5</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>Community__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <title>Jump in to the Community!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <actionButtonLabel>Back to Enablement</actionButtonLabel>
+        <actionButtonLink>/partnercentral/s/enablementprogram/EnablementProgram/Default</actionButtonLink>
+        <body>&lt;p&gt;Contact your Channel Account Manager via the support tab! &lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Partner Central Site Walkthrough Step 6</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>Support__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <title>Need more help?</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Font style for Group titles. Default is normal if left blank. --></help>
+        <label><!-- Group Font Style --></label>
+        <name>SBQQ__GroupFontStyle__c</name>
+        <picklistValues>
+            <masterLabel>Bold</masterLabel>
+            <translation><!-- Bold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italic</masterLabel>
+            <translation><!-- Italic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underline</masterLabel>
+            <translation><!-- Underline --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

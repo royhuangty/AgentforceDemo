@@ -1,0 +1,10 @@
+<aura:component
+  implements="force:hasRecordId,flexipage:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require
+    scripts="/resource/ga"
+    afterScriptsLoaded="{!c.loadGoogleAnalytics}"
+  />
+  <aura:attribute name="page" type="String" default="Sales" />
+</aura:component>

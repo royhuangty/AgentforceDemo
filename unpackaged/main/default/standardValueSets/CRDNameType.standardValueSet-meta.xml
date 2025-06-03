@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>UDI Label Name</fullName>
+        <default>false</default>
+        <label>UDI Label Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>User Friendly Name</fullName>
+        <default>false</default>
+        <label>User Friendly Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Patient Reported Name</fullName>
+        <default>false</default>
+        <label>Patient Reported Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Manufacturer Provided Name</fullName>
+        <default>false</default>
+        <label>Manufacturer Provided Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Model Name</fullName>
+        <default>false</default>
+        <label>Model Name</label>
+    </standardValue>
+</StandardValueSet>

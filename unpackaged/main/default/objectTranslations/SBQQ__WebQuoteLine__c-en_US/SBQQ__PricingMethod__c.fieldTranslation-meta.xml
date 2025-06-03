@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates how the price for this line item is calculated: List, by subtracting discount from list price or Cost, by adding markup to cost. --></help>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Block</masterLabel>
+            <translation><!-- Block --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation><!-- Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation><!-- List --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

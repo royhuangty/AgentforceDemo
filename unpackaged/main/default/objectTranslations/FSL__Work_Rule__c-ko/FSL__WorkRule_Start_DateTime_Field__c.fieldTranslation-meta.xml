@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>시작 시간을 나타내는 연결 개체의 날짜 및 시간 필드 이름</help>
+        <label><!-- Start Date Field Name --></label>
+        <name>FSL__WorkRule_Start_DateTime_Field__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Agenda de desconto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Agendas de desconto</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Discount Schedule Layout</layout>
+        <sections>
+            <label>Configurações avançadas</label>
+            <section>Advanced Settings</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do cronograma</nameFieldLabel>
+    <webLinks>
+        <label><!-- EditTiers --></label>
+        <name>SBQQ__EditTiers</name>
+    </webLinks>
+</CustomObjectTranslation>

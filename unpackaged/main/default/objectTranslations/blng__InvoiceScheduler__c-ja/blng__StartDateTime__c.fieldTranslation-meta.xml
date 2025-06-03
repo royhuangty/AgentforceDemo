@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求書スケジューラプロセスを開始する日時。</help>
+        <label><!-- Start Date Time --></label>
+        <name>blng__StartDateTime__c</name>
+    </CustomFieldTranslation>

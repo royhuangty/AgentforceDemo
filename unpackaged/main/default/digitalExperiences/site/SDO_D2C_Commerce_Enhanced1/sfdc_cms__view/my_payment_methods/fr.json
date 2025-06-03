@@ -1,0 +1,29 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Saved Payment Methods",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Méthodes de paiement enregistrées"
+        },
+        "id" : "b2ccb24a-f6c0-455e-862a-d7eb76ddae79"
+      }, {
+        "attributes" : {
+          "cardDefaultLabel" : "Défaut",
+          "cardExpiredLabel" : "Expiré",
+          "footerDefaultLabel" : "Défaut",
+          "footerDeleteLabel" : "Supprimer",
+          "showMoreButtonLabel" : "Afficher plus"
+        },
+        "id" : "7f0d51ed-0527-4eee-a6a6-f19742635672"
+      }, {
+        "attributes" : {
+          "text" : "Ajouter un mode de paiement"
+        },
+        "id" : "36a4c424-910e-4add-a14e-f17035ebc0af"
+      } ]
+    }
+  },
+  "urlName" : "saved-payment-methods"
+}

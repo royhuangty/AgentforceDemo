@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>Case_KPI_1.PercentFirstContactResolution</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_1.TotalCases</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_1.EscalatedCases</field>
+        <isDerived>false</isDerived>
+        <label># Escalated Cases</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_1.AvgTimetoClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to Close (hrs)</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_1.AvgTimetoFirstClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to First Close (hrs)</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_Agent_1.PercentFirstContactResolution</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_Agent_1.TotalCases</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_Agent_1.EscalatedCases</field>
+        <isDerived>false</isDerived>
+        <label># Escalated Cases</label>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_Agent_1.AvgTimetoClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to Close (hrs)</label>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_KPI_Agent_1.AvgTimetoFirstClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to First Close (hrs)</label>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Case_Scorecard_KPIs</waveVisualization>
+</WaveXmd>

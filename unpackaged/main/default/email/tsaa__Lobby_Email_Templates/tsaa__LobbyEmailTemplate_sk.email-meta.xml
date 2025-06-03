@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-sk</name>
+    <style>none</style>
+    <subject>Pozvánka pre Vzdialeného vizuálneho pomocníka</subject>
+    <textOnly>Dobrý deň.
+Bola pre vás naplánovaná online vzdialená schôdza
+Kliknutím na tlačidlo Pripojiť sa zobrazia podrobnosti schôdze a súčasne sa k nej pripojíte.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

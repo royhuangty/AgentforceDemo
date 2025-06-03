@@ -1,0 +1,2 @@
+<apex:page standardController="maps__TPAlignment__c" extensions="maps.TerritoryPlanning" action="{!redirectPage}">
+</apex:page>

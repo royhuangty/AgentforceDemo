@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a sample Lightning Message Channel.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is the source message</description>
+        <fieldName>source</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>RecordId of the object on which component is attached</description>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>To detect the component receive value</description>
+        <fieldName>value</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>To store Component Id</description>
+        <fieldName>componentId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Object Name</description>
+        <fieldName>sObjectName</fieldName>
+    </lightningMessageFields>
+    <masterLabel>VideoChannel</masterLabel>
+</LightningMessageChannel>

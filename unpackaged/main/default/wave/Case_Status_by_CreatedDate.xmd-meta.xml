@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <field>CaseStatusbyWeek_1.ssot_CreatedDate__c_Year~~~ssot_CreatedDate__c_Week</field>
+        <isDerived>false</isDerived>
+        <label>Created Date</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>CaseStatusbyday_1.ssot_CreatedDate__c_Year~~~ssot_CreatedDate__c_Month~~~ssot_CreatedDate__c_Day</field>
+        <isDerived>false</isDerived>
+        <label>CreatedDate__c (Year-Month-Day)</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <measures>
+        <field>CaseStatusbyWeek_1.A</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseStatusbyday_1.A</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseStatusbyMonth_1.A</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Case_Status_by_CreatedDate</waveVisualization>
+</WaveXmd>

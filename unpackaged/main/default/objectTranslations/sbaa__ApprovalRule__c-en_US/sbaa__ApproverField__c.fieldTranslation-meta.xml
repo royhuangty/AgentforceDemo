@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used with Dynamic Approvals, the field containing the Approver value used for this Rule --></help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation><!-- Created By --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

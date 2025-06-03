@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この収益スケジュール内で認識する収益の種別を選択します</help>
+        <label><!-- Revenue Schedule Amount --></label>
+        <name>blng__RevenueScheduleAmount__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<apex:page controller="maps.MapActions" tabStyle="Maps__tab" action="{!StartUpAction}" title="Maps Map Actions" sidebar="false" showHeader="false">
+    <apex:sectionHeader title="Maps Map Actions"/>
+    <apex:pageMessages />
+    <table style="width=420px;">
+        <tr>            
+            <td style="text-align:center;vertical-align:middle;">
+                <a href="#" onclick="javascript:self.close()">{!JSENCODE($Label.maps__MA_Close_Window)}</a>
+            </td>
+        </tr>
+    </table>
+</apex:page>

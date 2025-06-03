@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Whitelisting the url for the community site using which the REST APIs are called in the feedback form admin org.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://qlabs-org.my.salesforce-sites.com</url>
+</RemoteSiteSetting>

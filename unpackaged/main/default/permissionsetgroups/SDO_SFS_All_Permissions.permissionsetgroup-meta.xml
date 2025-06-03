@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: All Field Service Permissions for demo assets. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Field Service - All Permissions</label>
+    <permissionSets>FSL_Admin_License</permissionSets>
+    <permissionSets>FSL_Admin_Permissions</permissionSets>
+    <permissionSets>FSL_Dispatcher_License</permissionSets>
+    <permissionSets>FSL_Dispatcher_Permissions</permissionSets>
+    <permissionSets>FSL_Mobile_License</permissionSets>
+    <permissionSets>FSL_Resource_License</permissionSets>
+    <permissionSets>FSL_Resource_Permissions</permissionSets>
+    <permissionSets>SDO_FieldService_Visionary_Access</permissionSets>
+    <permissionSets>SFS_Appointment_Assistant_PSL</permissionSets>
+    <permissionSets>xDO_FieldService_Base_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

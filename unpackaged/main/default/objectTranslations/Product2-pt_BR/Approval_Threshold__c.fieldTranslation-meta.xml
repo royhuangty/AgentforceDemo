@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Maximum discount allowed by sales rep before manager approval is required. --></help>
+        <label><!-- Approval Threshold --></label>
+        <name>Approval_Threshold__c</name>
+    </CustomFieldTranslation>

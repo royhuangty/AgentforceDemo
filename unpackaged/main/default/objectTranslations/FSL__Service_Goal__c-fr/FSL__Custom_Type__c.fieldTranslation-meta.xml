@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Custom Objective Type --></label>
+        <name>FSL__Custom_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation>Dans les meilleurs délais</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Engineer Idle Time</masterLabel>
+            <translation>Minimiser le temps d&#39;inactivité de l&#39;ingénieur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Overtime</masterLabel>
+            <translation>Réduire les heures supplémentaires</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Travel</masterLabel>
+            <translation>Réduire le trajet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Use Of Elasticity</masterLabel>
+            <translation>Minimiser l&#39;utilisation de l&#39;élasticité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Resource</masterLabel>
+            <translation>Ressource préférée</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority By Distance To Engineer</masterLabel>
+            <translation>Priorité par distance de l&#39;ingénieur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Priority</masterLabel>
+            <translation>Priorité de la ressource</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skill Level</masterLabel>
+            <translation>Niveau de compétence</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Priority</masterLabel>
+            <translation>Priorité de la tâche</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel From Home Base</masterLabel>
+            <translation>Trajet depuis le domicile</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

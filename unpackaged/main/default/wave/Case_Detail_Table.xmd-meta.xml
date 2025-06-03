@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <field>Case_DetailTable_2.Escalated</field>
+        <isDerived>false</isDerived>
+        <label>Escalated</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <defaultAction>openSfdcRecord</defaultAction>
+        <field>Case_DetailTable_2.ssotCaseNumberc</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Case_DetailTable_1.Escalated</field>
+        <isDerived>false</isDerived>
+        <label>Escalated</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <defaultAction>openSfdcRecord</defaultAction>
+        <field>Case_DetailTable_1.ssotCaseNumberc</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <measures>
+        <field>Case_DetailTable_2.C</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(66, 142, 233)</formatValue>
+                <operator>&gt;</operator>
+                <sortIndex xsi:nil="true"/>
+                <value>0.0</value>
+            </formattingPredicates>
+            <property>color</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>single</type>
+        </conditionalFormatting>
+        <field>Case_DetailTable_2.B</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(66, 142, 233)</formatValue>
+                <operator>&gt;</operator>
+                <sortIndex xsi:nil="true"/>
+                <value>0.0</value>
+            </formattingPredicates>
+            <property>color</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>single</type>
+        </conditionalFormatting>
+        <field>Case_DetailTable_1.B</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_DetailTable_1.C</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Case_Detail_Table</waveVisualization>
+</WaveXmd>

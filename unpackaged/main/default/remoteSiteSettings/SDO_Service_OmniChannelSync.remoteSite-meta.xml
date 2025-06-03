@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: For the SDO_Service_Omni_Channel_Sync component to sync dialer with omni channel. Do not remove. Who: Service Team. When. 07/2021</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://api.bluetail.salesforce.com</url>
+</RemoteSiteSetting>

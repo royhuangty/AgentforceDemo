@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsPayoutCalcSkipped</fullName>
+    <inlineHelpText>Determines whether payouts are calculated for the member. In an account hierarchy, the calculation can be skipped for the member subaccounts, and the payout is calculated for the parent account.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

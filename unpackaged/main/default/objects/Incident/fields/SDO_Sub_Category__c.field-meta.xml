@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Sub_Category__c</fullName>
+    <description>This Sub-Category was added to allow for Field Dependency with the Category field.</description>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Batteries</fullName>
+                <default>false</default>
+                <label>Batteries</label>
+            </value>
+            <value>
+                <fullName>Company Web Site</fullName>
+                <default>false</default>
+                <label>Company Web Site</label>
+            </value>
+            <value>
+                <fullName>Customer facing Ordering</fullName>
+                <default>false</default>
+                <label>Customer facing Ordering</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>GreenPoint</fullName>
+                <default>false</default>
+                <label>GreenPoint</label>
+            </value>
+            <value>
+                <fullName>ISDN</fullName>
+                <default>false</default>
+                <label>ISDN</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Powerhub AMP</fullName>
+                <default>false</default>
+                <label>Powerhub AMP</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Solar Panels</fullName>
+                <default>false</default>
+                <label>Solar Panels</label>
+            </value>
+            <value>
+                <fullName>WAN</fullName>
+                <default>false</default>
+                <label>WAN</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Company Web Site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer facing Ordering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Mobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Shipping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>ISDN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>WAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software</controllingFieldValue>
+            <valueName>GreenPoint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software</controllingFieldValue>
+            <valueName>Powerhub AMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Batteries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Solar Panels</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Système généré. Le début de la période de facturation pour la prochaine ligne de facture pour ce produit de commande.</help>
+        <label><!-- Next Billing Date --></label>
+        <name>blng__NextBillingDate__c</name>
+    </CustomFieldTranslation>

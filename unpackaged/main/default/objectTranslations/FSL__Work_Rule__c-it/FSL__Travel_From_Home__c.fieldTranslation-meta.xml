@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina quanti minuti saranno disponibili per il percorso (a carico della risorsa) prima dell&#39;inizio giornata del calendario della risorsa.
+Se il campo è vuoto, sarà valida qualsiasi durata del percorso prima dell&#39;inizio della giornata lavorativa.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

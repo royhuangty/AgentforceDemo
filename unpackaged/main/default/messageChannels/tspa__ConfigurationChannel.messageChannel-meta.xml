@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Transferring data from children cmp to configuration cmp</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Event type</description>
+        <fieldName>eventType</fieldName>
+    </lightningMessageFields>
+    <masterLabel>ConfigurationChannel</masterLabel>
+</LightningMessageChannel>

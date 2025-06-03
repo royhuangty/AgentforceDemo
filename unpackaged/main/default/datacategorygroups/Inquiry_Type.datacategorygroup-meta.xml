@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Getting Started</label>
+                <name>Getting_Started</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Support</label>
+                <name>Support</name>
+            </dataCategory>
+            <label>Product Support</label>
+            <name>Product_Support</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Orders</label>
+                <name>Orders</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Returns</label>
+                <name>Returns</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Billing &amp; Payment</label>
+                <name>Billing_Payment</name>
+            </dataCategory>
+            <label>Account Support</label>
+            <name>Account_Support</name>
+        </dataCategory>
+        <dataCategory>
+            <label>General</label>
+            <name>General</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Inquiry Type</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

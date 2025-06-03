@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Video__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Product Video</label>
+    <referenceTo>Product_Video__c</referenceTo>
+    <relationshipLabel>Product Video I18Ns</relationshipLabel>
+    <relationshipName>Product_Video_I18Ns</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

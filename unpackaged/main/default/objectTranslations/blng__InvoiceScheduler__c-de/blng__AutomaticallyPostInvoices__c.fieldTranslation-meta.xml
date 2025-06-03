@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wählen Sie diese Option, wenn Rechnungen standardmäßig gebucht werden sollen. Andernfalls werden Rechnungen als Entwürfe generiert.</help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </CustomFieldTranslation>

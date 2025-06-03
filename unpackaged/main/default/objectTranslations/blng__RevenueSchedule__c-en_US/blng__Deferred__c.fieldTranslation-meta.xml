@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Revenue that has not yet been recognized in the Revenue Schedule. --></help>
+        <label><!-- Deferred --></label>
+        <name>blng__Deferred__c</name>
+    </CustomFieldTranslation>

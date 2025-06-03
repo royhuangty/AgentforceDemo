@@ -1,0 +1,143 @@
+<apex:page showHeader="false" sidebar="false" lightningStylesheets="true" standardController="WorkOrderLineItem">
+
+	<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<apex:includeScript value="{!$Resource.FSL__CommonLightboxScripts}" />
+
+	<script>
+		
+		$(function() {
+
+			$('.btn').hide();
+			handleLinks();
+			renderRTLElsDirection($(this));
+
+		});
+
+
+		function handleLinks() {
+			
+			var allLinks = $('a');
+			allLinks.off('click');
+
+			// console links
+			if (window.parent.sforce.console.isInConsole()) {
+
+				for (var i=0; i<allLinks.length; i++) {
+					
+					var currentLink = $(allLinks[i]);
+
+					// if the "show X more" is clicked, need to reattch handles as the DOM is destroyed and rebuilt
+					if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('showMoreList') > -1))) {
+
+						(function(j) {
+							$(allLinks[j]).off('click');
+							$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+								setTimeout(handleLinks,500);
+								setTimeout(handleLinks,1500);
+								setTimeout(handleLinks,3000);
+								return;
+							});
+						}(i));
+
+						continue;
+					}
+
+					
+					// if link is "del" or "show X more"
+					if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('delete') > -1))) {
+						$('input[name=new]').hide();
+						
+						continue;
+					}
+						
+
+					// normal link
+					(function(j) {
+						//W-14217545 extrack url to open related list in console app
+						var extractedUrl = extractUrlIfScrUpMatch($(allLinks[j]).attr('href')); 
+						if (extractedUrl !== null)  {
+							$(allLinks[j]).attr('href', extractedUrl);
+						}
+						$(allLinks[j]).off('click');
+						$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+							e.preventDefault();
+							window.parent.openConsoleTabFromModal(e.data.url);
+							return;
+						});
+					}(i));
+				}
+					
+				return;
+			}
+		
+
+
+		// normal, tabbed view
+		for (var i=0; i<allLinks.length; i++) {
+
+			var currentLink = $(allLinks[i]);
+
+			// if the "show X more" is clicked, need to reattch handles as the DOM is destroyed and rebuilt
+			if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('showMoreList') > -1))) {
+
+				(function(j) {
+					$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+						setTimeout(handleLinks,500);
+						setTimeout(handleLinks,1500);
+						setTimeout(handleLinks,3000);
+						return;
+					});
+				}(i));
+
+				continue;
+			}
+
+			
+			// if link is "del" or "show X more"
+			if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('delete') > -1)))
+				continue;
+
+			currentLink.attr('target','_blank');
+		}
+
+
+			window.navigateToUrl = function(url) {
+				if (window.parent.sforce.console.isInConsole()) {
+					window.parent.openConsoleTabFromModal(e.data.url);
+				} else {
+					window.open(url);
+				}
+			};
+
+			// prevent popups on lookup fields
+			window.LookupHoverDetail.getHover = function() {
+				return {
+					show: function() {},
+					hide: function() {},
+				}
+			};
+
+	}
+
+	</script>
+
+	<style>
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+		}
+
+		.pbSubheader h3 {
+			display: inline-block;
+		}
+	</style>
+
+
+		<apex:pageBlock mode="maindetail">
+			<apex:relatedList list="SkillRequirements"/>
+			<!--<apex:relatedList list="ResourcePreferences"/>-->
+			<apex:relatedList list="ServiceAppointments"/>
+   		</apex:pageBlock>
+
+
+</apex:page>

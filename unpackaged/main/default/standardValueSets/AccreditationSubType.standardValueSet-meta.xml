@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Children’s</fullName>
+        <default>false</default>
+        <label>Children’s</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Long Term Acute Care (LTACH)</fullName>
+        <default>false</default>
+        <label>Long Term Acute Care (LTACH)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Oncology</fullName>
+        <default>false</default>
+        <label>Oncology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Psychiatric</fullName>
+        <default>false</default>
+        <label>Psychiatric</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rehabilitation</fullName>
+        <default>false</default>
+        <label>Rehabilitation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Specialty (Cardiac, Orthopedic, Surgical)</fullName>
+        <default>false</default>
+        <label>Specialty (Cardiac, Orthopedic, Surgical)</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type_Gift_Card__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when the product type is eGift card</description>
+    <label>Product_Type_Gift_Card</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

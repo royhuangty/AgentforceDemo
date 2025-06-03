@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Sum of all payment allocations and unallocations against Debit Notes allocated to this invoice. --></help>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,40 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Support",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Preguntas más frecuentes"
+        },
+        "id" : "1c75704c-34cf-4de7-812a-4a8701c016eb"
+      }, {
+        "attributes" : {
+          "text" : "{!Item.Title}"
+        },
+        "id" : "fe744665-c515-4ed5-8fa1-6580b3594f53"
+      }, {
+        "attributes" : {
+          "text" : "{!Item.Summary}"
+        },
+        "id" : "4aed599f-3ec4-49da-97d8-07f4cdd18eff"
+      }, {
+        "attributes" : {
+          "text" : "Más información"
+        },
+        "id" : "7df5aef3-b7af-4f56-aa6d-5919ff0bd477"
+      }, {
+        "attributes" : {
+          "text" : "Contáctenos"
+        },
+        "id" : "f4a1127e-0b18-47dc-8b11-2b214c60f30b"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Asistencia"
+        },
+        "id" : "4f64ce4e-8cb9-47bc-9f82-1aac1797adf1"
+      } ]
+    }
+  },
+  "urlName" : "support"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>서비스 약속 사이의 유휴 시간 간격을 나타내는 시간(분)을 입력합니다. 이 목표는 입력한 값과 같거나 그 이상인 간격을 최소화합니다.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

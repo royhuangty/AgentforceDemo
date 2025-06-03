@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify volume discounts based on a % of the product&apos;s price to be discounted using the quantity purchased or term. You can set the quantity or term ranges in tiers of different discount %. You can also apply discount schedules to Subscription Term. --></help>
+        <label><!-- Volume Discount --></label>
+        <name>SBQQ__VolumeDiscount__c</name>
+    </CustomFieldTranslation>

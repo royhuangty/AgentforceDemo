@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Hizmet kaynaklarını, hizmet randevusu eşleşme alanın başvurduğu nesneye bağlamak için kullanılan kavşak nesnesi</help>
+        <label><!-- Linking Object --></label>
+        <name>FSL__Enhanced_Match_Linking_Object__c</name>
+    </CustomFieldTranslation>

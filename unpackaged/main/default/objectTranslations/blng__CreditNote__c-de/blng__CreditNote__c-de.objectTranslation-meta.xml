@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Gutschriftsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Gutschriftsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Gutschriftsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Gutschriftsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Gutschriftsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Gutschriftsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Gutschriftsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Gutschriftsanzeigen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Credit Note Layout</layout>
+        <sections>
+            <label>Saldodetails</label>
+            <section>Balance Details</section>
+        </sections>
+        <sections>
+            <label>Steueranschrift</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nummer der Gutschriftsanzeige</nameFieldLabel>
+    <quickActions>
+        <label><!-- Apply Tax --></label>
+        <name>blng__ApplyTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancel Tax --></label>
+        <name>blng__CancelTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Estimate Tax --></label>
+        <name>blng__EstimateTax</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ApplyTax --></label>
+        <name>blng__ApplyTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CancelTax --></label>
+        <name>blng__CancelTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EstimateTax --></label>
+        <name>blng__EstimateTax</name>
+    </webLinks>
+</CustomObjectTranslation>

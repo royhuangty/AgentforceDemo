@@ -1,0 +1,46 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mon compte"
+        },
+        "id" : "46fa6531-a6db-4148-9a3c-fac0b0f996c2"
+      }, {
+        "attributes" : {
+          "text" : "Historique des commandes"
+        },
+        "id" : "6999e786-f703-4f65-a83d-f8bb97cb3402"
+      }, {
+        "id" : "6fcb024c-680f-4cbb-b34a-c930107f13d5",
+        "attributes" : {
+          "text" : "Nous n'avons trouvé aucune commande de cette période."
+        }
+      }, {
+        "id" : "2c80a252-eb17-4739-8a2b-d5388a180862",
+        "attributes" : {
+          "text" : "Essayez de modifier vos paramètres de filtre."
+        }
+      }, {
+        "id" : "0be06ced-350d-4f18-9cef-0756f2ec8314",
+        "attributes" : {
+          "text" : "Continuer les achats"
+        }
+      }, {
+        "id" : "a60cb14d-72e7-42b5-b691-09c453f99f73",
+        "attributes" : {
+          "text" : "Numéro de commande :"
+        }
+      }, {
+        "id" : "c24e8c05-6ebc-486a-9a03-8c32c3ca50d9",
+        "attributes" : {
+          "viewDetailsLinkLabel" : "Voir Détails",
+          "reorderButtonLabel" : "Commander à nouveau"
+        }
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

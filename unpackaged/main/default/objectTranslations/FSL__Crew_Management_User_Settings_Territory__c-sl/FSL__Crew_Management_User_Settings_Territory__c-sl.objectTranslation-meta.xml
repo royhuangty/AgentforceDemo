@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Ozemlje uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Ozemlja uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Ozemlje uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Ozemlja uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Ozemlja uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Ozemelj uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Ozemlju uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Ozemljem uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Ozemljem uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Ozemlji uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Ozemlju uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Ozemljih uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    
+    
+    <gender>Neuter</gender>
+    <nameFieldLabel>Ime ozemlja uporabniške nastavitve za up</nameFieldLabel>
+</CustomObjectTranslation>

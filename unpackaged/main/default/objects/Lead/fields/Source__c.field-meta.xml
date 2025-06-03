@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( URLsrc__c&amp;&quot;/servlet/servlet.ImageServer?id=&quot;&amp;CASE( LeadSource, 
+&quot;Website&quot;,&quot;015Hu000005qPCQ&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Social Media&quot;, &quot;015Hu000005qPCR&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Marketing Event&quot;, &quot;015Hu000005qPCS&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Referral&quot;,&quot;015Hu000005qPCT&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Cold Call&quot;,&quot;015Hu000005qPCU&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Data.com&quot;, &quot;015Hu000005qPCV&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Community&quot;, &quot;015Hu000005qPCW&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Inbound Call&quot;,&quot;015Hu000005qPCX&amp;oid=&quot;&amp;$Organization.Id,
+&quot;Partner&quot;,&quot;015Hu000005qPCY&amp;oid=&quot;&amp;$Organization.Id,
+&quot;015Hu000005qPCQ&amp;oid=&quot;&amp;$Organization.Id),&quot;&quot;,22,22)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

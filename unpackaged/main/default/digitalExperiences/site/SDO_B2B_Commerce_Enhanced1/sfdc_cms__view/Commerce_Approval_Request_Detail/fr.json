@@ -1,0 +1,25 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Commerce Approval Request Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Demande d'approbation"
+        },
+        "id" : "9fe17775-8274-46d1-8b9b-43b5a2c30a3a"
+      }, {
+        "id" : "5205a68f-40e3-4253-a800-2da0a0518fae",
+        "attributes" : {
+          "mainTitleText" : "{!Item.Name}"
+        }
+      }, {
+        "id" : "196085ea-59a3-427b-9b8f-a09cc1bc85f4",
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        }
+      } ]
+    }
+  },
+  "urlName" : "commerce-approval-request-detail"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If there is no display order associated with a Configuration Attribute, order is determined by Related Content name. --></help>
+        <label><!-- Row Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </CustomFieldTranslation>

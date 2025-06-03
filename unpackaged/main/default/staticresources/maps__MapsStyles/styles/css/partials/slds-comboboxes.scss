@@ -1,0 +1,19 @@
+.slds-scope .slds-combobox {
+	&.slds-combobox_inverse {
+		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.24) inset;
+		border-radius: 4px;
+		padding: 2px;
+
+		.slds-input.slds-combobox__input {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.24) inset;
+			padding-right: 32px;	
+			color: #fff;    
+			min-height: 28px;
+		    height: 28px;
+		    pointer-events: none;
+		    border-radius: 3px;
+		}
+	}
+}

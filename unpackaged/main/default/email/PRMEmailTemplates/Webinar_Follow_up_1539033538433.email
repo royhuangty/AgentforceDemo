@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<center><img height="100" src="{{{AccountBrand.LogoUrl}}}" width="199" /></center>
+<br />
+Dear {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for spending time this morning to attend the&nbsp;<strong>Webinar with our customer</strong>&nbsp;<em><strong>J</strong></em><em><strong>ohnson Corporation</strong>&nbsp;</em>and our Product Marketing team. We hope you enjoyed learning about how customers like&nbsp;<strong>Johnson Corporation</strong>&nbsp;are benefiting from&nbsp;<u><em><strong>Increased Customer Satisfaction with a NPS score of 95</strong></em></u>. I would love to discuss how&nbsp;{{{Organization.Name}}} can help&nbsp;{{{Recipient.Company}}} achieve similar customer benefits. I will plan on calling you in a couple of days to introduce myself. In the meantime if you have any questions please do not hesitate to reach out to me.<br />
+<br />
+Best Regards,<br />
+{{{Sender.Name}}}<br />
+<em>{{{Sender.CompanyName}}}</em><br />
+<em>Email: {{{Sender.Email}}}</em><br />
+<img height="50" src="{{{AccountBrand.LogoUrl}}}" width="100" /></body>
+</html>

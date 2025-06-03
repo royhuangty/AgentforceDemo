@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Aprovador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Aprovadores</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Approver Layout</layout>
+        <sections>
+            <label>Informações do delegado</label>
+            <section>Delegate Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do aprovador</nameFieldLabel>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

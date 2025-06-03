@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bepaalt welke afstand of hoeveel minuten de resource kan reizen van thuis om een service te bereiken</help>
+        <label><!-- Maximum Travel From Home --></label>
+        <name>FSL__Maximum_Travel_From_Home__c</name>
+    </CustomFieldTranslation>

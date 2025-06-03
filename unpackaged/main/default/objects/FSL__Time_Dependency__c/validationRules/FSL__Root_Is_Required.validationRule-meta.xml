@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Root_Is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(FSL__Root_Service_Appointment__c)</errorConditionFormula>
+    <errorDisplayField>FSL__Root_Service_Appointment__c</errorDisplayField>
+    <errorMessage>We couldn&#39;t create a dependency between the service appointments. Ask your Salesforce admin to give you permissions for all of the Time Dependency custom object fields.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ação de preço</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ações de preços</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Price Action Layout</layout>
+        <sections>
+            <label>Origens de ação de preço</label>
+            <section>Price Action Sources</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº da ação</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- To use Quote Line Pricing Guidance as the Target Object, select After Calculate from the Calculator Evaluation Event dropdown list. --></errorMessage>
+        <name>SBQQ__Event_Evaluation_Pricing_Guidance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Price Action Target Object does not match Evaluation Scope --></errorMessage>
+        <name>SBQQ__Target_Object_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

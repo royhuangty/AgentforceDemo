@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Updates the Order Summary Owner when the Cart was created on behalf of a customer</description>
+    <environments>Default</environments>
+    <label>Order Entry Trigger - Update Owner from Cart</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

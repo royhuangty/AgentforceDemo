@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Light.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
+  font-weight: 300; 
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-LightItalic.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-LightItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 300; 
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Regular.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
+  font-weight: 400; 
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Italic.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400; 
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Bold.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
+  font-weight: 700; 
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-BoldItalic.woff2')}") format("woff2"), url("{!URLFOR($Resource.MapsFonts, '/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 700; 
+}
+
+.ma-section-title {
+    color: $color-text-weak;
+    background-color: $light-gray;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 12px 16px 11px;
+    letter-spacing: .5px;
+
+    &.ma-section-title--darker {
+      background-color: $gray;
+      color: $dark-blue;
+    }
+}
+
+.ma-text-heading--small {
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+// * {
+//   font-family: "Salesforce Sans" !important;
+// }
+
+.text-center {
+  text-align:center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+p {
+  font-size: 16px;
+  color: $color-text-default;
+  line-height: 1.4;
+}
+
+.slds-popover__body {
+  > * {
+    color: #fff;
+  }
+}
+
+.slds-scope .slds-text-color--weak, .slds-scope .slds-text-color_weak {
+  color: $color-text-weak !important;
+}
+
+.slds-text-longform h3 {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+body {
+  color: $color-text-default;
+}

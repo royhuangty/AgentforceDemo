@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>OldProf3</container>
+    <containerType>Network</containerType>
+    <label>SDOProfessionalCommunityMainNav</label>
+    <navigationMenuItem>
+        <label>Community</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Community Home</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/community-home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>My Feeds</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-feeds</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Groups</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>CollaborationGroup</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Share Ideas</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/ideas</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Support</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Support Home</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/support-home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Knowledge Base</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/knowledgebase</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Work Orders</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>WorkOrder</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Register Purchase</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/register-product</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Learn</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Training Home</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>SDO_Community_Training_Course__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>My Account</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Orders</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>OrderSummary</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Invoices</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>SDO_Sales_Invoice_Example__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Files</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/contentdocument/ContentDocument/All</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+</NavigationMenu>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Knowledge</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Knowledge</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>SDO - Community Knowledge</layout>
+        <sections>
+            <label><!-- Stats --></label>
+            <section>Stats</section>
+        </sections>
+        <sections>
+            <label><!-- Title --></label>
+            <section>Title</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - KCS Layout</layout>
+        <sections>
+            <label><!-- Channels --></label>
+            <section>Channels</section>
+        </sections>
+        <sections>
+            <label><!-- KCS --></label>
+            <section>KCS</section>
+        </sections>
+        <sections>
+            <label><!-- Properties --></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Knowledge Author</layout>
+        <sections>
+            <label><!-- Channels --></label>
+            <section>Channels</section>
+        </sections>
+        <sections>
+            <label><!-- Chat Answer --></label>
+            <section>Chat Answer</section>
+        </sections>
+        <sections>
+            <label><!-- Properties --></label>
+            <section>Properties</section>
+        </sections>
+        <sections>
+            <label><!-- Translation --></label>
+            <section>Translation</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Knowledge Reader</layout>
+        <sections>
+            <label><!-- Channels --></label>
+            <section>Channels</section>
+        </sections>
+        <sections>
+            <label><!-- Chat Answer --></label>
+            <section>Chat Answer</section>
+        </sections>
+        <sections>
+            <label><!-- Properties --></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO Commerce - Community Knowledge</layout>
+        <sections>
+            <label><!-- Channels --></label>
+            <section>Channels</section>
+        </sections>
+        <sections>
+            <label><!-- Properties --></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Cirrus --></label>
+        <name>SDO_Knowledge_Cirrus</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- FAQ --></label>
+        <name>SDO_Knowledge_FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- KCSArticle --></label>
+        <name>SDO_Knowledge_KCSArticle</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

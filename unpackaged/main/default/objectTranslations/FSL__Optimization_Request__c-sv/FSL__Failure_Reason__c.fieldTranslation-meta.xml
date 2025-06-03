@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Failure Reason --></label>
+        <name>FSL__Failure_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Already Running</masterLabel>
+            <translation>Körs redan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click Authorize</masterLabel>
+            <translation>Klicka på Auktorisera</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupted data</masterLabel>
+            <translation>Korrupta data</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability Rule</masterLabel>
+            <translation>Regel för Ej tillgänglig</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Okänd</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Aborted</masterLabel>
+            <translation>Användare avbruten</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

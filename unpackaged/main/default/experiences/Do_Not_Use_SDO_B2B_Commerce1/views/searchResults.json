@@ -1,0 +1,136 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d2529dec-eb9f-4974-8612-9e8a58c5750c",
+  "label" : "Search Results",
+  "regions" : [ {
+    "id" : "2795939a-6206-4282-aaa3-92b0411f18e6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "da69463b-b1b2-4b4f-ae22-a91fa4cce836",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "e6582cd8-008c-4daf-831a-43f26d3ff817",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Product Search"
+          }, {
+            "UUID" : "6ce94dc1-915a-4a98-9664-10e14244f4eb",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "Global Search"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "da69463b-b1b2-4b4f-ae22-a91fa4cce836",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "addToCartButtonBackgroundColor" : "",
+            "addToCartButtonBackgroundHoverColor" : "",
+            "addToCartButtonBorderColor" : "",
+            "addToCartButtonBorderRadius" : "0",
+            "addToCartButtonText" : "ADD TO CART",
+            "addToCartButtonTextColor" : "",
+            "addToCartButtonTextHoverColor" : "",
+            "breadcrumbsColor" : "",
+            "breadcrumbsFontSize" : "small",
+            "cardAlignment" : "center",
+            "cardBackgroundColor" : "",
+            "cardBorderColor" : "rgba(255, 255, 255, 0)",
+            "cardBorderRadius" : "0",
+            "cardContentMapping" : "[{\"name\":\"Name\",\"showLabel\":false,\"label\":\"Product Name\",\"displayName\":\"Product Name\",\"type\":\"STRING\",\"fontSize\":\"medium\",\"fontColor\":\"rgba(0, 0, 0, 0.8)\"},{\"name\":\"StockKeepingUnit\",\"showLabel\":false,\"label\":\"Product SKU\",\"displayName\":\"Product SKU\",\"type\":\"STRING\",\"fontSize\":\"medium\",\"fontColor\":\"rgba(0, 0, 0, 0.8)\"},{\"name\":\"Short_Description__c\",\"showLabel\":false,\"label\":\"Short Description\",\"displayName\":\"Short Description\",\"type\":\"STRING\",\"fontSize\":\"medium\",\"fontColor\":\"rgba(0, 0, 0, 0.8)\"}]",
+            "cardDividerColor" : "rgb(221, 219, 218)",
+            "gridColumnSpacing" : "small",
+            "gridMaxColumnsDisplayed" : "4",
+            "gridRowSpacing" : "large",
+            "incrementQuantityGuideText" : "Sold in increments of {0}",
+            "listRowSpacing" : "small",
+            "maximumQuantityGuideText" : "Maximum quantity is {0}",
+            "minimumQuantityGuideText" : "Minimum quantity is {0}",
+            "negotiatedPriceTextColor" : "",
+            "negotiatedPriceTextSize" : "medium",
+            "noResultsRichText" : "<br><br><h1> No results found </h1><br><h2>Try these search tips instead:</h2><br><ol><li>Check your spelling</li><li>Search by product type, SKU, or feature</li><li>Broaden your search using fewer or more general words</li></ol>",
+            "originalPriceTextColor" : "",
+            "originalPriceTextSize" : "small",
+            "pageResultsType" : "searchResults",
+            "pageTitleFontColor" : "",
+            "pageTitleFontSize" : "large",
+            "quantitySelectorLabelText" : "QTY",
+            "resultsLayout" : "list",
+            "showAddToCartButton" : true,
+            "showBreadCrumbs" : true,
+            "showNegotiatedPrice" : true,
+            "showNoSearchResults" : false,
+            "showOriginalPrice" : true,
+            "showProductImage" : true,
+            "showQuantityRulesSetup" : true,
+            "showQuantityRulesText" : true,
+            "showSearchSortingMenuSetup" : true,
+            "viewOptionsButtonText" : "VIEW OPTIONS"
+          },
+          "componentName" : "b2b_search_builder:resultsDisplay",
+          "id" : "7fcc18e6-1824-40a8-ae31-6d4ba34afd9f",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e6582cd8-008c-4daf-831a-43f26d3ff817",
+        "regionLabel" : "Product Search",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "scopes" : [ {
+              "isPublic" : true,
+              "name" : "Case"
+            }, {
+              "isPublic" : true,
+              "name" : "FeedPost"
+            }, {
+              "isPublic" : true,
+              "name" : "Knowledge__kav"
+            } ],
+            "searchResultFiltering" : true,
+            "searchTerm" : "{!term}",
+            "showTopResults" : true
+          },
+          "componentName" : "forceCommunity:search",
+          "id" : "f46f4b48-55cf-414d-81dd-8f343ee225a8",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6ce94dc1-915a-4a98-9664-10e14244f4eb",
+        "regionLabel" : "Global Search",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "370f6499-431e-4c5a-9cde-6f74db7c3e45",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c2c0853d-64fd-4d7e-a7fd-a924ab88c9b3",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "global-search"
+}

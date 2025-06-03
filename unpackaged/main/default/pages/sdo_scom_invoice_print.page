@@ -1,0 +1,62 @@
+<apex:page controller="Sdo_Scom_OM_PrintInvoiceController" title="Invoice" renderAs="pdf" showHeader="false" applyHtmlTag="false" applyBodyTag="false">
+<html>
+    <head>
+        <style>
+            .rowRight {
+            text-align:right;
+            padding: 2px 0px 2px 15px;
+            }
+            .tableCell {
+            text-align:left;
+            padding: 2px 15px 2px 0px;
+            }
+        </style>
+    </head>
+    <body>
+    <apex:pageBlock title="Invoice Detail">
+        <div style="font-size: 12px;">
+            <div style="float: left;width: 33%;">
+                <strong>Invoice Doc#:</strong> {!Invoice.DocumentNumber}<br />
+                <strong>Order:</strong> {!OrderSummary.OrderNumber}<br/>
+                <strong>Order Date:</strong>&nbsp;<apex:outputText value="{0,date,medium}"><apex:param value="{!OrderSummary.OrderedDate}"/></apex:outputText><br/><br/>
+            </div>
+            <div style="float: left;width: 33%;">
+                <strong><u>Billing Address:</u></strong><br/>
+                <apex:outputField label="Street" value="{!OrderSummary.BillingStreet}"/><br/>
+                {!OrderSummary.BillingCity} {!OrderSummary.BillingState} {!OrderSummary.BillingPostalCode} {!OrderSummary.BillingCountry}<br />
+                <strong>Phone:</strong> {!OrderSummary.BillingPhoneNumber}<br />
+            </div>
+            <div style="float: left;width: 33%;">
+                <strong>Delivery Method:</strong><br/>{!fulfillmentOrder.DeliveryMethod.Name}<br/>
+            </div>
+            <div style="clear:both;"/>
+            <apex:pageBlockSection title="Invoice Items" collapsible="false" columns="1">
+                <apex:pageBlockTable value="{!Invoice.InvoiceLines}" var="item" style="width:100%;">
+                    <apex:column headerValue="Code" value="{!item.Product2.Name}" styleClass="tableCell" style="width:15%;"/>
+                    <apex:column headerValue="Description" value="{!item.Product2.Description}" styleClass="tableCell" style="width:40%;"/>
+                    <apex:column headerValue="Ordered" headerClass="rowRight" styleClass="rowRight" style="width:10%;">
+                    	<apex:outputText value="{0, Number, ###,##0}"><apex:param value="{!item.Quantity}"/></apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Unit Price" headerClass="rowRight" styleClass="rowRight" style="width:10%;">
+                        <apex:outputText value="{0, Number, Currency}"><apex:param value="{!item.UnitPrice}"/></apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Tax" headerClass="rowRight" styleClass="rowRight" style="width:10%;">
+                    	<apex:outputText value="{0, Number, Currency}"><apex:param value="{!item.ChargeTaxAmount}"/></apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Ext. Price" headerClass="rowRight" styleClass="rowRight">
+                    	<apex:outputText value="{0, Number, Currency}"><apex:param value="{!item.GrossUnitPrice}"/></apex:outputText>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <p style="text-align: right;line-height:130%font-size:110%">
+                <strong>SubTotal:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!invoice.TotalChargeAmount}"/></apex:outputText></strong><br />
+                <strong>Adj:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!invoice.TotalAdjustmentAmountWithTax}"/></apex:outputText></strong><br />
+                <strong><u>Tax:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!invoice.TotalTaxAmount}"/></apex:outputText></u></strong><br />
+                <strong>Total:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!invoice.TotalAmountWithTax}"/></apex:outputText></strong>
+            </p>
+        </div>
+    </apex:pageBlock>
+    </body>
+</html>
+
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Utilisé avec des approbateurs natifs. Indique l&#39;approbateur responsable de l&#39;approbation de l&#39;opportunité.</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Opportunities (Approver) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,32 @@
+<apex:page showHeader="false" sidebar="false" controller="FSL.IntegrityCheckerUtils">
+    <apex:includeLightning />
+    <apex:includeScript value="{!$Resource.FSL__IntegrityCheckerUtilsJS}"/>
+
+
+
+    <div id="lightning" />
+
+    <script>
+        var sessionId = '{!$Api.Session_ID}';
+        let ns = "{!namespace}";
+        if (ns === ""){
+            ns = "c";
+        }
+         
+        $Lightning.use(ns+":Integrity_Checker_App", function() {
+            $Lightning.createComponent(
+                ns+":Integrity_Checker_MainCmp",
+                {},
+                "lightning",
+                function(cmp) {
+                    runAjaxTests(sessionId,cmp,allAJAXTestNames,false,true);
+                    $A.eventService.addHandler({ "event": ns + ":Integrity_Checker_getSessionId", "handler" : getSessionIdAndSendToLC});
+                    $A.eventService.addHandler({ "event": ns + ":Integrity_Checker_SendRerunToAJAX", "handler" : prepareDataForRunningAJAXTests});
+                }
+            );
+            
+        });
+        
+
+    </script>
+</apex:page>

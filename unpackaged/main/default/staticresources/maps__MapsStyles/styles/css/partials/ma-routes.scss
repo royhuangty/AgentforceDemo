@@ -1,0 +1,218 @@
+.routesOptionsPastWrap {
+    padding:4px 8px;
+    background-color: $light-gray;
+    border-top:2px solid $blue;
+    margin-top:12px;
+}
+
+#routeactiveusers {
+    background-image: none !Important;
+}
+
+#tab-routes-route {
+    
+    .wrapper-shadow {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        border-top: 2px solid $border-gray;
+    }
+    
+    .has-hover-tooltip {
+        &.route-option-button-tooltip {
+            .slds-popover {
+                overflow: visible;
+                position: absolute;
+                
+                &.slds-nubbin--top {
+                    position: absolute;
+                    left: -90px;
+                    top: calc(100% + 16px);
+                    margin-left: 50%;
+                    width: 180px;
+                    white-space: nowrap;
+                }
+                
+                &.slds-nubbin--bottom {
+                    position: absolute;
+                    left: -90px;
+                    top: auto;
+                    bottom: calc(100% + 16px);
+                    margin-left: 50%;
+                    width: 180px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    
+    .route-header .timeoptions, .timeoptions {
+        .select-wrap {
+            position: relative;
+            
+            .select-icon-up {               
+                position: absolute;
+                content: '';
+                display: block;
+                right: 7px;
+                top: 0;
+                height: 5px;
+                width: 5px;
+                border-left: 3px solid transparent;
+                border-right: 3px solid transparent;
+                border-bottom: 5px solid #061c3f;
+                top: 5px;
+                pointer-events: none;
+            }
+            
+            .select-icon-down {
+                position: absolute;
+                content: '';
+                display: block;
+                right: 7px;
+                top: auto;
+                width: 5px;
+                height: 5px;
+                border-left: 3px solid transparent;
+                border-right: 3px solid transparent;
+                border-top: 5px solid #061c3f;
+                bottom: 5px;
+                pointer-events: none;
+            }
+        }
+            
+        .editable {
+            padding: 6px 24px 5px 7px;
+            border: 1px solid $border-gray;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 1;
+            color: $dark-blue;
+            position: relative;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+        }
+        
+        select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding: 0 24px 0 7px;
+            border: 1px solid $border-gray;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 25px;
+            color: $dark-blue;
+            position: relative;
+            font-family: "Salesforce Sans", Arial, sans-serif;
+            background-color: #fff;
+            height:25px;
+            
+            option {
+                min-height: 1;
+                line-height: 1;
+            }
+        }
+    }
+
+    .timeoptions {
+        margin-top: 8px !important;
+    }
+    
+    .Advanced Route-route-header {
+        margin-left: 47px;
+        margin-top: -6px;
+        margin-bottom: 9px;
+    
+        .icon.ma-icon-Advanced Route-logo:before {
+            color: #3371d8;
+            font-size: 16px;
+            vertical-align: text-top;
+            margin-right: 4px;
+        }
+    }
+    
+    .Advanced Route-waypoint-lock-toggle-button {
+        border-radius: 4px;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        padding-top: 4px;
+        margin-right: 4px;
+        color: $color-text-input-icon;
+        border: 1px solid transparent;
+        position: relative;
+    
+        &:hover {
+            border-color: $border-gray;
+            background-color: #fff;
+            
+            .ma-icon-unlock, .ma-icon {
+                color: $sf-blue;
+            }
+        }
+        
+        &.is-locked {
+            
+            .ma-icon-unlock {
+                display:none;
+            }
+            
+            .ma-icon-lock {
+                display:inline;
+            }
+        }
+        
+        .slds-popover_tooltip{
+            position: absolute;
+            bottom: calc(100% + 16px);
+            left: -12px;
+            width: 275px;
+            text-align: left;
+            hyphens: none;
+            line-height: 1.35;
+            
+            p {
+                margin-top: 4px;
+            }
+        }
+        
+        .ma-icon-lock {
+            color: $sf-text;
+            display:none;
+        }
+        
+        .ma-icon-unlock {
+            color: $color-text-input-icon;
+            display:inline;
+        }
+    }
+}
+
+#Routing-Table {
+    .waypoint-row {
+        &:first-child {
+            .slds-scope {
+                .Advanced Route-waypoint-lock-toggle-button {
+                    .slds-popover_tooltip {
+                        bottom: auto;
+                        top: calc(100% + 16px);
+                        left: -12px;
+                        
+                        &.slds-nubbin--bottom-left:after, &.slds-nubbin--bottom-left:before, &.slds-nubbin_bottom-left:after, &.slds-nubbin_bottom-left:before {
+                            width: 1rem;
+                            height: 1rem;
+                            position: absolute;
+                            transform: rotate(45deg);
+                            content: '';
+                            background-color: inherit;
+                            left: 23px;
+                            top: 0px;
+                            box-shadow: none;
+                            margin-left: -0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

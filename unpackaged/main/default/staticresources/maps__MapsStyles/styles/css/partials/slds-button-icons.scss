@@ -1,0 +1,59 @@
+.slds-scope {
+
+	.slds-button.slds-button_icon-more-flex {
+		display: flex;
+		align-items: center;
+		padding-left: 4px;
+		padding-right: 4px;
+		width: auto;
+
+		.slds-button__icon_x-small.ma-icon {
+			margin-left: 2px;
+		}
+	}
+
+	.slds-button__icon_x-small.ma-icon {
+	    font-size: 8px;
+	    width: 8px;
+	    line-height: 1;
+	    height: 8px;
+	}
+
+	.slds-button__icon_large.ma-icon {
+	    font-size: 16px;
+	    width: 16px;
+	    line-height: 1;
+	    height: 16px;
+	}
+
+	.slds-button.slds-button_icon-inverse-hint {
+		width: 32px;
+		height: 32px;
+		color: $transparent-white-75;
+
+		&:hover, &:focus, &:active {
+		    color: #fff;
+		    background-color: $color-background-inverse-hover;
+		}
+	}
+
+	.slds-button.slds-button_icon-inverse-hint-compact {
+		width: 22px;
+		height: 32px;
+		color: $transparent-white-75;
+
+		&:hover {
+			background-color: $color-background-inverse-hover;
+			color: #fff;
+		}
+
+		&:active {
+			background-color: $color-background-inverse;
+			color: #fff;
+		}
+
+		&:focus {
+			color: $transparent-white-75;
+		}
+	}
+}

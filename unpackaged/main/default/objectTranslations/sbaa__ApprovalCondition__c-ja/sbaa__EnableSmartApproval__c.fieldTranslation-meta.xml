@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この承認条件のスマート承認を有効にします。承認スナップショットに変更がなければ、条件は起動されません。</help>
+        <label><!-- Enable Smart Approval --></label>
+        <name>sbaa__EnableSmartApproval__c</name>
+    </CustomFieldTranslation>

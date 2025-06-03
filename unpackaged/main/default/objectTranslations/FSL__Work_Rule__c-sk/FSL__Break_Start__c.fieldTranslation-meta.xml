@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Určí najskorší čas začiatku prestávky (vo formáte {HH:MM}) pri vytváraní prestávok. 
+Ak nechcete vytvárať prestávky, ponechajte toto pole prázdne.</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

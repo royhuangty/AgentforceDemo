@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entrée de processus</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entrées de processus</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Process Input Layout</layout>
+        <sections>
+            <label>Filtre produit</label>
+            <section>Product Filter</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de l&#39;entrée</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <name>SBQQ__ProductFieldAndOperatorSet</name>
+    </validationRules>
+</CustomObjectTranslation>

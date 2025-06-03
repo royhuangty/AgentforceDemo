@@ -1,0 +1,1950 @@
+<apex:page sidebar="false" showHeader="{!NOT(fullScreen)}" controller="FSL.ctrl001_Gantt" title="{!$Label.fsl__FieldService}" standardStylesheets="false" lightningStylesheets="false" action="{!callFMAfromPage}">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<head>
+
+		<apex:includeScript value="/soap/ajax/55.0/connection.js"/>
+		<script type='text/javascript' src='{!$Site.BaseUrl}/support/console/43.0/integration.js'></script>
+		<script type='text/javascript' src='{!$Site.BaseUrl}/support/api/38.0/interaction.js'></script>
+
+		<!-- css files -->
+		<c:GanttCssFiles ></c:GanttCssFiles>
+
+		<apex:outputPanel rendered="{!fullScreen}">
+			<apex:stylesheet value="{!$Resource.FSL__css001_ServiceExpertFull}" />
+		</apex:outputPanel>
+
+		<!-- automation files -->
+		<apex:outputPanel rendered="{!automationMode}">
+			<apex:includeScript value="/soap/ajax/28.0/apex.js"/>
+		</apex:outputPanel>
+
+		<!-- production files -->
+		<apex:outputPanel rendered="{!NOT(debugMode)}">
+			<apex:includeScript value="{!$Resource.FSL__FieldExpertVendors}" />
+			<apex:includeScript value="{!$Resource.FSL__FieldExpertDhtmlx}" />
+			<apex:includeScript value="{!$Resource.FSL__FieldExpertApp}" />
+		</apex:outputPanel>
+
+		<!-- js debug files -->
+		<apex:outputPanel rendered="{!debugMode}">
+		  <c:GanttDebugJsFiles ></c:GanttDebugJsFiles>
+		</apex:outputPanel>
+
+		<!-- map scripts -->
+		<apex:outputPanel rendered="{!mapMode == '1' && dontShowMapBecauseChina == false}">
+			<apex:includeScript value="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFpyM4POFic2MmCW00oA2E66JZY5SaH2o&libraries=geometry,places,drawing&channel=FSL&v=3.58" />
+		</apex:outputPanel>
+	</head>
+
+
+    <!-- Error - displayed if gantt failed to load -->
+    <div id="ErrorLoadingGantt">
+   		<img src="{!$Resource.SalesfoceLogo}" />
+   		<h1>{!$Label.Something_Went_Wrong}</h1>
+   		<div id="ErrorContainer"></div>
+
+		<div id="OpenTerritoryMessage">{!$Label.TryReloading}</div>
+		<div id="OpenTerritoryButton"><span>{!$Label.OpenTerritoriesFiltering}</span></div>
+   	</div>
+
+
+    <div id="serviceExpertApp" ng-controller="mainController" class="keypressEvents" lang="{{ :: lang }}" ng-class="{OSX: isOSX, rtlDirection: isRtlDirection}">
+		
+		<div id="InactivityBox" class="LightboxBlackContainer ng-cloak" ng-if="isUserIdle()">
+			<div class="inacitivity-content" ng-init="focusOnInactiveButton()">
+				{!JSENCODE($Label.InactivityMessageForGantt)}
+				
+				<div class="bottom-idle">
+					<button id="ReloadButtonFsl" tabindex="0" class="inactivity-refresh" ng-click="refreshPage()">{!JSENCODE($Label.InactivityButtonGantt)}</button>
+				</div>
+			</div>
+		</div>
+
+    <apex:outputPanel rendered="{!fullScreen}">
+        <div id="ServiceExpertHeader">
+            <img id="WhiteLogo" src="{!$Resource.SalesfoceLogo}" />
+            <span id="FSLTextLogo">{!$Label.FieldService_is_Loading}</span>
+
+            <div id="HeaderLinksContainer">
+                <a target="_blank" href="../{!servicePrefix}">{!$Label.Services_Link}</a>
+                <a target="_blank" href="../{!resourcePrefix}">{!$Label.Resources_Link}</a>
+                <a target="_blank" href="../{!absencePrefix}">{!$Label.EmployeeAbsences_Link}</a>
+                <a target="_blank" href="../{!accountPrefix}">{!$Label.Accounts_Link}</a>
+            </div>
+
+            <div id="userDetails">{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)} - {!JSENCODE($User.username)}</div>
+        </div>
+    </apex:outputPanel>
+
+    	<div id="FirstTimeLoading">
+    		<div>
+	    		<img id="loadingSFLogo" src="{!$Resource.fieldServiceSplashScreen}" />
+				<div id="splash-task-list">
+
+					<div id="loading-permissions">
+						<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+						<svg aria-hidden="true" class="slds-icon"><use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use></svg>
+						{!JSENCODE($Label.GanttUpdatingPermissions)}
+					</div>
+
+					<div id="loading-user-setttings">
+						<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+						<svg aria-hidden="true" class="slds-icon"><use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use></svg>
+						{!JSENCODE($Label.GanttLoadingUserSettings)}
+					</div>
+
+					<div id="loading-territories">
+						<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+						<svg aria-hidden="true" class="slds-icon"><use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use></svg>
+						{!JSENCODE($Label.LoadingTerritoriesResources)}
+					</div>
+
+					<div id="loading-timephased">
+						<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+						<svg aria-hidden="true" class="slds-icon"><use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use></svg>
+						{!JSENCODE($Label.GanttLoadingStms)}
+					</div>
+
+
+					<!--<div id="loading-finishing">-->
+						<!--<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />-->
+						<!--<svg aria-hidden="true" class="slds-icon"><use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use></svg>-->
+						<!--Loading Additional Data-->
+					<!--</div>-->
+
+
+
+				</div>
+
+
+	    	</div>
+    	</div>
+
+    	<div id="draggedEvent"><div></div></div>
+		<div class="NA_AbsenceDrag" id="draggedBreak"><div></div></div>
+	
+		<div  id="se_toast_notify" ng-controller="serviceExpertToastCtrl" class="ng-cloak" > 
+			<div ng-if="data.renderToast">
+				<div class="slds-notify_container slds-is-relative" ng-class="showTast ? 'show_toast' : 'hide_toast'">
+					<div class="slds-notify slds-notify_toast" ng-class='getStatusCssClass()' role="status" >
+						<span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" >
+							<svg class="slds-icon slds-icon_small" aria-hidden="true">
+								<use ng-show="mode=='SUCCESS'" xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+								<use ng-show="mode=='ERROR'" xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+								<use ng-show="mode=='INFO'" xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#info')}"></use> 
+							</svg>
+						</span>
+						<div class="slds-notify__content">
+							<h2 class="slds-text-heading_small " ng-click="calFunc()">{{message}}</h2>
+						</div>
+						<div class="slds-notify__close">
+							<button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close" ng-click="showTast=false" >
+								<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div id="LeftSideContainer" ng-controller="serviceListCtrl" class="ng-cloak split split-horizontal" ng-show="!reallyHideList">
+
+			<div class="LoadingTerritoriesBlocker" ng-if="isLoadingNewLocations()"></div>
+
+        	<!-- gantt settings lightbox -->
+	    	<div class="LightboxBlackContainer ng-cloak" ng-if="showGanttSettings">
+				<div class="LightboxContainer" id="ganttSettingsLightbox">
+
+					<div class="lightboxHeaderContainer" id="ganttSettingsLightboxHeader">
+						<svg fsl-key-press="fsl-key-press" tabindex="0" ng-click="closeSettingsLightbox()" aria-hidden="true" class="slds-icon CloseLightbox">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+						</svg>
+						<h1 class="light-box-header">{!$Label.Gantt_Settings}</h1>
+					</div>
+
+					<div class="lightboxContentContainer">
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.FilterAfterSlots}
+								<div class="settingExplain">{!$Label.FilterAfterSlotsExplain}</div>
+							</div>
+
+							<div class="settingsValues settingsValuesWithPadding">
+								<input id="filterCandidates" type="checkbox" ng-model="ganttSettingDraft.filterCandidates" /> <label for="filterCandidates">{!$Label.filter_resources_toggle}</label>
+							</div>
+						</div>
+
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.Back_Horizon}
+								<div class="settingExplain">{!$Label.Back_Horizon_Explanation}</div>
+							</div>
+
+							<div class="settingsValues">
+								<input required="required" type="number" min="1" max="60" class="inputOnSettingsLightBox" ng-model="ganttSettingDraft.backHorizon" />
+							</div>
+						</div>
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.Services_per_page}
+								<div class="settingExplain">{!$Label.Services_per_page_explanation}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.servicesPerPage">
+									<option value="150">150</option>
+									<option value="125">125</option>
+									<option value="100">100</option>
+									<option value="75">75</option>
+									<option value="50">50</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.Resource_row_height}
+								<div class="settingExplain">{!$Label.Set_the_height_of_a_row_in_the_gantt_explanation}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.resourceRowHeight">
+									<option value="xsmall">{!$Label.XSmall}</option>
+									<option value="small">{!$Label.Small}</option>
+									<option value="medium">{!$Label.Medium}</option>
+									<option value="large">{!$Label.Large}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="GanttSettingsRow" ng-if="contractorSupport">
+							<div class="settingLabel">
+								{!$Label.Filter_contractor_capacities_by_duration_type}
+								<div class="settingExplain">{!$Label.Show_only_capcities_with_chosen_duration}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.capacityDuration">
+									<option value="None">{!$Label.None}</option>
+									<option value="Day">{!$Label.Daily}</option>
+									<option value="Week">{!$Label.Weekly}</option>
+									<option value="Month">{!$Label.Monthly}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.LoadOnTodayLabel}
+								<div class="settingExplain">{!$Label.LoadOnTodayDescription}</div>
+							</div>
+
+							<div class="settingsValues settingsValuesWithPadding">
+								<input id="loadOnToday" type="checkbox" ng-model="ganttSettingDraft.loadOnToday" /> <label for="loadOnToday">{!$Label.Set_view_to_today_toggle}</label>
+							</div>
+						</div>
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.DefaultRightColumn}
+								<div class="settingExplain">{!$Label.OpenSaListOrTerritory}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.leftPanel">
+									<option value="salist">{!$Label.SAList}</option>
+									<option value="territories">{!$Label.TerritoryFilteringGanttSettings}</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.ServiceListColoring}
+								<div class="settingExplain">{!$Label.ServiceListColoringExplain}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.serviceColoring">
+									<option value="default">{!$Label.DefaultColoring}</option>
+									<option value="gradient">{!$Label.Gradient}</option>
+									<option value="full">{!$Label.FullBackground}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="GanttSettingsRow">
+							<div class="settingLabel">
+								{!$Label.Absence_Style_Header}
+								<div class="settingExplain">{!$Label.Absence_Style_Subtitles}</div>
+							</div>
+
+							<div class="settingsValues">
+								<select class="selectOnSettingsLightbox RightArrowForSelect" ng-model="ganttSettingDraft.absenceOverlapHeight">
+									<option value="full">{!$Label.Absence_Full_Height}</option>
+									<option value="partial">{!$Label.Absence_Partial_Height}</option>
+								</select>
+							</div>
+						</div>
+
+
+					</div>
+
+
+					<div class="lightboxControllers">
+						<button class="lightboxSaveButton" ng-click="saveGanttSettings()">{!$Label.Save}</button>
+					</div>
+
+
+				</div>
+			</div>
+
+
+
+            <!-- smart panel -->
+            <div id="SmartPanelContainer" ng-class="{hideList: !showServiceList.show}">
+                <div id="ServiceListTopContainer">
+
+	                <!-- services list -->
+	                <div id="TasksListContainer" ng-class="{ hideTasksList:showAdvancedFilter }">
+        	            <!-- action panel -->
+        	            <div id="ActionButtonsContainer" ng-class="{hideList: !showServiceList.show}">
+        	                <div id="PolicySelectContainer">
+								
+        	                    {!$Label.Policy}:
+								<select ng-model="selectedPolicy" ng-change="changePolicy()" ng-options="policy.Name for policy in policyOptions" ng-disabled="policySelectorDisabled()"></select>
+								
+								<button id="CheckRulesForAll" ng-show="showGlobalCheckRules()" title="{!$Label.check_rules_action_label}" ng-click="checkRulesForAllServices()">
+									<svg aria-hidden="true" class="slds-icon mainActionIcon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#refresh')}"></use>
+									</svg>
+								</button>
+
+							</div>
+							
+							<button id="LeftLocationFilteringButton" ng-click="showTerritoriesFiltering()" title="{!$Label.Location_filtering}">
+								<svg aria-hidden="true" class="slds-icon mainActionIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#location')}"></use>
+								</svg>
+							</button>
+
+        	                <button id="OptionsButton" cs-toggle="OptionsContaier"><i class="fa fa-cog"></i></button>
+        	                <div id="OptionsContaier">
+
+        	                	<button fsl-tab-switch="fsl-tab-switch" role="select" ng-click="openGanttSettings()" title="{!$Label.Gantt_Settings}">
+        							<svg aria-hidden="true" class="slds-icon mainActionIcon">
+        								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#settings')}"></use>
+        							</svg>
+        							{!$Label.Gantt_Settings}
+        						</button>
+
+        	                	<button fsl-tab-switch="fsl-tab-switch" role="select" ng-show="!isInConsole()" ng-hide="isLightning()" ng-click="openFullScreen()" title="{!IF(fullScreen,$Label.Exit_full_screen,$Label.Open_full_screen)}">
+        							<svg aria-hidden="true" class="slds-icon mainActionIcon" ng-show="!fullScreen">
+        								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#expand_alt')}"></use>
+        							</svg>
+        							<svg aria-hidden="true" class="slds-icon mainActionIcon" ng-show="fullScreen">
+        								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#contract_alt')}"></use>
+        							</svg>
+        	                    	{!IF(fullScreen,$Label.Exit_full_screen,$Label.Open_full_screen)}
+        						</button>
+        	                </div>
+
+        	    			<button class="toggleHandle" id="handleHideServiceList" ng-click="hideServiceList()" title="{!JSENCODE($Label.Hide_service_list)}">
+        						<i class="fa fa-caret-up"></i>
+							</button>
+        	            </div>
+	                	<div id="FilteringContainer">
+							<apex:outputPanel rendered="{!useNewFilters == '0'}">
+								<div id="FilterOptionsContainer">
+									<div class="FilterInputContainer">
+										<select id="PredefinedFilterSelector"
+												class="PredefinedFilterSelect RightArrowForSelect"
+												ng-change ="filterChanged()"
+												ng-model="filter.selectedFilter"
+												ng-options='option.value as option.name for option in filterOptions'>
+										</select>
+									</div>
+									<span id="createCustomFilterButton" class="globalWhiteButton truncate"  ng-click="showAdvancedFilterFunc()">{!$Label.NewListView}</span>
+								</div>
+							</apex:outputPanel>
+
+
+							<apex:outputPanel rendered="{!useNewFilters == '1'}">
+								<div id="FilterOptionsContainer">
+									<div class="FilterInputContainer" ng-class="{filterInputNewFilters: useNewFilters, fullLengthFilter: !showNewFilterButton()}">
+										<select id="PredefinedFilterSelector"
+												class="PredefinedFilterSelect RightArrowForSelect"
+												ng-change="newFilterChanged()"
+												ng-model="filter.selectedFilter"
+												title="{{ filtersMap[filter.selectedFilter].Description }}">
+												<optgroup ng-repeat="group in groupedFilters" ng-if="group.groupFilters.length > 0" label="{{group.groupName}}">
+													<option ng-repeat="option in group.groupFilters" id='{{option.Name}}' value="{{option.Id}}" ng-disabled='option.disabled'>{{option.Name}}</option>
+												</optgroup>
+										</select>
+									</div>
+
+									<div tooltip-animation="false" tooltip-popup-delay="500" class="truncate" id="filterDescriptionWrapper" tooltip-append-to-body="true" tooltip-placement="{{tooltipDirection}}" tooltip="{{filtersMap[filter.selectedFilter].Description || defaultFilterDescription}}">
+										<svg id="filterDescriptionIcon" aria-hidden="true" class="slds-icon">
+											<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+										</svg>
+									</div>
+
+									<button id="ManageFiltersButton" class="globalWhiteButton truncate" title="{!$Label.ManageFilters}" cs-toggle="manageFiltersBox" ng-show="showNewFilterButton()">
+										<i class="fa fa-pencil-square-o"></i>
+									</button>
+
+									<div id="manageFiltersBox">
+										<button fsl-tab-switch="fsl-tab-switch" role="select" ng-show="showNewFilterButton()" ng-click="openGanttFilterLightbox('new')">{!JSENCODE($Label.New)}</button>
+										<button fsl-tab-switch="fsl-tab-switch" role="select" ng-show="showEditFilterButton() && (filtersMap[filter.selectedFilter].group == '{!JSENCODE($Label.MyCustomFilters)}' && !filter.isPlatformEventFilter)" ng-click="openGanttFilterLightbox('edit')">{!JSENCODE($Label.Edit)}</button>
+										<button fsl-tab-switch="fsl-tab-switch" role="select" ng-show="showHideFilterButton() && (filtersMap[filter.selectedFilter].group == '{!JSENCODE($Label.MyCustomFilters)}' && !filter.isPlatformEventFilter)" ng-click="openGanttFilterLightbox('hide')">{!JSENCODE($Label.Hide)}</button>
+										<button fsl-tab-switch="fsl-tab-switch" role="select" ng-show="showDeleteFilterButton()" ng-click="openGanttFilterLightbox('delete')">{!JSENCODE($Label.Delete)}</button>
+									</div>
+
+								</div>
+							</apex:outputPanel>
+
+
+							
+
+	                    	<div class="FilterDatesContaier">
+	                    		<button id="FilterDateByProp" class="unselectable" cs-toggle="SelectTimePropertyBox">
+
+									<svg id="TimePropertyBoxIcon" aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#clock')}"></use>
+									</svg>
+
+									<i class="fa fa-caret-down"></i>
+								</button>
+								<div id="SelectTimePropertyBox" ng-click="$event.stopPropagation()">
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_early" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['earlyStart']"/> <label for="timeprop_early">{!$Label.Early_start}</label>
+									</div>
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_due" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['dueDate']" /> <label for="timeprop_due">{!$Label.Due_date}</label>
+									</div>
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_app_start" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['appStart']"  /> <label for="timeprop_app_start">{!$Label.Appointment_start}</label>
+									</div>
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_app_finish" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['appEnd']"/> <label for="timeprop_app_finish">{!$Label.Appointment_finish}</label>
+									</div>
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_start" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['start']" /> <label for="timeprop_start">{!$Label.Time_Property_Schedule_Start}</label>
+									</div>
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_finish" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['finish']" /> <label for="timeprop_finish">{!$Label.Time_Property_Schedule_Finish}</label>
+									</div>
+	
+									<div class="timeFieldProp truncate">
+										<input type="checkbox" id="timeprop_display" ng-change="saveSettingsOfHorizonDates()" ng-model="filter.selectedFiled['display']" /> <label for="timeprop_display">{!$Label.Time_Property_Display}</label>
+									</div>
+	
+									<div id="ExplainTimePropertyBox">
+										  {!$Label.Explain_date_selection}
+									  </div>
+								</div>
+
+	                            <div id="TaskDates" ng-class="{disabledDates: !isDateSelectionEnabled(true)}">
+
+	                            	<div tabindex="0" tooltip-animation="false" tooltip-popup-delay="500" tooltip-class="horizonTooltip" class="truncate" id="horizonIconWrapper" tooltip-append-to-body="true" tooltip-placement="{{tooltipDirection}}" tooltip="{!JSENCODE($Label.Scheduling_horizon_tooltip)}">{!$Label.Horizon}: </div>
+
+	                                <span fsl-key-press="fsl-key-press" tabindex="0" id="DateStart" ng-click="openDateEndCalendar()" ng-model ="filter.endDate">{{filter.endDate | amDateFormat:'L'}}</span>
+
+									<svg ng-click="openDateEndCalendar()" id="ServiceListCalendar" aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+									</svg>
+	                            </div>
+
+	                            <div id="MatchGantt" ng-class="{disabledDates: !isDateSelectionEnabled(false)}">
+	                            	<input id="matchGanttCheckbox" type="checkbox" ng-disabled="!isDateSelectionEnabled(false)" ng-model="matchGantt" ng-click="matchGanttClicked()"></input>
+	                            	<label for="matchGanttCheckbox" class="truncate" title="{!$Label.Match_Gantt}">{!$Label.Match_Gantt}</label>
+	                            </div>
+	                        </div>
+
+		                    <div id="FilterSelectedContainer">
+		                    	<div id="selectedServicesTotal" >
+		                    		<span class="selectedTotalText truncate" ng-show="filter.totalServices > 0" 
+										title="{{ '{!JSENCODE($Label.GanttServiceListTotals)}' | replaceLabels : filter.firstVisibleService : filter.lastVisibleService : filter.totalServices }}">
+										{{ '{!JSENCODE($Label.GanttServiceListTotals)}' | replaceLabels : filter.firstVisibleService : filter.lastVisibleService : filter.totalServices }}
+
+										<span title="{!JSENCODE($Label.GanttServiceListTotalTooptip)}" class="{{getSelectedClickableClass()}}" ng-click="changeToSelectedServiceList()">{{ '{!JSENCODE($Label.GanttServiceListSelected)}' | replaceLabels : selectorService.countSelectedServices() }}</span>
+
+									</span>
+		                    		<span class="selectedTotalText truncate" ng-show="filter.totalServices == 0" title="{!$Label.GanttServiceListSelectionTextNoServices}">{!$Label.GanttServiceListSelectionTextNoServices}</span>
+									<span fsl-key-press="fsl-key-press" tabindex="0" class="clearSelected" ng-show="filter.selectedFilter == 'Recent' && filter.totalServices > 0" ng-click="clearRecentlyViewed()">{!$Label.Clear_recently_viewed}</span>
+									<span fsl-key-press="fsl-key-press" tabindex="0" class="clearSelected" ng-show="filter.selectedFilter == 'Selected' && selectorService.countSelectedServices()" ng-click="clearSelectedServices()">{!$Label.ClearSelectedServices}</span>
+			                    </div>
+
+								<bulk-actions-button></bulk-actions-button>
+
+			                    <div id="serviceSearchsWrapper">
+			                        <div class="FilterInputContainer">
+			                            <input id="TaskSearchFilterInput" ng-model-options="{ debounce: 200 }" type="text" placeholder="{!JSENCODE($Label.Search_serv_placeholder)}" autocomplete="off" ng-change="searchTermChanges()" ng-model="filter.SearchText" cs-stop-propagation="keydown"/>
+										<svg ng-show="!filter.SearchText" aria-hidden="true" class="slds-icon SearchServiceListIcon">
+											<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+										</svg>
+
+										<svg fsl-key-press="fsl-key-press" tabindex="0" ng-click="resetSearchText()" ng-show="filter.SearchText" aria-hidden="true" class="slds-icon ClearServiceListIcon">
+											<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+										</svg>
+			                        </div>
+		                        </div>
+			                </div>
+		                </div>
+	            	</div>
+	            </div>
+	                <div id="ServiceListBottomContainer">
+
+	                    <!-- tasks sorting -->
+	                    <div id="TaskListSorting" class="unselectable">
+	                        <button id="CheckboxSelectOptions" cs-toggle="SelectTasksBox">
+	                            <div class="InputCheckboxFake"></div>
+	                            <i class="fa fa-caret-down"></i>
+							</button>
+
+	                        <div id="ServicesListColumns">
+	                        	<div>
+			                        <div ng-repeat="field in getColumnsToDisplay()" 
+										ng-attr-title="{{field.Label}}"
+										data-field-api="{{field.FullAPIName}}"
+										ng-class="getHeaderTaskColumnClass(field)"
+										ng-mousedown="setColumnResizeData(field, $event)">
+
+											<div class="column-sorting-area" ng-click="changeListSorting(field, $event)"></div>
+											{{field.Label}}
+											<span ng-show ="filter.orderByField == field.APIName" class="arrow-container-field-something">
+												<span>
+													<svg ng-show ="!filter.reverse" aria-hidden="true" class="slds-icon">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#arrowup')}"></use>
+													</svg>
+													<svg ng-show ="filter.reverse" aria-hidden="true" class="slds-icon">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#arrowdown')}"></use>
+													</svg>
+												</span>
+			                        		</span>
+			                        </div>
+		                        </div>
+	                        </div>
+
+	                    </div>
+
+						<div id="SelectTasksBox">
+							<button ng-click = "selectorService.selectAll()" fsl-tab-switch="fsl-tab-switch" role="select"><i class="fa fa-check-square-o"></i>{!$Label.All}</button>
+							<button ng-click = "selectorService.unselectAll()" fsl-tab-switch="fsl-tab-switch" role="select"><i class="fa fa-square-o" ></i>{!$Label.None}</button>
+
+							<button ng-click = "selectorService.selectInJeopardy()" fsl-tab-switch="fsl-tab-switch" role="select">
+								<svg aria-hidden="true" class="slds-icon SelectMenuIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#notification')}"></use>
+								</svg>
+								{!$Label.In_Jeopardy}
+							</button>
+
+							<button ng-click = "selectorService.selectViolations()" fsl-tab-switch="fsl-tab-switch" role="select">
+								<svg aria-hidden="true" class="slds-icon SelectMenuIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+								</svg>
+
+								{!$Label.Violations}
+							</button>
+
+							<button ng-click = "selectorService.selectUnscheduled()" fsl-tab-switch="fsl-tab-switch" role="select">
+								<svg aria-hidden="true" class="slds-icon SelectMenuIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#question')}"></use>
+								</svg>
+								{!$Label.UnscheduledCapital}
+							</button>
+						</div>
+
+	                    <div id="TaskListItems" onscroll="syncServiceListScrollbars()">
+
+	                  		<div class="NoServicesFound" ng-show="filteredServices.servicesArray == 0 && loadingServicesToList === 0">
+							<!--<div class="NoServicesFound" ng-show="filteredServices.servicesArray == 0">-->
+	                  			<i ng-show="filter.selectedFilter != 'Todo'" class="fa fa-times"></i>
+	                  			<div ng-show="filter.selectedFilter != 'Todo'" >{!$Label.No_services}</div>
+	                  			<span ng-show="filter.selectedFilter != 'Todo'" >{!$Label.Refine_filter}</span>
+
+	                  			<i ng-show="filter.selectedFilter == 'Todo'" class="fa fa-smile-o"></i>
+	                  			<div ng-show="filter.selectedFilter == 'Todo'" >{!$Label.Nothing_to_do}</div>
+	                  			<span ng-show="filter.selectedFilter == 'Todo'" >{!$Label.Keep_up_the_good_work}</span>
+
+								<br/>
+								<button id="SearchOnServer"  ng-click="searchServiceByIdOrName(filter.SearchText)" ng-show="!notFoundOnServer && filter.SearchText !== ''">{!$Label.SearchOnServer}</button>
+
+								<div id="NotFoundOnServerStyle" ng-show="notFoundOnServer">{!$Label.SANotFoundOnServer}</div>
+
+	                  		</div>
+
+
+							<div class="NoServicesFound" ng-show="filteredServices.servicesArray == 0 && loadingServicesToList > 0">
+								<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" /><br />
+								<span>{!$Label.Loading}</span>
+							</div>
+
+
+						<!-- THIS REPRESENT A SINGLE SA IN THE SERVICE LIST -->
+						<div ng-class="{firstServiceIfSelection: $first}"
+							 drag-service="service"
+							 class="unselectable draggableService singleServiceBigContainer"
+							 ng-repeat="(key,service) in getServiceListFilter() track by key">
+
+							<div draggable="{{ isDraggable(service.id) }}"
+									tabindex="0" fsl-key-press="fsl-key-press"
+									class="SingleTask"
+									ng-click="selectService(service.id)"
+								 	ng-style="getStyleForServiceItem(service)"
+									ng-class="{'DraggableSingleTask': isDraggable(service.id),
+												'savingDummyService': isBeingSavedNow(service.id),
+									  			'selectedSingleTask': service.id == selectedServiceId,
+									  			'serviceList_TaskJeopardy': service.jeopardy && service.id != selectedServiceId,
+									  			'serviceList_TaskViolations': !service.jeopardy && service.violations && service.id != selectedServiceId,
+												'service_gradient': ganttSettings.serviceColoring === 'gradient',
+												'service_fullBackground': ganttSettings.serviceColoring === 'full' }">
+
+									<service-list-preview service="service" position="scrollPosition" ng-show="isServicePreviewAvailable"></service-list-preview>
+
+	                                <div class="SingleTaskCheckboxAndColor" for="{{service.id}}">
+	                                    <div title="{{statusTranslations[service.status]}}" ng-style="getStyleForServiceInList(service)" class="TaskStatusColor {{ getStatusClass(service) }} ServiceListCustomColor_{{ removeSpaces(service.status) }}" >
+	                                    </div>
+
+	                                    <input ng-model="servicesSelection[service.id]" cs-stop-propagation="click" type="checkbox" id ="{{service.id}}"/>
+
+	                                    <span class="serviceStatusIcon"
+	                                    		title="{{ violationsTooltip(service) }}"
+	                                    		ng-class="{'serviceList_jeopardy': service.jeopardy, 'serviceList_violations': !service.jeopardy && service.violations}">
+
+											<svg aria-hidden="true" class="slds-icon JeopardyOnList" ng-if="service.jeopardy">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#notification')}"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon ViolationsOnList" ng-if="service.violations && !service.jeopardy">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon RelatedOnList" ng-if="!service.jeopardy && !service.violations && isRelatedService(service)">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#link')}"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon BundleMemberOnList " ng-if="bundleService.isBundleMember(service) && bundleService.isActive() && !service.jeopardy && !service.violations && !(isRelatedService(service))">
+												<use xlink:href="{!$Resource.symbols}#archive"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon BundleOnList " ng-if="bundleService.isBundle(service) && bundleService.isActive() && !service.jeopardy && !service.violations &&  !service.isBundleMember && !(isRelatedService(service))">
+												<use xlink:href="{!$Resource.symbols}#ad_set"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon MDTIconOnList" ng-if="service.isMDT && !service.jeopardy && !service.violations && (!bundleService.isActive() || (!bundleService.isBundleMember(service) && !bundleService.isBundle(service))) && !(isRelatedService(service))">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#clock')}"></use>
+											</svg>
+
+											<svg aria-hidden="true" class="slds-icon MDTIconOnList MDTArrowIconOnList" ng-if="service.isMDT && !service.jeopardy && !service.violations && (!bundleService.isActive() || (!bundleService.isBundleMember(service) && !bundleService.isBundle(service))) && !(isRelatedService(service))">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#forward')}"></use>
+											</svg>
+											
+
+											
+											
+
+
+	                                    </span>
+	                                </div>
+
+	                                <div ng-attr-title="{{service | displayFieldSetField : field}}" ng-repeat="field in getColumnsToDisplay()" ng-style="getColumnWidthCss(field)" ng-class="{{getSingleTaskColumnClass(field)}}">
+										<!-- {{service | displayFieldSetField : field}} -->
+
+										<service-list-column service="service" field="field" pattern="filter.SearchText"></service-list-column>
+									</div>
+								</div>
+
+
+
+								<!-- REMOVE NG-IF TO HAVE ANIMATED BOX -->
+	                            <div class="SingleTaskQuickActionsContainer" ng-class="{ShowQuickActions: service.id == selectedServiceId}" ng-if="service.id == selectedServiceId">
+
+	                            	<div class="ExtraInfoQuickAction">
+	                            		<div class="ExtraInfoContinaer" ng-repeat="field in ListExpandedFieldSet">
+	                            			<div class="truncate">
+												<field-in-card service="service" field="field"></field-in-card>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="allQuickActionsContainer" style="max-width: {{ getQuickActionContainerWidth() }}">
+										<!-- <div class="quickActionsPadding"></div> -->
+										<ul class="QuickActions">
+											<li ng-show="shouldShowQuickActionBtn('flagUnflag', service)">
+												<div id="quickActionFlag" class="quickActionBtn" ng-click="flagging(service.id)" title="{{ flagged[service.id] ? '{!JSENCODE($Label.Unflag)}' : '{!JSENCODE($Label.Flag)}' }}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-class="{emptyFlag: flagged[service.id] == true}">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#priority')}"></use>
+													</svg>
+													  <span>{{ flagged[service.id] ? '{!JSENCODE($Label.Unflag)}' : '{!JSENCODE($Label.Flag)}' }}</span>
+												</div>
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="flagUnflag">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+											<li ng-show="shouldShowQuickActionBtn('schedule', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="autoScheduleService(service.id)"  title="{{ service.isScheduled() ? '{!JSENCODE($Label.Reschedule)}' : '{!JSENCODE($Label.Schedule)}' }}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-show="(invokedAction[service.id] != 'schedule')">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#event')}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'schedule') && (invokedActionFor[service.id])"/>
+
+													<span>{{ service.isScheduled() ? '{!JSENCODE($Label.Reschedule)}' : '{!JSENCODE($Label.Schedule)}' }}</span>
+												</div>
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="schedule">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+											<li ng-show="shouldShowQuickActionBtn('getCandidates', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="getSlots(service.id)"  title="{!$Label.Candidates}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#people')}"></use>
+													</svg>
+													 <span>{!$Label.Candidates}</span>
+												</div>
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="getCandidates">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+											<li ng-show="shouldShowQuickActionBtn('edit', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="openLightBox(service.id)" title="{!$Label.Edit}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon">
+														<use xlink:href="{{openLightboxIcon()}}"></use>
+													</svg>
+													<span>{{openLightboxLabel()}}</span>
+												</div>
+
+
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="edit" >
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+
+												</div>
+											</li>
+
+
+											<li ng-show="shouldShowQuickActionBtn('reshuffle', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="scheduleAndReshuffle(service.id)" title="{!$Label.Reshuffle}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-show="(invokedAction[service.id] != 'reshuffle')">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#retweet')}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'reshuffle') && (invokedActionFor[service.id])"/>
+													<span>{!$Label.Reshuffle}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="reshuffle" >
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+
+												</div>
+											</li>
+
+											<li ng-show="shouldShowQuickActionBtn('groupNearby', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="groupNearby(service.id)" title="{!$Label.GroupNearBy}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon " ng-show="(invokedAction[service.id] != 'GroupNearby')">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#contract')}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'GroupNearby') && (invokedActionFor[service.id])"/>
+													<span>{!$Label.GroupNearBy}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="groupNearby">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+
+											<li ng-show="shouldShowQuickActionBtn('dispatch', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="changeStatusToDispatch(service.id)" title="{!$Label.Dispatch}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-show="(invokedAction[service.id] != 'dispatch')">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#setup_assistant_guide')}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'dispatch') && (invokedActionFor[service.id])"/>
+													<span>{!$Label.Dispatch}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="dispatch" >
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+
+												</div>
+											</li>
+
+
+
+											<li ng-show="shouldShowQuickActionBtn('gantt', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="showOnGantt(service)" title="{{(bundleService.isActive() && bundleService.isBundleMember(service) ) ? '{!JSENCODE($Label.GanttRelatedBundle)}' : '{!JSENCODE($Label.Gantt)}' }}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#table')}"></use>
+													</svg>
+													<span>{{ (bundleService.isActive() &amp;&amp; bundleService.isBundleMember(service))  ? '{!JSENCODE($Label.GanttRelatedBundle)}' : '{!JSENCODE($Label.Gantt)}' }}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="gantt">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+
+											<!--ng-if="mapMode.on"-->
+											<li ng-show="shouldShowQuickActionBtn('map', service)">
+												<div id="quickActionMap" class="quickActionBtn quickActionGoLeft" ng-click="showOnMap(service.id)"  title="{!$Label.Map}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon">
+														<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#world')}"></use>
+													</svg>
+													 <span>{!$Label.Map}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn service-box-ca-caret" cs-group-actions="cs-group-actions" cs-last-action="map" >
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+											<li ng-show="shouldShowQuickActionBtn('bundle', service)">
+												<div class="quickActionBtn quickActionGoLeft" ng-click="bundleSA(service)" title="{{::bundlerActions.Bundle.label}}">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-show="(invokedAction[service.id] != 'bundle')">
+														<use xlink:href="{{::bundlerActions.Bundle.icon}}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'bundle') && (invokedActionFor[service.id])"/>
+													<span>{{::bundlerActions.Bundle.label}}</span> 
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="bundle" >
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+
+												</div>
+											</li>
+
+											<li >
+												<div class="quickActionBtn quickActionGoLeft" ng-click="unbundleSA(service)" title="{{::bundlerActions.Unbundle.label}}" ng-show = "shouldShowQuickActionBtn('unbundle', service)">
+													<svg aria-hidden="true" class="slds-icon quickActionIcon" ng-show="(invokedAction[service.id] != 'unbundle')">
+														<use xlink:href="{{::bundlerActions.Unbundle.icon}}"></use>
+													</svg>
+													<img class="quickActionLoading"
+														 src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+														 ng-show="(invokedAction[service.id] == 'unbundle') && (invokedActionFor[service.id])"/>
+													<span>{{::bundlerActions.Unbundle.label}}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn" cs-group-actions="cs-group-actions" cs-last-action="unbundle" ng-show="shouldShowQuickActionBtn('unbundle', service)">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+
+												</div>
+											</li>
+											<!-- Note! 
+												in order that calculations will work right in cs-group-actions directive- the last action (li) and only it,  must put the ng-show condition settingsValuesWithPadding
+											     the li tag and not in it -->
+
+
+											<li ng-repeat="action in customActions">
+												<div class="quickActionBtn quickActionGoLeft quickCustomActionGoLeft" title="{{action.name}}" actionId="{{$index}}" ng-click="runCustomServiceAction($event, service.id)">
+
+													<svg aria-hidden="true" class="slds-icon quickActionCustomServiceListIcon">
+														<use xlink:href="{{action.icon}}"></use>
+													</svg>
+
+													<span>{{action.name}}</span>
+												</div>
+
+												<div class="quickActionBtn moreQuickActionsBtn service-box-ca-caret" cs-group-actions="cs-group-actions" cs-last-action="{{$index}}" ng-show="!$last">
+													<i class="fa fa-caret-down viewMoreCaret"></i>
+												</div>
+											</li>
+
+										</ul>
+										<!-- <div class="quickActionsPadding"></div> -->
+									</div>
+							</div>
+						</div>
+
+						<!-- ******* END ******* THIS REPRESENT A SINGLE SA IN THE SERVICE LIST -->
+
+
+	                    </div>
+
+	                    	<div id="TaskListPagination" ng-show="filteredServices.servicesArray != 0">
+
+								<span id="ListLoadingServices" ng-show="loadingServicesToList">
+									<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+									{!$Label.Loading}
+								</span>
+
+
+		                    	<button id="change-page-left" class="change-page" ng-class="{changePageDisabled: filter.currentPage == 1}" ng-click="changePage('left')"><i class="fa fa-angle-left"></i></button>
+								<select ng-model="filter.currentPage">
+									<option ng-repeat="i in createArray(filter.totalServices,filter.servicesPerPage) track by $index" value="{{$index + 1}}" ng-bind="{{$index + 1}}"></option>
+								</select>
+		                    	<button id="change-page-right" class="change-page" ng-class="{changePageDisabled: filter.totalPages == filter.currentPage}" ng-click="changePage('right')"><i class="fa fa-angle-right"></i></button>
+
+
+								<div id="HightlightOnGantt">
+
+									<svg tabindex="0" fsl-key-press="fsl-key-press" aria-hidden="true" class="slds-icon" ng-show="shouldShowClearHighlight()" ng-click="highlightOnGantt(false)">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+									</svg>
+
+									<button ng-click="highlightOnGantt()" title="{!$Label.HightlightTooltip}">{!$Label.Hightlight}</button>
+								</div>
+
+	                    	</div>
+	                </div>
+
+
+                <!-- advanced filtering - DONT SHOW IF USING NEW FILTERS-->
+                <div id="AdvancedFilteringOptions"  ng-show=":: !useNewFilters" ng-class="{ showAdvancedFiltering:showAdvancedFilter }">
+
+ 	               	<h2>
+ 	               		{!$Label.NewListView}
+						<div class="SmartPanelBackButton" ng-click="hideAdvancedFilterFunc()">
+							<svg aria-hidden="true" class="slds-icon backToServices">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#back')}"></use>
+							</svg>
+	                    	{!$Label.Back_to_services}
+                    	</div>
+ 	               	</h2>
+                	<div class="AdvacedFilterSection">
+
+	                    <div class="SmartPanelH1" style="font-size: 12px;">
+
+		                    <div id="customFilterButtonsPane">
+		                    	<span id="displayNew" class="customFilterActionButton globalWhiteButton" ng-show="displayNew" ng-click ="createCustomFilter()">
+		                    		<svg aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#new')}"></use>
+									</svg>
+		                    		<span class="FilterPropertyAdvancedRow dateSelctor"> {!$Label.New}</span>
+			                    </span>
+
+		                    	<span id="displaySave" class="customFilterActionButton globalWhiteButton" ng-show="displaySave" ng-click ="saveCustomFilter()">
+		                    		<svg aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+									</svg>
+		                    		<span class="FilterPropertyAdvancedRow dateSelctor"> {!$Label.Save}</span>
+		                    	</span>
+
+								<span id="displayCancel" class="customFilterActionButton globalWhiteButton" ng-show="displayCancel" ng-click ="CancelSaveOrEditCustomFilter()">
+		                    		<svg aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#clear')}"></use>
+									</svg>
+		                    		<span class="FilterPropertyAdvancedRow dateSelctor"> {!$Label.Cancel}</span>
+		                    	</span>
+
+		  						<span id="displayCancel" class="customFilterActionButton globalWhiteButton" ng-show="displayEdit" ng-click="EditCustomFilter()">
+		                    		<svg aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#edit')}"></use>
+									</svg>
+		  							<span  class="FilterPropertyAdvancedRow dateSelctor"  >{!$Label.Edit}</span>
+		  						</span>
+
+		                    	<span id="displayDelete" class="customFilterActionButton globalWhiteButton" ng-show="displayDelete" ng-click="deleteCustomFilter()">
+		                    		<svg aria-hidden="true" class="slds-icon">
+										<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#delete')}"></use>
+									</svg>
+		  							<span  class="FilterPropertyAdvancedRow dateSelctor"  > {!$Label.Delete}</span>
+		  						</span>
+		  					</div>
+
+	                    	<input ng-click="showDropdownCustomFilters($event)" ng-class="{disabled: storageFilters.length == 0 && IsCustomFilterReadonly}" ng-readonly="IsCustomFilterReadonly" id="CustomFilterName" type="text" ng-model="customFilterName" value="{!$Label.Custom_Filter}"/>
+	                    	<div ng-show="DisplayComboBowArrow" id="DropdownArrowCustomFilter"><i class="fa fa-caret-down"></i></div>
+
+							<!-- <span ng-show="customFilterName == 'Custom filter' && customFilterName.length>0"> -->
+
+	                    </div>
+
+	                    <div ng-show="showCustomFilterDropdown" ng-click="showCustomFilterDropdown = false" id="CustomFiltersNamesDropdown">
+	                    	<div ng-repeat = "customFilter in storageFilters track by $index " ng-click ="customFilterChanged(customFilter.name)">{{customFilter.name}}</div>
+	                    </div>
+
+	                    {!$Label.CustomFilterExplain}
+
+                    </div>
+
+
+					<h2>{!$Label.Status}</h2>
+					<div class="AdvacedFilterSection">
+						<p>{!$Label.Services_With_these_statuses}</p>
+
+						<div ng-repeat="(key,value) in statusTranslations" class="StatusAdvancedFilter truncate" >
+							<input ng-disabled="IsCustomFilterReadonly" type="checkbox"  ng-model = "filter.advancedFilter.statusCheckboxs[value]" />
+							<label ng-click="toggleStatus(key, value)" for="" ng-bind="value"></label>
+						</div>
+					</div>
+
+
+
+
+					<h2>{!$Label.Services_Properties}</h2>
+					<div class="AdvacedFilterSection">
+						<div ng-class="{FilterPropertyAdvancedRow: true}" >{!$Label.Minimum_start_date}: <u ng-click = "openCalendarAdvanceFilterStart()" ng-class="{dateSelctor: true, disabledDates: IsCustomFilterReadonly}" id ="calendarMin">{{filter.advancedFilter.minDate| amDateFormat:'L'}}</u></div>
+				<div ng-class="{FilterPropertyAdvancedRow: true}" >{!$Label.Maximum_end_date}: <u ng-click = "openCalendarAdvanceFilterFinish()" ng-class="{dateSelctor: true, disabledDates: IsCustomFilterReadonly}" id ="calendarMax" >{{filter.advancedFilter.maxDate| amDateFormat:'L'}}</u></div>
+
+				<div class="FilterPropertyAdvancedRow" id="minPrioritySelect">
+					<div class="filterPropertyName" >{!$Label.Minimum_service_priority}:</div>
+					<input type="number" ng-model="filter.advancedFilter.servicePriority" class="filterProperyValue minimumPriority"  ng-disabled="IsCustomFilterReadonly"></input>
+				</div>
+
+				<div class="FilterPropertyAdvancedRow">
+					<div class="filterPropertyName">{!$Label.Show_unscheduled}:</div>
+					<div class="filterProperyValue"><input ng-disabled="IsCustomFilterReadonly" type="checkbox" ng-model ="filter.advancedFilter.unScheduled"/></div>
+				</div>
+
+				<div class="FilterPropertyAdvancedRow">
+					<div class="filterPropertyName">{!$Label.Show_services_with_violations}:</div>
+					<div class="filterProperyValue"><input ng-disabled="IsCustomFilterReadonly" type="checkbox"  ng-model ="filter.advancedFilter.violations" /></div>
+				</div>
+
+				<div class="FilterPropertyAdvancedRow">
+					<div class="filterPropertyName">{!$Label.Show_jeopardies}:</div>
+					<div class="filterProperyValue"><input ng-disabled="IsCustomFilterReadonly" type="checkbox"  ng-model ="filter.advancedFilter.jeopardies"/></div>
+				</div>
+			</div>
+
+
+
+			<h2>{!$Label.Location}</h2>
+			<div class="AdvacedFilterSection">
+				<div class="LocationAdvancedFilter truncate" style="display: block;">
+					<input ng-disabled="IsCustomFilterReadonly" type="checkbox" ng-model = "filter.advancedFilter.noLocation" />
+					<label ng-click="toggleLocation(null)">{!$Label.Custom_Filter_No_Location}</label>
+
+				</div>
+
+				<div ng-repeat="territory in territories" class="LocationAdvancedFilter truncate">
+					<input ng-disabled="IsCustomFilterReadonly" type="checkbox" ng-model = "filter.advancedFilter.locationsCheckboxs[territory.name]" />
+					<label ng-click="toggleLocation(territory.name)">{{territory.name}}</label>
+				</div>
+			</div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="RightSideContainer" class="unselectable ng-cloak split split-horizontal" ng-controller="ctrlRightSide" ng-class="{expandGantt100: !showServiceList.show, 'floating-map': floatingMapOn}">
+
+			<div class="LoadingTerritoriesBlocker" ng-if="isLoadingNewLocations()"></div>
+
+			<div id="NoLocationLoadedCoverAll" ng-show="isNoTerritoryLoadded()">
+				{!$Label.SelectSRsForGantt}
+			</div>
+
+			<div id="ReachedMaxedResourcesRows" ng-show="reachedMaxRows()">
+				{{ "{!JSENCODE($Label.MaxedRowsReachedOnGantt)}" | replaceLabels : maxResourceRowsOnGantt }}
+			</div>
+
+
+            <!-- The top row, above the gantt/map with tabs and KPIs -->
+            <div id="ControllersForMapAndGantt">
+
+                <div id="MainViewTabContainer">
+	    			<button class="toggleHandle" id="handleShowServiceList" ng-show="!showServiceList.show" ng-click="toggleServiceList()">
+						<i class="fa fa-caret-up"></i>
+					</button>
+                    <button class="MainViewTab" ng-click="changeWorkingState('gantt')" ng-class="{NOTSelectedMainTab: workingState != 'gantt'}"  fsl-tab-switch="fsl-tab-switch" role="tab">{!$Label.Gantt}</button>
+                    <button ng-show="isMapEnabled" class="MainViewTab" ng-click="changeWorkingState('map')" ng-class="{NOTSelectedMainTab: workingState != 'map'}"  fsl-tab-switch="fsl-tab-switch" role="tab">
+						{!$Label.Map}
+						
+							<svg ng-hide="{!dontShowMapBecauseChina || iframeMapMode == '0'} || floatingMapOn || workingState === 'map'" aria-hidden="true" class="slds-icon map-external-icon" ng-click="showFloatingMap($event);" tabindex="0" fsl-key-press="fsl-key-press">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}" ></use>
+							</svg>
+
+					</button>
+                </div>
+
+				<div id="iconsNearTabs">
+					<div class="iconNearTabs" id="ButlerButton" cs-toggle="ButlerContainer" tabindex="0" fsl-key-press="fsl-key-press" ng-click="showNotifications(); showSmartPanel=false; openSomethingBox($event,'butler');" title="{!$Label.notifications}">
+						<i class="fa" id="butler" ng-class="{'fa-envelope-o': calcUnreadNotifications() == 0, 'fa-envelope': calcUnreadNotifications() > 0}"></i>
+						<div ng-if="calcUnreadNotifications() > 0" id="butlerNotificationsCounter" ng-bind="calcUnreadNotifications()"></div>
+					</div>
+
+					<div class="iconNearTabs" id="SmartThingButton" cs-toggle="SmartContainer" tabindex="0" fsl-key-press="fsl-key-press" ng-click="openSomethingBox($event,'smart')" title="{!$Label.optimization_requests}">
+						<i class="fa fa-lightbulb-o"></i>
+						<div ng-if="getNumOfRunningRequests() > 0" class="smart-running">{{getNumOfRunningRequests()}}</div>
+					</div>
+				</div>
+
+
+				<div id="ButlerContainer" style="margin-left:{{marginLeftForBox}}px !important" ng-class="{'butler-no-map': !mapAvailable}">
+
+					<div class="BoxContainerWrapper">
+						<div class="NoNotificationsMessage" ng-show="numOfNotifications() === 0">{!$Label.No_notifications}</div>
+
+						<div ng-repeat="n in notifications() | orderBy:'when':true" class="SingleNotificationContainer" ng-click="n.action(n.param)" ng-class="{cursorPointer: n.action}" tabindex="0" fsl-tab-switch="fsl-tab-switch" role="select" ng-show="n.show">
+							<h1 ng-bind="n.title"></h1>
+							<span safe-binder="n.text"></span>
+							<div class="notificationDateAdded">{{ moveLocalDtToUserTimezoneDt(n.when) | amDateFormat:'lll' }}</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="SmartContainer" ng-init="showSmartPanel=false" ng-class="{'smart-no-map': !mapAvailable}" style="margin-left:{{marginLeftForBox}}px !important">
+					<div class="BoxContainerWrapper">
+
+						<div class="NoNotificationsMessage" ng-show="(optimizationRequests() | toArray).length === 0">{!$Label.norecentoptimizaion}</div>
+
+						<div ng-repeat="request in optimizationRequests() | toArray | orderBy:'lastModifiedDate':true" class="SingleNotificationContainer" ng-click="openSObjectLink(request.id)" tabindex="0" fsl-tab-switch="fsl-tab-switch" role="select">
+							<h1>{{request.type}}</h1> 
+							<span class="smart_info" ng-class="{'smart_info_short': OptimizationRequestsProgressStatus[request.id]['canAbort']}" title="{{ request.failureReason.length > 0 ? request.failureReason : request.result }}">{{generateRequestResultText(request)}}</span>
+							<span class="smart_info" ng-if="request.schedulingRecipe != null">{!$Label.triggeredByRecipe}{{ request.schedulingRecipe.Name}}</span>
+							
+							<span class="smart_abort truncate" 
+									ng-class="{'smart_abort_right': OptimizationRequestsProgressStatus[request.id]['canAbort'] && request.type == 'Global Optimization' && request.status == 'In Progress' && isUseEdge('bgo')}" 
+									cs-stop-propagation="click" 
+									title="{!$Label.Abort}" 
+									ng-if="OptimizationRequestsProgressStatus[request.id]['canAbort']" 
+									ng-click="abortOptRequest(request)">{!$Label.Abort}</span>
+							
+							<span title="{{request.statusLabel}}" class="smart_status truncate {{getRequestCss(request.status)}}" ng-hide="request.type === 'Global Optimization' && request.status === 'In Progress' && isUseEdge('bgo')">{{request.statusLabel}}</span>
+							<span class="opt-progress-cont" ng-show="request.type == 'Global Optimization' && request.status == 'In Progress' && isUseEdge('bgo')">
+								<cs-optimization-progress request="request" progress-status="OptimizationRequestsProgressStatus" appt-count="request.objectToScheduled" opt-type="bgo"></cs-optimization-progress>
+							</span>
+							<div class="notificationDateAdded">{{ moveLocalDtToUserTimezoneDt(request.lastModifiedDate) | amDateFormat:'lll' }}</div>
+						</div>
+					</div>
+				</div>
+
+                <div ng-show="activeRequests.active > 0" id="activeRequests">
+                	{!$Label.Loading}
+                </div>
+
+
+                <!-- kpi indicators -->
+                <div id="ServicesIndicators" ng-show="workingState === 'gantt'">
+
+               		<div class="IndicatorNumber OtherIndicatorKPI scheduledKpi" title="{!$Label.TotalScheduledTooltip}">
+						<svg aria-hidden="true" class="slds-icon kpiIcon ">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#clock')}"></use>
+						</svg>
+
+						{{ formatTravel(kpi.totalScheduledDuration) }}
+               		</div>
+
+               		<div ng-show="isMapEnabled" class="IndicatorNumber OtherIndicatorKPI" title="{!$Label.averageTravelTooltip}">
+						<svg aria-hidden="true" class="slds-icon kpiIcon travelKpi">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/custom-sprite/svg/symbols.svg#custom31')}"></use>
+						</svg>
+
+                		{{ formatTravel(kpi.avgTravelTime * 60) }}
+                	</div>
+
+                    <div class="IndicatorNumber CompletedIndicator" title="{!$Label.CompletedKpiTooltip}">
+						<svg aria-hidden="true" class="slds-icon kpiIcon">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+						</svg>
+						{{ kpi.completed }}/{{ kpi.total }}
+					</div>
+
+                    <div class="IndicatorNumber WarningIndicator" title="{!$Label.Violations}">
+						<svg aria-hidden="true" class="slds-icon kpiIcon" ng-class="{flash:activeRuleCheckRequests.active > 0}">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+						</svg>
+
+						{{ kpi.violations }}</div>
+                    <div class="IndicatorNumber JeopardyIndicator" title="{!$Label.InJeopardyKpiTooltip}">
+						<svg aria-hidden="true" class="slds-icon kpiIcon">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#notification')}"></use>
+						</svg>
+						{{ kpi.jeopardy }}</div>
+                </div>
+
+            </div>
+
+            <!-- Map regular view -->
+            <apex:outputPanel rendered="{!mapMode == '1' && dontShowMapBecauseChina == false && iframeMapMode == '0'}">
+			    <div id="MapContainer" ng-show="workingState == 'map'" ng-if=":: isMapEnabled">
+				    <div ng-controller="ctrlMap" ng-class="{ hideController : hideMap() }" style=" position: relative; height: 100%;">
+                        <section id="map">
+                            <google-places my-map='map' search-marker='searchMarker' class="GooglePlacesFreeText"></google-places>
+                            <div id="mapButtons">
+                                <div id="mapOptionsButton" class="truncate" ng-click="mapOptionsToggle = !mapOptionsToggle" ng-init="mapOptionsToggle = false" title="{!$Label.Map_Layers}">{!$Label.Map_Layers}
+                                    <i class="fa fa-caret-down"></i></div>
+                                <div ng-click="trafficLayerEnabled = !trafficLayerEnabled" id="trafficFilter" ng-class="{activeButton: trafficLayerEnabled}">
+                                    {!$Label.Traffic}
+                                </div>
+                            </div>
+                            <div id="mapOptionsContainer" ng-show="mapOptionsToggle" ng-click="$event.stopPropagation()" ng-init="pinsOnMap = true; filterReports = false;">
+                                <div class="lightning-tabs">
+                                    <div ng-class="{'tab-selected': pinsOnMap}" class="truncate" ng-click="pinsOnMap = true; filterResources = false; filterReports = false; filterPolygons = false;" title="{!$Label.PinsOnMap}">{!$Label.PinsOnMap}</div>
+                                    <div ng-class="{'tab-selected': filterResources}" class="truncate" ng-click="filterResources = true; pinsOnMap = false; filterReports = false; filterPolygons = false;" title="{!$ObjectType.ServiceResource.labelPlural}">{!$ObjectType.ServiceResource.labelPlural}</div>
+                                    <div ng-class="{'tab-selected': filterReports}"  class="truncate" ng-click="filterReports = true; pinsOnMap = false; filterResources = false; filterPolygons = false;" title="{!$Label.Reports}">{!$Label.Reports}</div>
+                                    <div ng-class="{'tab-selected': filterPolygons}"  class="polygonsTab truncate" ng-click="filterPolygons = true; pinsOnMap = false; filterResources = false; filterReports = false;" title="{!$Label.Polygons}" ng-show="hasCustomPermission('Polygons_view')">{!$Label.Polygons}</div>
+                                </div>
+                                <div id="mapOptionsContent">
+
+                                    <div id="pinsOnMap" ng-show="pinsOnMap">
+
+                                        {!$Label.ChooseWitchObjectToSeeMap}<br/>
+
+                                        <input ng-model="showLivePositions" ng-change="redrawAllMarkers(); setMapMarkerUserSettings();" type="checkbox" id="LivePositionsFilter"></input>
+                                        <label for="LivePositionsFilter">{!$Label.Live_Positions}</label><br/>
+
+                                        <input ng-model="showResources" ng-change="redrawAllMarkers(); setMapMarkerUserSettings();" type="checkbox" id="HomeBastFilter"></input>
+                                        <label for="HomeBastFilter">{!$Label.Homebase}</label><br/>
+
+                                        <input ng-model="showServices" ng-change="redrawAllMarkers(); setMapMarkerUserSettings();" type="checkbox" id="ServicesFilter"></input>
+                                        <label for="ServicesFilter">{!$Label.services_capital}</label><br/>
+
+                                        <input ng-model="showTerritories" ng-change="redrawAllMarkers(); setMapMarkerUserSettings();" type="checkbox" id="TerritoryFilter"></input>
+                                        <label for="TerritoryFilter">{!$Label.ServiceTerritories}</label><br/>
+                                    </div>
+
+                                    <div id="mapResourceFilter" ng-show="filterResources">
+                                        <div id="mapResourceContainer">
+                                            <div id="resourceSelectCont" class="mapLayersSelectContainer">
+                                                <input type="text" id="resourceInput" typeahead-wait-ms="100" ng-model="filterResourceInputValue" typeahead="resource as resource.label for resource in resourcesFilterList | filter:{label:$viewValue} | limitTo:8" placeholder="{!$Label.SearchResources}" />
+                                                <svg aria-hidden="true" class="slds-icon clearMapResourceSearch" ng-show="filterResourceInputValue != ''" ng-click="filterResourceInputValue = ''">
+                                                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                                                </svg>
+                                                <div id="showResourceOnMap" class="truncate" ng-click="addResourceToFilterList()">
+                                                    <span>{!$Label.Show_on_map}</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="mapResourcesList">
+                                                <div class="mapFilterExplain" ng-show="isEmpty(filteredResources)">{!$Label.Showing_all_resources}</div>
+                                                <div class="singleReportRow" ng-repeat="(key, resource) in filteredResources">
+                                                    <span class="resourceRowName">{{filteredResources[key].name}}</span>
+                                                    <span class="reportRemove" ng-click="clearResource(key)">{!$Label.Remove}</span>
+                                                </div>
+                                                <div class="mapRemoveAll" ng-show="!isEmpty(filteredResources)" ng-click="clearAllResources()">{!$Label.Remove_All}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="mapReportFilter" ng-show="filterReports">
+                                        <div id="mapReportContainer">
+                                            <div id="reportSelectCont" class="mapLayersSelectContainer">
+                                                <select ng-model="selectedReport" class="reportSelector DropdownTriangle">
+                                                    <option value="null">{!$Label.Select_Report}</option>
+                                                    <option ng-repeat="(key, report) in reports" value="{{ report.Id }}" ng-bind="report.Name"></option>
+                                                </select>
+
+                                                <div id="showReportOnMap" class="truncate" ng-click="showReportOnMap()">
+                                                    <span>{!$Label.Add_Layer}</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="reportsList">
+                                                <div class="mapFilterExplain" ng-show="isEmpty(reportsData) && !getReportsError()">{!$Label.Tabular_reports_explain}</div>
+                                                <div class="gotReportsErrorCss" ng-show="getReportsError()">{!$Label.NotGotReportsError}</div>
+                                                <div class="singleReportRow" ng-repeat="(key, existingReport) in reportsData">
+                                                    <span class="reportName" ng-class="{hiddenReport: !existingReport.show}">{{reports[key].Name}}</span>
+                                                    <span class="reportMarkersCount" ng-class="{hiddenReport: !existingReport.show}" title="{{reportsData[key].displayCount}} / {{reportsData[key].data.length}}">({{reportsData[key].displayCount}})</span>
+                                                    <span class="reportToggle" ng-click="toggleReportMarkers(key)">
+                                                        <span ng-show="!existingReport.show">{!$Label.Show}</span>
+                                                        <span ng-show="existingReport.show">{!$Label.Hide}</span>
+                                                    </span>
+                                                    <span class="reportRemove" ng-click="removeReportFromMap(key)">{!$Label.Remove}</span>
+                                                </div>
+                                                <div class="mapRemoveAll" ng-show="!isEmpty(reportsData)" ng-click="removeAllReportsFromMap()">{!$Label.Remove_All}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="polygonFilter" ng-show="filterPolygons">
+                                        <div class="mapPolygonsContainer">
+                                            <div class="mapLayersSelectContainer">
+                                                <input type="text" id="newPolygonName" ng-model="polygonName" placeholder="{!$Label.Polygon_name}" ng-disabled="drawState != drawingStates.EDIT && drawState != drawingStates.DRAW"/>
+                                                <div class="editPolygonOptions" ng-show="drawState == drawingStates.NONE || drawState == drawingStates.SELECTED || drawState == drawingStates.INTERSECT"
+                                                ng-if="hasCustomPermission('Polygons_create_update')">
+                                                    <div title="{!$Label.New}" id="toggleDrawing" class="truncate" ng-class="{disabledButton: drawState != drawingStates.NONE && drawState != drawingStates.SELECTED}" ng-click="toggleDrawMode()">
+                                                        <span>{!$Label.New}</span>
+                                                    </div>
+                                                    <div title="{!$Label.Edit}" id="toggleEdit" class="truncate" ng-class="{disabledButton: drawState != drawingStates.SELECTED}" ng-click="editPolygon()">
+                                                        <span>{!$Label.Edit}</span>
+                                                    </div>
+                                                </div>
+                                                <cs-color-picker></cs-color-picker>
+
+                                                <div class="editPolygonOptions" ng-show="drawState != drawingStates.NONE && drawState != drawingStates.SELECTED && drawState != drawingStates.INTERSECT">
+                                                    <div id="savePolygon" class="truncate mapIconButton" ng-click="savePolygon()" title="{!$Label.Save}" ng-class="{disabledButton: selectedShape == null}" ng-disabled="selectedShape == null">
+                                                        <span>{!$Label.Save}</span>
+                                                    </div>
+                                                    <div id="cancelPolygon" class="truncate mapIconButton" ng-click="cancelPolygon()" title="{!$Label.Cancel}">
+                                                        <span>{!$Label.Cancel}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="polygonTerritory" >
+                                                    <select ng-model="polygonTerritory" ng-disabled="drawState != drawingStates.EDIT && drawState != drawingStates.DRAW">
+                                                        <option value="null">{!$Label.Select_Service_Territory}</option>
+                                                        <option ng-repeat="(key, value) in territories" value="{{key}}">{{value.name}}</option>
+                                                    </select>
+                                                </div>
+                                                <div id="deletePolygon" title="{!$Label.Delete}" class="mapIconButton truncate" ng-click="deletePolygon()" ng-show="drawState == drawingStates.SELECTED" ng-if="hasCustomPermission('Polygons_create_update')">
+                                                    <span>{!$Label.Delete}</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="polygonsList">
+                                                <div id="polygonsByTerritoriesTree">
+                                                    <!-- treeview body will be here later -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mapAlert" ng-show="showTooManyReportsAlert">{!$Label.Reports_exceed_marker_amount_limit}
+                                    <svg aria-hidden="true" class="slds-icon mapAlertClose" ng-click="showTooManyReportsAlert = false">
+                                        <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                                    </svg>
+                                </div>
+
+
+                                <div id="choosePolygonsToCut" ng-show="drawState == drawingStates.INTERSECT">{!$Label.Select_intersecting_polygons}
+                                    <svg aria-hidden="true" class="slds-icon choosePolygonsToCutClose" ng-click="drawState = drawingStates.SELECTED; selectedIntersectingPolygons={};">
+                                        <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                                    </svg>
+
+                                    <div id="intersectingPolygonsList">
+                                        <span ng-repeat="(key, value) in selectedIntersectingPolygons" class="polygonNameSpan" ng-style="{'border-color': polygons[key].Color__c}">{{polygons[key].Name}}</span>
+                                        <span ng-show="isEmpty(selectedIntersectingPolygons)" class="polygonNamesNameSpace">{!$Label.No_polygons_selected}</span>
+                                    </div>
+                                    <div class="mapIconButton truncate" ng-click="getIntersectionsForPolygons()" ng-show="!isEmpty(selectedIntersectingPolygons)">
+                                        <span>{!$Label.Go}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+						<ui-gmap-google-map pan="false" control="mapControl" id="myMap" options="mapOptions" class="map-canvas" center="mapControl.center"  zoom="mapControl.zoom">
+
+						    <!-- Markers -->
+                            <ui-gmap-markers control="markersControl" click="markerClicked" options="'markerOptions'" models="allMarkersArray" idKey="id" coords="'coords'" icon="'icon'">
+                            </ui-gmap-markers>
+
+                            <!-- Info Windows -->
+                            <ui-gmap-window show="serviceInfoWindow.show" closeClick="markerCloseClicked()" coords="currentMarker.coords" options="infoWindowOptions.service" control="serviceInfoWindow.control">
+                                    <div class="googleMapInfoWindowService hasActionButtons">
+                                        <img class="mapTooltipIcon" src="{!$Resource.wo_icon_png}"/>
+                                        <h1 class="truncate mapTooltipTitle">{{currentMarker.item | displayFieldSetField : serviceFields[0] }}</h1>
+
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[1] || serviceFields[1]">{{serviceFields[1].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[1])" ng-class="getServiceInfoRowClass(serviceFields[1])">{{currentMarker.item | displayFieldSetField : serviceFields[1]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[2] || serviceFields[2]">{{serviceFields[2].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[2])" ng-class="getServiceInfoRowClass(serviceFields[2])">{{currentMarker.item | displayFieldSetField : serviceFields[2]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[3] || serviceFields[3]">{{serviceFields[3].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[3])" ng-class="getServiceInfoRowClass(serviceFields[3])">{{currentMarker.item | displayFieldSetField : serviceFields[3]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[4] || serviceFields[4]">{{serviceFields[4].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[4])" ng-class="getServiceInfoRowClass(serviceFields[4])">{{currentMarker.item | displayFieldSetField : serviceFields[4]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[5] || serviceFields[5]">{{serviceFields[5].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[5])" ng-class="getServiceInfoRowClass(serviceFields[5])">{{currentMarker.item | displayFieldSetField : serviceFields[5]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[6] || serviceFields[6]">{{serviceFields[6].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[6])" ng-class="getServiceInfoRowClass(serviceFields[6])">{{currentMarker.item | displayFieldSetField : serviceFields[6]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[7] || serviceFields[7]">{{serviceFields[7].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[7])" ng-class="getServiceInfoRowClass(serviceFields[7])">{{currentMarker.item | displayFieldSetField : serviceFields[7]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[8] || serviceFields[8]">{{serviceFields[8].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[8])" ng-class="getServiceInfoRowClass(serviceFields[8])">{{currentMarker.item | displayFieldSetField : serviceFields[8]}}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.serviceFields[9] || serviceFields[9]">{{serviceFields[9].Label}}: <span ng-click="$parent.$parent.$parent.openLink($parent.$parent.$parent.currentMarker.item, $parent.$parent.$parent.serviceFields[9])" ng-class="getServiceInfoRowClass(serviceFields[9])">{{currentMarker.item | displayFieldSetField : serviceFields[9]}}</span></div>
+
+
+                                        <div class="markerButtons">
+                                            <div class="serviceButtonOnMap truncate" ng-click="$parent.$parent.$parent.openLightbox($parent.$parent.$parent.currentMarker.item.id,'service')">{!$Label.viewDetails}</div>
+                                            <div class="serviceButtonOnMap truncate" ng-show="$parent.$parent.$parent.needToShowDispatchButton()" ng-click="$parent.$parent.$parent.changeStatusToDispatch($parent.$parent.$parent.currentMarker.item.id)">
+                                                <img class="quickActionLoading"
+                                                     src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+                                                     ng-show="$parent.$parent.$parent.isServiceCurrentlyDispatching()"/>
+                                                	{!$Label.Dispatch}
+                                            </div>
+                                            <div class="serviceButtonOnMap truncate" ng-show="$parent.$parent.$parent.needToShowScheduleButton()" ng-click="$parent.$parent.$parent.autoScheduleService()">
+                                                <img class="quickActionLoading"
+                                                     src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+                                                     ng-show="$parent.$parent.$parent.isServiceCurrentlyScheduling()"/>
+                                                {{ currentMarker.item.resourceId ? '{!JSENCODE($Label.Reschedule)}' : '{!JSENCODE($Label.Schedule)}' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ui-gmap-window>
+
+
+                                <ui-gmap-window show="territoryInfoWindow.show" closeClick="markerCloseClicked()" coords="currentMarker.coords" options="infoWindowOptions.resource">
+                                    <div class="googleMapInfoWindowHomebase">
+                                        <h1 class="truncate mapTooltipTitle"><span class="homebaseLabel">{{ currentMarker.item.name }}</span></h1>
+                                        <div class="buttonOnMap" ng-click="$parent.$parent.$parent.openSObjectLink($parent.$parent.$parent.currentMarker.id)">{!$Label.viewDetails}</div>
+                                    </div>
+                                </ui-gmap-window>
+
+                                <ui-gmap-window show="resourceInfoWindow.show" closeClick="markerCloseClicked()" coords="currentMarker.coords" options="infoWindowOptions.resource">
+                                    <div class="googleMapInfoWindowHomebase">
+                                        <svg aria-hidden="true" class="slds-icon homebaseTooltipIcon">
+                                            <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#home')}"></use>
+                                        </svg>
+                                        <h1 class="truncate mapTooltipTitle"><span class="homebaseLabel">{{ "{!JSENCODE($Label.homebase_of)}" | replaceLabels : currentMarker.item.resourceName }}</span></h1>
+                                        <div class="buttonOnMap"  ng-click="$parent.$parent.$parent.openSObjectLink($parent.$parent.$parent.currentMarker.id)">{!$Label.viewDetails}</div>
+                                    </div>
+                                </ui-gmap-window>
+
+                                <ui-gmap-window show="livePosInfoWindow.show" closeClick="markerCloseClicked()" coords="currentMarker.coords" options="infoWindowOptions.resource">
+                                    <div class="googleMapInfoWindowLivePos hasActionButtons">
+                                        <svg aria-hidden="true" class="slds-icon livePosTooltipIcon">
+                                        	<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#user')}"></use>
+                                    	</svg>
+                                        <h1 class="truncate mapTooltipTitle" ng-bind="$parent.$parent.$parent.currentMarker.item.resourceName"></h1>
+                                        <div>{!$Label.Last_seen} {{ currentMarker.item.lastModifiedDate | amDateFormat:'lll' }}</div>
+
+                                        <div class="buttonOnMap"  ng-click="$parent.$parent.$parent.openLightbox($parent.$parent.$parent.currentMarker.resourceId,'resource')">{!$Label.viewDetails}</div>
+                                    </div>
+                                </ui-gmap-window>
+
+                                <ui-gmap-window show="reportInfoWindow.show" closeClick="markerCloseClicked()" coords="currentMarker.coords" options="infoWindowOptions.report">
+                                    <div class="googleMapInfoWindowService">
+                                        <svg aria-hidden="true" class="slds-icon reportTooltipIcon">
+                                            <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#report')}"></use>
+                                        </svg>
+                                        <h1 class="truncate mapTooltipTitle">{{currentMarker.reportName}}</h1>
+
+                                        <div ng-show="$parent.$parent.$parent.reportFields[0] || reportFields[1]">{{reportFields[0].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[0])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[0].isReference}">{{reportFields[0] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[1] || reportFields[1]">{{reportFields[1].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[1])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[1].isReference}">{{reportFields[1] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[2] || reportFields[2]">{{reportFields[2].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[2])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[2].isReference}">{{reportFields[2] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[3] || reportFields[3]">{{reportFields[3].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[3])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[3].isReference}">{{reportFields[3] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[4] || reportFields[4]">{{reportFields[4].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[4])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[4].isReference}">{{reportFields[4] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[5] || reportFields[5]">{{reportFields[5].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[5])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[5].isReference}">{{reportFields[5] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[6] || reportFields[6]">{{reportFields[6].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[6])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[6].isReference}">{{reportFields[6] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[7] || reportFields[7]">{{reportFields[7].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[7])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[7].isReference}">{{reportFields[7] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[8] || reportFields[8]">{{reportFields[8].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[8])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[8].isReference}">{{reportFields[8] | displayReportField }}</span></div>
+                                        <div ng-show="$parent.$parent.$parent.reportFields[9] || reportFields[9]">{{reportFields[9].APILabel}}: <span ng-click="$parent.$parent.$parent.openReportLink($parent.$parent.$parent.reportFields[9])" ng-class="{resourceOnServiceTT: $parent.$parent.$parent.reportFields[9].isReference}">{{reportFields[9] | displayReportField }}</span></div>
+
+                                    </div>
+                                </ui-gmap-window>
+
+                                <!-- Layers -->
+                                <ui-gmap-layer type="TrafficLayer" show='trafficLayerEnabled'></ui-gmap-layer>
+                            </ui-gmap-google-map>
+                        </section>
+				    </div>
+			    </div>
+            </apex:outputPanel>
+
+            <!-- Map iframe view -->
+            <apex:outputPanel rendered="{!mapMode == '1' && dontShowMapBecauseChina == false && iframeMapMode == '1' && !debugMode}">
+
+
+
+				<div id="MapContainer" ng-controller="ctrlIframeMap" ng-show="workingState == 'map'" ng-if="startLoadMap">
+
+					<div id="FloatingMapControls">
+
+						{!JSENCODE($Label.Transparency)} <div id="FloatingMapOpacity"></div>
+
+						<svg id="Floating-CloseMap" aria-hidden="true" class="slds-icon floating-icon-control" fsl-key-press="fsl-key-press" tabindex="0" ng-click="closeFloatingMap()">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+							</svg>
+
+					</div>
+
+					<div id="FloatingMapOverlay" ng-show="showMapOverlay" ng-mousedown="showMapOverlay = false"></div>
+
+                    <apex:iframe id="GanttReactMapIframe" src="{!$IFrameResource.FSL__FSLGanttMap}" html-allow="fullscreen" height="100%" width="100%"/>
+                </div>
+
+
+
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!mapMode == '1' && dontShowMapBecauseChina == false && iframeMapMode == '1' && !NOT(debugMode)}">
+                <div id="MapContainer" ng-controller="ctrlIframeMap" ng-show="workingState == 'map'" ng-if="startLoadMap">
+                	<div id="FloatingMapControls">
+
+                		{!JSENCODE($Label.Transparency)} <div id="FloatingMapOpacity"></div>
+
+                		<svg id="Floating-CloseMap" aria-hidden="true" class="slds-icon floating-icon-control" ng-click="closeFloatingMap()">
+                			<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                		</svg>
+
+                	</div>
+
+                	<div id="FloatingMapOverlay" ng-show="showMapOverlay" ng-mousedown="showMapOverlay = false"></div>
+                	
+                    <apex:iframe id="GanttReactMapIframeDebug" src="{!$IFrameResource.FSL__FSLGanttMapDev}" html-allow="fullscreen" height="100%" width="100%"/>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!mapMode == '1' && dontShowMapBecauseChina == false && iframeMapMode == '2'}">
+                <div id="MapContainer" ng-controller="ctrlIframeMap" ng-show="workingState == 'map'" ng-mousedown="showMapOverlay = true" ng-mouseup="showMapOverlay = false">
+
+					<div id="FloatingMapControls">
+
+						{!JSENCODE($Label.Transparency)} <div id="FloatingMapOpacity"></div>
+
+						<svg id="Floating-CloseMap" aria-hidden="true" class="slds-icon floating-icon-control" ng-click="closeFloatingMap()">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+						</svg>
+
+					</div>
+
+					<div id="FloatingMapOverlay" ng-show="showMapOverlay" ng-mousedown="showMapOverlay = false"></div>
+
+                    <apex:iframe id="GanttReactMapIframeSF" src="{!mapDomain}" html-allow="fullscreen" height="100%" width="100%"/>
+                </div>
+            </apex:outputPanel>
+
+
+            <div id="GanttMapContainer" ng-show="workingState == 'gantt'">
+
+				<div class="long-term-exeeded" ng-if="shouldShowLongTermError()">{!$Label.LongViewError}</div>
+
+				<div ng-controller="ctrlGantt" id="GanttContainer" ng-class="{'long-term-error-shown-gantt': shouldShowLongTermError()}">
+		            
+				    <div id="SearchEmployeesOnGanttContainer">
+
+				    	<input type="text" ng-model="searchEmployee" cs-stop-propagation="keydown" ng-model-options="{ debounce: 250 }" placeholder="{!$Label.SearchResources}"></input>
+
+						<svg aria-hidden="true" tabindex="0" fsl-key-press="fsl-key-press" class="slds-icon clearEmployeeSearch" ng-show="searchEmployee != ''" ng-click="searchEmployee = ''">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+						</svg>
+						<svg aria-hidden="true" class="slds-icon UserSearchIcon">
+							<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#user')}"></use>
+						</svg>
+
+				    	<button id="filterSkillsButton" cs-toggle="SelectSkilsPropertyBox" title="{!$Label.GanttChartFilter}">
+							<svg aria-hidden="true" class="slds-icon FilterGanttIcon">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#filterList')}"></use>
+							</svg>
+				    		<i class="fa fa-caret-down"></i>
+				    	</button>
+
+				    	<div class="hideContainer">
+					    	<button class="truncate hide-crew-view" ng-click="cancelCrewView()" ng-show="crewViewActive" title="{!$Label.HideCrewView}">{!$Label.HideCrewView}</button>
+				    	</div>
+
+				    	<div ng-show="isGanttFilterApplied()" id="SkillsFilterOn"></div>
+
+				    	<!-- for gantt filters -->
+					   	<div id="SelectSkilsPropertyBox" ng-click="$event.stopPropagation()" ng-init="filterShowHours=true; filterShowSkills=false; filterShowMisc = false;">
+
+					   		<div id="gantt-filter-tabs" class="lightning-tabs">
+						   		<button fsl-tab-switch="fsl-tab-switch" class="truncate" role="tab" ng-class="{'tab-selected': filterVisibility.hours}" title="{!$Label.Hours}" ng-click="changeGanttFilterTab('hours')">{!$Label.Hours}</button>
+								<button fsl-tab-switch="fsl-tab-switch" class="truncate" role="tab" tabindex="-1" ng-class="{'tab-selected': filterVisibility.resources}" title="{!$Label.Resources}" ng-click="changeGanttFilterTab('resources')">{!$Label.Resources}</button>
+								<button fsl-tab-switch="fsl-tab-switch" class="truncate" role="tab" tabindex="-1" ng-show="useResourceSkillFilter" ng-class="{'tab-selected': filterVisibility.skills}" title="{!$Label.skills}" ng-click="changeGanttFilterTab('skills')">{!$Label.skills}</button>
+								<button fsl-tab-switch="fsl-tab-switch" class="truncate" role="tab" tabindex="-1" ng-show="hasCustomPermission('Monthly_Utilization')" ng-class="{'tab-selected': filterVisibility.utilization}" title="{!$Label.Utilization}" ng-click="changeGanttFilterTab('utilization')">{!$Label.Utilization}</button>
+								<button fsl-tab-switch="fsl-tab-switch" class="truncate" role="tab" tabindex="-1" ng-show="viewPalette" ng-class="{'tab-selected': filterVisibility.palettes}" title="{!$Label.Palettes}" ng-click="changeGanttFilterTab('palettes')">{!$Label.Palettes}</button>
+					   		</div>
+
+							<!-- Gantt Palettes -->
+							<div id="ColorPaletteContainer" ng-show="filterVisibility.palettes && viewPalette">
+								<gantt-palette show-palette-view="showPaletteView" show-palette-edit="editPalette" hide-palette-view="hidePaletteView"/>
+							</div>
+
+							<!-- Utilization filter options -->
+							<div id="MonthlyFilterContent" ng-show="filterVisibility.utilization">
+								<p>{!$Label.MonthlyCapacityOptionsExplain}</p>
+
+								<div class="MonthlyFilterFieldSetContainer">
+									<input type="checkbox" ng-change="updateMonthlyKpi()" ng-model="capacityFields.services" id="monthlyCalc_Services" />
+									<label for="monthlyCalc_Services">{!$Label.justAppointments}</label>
+								</div>
+
+								<div class="MonthlyFilterFieldSetContainer">
+									<input type="checkbox" ng-change="updateMonthlyKpi()" ng-model="capacityFields.travel" id="monthlyCalc_Travel" />
+									<label for="monthlyCalc_Travel">{!$Label.Travel_time}</label>
+								</div>
+
+								<div class="MonthlyFilterFieldSetContainer">
+									<input type="checkbox" ng-change="updateMonthlyKpi()" ng-model="capacityFields.na" id="monthlyCalc_NA" />
+									<label for="monthlyCalc_NA">{!$Label.NonAvailabilities}</label>
+								</div>
+
+								<div class="MonthlyFilterFieldSetContainer">
+									<input type="checkbox" ng-change="updateMonthlyKpi()" ng-model="capacityFields.breaks" id="monthlyCalc_Breaks" />
+									<label for="monthlyCalc_Breaks">{!$Label.Breaks}</label>
+								</div>
+
+								<div class="MonthlyFilterFieldSetContainer">
+									<input type="checkbox" ng-change="updateMonthlyKpi()" ng-model="capacityFields.overtime" id="monthlyCalc_Overtime" />
+									<label for="monthlyCalc_Overtime">{!$Label.Overtime}</label>
+								</div>
+
+
+								<div id="UtilizationDaysContainer">
+									{!$Label.DaysInUtilizationView}
+									<input type="number"
+										   min="1"
+										   max="31"
+										   onkeydown="return (event.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)"
+										   ng-paste="$event.preventDefault()"
+										   ng-model="numberOfDaysInUtilizationView"
+										   ng-change="daysInUtilizationChanged()"
+										   ng-model-options="{ debounce: 200 }"/>
+
+									<span>
+										<span class="PlusMinusUtlzButton" ng-click="changeUtilizaionDays(1)">+</span>
+										<span class="PlusMinusUtlzButton" ng-click="changeUtilizaionDays(-1)">-</span>
+									</span>
+								</div>
+							</div>
+
+							<!-- Resource filter -->
+							<div id="ResourceFilterContent" ng-if="filterVisibility.resources">
+
+								<div id="SortResorceByField">
+									{!$Label.SortBy}
+									<select ng-model="resourceFilterHelper.resourceFieldToSortyBy">
+										<option ng-repeat="field in resourceFilterHelper.getResourceFieldset()" value="{{ :: field[2]}}">{{ :: field[0] }}</option>
+									</select>
+
+									<i tabindex="0" fsl-key-press="fsl-key-press" ng-click="resourceFilterHelper.descending = !resourceFilterHelper.descending" ng-show="resourceFilterHelper.descending" class="fa fa-sort-amount-asc" title="{!$Label.Ascending}"></i>
+									<i tabindex="0" fsl-key-press="fsl-key-press" ng-click="resourceFilterHelper.descending = !resourceFilterHelper.descending" ng-show="!resourceFilterHelper.descending" class="fa fa-sort-amount-desc" title="{!$Label.Descending}"></i>
+
+								</div>
+
+
+								<div id="GanttResourceFilterExplain">
+									<div id="resourceExplainCrap">{!$Label.SelectAfieldToResourceFilter}</div>
+									<div class="selectAllOrNoneSection">
+										<i tabindex="0" fsl-key-press="fsl-key-press" class="ResetResourceFilter fa">{!$Label.SelectAllOrNone}</i>
+										<i tabindex="0" fsl-key-press="fsl-key-press" class="ResetResourceFilter fa AllOrNoneClickable" ng-click="resourceFilterHelper.setAll(); resourceFilters.showWorkingResource = true;">{!$Label.All}</i>
+										<i tabindex="0" fsl-key-press="fsl-key-press" class="ResetResourceFilter fa">|</i>
+										<i tabindex="0" fsl-key-press="fsl-key-press" class="ResetResourceFilter fa AllOrNoneClickable" ng-click="resourceFilterHelper.resetFilter();resourceFilters.showWorkingResource = false;">{!$Label.None}</i>
+									</div>
+								</div>
+
+								<input type="checkbox" id="resourceFilters_showOnlyWorking" ng-model ="resourceFilters.showWorkingResource" ng-click="updateWorkingReosourcesFilter()"/>
+								<label for="resourceFilters_showOnlyWorking">{!$Label.ShowOnlyWorking}</label><br/>
+
+								<!-- show boolean fields of resource fieldset -->
+								<div ng-repeat="field in resourceFilterHelper.getResourceFieldset()" class="Gantt-ResourceFilterFieldSetContainer truncate" ng-show="field[1] === 'BOOLEAN'">
+									<input type="checkbox" ng-model="resourceFilterHelper.selectionInfo.resourceFilteringOptions[field[2]]" id="resource_{{field[2]}}" />
+									<label for="resource_{{field[2]}}" title="{{ :: field[0] }}">{{ :: field[0] }}</label>
+								</div>
+
+								<div id="ResourceFilterPicklistContainer">
+									{!$Label.OneOfTheFollowing}<br/>
+									<select id="GanttResourceFilterSelect"
+											ng-model="resourceFilterHelper.selectionInfo.selectedPicklist"
+											ng-change="resourceFilterHelper.selectionInfo.picklistOptions.length = 0; resourceFilterHelper.selectionInfo.picklistOptionsModel.length = 0; resourceFilterHelper.selectionInfo.picklistNullValues = false" >
+										<option value="select_a_field" >{!$Label.SelectAField}</option>
+										<option ng-repeat="field in resourceFilterHelper.getResourceFieldset()" ng-show="field[1] === 'PICKLIST'" value="{{ :: field[2]}}">{{ :: field[0] }}</option>
+									</select><br/>
+
+									<!-- checkboxes of selected picklist -->
+									<div ng-repeat="(key,value) in resourceFilterHelper.getPicklistNames()[resourceFilterHelper.selectionInfo.selectedPicklist]" class="Gantt-ResourceFilterFieldSetContainer PicklistValuesContainer truncate">
+										<input type="checkbox"
+											   ng-change="resourceFilterHelper.updateSelectedPicklist(key,resourceFilterHelper.selectionInfo.picklistOptionsModel[$index])"
+											   ng-model="resourceFilterHelper.selectionInfo.picklistOptionsModel[$index]"
+											   id="ResourcePicklistValue_{{$index}}" />
+										<label for="ResourcePicklistValue_{{$index}}">{{ value }}</label>
+									</div>
+
+									<div id="PicklistNotDefinedValue" ng-show="resourceFilterHelper.selectionInfo.selectedPicklist !== 'select_a_field'" class="Gantt-ResourceFilterFieldSetContainer truncate">
+										<input type="checkbox"
+											   ng-model="resourceFilterHelper.selectionInfo.picklistNullValues"
+											   id="ResourcePicklistValue___Null" />
+										<label for="ResourcePicklistValue___Null">{!$Label.None}</label>
+									</div>
+
+								</div>
+
+								<div class="ResourceCrewFilterContent">
+									{!$Label.crews_filter}:
+									<select id="GanttCrewFilterSelect"
+											ng-model="resourceFilterHelper.selectionInfo.crewsSelectionOptions.selectedPicklist">
+										<option ng-repeat="field in resourceFilterHelper.getCrewFilteringOptions()" value="{{ field}}">{{ field }}</option>
+									</select>
+								</div>
+							</div>
+
+
+							<!-- Gantt hours filter -->
+					   		<div id="BusinessHoursContent" ng-if="filterVisibility.hours">
+
+					   			<p>{!$Label.BusinessHours_SelectHoursToView}</p>
+
+								<cs-range min="0" max="24"
+									default-start="{{businessHoursRange.start}}"
+									default-end="{{businessHoursRange.end}}"
+									ng-model="businessHoursRange"
+									showing-text="{!$Label.BusinessHours_ShowingFromXtoY}">
+								</cs-range>
+
+								
+								<div id="includeWeekends" class="gantt-view-options truncate">
+									<input ng-model="businessHoursRange.includeWeekends" type="checkbox" />
+									<span ng-click="businessHoursRange.includeWeekends = !businessHoursRange.includeWeekends">{!$Label.BusinessHours_IncludeWeekends}</span>
+								</div>
+
+
+								<div id="highlightWeekeneds" class="gantt-view-options truncate" ng-click="saveHighlightWeekends()">
+									<input ng-model="currentViewOptions.highlightWeekeneds" type="checkbox" />
+									<span ng-click="currentViewOptions.highlightWeekeneds = !currentViewOptions.highlightWeekeneds">{!$Label.HighlightWeekeneds}</span>
+								</div>
+
+								<div id="horizontalScrolling" title="{!$Label.ScrollableViewsInfo}" class="gantt-view-options truncate" ng-click="toggleHorizontalScrolling()">
+									<input id="horizontalScrollingCheckbox" ng-model="horizontalScrolling.enabled" type="checkbox" />
+									<label for="horizontalScrollingCheckbox">{!$Label.ScrollableWeeklyViews}</label>
+								</div>
+
+								<div id="calendarWeeks" title="{!$Label.ShowCalendarWeeks}" class="gantt-view-options truncate" ng-click="toggleShowCalendarWeeks()">
+									<input id="calendarWeeksCheckbox" ng-model="showCalendarWeeks.enabled" type="checkbox" />
+									<label for="calendarWeeksCheckbox">{!$Label.ShowCalendarWeeks}</label>
+								</div>
+
+
+								<div ng-if="hasCustomPermission('Longterm_View')">
+									<div id="LongTermOptions" >
+										<span>{!$Label.LongTermOptions}</span>
+									</div>
+
+									<div ng-click="saveMdtFilterSa()">
+										<input ng-model="currentViewOptions.showMdt" ng-model-options="{ debounce: 300 }" type="checkbox" />
+										<span ng-click="currentViewOptions.showMdt = !currentViewOptions.showMdt">{!$Label.ShowOnlyMDT}</span>
+									</div>
+
+									<div>
+										<span>{!$Label.NumberOfMonthsToShow}:</span>
+										<input class="long-term-number" ng-model="currentViewOptions.numOfMonths" type="number" min="1" max="6" ng-model-options="{ debounce: 300 }" 
+											onkeydown="return (event.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)" ng-paste="$event.preventDefault()" ng-change="handleLongTermViewSizeChange()" />
+									</div>
+
+									<p class="long-term-explain">{!$Label.ExplainLongTerm}</p>
+
+									<div>
+										<span>{!$Label.for_service_appointments}:</span>
+										<input class="long-term-number" ng-model="currentViewOptions.minServiceDuration" ng-model-options="{ debounce: 300 }" type="number" min="0" 
+											onkeydown="return (event.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)t.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)" ng-paste="$event.preventDefault()" ng-change="saveMinimumLongtermServiceDuration()" />
+									</div>
+
+									<div>
+										<span>{!$Label.for_resource_absences}:</span>
+										<input class="long-term-number" ng-model="currentViewOptions.minNaDuration" ng-model-options="{ debounce: 300 }" type="number" min="0" 
+											onkeydown="return (event.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)t.keyCode == 38 || event.keyCode == 40  || event.keyCode == 9 ? true : false)" ng-paste="$event.preventDefault()" ng-change="saveMinimumLongtermAbsenceDuration()" />
+									</div>
+								</div>
+
+
+					   		</div>
+
+
+  						    <div id="FilterSkillsContent" ng-show="filterVisibility.skills">
+
+							<div id="skillOptionsBoxStuff-gantt">
+								
+								<input ng-model="seachSkillsText" type="search" placeholder="{!$Label.SearchSkills}" 
+								       ng-model-options="{ debounce: 333 }" ng-change="searchSkills(seachSkillsText)" />
+								<ul class="search-skills-results-ul" ng-show="searchSkillsResults.length > 0">
+									<li class="search-skill-result-li truncate" ng-repeat="skill in searchSkillsResults" ng-click="selectSkillFromSearchInput(skill)" 
+									    ng-class ="{disableSkillsFilter: selectedSkills[skill.Id] }" >
+										{{ skill.MasterLabel}}
+									</li>
+								</ul>	   
+   						    </div>
+							<div class="SkillsNameBox-gantt" ng-show="needToLoadSkills">
+								<div class="gantt-loading-filter-box-skills" >
+									<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" /><br />
+									<span>{!$Label.Loading}</span>
+								</div>
+							</div>
+                            <div ng-show="!needToLoadSkills">
+								<div class="SkillsNameBox-gantt">
+									<div ng-repeat="skill in skillsList | orderBy:'MasterLabel' track by skill.Id" ng-show="!showSelectedList || selectedSkills[skill.Id]" >
+									  <label for="SkillFilter_{{skill.MasterLabel}}" class="pill-item" title="{{skill.MasterLabel}}">
+										  <input class="skill-filter-checkbox" type="checkbox" id="SkillFilter_{{skill.MasterLabel}}"  ng-model="selectedSkills[skill.Id]" 
+												 ng-click="selectSkillFromCheckbox($event, skill)" ng-change="updateSelectedCount($event)" /> 
+										  <span class="pill-label truncate">{{ :: skill.MasterLabel}}</span>
+									  </label>
+									</div>
+								   </div>
+								   <div class="graySeparatorSkills"></div>
+								   <div class="SkillLogicContainer-gantt">
+									  <div class="logic-operator-select">
+										  <label for="skillsLogicOp">{!$Label.LogicOperationSkills}</label>
+										  <select id="skillsLogicOp" ng-model="skillsLogicOperator" ng-change="saveUserPropSkillsLogic()" ng-model-options="{ debounce: 300 }">
+											  <option value="and">{!$Label.AND}</option>
+											  <option value="or">{!$Label.OR}</option>
+										  </select>
+									  </div>
+									  <div class="logic-container-clearAll" ng-class ="{disableSkillsFilter: selectedSkillCounter === 0}">
+										  <button class="skillQuickSelectors-gantt truncate" title="{{setFilterShowButtonLabel()}}" ng-disabled="selectedSkillCounter === 0"
+												  ng-click = "showSelectedSkillsList($event)">{{setFilterShowButtonLabel()}}</button>
+										  <button class="skillQuickSelectors-gantt truncate" title="{!$Label.Clear_All_SkillsFilter}" ng-disabled="selectedSkillCounter === 0"
+												  ng-click = "unSelecteAllSkills()">{!$Label.Clear_All_SkillsFilter}</button>
+									  </div>
+									  
+								  </div>
+							</div>
+
+							  
+
+							   
+					   </div>
+						</div>
+
+				    	<div id="timesDragFix"></div>
+
+					</div>
+					
+					<div class="dhx-scheduler dragTarget {{ getRowSizeClass() }}" resources="getResources() | timelineFilter:searchEmployee:skillsFilter:selectedSkills:skillsLogicOperator:resourceFilters:resourceFilterHelper.selectionInfo">
+		            	
+				        <div tabindex="0" fsl-key-press="fsl-key-press" class="dhx_cal_prev_button" ng-click="changeDatesByArrows('left')" title="{!$Label.Scroll1DayLeft}"><i class="fa fa-angle-left"></i></div>
+				        <div tabindex="0" fsl-key-press="fsl-key-press" class="truncate todayButton" ng-click="jumpToToday()" title="{!$Label.Jump_To_Today}">{!$Label.Today}</div>
+				        <div tabindex="0" fsl-key-press="fsl-key-press" class="dhx_cal_next_button" ng-click="changeDatesByArrows('right')" title="{!$Label.Scroll1DayRight}"><i class="fa fa-angle-right"></i></div>
+						
+						<div tabindex="0" fsl-key-press="fsl-key-press" id="JumpToDate" ng-click="jumpToDate()" title="{!$Label.JumpToDate}">
+							<svg id="JumpToDateIcon" aria-hidden="true" class="slds-icon">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+							</svg>
+			            	<i class="fa fa-caret-down"></i>
+		            	</div>
+				        <div class="dhx_cal_date"></div>
+
+				        <div tabindex="0" fsl-key-press="fsl-key-press" id="selectTimeline" class="truncate" cs-toggle="selectTimelineContainer" ng-bind="timelineName" title="{{timelineName}}"></div>
+				        <div id="selectTimelineContainer">
+				        	<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(0)">{!$Label.In_Day}</button>
+				        	<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(1)">{!$Label.Daily}</button>
+				        	<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(2)">{!$Label.X2_Days}</button>
+				        	<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(3)">{!$Label.X3_Days}</button>
+				        	<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(7)">{!$Label.Weekly}</button>
+							<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-click="changeTimeline(14)">{!$Label.TwoWeeks}</button>
+							<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-if="hasCustomPermission('MDT_View') && !hasCustomPermission('Longterm_View')" ng-click="changeTimeline(35)">{!$Label.MDTVIEW}</button>
+							<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-if="hasCustomPermission('Monthly_Utilization')" ng-click="changeTimeline(30)">{!$Label.Utilization}</button>
+							<button fsl-tab-switch="fsl-tab-switch" role="select" class="truncate" ng-if="hasCustomPermission('Longterm_View')" ng-click="changeTimeline(180)">{!$Label.LongView}</button>
+				        </div>
+
+				    </div>
+
+   					<div id="LockGanttContainer">
+				    	<div tabindex="0" fsl-key-press="fsl-key-press" id="LockSwitch" ng-click="lockGanttToggle()" ng-class="{'gantt-locked': ganttLocked}">
+							<svg aria-hidden="true" class="slds-icon LockIcon">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#lock')}"></use>
+							</svg>
+
+							<svg aria-hidden="true" class="slds-icon UnlockIcon">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#unlock')}"></use>
+							</svg>
+
+					    	<div id="LockHandle" ng-class="{lockedSwitch: ganttLocked}"></div>
+				    	</div>
+				    </div>
+
+				    <div id="breakCreator" ng-show="hasCustomPermission('Create_Absences_from_Gantt')">
+
+						<div id="na-drag-container" draggable="true" class="dragNA">
+							<svg aria-hidden="true" class="slds-icon NaIcon">
+								<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#ban')}"></use>
+							</svg>
+							<div class="wrap-break-duration" >
+                                <span id="breakDuration" class="na-formatted-length truncate" data-duration="{{defaultDragNa.selectedNaDuration}}" title="{{getNaDurationFormatted()}}">{{getNaDurationFormatted()}}</span>
+
+							    <i id="na-caret" class="fa fa-caret-down" cs-toggle="naOptionsContainer" ng-click="getEmployeeAbsenceTypes()" title="{!$Label.create_na_tooltip}"></i>
+							</div>
+							
+						</div>
+
+						<div id="naOptionsContainer" ng-click="$event.stopPropagation()" draggable="false">
+
+							<div class="gantt-loading-absences-type" ng-show="!absencesTypeLoaded">
+								<img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" /><br />
+								<span>{!JSENCODE($Label.Loading)}</span>
+							</div>
+
+							<div class="create-na-title">{!JSENCODE($Label.CreateNonAvailability)}</div>
+
+							<div class="naOptionsHeader">{!JSENCODE($Label.AbsenceCreatorExplain)}</div>
+
+							<div class="na-duration-container">
+								<div>
+
+									<div>{!JSENCODE($Label.AbsenceCreatorDuration)}</div>
+									
+									<input type="number" min="0" max="336" 
+											title="{!JSENCODE($Label.AbsenceCreatorHours)}"
+											ondrop="return false;" 
+											ng-paste="$event.preventDefault()"
+											ng-model="defaultDragNa.selectedHours"
+											ng-model-options="{ debounce: 200 }"
+											ng-change="saveDragNaDefaults('duration')"
+									/>
+									<span>{!JSENCODE($Label.AbsenceCreatorHours)}</span>
+
+									<input type="number" min="0" max="59"
+											title="{!JSENCODE($Label.AbsenceCreatorMinutes)}"
+											ondrop="return false;" 
+											ng-paste="$event.preventDefault()"
+											ng-model="defaultDragNa.selectedMinutes"
+											ng-model-options="{ debounce: 200 }"
+											ng-change="saveDragNaDefaults('duration')" 
+											style="margin-left: 8px;" />
+
+									<span>{!JSENCODE($Label.AbsenceCreatorMinutes)}</span>
+
+								</div>
+
+								<div>
+									<div class="na-creator-inputs-container" style="margin-right: 6px;">
+										<div>{!JSENCODE($Label.AbsenceCreatorType)}</div>
+										<select id="naOptionSelectType" class="naOptionInput" ng-model="defaultDragNa.selectedNaType" ng-change="saveDragNaDefaults('type')">
+											<option ng-repeat="(type,label) in nonAvailabilityTypes" value="{{type}}">{{label}}</option>
+										</select>
+									</div>
+
+									<div class="na-creator-inputs-container">
+										<div>{!JSENCODE($Label.AbsenceCreatorLabel)}</div>
+										<input  id="naOptionGanttLabel"
+												class="naOptionInput"
+												type="text"
+												placeholder="{!$Label.Gantt_Label}"
+												ng-model="defaultDragNa.selectedNaLabel"
+												ng-model-options="{ debounce: 200 }"
+												ng-change="saveDragNaDefaults('label')"
+												draggable="false"
+												ondrop="event.preventDefault()"/>
+
+									</div>
+
+								</div>
+
+							</div>
+							
+						</div>
+				    </div>
+			    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+	</html>
+
+
+	<c:GanttLabels ></c:GanttLabels>
+	<c:LightningIcons ></c:LightningIcons>
+	<c:ObjectsNames ></c:ObjectsNames>
+	<c:GanttRemoteActions ></c:GanttRemoteActions>
+	<c:GanttLightboxSettings ></c:GanttLightboxSettings>
+	<c:GanttStaticResourcesUrls ></c:GanttStaticResourcesUrls>
+	<c:GanttMiscSettings ></c:GanttMiscSettings>
+	<c:GanttMapDefinitions ></c:GanttMapDefinitions>
+
+    <script>
+		$('*').on('mousedown', function() {
+			$(this).blur();
+		});
+
+        svg4everybody();
+
+        setTimeout(function(){
+            $('#FirstTimeLoading>div').show();
+        }, 0);
+
+    	bootstrap.Start();
+
+
+    </script>
+	
+
+</apex:page>

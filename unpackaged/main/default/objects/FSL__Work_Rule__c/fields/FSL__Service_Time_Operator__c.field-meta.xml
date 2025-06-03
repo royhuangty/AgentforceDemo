@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Service_Time_Operator__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Service Time Operator</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Before</fullName>
+                <default>true</default>
+                <label>Before</label>
+            </value>
+            <value>
+                <fullName>Before or Equal to</fullName>
+                <default>false</default>
+                <label>Before or Equal to</label>
+            </value>
+            <value>
+                <fullName>Equal to</fullName>
+                <default>false</default>
+                <label>Equal to</label>
+            </value>
+            <value>
+                <fullName>Later than or Equal to</fullName>
+                <default>false</default>
+                <label>Later than or Equal to</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

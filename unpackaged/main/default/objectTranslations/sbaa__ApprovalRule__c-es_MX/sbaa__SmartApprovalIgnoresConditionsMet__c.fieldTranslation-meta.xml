@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Marque la casilla para volver a evaluar las condiciones de Aprobación inteligente incluso si Condiciones cumplidas está establecido en Todas o Personalizado. Si cualquier condición de Aprobación inteligente devuelve Verdadero, la reevaluación se detiene y las condiciones de la regla se consideran cumplidas.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </CustomFieldTranslation>

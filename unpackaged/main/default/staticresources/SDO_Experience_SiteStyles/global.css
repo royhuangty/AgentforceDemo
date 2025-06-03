@@ -1,0 +1,894 @@
+/*
+ * GLOBAL STYLES
+ * 
+ * This CSS file contains styles that apply across the entire site.
+ *
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+/* Adds space under the header if there is no Hero */
+.isHeroUnderHeader-false > div[role=banner] {
+  margin-bottom: 40px;
+}
+
+/* space below body sections to spread content out */
+.body .siteforceDesignTimeSection {
+  margin-bottom: 20px;
+}
+
+/* Builder Notes */
+[data-audience-name*="Builder Only"] .forceCommunityRichText {
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #eef4ff;
+  border: 1px solid #c5d1e4;
+  border-radius: 16px;
+  box-shadow: 0px 24px 48px 8px rgba(0, 20, 45, 0.08);
+  margin-bottom: 20px;
+}
+[data-audience-name*="Builder Only"] .forceCommunityRichText .uiOutputRichText {
+  padding: 20px 40px 40px;
+}
+[data-audience-name*="Builder Only"] .forceCommunityRichText .uiOutputRichText h1 {
+  color: #032d60;
+  font-family: t(fontFamilyHeading);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+}
+[data-audience-name*="Builder Only"] .forceCommunityRichText .uiOutputRichText p em {
+  border: 1px solid #c5d1e4;
+  border-radius: var(--border-radius-lg);
+  background: #cfe9fe;
+  font-style: normal;
+  padding: 10px 40px;
+}
+[data-audience-name*="Builder Only"] .forceCommunityRichText .uiOutputRichText ul {
+  line-height: 28px;
+  padding: 5px 0px;
+}
+
+.forceCommunityRichText .uiOutputRichText h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+}
+.forceCommunityRichText .uiOutputRichText h1, .forceCommunityRichText .uiOutputRichText h2, .forceCommunityRichText .uiOutputRichText h3, .forceCommunityRichText .uiOutputRichText h4, .forceCommunityRichText .uiOutputRichText h5 {
+  margin-bottom: 10px;
+}
+
+/* List Title's - Change capitalization from All Caps */
+.forceCommunityRecordListStandard .listTitle {
+  text-transform: capitalize !important;
+}
+.forceCommunityRecordListStandard .viewAllLink {
+  text-align: center;
+}
+
+/* Section spacing to make 40px padding between */
+.cb-section_column.slds-large-size_8-of-12, .cb-section_column.slds-large-size_7-of-12 {
+  padding-right: 20px !important;
+}
+.cb-section_column.slds-large-size_4-of-12, .cb-section_column.slds-large-size_5-of-12 {
+  padding-left: 20px !important;
+}
+
+/* Content Section Header - Headline Component Styles */
+.comm-content-header.comm-layout-column:not(:empty) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.comm-content-header h1.headlineTitle {
+  color: var(--text-default-color);
+  font-size: var(--font-size-xxl) !important;
+  font-style: normal;
+  font-weight: var(--font-weight-light) !important;
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: left !important;
+}
+.comm-content-header p.headlineInfo {
+  font-size: var(--font-size-sm);
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.js-dynamic-collection .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout div.slds-col {
+  background-color: transparent !important;
+}
+
+.comm-page-home .body .forceCommunitySection,
+.comm-page-custom-help-center .body .forceCommunitySection,
+.comm-page-custom-learning .body .forceCommunitySection,
+.comm-page-custom-community-home .body .forceCommunitySection {
+  margin-bottom: 40px;
+}
+.comm-page-home .body .forceCommunitySection .cb-section_column:only-child,
+.comm-page-custom-help-center .body .forceCommunitySection .cb-section_column:only-child,
+.comm-page-custom-learning .body .forceCommunitySection .cb-section_column:only-child,
+.comm-page-custom-community-home .body .forceCommunitySection .cb-section_column:only-child {
+  padding: 0;
+}
+.comm-page-home .body .forceCommunitySection .cb-section_column:nth-child(2) ul.js-content-metadata,
+.comm-page-custom-help-center .body .forceCommunitySection .cb-section_column:nth-child(2) ul.js-content-metadata,
+.comm-page-custom-learning .body .forceCommunitySection .cb-section_column:nth-child(2) ul.js-content-metadata,
+.comm-page-custom-community-home .body .forceCommunitySection .cb-section_column:nth-child(2) ul.js-content-metadata {
+  display: none;
+}
+.comm-page-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center,
+.comm-page-custom-help-center .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center,
+.comm-page-custom-learning .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center,
+.comm-page-custom-community-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center {
+  justify-content: left;
+}
+.comm-page-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+.comm-page-custom-help-center .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+.comm-page-custom-learning .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+.comm-page-custom-community-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content {
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, var(--hero-box-shadow-transparency)) inset;
+  padding: 40px;
+  /* Media query for desktop devices */
+  /* Media query for tablet devices */
+  /* Media query for mobile devices */
+}
+@media only screen and (min-width: 961px) {
+  .comm-page-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-help-center .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-learning .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-community-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content {
+    margin-left: 10%;
+    width: 50% !important;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .comm-page-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-help-center .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-learning .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-community-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content {
+    margin-left: 40px;
+    width: 80% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-help-center .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-learning .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content,
+  .comm-page-custom-community-home .body .forceCommunitySection .imageZoomIn .slds-grid_vertical-align-center .js-content {
+    margin-left: 0;
+    width: 100% !important;
+  }
+}
+.comm-page-home .body .forceCommunitySection .sdo-energy-playlist,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-energy-playlist,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-energy-playlist,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-energy-playlist {
+  padding: 24px 12px 24px 24px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-energy-playlist .visit-youtube,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-energy-playlist .visit-youtube,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-energy-playlist .visit-youtube,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-energy-playlist .visit-youtube {
+  margin-top: 40px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-energy-playlist .visit-youtube .fa-youtube,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-energy-playlist .visit-youtube .fa-youtube,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-energy-playlist .visit-youtube .fa-youtube,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-energy-playlist .visit-youtube .fa-youtube {
+  font-size: var(--font-size-md);
+  color: #f00;
+  margin-right: 10px;
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid {
+  /* Media query for tablet devices */
+  /* Media query for mobile devices */
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+@media only screen and (min-width: 961px) {
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .mediaContainer {
+    width: 100px !important;
+  }
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .resetMarginLeft,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .resetMarginLeft,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .resetMarginLeft,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .resetMarginLeft {
+  gap: 0;
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space {
+  padding: 0 !important;
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space .js-content-eyebrow,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space .js-content-eyebrow,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space .js-content-eyebrow,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .slds-no-space .js-content-eyebrow {
+  margin-top: 0 !important;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityDynamicCollectionGrid .forceCommunityCardLayout .container {
+    margin-bottom: 20px;
+  }
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel {
+  margin: 0 auto;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction {
+  margin-right: 20px;
+}
+.comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+.comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+.comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+.comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction {
+  margin-left: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center {
+    padding: 0;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium {
+    padding: 0;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space {
+    padding: 25px 0 !important;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space p.js-content-eyebrow, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space p.js-content-eyebrow,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space p.js-content-eyebrow {
+    margin-top: 0;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading_large, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading--large, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading_large, .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around_medium .slds-no-space a.slds-text-heading--large,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading_large,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel .forceCommunityCardLayout .container .slds-p-around--medium .slds-no-space a.slds-text-heading--large {
+    font-size: var(--font-size-lg) !important;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.previousAction {
+    margin-right: 0px;
+  }
+  .comm-page-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+  .comm-page-custom-help-center .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+  .comm-page-custom-learning .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction,
+  .comm-page-custom-community-home .body .forceCommunitySection .js-dynamic-collection .forceCommunityCarousel a.nextAction {
+    margin-left: 0px;
+  }
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule.left-col,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule.left-col,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule.left-col,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule.left-col {
+  padding-left: 24px;
+  padding-right: 20px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule.right-col,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule.right-col,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule.right-col,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule.right-col {
+  padding-left: 20px;
+  padding-right: 24px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule h2,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule h2,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule h2,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule h2 {
+  font-size: var(--font-size-md);
+  margin-bottom: 10px;
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule p,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule p,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule p,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule p {
+  font-size: var(--font-size-sm);
+}
+.comm-page-home .body .forceCommunitySection .sdo-home-schedule .slds-button,
+.comm-page-custom-help-center .body .forceCommunitySection .sdo-home-schedule .slds-button,
+.comm-page-custom-learning .body .forceCommunitySection .sdo-home-schedule .slds-button,
+.comm-page-custom-community-home .body .forceCommunitySection .sdo-home-schedule .slds-button {
+  margin-top: 20px;
+}
+.comm-page-home .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+}
+.comm-page-home .forceCommunityRichText .uiOutputRichText h1, .comm-page-home .forceCommunityRichText .uiOutputRichText h2, .comm-page-home .forceCommunityRichText .uiOutputRichText h3, .comm-page-home .forceCommunityRichText .uiOutputRichText h4, .comm-page-home .forceCommunityRichText .uiOutputRichText h5,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h2,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h3,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h4,
+.comm-page-custom-help-center .forceCommunityRichText .uiOutputRichText h5,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h2,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h3,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h4,
+.comm-page-custom-learning .forceCommunityRichText .uiOutputRichText h5,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h1,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h2,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h3,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h4,
+.comm-page-custom-community-home .forceCommunityRichText .uiOutputRichText h5 {
+  margin-bottom: 10px;
+}
+.comm-page-home .account-list-container,
+.comm-page-custom-help-center .account-list-container,
+.comm-page-custom-learning .account-list-container,
+.comm-page-custom-community-home .account-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(183px, 1fr));
+  /* Media query for mobile devices */
+  /* Media query for mobile devices */
+}
+@media only screen and (min-width: 481px) {
+  .comm-page-home .account-list-container,
+  .comm-page-custom-help-center .account-list-container,
+  .comm-page-custom-learning .account-list-container,
+  .comm-page-custom-community-home .account-list-container {
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .account-list-container,
+  .comm-page-custom-help-center .account-list-container,
+  .comm-page-custom-learning .account-list-container,
+  .comm-page-custom-community-home .account-list-container {
+    gap: 30px;
+  }
+}
+.comm-page-home .account-list-container .list-container h1,
+.comm-page-home .account-list-container .list-container h2,
+.comm-page-home .account-list-container .list-container h3,
+.comm-page-home .account-list-container .list-container h4,
+.comm-page-home .account-list-container .list-container h5,
+.comm-page-custom-help-center .account-list-container .list-container h1,
+.comm-page-custom-help-center .account-list-container .list-container h2,
+.comm-page-custom-help-center .account-list-container .list-container h3,
+.comm-page-custom-help-center .account-list-container .list-container h4,
+.comm-page-custom-help-center .account-list-container .list-container h5,
+.comm-page-custom-learning .account-list-container .list-container h1,
+.comm-page-custom-learning .account-list-container .list-container h2,
+.comm-page-custom-learning .account-list-container .list-container h3,
+.comm-page-custom-learning .account-list-container .list-container h4,
+.comm-page-custom-learning .account-list-container .list-container h5,
+.comm-page-custom-community-home .account-list-container .list-container h1,
+.comm-page-custom-community-home .account-list-container .list-container h2,
+.comm-page-custom-community-home .account-list-container .list-container h3,
+.comm-page-custom-community-home .account-list-container .list-container h4,
+.comm-page-custom-community-home .account-list-container .list-container h5 {
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--light-gray-border-color);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: 5px;
+}
+.comm-page-home .account-list-container .list-container h1 i,
+.comm-page-home .account-list-container .list-container h2 i,
+.comm-page-home .account-list-container .list-container h3 i,
+.comm-page-home .account-list-container .list-container h4 i,
+.comm-page-home .account-list-container .list-container h5 i,
+.comm-page-custom-help-center .account-list-container .list-container h1 i,
+.comm-page-custom-help-center .account-list-container .list-container h2 i,
+.comm-page-custom-help-center .account-list-container .list-container h3 i,
+.comm-page-custom-help-center .account-list-container .list-container h4 i,
+.comm-page-custom-help-center .account-list-container .list-container h5 i,
+.comm-page-custom-learning .account-list-container .list-container h1 i,
+.comm-page-custom-learning .account-list-container .list-container h2 i,
+.comm-page-custom-learning .account-list-container .list-container h3 i,
+.comm-page-custom-learning .account-list-container .list-container h4 i,
+.comm-page-custom-learning .account-list-container .list-container h5 i,
+.comm-page-custom-community-home .account-list-container .list-container h1 i,
+.comm-page-custom-community-home .account-list-container .list-container h2 i,
+.comm-page-custom-community-home .account-list-container .list-container h3 i,
+.comm-page-custom-community-home .account-list-container .list-container h4 i,
+.comm-page-custom-community-home .account-list-container .list-container h5 i {
+  color: var(--lwc-colorBrand);
+  margin-right: 3px;
+}
+.comm-page-home .account-list-container .list-container ul.no-bullets,
+.comm-page-custom-help-center .account-list-container .list-container ul.no-bullets,
+.comm-page-custom-learning .account-list-container .list-container ul.no-bullets,
+.comm-page-custom-community-home .account-list-container .list-container ul.no-bullets {
+  list-style-type: none;
+  /* Remove bullets */
+}
+.comm-page-home .account-list-container .list-container li,
+.comm-page-custom-help-center .account-list-container .list-container li,
+.comm-page-custom-learning .account-list-container .list-container li,
+.comm-page-custom-community-home .account-list-container .list-container li {
+  padding: 4px 0;
+}
+
+/* *** SLDS Tabs *** */
+.slds-tabs_default .slds-tabs_default__nav {
+  border: none !important;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item {
+  background-color: var(--light-gray-background-color);
+  border-radius: var(--border-radius-md);
+  padding: 2px 15px;
+  overflow: visible;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item.slds-tabs_default__overflow-button {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item .slds-tabs_default__link {
+  font-size: var(--font-size-xs) !important;
+  font-weight: var(--font-weight-normal) !important;
+  line-height: 25px;
+  height: auto;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item:not(:first-child) {
+  margin-left: 10px !important;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item.slds-is-active {
+  background-color: var(--lwc-colorBrand);
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item.slds-is-active --slds-c-tabs-item-text-color {
+  color: var(--base-color-white);
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item.slds-is-active .slds-tabs_default__link {
+  color: var(--base-color-white);
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item.slds-is-active:after {
+  height: 0;
+}
+.slds-tabs_default .slds-tabs_default__nav .slds-tabs_default__item:after {
+  background-color: transparent;
+}
+
+/* Record Details */
+body[class*=comm-page-detail] .slds-page-header.forceRecordLayout,
+.comm-page-custom-account-information .slds-page-header.forceRecordLayout {
+  background-color: var(--light-gray-background-color) !important;
+  border-radius: var(--border-radius-md) !important;
+  margin-bottom: 28px;
+}
+body[class*=comm-page-detail] .slds-page-header.forceRecordLayout .slds-page-header__title,
+.comm-page-custom-account-information .slds-page-header.forceRecordLayout .slds-page-header__title {
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray-color);
+}
+body[class*=comm-page-detail] .forceCommunityRecordDetail .forceRecordLayout .full.forcePageBlockSectionView .slds-section__title,
+.comm-page-custom-account-information .forceCommunityRecordDetail .forceRecordLayout .full.forcePageBlockSectionView .slds-section__title {
+  color: var(--lwc-dxpGBrand) !important;
+  font-weight: var(--font-weight-bold);
+}
+body[class*=comm-page-detail] .slds-page-header__detail-row,
+.comm-page-custom-account-information .slds-page-header__detail-row {
+  background-color: var(--light-gray-background-color) !important;
+  border-radius: var(--border-radius-md) !important;
+}
+body[class*=comm-page-detail] .slds-page-header__detail-row .slds-page-header__detail-block .slds-form-element__label,
+.comm-page-custom-account-information .slds-page-header__detail-row .slds-page-header__detail-block .slds-form-element__label {
+  font-size: var(--font-size-xs);
+  color: var(--medium-gray-color);
+}
+body[class*=comm-page-detail] .slds-page-header__detail-row .slds-page-header__detail-block .uiOutputText,
+body[class*=comm-page-detail] .slds-page-header__detail-row .slds-page-header__detail-block .slds-form-element__static,
+.comm-page-custom-account-information .slds-page-header__detail-row .slds-page-header__detail-block .uiOutputText,
+.comm-page-custom-account-information .slds-page-header__detail-row .slds-page-header__detail-block .slds-form-element__static {
+  letter-spacing: 0.64px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray-color);
+}
+body[class*=comm-page-detail] h3.slds-section__title button.slds-section__title-action,
+.comm-page-custom-account-information h3.slds-section__title button.slds-section__title-action {
+  margin-top: 20px;
+}
+body[class*=comm-page-detail] h3.slds-section__title button.slds-section__title-action .test-id__section-header-title,
+.comm-page-custom-account-information h3.slds-section__title button.slds-section__title-action .test-id__section-header-title {
+  color: var(--lwc-colorBrand) !important;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Path Component */
+.forceCommunityPathAssistant .slds-card {
+  border: none;
+}
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__mark-complete {
+  border: none;
+}
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__trigger_open {
+  border-color: var(--warm-gray-color);
+}
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__nav .slds-is-current:first-child:hover:before,
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__nav .slds-is-current:first-child:hover:after {
+  background-image: none;
+}
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__nav .slds-is-active {
+  background: var(--lwc-dxpGBrand);
+}
+.forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__nav .slds-is-active:first-child:before, .forceCommunityPathAssistant .slds-card .slds-path__track .slds-path__nav .slds-is-active:first-child:after {
+  background-color: var(--lwc-dxpGBrand);
+}
+.forceCommunityPathAssistant .slds-card .slds-path__content .pa-fields {
+  padding-right: 2rem;
+}
+.forceCommunityPathAssistant .slds-card .slds-path__content h2 {
+  font-size: var(--font-size-base);
+  color: var(--dark-gray-color);
+}
+
+/* Feed Publisher Component */
+.forceCommunityFeedPublisher .tabs__nav {
+  border: none !important;
+  border-bottom: none !important;
+}
+.forceCommunityFeedPublisher .tabs__nav .tabs__item.active .tabHeader {
+  background-color: var(--light-gray-background-color);
+  border: 1px solid var(--light-gray-border-color);
+  border-bottom: none;
+}
+.forceCommunityFeedPublisher .tabs__nav .tabs__item.active .tabHeader span.title {
+  font-weight: var(--font-weight-bold);
+}
+.forceCommunityFeedPublisher .tabs__content {
+  border: 1px solid var(--light-gray-border-color) !important;
+  background-color: var(--light-gray-background-color) !important;
+}
+
+/* Lightning Icon for Survey */
+.slds-icon-standard-survey {
+  background-color: var(--lwc-colorBrand) !important;
+}
+
+/* Leaderboard Component */
+.comm-leaderboard ul {
+  border-top: 1px solid var(--light-gray-border-color);
+}
+.comm-leaderboard .comm-leaderboard__level-name {
+  margin-left: 6px;
+  font-size: var(--font-size-sm);
+}
+.comm-leaderboard .comm-leaderboard__user-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+.comm-leaderboard .comm-leaderboard__points {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-lg);
+  color: var(--lwc-colorBrand);
+}
+.comm-leaderboard .comm-leaderboard__points-word {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+}
+
+/* Ask Button Component */
+.forceCommunityAskCommunity.askCommunityBtn {
+  font-size: var(--font-size-md) !important;
+  height: 50px !important;
+  min-width: 190px !important;
+}
+
+/* 'Articles with this Topic' component */
+.topicRelatedArticleList .article-item {
+  border-bottom: 1px solid var(--warm-gray-color);
+  padding: 15px !important;
+}
+.topicRelatedArticleList .article-item:nth-child(2n) {
+  background-color: var(--light-gray-background-color);
+}
+.topicRelatedArticleList .article-item .selfServiceArticleHeaderDetail h2.article-head {
+  color: var(--lwc-dxpGBrand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+}
+.topicRelatedArticleList .article-item article.summary .article-summary {
+  display: none;
+}
+.topicRelatedArticleList .article-item article.summary .footer {
+  font-size: var(--font-size-xs);
+}
+
+/* 'Article Content' Component */
+.selfServiceArticleLayout .article-head {
+  font-size: var(--font-size-xxxl) !important;
+  font-weight: var(--font-weight-normal) !important;
+  color: var(--lwc-dxpGBrand);
+  margin-top: 0px !important;
+}
+.selfServiceArticleLayout .content,
+.selfServiceArticleLayout .test-id__field-label,
+.selfServiceArticleLayout .article-summary,
+.selfServiceArticleLayout .meta,
+.selfServiceArticleLayout .slds-rich-text-editor__output {
+  font-size: var(--font-size-base) !important;
+  line-height: 32px;
+}
+
+/* 'Related Articles List' Component */
+.comm-related-articles {
+  padding: 40px;
+  display: block;
+  border-radius: var(--border-radius-lg);
+  background: var(--light-gray-background-color);
+}
+.comm-related-articles .slds-text-heading_small {
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-lg);
+}
+.comm-related-articles .comm-related-articles__item a.slds-border_bottom {
+  border-bottom: none;
+}
+.comm-related-articles .comm-related-articles__item a.slds-border_bottom .slds-text-body_small {
+  font-size: var(--font-size-base);
+  line-height: 32px;
+}
+
+/* 'Contact Support Form' Component */
+.forceCommunityContactSupportForm {
+  margin-right: 20px;
+}
+.forceCommunityContactSupportForm .slds-page-header__title {
+  color: var(--dark-gray-color);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  font-size: var(--font-size-md);
+  text-align: left;
+}
+.forceCommunityContactSupportForm .subtitle {
+  white-space: normal;
+  text-align: left;
+  display: block;
+  font-size: var(--font-size-sm);
+}
+.forceCommunityContactSupportForm .forcePageBlockItem {
+  padding: 20px 0px 0px 0px !important;
+}
+.forceCommunityContactSupportForm .slds-p-horizontal_medium {
+  margin-top: -18px;
+}
+.forceCommunityContactSupportForm .slds-p-horizontal_medium button {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  margin-bottom: 40px;
+  margin-left: -12px;
+}
+.forceCommunityContactSupportForm .contactSupportButton {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* 'Case Deflection' Component */
+.forceCommunityCaseDeflection .header-message {
+  text-align: left;
+}
+.forceCommunityCaseDeflection .header-message h1 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  color: var(--dark-gray-color);
+}
+.forceCommunityCaseDeflection .header-message .subtitle {
+  font-size: var(--font-size-sm);
+}
+.forceCommunityCaseDeflection .comm-topic-trending-articles li:first-child {
+  border-top: 1px solid var(--lwc-colorBorder);
+  margin-top: 20px;
+}
+.forceCommunityCaseDeflection .comm-topic-trending-articles .comm-topic-trending-articles__item a {
+  text-decoration: none !important;
+}
+.forceCommunityCaseDeflection .comm-topic-trending-articles .comm-topic-trending-articles__item a .slds-text-body_small {
+  font-size: var(--font-size-sm);
+}
+.forceCommunityCaseDeflection .comm-topic-trending-articles .comm-topic-trending-articles__item a .slds-text-body_small:first-child {
+  color: var(--lwc-dxpGBrand);
+}
+.forceCommunityCaseDeflection .caseDeflectionListItem {
+  font-size: var(--font-size-sm);
+  font-weight: 400 !important;
+}
+.forceCommunityCaseDeflection .caseDeflectionListItem:first-child {
+  border-top: 1px solid var(--lwc-colorBorder);
+  margin-top: 20px;
+}
+.forceCommunityCaseDeflection .caseDeflectionListItem a .slds-show {
+  color: var(--lwc-dxpGBrand);
+}
+.forceCommunityCaseDeflection .caseDeflectionListItem .slds-list_horizontal {
+  color: var(--lwc-colorTextDefault);
+}
+
+/* 'Featured Topics' Component */
+.forceTopicFeaturedTopics ul.topicList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+  gap: 16px;
+}
+.forceTopicFeaturedTopics ul.topicList li.topicItem {
+  background: var(--base-color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  /* Media query for desktop devices */
+  /* Media query for tablet devices */
+  /* Media query for mobile devices */
+}
+.forceTopicFeaturedTopics ul.topicList li.topicItem div.topicImage {
+  background-size: auto;
+  background-position: center center;
+  max-height: 40px;
+  margin: 0 auto;
+  max-width: 40px;
+}
+.forceTopicFeaturedTopics ul.topicList li.topicItem div.topicContent div.topicLabel {
+  font-size: var(--font-size-sm);
+  color: var(token(colorTextDefault));
+  font-weight: var(--font-weight-normal) !important;
+  padding: 0;
+}
+.forceTopicFeaturedTopics ul.topicList li.topicItem:hover {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 961px) {
+  .forceTopicFeaturedTopics ul.topicList li.topicItem {
+    height: 148px;
+    max-height: 160px !important;
+    max-width: 31%;
+    min-width: 160px;
+    padding: 40px 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .forceTopicFeaturedTopics ul.topicList li.topicItem {
+    height: 120px;
+    max-height: 160px !important;
+    max-width: 30%;
+    min-width: 180px;
+    padding: 30px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .forceTopicFeaturedTopics ul.topicList li.topicItem {
+    height: 120px;
+    max-height: 160px !important;
+    max-width: 45%;
+    padding: 25px 0;
+  }
+}
+
+.fc-unthemed .fc-toolbar.fc-header-toolbar {
+  background-color: var(--light-gray-background-color);
+  padding: 20px 10px;
+  margin-bottom: 0px;
+  /* Media query for mobile devices */
+}
+@media only screen and (max-width: 480px) {
+  .fc-unthemed .fc-toolbar.fc-header-toolbar {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fc-unthemed .fc-toolbar.fc-header-toolbar h2 {
+    padding: 5px 0px;
+  }
+}
+.fc-unthemed .fc-toolbar.fc-header-toolbar h2 {
+  font-size: var(--font-size-base);
+}
+.fc-unthemed .fc-toolbar.fc-header-toolbar .fc-button {
+  background-color: var(--base-color-white);
+  border-color: var(--light-gray-border-color);
+  color: var(--lwc-colorTextDefault);
+  font-size: var(--font-size-xs);
+  line-height: 20px;
+}
+.fc-unthemed .fc-toolbar.fc-header-toolbar .fc-left .fc-today-button {
+  text-transform: capitalize;
+}
+.fc-unthemed .fc-toolbar.fc-header-toolbar .fc-left .fc-icon {
+  font-weight: var(--font-weight-bold);
+}
+.fc-unthemed .fc-head-container {
+  border-right: none;
+  border-left: none;
+}
+.fc-unthemed .fc-head-container .fc-day-header {
+  text-transform: uppercase;
+  border-color: var(--base-color-white);
+  font-weight: var(--font-weight-light);
+  padding: 7px 0px;
+  font-size: var(--font-size-xs);
+}
+.fc-unthemed .fc-body .fc-dayGrid-view .fc-body .fc-row {
+  min-height: 120px;
+}
+
+/* Rich Content Component for Title & subtitle */
+.comm-page-contactsupport .forceCommunityRichText h1,
+.comm-page-custom-documentation .forceCommunityRichText h1,
+.comm-page-custom-community-groups .forceCommunityRichText h1,
+.comm-page-detail .forceCommunityRichText h1,
+.comm-page-detail-500 .forceCommunityRichText h1,
+.comm-page-too-many-requests .forceCommunityRichText h1,
+.comm-page-error .forceCommunityRichText h1,
+.comm-page-list-0WO .forceCommunityRichText h1,
+.comm-page-custom-events .forceCommunityRichText h1 {
+  margin-bottom: 10px;
+}
+.comm-page-contactsupport .forceCommunityRichText h1 span,
+.comm-page-custom-documentation .forceCommunityRichText h1 span,
+.comm-page-custom-community-groups .forceCommunityRichText h1 span,
+.comm-page-detail .forceCommunityRichText h1 span,
+.comm-page-detail-500 .forceCommunityRichText h1 span,
+.comm-page-too-many-requests .forceCommunityRichText h1 span,
+.comm-page-error .forceCommunityRichText h1 span,
+.comm-page-list-0WO .forceCommunityRichText h1 span,
+.comm-page-custom-events .forceCommunityRichText h1 span {
+  font-size: var(--font-size-xxl) !important;
+  font-weight: var(--font-weight-light);
+  color: var(--lwc-colorTextLabel) !important;
+}

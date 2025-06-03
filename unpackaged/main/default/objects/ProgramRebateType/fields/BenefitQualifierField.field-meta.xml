@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BenefitQualifierField</fullName>
+    <inlineHelpText>The aggregation object field to use as the basis for calculating minimum and maximum qualifying benefit values.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

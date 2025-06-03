@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Objective_Resource_Priority</fullName>
+    <active>true</active>
+    <description>Prefer a resource based on a field value on the resource</description>
+    <label>Resource Priority</label>
+    <picklistValues>
+        <picklist>FSL__Custom_Type__c</picklist>
+        <values>
+            <fullName>Objective%D6%BF_Priority_By_Distance_To_Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Asap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Minimize_Engineer_Idle_Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Minimize_Overtime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Minimize_Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Minimize_Use_Of_Elasticity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_PreferredEngineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Resource_Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Skill_Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objective_Travel_From_Home_Base</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FSL__Prioritize_Resource__c</picklist>
+        <values>
+            <fullName>Least Qualified</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Most Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

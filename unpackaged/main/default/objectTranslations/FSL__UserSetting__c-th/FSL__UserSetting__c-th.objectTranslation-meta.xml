@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>การตั้งค่าผู้ใช้</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>User Setting Layout</layout>
+        <sections>
+            <label>ตัวกรองแบบกำหนดเอง</label>
+            <section>Custom Filters</section>
+        </sections>
+        <sections>
+            <label>การกำหนดลักษณะของ Gantt</label>
+            <section>Gantt Preferences</section>
+        </sections>
+        <sections>
+            <label>การกำหนดลักษณะลากและวาง NA</label>
+            <section>NA Drag&amp;Drop Preferences</section>
+        </sections>
+        <sections>
+            <label>การกำหนดลักษณะของรายการบริการ</label>
+            <section>Service List Prefernces</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>ชื่อการตั้งค่าผู้ใช้</nameFieldLabel>
+</CustomObjectTranslation>

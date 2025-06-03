@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>blng__RevenueScheduleStartDateAlignWithType</fullName>
+    <active>true</active>
+    <description>Revenue Schedule Start Date should align with Type.</description>
+    <errorConditionFormula>(ISPICKVAL(blng__Type__c, &#39;Order&#39;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Invoice Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Credit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Debit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Other&#39;))
+)
+
+|| 
+
+(ISPICKVAL(blng__Type__c, &#39;Invoice&#39;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Order Product Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Credit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Debit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Credit Note&#39;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Debit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Invoice Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Order Product Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Debit Note&#39;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Credit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Invoice Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Order Product Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Other&#39;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &#39;Other&#39;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Debit Note Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Invoice Line Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Order Product Start Date&#39;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &#39;Credit Note Line Start Date&#39;))
+)</errorConditionFormula>
+    <errorMessage>Revenue Schedule Start Date should be aligned with Type</errorMessage>
+</ValidationRule>

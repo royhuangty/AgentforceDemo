@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Schedule Time Property --></label>
+        <name>FSL__Service_Schedule_Time_Property__c</name>
+        <picklistValues>
+            <masterLabel>SchedEndTime</masterLabel>
+            <translation><!-- SchedEndTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedEndTime__c</masterLabel>
+            <translation><!-- SchedEndTime__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedStartTime</masterLabel>
+            <translation><!-- SchedStartTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedStartTime__c</masterLabel>
+            <translation><!-- SchedStartTime__c --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

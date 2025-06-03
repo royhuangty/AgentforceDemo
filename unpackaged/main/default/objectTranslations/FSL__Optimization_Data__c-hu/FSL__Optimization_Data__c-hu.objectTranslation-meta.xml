@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatok</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatom</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adata</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatai</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatot</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimat</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatát</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatait</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatnak</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatoknak</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomnak</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimnak</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatának</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatainak</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatban</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokban</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomban</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimban</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatában</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiban</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatból</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokból</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomból</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimból</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatából</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiból</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatba</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokba</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomba</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimba</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatába</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiba</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adattól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatoktól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomtól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimtól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatától</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataitól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adathoz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokhoz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomhoz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimhoz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatához</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataihoz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adattá</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokká</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatommá</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimmá</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatává</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataivá</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adattal</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokkal</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatommal</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimmal</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatával</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataival</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatra</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokra</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomra</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimra</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatára</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataira</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adaton</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokon</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomon</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimon</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatán</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatain</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatról</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokról</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomról</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimról</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatáról</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatairól</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatáért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiért</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatokig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatomig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatáig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiig</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatonként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Optimalizálási adatok</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adataimként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Optimalizálási adatok</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adataiként</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Optimalizálási adatok</value>
+    </caseValues>
+    
+    <nameFieldLabel>Optimalizálási adatok száma</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

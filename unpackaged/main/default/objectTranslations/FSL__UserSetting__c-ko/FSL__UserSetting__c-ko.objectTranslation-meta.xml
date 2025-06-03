@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>사용자 설정</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>User Setting Layout</layout>
+        <sections>
+            <label>사용자 정의 필터</label>
+            <section>Custom Filters</section>
+        </sections>
+        <sections>
+            <label>Gantt 기본 설정</label>
+            <section>Gantt Preferences</section>
+        </sections>
+        <sections>
+            <label>끌어서 놓기 기본 설정 사용 불가</label>
+            <section>NA Drag&amp;Drop Preferences</section>
+        </sections>
+        <sections>
+            <label>서비스 목록 기본 설정</label>
+            <section>Service List Prefernces</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>사용자 설정 이름</nameFieldLabel>
+</CustomObjectTranslation>

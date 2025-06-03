@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Receiver Type --></label>
+        <name>tspa__Receiver_Type__c</name>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guest</masterLabel>
+            <translation><!-- Guest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician</masterLabel>
+            <translation><!-- Technician --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

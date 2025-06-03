@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Roadmap Status --></label>
+        <name>inov8__Roadmap_Status__c</name>
+        <picklistValues>
+            <masterLabel>Committed</masterLabel>
+            <translation><!-- Committed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funded</masterLabel>
+            <translation><!-- Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incremental</masterLabel>
+            <translation><!-- Incremental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non funded</masterLabel>
+            <translation><!-- Non funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Runrate</masterLabel>
+            <translation><!-- Runrate --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product Registration",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "Registro de los productos"
+        },
+        "id" : "6ad13f51-ce5a-4321-8f5c-496324321026"
+      } ]
+    }
+  },
+  "urlName" : "product-registration"
+}

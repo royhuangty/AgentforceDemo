@@ -1,0 +1,47 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Category",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "headerText" : "Comprar por categoría"
+        },
+        "id" : "44be24cc-371d-4fba-848f-63352abcfc87"
+      }, {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "c77e3707-2d14-41de-8e72-a8738133dc5b"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "bafa718d-73da-423e-8118-1a891c50a161"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "quantitySelectorLabel" : "CANT.",
+          "subscriptionOptionsText" : "Opciones de suscripción disponibles",
+          "viewOptionsButtonText" : "Ver opciones"
+        },
+        "id" : "f9ee1f20-25a5-4483-84f8-261fc57c5a76"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; height: 50vh; justify-content: center;\">\n <h1 class=\"slds-text-heading_large\" style=\"margin-bottom: 20px; font-weight: bold;\">Lo sentimos</h1>\n <p class=\"slds-text-heading_small\" style=\"margin-bottom: 5px;\">Parece que no podemos encontrar ningún producto que coincida con su búsqueda.</p>\n <p class=\"slds-text-heading_small\">Pruebe una nueva búsqueda usando menos palabras</p>\n <div style=\"background: url({!Site.basePath}/assets/images/empty-search.svg) center no-repeat; background-size: contain; margin-top:25px; height: 200px; width: 50%;\"></div>\n</div>"
+        },
+        "id" : "ec32e671-7291-423c-ae7c-134698964fcf"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "d6502612-46bf-40a2-884c-ea32ce8a18a4"
+      } ]
+    }
+  },
+  "urlName" : "category"
+}

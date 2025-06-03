@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-he</name>
+    <style>none</style>
+    <subject>הזמנה למפגש תמיכה ויזואלי</subject>
+    <textOnly>שלום,
+, נקבעה עבורך פגישת אונליין.
+הקש על מקש &#39;הצטרפות&#39; על מנת לראות את פרטי הפגישה ולהתחבר אליה.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

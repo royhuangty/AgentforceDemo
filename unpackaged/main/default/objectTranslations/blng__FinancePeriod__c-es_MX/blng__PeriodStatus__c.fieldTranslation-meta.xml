@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Seleccione Abierto para capturar todas las transacciones o Cerrado para evitar que se realicen más transacciones.</help>
+        <label><!-- Period Status --></label>
+        <name>blng__PeriodStatus__c</name>
+    </CustomFieldTranslation>

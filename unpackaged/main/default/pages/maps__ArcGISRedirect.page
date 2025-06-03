@@ -1,0 +1,72 @@
+<apex:page >
+    <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-3.6.0.min.js')}"></script> 
+    <script>
+        $('document').ready(function() {
+            if (window.opener && !window.opener.closed) {
+                var hash = window.location.hash.substr(1);
+                var accessToken = hash.substr(hash.indexOf('access_token=')).split('&')[0].split('=')[1];
+                // adding encoding to protect again xss
+                var params = '{!HTMLENCODE($CurrentPage.parameters.params)}'.toString().split('_');
+                var layerId = htmlEncode(params[0]);
+                var plotLayer = htmlEncode(params[1]);
+                var webMapHostURL = htmlEncode(params[2]);
+                
+                window.opener.ArcGIS.tokenHelpers.setAccessToken(webMapHostURL, accessToken);
+                if(accessToken && plotLayer) {
+                    if(plotLayer == 'true') {
+                        if(window.opener.location.href.indexOf('Mobile') >= 0) {
+                            window.opener.ArcGIS.plotLayer({
+                                id: layerId,
+                                modify: false
+                            });
+                        }
+                        else {
+                            $(window.opener.document).find('#' + layerId).find('.ftu-unit-left').click();
+                        }
+                    }
+                    else {
+                        window.opener.ArcGIS.click2CreateHelpers.connectWebMap();
+                    }
+                }
+            }
+            window.opener.ArcGIS.layerPlotting= false;
+           window.close();
+
+        });
+        function htmlEncode(str)
+        {
+            if(typeof str === 'string') {
+            // make sure not to do double encode
+            str = htmlDecode(str);
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+            }
+
+            return str;
+        }
+
+
+        function htmlDecode(stringValue) {
+            if(typeof stringValue == 'string') {
+                if(typeof(document) == 'object') {
+                    var txt = document.createElement("textarea");
+                    txt.innerHTML = stringValue;
+                    return txt.value;
+                }
+                else
+                {
+                    return String(stringValue)
+                    .replace(/&amp;/g, '&')
+                    .replace(/&quot;/g, '"')
+                    .replace(/&#39;/g, '\'')
+                    .replace(/&lt;/g, '<')
+                    .replace(/&gt;/g, '>');
+                }
+            }
+        }
+    </script>
+</apex:page>

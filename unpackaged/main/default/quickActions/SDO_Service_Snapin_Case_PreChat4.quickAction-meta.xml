@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Snapins_Case_PrechatQuickAction_08h1N0000008Q2s</description>
+    <fieldOverrides>
+        <field>Origin</field>
+        <literalValue>Chat</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+    </fieldOverrides>
+    <label>SDO_Service_Snapin_Case_PreChat4</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsTopToBottom</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Case</targetObject>
+    <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+    <type>Create</type>
+</QuickAction>

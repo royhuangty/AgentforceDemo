@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Καθορίζει το ελάχιστο κενό μεταξύ υπηρεσιών. Αν έχει ενεργοποιηθεί το σταθερό κενό, καθορίζει το κενό μεταξύ των υπηρεσιών.</help>
+        <label><!-- Minimum Gap (minutes) --></label>
+        <name>FSL__Minimum_Gap__c</name>
+    </CustomFieldTranslation>

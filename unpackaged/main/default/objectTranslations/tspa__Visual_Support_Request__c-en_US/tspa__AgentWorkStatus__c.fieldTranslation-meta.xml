@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Agent Work Status --></label>
+        <name>tspa__AgentWorkStatus__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DeclinedOnPushTimeout</masterLabel>
+            <translation><!-- DeclinedOnPushTimeout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opened</masterLabel>
+            <translation><!-- Opened --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transferred</masterLabel>
+            <translation><!-- Transferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unavailable</masterLabel>
+            <translation><!-- Unavailable --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Numărul de minute între începutul disponibilității resursei de servicii și cel mai târziu început de pauză permis. De exemplu, introduceți 300 pentru a programa o pauză care să se termină cu mai târziu decât la cinci ore după începerea zilei.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

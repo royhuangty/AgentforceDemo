@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wird mit &quot;Dynamische Genehmigungen&quot; verwendet; Nachschlagefeld für den Genehmiger, der der Delegierte für diesen Genehmiger ist</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </CustomFieldTranslation>

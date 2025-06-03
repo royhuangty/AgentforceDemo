@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates the product on this line item is bundled (included) by another product in this quote. Bundled lines items have a zero price and do not allow price or quantity to be edited. --></help>
+        <label><!-- Bundled --></label>
+        <name>SBQQ__Bundled__c</name>
+    </CustomFieldTranslation>

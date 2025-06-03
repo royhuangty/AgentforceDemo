@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ορίζει τον προγραμματισμό ώστε να συμπεριλαμβάνεται ή να εξαιρείται από τους υπολογισμούς ελαχιστοποίησης μετακινήσεων η πρώτη και η τελευταία διαδρομή της ημέρας, από και προς στην οικεία βάση του πόρου εξυπηρέτησης</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

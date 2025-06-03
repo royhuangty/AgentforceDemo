@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EscalationRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <escalationRule>
+        <fullName>SDO_Service_Case_Escalation_Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <businessHoursSource>None</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Critical</value>
+            </criteriaItems>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Escalated</value>
+            </criteriaItems>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Account.SDO_Account_Priority__c</field>
+                <operation>equals</operation>
+                <value>High Priority</value>
+            </criteriaItems>
+            <disableEscalationWhenModified>true</disableEscalationWhenModified>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+    </escalationRule>
+</EscalationRules>

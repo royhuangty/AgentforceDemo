@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>PMT Resource Availability Layout</layout>
+        <sections>
+            <label><!-- Availibility vs. Allocation --></label>
+            <section>Availibility vs. Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Hours --></label>
+            <section>Hours</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Availability must be in between 0 and 100 --></errorMessage>
+        <name>inov8__Availability_cannot_be_more_than_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fiscal Year must be in the format of FYXX --></errorMessage>
+        <name>inov8__Fiscal_Year_format_as_FYXX</name>
+    </validationRules>
+</CustomObjectTranslation>

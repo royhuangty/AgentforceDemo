@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Geben Sie 1 ein, wenn dieses Umsatzverfahren vor allen anderen Verfahren verarbeitet werden soll, geben Sie 2 ein, wenn es als zweites Verfahren verarbeitet werden soll, usw.</help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </CustomFieldTranslation>

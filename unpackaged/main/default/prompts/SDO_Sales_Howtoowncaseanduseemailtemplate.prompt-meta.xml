@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>How to own case and use email template</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Click the subject line of the case you are going to own as an agent.&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>Case Management Process</header>
+        <image>SDO_Sales_Case_List_View_Screenshot</image>
+        <imageAltText>img</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>true</isPublished>
+        <masterLabel>How to own case and use email template Step 1</masterLabel>
+        <publishedDate>2025-05-04</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2024-01-09</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Select a case you are going to own</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;As a Tier 1 agent, you can own a case that&#39;s in Tier 1 queue. Make sure you don&#39;t take cases that are owned by other queues or agents.&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to own case and use email template Step 2</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:RecordField.Case.OwnerId&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_detailPanel&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;detailTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+        <title>See if the case is in Tier 1 queue</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;You can own a case from the &lt;strong&gt;Change Owner&lt;/strong&gt; button on top of the page.&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>How to own a case</header>
+        <image>SDO_Sales_Case_ChageOwner</image>
+        <imageAltText>gif</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>How to own case and use email template Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+        <title>How to change case owner</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Go click Change Owner button to change the case owner to yourself&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>LeftCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to own case and use email template Step 4</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:StandardButton.Case.ChangeOwnerOne&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_highlightsPanel&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+        <title>Click here to own your case</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Go to the email tab to respond to this case by email&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopLeft</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to own case and use email template Step 5</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;forceChatter_recordFeedContainer&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;feedTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+        <title>Go to Email tab to respond via email</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Go to the bottom left corner of the email section and insert an email template&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>Use email template to reply quickly</header>
+        <image>SDO_Sales_Screenshot_20230629_at_163052</image>
+        <imageAltText>img</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>How to own case and use email template Step 6</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Case.SDO_Service_Case</targetRecordType>
+        <title>Use email template to reply quickly</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

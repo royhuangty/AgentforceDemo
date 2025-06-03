@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Title used for Bill To section. Default value is &quot;Bill To&quot;. --></help>
+        <label><!-- Bill To Title --></label>
+        <name>SBQQ__BillToTitle__c</name>
+    </CustomFieldTranslation>

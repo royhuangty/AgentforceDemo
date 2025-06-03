@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>engage_reports__Engage_Send__c$Id</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$Name</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$Owner</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Engage_Email_Template__c</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Type__c</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Sent_At__c</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Total_Sends__c</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Total_Hard_Bounces__c</field>
+    </columns>
+    <columns>
+        <field>engage_reports__Engage_Send__c$engage_reports__Total_Soft_Bounces__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Engage Sends (Do Not Delete or Edit)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>engage_reports__Engage_Send__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>engage_reports__Engage_Send__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

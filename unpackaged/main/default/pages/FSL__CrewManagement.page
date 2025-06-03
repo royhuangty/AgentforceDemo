@@ -1,0 +1,599 @@
+<apex:page sidebar="false" showHeader="true" controller="FSL.CrewManagement" standardStylesheets="true" lightningStylesheets="false" title="Crew Management" >
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <head>
+
+            <script>
+
+                var __crews = {
+                    userLocale: "{!userLocale}",
+                    jsUserLocale: "{!userLocale}".replace('_EURO','').replaceAll('_','-'),
+                    isAMPM: {!isCurrentUserUsesAMPMLocale},
+                },
+                    userLocale = "{!userLocale}";
+
+            </script>
+
+            <script type='text/javascript' src='{!$Site.BaseUrl}/support/console/43.0/integration.js'></script>
+            <script type='text/javascript' src='{!$Site.BaseUrl}/support/api/38.0/interaction.js'></script>
+
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'dhtmlxscheduler.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__dhxContextMenu, 'dhtmlxmenu.css')}" />
+            <apex:stylesheet value="{!$Resource.FSL__dhtmlxtreeviewCSS}" />
+
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+            <apex:stylesheet value="{!$Resource.FSL__CrewsManagementStyles}" />
+
+            <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+            <apex:includeScript value="{!$Resource.FSL__angular150min}" />
+
+            <apex:includeScript value="{!$Resource.FSL__MomentJS}" />
+            <apex:includeScript value="{!$Resource.FSL__MomentTimezone}" />
+            <apex:includeScript value="{!$Resource.FSL__AngularMoment}" />
+            <apex:includeScript value="{!$Resource.FSL__DefineMomentTimezones}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'dhtmlxscheduler.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_limit.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_timeline.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_treetimeline.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_minical.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_tooltip.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_cookie.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_url.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_readonly.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler449, 'ext/dhtmlxscheduler_multisection.js')}" />
+
+            <apex:includeScript value="{!URLFOR($Resource.FSL__dhxContextMenu, 'dhtmlxmenu.js')}" />
+
+            <apex:includeScript value="{!$Resource.FSL__CrewsManagementBundle}" />
+
+            <apex:includeScript value="{!$Resource.FSL__svg4everybody_min}" />
+
+            <apex:includeScript value="{!$Resource.FSL__datePickerConf}" />
+
+        </head>
+
+
+        <div id="CrewsApp">
+
+            <div id="cm-CrewError" ng-show="disableOperatingHoursAccess">
+                <img src="{!$Resource.SalesfoceLogo}" /><br/><br/>
+                <h1>{!$Label.Something_Went_Wrong}</h1><br/>
+                <div id="errorMessage">{{NoAccessToOperatingHours}}</div>
+            </div>
+
+            <div id="cm-CrewLoader" ng-show="!finishedLoadingGantt">
+                <img src="{!$Resource.SalesfoceLogo}" /><br/><br/>
+                {!JSENCODE($Label.CrewManagementLoading)}
+            </div>
+
+            <div id="cm-DraggedResources"></div>
+
+            <div id="cm-toast" ng-controller="ToastController" ng-show="localErrors.length > 0">
+
+                <svg aria-hidden="true" class="slds-icon">
+                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+                    </svg>
+
+                <svg aria-hidden="true" ng-click="clear()" class="slds-icon">
+                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                </svg>
+
+                <div ng-repeat="error in localErrors">{{ error.message }}</div>
+            </div>
+
+            <div id="ResourceFiltersContainer" ng-controller="ResourceList" ng-class="{'exlorerClasses': isIe()}">
+
+                <div id="PolicyPicker">
+
+                    {!JSENCODE($Label.Policy)}:
+                    <select ng-model="userSettings[poicyFieldOnSettings]" ng-model-options="{debounce: 250}" ng-change="setUserSetting('{!$ObjectType.Crew_Management_User_Settings__c.Fields.SchedulingPolicy__c.Name}', userSettings[poicyFieldOnSettings], 'String')">
+                        <option ng-repeat="policy in getPolicies()" value="{{policy.Id}}" ng-bind="policy.Name"></option>
+                    </select>
+
+                </div>
+
+
+
+                <div id="ResourceFilters">
+
+                    <div class="slds-form-element" ng-show="!isTerritoryFilterOpen()">
+                        <input id="SearchResources" type="search" class="slds-input right-side-filter-input" placeholder="{!JSENCODE($Label.SearchServiceResource)}" ng-model="resourceSearch" />
+                        <div class="ie-clear-search" ng-click="clearResources()" ng-show="isIe() && resourceSearch" style="margin-top:-22px; margin-right: 64px;">x</div>
+                    </div>
+
+                    <button class="slds-button slds-button_neutral cm-filter-button" ng-init="showTerritoriesFilter = false;" ng-click="showTerritoriesFilter = true; showTerritoryFilter()" title="{!$Label.Location_filtering}">
+                        <svg aria-hidden="true" class="slds-icon">
+                            <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#location')}"></use>
+                            </svg>
+                    </button>
+
+                    <button title="{!JSENCODE($Label.FilterSR)}" class="slds-button slds-button_neutral cm-filter-button" ng-init="showSkillsFilter = false;" ng-show="!isTerritoryFilterOpen()" ng-click="showSkillsFilterBox($event)">
+                        <svg aria-hidden="true" class="slds-icon">
+                            <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#filterList')}"></use>
+                        </svg>
+                    </button>
+
+                    <span ng-if="isSkillsFilterApplied() && !isTerritoryFilterOpen()" id="cm-has-filteredSkills" />
+
+                    <div id="SearchTerritoryInput" class="slds-form-element" ng-show="isTerritoryFilterOpen()">
+                        <input id="SearchTerritory" type="search" class="right-side-filter-input slds-input" placeholder="{!JSENCODE($Label.SearchServiceTerritory)}" ng-model="territorySearch" ng-model-options="{debounce: 300}" ng-change="setSearchTerm()"/>
+                        <div class="ie-clear-search" ng-click="clearTerritories()" ng-show="isIe() && territorySearch" style="margin-top:-22px; margin-right: 30px;">x</div>
+                    </div>
+
+                    <div ng-show="showSkillsFilter" class="cm-body-overlay" ng-click="showSkillsFilter = false" ng-style="{'display': showSkillsFilter ? 'block' : 'none'}">
+
+                        <div id="SkillsFilterBox" class="SkillsFilterBox" ng-click="$event.stopPropagation()" ng-style="{left: filterBoxXY.x, top: filterBoxXY.y}">
+                            <div id="gantt-filter-tabs" class="lightning-tabs">
+                                <span class="truncate tab-selected skill-label-filter resource-skills-label" role="tab">{!$Label.serviceResourceSkills}</span>
+                            </div>
+
+                            <div>
+
+                                <div>
+
+                                    <div class="skill-selection-buttons truncate" ng-click="bulkSelectSkills(true)" title="{!$Label.Select_all}">{!$Label.Select_all}</div>
+                                    <div class="skill-selection-buttons truncate" ng-click="bulkSelectSkills(false)" title="{!$Label.Select_none}">{!$Label.Select_none}</div>
+
+                                    <div class="cm-skills-operators">
+                                        {!JSENCODE($Label.LogicOperator)}:
+                                        <select ng-model="skillsLogicOperator" ng-model-options="{debounce: 250}" ng-change="setUserSetting('{!$ObjectType.Crew_Management_User_Settings__c.Fields.SkillsLogicOperator__c.Name}', skillsLogicOperator, 'String')">
+                                            <option value="or">{!JSENCODE($Label.OR)}</option>
+                                            <option value="and">{!JSENCODE($Label.AND)}</option>
+                                        </select>
+                                    </div>
+
+                                    <input class="cm-search-skills" type="search" ng-model="searchSkills" placeholder="{!JSENCODE($Label.SearchSkills)}" />
+                                    <div class="ie-clear-search" ng-click="clearSkills()" ng-show="isIe() && searchSkills">x</div>
+
+                                </div>
+
+                                <div class="cm-skills-container">
+                                    <span ng-repeat="(id, name) in getSkills(searchSkills)">
+                                        <input type="checkbox" id="{{id}}" ng-model="selectedFilterSkills[id]"/><label alt="{{name}}" for="{{id}}">{{name}}</label>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div id="ResourceList" ng-class="{'cm-territory-list-open': isTerritoryFilterOpen()}">
+
+                    <div id="ResourcesByTerritory"  ng-show="!isTerritoryFilterOpen()">
+
+                        <div class="cm-resource-in-list" ng-class="{'cm-selected-resource': territory.listOpened}" ng-repeat="territory in filterTerritories() track by $index" ng-show="filterResources(territory).length > 0" ng-init="territory.listOpened = false;" >
+
+                            <div class="territory-folder-list" ng-click="territory.listOpened = !territory.listOpened">
+
+                                <span class="collapse-icon-list" ng-show="territory.listOpened">-</span>
+                                <span class="collapse-icon-list" ng-show="!territory.listOpened">+</span>
+
+                                {{ territory.Name }}
+                            </div>
+
+                            <resource-card ng-repeat="resource in filterResources(territory) track by $index" resource="resource" search="resourceSearch" ng-show="territory.listOpened" />
+
+                        </div>
+
+
+
+                        <div id="NoResourcesFound" ng-hide="areAnyResorcesAvailabeOnList()">
+                            {!JSENCODE($Label.NoResourcesFound)}
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="SelectedResourceCount" ng-show="!isTerritoryFilterOpen()">
+                    {{ countSelected() }} {!JSENCODE($Label.ResourcesSelected)}
+                    <span ng-show="countSelected() > 0" ng-click="unselectAllResources()">{!JSENCODE($Label.Select_none)}</span>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div id="CrewsGantt" ng-controller="Gantt" ng-class="{'exlorerClasses': isIe()}">
+
+                <div id="cm-no-terrioty" ng-if="noTerritoriesSelected()">{!JSENCODE($Label.CrewsNoTerritories)}</div>
+                
+                
+
+                <div id="SearchCrewOnGanttContainer" ng-show="!noTerritoriesSelected()">
+
+                    <button title="{!JSENCODE($Label.FilterCrews)}" class="slds-button slds-button_neutral cm-filter-button cm-filter-skills" ng-init="showSkillsFilter = false;" ng-click="showSkillsFilterBox($event)">
+                        <svg aria-hidden="true" class="slds-icon">
+                            <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#filterList')}"></use>
+                        </svg>
+                    </button>
+                    <div ng-show="filteringIsApplied" id="SkillsFilterOn"></div>
+                    <div ng-show="showSkillsFilter" class="cm-body-overlay" ng-click="showSkillsFilter = false">
+
+                        <div class="SkillsFilterBox" ng-style="{left: filterBoxXY.x, top: filterBoxXY.y}" ng-click="$event.stopPropagation()">
+
+                            <div id="gantt-filter-tabs" class="lightning-tabs">
+                             <span class="truncate tab-selected skill-label-filter crew-skills-label" role="tab">{!$Label.crewSkills}</span>
+                            </div>
+
+                            <div>
+                                <div>
+
+                                    <div class="skill-selection-buttons truncate" ng-click="bulkSelectSkills(true)" title="{!$Label.Select_all}">{!$Label.Select_all}</div>
+                                    <div class="skill-selection-buttons truncate" ng-click="bulkSelectSkills(false)" title="{!$Label.Select_none}">{!$Label.Select_none}</div>
+
+                                    <div class="cm-skills-operators">
+                                        {!JSENCODE($Label.LogicOperator)}:
+                                        <select ng-model="skillsLogicOperator" ng-model-options="{debounce: 250}" ng-change="setUserSetting('{!$ObjectType.Crew_Management_User_Settings__c.Fields.SkillsLogicOperator__c.Name}', skillsLogicOperator, 'String')">
+                                            <option value="or">{!JSENCODE($Label.OR)}</option>
+                                            <option value="and">{!JSENCODE($Label.AND)}</option>
+                                        </select>
+                                    </div>
+
+                                    <input class="cm-search-skills skill-search-input" type="search" ng-model="searchSkills" placeholder="{!JSENCODE($Label.SearchSkills)}" />
+                                    <div class="ie-clear-search" ng-click="clearSkills()" ng-show="isIe() && searchSkills">x</div>
+
+                                </div>
+
+                                <div class="cm-skills-container">
+                                    <span ng-repeat="(id, name) in getSkills(searchSkills)">
+                                        <input type="checkbox" id="gantt_skills_{{id}}" ng-model="selectedFilterSkills[id]" ng-model-options="{debounce: 800}" /><label alt="{{name}}" for="gantt_skills_{{id}}">{{name}}</label>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <div id="CreateNewCrew" title="{!JSENCODE($Label.NewServiceCrew)}" class="truncate" ng-click="createNewCrew()">{!JSENCODE($Label.NewServiceCrew)} </div>
+
+                    <input type="search" ng-model="searchCrew" ng-change="createGanttTimeline()" class="truncate"  ng-model-options="{ debounce: 300 }" placeholder="{!JSENCODE($Label.SearchCrew)}"></input>
+
+                    <svg aria-hidden="true" class="slds-icon UserSearchIcon">
+                        <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#user')}"></use>
+                    </svg>
+
+                </div>
+
+                <div id="Gantt" class="dhx_cal_container dragTarget" style='width:100%; height:100%;'>
+                    <div class="dhx_cal_navline">
+                        <div class="dhx_cal_date"></div>
+
+                        <div id="JumpToDateContainer">
+
+                            <div id="JumpToDate" ng-click="jumpToDate()" title="{!$Label.JumpToDate}">
+                                <svg id="JumpToDateIcon" aria-hidden="true" class="slds-icon">
+                                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <div class="cm-gantt-buttons-group-right">
+
+                            <span class="cm-left-change-day cm-top-button-container cm-button-hover" ng-click="changeDate(-1)">
+                                <svg aria-hidden="true" class="slds-icon cm-change-date-icon cm-change-left">
+                                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#switch')}"></use>
+                                </svg>
+                            </span>
+
+                            <span class="cm-today-button cm-button-hover truncate" title="{!$Label.Jump_To_Today}" ng-click="changeDate(0)">{!JSENCODE($Label.Today)}</span>
+
+                            <span class="cm-right-change-day cm-top-button-container cm-button-hover" ng-click="changeDate(1)">
+                                <svg aria-hidden="true" class="slds-icon cm-change-date-icon cm-change-right">
+                                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#switch')}"></use>
+                                </svg>
+                            </span>
+
+                        </div>
+
+                        <div class="cm-timeline-size">
+                            <select ng-model="daysOnGantt" ng-model-options="{debounce: 250}" ng-change="changeDaysOnGantt()">
+                                <option value="0">{!JSENCODE($Label.Daily)}</option>
+                                <option value="2">{!JSENCODE($Label.Crews3Days)}</option>
+                                <option value="4">{!JSENCODE($Label.Crews5Days)}</option>
+                                <option value="6">{!JSENCODE($Label.Crews7Days)}</option>
+                                <option value="7">{!JSENCODE($Label.TwoWeeks)}</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="dhx_cal_header"></div>
+                    <div class="dhx_cal_data"></div>
+                </div>
+
+            </div>
+        
+
+        </div>
+
+
+
+
+
+        <script>
+
+            (function(crews) {
+
+                crews.remoteActions = {
+                    GetResourcesAndTerritories: '{!$RemoteAction.CrewManagement.GetResourcesAndTerritories}',
+                    getSkills: '{!$RemoteAction.CrewManagement.getSkills}',
+                    getSkillsList: '{!$RemoteAction.CrewManagement.getSkillsList}',
+                    getGanttStmScmAbsencesServices: '{!$RemoteAction.CrewManagement.getGanttStmScmAbsencesServices}',
+                    saveChangesToScm: '{!$RemoteAction.CrewManagement.saveChangesToScmWithWarning}',
+                    saveMultipleScms: '{!$RemoteAction.CrewManagement.saveMultipleScmsWithWarning}',
+                    deleteScm: '{!$RemoteAction.CrewManagement.deleteScm}',
+                    getServiceAppointmentTooltipFieldset: '{!$RemoteAction.CrewManagement.getServiceAppointmentTooltipFieldset}',
+                    getCandidates: '{!$RemoteAction.CrewManagement.getCandidates2}',
+                    createNewCrew: '{!$RemoteAction.CrewManagement.createNewCrew}',
+                    validateResourceCanHaveScm: '{!$RemoteAction.CrewManagement.validateResourceCanHaveScm}',
+                    getResourcesThatHaveStm: '{!$RemoteAction.CrewManagement.getResourcesThatHaveStm}',
+                    getInactiveCrews: '{!$RemoteAction.CrewManagement.getInactiveCrews}',
+                    activateCrew: '{!$RemoteAction.CrewManagement.activateCrew}',
+                    setUserSettings: '{!$RemoteAction.CrewManagement.setUserSettings}',
+                    setLoadedTerritories: '{!$RemoteAction.CrewManagement.setLoadedTerritories}',
+                    checkCrewBeforeActivation: '{!$RemoteAction.CrewManagement.checkCrewBeforeActivation}',
+                    searchTerritories: '{!$RemoteAction.CrewManagement.searchTerritories}',
+                    getPolicies: '{!$RemoteAction.CrewManagement.getPolicies}',
+                    getUserSettings: '{!$RemoteAction.CrewManagement.getUserSettings}',
+                    getUserSettingByProperty: '{!$RemoteAction.CrewManagement.getUserSettingByProperty}',
+                };
+
+                crews.saTooltipFieldset = {};
+
+                crews.fields = {
+
+                    ServiceCrewMember: {
+                        GanttLabel__c: '{!$ObjectType.ServiceCrewMember.Fields.GanttLabel__c.Name}',
+                    },
+
+                    ResourceAbsence: {
+                        GanttLabel__c: '{!$ObjectType.ResourceAbsence.Fields.GanttLabel__c.Name}',
+                    },
+
+                    ServiceResource: {
+                        GanttLabel__c: '{!$ObjectType.ServiceResource.Fields.GanttLabel__c.Name}',
+                        PictureLink__c: '{!$ObjectType.ServiceResource.Fields.Picture_Link__c.Name}',
+                    },
+
+
+                    ServiceAppointment: {
+                        GanttLabel__c: '{!$ObjectType.ServiceAppointment.Fields.GanttLabel__c.Name}',
+                        GanttColor__c: '{!$ObjectType.ServiceAppointment.Fields.GanttColor__c.Name}',
+                    },
+
+                    AssignedResource: {
+                        EstimatedTravelTimeFrom: '{!$ObjectType.AssignedResource.Fields.EstimatedTravelTimeFrom__c.Name}'
+                    },
+
+                    ServiceCrew: {
+                        GanttColor__c: '{!$ObjectType.ServiceCrew.Fields.GanttColor__c.Name}'
+                    },
+
+                    Crew_Management_User_Setting: {
+                        SkillsLogicOperator__c: '{!$ObjectType.Crew_Management_User_Settings__c.Fields.SkillsLogicOperator__c.Name}',
+                        SelectedSkills__c: '{!$ObjectType.Crew_Management_User_Settings__c.Fields.SelectedSkills__c.Name}',
+                        GanttHorizon__c: '{!$ObjectType.Crew_Management_User_Settings__c.Fields.GanttHorizon__c.Name}',
+                        SchedulingPolicy__c: '{!$ObjectType.Crew_Management_User_Settings__c.Fields.SchedulingPolicy__c.Name}',
+                    }
+
+
+                };
+
+                crews.labels = {
+                    CrewMembershipDatetimeError: '{!JSENCODE($Label.CrewMembershipDatetimeError)}',
+                    SkillsNekudotaim: '{!JSENCODE($Label.SkillsNekudotaim)}',
+                    ResourceNoSkills: '{!JSENCODE($Label.ResourceNoSkills)}',
+                    Description: '{!JSENCODE($Label.Description)}',
+                    ServiceTerritoryMembership: '{!JSENCODE($Label.ServiceTerritoryMembership)}',
+                    ServiceCrewMembership: '{!JSENCODE($Label.ServiceCrewMembership)}',
+                    CrewSchedule: '{!JSENCODE($Label.CrewSchedule)}',
+                    Get_Candidates: '{!JSENCODE($Label.Get_Candidates)}',
+                    Details: '{!JSENCODE($Label.Details)}',
+                    WOLI: '{!JSENCODE($Label.WOLI)}',
+                    WorkOrder: '{!JSENCODE($Label.WorkOrder)}',
+                    DragResourcesToAssignThemTo: '{!JSENCODE($Label.DragResourcesToAssignThemTo)}',
+                    CrewSizeOnCm: '{!JSENCODE($Label.CrewSizeOnCm)}',
+                    skills: '{!JSENCODE($Label.skills)}',
+                    ExpectedSkills: '{!JSENCODE($Label.ExpectedSkills)}',
+                    MatchSkills: '{!JSENCODE($Label.MatchSkills)}',
+                    Primary: '{!JSENCODE($Label.Primary)}',
+                    Secondary: '{!JSENCODE($Label.Secondary)}',
+                    Relocation: '{!JSENCODE($Label.Relocation)}',
+                    StmNoStartNoEnd: '{!JSENCODE($Label.StmNoStartNoEnd)}',
+                    StmNoStartHasEnd: '{!JSENCODE($Label.StmNoStartHasEnd)}',
+                    StmHasStartNoEnd: '{!JSENCODE($Label.StmHasStartNoEnd)}',
+                    StmHasStartHasEnd: '{!JSENCODE($Label.StmHasStartHasEnd)}',
+                    ScmNoStartNoEnd: '{!JSENCODE($Label.ScmNoStartNoEnd)}',
+                    ScmNoStartHasEnd: '{!JSENCODE($Label.ScmNoStartHasEnd)}',
+                    ScmHasStartNoEnd: '{!JSENCODE($Label.ScmHasStartNoEnd)}',
+                    ScmHasStartHasEnd: '{!JSENCODE($Label.ScmHasStartHasEnd)}',
+                    Leader: '{!JSENCODE($Label.Leader)}',
+                    MinimumSize: '{!JSENCODE($Label.MinimumSize)}',
+                    RecommendedSize: '{!JSENCODE($Label.RecommendedSize)}',
+                    CurrentlyAssigned: '{!JSENCODE($Label.CurrentlyAssigned)}',
+                    RequiredSkillsCm: '{!JSENCODE($Label.RequiredSkillsCm)}',
+                    SkillAndLevel: '{!JSENCODE($Label.SkillAndLevel)}',
+                    NotEnoughAvailableMembers: '{!JSENCODE($Label.NotEnoughAvailableMembers)}',
+                    NotEnoughAvailableMembersPlural: '{!JSENCODE($Label.NotEnoughAvailableMembersPlural)}',
+                    MissingSkillsAre: '{!JSENCODE($Label.MissingSkillsAre)}',
+                    EventStart: '{!JSENCODE($Label.EventStart)}',
+                    EventEnd: '{!JSENCODE($Label.EventEnd)}',
+                    EventType: '{!JSENCODE($Label.EventType)}',
+                    OpenInLayout: '{!JSENCODE($Label.OpenInLayout)}',
+                    CrewCandidatesFor: '{!JSENCODE($Label.CrewCandidatesFor)}',
+                    MissingSkills2: '{!JSENCODE($Label.MissingSkills2)}',
+                    NoSkillsMissings: '{!JSENCODE($Label.NoSkillsMissings)}',
+                    Candidates: '{!JSENCODE($Label.candidates)}',
+                    CurrentMembers: '{!JSENCODE($Label.CurrentMembers)}',
+                    AssignSelected: '{!JSENCODE($Label.AssignSelected)}',
+                    HasMissingSkills: '{!JSENCODE($Label.HasMissingSkills)}',
+                    RelevantSkills: '{!JSENCODE($Label.RelevantSkills)}',
+                    NoCandidatesFoundCm: '{!JSENCODE($Label.NoCandidatesFoundCm)}',
+                    CreateScm: '{!JSENCODE($Label.CreateScm)}',
+                    ScmDeleteConfirm: '{!JSENCODE($Label.ScmDeleteConfirm)}',
+                    OnboardingSaving: '{!JSENCODE($Label.OnboardingSaving)}',
+                    ServiceResourcesCm: '{!JSENCODE($Label.ServiceResourcesCm)}',
+                    Start_date:'{!JSENCODE($Label.Start_date)}',
+                    finish_date:'{!JSENCODE($Label.finish_date)}',
+                    MakeLeader:'{!JSENCODE($Label.MakeLeader)}',
+                    Delete:'{!JSENCODE($Label.Delete)}',
+                    All:'{!JSENCODE($Label.All)}',
+                    None:'{!JSENCODE($Label.None)}',
+                    Save:'{!JSENCODE($Label.Save)}',
+                    Cancel:'{!JSENCODE($Label.Cancel)}',
+                    TeritoriesSelectedCm:'{!JSENCODE($Label.TeritoriesSelectedCm)}',
+                    NotDefined: '{!JSENCODE($Label.NotDefined)}',
+                    ServiceNoMinimumCrew: '{!JSENCODE($Label.ServiceNoMinimumCrew)}',
+                    ServiceNoReqSkills: '{!JSENCODE($Label.ServiceNoReqSkills)}',
+                    NoAssignedResources: '{!JSENCODE($Label.NoAssignedResources)}',
+                    CrewHasNoSkills: '{!JSENCODE($Label.CrewHasNoSkills)}',
+                    MatchCrewSkills: '{!JSENCODE($Label.MatchCrewSkills)}',
+                    MustHave1Territory: '{!JSENCODE($Label.MustHave1Territory)}',
+                    Select_all: '{!JSENCODE($Label.Select_all)}',
+                    Select_none: '{!JSENCODE($Label.Select_none)}',
+                    Close: '{!JSENCODE($Label.Close)}',
+                    NoScmToDisplay: '{!JSENCODE($Label.NoScmToDisplay)}',
+                    CrewNoSkills: '{!JSENCODE($Label.CrewNoSkills)}',
+                    CrewSizeUndefined: '{!JSENCODE($Label.CrewSizeUndefined)}',
+                    ResourceHasNoStm: '{!JSENCODE($Label.ResourceHasNoStm)}',
+                    ResourcesHaveNoStm: '{!JSENCODE($Label.ResourcesHaveNoStm)}',
+                    NoRelevantSkills: '{!JSENCODE($Label.NoRelevantSkills)}',
+                    FindingCandidates: '{!JSENCODE($Label.FindingCandidates)}',
+                    AssigningResources: '{!JSENCODE($Label.AssigningResources)}',
+                    AvailableResourcesNoSkill: '{!JSENCODE($Label.AvailableResourcesNoSkill)}',
+                    ResourcesWithoutSTMWarning: '{!JSENCODE($Label.ResourcesWithoutSTMWarning)}',
+                    NewServiceCrew: '{!JSENCODE($Label.NewServiceCrew)}',
+                    SelectTerritory: '{!JSENCODE($Label.SelectTerritory)}',
+                    SummaryFollowingCrew: '{!JSENCODE($Label.SummaryFollowingCrew)}',
+                    ServiceCrewName: '{!JSENCODE($Label.ServiceCrewName)}',
+                    NoCrewName: '{!JSENCODE($Label.NoCrewName)}',
+                    ResourceHasOverlappingSCM: '{!JSENCODE($Label.ResourceHasOverlappingSCM)}',
+                    CrewNoStmAndScm: '{!JSENCODE($Label.CrewNoStmAndScm)}',
+                    CrewNoStm: '{!JSENCODE($Label.CrewNoStm)}',
+                    CrewNoScm: '{!JSENCODE($Label.CrewNoScm)}',
+                    AddingCrew: '{!JSENCODE($Label.AddingCrew)}',
+                    ActivatingCrew: '{!JSENCODE($Label.ActivatingCrew)}',
+                    NewCrewDefention: '{!JSENCODE($Label.NewCrewDefention)}',
+                    NewCrewSkills: '{!JSENCODE($Label.NewCrewSkills)}',
+                    NewCrewAssignLeader: '{!JSENCODE($Label.NewCrewAssignLeader)}',
+                    NewCrewSummary: '{!JSENCODE($Label.NewCrewSummary)}',
+                    Createanewcrew: '{!JSENCODE($Label.Createanewcrew)}',
+                    ChooseInactiveCrew: '{!JSENCODE($Label.ChooseInactiveCrew)}',
+                    GetCrewCandidatesGeneralError: '{!JSENCODE($Label.GetCrewCandidatesGeneralError)}',
+                    CrewSize: '{!JSENCODE($Label.CrewSize)}',
+                    AssignCrewToTerritory: '{!JSENCODE($Label.AssignCrewToTerritory)}',
+                    EffectiveStartDate: '{!JSENCODE($Label.EffectiveStartDate)}',
+                    EffectiveEndDate: '{!JSENCODE($Label.EffectiveEndDate)}',
+                    SkillsToCrew: '{!JSENCODE($Label.SkillsToCrew)}',
+                    CreateScmLeader: '{!JSENCODE($Label.CreateScmLeader)}',
+                    SelectCrewLeader: '{!JSENCODE($Label.SelectCrewLeader)}',
+                    FetchingResources: '{!JSENCODE($Label.FetchingResources)}',
+                    EndDate: '{!JSENCODE($Label.EndDate)}',
+                    ResourceOverlappingScm: '{!JSENCODE($Label.ResourceOverlappingScm)}',
+                    SummaryCrewName: '{!JSENCODE($Label.SummaryCrewName)}',
+                    SummaryCrewSize: '{!JSENCODE($Label.SummaryCrewSize)}',
+                    SummaryCrewSkills: '{!JSENCODE($Label.SummaryCrewSkills)}',
+                    SummaryCrewNoSkills: '{!JSENCODE($Label.SummaryCrewNoSkills)}',
+                    SummaryFollowingStm: '{!JSENCODE($Label.SummaryFollowingStm)}',
+                    SummaryCrewEffectiveStart: '{!JSENCODE($Label.SummaryCrewEffectiveStart)}',
+                    SummaryCrewEffectiveEnd: '{!JSENCODE($Label.SummaryCrewEffectiveEnd)}',
+                    SummaryCrewTerritory: '{!JSENCODE($Label.SummaryCrewTerritory)}',
+                    SummaryFollowingScm: '{!JSENCODE($Label.SummaryFollowingScm)}',
+                    SummaryCrewResource: '{!JSENCODE($Label.SummaryCrewResource)}',
+                    SummaryCrewStart: '{!JSENCODE($Label.SummaryCrewStart)}',
+                    SummaryCrewEnd: '{!JSENCODE($Label.SummaryCrewEnd)}',
+                    Back: '{!JSENCODE($Label.Back)}',
+                    Next: '{!JSENCODE($Label.Next)}',
+                    Activate: '{!JSENCODE($Label.Activate)}',
+                    SelectInactiveCrew: '{!JSENCODE($Label.SelectInactiveCrew)}',
+                    NoScmForInactiveCrew: '{!JSENCODE($Label.NoScmForInactiveCrew)}',
+                    InactiveCrewActiveStm: '{!JSENCODE($Label.InactiveCrewActiveStm)}',
+                    InactiveCrewPastStm: '{!JSENCODE($Label.InactiveCrewPastStm)}',
+                    InactiveCrewFutureStm: '{!JSENCODE($Label.InactiveCrewFutureStm)}',
+                    RecheckInactive: '{!JSENCODE($Label.RecheckInactive)}',
+                    CrewColor: '{!JSENCODE($Label.CrewColor)}',
+                    Gantt_Label: '{!JSENCODE($Label.Gantt_Label)}',
+                    Color: '{!JSENCODE($Label.Color)}',
+                    NoColorSelected: '{!JSENCODE($Label.NoColorSelected)}',
+                    LeaderTooltipScmBox: '{!JSENCODE($Label.LeaderTooltipScmBox)}',
+                    NoSTMinTerritoryForDates: '{!JSENCODE($Label.NoSTMinTerritoryForDates)}',
+                    Open_Service_Crew_Record: '{!JSENCODE($Label.Open_Service_Crew_Record)}',
+                    ShowingSearchResultsTerritories: '{!JSENCODE($Label.ShowingSearchResultsTerritories)}',
+                    NoServiceTerritoriesWereFound: '{!JSENCODE($Label.NoServiceTerritoriesWereFound)}',
+                    SearchingForTerritoriesCm: '{!JSENCODE($Label.SearchingForTerritoriesCm)}',
+                    NoAccessToOperatingHours: '{!JSENCODE($Label.NoAccessToOperatingHours)}',
+                };
+
+                crews.icons = {
+                    resource_skill: "{!URLFOR($Resource.LightningDesignDystemIcons, 'standard-sprite/svg/symbols.svg#resource_skill')}",
+                    event: "{!URLFOR($Resource.LightningDesignDystemIcons, 'standard-sprite/svg/symbols.svg#event')}",
+                    service_crew_member: "{!URLFOR($Resource.LightningDesignDystemIcons, 'standard-sprite/svg/symbols.svg#service_crew_member')}",
+                    close: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}",
+                    external: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}",
+                    warning: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#priority')}",
+                    resource: "{!URLFOR($Resource.LightningDesignSystem232, 'assets/icons/standard-sprite/svg/symbols.svg#service_resource')}",
+                    candidates: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#people')}",
+                    lead: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/custom-sprite/svg/symbols.svg#custom11')}",
+                    na: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#ban')}",
+                    spinner: "{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}",
+                };
+
+
+                crews.pages = {
+                    service: '{!$Page.CrewsSaLightbox}',
+                    resource: '{!$Page.CrewsResourceLightbox}',
+                    workorder: '{!$Page.CrewsWorkorderLightbox}',
+                    woli: '{!$Page.CrewsWorkorderLineItemLightbox}',
+                };
+
+                crews.userLocale = "{!userLocale}";
+
+                crews.functions = {};
+
+                crews.shouldShowAutoCompleteUi = {!shouldShowAutoCompleteUi};
+                //bulk size for stms to load crew data
+                crews.maxSTMsToLoadEachBulkInCrewGantt = {!maxSTMsToLoadEachBulkInCrewGantt};
+
+                // W-12149381    
+                crews.daysToLoadOnGanttInitForCrewManagement = parseInt('{!daysToLoadOnGanttInitForCrewManagement}');
+
+            }(__crews));
+
+
+
+            svg4everybody();
+
+
+            // get user settings
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.CrewManagement.getUserSettings}',
+                function(settings) {
+                    window.__crews.settings = settings.userSettings;
+                    window.__crews.loadedTerritories = settings.territories;
+                    angular.bootstrap(document.getElementById("CrewsApp"), ['Crews']);
+                },
+                { buffer: true, escape: false, timeout: 120000 }
+            );
+
+
+        </script>
+
+
+    </html>
+
+</apex:page>

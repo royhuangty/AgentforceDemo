@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_PRM_PartnerApproval_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Partner Approval Queue</label>
+    <queue>SDO_PRM_PartnerApproval</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

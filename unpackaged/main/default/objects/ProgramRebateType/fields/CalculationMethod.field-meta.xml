@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CalculationMethod</fullName>
+    <inlineHelpText>Applies to tiered benefits with Measure Type of Percent of Revenue and Amount per unit. Use Stepped to apportion the payout based on tiers and Retrospective to apply full benefit on the amount/quantity.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

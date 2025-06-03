@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If set, the value of this field overrides the Approval Conditions --></help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation><!-- Name --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

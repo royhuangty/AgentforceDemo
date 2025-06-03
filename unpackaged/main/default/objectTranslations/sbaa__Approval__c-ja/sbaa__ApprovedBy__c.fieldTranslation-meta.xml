@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この承認を承認したユーザ</help>
+        <label><!-- Approved By --></label>
+        <name>sbaa__ApprovedBy__c</name>
+        <relationshipLabel><!-- Approvals (Approved By) --></relationshipLabel>
+    </CustomFieldTranslation>

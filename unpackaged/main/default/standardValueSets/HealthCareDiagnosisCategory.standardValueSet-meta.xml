@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Newborn</fullName>
+        <default>true</default>
+        <label>Newborn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pediatric</fullName>
+        <default>false</default>
+        <label>Pediatric</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maternity</fullName>
+        <default>false</default>
+        <label>Maternity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Adult</fullName>
+        <default>false</default>
+        <label>Adult</label>
+    </standardValue>
+</StandardValueSet>

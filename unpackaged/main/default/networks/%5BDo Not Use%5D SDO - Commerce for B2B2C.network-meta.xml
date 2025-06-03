@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <description>What: B2B2C Site</description>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>sdo@salesforce.com</emailSenderAddress>
+    <emailSenderName>Salesforce Commerce for B2C</emailSenderName>
+    <embeddedLoginEnabled>true</embeddedLoginEnabled>
+    <enableApexCDNCaching>true</enableApexCDNCaching>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableExpFriendlyUrlsAsDefault>false</enableExpFriendlyUrlsAsDefault>
+    <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>true</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableLWRExperienceConnectedApp>false</enableLWRExperienceConnectedApp>
+    <enableMemberVisibility>false</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
+    <networkMemberGroups>
+        <permissionSet>SDO_B2BCommerce_B2B2C_Admin_Access</permissionSet>
+        <permissionSet>SDO_B2BCommerce_B2B2C_Storefront_Access</permissionSet>
+        <profile>admin</profile>
+        <profile>sdo-customer community plus</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Do_Not_Use_SDO_Commerce_for_B2B2C1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Do_Not_Use_SDO_Commerce_for_B2B2C</site>
+    <siteArchiveStatus>TemporarilyArchived</siteArchiveStatus>
+    <status>DownForMaintenance</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>b2b2c</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

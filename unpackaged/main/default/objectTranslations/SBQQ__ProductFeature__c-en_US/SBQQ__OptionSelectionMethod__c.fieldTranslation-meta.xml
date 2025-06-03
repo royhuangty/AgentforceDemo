@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Determines how user selects options attached to this product. &quot;Click&quot; method presents options with checkboxes next to them. &quot;Add&quot; renders a button which brings up predefined options. &quot;Dynamic&quot; renders a button which brings up all active products. --></help>
+        <label><!-- Option Selection Method --></label>
+        <name>SBQQ__OptionSelectionMethod__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation><!-- Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click</masterLabel>
+            <translation><!-- Click --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dynamic</masterLabel>
+            <translation><!-- Dynamic --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

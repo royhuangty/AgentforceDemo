@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cronograma para descontos com base no termo de ass. Config. isso como &quot;Grupo&quot; aplicará a taxa de desc. ao termo do grupo, enquanto config. como &quot;Cotação&quot; aplicará a taxa de desc. a todo o termo da cotação, independ. dos diferentes termos nos seus grupos.</help>
+        <label><!-- Term Discount Schedule --></label>
+        <name>SBQQ__TermDiscountSchedule__c</name>
+        <relationshipLabel><!-- Quote Lines (Term Discouned) --></relationshipLabel>
+    </CustomFieldTranslation>

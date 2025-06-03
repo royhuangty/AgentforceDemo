@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-Light.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-Light.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-Light.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-Light.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-LightItalic.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-LightItalic.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-LightItalic.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-LightItalic.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-Regular.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-Regular.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-Regular.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-Regular.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-Italic.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-Italic.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-Italic.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-Italic.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-Bold.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-Bold.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-Bold.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-Bold.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("../fonts/SalesforceSans-BoldItalic.woff2?orgId=00D4S000000qzF6") format("woff2"), url("../fonts/SalesforceSans-BoldItalic.woff?orgId=00D4S000000qzF6") format("woff"), url("../fonts/SalesforceSans-BoldItalic.eot?orgId=00D4S000000qzF6") format("embedded-opentype"), url("../fonts/SalesforceSans-BoldItalic.ttf?orgId=00D4S000000qzF6") format("truetype"), url("../fonts/SalesforceSans-Light.svg?orgId=00D4S000000qzF6") format("svg");
+  font-style: italic;
+  font-weight: 700;
+}

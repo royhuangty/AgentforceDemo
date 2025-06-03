@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Chat</name>
+    <queueMembers>
+        <roles>
+            <role>CEO</role>
+            <role>CSAgent</role>
+            <role>CSM</role>
+            <role>VPCustomerServiceSupport</role>
+        </roles>
+    </queueMembers>
+    <queueRoutingConfig>SDO_Service_Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

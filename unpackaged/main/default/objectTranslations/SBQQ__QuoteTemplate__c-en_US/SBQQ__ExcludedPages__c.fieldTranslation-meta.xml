@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Excludes page numbering for All Pages, First Page, Second Page, and/or both the First and Second Page. --></help>
+        <label><!-- Exclude Page Numbers --></label>
+        <name>SBQQ__ExcludedPages__c</name>
+        <picklistValues>
+            <masterLabel>All Pages</masterLabel>
+            <translation><!-- All Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Page</masterLabel>
+            <translation><!-- First Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First and Last</masterLabel>
+            <translation><!-- First and Last --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Page</masterLabel>
+            <translation><!-- Last Page --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Evaluation_Order__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE( RecordType.DeveloperName, &quot;Match_Skills&quot;, 2, &quot;Minimum_Rest_Time&quot;, 5, &quot;Overlapping_Shift&quot;, 3 , &quot;Maximum_Work&quot;, 6 , &quot;Maximum_Shift_Length&quot;, 1 , &quot;Minimum_Shift_Length&quot;,1 ,&quot;Match_Fields&quot;, 2, &quot;Do_Not_Overlap_Vacation&quot;, 3, &quot;Match_Constant_Boolean&quot;, 2 , &quot;Resource_Calendar_Availability&quot;, 2, &quot;Maximum_Pain_Shifts&quot;, 6, &quot;Maximum_Consecutive_Work&quot;, 6 ,9)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Evaluation Order</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

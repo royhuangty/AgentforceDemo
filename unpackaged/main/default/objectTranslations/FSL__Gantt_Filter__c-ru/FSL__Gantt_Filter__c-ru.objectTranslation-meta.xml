@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Фильтр Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Фильтры Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Фильтр Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Фильтры Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Фильтра Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Фильтров Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Фильтру Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Фильтрам Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Фильтром Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Фильтрами Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value>Фильтре Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value>Фильтрах Ганта</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Имя фильтра Ганта</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Custom Filter --></label>
+        <name>FSL__FSL_Public_Custom_Filter</name>
+    </sharingReasons>
+</CustomObjectTranslation>

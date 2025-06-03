@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Summe der Zahlungszuordnungen und aufgehobenen Zuordnungen für Belastungsanzeigen, die dieser Rechnung zugeordnet wurden.</help>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </CustomFieldTranslation>

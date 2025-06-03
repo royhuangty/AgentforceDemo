@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assetIcon>/analytics/wave/web/proto/images/app/icons/1.png</assetIcon>
+    <description>App created from template &#39;Sales Planning&#39; via Data Manager</description>
+    <folder>Sales_Planning</folder>
+    <masterLabel>Sales Planning</masterLabel>
+    <shares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>AllInternalUsers</sharedTo>
+        <sharedToType>Organization</sharedToType>
+    </shares>
+    <templateOrigin>sfsp__SalesPlanning</templateOrigin>
+    <templateVersion>1.0</templateVersion>
+</WaveApplication>

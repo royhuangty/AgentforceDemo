@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    <validationRules>
+        <errorMessage><!-- Capacity Based Service Resource Cannot Have Crew Member Allocations --></errorMessage>
+        <name>FSL__Prevent_Crew_Allocation_For_Contractors</name>
+    </validationRules>
+</CustomObjectTranslation>

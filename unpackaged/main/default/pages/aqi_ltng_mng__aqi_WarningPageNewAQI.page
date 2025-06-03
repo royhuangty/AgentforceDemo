@@ -1,0 +1,6 @@
+<apex:page standardController="aqi_ltng_mng__Article_Quality__c">
+      <script>
+        alert('Users can only create Article Quality Index from knowledge articles');
+        history.go(-1);
+    </script>
+</apex:page>

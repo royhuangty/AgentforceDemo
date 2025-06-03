@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- User record of the enrollee. --></help>
+        <label><!-- Enrolled User --></label>
+        <lookupFilter>
+            <errorMessage><!-- Please select an internal, customer, or partner user to enroll. --></errorMessage>
+        </lookupFilter>
+        <name>Enrolled_User__c</name>
+        <relationshipLabel><!-- Course Enrollments --></relationshipLabel>
+    </CustomFieldTranslation>

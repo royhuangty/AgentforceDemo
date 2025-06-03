@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Prospect and generate pipeline 24/7 with an autonomous AI agent. Agentforce Sales Development Representative (SDR) intelligently engages leads with personalized content, answers common questions, and schedules meetings.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>sales_sdr_agent__ManageOptOut</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>sales_sdr_agent__RespondToProspect</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>sales_sdr_agent__SendOutreach</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Agentforce Sales Development Rep</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

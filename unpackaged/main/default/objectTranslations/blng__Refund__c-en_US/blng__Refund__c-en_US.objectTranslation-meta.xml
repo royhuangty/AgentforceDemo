@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- RefundFieldset --></label>
+        <name>blng__RefundFieldset</name>
+    </fieldSets>
+    <layouts>
+        <layout>Refund Layout</layout>
+        <sections>
+            <label><!-- Finance --></label>
+            <section>Finance</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

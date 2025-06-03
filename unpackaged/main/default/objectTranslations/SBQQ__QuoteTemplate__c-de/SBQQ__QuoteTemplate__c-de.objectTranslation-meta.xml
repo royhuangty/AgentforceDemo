@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Angebotsvorlage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Angebotsvorlagen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Angebotsvorlage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Angebotsvorlagen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Angebotsvorlage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Angebotsvorlagen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Angebotsvorlage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Angebotsvorlagen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Quote Template Layout</layout>
+        <sections>
+            <label>Firmeninformationen</label>
+            <section>Corporate Information</section>
+        </sections>
+        <sections>
+            <label>Stilinformationen für Gruppe</label>
+            <section>Group Style Information</section>
+        </sections>
+        <sections>
+            <label>Informationen für Kopf-/Fußzeile</label>
+            <section>Header/Footer Information</section>
+        </sections>
+        <sections>
+            <label>Seiteninformationen</label>
+            <section>Page Information</section>
+        </sections>
+        <sections>
+            <label>Druckoptionen</label>
+            <section>Print Options</section>
+        </sections>
+        <sections>
+            <label>Abschnittstitel</label>
+            <section>Section Titles</section>
+        </sections>
+        <sections>
+            <label>Stilinformationen</label>
+            <section>Style Information</section>
+        </sections>
+        <sections>
+            <label>Nutzungsbedingungen</label>
+            <section>Terms &amp; Conditions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Vorlagenname</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Footer Height can not be blank if Page Number Position is set to Footer. --></errorMessage>
+        <name>SBQQ__Blank_Footer_Height</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Header Height can not be blank if Page Number Position is set to Header. --></errorMessage>
+        <name>SBQQ__Blank_Header_Height</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

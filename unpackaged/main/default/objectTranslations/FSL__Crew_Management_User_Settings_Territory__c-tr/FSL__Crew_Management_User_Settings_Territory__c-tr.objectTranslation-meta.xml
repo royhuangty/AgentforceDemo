@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgeleri</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgem</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerim</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgeniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgeleriniz</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerini</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgemi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerimi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgenizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinizi</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgemin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerimin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgenizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinizin</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerine</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgeme</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerime</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgenize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinize</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgemden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerimden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgenizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinizden</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgesinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgemde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerimde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgenizde</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value>Ekip Yönetimi Kullanıcı Ayarları Bölgelerinizde</value>
+    </caseValues>
+    
+    
+    <nameFieldLabel>Ekip Yönetimi Kullanıcı Ayarları Bölgesi</nameFieldLabel>
+</CustomObjectTranslation>

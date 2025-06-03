@@ -1,0 +1,155 @@
+$color-background: #f3f2f2;
+
+$white : #ffffff;
+$transparent-white : rgba(255,255,255,0.7);
+$very-light-gray: #FAFAFB;
+$light-gray : #f4f6f9;
+$gray : #e0e5ee;
+$medium-gray : #a7b8d1;
+$dark-gray : #333538;
+$transparent-gray : rgba(126, 140, 153, 0.8);
+$border-gray: #d8dde6;
+$black : #000205;
+$light-blue : #4194e4;
+$blue : #3083d3;
+$blue-2 : #2072c2;
+$blue-3 : #1061b1;
+$blue-4 : #0050a0;
+$blue-5 : #004090;
+$blue-6 : #0056AA;
+$dark-blue : #16325c;
+$linear-grad-blue : linear-gradient(to right,rgba(48,131,211,.25),#3083d3);
+$green : #4bca81;
+$linear-grad-green : linear-gradient(to right,rgba(75,202,129,.25),#4bca81);
+$red : #d4504c;
+$linear-grad-red : linear-gradient(to right,rgba(212,80,76,.25),#d4504c);
+$orange : #e3924a;
+$yellow : #F7B64B;
+$sf-text : #54698d;
+$sf-blue: #0070d2;
+$menu-bar-hover-gray: #e6e9f0;
+$transparent-white : rgba(255,255,255,0.7);
+$transparent-white-2: rgba(255,255,255,0.2);
+$transparent-white-25 : rgba(255,255,255,0.25);
+$transparent-white-5: rgba(255,255,255,0.5);
+$transparent-white-65: rgba(255,255,255,0.65);
+$transparent-white-75: rgba(255,255,255,0.75);
+$color-text-input-icon: #9faab5;
+
+$radius : .25rem;
+$box-shadow :  0px 2px 3px 0px rgba(0,0,0,0.16);
+$box-shadow-right :  2px 0px 3px 0px rgba(0,0,0,0.16);
+
+//sf variables
+
+//background color
+$color-brand: #1589ee; $AZURE: $color-brand; $azure: $color-brand;
+$color-brand-dark: #0070d2; $SCIENCE_BLUE: $color-brand-dark; $science_blue: $color-brand-dark;
+$color-brand-darker: #005fb2;
+$color-background: #f3f2f2; $LINK_WATER: $color-background;
+$color-background-alt-2: #f3f2f2;
+$color-background-info: #54698d; $KASHMIR_BLUE: $color-background-info;
+$color-background-toggle: #9faab5; $CASPER: $color-background-toggle;
+$color-background-path-incomplete: #ecebea;
+$color-background-path-incomplete-hover: #dddbda;
+$slider-track-color-background: #ecebea;
+$endeavour: #005fb2; $ENDEAVOUR: $endeavour;
+$midnight_blue: #00396b; $MIDNIGHT_BLUE: $midnight_blue;
+
+//buttons
+$color-border-button-default: #dddbda;
+$color-background-button-brand-hover: #005fb2;
+$color-background-button-brand-active: #00396b;
+$color-background-brand-primary-active: #00396b;
+
+$color-background-button-success: #4bca81;
+$color-background-button-success-hover: #04844b;
+$color-background-button-success-active: #04844b;
+
+//calendar
+$color-calendar-light-cyan: #CFEBFE;
+$color-calendar-border: #E1E1E1;
+$color-calendar-today-background: #FAFAFB;
+$text-calendar-default: #3e3e3c;
+$text-calendar-link: rgb(0, 57, 107);
+$text-calendar-link-circle: rgba(0, 57, 107, 0.5);
+$color-calendar-event-nonspatial: #6B6D70;
+$color-calendar-event-nonspatial-hover: #535557;
+$color-calendar-event-blue: #1589EE;
+$color-calendar-event-orange: #FF9A3C;
+$color-calendar-event-red: #C23934;
+$color-calendar-event-green: #4BCA81;
+$color-calendar-event-blue-gray: #54698D;
+
+$color-dodger-blue: #3188ef;
+$color-gorse: #ffe53d;
+$color-salmon: #FA8072;
+$color-koromiko-orange: #ffb34c;
+$color-maya-blue: #7bbcf6;
+$color-medium-orchid: #de6de4;
+$color-robins-egg-blue: #00dbbd;
+$color-spring-green: #00e67b;
+
+//icons
+$color-text-icon-default: #706e6b;
+$color-text-icon-alt: #706e6b;
+$color-text-input-icon-2: #abadb0;
+
+//inverse background color
+$color-background-inverse: #061c3f;
+$color-background-inverse-alt: #16325c;
+$color-background-inverse-hover: #0D264D;
+
+//border
+$color-border: #dddbda; $GEYSER: $color-border;
+$color-border-context-bar-theme-default-alt: #f3f2f2;
+
+//custom
+$transparent-white-5: rgba(255,255,255,0.5);
+$transparent-white-32: rgba(255,255,255,0.32);
+
+//main nav bar:
+$mainnavbar-item-color-background-hover: #0079E2;
+
+//text
+$color-text-default-2: #3e3e3c;
+$color-text-default: #3e3e3c; /* old: #16325c; */
+$color-text-weak: #706e6b;
+$color-text-error: #c23934;
+$color-text-button-default-hint: #b0adab;
+$color-text-inverse-weak: #b0adab;
+$color-text-link-hover: #005fb2;
+$shadow-drag: 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+
+//page headers
+$page-header-color-background: #f3f2f2;
+$page-header-color-border: #dddbda;
+
+$color-background-row-hover: #f3f2f2;
+$table-color-background-header-hover: #fafaf9;
+
+$color-button-icon-fill: #706e6b;
+$color-background-context-bar-brand-accent: #00a1df;
+
+//error
+$color-background-error-dark: #c23934;
+
+//route lines
+$color-route-line-blue: #73B8F5;
+$color-route-line-orange: #FFC894;
+$color-route-line-red: #DA8885;
+$color-route-line-green: #93DFB3;
+$color-route-line-blue-gray: #98A5BB;
+
+//tooltips
+$color-pardot-tooltip-background: #D8F3FD;
+$color-pardot-tooltip-nubbin-background: #17371E;
+$color-einstein-tooltip-background: #95cbfc;
+$color-einstein-tooltip-nubbin-background: #D7EAFC;
+
+//tabs
+$color-text-tab-label-selected: #1589ee;
+$color-text-tab-label-hover: #005fb2;
+
+//modal
+$color-background-temp-modal-tint: rgba(43, 40, 38, 0.6);

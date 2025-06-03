@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ist diese Einstellung festgelegt, erfolgen alle Genehmigungen innerhalb des Schrittes parallel. Sie wirkt sich nur aus, wenn erweiterte Genehmigungen mit nativen Genehmigungen verwendet werden.</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </CustomFieldTranslation>

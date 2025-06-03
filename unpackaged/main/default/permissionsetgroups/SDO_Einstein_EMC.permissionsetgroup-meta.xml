@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants all access to Einstein EMC2 demo assets. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Einstein - All EMC2 Permissions</label>
+    <permissionSets>SDO_Einstein_Activity_Capture</permissionSets>
+    <permissionSets>SDO_Einstein_EMC2</permissionSets>
+    <permissionSets>SDO_Einstein_Sales_Cloud_Einstein_PSL</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Use Cotação, Linha de cotação ou Guia de preços da linha de cotação quando o Escopo de avaliação da regra de preço for Cálculo. Use Opção de produto quando o Escopo de avaliação da regra de preço for Configuração.</help>
+        <label><!-- Target Object --></label>
+        <name>SBQQ__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Product Option</masterLabel>
+            <translation>Opção de produto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation>Cotação</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line</masterLabel>
+            <translation>Linha de cotação</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line Pricing Guidance</masterLabel>
+            <translation>Guia de preços da linha de cotação</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

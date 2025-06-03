@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Depot Repair Status --></label>
+        <name>Depot_Repair_Status__c</name>
+        <picklistValues>
+            <masterLabel>Assembly</masterLabel>
+            <translation><!-- Assembly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Authorization</masterLabel>
+            <translation><!-- Awaiting Authorization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Parts</masterLabel>
+            <translation><!-- Awaiting Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning</masterLabel>
+            <translation><!-- Cleaning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disassembly</masterLabel>
+            <translation><!-- Disassembly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inspection</masterLabel>
+            <translation><!-- Inspection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repairing</masterLabel>
+            <translation><!-- Repairing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipped</masterLabel>
+            <translation><!-- Shipped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

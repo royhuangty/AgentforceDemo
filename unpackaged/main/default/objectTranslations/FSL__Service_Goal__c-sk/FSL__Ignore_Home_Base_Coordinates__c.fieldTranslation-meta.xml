@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Slúži na zahrnutie alebo vylúčenie prvej a poslednej cesty v rámci dňa – cesty na domovskú základňu služby a späť – z faktorov minimalizácie cestovania.</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

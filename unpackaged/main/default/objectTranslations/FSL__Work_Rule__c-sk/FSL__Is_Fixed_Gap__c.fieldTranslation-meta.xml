@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ak je toto pole zaškrtnuté, odstup medzi službami bude vychádzať z poľa minimálneho odstupu a cestovanie nebude súčasťou výpočtov.</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

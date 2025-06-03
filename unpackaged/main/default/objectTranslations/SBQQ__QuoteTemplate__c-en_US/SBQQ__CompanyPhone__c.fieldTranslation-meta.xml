@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Company phone displayed on quote documents. --></help>
+        <label><!-- Company Phone --></label>
+        <name>SBQQ__CompanyPhone__c</name>
+    </CustomFieldTranslation>

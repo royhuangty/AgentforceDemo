@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le mode Externe représente un remboursement effectué dans un système externe et Électronique représente un remboursement traité par Salesforce</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </CustomFieldTranslation>

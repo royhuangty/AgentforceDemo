@@ -1,0 +1,136 @@
+{
+  "appPageId" : "3a241bdb-3c0c-4a4f-b277-1b94130c2d69",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "dca3ecf7-f25f-4b3d-9dec-0f65caadee55",
+  "label" : "Saved Payment Methods",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "componentSpacerSize" : "",
+        "layoutDirectionDesktop" : "row",
+        "layoutDirectionMobile" : "column",
+        "layoutDirectionTablet" : "column",
+        "maxContentWidth" : "",
+        "sectionColumnGutterWidth" : "",
+        "sectionConfig" : "{\"UUID\":\"c6396caa-4ecb-4f91-9454-50f4f76501f5\",\"columns\":[{\"UUID\":\"6ff22764-0fb2-4c6a-b829-c06989d54dee\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"10\",\"seedComponents\":null},{\"UUID\":\"d4ab8918-235f-433e-85f2-1e00de471bc4\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"2\",\"seedComponents\":null}]}",
+        "sectionMinHeight" : "",
+        "sectionVerticalAlign" : "flex-start"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "c6396caa-4ecb-4f91-9454-50f4f76501f5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "isLinkable" : false,
+            "linkAssistiveText" : "",
+            "paddingHorizontal" : "small",
+            "paddingVertical" : "xx-small",
+            "text" : "Saved Payment Methods",
+            "textAlign" : "left",
+            "textDecoration" : "{\"bold\": true}",
+            "textDisplayInfo" : "{\"textStyle\": \"heading-medium\", \"headingTag\": \"h2\"}"
+          },
+          "componentName" : "dxp_base:textBlock",
+          "id" : "32fd5d3c-4a71-47fe-af54-ac79f85ea3b5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6ff22764-0fb2-4c6a-b829-c06989d54dee",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "alignment" : "right",
+            "size" : "standard",
+            "stretch" : "standard",
+            "text" : "Add",
+            "type" : "primary",
+            "url" : "/add-payment-methods"
+          },
+          "componentName" : "dxp_base:button",
+          "id" : "d8918d59-0139-441b-bf9a-f3b083a458fb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d4ab8918-235f-433e-85f2-1e00de471bc4",
+        "regionLabel" : "Column 2",
+        "regionName" : "col2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "componentSpacerSize" : "",
+        "layoutDirectionDesktop" : "row",
+        "layoutDirectionMobile" : "column",
+        "layoutDirectionTablet" : "column",
+        "maxContentWidth" : "",
+        "sectionColumnGutterWidth" : "",
+        "sectionConfig" : "{\"UUID\":\"ab1c6f48-2ca5-42ab-8f66-90b548921286\",\"columns\":[{\"UUID\":\"79165bf4-3879-4861-9eed-1305fb0cf336\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+        "sectionMinHeight" : "",
+        "sectionVerticalAlign" : "flex-start"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "ab1c6f48-2ca5-42ab-8f66-90b548921286",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "cardDefaultBadgeColor" : "rgb(201,201,201)",
+            "cardDefaultBorderRadius" : "50",
+            "cardDefaultLabel" : "Default",
+            "cardExpiredBadgeColor" : "rgb(254, 147, 57)",
+            "cardExpiredBorderRadius" : "50",
+            "cardExpiredLabel" : "Expired",
+            "emptyMessageTitle" : "You don't have any saved payment methods. Save payment information for a quicker checkout experience.",
+            "footerDefaultLabel" : "Default",
+            "footerDeleteLabel" : "Delete",
+            "itemSpacing" : "small",
+            "itemsPerPage" : "10",
+            "paymentMethodSetId" : "",
+            "previewState" : "noSavedInfoState",
+            "showMoreButtonAlign" : "center",
+            "showMoreButtonLabel" : "Show More",
+            "showMoreButtonSize" : "standard",
+            "showMoreButtonStyle" : "secondary",
+            "showMoreButtonWidth" : "standard"
+          },
+          "componentName" : "commerce_builder:paymentSavedPaymentMethodsGrid",
+          "id" : "2d5076f3-5800-4abc-946e-57222c9ff8be",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "79165bf4-3879-4861-9eed-1305fb0cf336",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "9f29985e-8d57-414a-99ee-8dc8ea4e251a",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "MyAccount",
+  "type" : "view",
+  "viewType" : "my-payment-methods"
+}

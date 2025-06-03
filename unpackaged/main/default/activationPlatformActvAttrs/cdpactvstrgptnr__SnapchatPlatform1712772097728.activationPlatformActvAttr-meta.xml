@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__SnapchatPlatform</activationPlatform>
+    <fieldName>EmailAddress</fieldName>
+    <isFromSourceObject>false</isFromSourceObject>
+    <isRequired>true</isRequired>
+    <masterLabel>email</masterLabel>
+    <objectName>ContactPointEmail</objectName>
+</ActivationPlatformActvAttr>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Se assinalada, compara campo Tamanho mínimo da equipa na Ordem de trabalho ou no Item da linha da ordem de trabalho com membros equipa serv. realmente disp. Caso contrário, compara Tamanho mínimo da equipa com campo Tamanho da equipa em Equipa de serviço.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

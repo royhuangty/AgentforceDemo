@@ -1,0 +1,61 @@
+{
+   "responseObj":{
+      "attributes":{
+         "type":"tsvis__VJ_Session__c"
+      },
+      "comments":[
+
+      ],
+      "CreatedById":"005JX00000AoLd0YAF",
+      "CreatedByName":"VRA User",
+      "CreatedDate":"2024-07-19T05:59:34.000Z",
+      "Id":"a0hJX000003nBYTYA2",
+      "imagesCount":null,
+      "infoItems":[
+         {
+            "isCopieable":false,
+            "key":"Status",
+            "value":"Closed"
+         },
+         {
+            "isCopieable":false,
+            "key":"Phone Number",
+            "value":"380994489902"
+         },
+         {
+            "isCopieable":false,
+            "key":"Request ID",
+            "value":"380994489902"
+         },
+         {
+            "isCopieable":false,
+            "key":"Alias",
+            "value":"vra-job-en_US"
+         },
+         {
+            "isCopieable":false,
+            "key":"Initiation Time",
+            "value":"19/07/24 06:59 AM"
+         },
+         {
+            "isCopieable":false,
+            "key":"Session ID",
+            "value":"669a00f07a581849998eeb99"
+         },
+         {
+            "isCopieable":false,
+            "key":"Start Time",
+            "value":"19/07/24 06:00 AM"
+         },
+         {
+            "isCopieable":false,
+            "key":"End Time",
+            "value":"28/07/24 10:50 PM"
+         }
+      ],
+      "sessionId":"669a00f07a581849998eeb99",
+      "status":"Closed"
+   },
+   "message":null,
+   "isSuccess":true
+}

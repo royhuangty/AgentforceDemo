@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesAutomotiveSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableAutomotiveCloud>false</enableAutomotiveCloud>
+    <enableAutomotiveScheduler>false</enableAutomotiveScheduler>
+    <enableConnectedVehSrvcsCmpnt>false</enableConnectedVehSrvcsCmpnt>
+</IndustriesAutomotiveSettings>

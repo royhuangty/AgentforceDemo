@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MaximumMeasureFieldValue</fullName>
+    <inlineHelpText>Caps the benefit for a measure at a certain quantity, percent, or amount. For example, when the total quantity measure value is 500 units and the maximum measure value is 200 units, the benefit is applied only to 200 units.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

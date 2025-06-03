@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__Show_Info</fullName>
+    <columns>NAME</columns>
+    <columns>tspa__Customer_Refrence_Field__c</columns>
+    <columns>tspa__Phone_Number_Field__c</columns>
+    <columns>tspa__Email_Field__c</columns>
+    <columns>tspa__Customer_Name__c</columns>
+    <columns>tspa__Language_Field__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Show Info</label>
+</ListView>

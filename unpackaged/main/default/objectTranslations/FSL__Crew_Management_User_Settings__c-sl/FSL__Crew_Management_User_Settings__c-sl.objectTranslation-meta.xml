@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Uporabniška nastavitev za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Uporabniško nastavitev za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Uporabniške nastavitve za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Uporabniških nastavitev za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Uporabniški nastavitvi za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Uporabniškim nastavitvam za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Uporabniško nastavitvijo za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Uporabniško nastavitvijo za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Uporabniški nastavitvi za upravljanje moštva</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Uporabniški nastavitvi za upravljanje moštva</value>
+    </caseValues>
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Ime uporabniške nastavitve za upravljanj</nameFieldLabel>
+</CustomObjectTranslation>

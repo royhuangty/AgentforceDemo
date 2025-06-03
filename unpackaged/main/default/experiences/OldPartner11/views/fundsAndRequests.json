@@ -1,0 +1,226 @@
+{
+  "appPageId" : "e0fc7900-a10c-4a56-88d5-3300b25fd224",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "dce94816-1e47-44bd-905e-1cb1961113fd",
+  "label" : "Funds and Requests",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a6a77e41-aefa-400b-8ae2-23df7e1593b1",
+          "columns" : [ {
+            "UUID" : "afe157a0-6275-4295-a6ea-ef976540e9a9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "10",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "19a7321f-6b42-4547-a550-7af166926b49",
+            "columnKey" : "2aa40",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a6a77e41-aefa-400b-8ae2-23df7e1593b1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "c75f9da4-b78d-4897-96e4-0004cfe24e75",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "318932b0-b623-46df-93fe-ba2278140015",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "My Budget"
+              }, {
+                "UUID" : "8311c58c-5a52-4726-b105-764b236c2aa1",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Fund Requests"
+              }, {
+                "UUID" : "da535277-6645-4c21-bb7b-10fb6c430bb4",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Fund Claims"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "c75f9da4-b78d-4897-96e4-0004cfe24e75",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "My_Partner_Fund_Allocations",
+                "layout" : "FULL",
+                "pageSize" : 5,
+                "scope" : "PartnerFundAllocation",
+                "showActionBar" : true,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "1f529096-cedf-458a-98fb-c5040bc16294",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "318932b0-b623-46df-93fe-ba2278140015",
+            "regionLabel" : "My Budget",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "My_Partner_Fund_Requests",
+                "layout" : "FULL",
+                "pageSize" : 5,
+                "scope" : "PartnerFundRequest",
+                "showActionBar" : true,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "822796ef-a2f2-4593-962e-b450531dbd71",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "8311c58c-5a52-4726-b105-764b236c2aa1",
+            "regionLabel" : "Fund Requests",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "My_Partner_Fund_Claims",
+                "layout" : "FULL",
+                "pageSize" : 5,
+                "scope" : "PartnerFundClaim",
+                "showActionBar" : true,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "5aa2f33b-5aa4-498a-b236-e2fd70f8e54e",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "da535277-6645-4c21-bb7b-10fb6c430bb4",
+            "regionLabel" : "Fund Claims",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "afe157a0-6275-4295-a6ea-ef976540e9a9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "align" : "Center",
+            "applyCardBackground" : false,
+            "autoLaunchFlow" : false,
+            "buttonBackgroundColor" : "",
+            "buttonBorderRadius" : "",
+            "buttonHeight" : "100px",
+            "buttonLabel" : "Create Fund Request",
+            "buttonTextColor" : "",
+            "buttonTextSize" : "",
+            "buttonWidth" : "100px",
+            "closeButtonText" : "Close",
+            "fixedButtonWidthHeight" : false,
+            "fixedModalWidthHeight" : false,
+            "flowInputVariablesString" : "",
+            "flowModalHeader" : "Create Fund Request",
+            "flowName" : "SDO_Community_Partner_Central_Fund_Request",
+            "hideButton" : false,
+            "hideFlowTransitionOverlay" : true,
+            "hideModalCloseButton" : false,
+            "modalHeight" : "600px",
+            "modalWidth" : "800px",
+            "redirectUrlOnFlowCompletion" : "",
+            "refreshPageOnFlowCompletion" : false,
+            "renderFooter" : false
+          },
+          "componentName" : "sf_flowmodal:ccp_launchFlowModal",
+          "id" : "429f2eb7-c70a-49ba-a5d5-b0899c951008",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "19a7321f-6b42-4547-a550-7af166926b49",
+        "regionLabel" : "Column 2",
+        "regionName" : "2aa40",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0a6a9561-5e36-48aa-84c4-c8aea5a88fc0",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Funds and Requests"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4088c2eb-8183-49ed-9247-40c97d4f762a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6c3f8a50-42d8-4922-8c70-7aecc37b14c4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "4i71XCqTGENQ96Nd9BWUb7UCBUbuek",
+  "type" : "view",
+  "viewType" : "custom-funds-and-requests"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Data Source --></label>
+        <name>Data_Source__c</name>
+        <picklistValues>
+            <masterLabel>custom</masterLabel>
+            <translation><!-- custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>months</masterLabel>
+            <translation><!-- months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>picklist</masterLabel>
+            <translation><!-- picklist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>priorities</masterLabel>
+            <translation><!-- priorities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>quarters</masterLabel>
+            <translation><!-- quarters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sobject</masterLabel>
+            <translation><!-- sobject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user</masterLabel>
+            <translation><!-- user --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

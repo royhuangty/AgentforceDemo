@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>[割引] が選択されている場合、[リスト変数] と [正価変数] にデータが入力されている必要があります。[サマリー] が選択されている場合、[集計項目] と [集計関数] にデータが入力されている必要があります。</help>
+        <label><!-- Type --></label>
+        <name>sbaa__Type__c</name>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation>割引</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary</masterLabel>
+            <translation>概要</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

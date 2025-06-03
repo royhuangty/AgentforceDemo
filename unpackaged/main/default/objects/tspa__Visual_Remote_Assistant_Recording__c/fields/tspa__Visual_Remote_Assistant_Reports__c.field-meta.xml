@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__Visual_Remote_Assistant_Reports__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Visual Remote Assistant Reports</label>
+    <referenceTo>tspa__Visual_History__c</referenceTo>
+    <relationshipLabel>Visual Remote Assistant Recordings</relationshipLabel>
+    <relationshipName>Visual_Remote_Assistant_Recordings</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

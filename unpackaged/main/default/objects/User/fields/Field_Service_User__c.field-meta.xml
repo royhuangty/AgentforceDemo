@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Service_User__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to identify users created to demonstrate Field Service Lighting.</description>
+    <inlineHelpText>Used to identify users created to demonstrate Field Service Lighting.</inlineHelpText>
+    <label>Field Service User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

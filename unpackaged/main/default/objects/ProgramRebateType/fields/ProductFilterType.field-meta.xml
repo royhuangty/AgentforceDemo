@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductFilterType</fullName>
+    <inlineHelpText>Select the criteria to be applied to the products in the Included or Excluded Products list.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

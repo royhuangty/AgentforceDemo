@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>財務帳簿内で選択されている期間種別を参照します。</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder$Name</field>
+    </columns>
+    <description>Report for FSL System Admin</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder$WorkType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FSL Work Type</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FSL_Work_Orders__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

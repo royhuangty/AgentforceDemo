@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Time Property --></label>
+        <name>FSL__Service_Time_Property__c</name>
+        <picklistValues>
+            <masterLabel>ArrivalWindowEndTime</masterLabel>
+            <translation><!-- ArrivalWindowEndTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ArrivalWindowEndTime__c</masterLabel>
+            <translation><!-- ArrivalWindowEndTime__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ArrivalWindowStartTime</masterLabel>
+            <translation><!-- ArrivalWindowStartTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ArrivalWindowStartTime__c</masterLabel>
+            <translation><!-- ArrivalWindowStartTime__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DueDate</masterLabel>
+            <translation><!-- DueDate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DueDate__c</masterLabel>
+            <translation><!-- DueDate__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EarliestStartTime</masterLabel>
+            <translation><!-- EarliestStartTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EarliestStartTime__c</masterLabel>
+            <translation><!-- EarliestStartTime__c --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

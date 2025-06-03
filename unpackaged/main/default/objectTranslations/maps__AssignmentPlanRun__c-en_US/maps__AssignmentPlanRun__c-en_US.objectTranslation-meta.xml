@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Assignment Plan Run</layout>
+        <sections>
+            <label><!-- Errors --></label>
+            <section>Errors</section>
+        </sections>
+        <sections>
+            <label><!-- Processing Times --></label>
+            <section>Processing Times</section>
+        </sections>
+        <sections>
+            <label><!-- Run Statistics --></label>
+            <section>Run Statistics</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

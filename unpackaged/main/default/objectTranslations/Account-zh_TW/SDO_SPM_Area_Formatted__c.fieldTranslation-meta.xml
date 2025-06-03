@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Combines Region, Segment and Area to create a formatted Area name. --></help>
+        <label><!-- Area (Formatted) --></label>
+        <name>SDO_SPM_Area_Formatted__c</name>
+    </CustomFieldTranslation>

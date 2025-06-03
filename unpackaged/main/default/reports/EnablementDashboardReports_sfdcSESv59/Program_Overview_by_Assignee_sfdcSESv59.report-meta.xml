@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LearningItemAssignment$Assignee.Manager.Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$Progress.CompletedPercent</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$Progress.DaysInProgress</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$LearningItem.EnablementProgram.TotalDays</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment$Progress.OutcomeProgressPercent</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(LearningItemAssignment.Progress.DaysInProgress &gt; LearningItemAssignment.LearningItem.EnablementProgram.TotalDays, &quot;Behind&quot;,IF(OR(ISNULL(LearningItemAssignment.Progress.CompletedPercent), LearningItemAssignment.Progress.CompletedPercent = 0.0), &quot;Not started&quot;, IF(LearningItemAssignment.Progress.CompletedPercent = 1, IF(LearningItemAssignment.Progress.CompletedOnDay &lt;= LearningItemAssignment.LearningItem.EnablementProgram.TotalDays, &quot;Completed on time&quot;, &quot;Completed late&quot;), &quot;On track&quot;)))</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Completion Status</description>
+        <developerName>CDF1</developerName>
+        <label>Completion Status</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Analyze your assignee&#39;s progress towards a program. See their completion status, completion percentage, days in progress, and more.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$LearningItem.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$Assignee</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Program Overview by Assignee</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Program_Progress_sfdcSESv59__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

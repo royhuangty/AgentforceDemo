@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facture</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Factures</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label>Informations sur le solde</label>
+            <section>Balance Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur la date de facture</label>
+            <section>Invoice Date Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur le statut de facture</label>
+            <section>Invoice Status Information</section>
+        </sections>
+        <sections>
+            <label>Information sur l’exécution de paiement</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>Options d’exécution de paiement</label>
+            <section>Payment Run Options</section>
+        </sections>
+        <sections>
+            <label>Informations sur les prix</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Informations fiscales</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Numéro de la facture</nameFieldLabel>
+    <quickActions>
+        <label><!-- Update Invoice --></label>
+        <name>blng__Cancel_Rebill</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Cancel_Rebill --></label>
+        <name>blng__Cancel_Rebill</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ConvertNegativeLines --></label>
+        <name>blng__ConvertNegativeLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit --></label>
+        <name>blng__Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Payment_Virtual_Terminal --></label>
+        <name>blng__Payment_Virtual_Terminal</name>
+    </webLinks>
+</CustomObjectTranslation>

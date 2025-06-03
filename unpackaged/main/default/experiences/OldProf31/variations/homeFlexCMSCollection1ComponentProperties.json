@@ -1,0 +1,15 @@
+{
+  "componentVariants" : [ {
+    "id" : "6158fab2-e975-48a5-83bc-10f10c3fc60a",
+    "propertyOverrides" : {
+      "componentAttributes" : {
+        "config/dataProviderDefinition/attributes/dataProviderInfo/apiName" : "Customer_CTAs"
+      }
+    },
+    "targetId" : "be63a5dd-f3b1-45a8-8e6f-d64ae5cb0bd1",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Home_Flex_CMS_Collection_1_Component_Properties",
+  "id" : "4707a09f-9b2e-453a-ace8-bad2f7694e9e",
+  "type" : "experienceVariation"
+}

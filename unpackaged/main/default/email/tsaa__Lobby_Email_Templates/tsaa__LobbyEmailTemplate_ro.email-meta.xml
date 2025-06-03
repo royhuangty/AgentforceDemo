@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-ro</name>
+    <style>none</style>
+    <subject>Invitație pentru întâlnirea cu Asistentul vizual de la distanță</subject>
+    <textOnly>Bună ziua,
+Am programat pentru dvs. o întâlnire online la distanță
+Apăsați pe butonul „Participă” pentru a vedea detaliile și pentru a intra în întâlnire.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

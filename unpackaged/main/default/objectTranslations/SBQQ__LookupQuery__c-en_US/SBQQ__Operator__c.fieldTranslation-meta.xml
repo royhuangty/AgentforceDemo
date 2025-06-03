@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The operator that is applied when comparing the Field with the Value. --></help>
+        <label><!-- Operator --></label>
+        <name>SBQQ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation><!-- equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equals</masterLabel>
+            <translation><!-- greater or equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation><!-- greater than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equals</masterLabel>
+            <translation><!-- less or equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equals</masterLabel>
+            <translation><!-- not equals --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

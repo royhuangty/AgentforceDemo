@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtuma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumat --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtuman --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumien --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumieni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumiesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumassa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumissa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumassani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumissani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumassasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumissasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumana --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumina --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumanani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtuminani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumanasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtuminasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumaan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumiin --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumaani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumiini --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumaasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumiisi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumalla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumilla --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumallani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumillani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumallasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Adessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumillasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumalta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumilta --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumaltani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumiltani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumaltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumiltasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumalle --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumille --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumalleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumilleni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumallesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumillesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumana --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumina --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumanani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtuminani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumanasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtuminasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumaksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumiksi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumakseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumikseni --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumaksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumiksesi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumaa --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-tapahtumiin --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumaani --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-tapahtumiini --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumaasi --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Partitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-tapahtumiisi --></value>
+    </caseValues>
+    
+    
+</CustomObjectTranslation>

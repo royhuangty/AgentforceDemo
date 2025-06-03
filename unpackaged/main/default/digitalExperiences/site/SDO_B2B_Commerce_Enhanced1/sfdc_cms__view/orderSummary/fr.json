@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary Details",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "buttonText" : "Commander à nouveau"
+        },
+        "id" : "a7a87036-741c-43be-adcf-6ac255f2dac6"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "7a1314fb-347b-426a-b774-1ac6439d1ef4"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-details"
+}

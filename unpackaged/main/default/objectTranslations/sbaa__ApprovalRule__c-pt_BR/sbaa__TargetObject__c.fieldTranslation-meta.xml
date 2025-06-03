@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nome da API do objeto ao qual essa Regra se aplica</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidade</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

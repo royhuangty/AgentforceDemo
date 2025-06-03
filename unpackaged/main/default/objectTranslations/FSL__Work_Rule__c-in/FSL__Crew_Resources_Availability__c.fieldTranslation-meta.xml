@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Saat diperiksa, bandingkan bidang isian Ukuran Kru Minimum di Perintah Kerja atau Item Baris Perintah Kerja dengan Anggota Crew Layanan yang sebenarnya tersedia. 
+Atau, bandingkan Ukuran Kru Minimum dengan bidang isian Ukuran Kru di Kru Layanan.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

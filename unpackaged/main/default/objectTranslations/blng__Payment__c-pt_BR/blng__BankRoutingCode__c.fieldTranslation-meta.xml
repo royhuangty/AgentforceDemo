@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O número de Roteamento válido do Banco, também chamado de código ABA</help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </CustomFieldTranslation>

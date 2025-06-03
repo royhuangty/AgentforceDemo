@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Uitvoertype route Maps Advanced</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Uitvoertypen route Maps Advanced</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Maps Advanced Route Output Type Layout</layout>
+        <sections>
+            <label>Veldtoewijzingen</label>
+            <section>Field Mappings</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Naam uitvoertype route Maps Advanced</nameFieldLabel>
+</CustomObjectTranslation>

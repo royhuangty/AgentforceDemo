@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: calls the KCS - Create Article From Case Flow</description>
+    <flowDefinition>SDO_Service_KCS_Create_Article_For_Case</flowDefinition>
+    <label>Create Article</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

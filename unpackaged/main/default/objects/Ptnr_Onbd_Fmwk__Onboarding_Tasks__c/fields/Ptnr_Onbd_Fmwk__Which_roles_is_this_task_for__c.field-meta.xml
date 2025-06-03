@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ptnr_Onbd_Fmwk__Which_roles_is_this_task_for__c</fullName>
+    <defaultValue>&quot;All&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Select the audience group the task is applicable for and pick a Seq# accordingly. By default actions are applicable to all audience groups in your partner&#39;s hierarchy if one exists</inlineHelpText>
+    <label>Which roles is this task for?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Ptnr_Onbd_Fmwk__Partner_Persona</valueSetName>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

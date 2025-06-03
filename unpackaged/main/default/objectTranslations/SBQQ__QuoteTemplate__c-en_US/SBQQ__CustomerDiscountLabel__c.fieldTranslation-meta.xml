@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Label used for customer discount in subtotals and totals sections. --></help>
+        <label><!-- Customer Discount Label --></label>
+        <name>SBQQ__CustomerDiscountLabel__c</name>
+    </CustomFieldTranslation>

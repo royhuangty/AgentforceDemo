@@ -1,0 +1,23 @@
+<apex:page >
+    <script>
+    navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(function(stream) {
+        alert('You let me use your mic!');
+    })
+    .catch(function(err) {
+         alert('No mic for you!');
+    });
+    
+    navigator.getMedia = ( navigator.getUserMedia || // use the proper vendor prefix
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia);
+    
+    navigator.getMedia({video: true}, function() {
+          alert('webcam is available');
+    }, function() {
+         alert('webcam is not available');
+    });
+    
+    </script>
+</apex:page>

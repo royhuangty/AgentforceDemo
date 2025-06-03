@@ -1,0 +1,36 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Commerce Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "ACERCA DE NOSOTROS"
+        },
+        "id" : "d94216e7-201e-4307-abb3-7cb7ffa5fff5"
+      }, {
+        "attributes" : {
+          "text" : "Estamos comprometidos a brindar productos de calidad, servicios fiables y soluciones innovadoras para satisfacer sus necesidades."
+        },
+        "id" : "1c5715d9-3f72-4b49-8519-089201e64f93"
+      }, {
+        "attributes" : {
+          "text" : "CATEGORÍAS"
+        },
+        "id" : "50eb0ca3-ad9e-4676-a2b2-5400257d1618"
+      }, {
+        "attributes" : {
+          "headingLabelText" : "Seleccione su ubicación",
+          "pickerButtonLabelText" : "Cambiar ubicación"
+        },
+        "id" : "d7d180a6-fa3e-4c7e-89f6-5cf193b6b70c"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">© Copyright 2025 Salesforce.com, inc. | Esta no es una empresa real. </span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">Salesforce la utiliza para demostraciones. No se procesará ningún pedido.</span></p>"
+        },
+        "id" : "ad11f646-5caa-44a4-b92b-5e3204d88e7b"
+      } ]
+    }
+  },
+  "urlName" : "commerce-layout"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Menentukan lamanya istirahat yang dibuat.
+Kosongkan bidang isian ini jika Anda tidak ingin membuat waktu istirahat.</help>
+        <label><!-- Break Duration (minutes) --></label>
+        <name>FSL__Break_Duration__c</name>
+    </CustomFieldTranslation>

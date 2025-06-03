@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-es</name>
+    <style>none</style>
+    <subject>Invitación de asistente remoto visual</subject>
+    <textOnly>Hola,
+: se ha programado una reunión remota en línea para usted.
+Haga clic en el botón &quot;Unirse&quot; para ver los detalles de la reunión e ingresar.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

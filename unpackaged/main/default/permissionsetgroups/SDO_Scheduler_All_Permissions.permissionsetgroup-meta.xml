@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: All Permission Sets for Scheduler Demos. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Scheduler - Harbor Cruise Permissions (Level 3)</label>
+    <permissionSets>SDO_Scheduler_Base_Access</permissionSets>
+    <permissionSets>SDO_Scheduler_Community_User_Object_Permission</permissionSets>
+    <permissionSets>SDO_Scheduler_HarborCruise_Access</permissionSets>
+    <permissionSets>SDO_Scheduler_Schedulable_Resource_Permission</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

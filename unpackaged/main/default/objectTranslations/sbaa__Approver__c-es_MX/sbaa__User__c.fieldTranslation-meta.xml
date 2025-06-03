@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si el Aprobador es un único usuario, se realiza una búsqueda de consulta de ese usuario</help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </CustomFieldTranslation>

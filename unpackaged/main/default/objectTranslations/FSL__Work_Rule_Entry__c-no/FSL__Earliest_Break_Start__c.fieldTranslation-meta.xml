@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Antall minutter fra starten på tjenesteressursens tilgjengelighet til tidligste tillatte starttid for pause. Oppgi for eksempel 120 for å planlegge en pause minst to timer etter at dagen har startet.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

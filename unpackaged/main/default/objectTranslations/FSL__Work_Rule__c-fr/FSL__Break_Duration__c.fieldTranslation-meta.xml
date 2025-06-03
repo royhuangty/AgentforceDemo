@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Détermine la durée des pauses créées.
+Si vous ne souhaitez pas créer de pause, laissez ce champ vide.</help>
+        <label><!-- Break Duration (minutes) --></label>
+        <name>FSL__Break_Duration__c</name>
+    </CustomFieldTranslation>

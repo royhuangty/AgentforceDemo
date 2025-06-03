@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For items with calculated quantities this field holds the original quantity entered by the user. --></help>
+        <label><!-- Original Quantity --></label>
+        <name>SBQQ__BundledQuantity__c</name>
+    </CustomFieldTranslation>

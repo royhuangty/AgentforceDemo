@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store0ZSKX000000M1Gv4AK</fullName>
+    <columns>Name</columns>
+    <columns>IsNavigational</columns>
+    <columns>SortOrder</columns>
+    <columns>ParentCategory</columns>
+    <columns>Id</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Catalog</field>
+        <operation>equals</operation>
+        <value>Cirrus Catalog</value>
+    </filters>
+    <label>SDO - B2B Commerce Enhanced Categories</label>
+</ListView>

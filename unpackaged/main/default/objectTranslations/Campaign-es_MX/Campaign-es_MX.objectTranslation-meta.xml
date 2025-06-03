@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>SDO - Campaign Default</layout>
+        <sections>
+            <label><!-- Campaign Charts --></label>
+            <section>Campaign Charts</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Results --></label>
+            <section>Campaign Results</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Parent Campaign</layout>
+        <sections>
+            <label><!-- Campaign Details --></label>
+            <section>Campaign Details</section>
+        </sections>
+        <sections>
+            <label><!-- Hierarchy Planning --></label>
+            <section>Hierarchy Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Hierarchy Results --></label>
+            <section>Hierarchy Results</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Partner-Led Campaign</layout>
+        <sections>
+            <label><!-- Campaign Charts --></label>
+            <section>Campaign Charts</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Results --></label>
+            <section>Campaign Results</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Insights --></label>
+        <name>SDO_Einstein_Configuration_Insights</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Campaigns led and used by partners to market to their customers. --></description>
+        <label><!-- Partner-Led Campaign --></label>
+        <name>Partner_Led_Campaign</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Child Campaign to a parent campaign --></description>
+        <label><!-- Child Campaign --></label>
+        <name>SDO_Marketing_ChildCampaign</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Top level Campaign --></description>
+        <label><!-- Parent Campaign --></label>
+        <name>SDO_Marketing_ParentCampaign</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewAllCampaignMembers --></label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>et4ae5__ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

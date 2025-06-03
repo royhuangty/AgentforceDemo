@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Indique que cette dimension autorise la libre modification du prix lors de l&#39;élaboration d&#39;un devis.</help>
+        <label><!-- Price Editable --></label>
+        <name>SBQQ__PriceEditable__c</name>
+        <picklistValues>
+            <masterLabel>Inherit</masterLabel>
+            <translation>Hériter</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>Non</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Oui</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

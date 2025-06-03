@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Service_Appointment_2_Not_Changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(FSL__Service_Appointment_2__c)</errorConditionFormula>
+    <errorDisplayField>FSL__Service_Appointment_2__c</errorDisplayField>
+    <errorMessage>It is not allowed to change any of the service appointments in the relationship</errorMessage>
+</ValidationRule>

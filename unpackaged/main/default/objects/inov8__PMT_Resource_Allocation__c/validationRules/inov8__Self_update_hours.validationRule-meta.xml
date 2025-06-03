@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Self_update_hours</fullName>
+    <active>true</active>
+    <errorConditionFormula>$User.Id!= inov8__Resource_Availability__r.inov8__User__c  &amp;&amp;
+ (ISCHANGED(  inov8__Jan_Hours__c ) || ISCHANGED( inov8__Feb_Hours__c) || ISCHANGED( inov8__Mar_Hours__c) || ISCHANGED( inov8__Apr_Hours__c ) || ISCHANGED( inov8__May_Hours__c) || ISCHANGED( inov8__Jun_Hours__c) || ISCHANGED( inov8__Jul_Hours__c) || ISCHANGED( inov8__Aug_Hours__c) || ISCHANGED( inov8__Sep_Hours__c) || ISCHANGED( inov8__Oct_Hours__c) || ISCHANGED( inov8__Nov_Hours__c) || ISCHANGED( inov8__Dec_Hours__c))</errorConditionFormula>
+    <errorMessage>Hours can only be self updated</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Addition</fullName>
+        <default>false</default>
+        <label>Addition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conversion</fullName>
+        <default>false</default>
+        <label>Conversion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Replacement</fullName>
+        <default>false</default>
+        <label>Replacement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Signature</fullName>
+        <default>false</default>
+        <label>Signature</label>
+    </standardValue>
+</StandardValueSet>

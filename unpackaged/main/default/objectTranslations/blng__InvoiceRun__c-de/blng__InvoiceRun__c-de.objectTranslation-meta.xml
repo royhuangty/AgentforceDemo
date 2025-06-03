@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rechnungslaufs</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Invoice Run Layout</layout>
+        <sections>
+            <label>Statusinformationen</label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name des Rechnungslaufs</nameFieldLabel>
+    <webLinks>
+        <label><!-- CleanUpInvoiceRun --></label>
+        <name>blng__CleanUpInvoiceRun</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Post_All_Invoices --></label>
+        <name>blng__Post_All_Invoices</name>
+    </webLinks>
+</CustomObjectTranslation>

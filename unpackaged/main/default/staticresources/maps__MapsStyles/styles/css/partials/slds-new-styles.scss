@@ -1,0 +1,73 @@
+.slds-expression {
+    .slds-expression__row {
+        margin-top: 0.75rem;
+
+        .slds-expression__legend {
+            float: left;
+            width: 3rem;
+            padding-top: calc((1.5 * 0.75rem) + (1.875rem / 4));
+            font-weight: 700;
+        }
+    }
+}
+
+.slds-gutters {
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+
+    .slds-col {
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+}
+
+.slds-gutters_x-small {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+
+    .slds-col {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+
+.slds-gutters_xx-small {
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+
+    .slds-col {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+}
+
+.slds-grow-none {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+}
+
+.slds-inline_icon_text {
+    background-color: #f4f6f9;
+    color: $color-text-default;
+    padding: .75rem 1rem;
+
+    .slds-icon {
+        color: $color-text-icon-default;
+        font-size: 1.25rem;
+    }
+}
+
+.slds-button-group-row {
+    display: inline-flex;
+
+    .slds-button-group-item {
+        &+.slds-button-group-item {
+            margin-left: .25rem;
+        }
+
+        .slds-button {
+            margin: 0;
+        }
+    }
+}

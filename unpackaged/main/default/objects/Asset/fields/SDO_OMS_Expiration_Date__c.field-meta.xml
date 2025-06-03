@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_OMS_Expiration_Date__c</fullName>
+    <description>What: Asset
+Who: Bill Macaulay When: Oct 2022
+Add fields to Assets populated from shipment items</description>
+    <label>Expiration Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

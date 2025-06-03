@@ -1,0 +1,43 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Search",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "overflowMenuLabel" : "Plus"
+        },
+        "id" : "50c16b9b-ea25-434d-ba7f-fbee4dca7a97"
+      }, {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "704fcbde-463b-4895-a6f4-d01715a6dcfd"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "f1cc1e6e-5f79-4653-836e-76d24e12cd2d"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Ajout...",
+          "addToCartButtonText" : "Ajouter au panier",
+          "incrementValueGuideText" : "La quantité d'incrément est de {0}",
+          "maximumValueGuideText" : "La quantité maximale est de {0}",
+          "minimumValueGuideText" : "La quantité minimale est de {0}",
+          "quantitySelectorLabel" : "QTÉ",
+          "subscriptionOptionsText" : "Options d'abonnement disponibles",
+          "viewOptionsButtonText" : "Afficher les options"
+        },
+        "id" : "8e80d2ed-db2d-448f-93bc-4e79e0508331"
+      }, {
+        "attributes" : {
+          "addToCartButtonText" : "AJOUTER AU PANIER",
+          "viewOptionsButtonText" : "VOIR LES OPTIONS"
+        },
+        "id" : "75bd2e8d-69da-4617-b9f9-82083ce76e7a"
+      } ]
+    }
+  },
+  "urlName" : "search"
+}

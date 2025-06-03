@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>SDO Professional Authenticated Users</audienceName>
+    <container>OldProf3</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>Profile.UserType</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Guest</fieldValue>
+            </criterionValue>
+            <operator>NotEqual</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>19496873-f678-4dc7-ac65-6edd8b42c177$#$8818113b-1c28-4775-8ac9-06cc9778b49d</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Flex_HTML_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>19496873-f678-4dc7-ac65-6edd8b42c177$#$5a852d49-77d3-41ce-baf5-80945ca4a03c</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Flex_Launch_Flow_in_Modal_Component</targetValue>
+        </target>
+        <target>
+            <groupName>19496873-f678-4dc7-ac65-6edd8b42c177$#$31dd08f7-7eef-4a77-acb8-5a9769a83cb2</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Flex_Rich_Content_Editor_2_Component</targetValue>
+        </target>
+        <target>
+            <groupName>1f3d18e6-6579-473b-bed7-1bebaa88197c$#$394b8263-299a-449a-bb9a-d21db3cb339b</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>guestscheduling_Flow_1_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

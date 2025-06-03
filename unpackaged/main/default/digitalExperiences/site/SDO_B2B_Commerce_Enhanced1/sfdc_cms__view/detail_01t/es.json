@@ -1,0 +1,125 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "N.º de SKU",
+          "productDetailSummaryFieldMapping" : "[]"
+        },
+        "id" : "e0f84547-706a-4483-a77d-1529ee974eb1"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Name}"
+        },
+        "id" : "96d5a1f5-cee2-4db0-852f-5c717f928bfc"
+      }, {
+        "attributes" : {
+          "text" : "Opciones de producto:"
+        },
+        "id" : "22055388-e12e-46f1-a69a-a6f7d05b1a63"
+      }, {
+        "attributes" : {
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "slot3PriceLabel" : "Precio final",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "e18e861a-f9c4-42c3-a428-652748e032c5"
+      }, {
+        "attributes" : {
+          "discountRowLabel" : "Descuentos por unidad",
+          "quantityRowLabel" : "Cantidad"
+        },
+        "id" : "67ed3ea0-21fd-4f98-af60-202c939d105c"
+      }, {
+        "attributes" : {
+          "text" : "Descuentos de nivel"
+        },
+        "id" : "b042ed05-fdbf-4695-b95c-762c62795222"
+      }, {
+        "attributes" : {
+          "text" : "Compra única"
+        },
+        "id" : "2cbeff91-a3db-4814-94f0-81891e736104"
+      }, {
+        "attributes" : {
+          "text" : "Suscribir"
+        },
+        "id" : "3ad9339f-e26a-4b67-923f-fd9c774c2061"
+      }, {
+        "attributes" : {
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "slot3PriceLabel" : "Precio final",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "20a6b091-ca1f-4bd9-9d54-d8e723c1eaee"
+      }, {
+        "attributes" : {
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "slot3PriceLabel" : "Precio final",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "7228d178-31c1-4e56-98e9-de17610f5486"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.ProductSellingModels.oneTimeDescription}"
+        },
+        "id" : "55d3216e-0f16-49c1-9c57-058dad2e5d2a"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.ProductSellingModels.subscribeDescription}"
+        },
+        "id" : "53626158-faaa-4c46-947b-c0f72d512301"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "addToListButtonText" : "Añadir a la lista",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Fuera de stock",
+          "quantitySelectorLabel" : "CANT."
+        },
+        "id" : "49ae5574-e32b-4bcc-ad18-71b3448ce9d1"
+      }, {
+        "attributes" : {
+          "text" : "La cantidad mínima es {!Product.Details.purchaseQuantityRule.minimum} • La cantidad máxima es {!Product.Details.purchaseQuantityRule.maximum} • Vendido en incrementos de {!Product.Details.purchaseQuantityRule.increment}"
+        },
+        "id" : "39ac765a-9dba-4ba7-ad82-a354a20122b1"
+      }, {
+        "attributes" : {
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "outOfStockText" : "Fuera de stock",
+          "quantitySelectorLabel" : "CANT.",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "b03abcb4-d1c0-43e3-ac9f-76b4fa744648"
+      }, {
+        "attributes" : {
+          "text" : "Compra única"
+        },
+        "id" : "c1d97d69-ac11-4599-92e3-8fe86ad18c71"
+      }, {
+        "attributes" : {
+          "text" : "Suscribir"
+        },
+        "id" : "8eabd71a-2326-46f8-99f5-839cbaed2177"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "e57b8e29-56fc-40a1-b9da-22245f0e23e7"
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__VJ_Status_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>VJ_Status_Date</label>
+    <length>200</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

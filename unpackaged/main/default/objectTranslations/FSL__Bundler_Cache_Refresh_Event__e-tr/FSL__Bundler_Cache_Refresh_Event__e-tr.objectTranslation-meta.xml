@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayları --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayım --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarım --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınız --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınız --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayını --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarını --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayımı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarımı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınızı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınızı --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayının --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarının --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayımın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarımın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınızın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınızın --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayına --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarına --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayıma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarıma --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınıza --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınıza --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayından --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarından --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayımdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarımdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınızdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınızdan --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayında --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarında --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayımda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarımda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olayınızda --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- Paket Oluşturucu Önbelleği Yenileme Olaylarınızda --></value>
+    </caseValues>
+    
+</CustomObjectTranslation>

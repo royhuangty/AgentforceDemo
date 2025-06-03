@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Returns true when the current user&apos;s associated account is the same as for the channel plan. Used in Partner Central for list view visibility. --></help>
+        <label><!-- My Company&apos;s Channel Plan --></label>
+        <name>My_Company_s_Channel_Plan__c</name>
+    </CustomFieldTranslation>

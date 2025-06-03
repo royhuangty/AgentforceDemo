@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>AccountId</field>
+        <formula>WorkOrder.AccountId</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>CloseDate</field>
+        <formula>Today() + 90</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StageName</field>
+        <literalValue>Qualification</literalValue>
+    </fieldOverrides>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Description</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>StageName</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>AccountId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <standardLabel>New</standardLabel>
+    <successMessage>Opportunity created</successMessage>
+    <targetObject>Opportunity</targetObject>
+    <targetParentField>SDO_SFS_Work_Order__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

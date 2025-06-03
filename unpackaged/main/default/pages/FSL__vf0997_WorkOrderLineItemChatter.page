@@ -1,0 +1,99 @@
+<apex:page standardController="WorkOrderLineItem" sidebar="false" lightningStylesheets="true" showHeader="false" >
+
+    <apex:includeScript value="{!$Resource.FSL__jQuery}"/>
+
+
+    <script>
+        $(function () {
+
+            $('.btn').hide();
+
+
+            if (window.parent.sforce.console.isInConsole()) {
+
+                var allLinks = $('a');
+
+                for (var i = 0; i < allLinks.length; i++) {
+
+                    if (allLinks[i].href.indexOf('javascript:') > -1) {
+                        continue;
+                    }
+
+                    (function (j) {
+                        $(allLinks[j]).on('click', {url: $(allLinks[j]).attr('href')}, function (e) {
+                            e.preventDefault();
+                            window.parent.openConsoleTabFromModal(e.data.url);
+                            return;
+                        });
+
+                    }(i));
+
+                }
+
+                return;
+                
+            }
+
+
+            updateTargets();
+
+            var mo = new MutationObserver(updateTargets),
+                target = document.getElementById('feedwrapper'),
+                config = { subtree: true, childList: true };
+
+            mo.observe(target, config);
+
+        });
+
+
+        function updateTargets() {
+
+            $('a').each(function (i, elem) {
+
+                if (elem.attributes.href.value.indexOf('javascript:') === -1 ) {
+                    elem.target = '_blank';
+                } 
+                
+            });
+
+            $('a').on('mouseover', function (ev) {
+
+                if (this.attributes.href.value.indexOf('javascript:') === -1 ) {
+                    this.target = '_blank';
+                } 
+
+            });
+        }
+
+
+        window.navigateToUrl = function(url) {
+            if (window.parent.sforce.console.isInConsole()) {
+                window.parent.openConsoleTabFromModal(e.data.url);
+            } else {
+                window.open(url);
+            }
+        }
+    </script>
+
+        <chatter:feed entityId="{!WorkOrderLineItem.Id}"/>
+
+
+    <style>
+        .feedcontainer {
+            max-width: 675px !important;
+        }
+
+        .publisherFeedItemTypeChoice .zen-options a {
+            padding-bottom: 17px !important;
+            font-size: 12px;
+        }
+
+        .shadowDiv {
+            display: none;
+        }
+
+
+    </style>
+
+
+</apex:page>

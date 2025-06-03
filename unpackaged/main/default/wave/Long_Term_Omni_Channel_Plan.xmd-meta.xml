@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.A</field>
+        <formatCustomFormat>[&quot;#,###.#&quot;,1]</formatCustomFormat>
+        <formatDecimalSeparator>.</formatDecimalSeparator>
+        <formatThousandsSeparator>,</formatThousandsSeparator>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(19, 66, 118)</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Aggregated_Chart.A</field>
+        <formatCustomFormat>[&quot;#,###.#&quot;,1]</formatCustomFormat>
+        <formatDecimalSeparator>.</formatDecimalSeparator>
+        <formatThousandsSeparator>,</formatThousandsSeparator>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Long_Term_Omni_Channel_Plan</waveVisualization>
+</WaveXmd>

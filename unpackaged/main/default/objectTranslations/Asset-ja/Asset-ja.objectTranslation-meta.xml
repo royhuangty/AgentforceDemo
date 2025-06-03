@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Search Filters --></label>
+        <name>SBQQ__SearchFilters</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Search Results --></label>
+        <name>SBQQ__SearchResults</name>
+    </fieldSets>
+    <layouts>
+        <layout>SDO - Asset</layout>
+        <sections>
+            <label><!-- Asset Performance --></label>
+            <section>Asset Performance</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Work Order --></label>
+        <name>SDO_SFS_CreateWorkOrder</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>SDO_Service_CreateCase</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+</CustomObjectTranslation>

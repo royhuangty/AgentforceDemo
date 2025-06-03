@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Allocation de note de débit (ligne de note de crédit)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Allocations de note de débit (ligne de note de crédit)</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
+        <sections>
+            <label>Règles et traitements de facturation</label>
+            <section>Billing Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Règles et traitements fiscaux</label>
+            <section>Tax Rules and Treatments</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Allocation de note de débit (ligne de no</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

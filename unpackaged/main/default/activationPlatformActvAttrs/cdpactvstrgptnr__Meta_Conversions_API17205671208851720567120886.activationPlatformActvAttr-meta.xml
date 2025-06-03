@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__Meta_Conversions_API</activationPlatform>
+    <actvPlatformAdncIdentifier>cdpactvstrgptnr__Meta_Conversions_API172056712088517205671208861720567120887</actvPlatformAdncIdentifier>
+    <destinationName>ph</destinationName>
+    <fieldName>not yet mapped</fieldName>
+    <isFromSourceObject>false</isFromSourceObject>
+    <isRequired>false</isRequired>
+    <masterLabel>Phone Number</masterLabel>
+    <objectName>E164 Phone Number</objectName>
+</ActivationPlatformActvAttr>

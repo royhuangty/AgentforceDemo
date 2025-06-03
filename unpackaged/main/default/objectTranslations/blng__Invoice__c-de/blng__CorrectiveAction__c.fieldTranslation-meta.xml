@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Corrective Action (Payment Run) --></label>
+        <name>blng__CorrectiveAction__c</name>
+        <picklistValues>
+            <masterLabel>Action Required</masterLabel>
+            <translation>Aktion erforderlich</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

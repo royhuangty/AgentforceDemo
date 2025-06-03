@@ -1,0 +1,5 @@
+<design:component label="Einstein Discovery - Opportunity (SDO_Einstein_Discovery_Oppty)">
+	<sfdc:objects>
+        <sfdc:object>Opportunity</sfdc:object>
+    </sfdc:objects>
+</design:component>

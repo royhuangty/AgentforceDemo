@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CspTrustedSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canAccessCamera>false</canAccessCamera>
+    <canAccessMicrophone>false</canAccessMicrophone>
+    <context>Communities</context>
+    <description>Add https://ka-f.fontawesome.com and https://kit.fontawesome.com to Setup / CSP Trusted Sites and Allow site for connect-src, font-src, and style-src.</description>
+    <endpointUrl>*.fontawesome.com</endpointUrl>
+    <isActive>true</isActive>
+    <isApplicableToConnectSrc>true</isApplicableToConnectSrc>
+    <isApplicableToFontSrc>true</isApplicableToFontSrc>
+    <isApplicableToFrameSrc>false</isApplicableToFrameSrc>
+    <isApplicableToImgSrc>false</isApplicableToImgSrc>
+    <isApplicableToMediaSrc>false</isApplicableToMediaSrc>
+    <isApplicableToStyleSrc>true</isApplicableToStyleSrc>
+</CspTrustedSite>

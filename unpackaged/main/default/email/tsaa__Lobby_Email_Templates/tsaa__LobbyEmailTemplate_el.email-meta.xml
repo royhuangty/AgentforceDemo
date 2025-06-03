@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-el</name>
+    <style>none</style>
+    <subject>Πρόσκληση Απομακρυσμένου Οπτικού Βοηθού</subject>
+    <textOnly>Γεια σας,
+Έχει προγραμματιστεί μια διαδικτυακή εξ αποστάσεως συνάντηση για εσάς
+Κάντε κλικ στο κουμπί «Συμμετοχή» για να δείτε τις λεπτομέρειες της συνάντησης και να εισέλθετε στη συνάντηση.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

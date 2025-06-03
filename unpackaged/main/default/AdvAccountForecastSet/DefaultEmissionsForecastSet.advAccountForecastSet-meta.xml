@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvAccountForecastSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accountFieldName>AccountId</accountFieldName>
+    <calculationFrequency>Monthly</calculationFrequency>
+    <description>Sample Forecast Set for Emissions Forecasting</description>
+    <dimensions>
+        <advAcctForecastDimName>Emissions Activity</advAcctForecastDimName>
+        <dimensionFieldName>EmissionsActivityId</dimensionFieldName>
+        <dimensionSourceName>DefaultEmissionsForecastDimensionSource</dimensionSourceName>
+        <hierarchySequenceNumber>1</hierarchySequenceNumber>
+    </dimensions>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>Key Measures</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>KeyMeasures0</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Revenue</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>KeyMeasures1</advAcctFrcstDplyGroupItemName>
+            <displayOrder>1</displayOrder>
+            <measureReferenceName>Target Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>KeyMeasures2</advAcctFrcstDplyGroupItemName>
+            <displayOrder>2</displayOrder>
+            <measureReferenceName>Actual Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>KeyMeasures3</advAcctFrcstDplyGroupItemName>
+            <displayOrder>3</displayOrder>
+            <measureReferenceName>Final Forecasted Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>false</isDefault>
+    </displayGroups>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>Scope 2 Emissions Related Measures</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures0</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Revenue</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures1</advAcctFrcstDplyGroupItemName>
+            <displayOrder>1</displayOrder>
+            <measureReferenceName>Total Floor Area (sqft)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures2</advAcctFrcstDplyGroupItemName>
+            <displayOrder>2</displayOrder>
+            <measureReferenceName>Target Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures3</advAcctFrcstDplyGroupItemName>
+            <displayOrder>3</displayOrder>
+            <measureReferenceName>Actual Market-Based Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures4</advAcctFrcstDplyGroupItemName>
+            <displayOrder>4</displayOrder>
+            <measureReferenceName>Actual Location-Based Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures5</advAcctFrcstDplyGroupItemName>
+            <displayOrder>5</displayOrder>
+            <measureReferenceName>Actual Energy Consumption (kWh)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures6</advAcctFrcstDplyGroupItemName>
+            <displayOrder>6</displayOrder>
+            <measureReferenceName>Actual Renewable Energy Consumption Percentage</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures7</advAcctFrcstDplyGroupItemName>
+            <displayOrder>7</displayOrder>
+            <measureReferenceName>Forecasted Renewable Energy Consumption Percentage</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures8</advAcctFrcstDplyGroupItemName>
+            <displayOrder>8</displayOrder>
+            <measureReferenceName>Forecasted Energy Consumption (kWh)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures9</advAcctFrcstDplyGroupItemName>
+            <displayOrder>9</displayOrder>
+            <measureReferenceName>Forecasted Market-Based Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures10</advAcctFrcstDplyGroupItemName>
+            <displayOrder>10</displayOrder>
+            <measureReferenceName>Forecasted Location-Based Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Scope2EmissionsRelatedMeasures11</advAcctFrcstDplyGroupItemName>
+            <displayOrder>11</displayOrder>
+            <measureReferenceName>Final Forecasted Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>false</isDefault>
+    </displayGroups>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>Net Zero Related Measures</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures0</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Revenue</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures1</advAcctFrcstDplyGroupItemName>
+            <displayOrder>1</displayOrder>
+            <measureReferenceName>Target Compensated Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures2</advAcctFrcstDplyGroupItemName>
+            <displayOrder>2</displayOrder>
+            <measureReferenceName>Final Forecasted Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures3</advAcctFrcstDplyGroupItemName>
+            <displayOrder>3</displayOrder>
+            <measureReferenceName>Required Carbon Credits (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures4</advAcctFrcstDplyGroupItemName>
+            <displayOrder>4</displayOrder>
+            <measureReferenceName>Carbon Credits Cost (USD per tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>NetZeroRelatedMeasures5</advAcctFrcstDplyGroupItemName>
+            <displayOrder>5</displayOrder>
+            <measureReferenceName>Required Carbon Credits Investment</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>false</isDefault>
+    </displayGroups>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>Forecast Calculation Measures</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures0</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Revenue</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures1</advAcctFrcstDplyGroupItemName>
+            <displayOrder>1</displayOrder>
+            <measureReferenceName>Target Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures2</advAcctFrcstDplyGroupItemName>
+            <displayOrder>2</displayOrder>
+            <measureReferenceName>Actual Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures3</advAcctFrcstDplyGroupItemName>
+            <displayOrder>3</displayOrder>
+            <measureReferenceName>Actual Emissions Intensity</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures4</advAcctFrcstDplyGroupItemName>
+            <displayOrder>4</displayOrder>
+            <measureReferenceName>Forecasted Emissions Intensity Reduction Percentage</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures5</advAcctFrcstDplyGroupItemName>
+            <displayOrder>5</displayOrder>
+            <measureReferenceName>Forecasted Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures6</advAcctFrcstDplyGroupItemName>
+            <displayOrder>6</displayOrder>
+            <measureReferenceName>Planned Operational Emissions Reduction (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures7</advAcctFrcstDplyGroupItemName>
+            <displayOrder>7</displayOrder>
+            <measureReferenceName>Planned Supplier Emissions Reduction (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>ForecastCalculationMeasures8</advAcctFrcstDplyGroupItemName>
+            <displayOrder>8</displayOrder>
+            <measureReferenceName>Final Forecasted Emissions (tCO2e)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>true</isDefault>
+    </displayGroups>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>365</adjustmentDayCount>
+        <frequency>Year</frequency>
+        <profileName>admin</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastFactObjectName>EmissionsForecastFact</forecastFactObjectName>
+    <forecastPeriodGroupName>DefaultEmissionsForecastPeriodGroup</forecastPeriodGroupName>
+    <forecastRevenueFieldName>Revenue</forecastRevenueFieldName>
+    <forecastSetFieldName>AdvAcctForecastSetPartnerId</forecastSetFieldName>
+    <forecastSetName>Sample Emissions Forecast Set</forecastSetName>
+    <forecastStatusFieldName>Status</forecastStatusFieldName>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Revenue</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>Revenue</forecastDataMeasureName>
+        <forecastMeasureName>Revenue</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Headcount</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>Headcount</forecastDataMeasureName>
+        <forecastMeasureName>Headcount</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Target Compensated Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>TargetCompensatedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Target Compensated Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Total Floor Area (sqft)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>TotalFloorArea</forecastDataMeasureName>
+        <forecastMeasureName>Total Floor Area (sqft)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Procurement Spend</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>ProcurementSpend</forecastDataMeasureName>
+        <forecastMeasureName>Procurement Spend</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Target Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>TargetEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Target Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Target Renewable Energy Percentage</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>TargetRenewableEnergyPct</forecastDataMeasureName>
+        <forecastMeasureName>Target Renewable Energy Percentage</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Actual Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Market-Based Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualMarketBasedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Actual Market-Based Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Location-Based Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualLocationBasedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Actual Location-Based Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Energy Consumption (kWh)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualEnergyConsumption</forecastDataMeasureName>
+        <forecastMeasureName>Actual Energy Consumption (kWh)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Renewable Energy Consumption Percentage</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualRenewableEnergyCnsmpPct</forecastDataMeasureName>
+        <forecastMeasureName>Actual Renewable Energy Consumption Percentage</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Actual Emissions Intensity</advAcctForecastMeasureDefName>
+        <aggregationType>AVERAGE</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ActualEmissionsIntensity</forecastDataMeasureName>
+        <forecastMeasureName>Actual Emissions Intensity</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Renewable Energy Consumption Percentage</advAcctForecastMeasureDefName>
+        <aggregationType>AVERAGE</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>ForcstRenewableEnergyCnsmpPct</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Renewable Energy Consumption Percentage</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Energy Consumption (kWh)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedEnergyConsumption</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Energy Consumption (kWh)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Market-Based Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedMarketBasedEmssn</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Market-Based Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Location-Based Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedLocationBasedEmssn</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Location-Based Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Emissions Intensity Reduction Percentage</advAcctForecastMeasureDefName>
+        <aggregationType>AVERAGE</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>ForcstEmssnIntensityRdctnPct</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Emissions Intensity Reduction Percentage</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Emissions Override (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>ForecastedEmissionsOverride</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Emissions Override (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Planned Operational Emissions Reduction (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>PlnOperationalEmissionsRdctn</forecastDataMeasureName>
+        <forecastMeasureName>Planned Operational Emissions Reduction (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Planned Supplier Emissions Reduction (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>PlnSupplierEmissionsRdctn</forecastDataMeasureName>
+        <forecastMeasureName>Planned Supplier Emissions Reduction (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Final Forecasted Emissions (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>FinalForecastedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Final Forecasted Emissions (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecasted Emissions Intensity</advAcctForecastMeasureDefName>
+        <aggregationType>AVERAGE</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedEmissionsIntensity</forecastDataMeasureName>
+        <forecastMeasureName>Forecasted Emissions Intensity</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Required Carbon Credits (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>RequiredCarbonCredits</forecastDataMeasureName>
+        <forecastMeasureName>Required Carbon Credits (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Planned Carbon Credits (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>PlannedCarbonCredits</forecastDataMeasureName>
+        <forecastMeasureName>Planned Carbon Credits (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Net Emissions Forecast (tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>NetEmissionsForecast</forecastDataMeasureName>
+        <forecastMeasureName>Net Emissions Forecast (tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Carbon Credits Cost (USD per tCO2e)</advAcctForecastMeasureDefName>
+        <aggregationType>AVERAGE</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>CarbonCreditCost</forecastDataMeasureName>
+        <forecastMeasureName>Carbon Credits Cost (USD per tCO2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Required Carbon Credits Investment</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>RequiredCarbonCreditsInvst</forecastDataMeasureName>
+        <forecastMeasureName>Required Carbon Credits Investment</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Planned Carbon Credits Investment</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>PlannedCarbonCreditsInvst</forecastDataMeasureName>
+        <forecastMeasureName>Planned Carbon Credits Investment</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Other Application Forecasted Emissions (tCo2e)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>OtherApplnForecastedEmissions</forecastDataMeasureName>
+        <forecastMeasureName>Other Application Forecasted Emissions (tCo2e)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <periodFieldName>PeriodId</periodFieldName>
+    <rolloverFrequency>Yearly</rolloverFrequency>
+    <status>Inactive</status>
+</AdvAccountForecastSet>

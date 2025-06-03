@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cuando está marcada, compara Tamaño de plantilla mínimo en la orden de trabajo o en la partida con miembros de plantilla de servicio disponibles. 
+En caso contrario, compara Tamaño de plantilla mínimo con Tamaño de plantilla en Plantilla de servicio.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

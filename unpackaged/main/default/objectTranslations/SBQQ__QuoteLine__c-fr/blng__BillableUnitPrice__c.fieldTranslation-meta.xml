@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le montant non proraté facturé à chaque période de facturation. Égal à ((Prix total * Fréquence de facturation) / (Multiplicateur au prorata * Durée d&#39;abonnement par défaut)).</help>
+        <label><!-- Billable Unit Price --></label>
+        <name>blng__BillableUnitPrice__c</name>
+    </CustomFieldTranslation>

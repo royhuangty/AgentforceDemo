@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Pesquisa na Regra GL de imposto desta linha</help>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Debit Note Lines (Tax GL Rule) --></relationshipLabel>
+    </CustomFieldTranslation>

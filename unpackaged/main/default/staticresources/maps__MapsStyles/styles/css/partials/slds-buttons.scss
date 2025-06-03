@@ -1,0 +1,179 @@
+.slds-scope {
+    .slds-button__icon {
+        &.ma-icon, > .ma-icon {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &.slds-button__icon--large {
+            &.ma-icon {
+                font-size: 24px;
+            }
+        }
+    }
+    div.slds-button__icon, div.slds-button_icon {
+        > .ma-icon {
+            display: block;
+            margin: 8px auto;
+        }
+    }
+
+    .slds-button_icon {
+        div.slds-button__icon {
+            margin: 0 auto;
+        }
+
+        &.slds-button_icon-large-icon {
+            div.slds-button__icon {
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .slds-button--icon-border {
+        .ma-icon {
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .slds-button {
+        &.slds-button_stretch {
+            width: 100%;
+        }
+
+        .slds-button__icon--left, .slds-button__icon_left {
+            &.ma-icon {
+                height: 14px;
+                width: 14px;
+                float: left;
+                margin-top: 8px;
+                line-height: 1;
+            }
+        }
+
+        &.slds-button--small {
+            min-height: 0;
+            line-height: 1.4;
+            padding: 4px 12px;
+
+            .slds-button__icon {
+                &.slds-button__icon--right {
+                    float: right;
+                    margin-top: 1px;
+                }
+            }
+        }
+
+        &.slds-button--success {
+            color: #fff;
+
+            &[disabled] {
+                opacity: .5;
+                pointer-events: none;
+            }
+        }
+
+        &.slds-button--shadow {
+            border-color: transparent;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.32);
+        }
+
+        &.slds-button_brand {
+            background-color: $color-brand-dark;
+            border-color: $color-brand-dark;
+
+            &.disabled, &.slds-button[disabled] {
+                opacity: .5;
+                pointer-events: none;
+
+                &:hover {
+                    background: $gray;
+                    border-color: transparent;
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                background-color: $color-brand-darker;
+                border-color: $color-brand-darker;
+            }
+        }
+
+        &.slds-button_neutral {
+            &.disabled {
+                opacity: .5;
+                pointer-events: none;
+            }
+        }
+
+        &.no-focus-styling {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        &.slds-button_inverse-hint-compact {
+            padding-left: 4px;
+            padding-right: 4px;
+            color: $transparent-white-75;
+
+            &:hover {
+                background-color: $color-background-inverse-hover;
+                color: #fff;
+            }
+
+            &:active {
+                background-color: $color-background-inverse;
+                color: #fff;
+            }
+
+            &:focus {
+                color: $transparent-white-75;
+            }
+
+            &.slds-button_icon {
+                height: 32px;
+            }
+        }
+    }
+
+    .slds-button.slds-button_success {
+        &[disabled] {
+            color: #16325c;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+
+    .slds-button {
+
+        &.slds-button_subtle {
+            color: $color-text-icon-default;
+
+            &:hover {
+                color: $color-text-link-hover;
+            }
+        }
+
+        .slds-button__icon_right {
+            display: block;
+            float:right;
+            margin-top: 8px;
+
+            &::before {
+                display: block;
+            }
+        }
+
+
+        &.slds-button_stateful {
+            &.slds-button_neutral {
+                border: 1px solid $color-border;
+            }
+        }
+    }
+}

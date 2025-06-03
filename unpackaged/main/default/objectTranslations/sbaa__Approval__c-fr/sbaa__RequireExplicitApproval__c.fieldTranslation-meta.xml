@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Par défaut, une Approbation approuve automatiquement toutes les autres approbations attribuées au même utilisateur. Si cette case est cochée, une approbation déclenchée par cette règle n&#39;est pas automatiquement approuvée, mais doit être explicitement approuvée.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </CustomFieldTranslation>

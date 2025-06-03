@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Field on quote object that controls whether this column prints on generated PDF document. --></help>
+        <label><!-- Conditional Print Field --></label>
+        <name>SBQQ__ConditionalPrintField__c</name>
+        <picklistValues>
+            <masterLabel>Group Line Items</masterLabel>
+            <translation><!-- Group Line Items --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Brand --></label>
+        <name>SDO_SCOM_Brand__c</name>
+        <picklistValues>
+            <masterLabel>Cirrus</masterLabel>
+            <translation><!-- Cirrus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LuminaSol</masterLabel>
+            <translation><!-- LuminaSol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PhotonPower</masterLabel>
+            <translation><!-- PhotonPower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolarWave</masterLabel>
+            <translation><!-- SolarWave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StarVolt</masterLabel>
+            <translation><!-- StarVolt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SunFusion</masterLabel>
+            <translation><!-- SunFusion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SunSavvy</masterLabel>
+            <translation><!-- SunSavvy --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

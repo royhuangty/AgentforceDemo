@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If this quote is not tied to an opportunity with a price book, this stores the price book ID for the quote. --></help>
+        <label><!-- Pricebook Id --></label>
+        <name>SBQQ__PricebookId__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ha be van jelölve, a szervizek közötti időköz az időköz minimális értékét tartalmazó mezőn fog alapulni az utazási számítások figyelembe vétele nélkül.</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

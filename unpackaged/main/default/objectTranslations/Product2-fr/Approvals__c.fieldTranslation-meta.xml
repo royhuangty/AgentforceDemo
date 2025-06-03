@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Approvals --></label>
+        <name>Approvals__c</name>
+        <picklistValues>
+            <masterLabel>ETL</masterLabel>
+            <translation><!-- ETL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UL</masterLabel>
+            <translation><!-- UL --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

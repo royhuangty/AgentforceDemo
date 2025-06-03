@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Número de telefone do endereço de faturamento do cartão</help>
+        <label><!-- Phone Number --></label>
+        <name>blng__BillingPhone__c</name>
+    </CustomFieldTranslation>

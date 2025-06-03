@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuração de usuário</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configurações de usuário</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>User Setting Layout</layout>
+        <sections>
+            <label>Filtros personalizados</label>
+            <section>Custom Filters</section>
+        </sections>
+        <sections>
+            <label>Preferências Gantt</label>
+            <section>Gantt Preferences</section>
+        </sections>
+        <sections>
+            <label>Preferências de arrastar e soltar indisp.</label>
+            <section>NA Drag&amp;Drop Preferences</section>
+        </sections>
+        <sections>
+            <label>Preferências da lista de serviço</label>
+            <section>Service List Prefernces</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da configuração do usuário</nameFieldLabel>
+</CustomObjectTranslation>

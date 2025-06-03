@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Salesforce Maps Advanced Route Completed</name>
+    <style>none</style>
+    <subject>{!JSENCODE($Label.maps__mapAnythingGuideRouteIsDoneGenerating)}</subject>
+    <textOnly>{!JSENCODE($Label.maps__yourMapAnythingGuideRouteIsDoneGenerating)}
+
+{!JSENCODE($Label.maps__templateCap)}:
+{!maps__AdvRouteTemplate__c.Name} 
+
+{!JSENCODE($Label.maps__processingDate)}:
+{!maps__AdvRouteTemplateUser__c.maps__DateProcessing__c} 
+
+{!JSENCODE($Label.maps__ifYouWantToMakeEdits)}:
+https://maps.na30.visual.force.com/apex/maps__AdvRouteRep</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Revenu qui n&#39;a pas encore été comptabilisé dans le calendrier de revenu.</help>
+        <label><!-- Deferred --></label>
+        <name>blng__Deferred__c</name>
+    </CustomFieldTranslation>

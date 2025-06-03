@@ -1,0 +1,359 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "10d78202-4bdd-4896-868a-16d3f221fc23",
+  "label" : "Cart",
+  "regions" : [ {
+    "id" : "69a1ad69-295b-4dff-add3-2cd8ec9b32cc",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.Yellow_Header.1}\" alt=\"\"></h1>\n<h1 style=\"text-align: center;\">THANK YOU FOR BEING SUCH A GREAT CUSTOMER</h1>\n<p style=\"text-align: center;\"><br></p>\n<h3 style=\"text-align: center;\">You have been awarded of a special 10% discount on all our Wind Systems products.</h3>\n<h3 style=\"text-align: center;\">Just use the coupon code</h3>\n<h1 style=\"text-align: center;\"><span style=\"color: rgb(0, 102, 204);\">WIND2022</span></h1>\n<h3 style=\"text-align: center;\">to immediately get the discount!</h3>\n<p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "b5f5f6d8-73e1-4c92-a5bd-b86e6ccfaf73",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "cartCountDisplay" : "TotalProductCount",
+        "discountAmountFontColor" : "rgb(46, 132, 74)",
+        "emptyCartBodyLabel" : "Search or browse products, and add them to your cart. Your selections appear here.",
+        "emptyCartHeaderLabel" : "Your cart’s empty",
+        "incrementValueGuideText" : "Sold in increments of {0}",
+        "maximumValueGuideText" : "Maximum quantity is {0}",
+        "minimumValueGuideText" : "Minimum quantity is {0}",
+        "negotiatedPriceFontColor" : "rgb(79,79,79)",
+        "negotiatedPriceFontSize" : "large",
+        "originalPriceFontColor" : "rgb(151, 151, 151)",
+        "originalPriceFontSize" : "small",
+        "productFieldMapping" : "",
+        "promotionsAppliedDetailsFontSize" : "small",
+        "promotionsAppliedDetailsNameTextColor" : "rgb(79,79,79)",
+        "promotionsAppliedDetailsPopoverHeaderText" : "Promotions Applied",
+        "promotionsAppliedSavingsButtonBackgroundColor" : "rgb(46, 132, 74)",
+        "promotionsAppliedSavingsButtonBackgroundHoverColor" : "rgb(46, 132, 74)",
+        "promotionsAppliedSavingsButtonBorderColor" : "rgb(46, 132, 74)",
+        "promotionsAppliedSavingsButtonBorderRadius" : "5",
+        "promotionsAppliedSavingsButtonFontSize" : "small",
+        "promotionsAppliedSavingsButtonPadding" : "3",
+        "promotionsAppliedSavingsButtonText" : "Saved {amount}",
+        "promotionsAppliedSavingsButtonTextColor" : "",
+        "promotionsAppliedSavingsButtonTextHoverColor" : "",
+        "quantitySelectorLabel" : "QTY",
+        "showAddAllToListButton" : true,
+        "showDiscountAmount" : true,
+        "showNegotiatedPrice" : true,
+        "showOriginalPrice" : true,
+        "showPricePerUnit" : true,
+        "showProductImage" : true,
+        "showPromotions" : true,
+        "showSku" : true,
+        "showTermsAndConditions" : true,
+        "skuLabel" : "SKU#",
+        "termsAndConditionsTitleText" : "Terms and Conditions"
+      },
+      "componentName" : "b2b_buyer_builder:cartContents",
+      "id" : "b9c88c35-2de2-4b72-ac74-0a068b1c9973",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "999b9c13-ea23-4347-bc5a-95d642b8f7e5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "ACTIVE PROMOTION",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "53d47724-fb36-4f25-b648-771b48fd4f40",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "config" : { }
+      },
+      "componentName" : "forceCommunity:dynamicCollection",
+      "id" : "1aa5aa11-c852-435a-8116-88d59c75d381",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "appliedPromotionsFontSize" : "medium",
+        "appliedPromotionsTextColor" : "rgb(79,79,79)",
+        "appliedPromotionsTitleFontSize" : "medium",
+        "appliedPromotionsTitleText" : "Promotions",
+        "appliedPromotionsTitleTextColor" : "rgb(79,79,79)",
+        "backgroundColor" : "rgb(241, 241, 241)",
+        "discountAmountTextColor" : "rgb(79,79,79)",
+        "showDiscountAmount" : true,
+        "showTermsAndConditions" : true,
+        "termsAndConditionsTitleText" : "Terms and Conditions"
+      },
+      "componentName" : "b2b_buyer_builder:cartAppliedPromotions",
+      "id" : "d77ad926-6e53-4e15-8582-234a449084dd",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundColor" : "rgb(241, 241, 241)",
+        "discountAmountFontColor" : "",
+        "discountAmountFontSize" : "small",
+        "finalPriceFontColor" : "rgb(79,79,79)",
+        "finalPriceFontSize" : "large",
+        "originalPriceFontColor" : "",
+        "originalPriceFontSize" : "small",
+        "showDiscountAmount" : true,
+        "showOriginalPrice" : true,
+        "showSubtotalPrice" : false,
+        "subtotalPriceFontColor" : "rgb(79,79,79)",
+        "subtotalPriceFontSize" : "small"
+      },
+      "componentName" : "b2b_buyer_builder:cartSummary",
+      "id" : "8595f709-887e-4f90-a5b5-5a801889e836",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "appliedCouponsFontSize" : "medium",
+        "appliedCouponsTextColor" : "rgb(79,79,79)",
+        "applyCouponButtonBackgroundColor" : "",
+        "applyCouponButtonBackgroundHoverColor" : "",
+        "applyCouponButtonBorderColor" : "",
+        "applyCouponButtonBorderRadius" : "0",
+        "applyCouponButtonText" : "Apply",
+        "applyCouponButtonTextColor" : "",
+        "applyCouponButtonTextHoverColor" : "",
+        "backgroundColor" : "rgb(241, 241, 241)",
+        "couponFormPlaceholderText" : "Enter a coupon code...",
+        "couponInputBoxBackgroundColor" : "",
+        "couponInputBoxBorderRadius" : "0",
+        "couponInputBoxTextColor" : "",
+        "revealCouponFormButtonFontSize" : "small",
+        "revealCouponFormButtonText" : "Enter a coupon code",
+        "revealCouponFormButtonTextColor" : "",
+        "showRevealCouponFormButton" : true,
+        "showTermsAndConditions" : true,
+        "termsAndConditionsTitleText" : "Terms and Conditions"
+      },
+      "componentName" : "b2b_buyer_builder:cartAppliedCoupons",
+      "id" : "90b7f4ec-e5c3-42f3-bc39-4c089a401f11",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "buttonAlignment" : "left",
+        "buttonBgColor" : "",
+        "buttonBgHoverColor" : "",
+        "buttonBorderColor" : "",
+        "buttonMaxWidth" : "100",
+        "buttonRadius" : "16",
+        "buttonText" : "Proceed To Checkout",
+        "buttonTextColor" : "",
+        "buttonTextHoverColor" : ""
+      },
+      "componentName" : "b2b_buyer_builder:checkoutButtonWrapper",
+      "id" : "4c99e372-8ce8-4b84-b987-73d98e697299",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e0461e7c-f52a-4aba-8523-14c415567fc8",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "17e2cea3-1a2d-4e7f-82cd-764cb603f08d",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "24661987-8fff-4d5f-b362-cc8301b875a1",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Active Carts"
+          }, {
+            "UUID" : "d4931cd7-06c9-46f6-a886-f5a8206c06a5",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "Quick Order"
+          }, {
+            "UUID" : "4e5a9b52-9a8b-4ee6-ad6f-ee9bf9044904",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "3",
+            "tabName" : "My Favourites"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "17e2cea3-1a2d-4e7f-82cd-764cb603f08d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "cartTypes" : "Restock,Spot Order,Promo,Suggested Order,Customer Service Order",
+            "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}"
+          },
+          "componentName" : "c:b2bleCartSwitcher",
+          "id" : "4887dfe1-36c7-4b25-9563-cbcc6a9f1061",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "24661987-8fff-4d5f-b362-cc8301b875a1",
+        "regionLabel" : "Active Carts",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "addEntryText" : "Add Line",
+            "addToCartButtonBackgroundColor" : "",
+            "addToCartButtonBackgroundHoverColor" : "",
+            "addToCartButtonBorderColor" : "",
+            "addToCartButtonBorderRadius" : "0",
+            "addToCartButtonDisabledBackgroundColor" : "rgb(201, 199, 197)",
+            "addToCartButtonText" : "Add To Cart",
+            "addToCartButtonTextColor" : "",
+            "addToCartButtonTextHoverColor" : "",
+            "numberOfLineItemsToAddEachTime" : 1,
+            "numberOfLineItemsToStart" : 5,
+            "productPlaceholderText" : "Item SKU",
+            "productText" : "Product",
+            "quantityText" : "Quantity",
+            "showAddEntryIcon" : true,
+            "title" : "Quick Order"
+          },
+          "componentName" : "b2b_buyer_builder:quickOrderPage",
+          "id" : "73fe4ff5-1637-4f82-824a-6edbe8da728a",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d4931cd7-06c9-46f6-a886-f5a8206c06a5",
+        "regionLabel" : "Quick Order",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "addAllItemsToCartButtonBackgroundColor" : "",
+            "addAllItemsToCartButtonBackgroundHoverColor" : "",
+            "addAllItemsToCartButtonBorderColor" : "",
+            "addAllItemsToCartButtonBorderRadius" : "0",
+            "addAllItemsToCartButtonText" : "Add All Items To Cart",
+            "addAllItemsToCartButtonTextColor" : "",
+            "addAllItemsToCartButtonTextHoverColor" : "",
+            "addToCartButtonBackgroundColor" : "",
+            "addToCartButtonBackgroundHoverColor" : "",
+            "addToCartButtonBorderColor" : "",
+            "addToCartButtonBorderRadius" : "0",
+            "addToCartButtonText" : "Add To Cart",
+            "addToCartButtonTextColor" : "",
+            "addToCartButtonTextHoverColor" : "",
+            "emptyWishlistItemsBodyLabel" : "Add the products that you want to remember.",
+            "emptyWishlistItemsHeaderLabel" : "No items on this list yet",
+            "emptyWishlistsBodyLabel" : "Create lists of the products that you want to remember.",
+            "emptyWishlistsHeaderLabel" : "No lists yet",
+            "negotiatedPriceFontColor" : "rgb(79,79,79)",
+            "negotiatedPriceFontSize" : "large",
+            "newListButtonText" : "Create List",
+            "originalPriceFontColor" : "rgb(151, 151, 151)",
+            "originalPriceFontSize" : "small",
+            "productFieldMapping" : "",
+            "selectWishlistLabel" : "Click a list to open it.",
+            "showNegotiatedPrice" : true,
+            "showNewListButtonIcon" : true,
+            "showOriginalPrice" : true,
+            "showProductCounts" : true,
+            "showProductImage" : true,
+            "showSku" : true,
+            "skuLabel" : "SKU#",
+            "titleText" : "",
+            "unavailablePriceLabel" : "Price unavailable"
+          },
+          "componentName" : "b2b_buyer_builder:wishlistsManager",
+          "id" : "f959fbe0-e8ac-464c-843f-4d87399351b1",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4e5a9b52-9a8b-4ee6-ad6f-ee9bf9044904",
+        "regionLabel" : "My Favourites",
+        "regionName" : "3",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "allowPrepopulatePrechatFields" : true,
+        "avatarImgURL" : "",
+        "codeSettingsName" : "",
+        "defaultMinimizedText" : "Chat with an Expert",
+        "displayHelpButton" : true,
+        "eswConfigurationJSON" : {
+          "baseCoreURL" : "https://business-customization-3440.my.salesforce.com",
+          "baseLiveAgentContentURL" : "https://c.la1-c1cs-lo2.salesforceliveagent.com/content",
+          "baseLiveAgentURL" : "https://d.la1-c1cs-lo2.salesforceliveagent.com/chat",
+          "buttonId" : "5733G0000008PnV",
+          "deploymentId" : "5723G0000008Pif",
+          "enabledFeatures" : [ "LiveAgent" ],
+          "entryFeature" : "LiveAgent",
+          "eswConfigDevName" : "SDO_B2B_Commerce_Lightning_Bot",
+          "eswConfigId" : "04I3G0000008OcfUAE",
+          "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I3G0000008OcfUAE_1832230a912",
+          "gslbBaseURL" : "https://service.force.com",
+          "isOfflineCasesEnabled" : "0",
+          "orgId" : "00D3G0000001jl3"
+        },
+        "externalScripts" : "",
+        "externalStyles" : "",
+        "fallbackRouting" : "",
+        "offlineSupportMinimizedText" : "Contact Us",
+        "offlineText" : "Agent Offline",
+        "onlineLoadingText" : "Loading",
+        "prechatBackgroundImgURL" : "",
+        "smallCompanyLogoImgURL" : "",
+        "snippetSettingsFile" : "",
+        "storageDomain" : "",
+        "waitingStateBackgroundImgURL" : ""
+      },
+      "componentName" : "forceCommunity:embeddedService",
+      "id" : "4a684a1e-67a3-4a43-b003-c475853d709f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "76efa243-246a-4c73-a728-f42456979c68",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-0a6"
+}

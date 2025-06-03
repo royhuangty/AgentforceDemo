@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSSK__FSK_User_Type_Is_Not_Standard</fullName>
+    <active>true</active>
+    <description>A Field Service Starter Kit package validation rule.
+The validation rules prevent the admin from selecting the Contractor Dispatcher (Community Dispatcher) value if the user record is not of a community type.</description>
+    <errorConditionFormula>AND($Setup.FSSK__FSK_FSL_Starter_Kit__c.FSSK__Create_FSL_Resource_From_User__c,
+NOT(TEXT(Profile.UserType) = &#39;Standard&#39;),
+LEN(TEXT(FSSK__FSK_FSL_Resource_Type__c)) &gt; 1,
+NOT(CONTAINS(TEXT(FSSK__FSK_FSL_Resource_Type__c), &#39;Community&#39;))
+)</errorConditionFormula>
+    <errorDisplayField>FSSK__FSK_FSL_Resource_Type__c</errorDisplayField>
+    <errorMessage>FSSK Package: This SFS Resource Type value should only be used for users with a Salesforce user license</errorMessage>
+</ValidationRule>

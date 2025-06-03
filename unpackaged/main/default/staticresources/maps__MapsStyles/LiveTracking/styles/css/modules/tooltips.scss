@@ -1,0 +1,20 @@
+.has-tooltip {
+    position: relative;
+    
+    .slds-popover_tooltip {
+        display: none;
+        position: absolute;
+    }
+
+    &:hover {
+        .slds-popover_tooltip {
+            display: block;
+        }
+    }
+}
+
+.tooltip-field-help-icon {
+    font-size: 16px;
+    display: block;
+    color: $color-text-icon-default;
+}

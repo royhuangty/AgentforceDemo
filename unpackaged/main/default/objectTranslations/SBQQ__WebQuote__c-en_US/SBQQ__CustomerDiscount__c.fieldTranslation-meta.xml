@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Additional discount extended to the customer on this quote. You&apos;ll be able to override this value at individual line item level. Any line items that don&apos;t have additional discount explicitly specified will default to this value. --></help>
+        <label><!-- Additional  Disc. (%) --></label>
+        <name>SBQQ__CustomerDiscount__c</name>
+    </CustomFieldTranslation>

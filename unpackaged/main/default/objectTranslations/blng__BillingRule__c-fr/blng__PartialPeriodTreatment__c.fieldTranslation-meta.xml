@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Combinez une période de facturation partielle avec la période complète précédente lors de la création d’une ligne de facture ou laissez la période partielle comme une ligne de facture distincte.</help>
+        <label><!-- Partial Period Treatment --></label>
+        <name>blng__PartialPeriodTreatment__c</name>
+    </CustomFieldTranslation>

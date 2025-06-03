@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>B2B Commerce - Abandoned Cart Email</name>
+    <style>none</style>
+    <subject>Your Cart will Expire Soon</subject>
+    <textOnly>Forget something?
+
+You left items in your shopping cart that totals {!WebCart.TotalProductAmount}. Click the button below to complete your order.
+
+View Cart
+
+©2021 Cirrus, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States
+
+You are receiving this email because of your shopping activity at www.Cirrus.com. For information about our privacy practices, see our Privacy Policy.
+
+Web Version | Manage Preferences | Unsubscribe</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

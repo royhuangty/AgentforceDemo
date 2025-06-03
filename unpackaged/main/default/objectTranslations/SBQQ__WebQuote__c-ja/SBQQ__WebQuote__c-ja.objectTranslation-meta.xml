@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Web 見積</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Web Quote Layout</layout>
+        <sections>
+            <label>追加テキスト</label>
+            <section>Additional Text</section>
+        </sections>
+        <sections>
+            <label>割引情報</label>
+            <section>Discount Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>見積番号</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- First Segment Term End Date must fall between Quote Start Date and Quote End Date --></errorMessage>
+        <name>SBQQ__Invalid_First_Segment_Term_End_Date_WQ</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Edit_Lines --></label>
+        <name>SBQQ__Edit_Lines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GenerateDocument --></label>
+        <name>SBQQ__GenerateDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshMultiplePrices --></label>
+        <name>SBQQ__RefreshMultiplePrices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshPrices --></label>
+        <name>SBQQ__RefreshPrices</name>
+    </webLinks>
+</CustomObjectTranslation>

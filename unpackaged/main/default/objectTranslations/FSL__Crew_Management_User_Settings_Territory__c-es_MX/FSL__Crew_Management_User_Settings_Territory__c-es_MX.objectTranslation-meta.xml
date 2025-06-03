@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Territorio de configuración de usuario de Gestión de plantillas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Territorios de configuración de usuarios de Gestión de plantillas</value>
+    </caseValues>
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nombre de Territorio de configuración de</nameFieldLabel>
+</CustomObjectTranslation>

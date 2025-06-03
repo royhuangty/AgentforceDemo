@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Mode de paiement.
+ 1. « Électronique », lorsque les paiements/remboursements sont effectués par l&#39;intermédiaire d&#39;une passerelle de paiement.
+ 2. « Externe », lorsque les paiements/remboursements sont effectués manuellement par paiement en espèces/chèque.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

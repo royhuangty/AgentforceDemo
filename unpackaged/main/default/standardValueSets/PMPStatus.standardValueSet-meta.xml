@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Preparation</fullName>
+        <default>false</default>
+        <label>Preparation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Done</fullName>
+        <default>false</default>
+        <label>Not Done</label>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stopped</fullName>
+        <default>false</default>
+        <label>Stopped</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Entered in error</fullName>
+        <default>false</default>
+        <label>Entered in error</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </standardValue>
+</StandardValueSet>

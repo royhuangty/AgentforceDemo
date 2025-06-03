@@ -1,0 +1,12 @@
+<img src="{!Contact.SDO_URLsrc__c}/servlet/servlet.ImageServer?id=015Hu000004wtzb&oid=00DHu00000QCGcn"><hr width="100%">
+
+Dear {!Contact.FirstName},
+<br><br>
+Thank you for contacting us!  I've closed your case {!Case.CaseNumber} "{!Case.Subject}".  If you have any other questions, please don't hesitate to reply to this email or visit the {!Organization.Name} Community.  
+<br><br>
+We are always looking to improve our customer service, so would you mind taking this brief survey about your experience? <br><br>
+<a href="{!Case.SDO_Survey_URL__c}">Customer Experience Survey</a>
+<br><br>
+Thank you! 
+<br>
+{!Organization.Name} Customer Service

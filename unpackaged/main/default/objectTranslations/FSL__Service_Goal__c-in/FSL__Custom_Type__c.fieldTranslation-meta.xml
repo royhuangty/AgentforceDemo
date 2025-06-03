@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Custom Objective Type --></label>
+        <name>FSL__Custom_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation>Sesegera Mungkin</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Engineer Idle Time</masterLabel>
+            <translation>Minimalkan Waktu Idle Teknisi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Overtime</masterLabel>
+            <translation>Minimalkan Lembur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Travel</masterLabel>
+            <translation>Minimalkan Perjalanan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimize Use Of Elasticity</masterLabel>
+            <translation>Minimalkan Penggunaan Elastisitas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Resource</masterLabel>
+            <translation>Sumber Daya yang Disukai</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority By Distance To Engineer</masterLabel>
+            <translation>Prioritas Berdasarkan Jarak Ke Teknisi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Priority</masterLabel>
+            <translation>Prioritas Sumber Daya</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skill Level</masterLabel>
+            <translation>Tingkat Keterampilan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Priority</masterLabel>
+            <translation>Prioritas Tugas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel From Home Base</masterLabel>
+            <translation>Perjalanan dari Home Base</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

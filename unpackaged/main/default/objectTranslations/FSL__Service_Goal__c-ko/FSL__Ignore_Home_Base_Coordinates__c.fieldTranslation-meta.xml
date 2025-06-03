@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>서비스 자원 홈 기반에서 여행 첫날 및 마지막 날을 여행 고려 사항 최소화에 포함 또는 제외할지 일정 예약을 설정합니다.</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

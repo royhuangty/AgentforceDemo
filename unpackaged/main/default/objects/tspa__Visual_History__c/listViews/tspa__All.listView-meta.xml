@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__All</fullName>
+    <columns>NAME</columns>
+    <columns>tspa__Session_Id__c</columns>
+    <columns>tspa__Session_Type__c</columns>
+    <columns>tspa__Invite_Type__c</columns>
+    <columns>tspa__Started_On_Date__c</columns>
+    <columns>tspa__Started_On__c</columns>
+    <columns>tspa__Session_Date_Time__c</columns>
+    <columns>tspa__Client_Language__c</columns>
+    <columns>tspa__Related_Record_ID__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>All</label>
+</ListView>

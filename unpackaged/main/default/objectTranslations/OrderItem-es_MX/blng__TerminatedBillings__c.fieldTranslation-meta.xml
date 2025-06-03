@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Importe que podría cancelarse en un producto de pedido en base a la fecha de terminación. No puede ser superior al importe de facturación pendiente.</help>
+        <label><!-- Terminated Billing Amount (without tax) --></label>
+        <name>blng__TerminatedBillings__c</name>
+    </CustomFieldTranslation>

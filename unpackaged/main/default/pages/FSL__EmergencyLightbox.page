@@ -1,0 +1,118 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment" extensions="FSL.EmergencyLightboxController">
+
+	<!-- <apex:includeScript value="{!$Resource.jQuery}" />
+	
+	<script>
+		$(function() {
+
+
+			var newServiceId = '{!ServiceAppointment.Id}';
+			var newServiceName = '{!ServiceAppointment.AppointmentNumber}';
+			window.parent.$('#CreateServiceLightboxHeader h1').text('Service ' + newServiceName + ':');
+			
+
+			if (window.parent.sforce.console.isInConsole()) {
+				
+				//window.parent.openConsoleTab()
+				var allLinks = $('a');
+				
+				for (var i=0; i<allLinks.length; i++) {
+					(function(j) {
+						$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+							e.preventDefault();
+							window.parent.openConsoleTabFromModal(e.data.url);
+							return;
+						});
+
+					}(i));
+				}
+					
+				return;
+			}
+
+
+			$('a').attr('target','_blank');
+
+			$('a').on('mouseover',function() {
+				$(this).attr('target','_blank');
+			});
+
+
+			window.navigateToUrl = function(url) {
+				if (window.parent.sforce.console.isInConsole()) {
+					window.parent.openConsoleTabFromModal(e.data.url);
+				} else {
+					window.open(url);
+				}
+			};
+
+			// prevent popups on lookup fields
+			window.LookupHoverDetail.getHover = function() {
+				return {
+					show: function() {},
+					hide: function() {},
+				}
+			};
+
+		});
+
+	</script>
+
+
+	<style>
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+		}
+		
+		input[type=submit] {
+			margin-left: 130px !important;
+			padding: 6px 10px !important;
+		}
+		
+		input[type=submit]:last-child {
+			margin-left: 6px !important;
+		}
+
+		th.labelCol.vfLabelColTextWrap {
+			width: 42% !important;
+			text-align: left;
+		}
+	</style>
+
+
+
+	<apex:form >
+
+		<apex:pageBlock mode="maindetail">
+
+			<apex:pageBlockSection title="{!$Label.Service}" columns="1">
+				<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.Emergency_Current_Service_Fields}" var="d">
+					<apex:outputField value="{!ServiceAppointment[d]}"/>
+				</apex:repeat>
+			</apex:pageBlockSection>
+
+
+			<apex:pageBlockSection rendered="{!parent == 'workorder'}" title="{!$Label.WorkOrder}" columns="1">
+				<apex:repeat value="{!$ObjectType.WorkOrder.FieldSets.Emergency_Current_WorkORder_Fields}" var="d">
+					<apex:outputField value="{!parentWorkOrder[d]}"/>
+				</apex:repeat>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection rendered="{!parent == 'workorderlineitem'}" title="{!$Label.WOLIFull}" columns="1">
+				<apex:repeat value="{!$ObjectType.WorkOrderLineItem.FieldSets.Emergency_Current_WOLineItem}" var="d">
+					<apex:outputField value="{!parentWorkOrderLineItem[d]}"/>
+				</apex:repeat>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection rendered="{!parent == 'account'}" title="{!$Label.Account}" columns="1">
+				<apex:repeat value="{!$ObjectType.Account.FieldSets.Emergency_Account_Fields}" var="d">
+					<apex:outputField value="{!parentAccount[d]}"/>
+				</apex:repeat>
+			</apex:pageBlockSection>
+
+		</apex:pageBlock>
+
+	 </apex:form> -->
+
+</apex:page>

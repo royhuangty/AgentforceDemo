@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nazwa pola daty-godziny w Obiekcie łączącym, które reprezentuje jego czas rozpoczęcia</help>
+        <label><!-- Start Date Field Name --></label>
+        <name>FSL__WorkRule_Start_DateTime_Field__c</name>
+    </CustomFieldTranslation>

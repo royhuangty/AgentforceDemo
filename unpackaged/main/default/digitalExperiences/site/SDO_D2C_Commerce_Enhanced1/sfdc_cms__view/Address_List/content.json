@@ -1,0 +1,190 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Address List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "margin" : {
+                "bottom" : "",
+                "left" : "",
+                "right" : "",
+                "top" : "40px"
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"7e894edb-ea9d-4bf7-8e0c-ed3cb4f0a5ec\",\"columns\":[{\"UUID\":\"37348537-d8b1-4fc9-83a7-da8adb61bd8d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "10px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "My Account",
+                "textAlign" : "left",
+                "textDecoration" : "{\"bold\":false}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "69e95f2e-8357-4f93-956a-c6026a2d6645",
+              "type" : "component"
+            } ],
+            "id" : "37348537-d8b1-4fc9-83a7-da8adb61bd8d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "customCssClasses" : "my-account-title",
+          "definition" : "community_layout:section",
+          "id" : "7e894edb-ea9d-4bf7-8e0c-ed3cb4f0a5ec",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "margin" : {
+                "bottom" : "60px",
+                "left" : "",
+                "right" : "",
+                "top" : ""
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"9c54ca51-8e70-49ca-bdcc-dffa48595c98\",\"columns\":[{\"UUID\":\"024bd509-5d34-4ee7-939f-b3dd52874d63\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"2\",\"seedComponents\":null},{\"UUID\":\"983ac904-bb62-48f4-95f4-9df9fd63e7f2\",\"columnName\":\"Column 2\",\"columnKey\":\"b6831\",\"columnWidth\":\"10\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "navItemSpacing" : "small",
+                "navigationLinkSetDevName" : "D2C_Main_My_Account_Menu"
+              },
+              "customCssClasses" : "my-account-data-nav",
+              "definition" : "commerce_my_account:navigationMenuItemList",
+              "id" : "969f3b78-75cb-4434-9b07-357bd5e9202a",
+              "type" : "component"
+            } ],
+            "id" : "024bd509-5d34-4ee7-939f-b3dd52874d63",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "sectionConfig" : "{\"UUID\":\"638170ed-8c8c-4bd3-aeb4-4cb5d6b35140\",\"columns\":[{\"UUID\":\"43c51319-94f2-4e2d-8a6d-f2ac8a00cfc8\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"8\",\"seedComponents\":[]},{\"UUID\":\"2113d16c-df37-4d97-974e-8737d4d769ef\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"4\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "Addresses",
+                    "textAlign" : "left",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\"}"
+                  },
+                  "customCssClasses" : "my-account-data-title",
+                  "definition" : "dxp_base:textBlock",
+                  "id" : "5f3f773a-715a-4ca3-9aa8-0f1a62eaeffe",
+                  "type" : "component"
+                } ],
+                "id" : "43c51319-94f2-4e2d-8a6d-f2ac8a00cfc8",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "alignment" : "right",
+                    "size" : "standard",
+                    "text" : "Add Address",
+                    "variant" : "primary",
+                    "width" : "standard"
+                  },
+                  "definition" : "commerce_my_account:myAccountAddAddressButton",
+                  "id" : "07fa26b0-7e8a-4af9-bc5b-005b9cd04925",
+                  "type" : "component"
+                } ],
+                "id" : "2113d16c-df37-4d97-974e-8737d4d769ef",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "638170ed-8c8c-4bd3-aeb4-4cb5d6b35140",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "billingTabLabel" : "Billing",
+                "cardDefaultBadgeColor" : "rgb(201,201, 201)",
+                "cardDefaultBorderRadius" : "50",
+                "cardDefaultLabel" : "Default",
+                "footerDeleteLabel" : "Delete",
+                "footerEditLabel" : "Edit",
+                "itemSpacing" : "small",
+                "noAddressMessageText" : "You don't have any address yet",
+                "noAddressMessageTitle" : "No Address Yet",
+                "pageSize" : "10",
+                "shippingTabLabel" : "Shipping",
+                "showAddressType" : "Shipping",
+                "showMoreButtonAlign" : "center",
+                "showMoreButtonLabel" : "Show More",
+                "showMoreButtonSize" : "standard",
+                "showMoreButtonStyle" : "secondary",
+                "showMoreButtonWidth" : "standard"
+              },
+              "customCssClasses" : "address-list",
+              "definition" : "commerce_my_account:myAccountAddressGridContainer",
+              "id" : "fddd5b94-6fb1-405a-b4db-4629d2c25557",
+              "type" : "component"
+            } ],
+            "id" : "983ac904-bb62-48f4-95f4-9df9fd63e7f2",
+            "name" : "b6831",
+            "title" : "Column 2",
+            "type" : "region"
+          } ],
+          "customCssClasses" : "my-account-data",
+          "definition" : "community_layout:section",
+          "id" : "9c54ca51-8e70-49ca-bdcc-dffa48595c98",
+          "type" : "component"
+        } ],
+        "id" : "2d0c30b3-f04a-4f59-ae06-48ca90bd3398",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "f61357a3-d091-49ac-b7fa-cffda1d7b983",
+          "type" : "component"
+        } ],
+        "id" : "4d4e2510-1272-4583-b34c-57811f1477b2",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "3fe59b4b-c6a2-4b2d-9714-53395615cdac",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "addresses"
+  },
+  "urlName" : "address-list"
+}

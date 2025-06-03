@@ -1,0 +1,54 @@
+{
+  "forgotPasswordRouteId" : "9ff5d0e9-6afc-4a97-a5d4-cc27559396f6",
+  "isAvailableToGuests" : true,
+  "isFilteredComponentsView" : true,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "6f0c470c-3ec3-4269-a2d6-e2a0fbfc2b91",
+  "mainAppPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "ed732e13-9a83-47cd-b8d3-ecf3d0191194",
+  "trustedSitesForScript" : [ {
+    "id" : "36a61253-b4b5-4a95-803b-a29dbdab3215",
+    "isActive" : true,
+    "trustedSiteName" : "d.la4-c1-ia2.salesforceliveagent.com",
+    "trustedSiteUrl" : "https://d.la4-c1-ia2.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceMenu.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "61a0f618-e78d-4cc7-bfcb-f74fcde76d9f",
+    "isActive" : true,
+    "trustedSiteName" : "sdonextgen1.my.site.com",
+    "trustedSiteUrl" : "https://sdonextgen1.my.site.com/consumer/resource/1665618396000/SDO_Service_ChannelMenu_CodeSetting",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "bb920b40-fc98-423d-b6f2-6eae6f238c0a",
+    "isActive" : true,
+    "trustedSiteName" : "d.la4-c1-ia2.salesforceliveagent.com1",
+    "trustedSiteUrl" : "https://d.la4-c1-ia2.salesforceliveagent.com/chat/rest/Visitor/Settings.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "7a216b8a-def8-4bfc-8df9-4b8153240d9a",
+    "isActive" : true,
+    "trustedSiteName" : "d.la4-c1-ia2.salesforceliveagent.com2",
+    "trustedSiteUrl" : "https://d.la4-c1-ia2.salesforceliveagent.com/chat/rest/Visitor/Availability.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "69499d47-be1f-4139-8062-165c5f943fd7",
+    "isActive" : true,
+    "trustedSiteName" : "d.la1-c2-ia6.salesforceliveagent.com",
+    "trustedSiteUrl" : "https://d.la1-c2-ia6.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceMenu.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "16490334-0b83-4dee-a098-c03fd022e066",
+    "isActive" : true,
+    "trustedSiteName" : "d.la1-c2-ia6.salesforceliveagent.com1",
+    "trustedSiteUrl" : "https://d.la1-c2-ia6.salesforceliveagent.com/chat/rest/Visitor/Settings.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "4086662e-4ea2-4613-aa6d-8808fd16a310",
+    "isActive" : true,
+    "trustedSiteName" : "images",
+    "trustedSiteUrl" : "https://images.unsplash.com",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

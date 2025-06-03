@@ -1,0 +1,125 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "N.º de SKU",
+          "productDetailSummaryFieldMapping" : "[{\"name\":\"Description\",\"label\":\"Descripción del producto\",\"type\":\"TEXTAREA\"}]"
+        },
+        "id" : "3ed022c6-820e-4214-83f1-f164f19f83d0"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Name}"
+        },
+        "id" : "f96207c7-f32a-4afb-9976-b0ec94d41229"
+      }, {
+        "attributes" : {
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "slot3PriceLabel" : "Precio final",
+          "taxIncludedLabel" : "Impuestos incluidos",
+          "unavailablePriceLabel" : "Precio no disponible"
+        },
+        "id" : "58fb2f68-c046-4fb1-8d48-81646ea7aa81"
+      }, {
+        "attributes" : {
+          "discountRowLabel" : "Descuentos por unidad",
+          "quantityRowLabel" : "Cantidad"
+        },
+        "id" : "ecda623a-20ba-4643-b9ea-0a6c18892b15"
+      }, {
+        "attributes" : {
+          "text" : "Descuentos por volumen"
+        },
+        "id" : "8ef5db30-5963-460b-b368-3b76e9d79dce"
+      }, {
+        "attributes" : {
+          "text" : "Opciones disponibles"
+        },
+        "id" : "88d50da2-44ca-4f7f-b7f3-b58cd6d89f6d"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "outOfStockText" : "Fuera de stock"
+        },
+        "id" : "8dccd67a-1353-4aaf-b943-4cc373530e01"
+      }, {
+        "attributes" : {
+          "text" : "❤️ Añadir a Favoritos"
+        },
+        "id" : "3cf94838-0d1c-42d6-ae8a-aee7506edd27"
+      }, {
+        "attributes" : {
+          "text" : "Detalles del producto"
+        },
+        "id" : "7217c989-1c35-4ecc-bb3b-5a84d99176b7"
+      }, {
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Description}"
+        },
+        "id" : "b473e7c3-9058-40f0-9415-fcd25a0e9571"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p><span style=\"color: rgb(28, 28, 28); font-size: 14px;\">{!Product.Details.fields.RT_Description__c}</span></p>"
+        },
+        "id" : "1588df72-de6a-42d6-8654-d490312a89c7"
+      }, {
+        "attributes" : {
+          "text" : "Detalles técnicos"
+        },
+        "id" : "eb216f6d-6aa7-4e3e-b5c2-babe4d3b7380"
+      }, {
+        "attributes" : {
+          "productDetailDataContentMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Código de producto\",\"type\":\"STRING\"},{\"name\":\"Family\",\"label\":\"Familia de productos\",\"type\":\"PICKLIST\"},{\"name\":\"Power_Source__c\",\"label\":\"Fuente de alimentación\",\"type\":\"PICKLIST\"},{\"name\":\"GFCI_Safety_Circuit__c\",\"label\":\"Disyuntor de seguridad GFCI\",\"type\":\"PICKLIST\"},{\"name\":\"Warranty__c\",\"label\":\"Garantía\",\"type\":\"PICKLIST\"}]"
+        },
+        "id" : "197fa34d-5ab2-4b5f-a7f8-dce048b29bde"
+      }, {
+        "attributes" : {
+          "overflowMenuLabel" : "Más",
+          "tabsetConfig" : "{\"UUID\":\"d1f74742-4dc0-4e62-91bc-b87bc45e58e6\",\"activeTab\":null,\"useOverflowMenu\":null,\"tabs\":[{\"UUID\":\"55d279c4-2d20-4663-8d85-35cee5b63656\",\"tabName\":\"Vídeos\",\"tabKey\":\"tab1\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"3c591b4c-987a-44be-896e-c1c7e0e18b87\",\"tabName\":\"Documentos\",\"tabKey\":\"tab2\",\"locked\":false,\"allowGuestUser\":false}]}"
+        },
+        "id" : "d1f74742-4dc0-4e62-91bc-b87bc45e58e6"
+      }, {
+        "attributes" : {
+          "text" : "¿Qué es CRM y cómo funciona?"
+        },
+        "id" : "8066ba9a-50c4-473e-9228-1af9b9c376f2"
+      }, {
+        "attributes" : {
+          "text" : "¿Qué es CRM (Gestión de relaciones con el cliente) y cómo funciona un CRM? Vea este vídeo para ver cómo CRM le ayuda a realizar un seguimiento de todo lo relacionado con sus clientes actuales y potenciales, para que pueda crear excelentes relaciones con ellos."
+        },
+        "id" : "4f886f71-eec4-4c0f-b1d5-aaa55519db87"
+      }, {
+        "attributes" : {
+          "buttonLabel" : "Añadir productos al carrito"
+        },
+        "id" : "b81f1d89-c3ab-435d-bf46-341aa51d7deb"
+      }, {
+        "attributes" : {
+          "text" : "Comprado frecuentemente junto con"
+        },
+        "id" : "d73bde6a-8b3e-45f0-aa14-6dc0f9942308"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "5060624d-644d-4300-be26-18841194da5e"
+      }, {
+        "id" : "e903f425-060c-4e7c-a3d3-d5e5c3165e3f",
+        "attributes" : {
+          "taxIncludedLabel" : "Impuestos inc.",
+          "unavailablePriceLabel" : "Precio no disponible",
+          "lastLowestPriceLabel" : "Último precio más bajo:",
+          "outOfStockText" : "Sin Existencias",
+          "minimumValueGuideText" : "Mín.: {0}",
+          "maximumValueGuideText" : "Máx.: {0}",
+          "incrementValueGuideText" : "En incrementos de {0}",
+          "quantitySelectorLabel" : "Ctd."
+        }
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Active les approbations intelligentes pour cette condition d&#39;approbation. Si l&#39;instantané d&#39;approbation ne change pas, la condition n&#39;est pas déclenchée.</help>
+        <label><!-- Enable Smart Approval --></label>
+        <name>sbaa__EnableSmartApproval__c</name>
+    </CustomFieldTranslation>

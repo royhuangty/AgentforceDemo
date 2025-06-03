@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Billing Order Layout</layout>
+        <sections>
+            <label>Adresse de livraison et de facturation</label>
+            <section>Billing Metrics</section>
+        </sections>
+        <sections>
+            <label>Informations sur le contrat</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Quote and Opportunity</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping and Billing Address --></label>
+            <section>Shipping and Billing Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Order Layout</layout>
+        <sections>
+            <label><!-- OrderContracting --></label>
+            <section>OrderContracting</section>
+        </sections>
+        <sections>
+            <label><!-- Quote and Opportunity --></label>
+            <section>Quote and Opportunity</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping and Billing Information --></label>
+            <section>Shipping and Billing Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Used for B2B order use cases.  Includes contract fields. --></description>
+        <label><!-- Order - Business --></label>
+        <name>SDO_Order_Business</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Order record type used for consumer use case.  Contract and related business fields have been removed from this layout. --></description>
+        <label><!-- Order - Consumer --></label>
+        <name>SDO_Order_Consumer</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t contract the order. Activate the order and try again. --></errorMessage>
+        <name>SBQQ__Cannot_Contract_New_Order</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- EditOrderProducts --></label>
+        <name>SBQQ__EditOrderProducts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SDO_CPQ_Bill_Now --></label>
+        <name>SDO_CPQ_Bill_Now</name>
+    </webLinks>
+</CustomObjectTranslation>

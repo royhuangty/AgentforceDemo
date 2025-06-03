@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select if you want the product in the Product Lookup field to be selected on the quote. --></help>
+        <label><!-- Required --></label>
+        <name>SBQQ__Required__c</name>
+    </CustomFieldTranslation>

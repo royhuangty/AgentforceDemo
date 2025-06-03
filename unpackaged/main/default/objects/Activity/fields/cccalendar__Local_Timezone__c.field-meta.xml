@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cccalendar__Local_Timezone__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Specify event&#39;s local timezone. Required if Display event&#39;s local timezone is checked</description>
+    <inlineHelpText>Specify event&#39;s local timezone. Required if Display event&#39;s local timezone is checked</inlineHelpText>
+    <label>Local Timezone</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>cccalendar__IANA_Timezones</valueSetName>
+    </valueSet>
+</CustomField>

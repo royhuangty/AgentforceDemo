@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le champ de référence dans l&#39;objet de liaison qui correspond au champ de correspondance du rendez-vous du service</help>
+        <label><!-- Linking Object Reference Field --></label>
+        <name>FSL__Service_Linking_Object_Reference_Field__c</name>
+    </CustomFieldTranslation>

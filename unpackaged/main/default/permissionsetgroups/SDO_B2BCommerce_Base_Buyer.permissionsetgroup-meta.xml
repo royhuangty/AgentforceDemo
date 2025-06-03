@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes base permissions for B2B Commerce Buyer Base Access for Demos.This needs to be assigned to Lauren Bailey. Who: Jesse Chase. When: 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>B2B Commerce - Buyer Base Access</label>
+    <permissionSets>B2BCommerce_Community_Access</permissionSets>
+    <permissionSets>B2B_Cart_Switcher</permissionSets>
+    <permissionSets>B2B_Commerce_Cart_Upload</permissionSets>
+    <permissionSets>B2B_Commerce_Customer_Community_Plus_Access</permissionSets>
+    <permissionSets>B2B_Commerce_Order_Builder</permissionSets>
+    <permissionSets>B2B_Cross_Sell_Recommendations_User</permissionSets>
+    <permissionSets>B2B_Featured_Products_Component</permissionSets>
+    <permissionSets>B2B_LE_Bundle_Product_User</permissionSets>
+    <permissionSets>B2B_LE_Moodboard_User</permissionSets>
+    <permissionSets>B2B_LE_PDP_Inventory</permissionSets>
+    <permissionSets>B2B_LE_Video_Player_Reader</permissionSets>
+    <permissionSets>SDO_B2BCommerce_Commerce_User_PSL</permissionSets>
+    <permissionSets>SDO_B2BCommerce_Featured_Products_Component</permissionSets>
+    <permissionSets>SDO_OMS_Additional_Demo_Permissions</permissionSets>
+    <permissionSets>SDO_SCOM_Demo_Components_Access</permissionSets>
+    <permissionSets>SDO_SCOM_OOA_Order_Approvals</permissionSets>
+    <permissionSets>SDO_SCOM_OOA_User_Registration</permissionSets>
+    <permissionSets>force__AuthenticatedPayer</permissionSets>
+    <permissionSets>force__B2BBuyer</permissionSets>
+    <permissionSets>force__CopilotSalesforceUser</permissionSets>
+    <permissionSets>force__EinsteinGPTPromptTemplateUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

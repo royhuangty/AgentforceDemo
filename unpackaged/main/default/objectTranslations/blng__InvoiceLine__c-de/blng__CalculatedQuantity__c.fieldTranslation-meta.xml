@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Gibt an, wie oft die Kosten für diesen Posten angewendet wurden. Wenn eine monatliche Rechnung 45 Tage abdeckt, lautet der Wert 1,5.</help>
+        <label><!-- Calculated Quantity --></label>
+        <name>blng__CalculatedQuantity__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Gap_Rule_Service</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>FSL__Compact_WRE_Resource_Availability</compactLayoutAssignment>
+    <description>Limits service resources based on a number of items such as service appointments, appointment durations, or custom field values</description>
+    <label>Field Service - Service Resource Availability</label>
+</RecordType>

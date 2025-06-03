@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programador de pagos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programadores de pagos</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Scheduler Layout</layout>
+        <sections>
+            <label>Configuración mensual</label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label>Configuración semanal</label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre del Programador de pagos</nameFieldLabel>
+</CustomObjectTranslation>

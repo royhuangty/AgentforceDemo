@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Read-only indicator to show whether a quote contains overriding consumption rates. --></help>
+        <label><!-- Consumption Rate Override --></label>
+        <name>SBQQ__ConsumptionRateOverride__c</name>
+    </CustomFieldTranslation>

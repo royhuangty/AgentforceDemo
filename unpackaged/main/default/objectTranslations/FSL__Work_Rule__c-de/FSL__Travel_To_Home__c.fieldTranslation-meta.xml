@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt, wie viele Minuten nach Ende des Kalendertags der Ressource für den Rückweg nach Hause verfügbar sind (auf Kosten der Ressource).
+Wenn dieses Feld leer gelassen wird, ist ein beliebiger Rückweg am Ende des Arbeitstags gültig.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

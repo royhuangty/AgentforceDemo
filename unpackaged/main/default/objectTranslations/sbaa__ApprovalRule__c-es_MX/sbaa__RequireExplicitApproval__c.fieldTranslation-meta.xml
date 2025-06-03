@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Al aprobar cualquier aprobación se aprobará automáticamente de forma predeterminada cualquier otra aprobación asignada al mismo usuario. Si esta casilla está sin marcar, una aprobación originada por esta regla no se aprobará automáticamente y deberá ser aprobada explícitamente.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </CustomFieldTranslation>

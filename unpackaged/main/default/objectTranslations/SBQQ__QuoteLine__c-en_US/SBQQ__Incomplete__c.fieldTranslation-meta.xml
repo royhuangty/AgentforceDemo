@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Flag set internally by application logic when a line is saved to an incomplete database. This may happen when price rules are evaluated. Test this field in validation rules to avoid them firing prematurely. Do NOT add to page layout or otherwise update. --></help>
+        <label><!-- Incomplete --></label>
+        <name>SBQQ__Incomplete__c</name>
+    </CustomFieldTranslation>

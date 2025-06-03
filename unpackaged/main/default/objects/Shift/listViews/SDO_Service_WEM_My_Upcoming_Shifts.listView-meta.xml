@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_WEM_My_Upcoming_Shifts</fullName>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <columns>Name</columns>
+    <columns>ServiceResource</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SDO_Service_WEM_Assigned_to_me__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>SDO_Service_WEM_In_the_Past__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>My Upcoming Shifts</label>
+</ListView>

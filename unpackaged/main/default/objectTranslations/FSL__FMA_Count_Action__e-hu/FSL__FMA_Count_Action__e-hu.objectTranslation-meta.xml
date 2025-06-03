@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási művelet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletem --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteim --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási művelete --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletei --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveleteket --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletét --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteit --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletnek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveleteknek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemnek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimnek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletének --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteinek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletében --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletéből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletbe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekbe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletembe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimbe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletébe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteibe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási művelettől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletektől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemtől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimtől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletétől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteitől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási művelethez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletéhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteihez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletté --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekké --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemmé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimmé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletévé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteivé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási művelettel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekkel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemmel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimmel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletével --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteivel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletére --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteire --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveleten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveleteken --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletén --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletein --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletéről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletéről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletéért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletekig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletemig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletéig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletenként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FMA számlálási műveletek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveleteimként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FMA számlálási műveletek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveleteiként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FMA számlálási műveletek --></value>
+    </caseValues>
+    
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

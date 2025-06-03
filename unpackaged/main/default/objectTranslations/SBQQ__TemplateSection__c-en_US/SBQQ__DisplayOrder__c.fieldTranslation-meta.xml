@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify the order (top down) in which this section is rendered relative to other sections on the template. --></help>
+        <label><!-- Display Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </CustomFieldTranslation>

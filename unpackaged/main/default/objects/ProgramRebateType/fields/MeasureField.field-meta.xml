@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MeasureField</fullName>
+    <inlineHelpText>The aggregation object field used with measure type and benefit value to calculate the rebate amount. This is required for the Amount per Unit and Percentage of Revenue measure types.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

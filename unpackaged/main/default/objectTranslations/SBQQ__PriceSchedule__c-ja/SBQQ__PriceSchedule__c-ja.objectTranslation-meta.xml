@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>価格表</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Price Schedule Layout</layout>
+        <sections>
+            <label>スナップショット情報</label>
+            <section>Snapshot Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>表名</nameFieldLabel>
+    <webLinks>
+        <label><!-- EditTiers --></label>
+        <name>SBQQ__EditTiers</name>
+    </webLinks>
+</CustomObjectTranslation>

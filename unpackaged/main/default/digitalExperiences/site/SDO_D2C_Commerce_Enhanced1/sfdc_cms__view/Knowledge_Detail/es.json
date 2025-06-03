@@ -1,0 +1,21 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Knowledge Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "{!Item.Title}"
+        },
+        "id" : "2172e384-2d90-42b1-a1e9-8a653626b620"
+      }, {
+        "attributes" : {
+          "description" : "{!Record.Summary}",
+          "pageTitle" : "{!Record._Title}"
+        },
+        "id" : "c59bb04a-c45b-4975-a0ae-7d610ccb349d"
+      } ]
+    }
+  },
+  "urlName" : "knowledge-detail"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Assignment Behavior --></label>
+        <name>sfsp__AssignmentBehavior__c</name>
+        <picklistValues>
+            <masterLabel>Exclusive</masterLabel>
+            <translation><!-- Exclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Exclusive</masterLabel>
+            <translation><!-- Non-Exclusive --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>FSL__Type__c</name>
+        <picklistValues>
+            <masterLabel>Automated Bundling</masterLabel>
+            <translation>Automatisert pakking</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fill-In Schedule</masterLabel>
+            <translation>Fyll ut tidsplan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fix Overlaps</masterLabel>
+            <translation>Fiks overlappinger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Optimization</masterLabel>
+            <translation>Global optimering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Nearby SAs</masterLabel>
+            <translation>Grupper SAer i nærheten</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Bundling</masterLabel>
+            <translation>Direktepakking</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Schedule Optimization</masterLabel>
+            <translation>Optimering av ressurstidsplan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Reshuffle</masterLabel>
+            <translation>Endre SA-rekkefølge</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,87 @@
+<apex:page sidebar="false" title="Maps Live Rules" controller="maps.LiveRulesController" extensions="maps.RemoteFunctions,maps.LiveRemoteFunctions,maps.LiveAPI" docType="html-5.0">
+    <apex:outputPanel layout="none" rendered="{! !featureEnabled }">
+        <c:MissingLicense />
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!featureEnabled}">
+        <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-3.6.0.min.js')}"></script> 
+        <script type="text/javascript" src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'toastr/toastr.min.js')}"></script>
+        <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.Maps3rdPartyPlugins, 'toastr/toastr.min.css')}"></link>
+        <link rel="stylesheet" type="text/css" href="{!resourcePaths['VueLive']}/build/main.css"></link>
+
+        <!-- Legacy style toast notifications - would like to remove these in favor of a Vue equivalent to completely strip jQuery from the project -->
+        <script type='text/javascript'>
+            toastr.options = {
+                "positionClass": "toast-bottom-right",
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut",
+                "iconClasses" : {
+                    "success" : "toast-success",
+                    "error"   : "toast-error",
+                    "warning" : "toast-warning",
+                    "info"    : "toast-info"
+                }
+            };
+
+            var MAToastMessages = {
+                showMessage : function(options,type) {
+                    type = type || 'info';
+                    options = $.extend({
+                        message : '',
+                        subMessage : '',
+                        timeOut : 3000,
+                        extendedTimeOut : 1000,
+                        position : 'toast-bottom-right',
+                        closeButton : false,
+                        onclick : null
+                    }, options || {});
+
+                    toastr.options.timeOut = options.timeOut;
+                    toastr.options.extendedTimeOut = options.extendedTimeOut;
+                    toastr.options.positionClass = options.position;
+                    toastr.options.closeButton = options.closeButton;
+                    toastr.options.onclick = options.onclick;
+
+                    if(type === 'loading') {
+                        var $message = toastr['info'](options.subMessage,options.message);
+                        $message.addClass('ma-toast-loading').removeClass('toast-info');
+                        return $message;
+                    }
+                    else {
+                        return toastr[type](options.subMessage,options.message);
+                    }
+
+
+                },
+                showSuccess : function(options) {
+                    return MAToastMessages.showMessage(options,'success');
+                },
+                showLoading : function(options) {
+                    return MAToastMessages.showMessage(options,'loading');
+                },
+                showWarning : function(options) {
+                    return MAToastMessages.showMessage(options,'warning');
+                },
+                showError : function(options) {
+                    return MAToastMessages.showMessage(options,'error');
+                },
+                hideMessage : function (toast) {
+                    toastr.clear(toast);
+                    toast.remove();
+                    toast = null;
+                }
+            }
+        </script>
+
+        <!-- App Root -->
+        <div id="malive-vue-root"></div>
+        <script src="{!resourcePaths['VueLive']}/build/bundle.js"></script>
+    </apex:outputPanel>
+</apex:page>

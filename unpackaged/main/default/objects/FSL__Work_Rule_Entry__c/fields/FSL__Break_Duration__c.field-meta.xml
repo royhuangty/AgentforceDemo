@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Break_Duration__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The length of the break in minutes.</inlineHelpText>
+    <label>Break Duration (minutes)</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Aktivieren, wenn das Produkt im Paket mit dem Hauptprodukt gebündelt ist. Bei Paketoptionen ist die Menge festgelegt und der Preis auf Null gesetzt, da der Preis im Hauptprodukt eingeschlossen ist. Deaktivieren, um den Preis zur Option hinzuzufügen.</help>
+        <label><!-- Bundled --></label>
+        <name>SBQQ__Bundled__c</name>
+    </CustomFieldTranslation>

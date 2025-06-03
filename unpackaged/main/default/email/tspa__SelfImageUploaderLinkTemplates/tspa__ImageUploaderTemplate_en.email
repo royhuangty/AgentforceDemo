@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+Hello,<br><br>Upload your images using the Self-Service Session by clicking on the following link:
+<p>
+<a href="{uploadImagesURL}" target="_blank">Self-Service Session Link</a>
+</p>
+Support case: {caseId} <br><br>
+Thank you for using Visual Remote Assistant
+</body>
+</html>

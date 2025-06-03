@@ -1,0 +1,22 @@
+<template>
+	<div class="slds-var-p-vertical_small slds-border_bottom">
+		<div class="slds-grid">
+			<div class="slds-col slds-size_1-of-6">
+				<img src={imageSrc} />
+			</div>
+			<div class="slds-col slds-size_4-of-6">
+				<div class="slds-text-heading_small">{name}</div>
+				<div class="slds-text-body_small">{sku}</div>
+			</div>
+			<div class="slds-col slds-size_1-of-6">
+				<button class="slds-button slds-button_icon slds-button_icon-container"
+					title={labels.moodboardBank.bankItemAdd} onclick={handleAdd}>
+					<svg class="slds-button__icon" aria-hidden="true">
+						<use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+					</svg>
+					<span class="slds-assistive-text">{labels.moodboardBank.bankItemAdd}</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</template>

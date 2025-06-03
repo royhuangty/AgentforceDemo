@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enables Smart Approvals for this approval Condition. If approval snapshot does not change, condition will not be fired. --></help>
+        <label><!-- Enable Smart Approval --></label>
+        <name>sbaa__EnableSmartApproval__c</name>
+    </CustomFieldTranslation>

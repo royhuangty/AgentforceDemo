@@ -1,0 +1,125 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale, $scale2) {
+   @include transform(scale($scale, $scale2));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin, $origin2) {
+    moz-transform-origin: $origin, $origin2;
+       -o-transform-origin: $origin, $origin2;
+      -ms-transform-origin: $origin, $origin2;
+  -webkit-transform-origin: $origin, $origin2;
+          transform-origin: $origin, $origin2;
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin flexOrder($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin flexDirection($val) {
+-webkit-flex-direction: $val; 
+   flex-direction: $val;
+}
+
+@mixin flexAlign($val) {
+    -webkit-box-align: $val;
+    -webkit-align-items: $val;
+    -ms-flex-align: $val;
+    align-items: $val;
+  }
+
+@mixin flexJustifyContent($val) {
+    -webkit-justify-content: $val;
+    -webkit-justify-content: $val;
+    -ms-justify-content: $val;
+    justify-content: $val;
+  }
+
+@mixin btnTheme($btn-color) {
+	background-color: $btn-color;
+	border-color: $btn-color;
+	&:hover, &:focus {
+		background-color: darken($btn-color, 10%);
+		border-color: darken($btn-color, 10%);
+	}
+	&:active {
+		background-color: darken($btn-color, 20%);
+		border-color: darken($btn-color, 20%);
+	}
+}
+
+@mixin linkTheme($link-color) {
+	color : $link-color;
+	&:hover, &:focus {
+		color : darken($link-color, 10%);
+	}
+	&:active {
+		color: darken($link-color, 20%);
+	}
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

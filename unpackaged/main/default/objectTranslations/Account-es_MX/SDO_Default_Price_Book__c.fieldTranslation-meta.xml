@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Default price book for work orders --></help>
+        <label><!-- Default Price Book --></label>
+        <name>SDO_Default_Price_Book__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </CustomFieldTranslation>

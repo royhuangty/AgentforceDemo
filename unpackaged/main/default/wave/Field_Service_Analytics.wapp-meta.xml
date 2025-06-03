@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assetIcon>/analytics/wave/web/proto/images/app/icons/10.png</assetIcon>
+    <folder>Field_Service_Analytics</folder>
+    <masterLabel>Field Service Analytics</masterLabel>
+    <templateOrigin>sfdc_internal__FSL_Analytics</templateOrigin>
+    <templateVersion>1.0</templateVersion>
+</WaveApplication>

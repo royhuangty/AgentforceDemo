@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Automatisches Löschen von übergeordneten und untergeordneten Tracking-Datensätzen bei Verwendung des Tools zur Tracking-Datenbereinigung. Um Apex-Obergrenzen bei Batch-Löschaufträgen zu umgehen, muss die Kaskadenlöschung deaktiviert werden.</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

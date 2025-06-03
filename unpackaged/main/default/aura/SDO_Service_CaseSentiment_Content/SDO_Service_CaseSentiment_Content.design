@@ -1,0 +1,5 @@
+<design:component label="Einstein - Case Sentiment (SDO_Einstein_CaseSentiment_Content)">
+    <sfdc:objects>
+        <sfdc:object>Case</sfdc:object>
+    </sfdc:objects>
+</design:component>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Obiectivul politicii de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Obiectiv politică de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Obiectivele politicilor de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Obiective politici de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Obiectivului politicii de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Obiectivului politicii de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Obiectivelor politicilor de programare</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Obiectivelor politicilor de programare</value>
+    </caseValues>
+    
+    
+    
+    
+    <gender>Neuter</gender>
+    <nameFieldLabel>Nume obiectiv politică de programare</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
+        <name>FSL__Not_Zero</name>
+    </validationRules>
+</CustomObjectTranslation>

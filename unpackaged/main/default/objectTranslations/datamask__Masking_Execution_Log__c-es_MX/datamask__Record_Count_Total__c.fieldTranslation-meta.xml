@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>El número total de registros del objeto que se está procesando.</help>
+        <label><!-- Record Count Total --></label>
+        <name>datamask__Record_Count_Total__c</name>
+    </CustomFieldTranslation>

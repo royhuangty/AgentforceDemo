@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Specifications__c</fullName>
+    <description>Used in the custom Catalog UI found in the Order Console.</description>
+    <label>Specifications</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Regra de aprovação que gerará o Valor rastreado para esse Campo rastreado</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Tracked Fields --></relationshipLabel>
+    </CustomFieldTranslation>

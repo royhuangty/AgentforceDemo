@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Base product permissions for accessing Data Cloud</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Data Cloud Base Permissions</label>
+    <permissionSets>force__GenieAdmin</permissionSets>
+    <permissionSets>force__GenieMarketingAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

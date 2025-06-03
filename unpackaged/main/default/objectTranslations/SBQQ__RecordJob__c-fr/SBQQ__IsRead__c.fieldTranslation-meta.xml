@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si cette case est sélectionnée, l&#39;utilisateur a été alerté du statut terminé de la tâche de l&#39;enregistrement.</help>
+        <label><!-- Is Read --></label>
+        <name>SBQQ__IsRead__c</name>
+    </CustomFieldTranslation>

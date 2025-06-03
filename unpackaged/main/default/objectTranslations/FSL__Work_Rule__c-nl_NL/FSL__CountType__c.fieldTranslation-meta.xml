@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Het type item geteld in de werkregel.</help>
+        <label><!-- Count Type --></label>
+        <name>FSL__CountType__c</name>
+        <picklistValues>
+            <masterLabel>Assignments</masterLabel>
+            <translation>Toewijzingen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Value</masterLabel>
+            <translation>Aangepaste waarde</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration</masterLabel>
+            <translation>Duur</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

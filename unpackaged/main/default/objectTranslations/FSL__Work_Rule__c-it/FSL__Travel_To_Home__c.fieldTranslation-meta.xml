@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina quanti minuti saranno disponibili per il percorso (a carico della risorsa) dopo la fine giornata del calendario della risorsa.
+Se il campo viene lasciato vuoto, sarà valida qualsiasi durata del percorso dopo la fine della giornata lavorativa.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

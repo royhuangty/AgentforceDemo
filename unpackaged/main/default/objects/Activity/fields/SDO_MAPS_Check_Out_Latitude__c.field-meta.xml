@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_MAPS_Check_Out_Latitude__c</fullName>
+    <description>SDO MAPS Activity Latitude field for capturing Task/Event location details 02-06-23</description>
+    <externalId>false</externalId>
+    <label>Check Out Latitude</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>15</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

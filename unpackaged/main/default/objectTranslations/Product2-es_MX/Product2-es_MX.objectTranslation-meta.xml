@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Product Information --></label>
+        <name>Product_Information</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Configurator Filters --></label>
+        <name>SBQQ__ConfiguratorFilter</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Configurator Lookup --></label>
+        <name>SBQQ__ConfiguratorLookup</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Search Filters --></label>
+        <name>SBQQ__SearchFilters</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Search Results --></label>
+        <name>SBQQ__SearchResults</name>
+    </fieldSets>
+    <layouts>
+        <layout>Billing Product Layout</layout>
+        <sections>
+            <label>Renovaciones</label>
+            <section>Renewals</section>
+        </sections>
+        <sections>
+            <label>Configuración de Salesforce Billing</label>
+            <section>Salesforce Billing Configuration</section>
+        </sections>
+        <sections>
+            <label>Configuración de Salesforce CPQ</label>
+            <section>Salesforce CPQ Configuration</section>
+        </sections>
+        <sections>
+            <label>Suscripciones</label>
+            <section>Subscriptions</section>
+        </sections>
+        <sections>
+            <label>Campos del sistema</label>
+            <section>System Fields</section>
+        </sections>
+        <sections>
+            <label>Mejoras</label>
+            <section>Upgrades</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Product Layout</layout>
+        <sections>
+            <label>Campos</label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Renovaciones</label>
+            <section>Renewals</section>
+        </sections>
+        <sections>
+            <label>Configuración de Salesforce CPQ</label>
+            <section>Salesforce CPQ Configuration</section>
+        </sections>
+        <sections>
+            <label>Suscripciones</label>
+            <section>Subscriptions</section>
+        </sections>
+        <sections>
+            <label>Mejoras</label>
+            <section>Upgrades</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Product</layout>
+        <sections>
+            <label><!-- B2B Commerce Descriptions --></label>
+            <section>B2B Commerce Descriptions</section>
+        </sections>
+        <sections>
+            <label><!-- B2B Commerce Details --></label>
+            <section>B2B Commerce Details</section>
+        </sections>
+        <sections>
+            <label><!-- Image --></label>
+            <section>Image</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>qBrix CPQ Product Layout</layout>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Renewals --></label>
+            <section>Renewals</section>
+        </sections>
+        <sections>
+            <label><!-- Salesforce CPQ Configuration --></label>
+            <section>Salesforce CPQ Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Subscriptions --></label>
+            <section>Subscriptions</section>
+        </sections>
+        <sections>
+            <label><!-- Upgrades --></label>
+            <section>Upgrades</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Master --></label>
+        <name>Master</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You must check either Include In Maintenance or Exclude From Maintenance checkbox. --></errorMessage>
+        <name>SBQQ__Include_or_Exclude_Maintenance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is Recurring, a Billing Type must be selected. --></errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only subscription products may specify term discount schedule --></errorMessage>
+        <name>SBQQ__Term_schedule_requires_subscription</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time, a Billing Frequency value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

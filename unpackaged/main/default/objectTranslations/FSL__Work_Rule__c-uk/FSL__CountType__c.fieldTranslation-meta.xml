@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Тип елемента, який підраховується в робочому правилі.</help>
+        <label><!-- Count Type --></label>
+        <name>FSL__CountType__c</name>
+        <picklistValues>
+            <masterLabel>Assignments</masterLabel>
+            <translation>Призначення</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Value</masterLabel>
+            <translation>Настроюване значення</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration</masterLabel>
+            <translation>Тривалість</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le montant total doit être le même que le montant de la ligne de facture</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </CustomFieldTranslation>

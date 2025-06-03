@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- objective, issue being addressed, target, how will the project be measured. --></help>
+        <label><!-- Goal Statement --></label>
+        <name>inov8__Goal_Statement__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>서비스 약속 일치 필드와 일치하는 연결 개체의 참조 필드</help>
+        <label><!-- Linking Object Reference Field --></label>
+        <name>FSL__Service_Linking_Object_Reference_Field__c</name>
+    </CustomFieldTranslation>

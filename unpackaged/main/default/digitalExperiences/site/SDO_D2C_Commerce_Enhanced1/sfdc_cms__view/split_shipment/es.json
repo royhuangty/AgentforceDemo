@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Split Shipment",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Envío a múltiples direcciones"
+        },
+        "id" : "6bc1a459-18d4-42fd-b686-ce1db2e75b4d"
+      }, {
+        "id" : "4838e47b-a1e1-4ba0-a1f6-e4cd1b6e7604",
+        "attributes" : {
+          "text" : "Grabar & Pagar"
+        }
+      } ]
+    }
+  },
+  "urlName" : "split-shipment"
+}

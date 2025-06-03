@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If the UI API is supported but you want a related record shown specify the Id field to use when hovering here. --></help>
+        <label><!-- Tooltip Id Field --></label>
+        <name>bmpyrckt__Tooltip_Id_Field__c</name>
+    </CustomFieldTranslation>

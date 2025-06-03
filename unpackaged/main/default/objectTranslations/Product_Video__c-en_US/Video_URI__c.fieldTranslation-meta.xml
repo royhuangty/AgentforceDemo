@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For videos hosted by external URLs, you will need to create a CSP Trusted Site for the domain. --></help>
+        <label><!-- Video URI --></label>
+        <name>Video_URI__c</name>
+    </CustomFieldTranslation>

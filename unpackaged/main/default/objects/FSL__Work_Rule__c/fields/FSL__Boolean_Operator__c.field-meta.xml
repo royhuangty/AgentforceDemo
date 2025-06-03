@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Boolean_Operator__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Compare a numeric service property with a numeric resource property</inlineHelpText>
+    <label>Boolean Operator</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>=</fullName>
+                <default>true</default>
+                <label>=</label>
+            </value>
+            <value>
+                <fullName>&lt;=</fullName>
+                <default>false</default>
+                <label>&lt;=</label>
+            </value>
+            <value>
+                <fullName>&gt;=</fullName>
+                <default>false</default>
+                <label>&gt;=</label>
+            </value>
+            <value>
+                <fullName>&gt;</fullName>
+                <default>false</default>
+                <label>&gt;</label>
+            </value>
+            <value>
+                <fullName>&lt;</fullName>
+                <default>false</default>
+                <label>&lt;</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

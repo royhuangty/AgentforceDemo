@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_CPQ_Bill_Now</fullName>
+    <availability>online</availability>
+    <description>What: Opens SDO_CPQ_qtcBillNow VF Page</description>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>Bill Now</masterLabel>
+    <openType>replace</openType>
+    <page>SDO_CPQ_qtcBillNow</page>
+    <protected>false</protected>
+</WebLink>

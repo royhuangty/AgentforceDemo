@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New!</fullName>
+        <default>false</default>
+        <label>New!</label>
+    </customValue>
+    <customValue>
+        <fullName>Featured</fullName>
+        <default>false</default>
+        <label>Featured</label>
+    </customValue>
+    <customValue>
+        <fullName>Best Value</fullName>
+        <default>false</default>
+        <label>Best Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Popular</fullName>
+        <default>false</default>
+        <label>Popular</label>
+    </customValue>
+    <customValue>
+        <fullName>Top-Rated</fullName>
+        <default>false</default>
+        <label>Top-Rated</label>
+    </customValue>
+    <customValue>
+        <fullName>Highly-Rated</fullName>
+        <default>false</default>
+        <label>Highly-Rated</label>
+    </customValue>
+    <customValue>
+        <fullName>Spotlight</fullName>
+        <default>false</default>
+        <label>Spotlight</label>
+    </customValue>
+    <customValue>
+        <fullName>Hot</fullName>
+        <default>false</default>
+        <label>Hot</label>
+    </customValue>
+    <customValue>
+        <fullName>Guest Instructor</fullName>
+        <default>false</default>
+        <label>Guest Instructor</label>
+    </customValue>
+    <customValue>
+        <fullName>Mandatory</fullName>
+        <default>false</default>
+        <label>Mandatory</label>
+    </customValue>
+    <description>What: CMS Flags</description>
+    <masterLabel>CMS Flags</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

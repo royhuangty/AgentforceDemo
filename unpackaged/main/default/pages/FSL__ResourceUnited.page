@@ -1,0 +1,50 @@
+<apex:page sidebar="false" showHeader="false" standardController="ServiceResource" extensions="FSL.ctrl079_ResourceCalendar">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+        <apex:stylesheet value="{!$Resource.FSL__ResourceUnitedStyles}" />
+
+        <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+
+        <script>
+
+            $(function() {
+
+                var iframes = $('#iCalendar, #iSkills, #iCapacity'),
+                    tabs = $('#tab_calendar, #tab_skills, #tab_capacity');
+
+                iframes.hide();
+
+                $('#iCalendar').show();
+
+                $('#tab_calendar, #tab_skills, #tab_capacity').on('click', function() {
+                    var showFor = $(this).attr('for');
+                    tabs.removeClass('selected-tab');
+                    $(this).addClass('selected-tab');
+                    iframes.hide();
+                    $('#' + showFor).show();
+                });
+
+                if (!{!ServiceResource.IsCapacityBased}) {
+                    $('#tab_capacity').remove();
+                    $('#iCapacity').remove();
+                }
+            });
+
+
+        </script>
+
+
+        <div id="ResourcePagesTabs">
+            <div id="tab_calendar" for="iCalendar" class="resource-tab selected-tab">{!$Label.ResourceUnitedCalendar}</div>
+            <div id="tab_skills" for="iSkills" class="resource-tab">{!$Label.ResourceUnitedSkills}</div>
+            <div id="tab_capacity" for="iCapacity" class="resource-tab">{!$Label.ResourceUnitedCapacity}</div>
+        </div>
+
+
+        <iframe id="iCalendar" src="{!$Page.vf079_ResourceCalendar}?id={!ServiceResource.Id}"/>
+        <iframe id="iSkills" src="{!$Page.vf034_Skill_Selector_V2_Resource_Page}?id={!ServiceResource.Id}"/>
+        <iframe id="iCapacity" src="{!$Page.vf078_CapacityCalendar}?id={!ServiceResource.Id}"/>
+
+    </html>
+</apex:page>

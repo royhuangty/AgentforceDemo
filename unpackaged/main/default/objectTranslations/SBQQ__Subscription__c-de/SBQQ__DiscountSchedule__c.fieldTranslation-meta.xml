@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Rabatte in % oder als Betrag auf Basis von gekaufter Menge oder Laufzeit angeben. Mengen-/Laufzeitbereiche in unterschiedlichen Rabattklassen festlegen. Rabattgewährung auf Listenpreis und Speicherung des resultierenden Gesamtwerts als &quot;Regulärer Preis&quot;.</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
+    </CustomFieldTranslation>

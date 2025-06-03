@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Når markeret så sammenlign Mindste bemandingsstørrelse på arbejdsordren eller linjevaren for arbejdsordre med faktisk tilgængelige servicebemandingsmedlemmer. 
+Sammenlign ellers Mindste bemandingsstørrelse med Bemandingsstørrelse på Servicebemanding.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

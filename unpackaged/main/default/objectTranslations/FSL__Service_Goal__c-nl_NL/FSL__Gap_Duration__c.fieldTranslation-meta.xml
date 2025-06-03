@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Voer het aantal minuten in dat staat voor inactiviteit tussen serviceafspraken. Deze doelstelling minimaliseert intervallen die gelijk zijn aan of hoger zijn dan de opgegeven waarde.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Invite Type --></label>
+        <name>tspa__Invite_Type__c</name>
+        <picklistValues>
+            <masterLabel>Desktop Sharing</masterLabel>
+            <translation><!-- Desktop Sharing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mirroring</masterLabel>
+            <translation><!-- Mirroring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Observer</masterLabel>
+            <translation><!-- Observer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photo</masterLabel>
+            <translation><!-- Photo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two-way Video</masterLabel>
+            <translation><!-- Two-way Video --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video</masterLabel>
+            <translation><!-- Video --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video and Audio</masterLabel>
+            <translation><!-- Video and Audio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual Journey</masterLabel>
+            <translation><!-- Visual Journey --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

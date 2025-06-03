@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Refere-se ao método de distribuição selecionado na agenda de receita. Descreve como a receita é distribuída por um período de tempo definido, de uma só vez ou por um período de tempo inserido manualmente.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </CustomFieldTranslation>

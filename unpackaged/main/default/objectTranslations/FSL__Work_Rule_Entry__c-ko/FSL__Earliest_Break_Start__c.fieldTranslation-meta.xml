@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>서비스 자원의 가용성 시작 시점을 기준으로 허용되는 가장 빠른 휴식 시작 시간까지의 시간(분)입니다. 예를 들어 120을 입력하면 하루를 시작한 후 2시간 이후에 휴식을 예약할 수 있습니다.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

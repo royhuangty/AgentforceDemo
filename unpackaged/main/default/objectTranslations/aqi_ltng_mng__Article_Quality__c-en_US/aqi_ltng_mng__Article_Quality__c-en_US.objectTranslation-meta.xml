@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Article Quality Layout</layout>
+        <sections>
+            <label><!-- Article Quality Index Information --></label>
+            <section>Article Quality Index Information</section>
+        </sections>
+        <sections>
+            <label><!-- Follow Up --></label>
+            <section>Follow Up</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Classic AQI</layout>
+        <sections>
+            <label><!-- Article Quality Index Information --></label>
+            <section>Article Quality Index Information</section>
+        </sections>
+        <sections>
+            <label><!-- Follow Up --></label>
+            <section>Follow Up</section>
+        </sections>
+        <sections>
+            <label><!-- Related Article --></label>
+            <section>Related Article</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- You must  specify an Article Contributor --></errorMessage>
+        <name>aqi_ltng_mng__Agent_field_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A user must be assigned if the chekbox on the &apos;Follow Up&apos; section was selected. --></errorMessage>
+        <name>aqi_ltng_mng__CheckActionProviderBy</name>
+    </validationRules>
+</CustomObjectTranslation>

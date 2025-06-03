@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Journal d&#39;erreurs</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Journaux d&#39;erreurs</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Error Log Layout</layout>
+        <sections>
+            <label>.</label>
+            <section>.</section>
+        </sections>
+        <sections>
+            <label>Objets référencés</label>
+            <section>Referenced Objects</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom des journaux d&#39;erreurs</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

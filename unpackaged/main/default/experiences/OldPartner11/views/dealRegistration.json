@@ -1,0 +1,93 @@
+{
+  "appPageId" : "e0fc7900-a10c-4a56-88d5-3300b25fd224",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4544aec8-4849-4fce-93d0-c88a481aba38",
+  "label" : "Deal Registration",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1b17fd40-b6ec-498b-8cb2-08c577e057a2",
+          "columns" : [ {
+            "UUID" : "12d1b5d2-0990-4d9a-a767-5dfcf3ec3bc8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "571d61ff-653f-4745-a55c-fb499a1f88c6",
+            "columnKey" : "56608",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1b17fd40-b6ec-498b-8cb2-08c577e057a2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[]",
+            "flowName" : "SDO_PRM_Partner_Deal_Registration"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "4a6ee2ea-bd58-4538-b35b-2ec19c9454da",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "12d1b5d2-0990-4d9a-a767-5dfcf3ec3bc8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 24px;\">Deal Registration Terms &amp; Conditions</span></p><p><br></p><ul><li>The opportunity is for direct partners/resellers only.</li><li>The opportunity is&nbsp;<strong>not registered</strong>&nbsp;by another partner.</li><li>Before registering a deal, the partner has made&nbsp;<strong>significant pre-sales efforts</strong>&nbsp;related to the deal, such as meeting with the decision-makers, qualifying the opportunity, helping the customer to quantify the project budget with Pacifica products or services, and helping the customer to define the project requirements to include&nbsp;&nbsp;products or services.</li><li>Registration Process: Partner must submit deal for review via the deal registration form here. The first partner to submit a deal that meets all of the opportunity eligibility criteria specified above will be approved for that customer opportunity.</li><li>If a deal is approved, we will&nbsp;<strong>notify the partner via the portal expereince.</strong></li><li>If a deal is declined, we will&nbsp;<strong>notify the partner via the portal expereince</strong>, and will include the reasons for such decision.</li><li>If an opportunity is approved, the deal will be protected for&nbsp;<strong>three months</strong>&nbsp;from the date of approval, and if a material change to the solution is proposed, then Partner must submit a new registration for the opportunity.</li><li>Disputes: Partners must submit any disputes arising from this deal registration program via the portal experience.</li></ul><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3ad26ca4-19bf-44e0-9d50-d278187d8025",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "571d61ff-653f-4745-a55c-fb499a1f88c6",
+        "regionLabel" : "Column 2",
+        "regionName" : "56608",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ee93db50-919b-4bf0-b934-d3bb2499ef26",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Deal Registration"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2020deec-2a71-4bb5-8723-31b3cba8ddc9",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4cb2b6a0-87e1-460e-baa6-7ca380ce0851",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-deal-registration"
+}

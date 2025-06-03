@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>口座残高スナップショット</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Account Balance Snapshot Layout</layout>
+        <sections>
+            <label>クレジットノート情報</label>
+            <section>CreditNote Information</section>
+        </sections>
+        <sections>
+            <label>デビットノート情報</label>
+            <section>DebitNote Information</section>
+        </sections>
+        <sections>
+            <label>請求書情報</label>
+            <section>Invoice Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>口座残高スナップショット名</nameFieldLabel>
+</CustomObjectTranslation>

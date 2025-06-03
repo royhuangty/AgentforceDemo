@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Aplica-se quando o prod. do pedido tem valor de Subst. da data de fecham. da fatura (BTDO) durante o ciclo de faturam. Junte um período parc. de faturam. com o comp. anter. ao criar a linha de fatura ou deixe o per. parcial como uma linha de fatura separ.</help>
+        <label><!-- Period Treatment for BTDO --></label>
+        <name>blng__PeriodTreatmentForBTDO__c</name>
+    </CustomFieldTranslation>

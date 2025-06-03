@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>金額の計算方法 (全体に対する割合、均一金額、または他の処理が実行された後の残り)。</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

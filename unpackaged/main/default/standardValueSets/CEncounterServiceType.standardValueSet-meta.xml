@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Homeopathy</fullName>
+        <default>false</default>
+        <label>Homeopathy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meditation</fullName>
+        <default>false</default>
+        <label>Meditation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Naturopathy</fullName>
+        <default>false</default>
+        <label>Naturopathy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reflexology</fullName>
+        <default>false</default>
+        <label>Reflexology</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bepaalt hoeveel minuten voor het begin van de dag van de resource in de agenda beschikbaar zullen zijn om te reizen (op kosten van de werknemer).
+Indien leeg is elke hoeveelheid reizen voor de start van de werkdag geldig.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

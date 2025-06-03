@@ -1,0 +1,11 @@
+Dear {!Contact.Salutation} {!Contact.LastName},
+
+Thanks for your continuous partnership with us.
+Today, I wanted to introduce our latest innovation which will elevate energy efficiency to next level.
+To find out more about it, please watch our product teaser from the link below.
+Link: https://www.salesforce.com/content/dam/web/en_ie/www/documents/industries/Net-ZeroCloud-Datasheet.pdf?d=cta-header-2
+
+If interested, would you be able to get on a call with me next week to discuss this?
+
+Best,
+{!Contact.OwnerFullName}

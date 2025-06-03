@@ -1,0 +1,71 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1f3d18e6-6579-473b-bed7-1bebaa88197c",
+  "label" : "guestscheduling",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "aeb8be51-7fab-4616-9189-dedec3f013d1",
+          "columns" : [ {
+            "UUID" : "28a2945b-64be-4aa2-a92b-4ca21e59bfb8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "aeb8be51-7fab-4616-9189-dedec3f013d1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "SDO_Schedule_Inbound_New_Guest_Appointment"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "693d7400-8ac1-499d-b652-e56f4c6b1642",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "28a2945b-64be-4aa2-a92b-4ca21e59bfb8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b4c091c2-fd8b-4195-a92b-7a47ac33d691",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "guestscheduling"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1a1729fb-e2ba-448a-8932-6713119390d9",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5f9487b8-6ae4-4440-9e80-eecaf2c397ed",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "sDgGxVNA6v1stbHPKFSfQpVgvVg6PR",
+  "type" : "view",
+  "viewType" : "custom-guestscheduling"
+}

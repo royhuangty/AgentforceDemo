@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>決定最早開始休息時間 (格式為：{HH:MM}) 以建立休息時間。 
+如果您不想建立休息時間，請將此欄位保留空白。</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

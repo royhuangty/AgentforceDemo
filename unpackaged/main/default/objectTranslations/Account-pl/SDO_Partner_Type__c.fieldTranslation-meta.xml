@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Partner Type --></label>
+        <name>SDO_Partner_Type__c</name>
+        <picklistValues>
+            <masterLabel>Alliance Partner</masterLabel>
+            <translation><!-- Alliance Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service &amp; Support Specialist</masterLabel>
+            <translation><!-- Service &amp; Support Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Provider</masterLabel>
+            <translation><!-- Service Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator</masterLabel>
+            <translation><!-- System Integrator --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

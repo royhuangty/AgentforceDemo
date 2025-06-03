@@ -1,0 +1,33 @@
+<apex:page docType="html-5.0" sidebar="false" controller="SDO_Pardot_CreateExternalActivitiesCSV">
+<apex:form >
+<div style="border:1px solid; width:2000px;">
+<div style="height:30px;width:150px;margin-top:20px;margin-left:20px;font-size:15px;color:blue;">
+CREATE_EXTERNAL_ACTIVITIES_CSV
+</div>
+<table>
+<tr>
+<td> Extension Name </td>
+<td> <apex:inputtext value="{!extensionName}"/> </td>
+</tr>
+<tr>
+<td> Activity Types (Comma separated values) </td>
+<td> <apex:inputTextarea value="{!activityTypes}" /> </td>
+</tr>
+<tr> <td> Activity Values (Comma separated values) </td>
+<td> <apex:inputtextarea value="{!activityValues}" /> </td>
+</tr>
+<tr>
+<td> Num External Activities </td>
+<td> <apex:input type="number" value="{!numExternalActivities}"/> </td>
+</tr>
+<tr> 
+<td> Prospect Emails (Comma separated values) </td>
+<td> <apex:inputtextarea value="{!prospectEmails}" /> </td>
+</tr>
+<tr>
+<td colspan="2" align="center"> <apex:commandButton value="CREATE CSV" style="color:red;" action="{!create}" rerender=""/> </td>
+</tr>
+</table>
+</div>
+</apex:form>
+</apex:page>

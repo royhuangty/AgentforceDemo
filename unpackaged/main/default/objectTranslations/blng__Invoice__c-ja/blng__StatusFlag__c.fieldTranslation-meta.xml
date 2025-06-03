@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>オレンジ = 残高がある有効請求書。緑 = 差引請求額なし。赤 = 期日超過。白 = キャンセル済み</help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </CustomFieldTranslation>

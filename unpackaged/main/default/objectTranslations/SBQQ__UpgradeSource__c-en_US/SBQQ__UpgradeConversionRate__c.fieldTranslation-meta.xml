@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify a ratio for quantity conversion from Upgrade Source to Upgrade Product. e.g. &quot;5:1&quot; indicates that 5 units of Upgrade Source convert to 1 unit of Upgrade Product. If blank, no Upgrade Conversion Rate is enforced. --></help>
+        <label><!-- Upgrade Conversion Rate --></label>
+        <name>SBQQ__UpgradeConversionRate__c</name>
+    </CustomFieldTranslation>

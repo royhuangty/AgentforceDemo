@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払方法</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Method Layout</layout>
+        <sections>
+            <label>ACH の詳細</label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label>住所の詳細</label>
+            <section>Address Details</section>
+        </sections>
+        <sections>
+            <label>クレジットカードの詳細</label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label>個人情報</label>
+            <section>Personal Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>支払方法名</nameFieldLabel>
+    <webLinks>
+        <label><!-- NewPaymentMethodCreditCard --></label>
+        <name>blng__NewPaymentMethodCreditCard</name>
+    </webLinks>
+</CustomObjectTranslation>

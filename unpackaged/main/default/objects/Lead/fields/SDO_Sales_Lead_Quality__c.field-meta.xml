@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Sales_Lead_Quality__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(&#39;/servlet/servlet.FileDownload?file=&#39;&amp; IF (SDO_Sales_Lead_Total__c &gt; 0, &#39;015Hu000005qPCG&#39;, &#39;015Hu000005qPCH&#39;),&#39;&#39;,24,22) &amp;&quot;&quot;&amp;
+IMAGE(&#39;/servlet/servlet.FileDownload?file=&#39;&amp; IF (SDO_Sales_Lead_Total__c &gt; 5, &#39;015Hu000005qPCG&#39;, &#39;015Hu000005qPCH&#39;),&#39;&#39;,24,22) &amp;&quot;&quot;&amp;
+IMAGE(&#39;/servlet/servlet.FileDownload?file=&#39;&amp; IF (SDO_Sales_Lead_Total__c &gt; 10, &#39;015Hu000005qPCG&#39;, &#39;015Hu000005qPCH&#39;),&#39;&#39;,24,22) &amp;&quot;&quot;&amp;
+IMAGE(&#39;/servlet/servlet.FileDownload?file=&#39;&amp; IF (SDO_Sales_Lead_Total__c &gt; 15, &#39;015Hu000005qPCG&#39;, &#39;015Hu000005qPCH&#39;),&#39;&#39;,24,22)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lead Quality</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

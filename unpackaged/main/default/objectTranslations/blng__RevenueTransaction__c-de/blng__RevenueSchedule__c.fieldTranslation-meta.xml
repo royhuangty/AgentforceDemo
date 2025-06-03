@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Der für diese Transaktion verwendete Umsatzplan.</help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </CustomFieldTranslation>

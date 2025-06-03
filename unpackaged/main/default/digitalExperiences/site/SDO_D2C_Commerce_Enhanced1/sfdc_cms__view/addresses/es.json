@@ -1,0 +1,32 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Address List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Gestión de direcciones"
+        },
+        "id" : "f9c71a8c-a746-4802-80f7-f290e6ae651f"
+      }, {
+        "attributes" : {
+          "text" : "Añadir dirección"
+        },
+        "id" : "f12ca643-da4f-43f7-988a-8aa0f5edf889"
+      }, {
+        "attributes" : {
+          "billingTabLabel" : "Facturación",
+          "cardDefaultLabel" : "Predeterminado",
+          "footerDeleteLabel" : "Eliminar",
+          "footerEditLabel" : "Modificar",
+          "noAddressMessageText" : "¡No tiene ningún dirección aún!",
+          "noAddressMessageTitle" : "No hay dirección todavía",
+          "shippingTabLabel" : "Envíos",
+          "showMoreButtonLabel" : "Mostrar más"
+        },
+        "id" : "f845182c-225d-4528-918f-41a46e83ff61"
+      } ]
+    }
+  },
+  "urlName" : "address-list"
+}

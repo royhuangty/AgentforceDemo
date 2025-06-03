@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>B2B Moodboard</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="effectiveAccountId" type="String" default="{!CurrentUser.effectiveAccountId}" label="Effective Account Id" description="The ID of the account under which the user is acting (BETA)" />
+            <property name="defaultCategoryId" type="String" label="Default Category Id" description="The ID of the category used to display an initial list of products" />
+            <property name="includePrices" type="Boolean" default="true" label="Show Prices" description="Toggle the display of pricing information" />
+            <property name="pageSize" type="Integer" default="25" required="true" label="Page Size" description="Number of products to display in search results" />
+        </targetConfig>
+    </targetConfigs>
+
+
+</LightningComponentBundle>

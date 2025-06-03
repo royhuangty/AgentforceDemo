@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Total amount of non-optional line times before additional discounts are applied. --></help>
+        <label><!-- Regular Amount --></label>
+        <name>SBQQ__RegularAmount__c</name>
+    </CustomFieldTranslation>

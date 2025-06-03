@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Too Many Requests",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 30px 25px;\">\n <div style=\"background-image: url(assets/images/tooManyRequests.svg); background-size: contain; height: 350px; width: 100%; background-repeat: no-repeat; background-position: center;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n <h1 class=\"slds-text-heading_large\">Il semblerait que le site connaisse une demande plus élevée que d'habitude…</h1>\n <p class=\"slds-text-heading_small\">Ne bougez pas. Nous vous redirigerons dans un instant.</p>\n</div>"
+        },
+        "id" : "8d237ec5-4020-46ee-be79-4185f15b173e"
+      } ]
+    }
+  },
+  "urlName" : "too-many-requests"
+}

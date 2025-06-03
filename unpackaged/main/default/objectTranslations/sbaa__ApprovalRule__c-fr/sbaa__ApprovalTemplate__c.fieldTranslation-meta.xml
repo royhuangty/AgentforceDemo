@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référencez le modèle d&#39;e-mail associé à l&#39;approbation de cette règle</help>
+        <label><!-- Approval Template --></label>
+        <name>sbaa__ApprovalTemplate__c</name>
+        <relationshipLabel><!-- Approved Approval Rules --></relationshipLabel>
+    </CustomFieldTranslation>

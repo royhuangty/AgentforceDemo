@@ -1,0 +1,88 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "¡Gracias por tu pedido!"
+        },
+        "id" : "84726ce9-8dcf-47bd-9818-a49f95a921d4"
+      }, {
+        "id" : "34cd9581-b4f7-4bc6-bb62-28cc16f33d1d",
+        "attributes" : {
+          "text" : "Su número de pedido es {!Route.orderNumber}. Utilice este número de pedido para realizar el seguimiento de su compra."
+        }
+      }, {
+        "id" : "bcfa3bcf-6e4d-4197-8b90-1ba1c8bdd591",
+        "attributes" : {
+          "text" : "Pronto recibirás un correo electrónico con los detalles de tu pedido."
+        }
+      }, {
+        "id" : "19002bdd-e1f0-404b-8142-3a33419058b7",
+        "attributes" : {
+          "text" : "Ítems del Pedido"
+        }
+      }, {
+        "id" : "c76a4e53-8c5f-49c9-92b4-f8324e68cbf3",
+        "attributes" : {
+          "text" : "Continuar comprando"
+        }
+      }, {
+        "id" : "71fd5d64-c113-46f7-9e4f-f845c14a0b63",
+        "attributes" : {
+          "text" : "Detalles Facturación"
+        }
+      }, {
+        "id" : "ab2e9307-8b34-42da-89dc-3d312897d86a",
+        "attributes" : {
+          "emailAddressLabel" : "Email",
+          "paymentMethodLabel" : "Medio de Pago",
+          "billingAddressLabel" : "Dirección de Facturación"
+        }
+      }, {
+        "id" : "dd90129e-d72b-4872-9205-6a0132f083eb",
+        "attributes" : {
+          "text" : "Continuar "
+        }
+      }, {
+        "id" : "31a491d3-a65a-4021-8aa2-eb6147a1c33b",
+        "attributes" : {
+          "text" : "Esta página no está disponible."
+        }
+      }, {
+        "id" : "f991beb2-6bfa-4303-9f26-15f64ad08b1b",
+        "attributes" : {
+          "text" : "Pero no te preocupes, aún puedes encontrar los detalles de tu pedido."
+        }
+      }, {
+        "id" : "3467bb1f-8a91-4d0d-88de-6cbf93ade10c",
+        "attributes" : {
+          "authUserButtonText" : "Ver histórico de Pedidos",
+          "guestUserButtonText" : "Encontrar mi pedido"
+        }
+      }, {
+        "id" : "76654da4-9409-45cc-b884-634a398a8d7a",
+        "attributes" : {
+          "text" : "Total Pagado"
+        }
+      }, {
+        "id" : "61ec09df-3c9b-4f6e-825c-f7c4f6d64794",
+        "attributes" : {
+          "text" : "Envío"
+        }
+      }, {
+        "id" : "ad2f8e30-00b2-4e62-8e49-dc7550ef0116",
+        "attributes" : {
+          "text" : "Impuestos"
+        }
+      }, {
+        "id" : "f4b810b6-21a9-4589-8106-dbd60ca36015",
+        "attributes" : {
+          "text" : "Promociones Aplicadas"
+        }
+      } ]
+    }
+  },
+  "urlName" : "order"
+}

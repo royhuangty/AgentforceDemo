@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Application Access --></label>
+        <name>sfsp__ApplicationAccess__c</name>
+        <picklistValues>
+            <masterLabel>Quota Planning</masterLabel>
+            <translation><!-- Quota Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Territory Planning</masterLabel>
+            <translation><!-- Territory Planning --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

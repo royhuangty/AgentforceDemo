@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Opportunity</contextRecordType>
+    <description>Suggestions for Partners on the Opportunity Screen</description>
+    <if>
+        <childNode>Qualify_Deal</childNode>
+        <childNode>Suggested_Files</childNode>
+        <childNode>Create_Quote</childNode>
+        <childNode>Demo_Support_Request</childNode>
+        <label>Opportunity Stage</label>
+        <name>Opportunity_Stage</name>
+        <childNodeExpression>
+            <childName>Suggested_Files</childName>
+            <expression>ISPICKVAL($Record.StageName, &#39;Discovery&#39;)</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Qualify_Deal</childName>
+            <expression>ISPICKVAL($Record.StageName, &#39;Qualification&#39;)</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Create_Quote</childName>
+            <expression>ISPICKVAL($Record.StageName, &#39;Proposal/Quote&#39;)</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Demo_Support_Request</childName>
+            <expression>ISPICKVAL($Record.StageName, &#39;Negotiation&#39;)</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Partner Opportunity Suggestions</label>
+    <recommendationLoad>
+        <label>Qualify Deal</label>
+        <name>Qualify_Deal</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>PRM - Qualification</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Suggested Files</label>
+        <name>Suggested_Files</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>PRM - Discovery Stage</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Create Quote</label>
+        <name>Create_Quote</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>PRM - Proposal/Quote</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Demo Support Request</label>
+        <name>Demo_Support_Request</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>PRM - Negotiation</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Opportunity_Stage</childNode>
+        <label>Output</label>
+        <name>Output_dc0858ebbcef46d885d6cb225b32d6d5</name>
+    </union>
+</RecommendationStrategy>

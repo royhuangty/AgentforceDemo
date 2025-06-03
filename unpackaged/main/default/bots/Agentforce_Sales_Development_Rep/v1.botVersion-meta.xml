@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>v1</fullName>
+        <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Hi! I&#39;m your helpful bot.</message>
+                    <messageIdentifier>86547885-508f-424b-a851-72961b570f3d</messageIdentifier>
+                </botMessages>
+                <stepIdentifier>ae91cb95-ee3b-4e88-a385-c9dfd9ca9843</stepIdentifier>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <stepIdentifier>934e5990-7fb5-4477-b8c8-759bef27a18d</stepIdentifier>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Welcome</developerName>
+            <isPlaceholderDialog>false</isPlaceholderDialog>
+            <label>Hi! I&#39;m your helpful bot.</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Unfortunately, a system error occurred. Let us start again.</message>
+                    <messageIdentifier>8de41cbc-f8cb-4a6e-be1c-2912114e4477</messageIdentifier>
+                </botMessages>
+                <stepIdentifier>d8fc268b-f73f-4904-bee1-fea7e3f307f2</stepIdentifier>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <stepIdentifier>0dbba441-38e5-4d14-913d-3c0f65a1ff08</stepIdentifier>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Error_Handling</developerName>
+            <isPlaceholderDialog>false</isPlaceholderDialog>
+            <label>Unfortunately, a system error occurred. Let us start again.</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <citationsEnabled>false</citationsEnabled>
+        <conversationDefinitionPlanners>
+            <genAiPlannerName>Agentforce_Sales_Development_Rep</genAiPlannerName>
+        </conversationDefinitionPlanners>
+        <conversationVariables>
+            <dataType>Text</dataType>
+            <developerName>VerifiedCustomerId</developerName>
+            <label>VerifiedCustomerId</label>
+        </conversationVariables>
+        <entryDialog>Welcome</entryDialog>
+        <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+        <intentV3Enabled>false</intentV3Enabled>
+        <knowledgeActionEnabled>false</knowledgeActionEnabled>
+        <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+        <smallTalkEnabled>false</smallTalkEnabled>
+        <toneType>Casual</toneType>
+    </BotVersion>

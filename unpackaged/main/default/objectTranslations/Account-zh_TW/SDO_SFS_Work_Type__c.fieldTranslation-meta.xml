@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Default work type to use for this account for field service activity --></help>
+        <label><!-- Work Type --></label>
+        <name>SDO_SFS_Work_Type__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </CustomFieldTranslation>

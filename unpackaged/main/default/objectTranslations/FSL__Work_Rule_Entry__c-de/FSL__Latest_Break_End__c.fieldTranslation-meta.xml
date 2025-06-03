@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die Anzahl der Minuten ab Beginn der Verfügbarkeit der Serviceressource bis zum spätesten zulässigen Pausenende. Geben Sie beispielsweise 300 ein, um eine Mittagspause so zu planen, die sie spätestens fünf Stunden nach dem Beginn des Tags endet.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

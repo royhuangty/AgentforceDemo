@@ -1,0 +1,12 @@
+<apex:page showheader="{!showHeader}" standardstylesheets="false" sidebar="false" controller="maps.MapsLegacyCheck" title="Salesforce Maps" docType="{!docType}">
+
+  <c:MapsV2 rendered="{!useMapsV2Page}"/>
+  <c:Maps rendered="{!useMapsLegacyPage}"/>
+	<c:Oops rendered="{!useMapsOopsPage}" />
+  <c:MapsMobile rendered="{!useMapsMobilePage}" />
+  <apex:outputPanel rendered="{!useSiteBuilderSpashScreen}">
+    <div style="overflow: hidden; background-color:white; display: block;">
+        <img src ="{!URLFOR($Resource.MapsStyles, 'sf_maps_logo_RGB.svg')}" alt="S{!$Label.Salesforce_Maps_Logo}" height="100%" width="100%"/>
+    </div>
+  </apex:outputPanel>
+</apex:page>

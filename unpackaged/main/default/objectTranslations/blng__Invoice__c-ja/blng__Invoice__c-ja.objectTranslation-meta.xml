@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>請求書</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label>残高情報</label>
+            <section>Balance Information</section>
+        </sections>
+        <sections>
+            <label>請求書発行日情報</label>
+            <section>Invoice Date Information</section>
+        </sections>
+        <sections>
+            <label>請求書状態情報</label>
+            <section>Invoice Status Information</section>
+        </sections>
+        <sections>
+            <label>支払の実行の情報</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>支払の実行のオプション</label>
+            <section>Payment Run Options</section>
+        </sections>
+        <sections>
+            <label>価格情報</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>税金情報</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>請求書番号</nameFieldLabel>
+    <quickActions>
+        <label><!-- Update Invoice --></label>
+        <name>blng__Cancel_Rebill</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Cancel_Rebill --></label>
+        <name>blng__Cancel_Rebill</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ConvertNegativeLines --></label>
+        <name>blng__ConvertNegativeLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit --></label>
+        <name>blng__Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Payment_Virtual_Terminal --></label>
+        <name>blng__Payment_Virtual_Terminal</name>
+    </webLinks>
+</CustomObjectTranslation>

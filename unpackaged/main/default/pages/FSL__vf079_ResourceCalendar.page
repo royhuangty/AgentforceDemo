@@ -1,0 +1,150 @@
+<apex:page sidebar="false" showHeader="false" standardController="ServiceResource" extensions="FSL.ctrl079_ResourceCalendar">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'dhtmlxscheduler.css')}" />
+    <apex:stylesheet value="{!$Resource.FSL__css079_ResourceCalendar}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'dhtmlxscheduler.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'ext/dhtmlxscheduler_minical.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'ext/dhtmlxscheduler_tooltip.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'ext/dhtmlxscheduler_year_view.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxScheduler5310, 'ext/dhtmlxscheduler_all_timed.js')}" />
+
+
+
+
+
+
+    <apex:includeScript value="{!$Resource.FSL__MomentJS}" />
+    <apex:includeScript value="{!$Resource.FSL__DefineMomentTimezones}" />
+    <apex:includeScript value="{!$Resource.FSL__MomentTimezone}" />
+    <apex:includeScript value="{!$Resource.FSL__svg4everybody_min}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+    <script type='text/javascript' src='/support/console/59.0/integration.js' ></script>
+    <apex:includeScript value="{!$Resource.FSL__js079_ResourceCalenar}" />
+    <apex:includeScript value="{!$Resource.FSL__datePickerConf}" />
+    <apex:includeScript value="{!$Resource.FSL__blueBirdpolyfillMin}" />
+  
+    <script>
+        var userLocale = "{!userLocale}", 
+            userTimeZone = "{!userTimeZone}",   
+            yearlyAvailable={!isYearlyAvailable},
+            resourceId = '{!ServiceResource.Id}',
+            resourceName='{!JSENCODE(ServiceResource.Name)}',
+    	    getServices = '{!$RemoteAction.ctrl079_ResourceCalendar.getServices}',
+    	    getDictionaries = '{!$RemoteAction.ctrl079_ResourceCalendar.getDictionaries}',
+    	    getStatuses = '{!$RemoteAction.ctrl079_ResourceCalendar.getStatuses}',
+    	    dictionaryValueField = '{!$ObjectType.Dictionaries__c.fields.Value__c.Name}',
+            getServiceFieldSet='{!$RemoteAction.ctrl079_ResourceCalendar.getServiceFieldset}',
+            getNAFieldSet='{!$RemoteAction.ctrl079_ResourceCalendar.getNAFieldset}',
+            getServiceTooltipFieldset='{!$RemoteAction.ctrl079_ResourceCalendar.getServiceTooltipFieldset}',
+            getNaTooltipFieldset='{!$RemoteAction.ctrl079_ResourceCalendar.getNaTooltipFieldset}',
+            cssLink='{!$Resource.cssToexport079}',
+            getNAs='{!$RemoteAction.ctrl079_ResourceCalendar.getNAs}',
+            getNaRecordTypes='{!$RemoteAction.ctrl079_ResourceCalendar.getNaRecordTypes}',
+            getduartionPerDay='{!$RemoteAction.ctrl079_ResourceCalendar.getduartionPerDay}',
+            getTranslations='{!$RemoteAction.ctrl079_ResourceCalendar.getTranslations}',
+            lowUtility="{!lowUtility}",
+            medUtility="{!medUtility}",
+            Today="{!JSENCODE($Label.Today)}",
+            Day="{!JSENCODE($Label.Day_Tab)}",
+            Week="{!JSENCODE($Label.Week)}",
+            Month="{!JSENCODE($Label.Month)}",
+            Year="{!JSENCODE($Label.Year)}",
+            isAMPM = {!isCurrentUserUsesAMPMLocale},
+            sfdcUser = '{!JSENCODE($User.username)}',
+            busyHours = JSON.parse(localStorage.getItem(sfdcUser + '_busyHours')),
+            startOnMonday = {!firstDayOfTheWeek};
+
+        let labels = {
+            The_first_hour_must_be_earlier_than_the_last_hour: "{!JSENCODE($Label.The_first_hour_must_be_earlier_than_the_last_hour)}"
+        };
+
+        $(function() {
+            svg4everybody();
+        })
+
+        var objectNames = {
+            ServiceAppointment: {
+                GanttColor__c: '{!$ObjectType.ServiceAppointment.Fields.GanttColor__c.Name}',
+                IsMultiDay__c: '{!$ObjectType.ServiceAppointment.Fields.IsMultiDay__c.Name}'
+            },
+            ResourceAbsence: {
+                GanttColor__c: '{!$ObjectType.ResourceAbsence.Fields.Gantt_Color__c.Name}'
+            }
+        };
+
+        // set locale
+        /*moment.locale(userLocale);*/
+        var multiday="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#clock')}";
+        var forword="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#forward')}";
+        var na= "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#ban')}";
+        var imgbreak ="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/custom-sprite/svg/symbols.svg#custom65')}";
+        var breakeIcon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAAhFBMVEUAAAD9/f39/f39/f39/f39/f39/f39/f39/f3////9/f39/f3+/v79/f39/f3////////////9/f39/f39/f39/f3+/v7////+/v7+/v7+/v7+/v7////+/v7////////////////9/f39/f39/f39/f3+/v7+/v7+/v7+/v7////////oftChAAAAK3RSTlMA0Pyo9/7pyotp49kbz4NXPgKtoZqTdGBJNTAoGBIQDQcE8vHcvXlzXk8gfFUzegAAANFJREFUGBntwUdyxCAUBcAnBoRymJyD44zf/e/nLQjps7Wr1I3ZDHmdCOyqfWCoYER5wIBmjO7g6SkqDcHu000000uCifzgMRRo4JqSH/C8U5ACyEje4CopqAHkJCu4lhQsAKxJc4fri4ItcNKkhedAQXfZpSRz+ArG2B6+hhFlhYGzpkStrghknJBtN1leYcSt4KjkgUmd4gh9hCBnyLQQfXNI7RDRvtGT7hH1s144Nmf8R1mdSD4rBAxlTwQSyo4IvAwlS4zYW62mFM0ds7/uF8D2bnrWDp7kAAAAAElFTkSuQmCC";
+    </script>
+
+    <div id="FirstTimeLoading" style="display:none">
+        <div>
+            <img id="loadingSFLogo" src="{!$Resource.SalesfoceLogo}" />
+            <div>{!$Label.Resource_Calendar_is_loading}</div>
+        </div>
+    </div>
+
+    <div id="calendarLineFix"></div>
+
+
+    <div id="yearGradient">
+        <span class="LegendNA"></span>{!$Label.NA}
+        <span class="LegendLow"></span>{!$Label.Low}
+        <span class="LegendMed"></span>{!$Label.Medium}
+        <span class="LegendHigh"></span>{!$Label.High}
+    </div>
+
+
+    <div id="scheduler_here" class="dhx_cal_container" style='width:98%; height:98%;'>
+        <div class="dhx_header_wrapper">
+        <div class="dhx_cal_navline">
+            <div class="dhx_cal_prev_button" id="DatesLeftArrow">&nbsp;</div>
+            <div class="dhx_cal_next_button" id="DatesRightArrow">&nbsp;</div>
+            <div class="dhx_cal_today_button" id="TodayButton" title="{!JSENCODE($Label.Today)}"></div>
+            <div id="businessHours">
+                <select id="fromHour"></select>
+                <select id="toHour"></select>
+                <div id="Apply">
+                    <svg aria-hidden="true" class="slds-icon" >
+                        <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#approval')}"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="dhx_cal_date"></div>
+            <div id="dhx_minical_icon" onclick="show_minical()">
+                <svg aria-hidden="true" class="slds-icon" >
+                    <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+                </svg>
+            </div>
+
+
+            <div id="triangle_mode_select"></div>
+            <select id="calendar_mode_selector">
+                <option value="day">{!JSENCODE($Label.Day_Tab)}</option>
+                <option value="week">{!JSENCODE($Label.Week)}</option>
+                <option value="month">{!JSENCODE($Label.Month)}</option>
+                <option value="year">{!JSENCODE($Label.Year)}</option>
+            </select>
+
+            <!--<div class="dhx_cal_tab" name="day_tab" style="right:204px;" title="{!JSENCODE($Label.Day_Tab)}"></div>-->
+            <!--<div class="dhx_cal_tab" name="week_tab" style="right:140px;" title="{!JSENCODE($Label.Week)}"></div>-->
+            <!--<div class="dhx_cal_tab" name="month_tab" style="right:76px;" title="{!JSENCODE($Label.Month)}"></div>-->
+            <!--<div class="dhx_cal_tab year_tab" name="year_tab" title="{!JSENCODE($Label.Year)}"></div>-->
+
+        </div>
+        <div class="dhx_cal_header"></div>
+    </div>
+        <div class="dhx_cal_data"></div>
+    </div>
+
+
+</html>
+</apex:page>

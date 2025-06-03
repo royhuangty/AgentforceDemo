@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Criteria__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Criteria</label>
+    <referenceTo>FSL__Criteria__c</referenceTo>
+    <relationshipLabel>Scheduling Recipes</relationshipLabel>
+    <relationshipName>Scheduling_Recipes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

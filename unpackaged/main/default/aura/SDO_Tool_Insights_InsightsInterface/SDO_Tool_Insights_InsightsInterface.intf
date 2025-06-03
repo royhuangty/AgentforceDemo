@@ -1,0 +1,3 @@
+<aura:interface description="Interface template">
+    <aura:registerEvent name="renderPanel" type="c:SDO_Tool_Insights_InsightRenderPanel"/>
+</aura:interface>

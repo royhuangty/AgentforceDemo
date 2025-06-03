@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox to default the quote process selector to this process in Line Editor. This only applies when quote process selector is rendered as a picklist. --></help>
+        <label><!-- Default --></label>
+        <name>SBQQ__Default__c</name>
+    </CustomFieldTranslation>

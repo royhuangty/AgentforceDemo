@@ -1,0 +1,25 @@
+#searchWrap {
+	&.in {
+		z-index: 2000;
+	}
+}
+
+
+#searchTopBar .ma-top-bar-field-center {
+	margin: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+#searchTopBar .ma-top-bar-field-center {
+	margin: .75rem;
+}
+
+#searchWrap {
+	&.in {
+		z-index: 1000;
+	}
+}
+
+
+}

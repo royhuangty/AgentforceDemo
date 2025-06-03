@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Lorsque Remise est sélectionnée, Variable de liste et Variable nette doivent être renseignées. Lorsque Résumé est sélectionné, Champ agrégé et Fonction agrégée doivent être renseignés.</help>
+        <label><!-- Type --></label>
+        <name>sbaa__Type__c</name>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation>Remise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary</masterLabel>
+            <translation>Résumé</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter a list of price book IDs separated by commas that should not be applied to this Price Schedule. --></help>
+        <label><!-- Excluded Pricebook IDs --></label>
+        <name>SBQQ__ExcludedPricebookIds__c</name>
+    </CustomFieldTranslation>

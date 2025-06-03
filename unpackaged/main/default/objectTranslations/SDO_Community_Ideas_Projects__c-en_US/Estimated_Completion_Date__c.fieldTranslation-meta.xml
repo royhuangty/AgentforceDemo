@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Note that changes to the estimated completion date are are tracked in the field history tracking down below, along with the project status, owner, and estimated completion date. --></help>
+        <label><!-- Estimated Completion Date --></label>
+        <name>Estimated_Completion_Date__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払トランザクション</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Transaction Layout</layout>
+        <sections>
+            <label>ACH の詳細</label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label>クレジットカードの詳細</label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label>ゲートウェイ応答</label>
+            <section>Gateway Response</section>
+        </sections>
+        <sections>
+            <label>支払要求情報</label>
+            <section>Payment Request Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>支払トランザクション名</nameFieldLabel>
+    <quickActions>
+        <label><!-- Attempt Refund &amp; Unlock Invoice --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+</CustomObjectTranslation>

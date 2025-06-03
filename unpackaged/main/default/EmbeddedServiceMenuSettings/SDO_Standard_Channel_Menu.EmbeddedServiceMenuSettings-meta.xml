@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceMenuSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <embeddedServiceCustomizations>
+        <customizationName>ChatSettings</customizationName>
+        <embeddedServiceResources>
+            <resource>SDO_Service_ChannelMenu_CodeSetting</resource>
+            <resourceType>SettingsFile</resourceType>
+        </embeddedServiceResources>
+    </embeddedServiceCustomizations>
+    <embeddedServiceMenuItems>
+        <channel>SDO_Messaging_for_Web</channel>
+        <channelType>EmbeddedMessaging</channelType>
+        <displayOrder>2</displayOrder>
+        <isDisplayedOnPageLoad>true</isDisplayedOnPageLoad>
+        <itemName>Chat</itemName>
+        <osOptionsHideInIOS>false</osOptionsHideInIOS>
+        <osOptionsHideInLinuxOS>false</osOptionsHideInLinuxOS>
+        <osOptionsHideInMacOS>false</osOptionsHideInMacOS>
+        <osOptionsHideInOtherOS>false</osOptionsHideInOtherOS>
+        <osOptionsHideInWindowsOS>false</osOptionsHideInWindowsOS>
+        <shouldOpenUrlInSameTab>false</shouldOpenUrlInSameTab>
+    </embeddedServiceMenuItems>
+    <embeddedServiceMenuItems>
+        <channelType>Phone</channelType>
+        <displayOrder>1</displayOrder>
+        <isDisplayedOnPageLoad>true</isDisplayedOnPageLoad>
+        <itemName>Phone</itemName>
+        <osOptionsHideInIOS>false</osOptionsHideInIOS>
+        <osOptionsHideInLinuxOS>false</osOptionsHideInLinuxOS>
+        <osOptionsHideInMacOS>false</osOptionsHideInMacOS>
+        <osOptionsHideInOtherOS>false</osOptionsHideInOtherOS>
+        <osOptionsHideInWindowsOS>false</osOptionsHideInWindowsOS>
+        <phoneNumber>18001112222</phoneNumber>
+        <shouldOpenUrlInSameTab>false</shouldOpenUrlInSameTab>
+    </embeddedServiceMenuItems>
+    <isEnabled>true</isEnabled>
+    <masterLabel>Standard Channel Menu</masterLabel>
+    <site>SDO_Consumer</site>
+</EmbeddedServiceMenuSettings>

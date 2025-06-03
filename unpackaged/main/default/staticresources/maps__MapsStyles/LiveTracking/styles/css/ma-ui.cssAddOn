@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #16325c; }
+
+.page-wrap {
+  padding: 10px; }
+
+.content-area {
+  background-color: #fff;
+  border-radius: 0 0 .25rem .25rem; }
+
+.warning-icon {
+  float: right;
+  color: #ffb75d;
+  font-size: 16px;
+  line-height: 1; }
+
+.map-container {
+  background-color: pink; }
+
+.day-table-wrap {
+  border-right: 1px solid #dddbda;
+  border-radius: 0 0 0 .25rem; }
+
+.marker-counter-wrap {
+  position: relative;
+  flex-shrink: 0; }
+  .marker-counter-wrap .marker-icon-wrap {
+    position: relative;
+    z-index: 5; }
+  .marker-counter-wrap .marker-counter {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700; }
+
+.association-selection-card {
+  height: 375px; }
+
+.stop-selection-list {
+  border-top: 2px solid #dddbda;
+  overflow-y: auto; }
+
+.stop-selection-list_item {
+  border-bottom: 1px solid #dddbda;
+  padding-bottom: 13px; }
+  .stop-selection-list_item .slds-checkbox_add-button {
+    flex-shrink: 0; }
+
+.stop-selection-distance-label {
+  line-height: 1; }
+
+.sidebar-header-wrap {
+  flex-shrink: 0; }
+
+.sidebar-table-wrap {
+  border-top: 1px solid #dddbda;
+  border-bottom: 1px solid #dddbda;
+  margin-bottom: 18px;
+  overflow-y: auto; }
+  .sidebar-table-wrap .slds-table tr {
+    cursor: pointer; }
+  .sidebar-table-wrap .slds-table.slds-table_cell-buffer tr > th:first-child,
+  .sidebar-table-wrap .slds-table.slds-table_cell-buffer tr > td:first-child {
+    padding-left: 16px; }
+
+.vehicle-col-inner {
+  max-width: 200px; }
+
+/*# sourceMappingURL=ma-ui.css.map */

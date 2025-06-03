@@ -1,0 +1,15 @@
+.slds-scope {
+	.slds-item {
+		&.clickable-item {
+			&:hover {
+				background-color: $light-gray;
+				cursor: pointer;
+			}
+			
+			&.active {
+				background-color: $light-gray;
+				cursor: default;
+			}
+		}
+	}
+}

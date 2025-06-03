@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Type of event that triggers creation of the revenue schedule. --></help>
+        <label><!-- Revenue Schedule Creation Action --></label>
+        <name>blng__RevenueScheduleCreationAction__c</name>
+    </CustomFieldTranslation>

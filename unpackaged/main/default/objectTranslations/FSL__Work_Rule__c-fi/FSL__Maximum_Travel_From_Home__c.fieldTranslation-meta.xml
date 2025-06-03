@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Määrittää, kuinka pitkän matkan tai kuinka monta minuuttia resurssi voi matkata kotoa saavuttaakseen palvelun</help>
+        <label><!-- Maximum Travel From Home --></label>
+        <name>FSL__Maximum_Travel_From_Home__c</name>
+    </CustomFieldTranslation>

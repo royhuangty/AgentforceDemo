@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This will be used to receive all the notifications for SanityCheck component</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Notification Type</description>
+        <fieldName>Type</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Notification Data</description>
+        <fieldName>JsonData</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>To detect when history created</description>
+        <fieldName>HistoryCreated</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Session Id</description>
+        <fieldName>SessionId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>SanityChannel</masterLabel>
+</LightningMessageChannel>

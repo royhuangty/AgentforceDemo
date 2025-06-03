@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>ถ้าทำเครื่องหมาย ช่องว่างระหว่างบริการจะเป็นไปตามฟิลด์ช่องว่างต่ำสุด โดยไม่มีการคำนวณระยะห่าง</help>
+        <label><!-- Fixed Gap --></label>
+        <name>FSL__Is_Fixed_Gap__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <constantType>Title</constantType>
+        <primitiveValues>
+            <textValue>Looks like you have left the conversation. Ending conversation.</textValue>
+            <type>Text</type>
+        </primitiveValues>
+    </constants>
+    <description>This displays when the conversation is inactive</description>
+    <label>InactiveConversation</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Looks like you have left the conversation. Ending conversation.</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <type>AutoResponse</type>
+</ConversationMessageDefinition>

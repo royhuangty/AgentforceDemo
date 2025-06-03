@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益スケジュールで選択された財務期間を参照します。</help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </CustomFieldTranslation>

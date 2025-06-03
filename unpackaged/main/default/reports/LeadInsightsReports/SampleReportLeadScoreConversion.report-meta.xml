@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>CONVERTED:SUM / RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Conversion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>CON_NAME</field>
+    </columns>
+    <columns>
+        <field>CON_ACCT_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>How are lead scores translating to converted leads?</description>
+    <filter>
+        <booleanFilter>(1 OR (2 AND 3)) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>CONVERTED</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CONVERTED</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CONVERTED_CONTACT_ID</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <name>Conversion Rate by Lead Score</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LAST_UPDATE</dateColumn>
+        <interval>INTERVAL_CURRENTQ</interval>
+    </timeFrameFilter>
+</Report>

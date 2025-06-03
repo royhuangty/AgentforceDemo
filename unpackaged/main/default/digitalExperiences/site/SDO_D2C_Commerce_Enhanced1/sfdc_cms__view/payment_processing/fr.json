@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Payment Processing",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Traitement du paiement"
+        },
+        "id" : "c0dd27d4-5831-4244-b8e3-d49c2e58bd0b"
+      }, {
+        "attributes" : {
+          "text" : "Cela ne prend que quelques secondes. Ne rafraîchissez pas et ne quittez pas cette page."
+        },
+        "id" : "e8f08711-d706-4872-8216-3b9293fce057"
+      } ]
+    }
+  },
+  "urlName" : "payment-processing"
+}

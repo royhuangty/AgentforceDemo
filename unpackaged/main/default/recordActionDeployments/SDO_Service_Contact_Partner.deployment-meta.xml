@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordActionDeployment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <channelConfigurations>
+        <channel>Chat</channel>
+        <isAutopopEnabled>false</isAutopopEnabled>
+    </channelConfigurations>
+    <channelConfigurations>
+        <channel>Phone</channel>
+        <isAutopopEnabled>false</isAutopopEnabled>
+    </channelConfigurations>
+    <channelConfigurations>
+        <channel>Other</channel>
+        <isAutopopEnabled>false</isAutopopEnabled>
+    </channelConfigurations>
+    <hasComponents>false</hasComponents>
+    <hasGuidedActions>true</hasGuidedActions>
+    <hasOmniscripts>false</hasOmniscripts>
+    <hasRecommendations>false</hasRecommendations>
+    <masterLabel>Service - Contact Partner</masterLabel>
+</RecordActionDeployment>

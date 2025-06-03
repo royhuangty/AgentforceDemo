@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>AllInternalUsers</sharedTo>
+        <sharedToType>Organization</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SDO_Marketing_Managers</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SDO_ProductManagers</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SDO_Sales_Reps</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <name>12 - Service - Executive Reports</name>
+</ReportFolder>

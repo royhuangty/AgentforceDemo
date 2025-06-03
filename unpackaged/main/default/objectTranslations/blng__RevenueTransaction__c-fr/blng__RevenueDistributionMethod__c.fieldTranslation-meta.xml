@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référence à la méthode de distribution sélectionnée dans le calendrier de revenu. Décrit la distribution du revenu
+        sur une période définie, en une fois, ou sur une période saisie manuellement.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </CustomFieldTranslation>

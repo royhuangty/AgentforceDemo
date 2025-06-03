@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <measures>
+        <field>Avg_CSAT_Day_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Team</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_CSAT_Day_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Me</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_CSAT_Day_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Me</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_CSAT_Day_2.B</field>
+        <isDerived>false</isDerived>
+        <label>Team</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_CSAT_Week_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Team</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_CSAT_Week_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Me</label>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Agent_Home_Avg_CSAT</waveVisualization>
+</WaveXmd>

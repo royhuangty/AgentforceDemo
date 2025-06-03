@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder$Name</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$MaintenancePlan</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$FSL_Is_Linked_To_Service_Contract__c</field>
+    </columns>
+    <description>Report for Service Contract Manager</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder$FSL_Is_Linked_To_Maintenance_Plan__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SFS Work Order Linked To MP</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SDO_SFS_Work_Orders__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

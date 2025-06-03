@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référence à un chèque émis dans un système externe pour ce remboursement</help>
+        <label><!-- Check Number --></label>
+        <name>blng__CheckNumber__c</name>
+    </CustomFieldTranslation>

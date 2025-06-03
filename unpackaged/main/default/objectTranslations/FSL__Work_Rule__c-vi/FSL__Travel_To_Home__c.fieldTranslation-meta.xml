@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Xác định số phút sau khi kết thúc ngày trên lịch của nhân sự sẽ được dành cho di chuyển (trên chi phí của nhân sự).
+Nếu mục này trống, mọi khoảng di chuyển sau khi kết thúc ngày làm việc đều hợp lệ.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

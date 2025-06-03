@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Localización</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Localizaciones</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Localization Layout</layout>
+        <sections>
+            <label>Objetos admitidos</label>
+            <section>Supported Objects</section>
+        </sections>
+        <sections>
+            <label>Valores</label>
+            <section>Values</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número de localización</nameFieldLabel>
+</CustomObjectTranslation>

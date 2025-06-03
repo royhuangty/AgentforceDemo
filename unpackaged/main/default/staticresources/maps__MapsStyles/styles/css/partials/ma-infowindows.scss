@@ -1,0 +1,1246 @@
+.slds-scope {
+    .tooltip-wrap {
+        position: relative;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 16px 8px 8px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.16);
+        z-index: 20;
+        margin: -10px;
+
+        /* temp tooltip fix hack */
+        .tooltip-header {
+            background-color: $page-header-color-background;
+            border-bottom: 1px solid $color-border;
+            padding: 12px 24px 11px 16px;
+
+            .infowindow-header-layer-name {
+                font-size: 11px;
+                color: $color-text-weak;
+                text-transform: uppercase;
+                letter-spacing: .0625rem;
+            }
+
+            .infowindow-header-record-address {
+                font-size: 12px;
+                margin-top: 4px;
+                color: $color-text-weak;
+
+                .ma-icon {
+                    opacity: .8;
+                }
+            }
+
+            .infowindow-header-record-name {
+                margin-top: 4px;
+                font-size: 16px;
+            }
+        }
+
+        .tooltip-close-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .infowindow-master-tabs {
+            padding-left: 10px;
+            border-top: 1px solid $border-gray;
+            background-color: #eef1f6;
+
+            .slds-tabs--default__item {
+                padding: 0 7px;
+            }
+        }
+
+        .slds-tabs--default__content {
+            background-color: #fff;
+            border-radius: 0 0 8px 8px;
+            padding: 0;
+
+            .tooltip-body {
+                padding: 16px;
+                min-width: 200px;
+            }
+
+            .slds-section-title--divider {
+                &.action-divider {
+                    background-color: transparent;
+                    border-top:1px solid $border-gray;
+                    padding-bottom: .25rem;
+                    font-size: 11px;
+
+                    &:first-child {
+                        border-top:0;
+                        padding-top:1rem;
+                    }
+                }
+            }
+
+            .tooltip-action-wrap {
+                padding: 8px 16px 12px;
+                width:100%;
+                min-width: 480px;
+
+                .tooltip-action-column {
+                    box-sizing: border-box;
+                    width: 33.3%;
+                    float: left;
+                    margin-right: -8px;
+                    margin-left: 8px;
+                    padding-right: 8px;
+
+                    .slds-button {
+                        width: 100%;
+                        padding-left: .5rem;
+                        padding-right: .5rem;
+                    }
+
+                    > div {
+                        + div {
+                            margin-top: 6px;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+
+                &:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+            }
+        }
+
+        #infowindowMasterTabContentActions {
+            padding: 10px;
+        }
+
+        .tooltip-table {
+            width: auto !Important;
+
+            .tooltip-label {
+                padding-right: 12px;
+                color: $color-text-weak;
+            }
+
+            tr {
+                td {
+                    font-size: 11px;
+                    vertical-align: top;
+                    color: $color-text-default;
+                }
+            }
+        }
+    }
+
+    #infowindowMasterTabContentDetails {
+        .tooltip-body {
+            max-width: 550px;
+            max-height: 280px;
+            overflow: auto;
+            padding: 12px 12px 16px 16px;
+            width: 100%;
+        }
+
+    }
+}
+
+.old-infowindow-actions-wrap {
+    .buttonset-section {
+        .buttonset-section-header {
+            font-size: .75rem;
+            line-height: 1.25;
+            color: $color-text-weak;
+            text-transform: uppercase;
+            letter-spacing: .0625rem;
+            padding: 0px 10px;
+            background: $color-background;
+            padding-bottom: .25rem;
+            font-size: 11px;
+            background-color: transparent;
+            border-top: 1px solid $color-border;
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+        .buttonset-section {
+            margin: 5px 0px;
+        }
+        .buttonset-section-columns {
+            padding: 5px 10px 5px;
+            width: 100%;
+            min-width: 480px;
+
+            &:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            .buttoncolumn {
+                box-sizing: border-box;
+                width: 33.3%;
+                float: left;
+                margin-right: -8px;
+                margin-left: 8px;
+                padding-right: 8px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .actionbutton {
+                font-family: "Salesforce Sans",Arial,sans-serif;
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                background: 0 0;
+                background-clip: border-box;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                font-size: 10px;
+                line-height: 1.875rem;
+                text-decoration: none;
+                color: $color-brand-dark;
+                -webkit-appearance: none;
+                white-space: normal;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transition: color 50ms linear,background-color 50ms linear;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid $color-border;
+                background-color: #fff;
+                min-height: 0;
+                line-height: 1.4;
+                padding: 4px 12px;
+                width: 100%;
+                padding-left: .5rem;
+                padding-right: .5rem;
+                margin-bottom: 6px;
+
+                &:hover, &:focus {
+                    background-color: $color-background;
+                    color: $color-brand-darker;
+                }
+
+                &:active {
+                    color: $color-brand-darker;
+                    background-color: #eef1f6;
+                }
+            }
+        }
+    }
+}
+
+
+//***UPDATED STYLING TO OLD INFO WINDOWS***//
+
+.tooltip-content-container {
+  height: 100%!important;
+}
+
+#tooltip-content {
+    background-color: #fff;
+    font-family: "Salesforce Sans", Arial, sans-serif;
+
+    .tooltips .tooltip-row {
+        .autocomplete-wrapper {
+            input.autocomplete {
+                padding: 1px 25px;
+                background-position: 5px 0;
+                background-color: white;
+                border: 1px solid $color-border;
+                border-radius: 0.25rem;
+                -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+                transition: border 0.1s linear, background-color 0.1s linear;
+                display: inline-block;
+            }
+        }
+
+        .value .autocomplete-clear {
+            top: -5px;
+            right: 10px;
+        }
+
+        .tooltip-loader .error {
+            display: none!important;
+        }
+    }
+    
+    .tooltip-header {
+        background-color: $page-header-color-background;
+        border-bottom: 1px solid $color-border;
+        padding: 12px 24px 11px 16px;
+    }
+
+    //Marker Layer
+    .savedQueryName, .buttonset-section-header {
+        font-size: 11px;
+        color: $color-text-weak;
+        text-transform: uppercase;
+        letter-spacing: .0625rem;
+    }
+
+    .name {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-top: 2px;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        a {
+            color: $color-brand-dark;
+            text-decoration: none;
+            transition: color .1s linear;
+
+            &:hover {
+                color: $color-brand-darker;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .address {
+        font-size: 11px;
+        margin-top: 8px;
+        color: $color-text-weak;
+    }
+
+    .ma-icon.ma-icon-checkin.slds-icon::before {
+        font-size: 11px;
+        color: #b0adab;
+        line-height: 1;
+        display: block;
+        float: left;
+        margin-top: 1px;
+        margin-right: 4px;
+    }
+
+    .tabs {
+        padding: 0px;
+
+        .ui-tabs-nav {
+            border-top: 0;
+            border-bottom: 1px solid $color-border !important;
+            border-left:0;
+            border-right:0;
+            background-color: $page-header-color-background !important;
+            padding: 0;
+        }
+
+        > ul {
+
+            li + li {
+                margin-left: -1px;
+            }
+
+            li.ui-tabs-active a {
+                color: $color-brand !important;
+                font-weight: 700;
+                padding: 0.5em;
+                background-color: #fff;
+                box-shadow: 0 1px 0 0 #fff;
+            }
+
+            li.ui-state-default {
+                border:0;
+                background: none;
+                border: none;
+                border-radius: 0 0 0 0;
+                border: 0 none;
+                box-shadow: none;
+                margin: 0 -1px -1px 0;
+                top: 0;
+
+                a {
+                    color: $color-text-weak;
+                    font-size: 11px;
+                    padding: 8px;
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid transparent;
+
+                    &:hover {
+                        color: $color-brand;
+                        border-color: $color-border;
+                    }
+                }
+
+                &:first-child {
+                    a:hover {
+                        border-left: 1px solid transparent;
+                    }
+                }
+            }
+
+            li.ui-tabs-active {
+
+                a {
+                    background: #fff;
+                    color: $color-brand-dark;
+                    border-color: $color-border;
+                }
+
+                &:first-child {
+                    a {
+                        border-left: 1px solid #fff;
+                    }
+                }
+            }
+        }
+        .ui-tabs-panel {
+            background: #fff;
+
+            .layout-tooltip {
+                .buttonset-section {
+                    margin-top: 6px;
+
+                    .actionbutton {
+                        font-family: "Salesforce Sans",Arial,sans-serif;
+                        background: #fff;
+                        border: 1px solid $color-border;
+                        color: $color-brand-dark;
+                        box-shadow: none;
+                        cursor: pointer;
+                        width: calc(100% - 8px);
+                        box-sizing: border-box;
+                        margin-right: 4px !important;
+                    }
+
+                    .actionbutton:hover {
+                        background-color: $color-background;
+                        color: $color-brand-darker;
+                    }
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+    .infobubble  {
+        .tabs {
+            > ul li.ui-tabs-active {
+                background: transparent;
+                color: $color-text-default;
+                border: 0 none;
+            }
+            > ul li.ui-tabs-active a {
+                background: #fff;
+                color: $color-text-default;
+                padding: .5em;
+            }
+        }
+    }
+}
+
+//Shape Tooltip
+#shapeInfoPopup {
+    background: #fff;
+    font-family: "Salesforce Sans",Arial,sans-serif;
+
+    .standard-cluster-buttons-table td button {
+        background: #fff;
+        border: 1px solid $color-border;
+        color: $color-brand-dark;
+        box-shadow: none;
+        cursor: pointer;
+        padding: 4px 10px;
+        font-size: 10px;
+        font-weight: normal;
+        font-family: "Salesforce Sans",Arial,sans-serif;
+
+        .standard-cluster-buttons-table td button:hover {
+            background: $color-background;
+            color: $color-brand-dark;
+        }
+    }
+
+    .tooltip-header {
+        background-color: $page-header-color-background;
+        border-bottom: 1px solid $color-border;
+        padding: 12px 12px 11px 16px;
+
+        .shapeLabel {
+            font-size: 14px;
+            line-height: 1.25;
+            margin-top: 2px;
+        }
+
+        .totalCount {
+            font-size: 11px;
+            margin-top: 3px;
+            color: $color-text-weak;
+            margin-bottom: 3px;
+        }
+
+        .shape-geometry {
+            display: flex;
+        }
+    }
+
+    .cluster-listview-button {
+        padding: 5px 0px 5px 8px;
+        border-bottom: 1px solid $color-border;
+
+        button {
+            background: #fff;
+            border: 1px solid $color-border;
+            color: $color-brand-dark;
+            box-shadow: none;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 10px;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+        }
+        button:hover {
+            background-color: $color-background;
+            color: $color-brand-darker;
+        }
+    }
+
+    .accordianWrapper {
+        margin: 0px 5px 5px 5px;
+        // overflow-y: auto;
+        // overflow-x: hidden;
+        // border: 1px solid #ccccce;
+        // border-radius: 4px;
+        // box-sizing: border-box;
+        // -webkit-box-sizing: border-box;
+        // max-height: 325px;
+
+        #shape-popup-accordion {
+
+            .shape-cluster-popup-header .accordianIcon {
+                opacity: .45;
+                padding: 4px 0px 6px 6px;
+            }
+
+            .tooltip-accordion-body { 
+                > table {
+                    table-layout: fixed;
+                }
+
+                table table tbody tr:first-child {
+                    background-color: #fff;
+                }
+            }
+
+            .ma-tab-link {
+                font-family: "Salesforce Sans",Arial,sans-serif;
+                font-size: 10px;
+            }
+
+            .shape-cluster-popup-subtab-active {
+                color: $color-text-default;
+                background: #fff;
+                border: 0 none;
+                border-bottom: 2px solid $color-brand-dark;
+            }
+
+            .shape-cluster-popup-subtab-inactive {
+                color: $color-text-weak;
+                background: #fff;
+                border: 0 none;
+            }
+            .shape-cluster-popup-subtab-data tr {
+                background-color: #fff !important;
+                font-size: 12px;
+            }
+
+            .shape-cluster-popup-header-count {
+                padding: 3px 10px;
+                font-size: 12px;
+            }
+
+            tr[rowtype="data-row-aggregates"] {
+                background-color: #fff;
+            }
+
+            .shape-cluster-popup-subtab-data td.shape-popup-accordion-marker-tab-content:hover {
+                background-color: $color-background !important;
+                color: $color-brand-dark !important;
+            }
+
+            .shape-cluster-popup-subtab-data td.shape-popup-accordion-marker-tab-content {
+                background-color: transparent !important;
+                color: $color-brand-dark !important;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            .shape-cluster-popup-header-label {
+                font-size: 11px;
+                color: $color-text-weak;
+                text-transform: uppercase;
+                letter-spacing: .0625rem;
+            }
+        }
+    }
+}
+
+//Favorite Location Tooltip
+.favlocation-tooltip-content {
+    background-color: $page-header-color-background;
+    margin: 0;
+    padding: 0;
+
+    td.name.info {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-top: 0;
+        padding: 12px 26px 0 16px;
+        color: $color-text-default;
+    }
+
+    td.address.info, td.description.info {
+        font-size: 11px;
+        margin-top: 0;
+        padding: 4px 12px 0 16px;
+        color: $color-text-weak;
+    }
+
+    td.description.info {
+        padding: 4px 12px 12px 16px;
+    }
+
+    .ma-icon.ma-icon-checkin.slds-icon::before {
+        font-size: 11px;
+        color: #b0adab;
+        line-height: 1;
+        display: block;
+        float: left;
+        margin-top: 1px;
+        margin-right: 4px;
+    }
+
+    .layout-tooltip {
+        border-top: 1px solid $color-border;
+        background: #fff;
+        padding: 12px 12px 8px 16px !important;
+
+        .buttoncolumn {
+
+            .actionbutton {
+                width: calc(100% - 8px);
+                background: #fff;
+                border: 1px solid $color-border;
+                color: $color-brand-dark;
+                box-shadow: none;
+                cursor: pointer;
+                font-size: 10px;
+                font-weight: normal;
+                font-family: "Salesforce Sans",Arial,sans-serif;
+            }
+
+            .actionbutton:hover {
+                background-color: $color-background;
+                color: $color-brand-dark;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+//Waypoint Tooltip
+#waypoint-content {
+    background: $color-background;
+    font-family: "Salesforce Sans",Arial,sans-serif;
+    padding: 10px 0 0px 0px;
+
+    .name {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-top: 2px;
+        color: $color-text-default;
+        font-family: "Salesforce Sans",Arial,sans-serif;
+        font-weight: normal;
+        padding: 0px 10px;
+    }
+
+    .address {
+        font-size: 11px;
+        margin-top: 3px;
+        color: $color-text-weak;
+        margin-bottom: 2px !important;
+        padding: 0px 0px 5px 10px;
+    }
+
+    .notes {
+        color: $color-text-default;
+    }
+
+    .footer {
+        color: $color-text-weak;
+        border-top: 1px solid $color-border;
+        padding: 12px;
+        background: #fff;
+    }
+
+    .layout-tooltip {
+        .actionbutton {
+            background: #fff;
+            border: 1px solid $color-border;
+            color: $color-brand-dark;
+            box-shadow: none;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: normal;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+            margin-top: 10px;
+        }
+        .actionbutton:hover {
+            background-color: $color-background;
+            color: $color-brand-darker;
+        }
+    }
+}
+
+//Live Tooltip
+#tooltip-content {
+    .live-info {
+        td {
+            font-size: 12px;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+        }
+    }
+    a {
+        color: $color-brand-dark;
+        text-decoration: none;
+        transition: color .1s linear;
+        word-wrap: break-word;
+    }
+    td.label {
+        color: $color-text-weak;
+        font-family: "Salesforce Sans",Arial,sans-serif;
+        padding-right: 12px;
+        text-transform: none;
+        font-size: 12px;
+
+        b.fieldLabel {
+            font-weight: 400 !important;
+            text-transform: none;
+            color: $color-text-weak;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+        }
+    }
+    td.value {
+        color: $color-text-default;
+        font-family: "Salesforce Sans",Arial,sans-serif;
+        padding-right: 12px;
+        text-transform: none;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+    tr {
+        td {
+            color: $color-text-default;
+
+            &.tooltip-value {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                -ms-word-break: break-all;
+                word-break: break-all;
+                word-break: break-word;
+                -ms-hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto;
+            }
+        }
+    }
+    .actionbutton {
+        font-family: "Salesforce Sans",Arial,sans-serif;
+        background: #fff;
+        border: 1px solid $color-border;
+        color: $color-brand-dark;
+        box-shadow: none;
+        cursor: pointer;
+        margin-right: 4px !important;
+        font-size: 10px;
+        padding: 4px 10px;
+        font-weight: normal;
+        display: block;
+        position: relative;
+        width: calc(100% - 8px);
+        box-sizing: border-box;
+    }
+    .actionbutton:hover {
+        background-color: $color-background;
+        color: $color-brand-dark;
+    }
+    .tracking-history-content .tracking-history-forms-full {
+        width: 100%;
+        float: left;
+        padding: 5px 0;
+    }
+}
+
+//Data Layer Tooltips
+#tooltip-content {
+    .tooltip-table {
+        tbody {
+            tr {
+                td {
+                    font-family: 'Salesforce Sans',Arial,sans-serif;
+                }
+            }
+        }
+    }
+    .layerName {
+        color: $color-text-weak;
+        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        padding: 5px 0px 0px 10px;
+    }
+}
+
+//POI Tooltips
+.poi-tooltip {
+    margin: 0px;
+    background: $color-background;
+    font-family: "Salesforce Sans",Arial,sans-serif;
+    table {
+        padding: 5px;
+        tr td {
+            padding: 3px 0 0 7px;
+        }
+    }
+    .layout-tooltip {
+        background: #fff;
+        border-top: 1px solid $color-border !important;
+        padding: 10px 10px !important;
+        width: auto !important;
+        .buttonset-section-header {
+            font-size: 10px;
+            color: $color-text-weak;
+            text-transform: uppercase !important;
+            letter-spacing: .0625rem !important;
+        }
+        .actionbutton {
+            background: #fff !important;
+            border: 1px solid $color-border !important;
+            color: $color-brand-dark !important;
+            box-shadow: none !important;
+            cursor: pointer !important;
+            font-size: 10px;
+            font-weight: normal;
+            font-family: "Salesforce Sans",Arial,sans-serif;
+            width: calc(100% - 8px);
+            box-sizing: border-box;
+            margin-right: 4px !important;
+        }
+        .actionbutton:hover {
+            background-color: $color-background !important;
+            color: $color-brand-dark !important;
+        }
+    }
+
+    .tooltip-label {
+        padding-right: 12px;
+        color: $color-text-weak;
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+    }
+
+    .tooltip-fieldName {
+        color: $color-text-default;
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+
+        a {
+            color: $color-brand-dark;
+            text-decoration: none;
+            transition: color .1s linear;
+        }
+    }
+}
+
+.layout-tooltip {
+
+    .buttonset-section-columns, .buttonset-section {
+        padding: 0;
+        width: calc(100% + 4px);
+        overflow: visible;
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .buttoncolumn {
+            box-sizing: border-box;
+            width: 33.3%;
+            float: left;
+            margin:0;
+            padding:0;
+        }
+    }
+
+     .buttonset-section {
+
+        .buttonset-section-header {
+            font-size: .75rem;
+            line-height: 1.25;
+            color: $color-text-weak;
+            text-transform: uppercase;
+            letter-spacing: .0625rem;
+            padding: 0;
+            background: $color-background;
+            padding-bottom: .25rem;
+            font-size: 10px;
+            background-color: transparent;
+            border-top: 1px solid $color-border;
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+     }
+}
+
+//Sidebar layer hover tooltip
+#tabs-nav {
+
+    .ftu-tooltip-arrow::before {
+        content: '';
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-right: 8px solid $color-background;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -9px;
+        left: 2px;
+    }
+
+    .ftu-tooltip {
+
+        .ftu-tooltip-inner {
+            font-family: 'Salesforce Sans', Arial, sans-serif !important;
+            background: $color-background;
+
+            table {
+                border-spacing: 0px;
+            }
+
+            .tooltip-row {
+
+                .label {
+                    padding: 0px;
+                    padding-right: 12px;
+
+                    b {
+                        font-weight: 400 !important;
+                        text-transform: none;
+                        color: $color-text-weak !important;
+                        font-family: "Salesforce Sans", Arial, sans-serif;
+                        font-size: 12px;
+                        letter-spacing: 0;
+                    }
+                }
+
+                .value {
+                    color: $color-text-default;
+                    font-family: "Salesforce Sans",Arial,sans-serif;
+                    padding-right: 12px;
+                    text-transform: none;
+                    font-size: 12px;
+                    letter-spacing: 0;
+                }
+            }
+
+            .ftu-tooltip-pad {
+                padding: 12px 16px 4px 16px !important;
+
+                .ft-tooltip-title {
+                    font-size: 14px;
+                    line-height: 1.25;
+                    margin-top: 2px;
+                    word-break: break-all;
+                }
+
+                .ft-tooltip-desc {
+                    color: $color-text-default;
+                }
+
+                .ft-tooltip-baseob {
+                    font-weight: 400 !important;
+                    color: $color-text-default;
+                    b {
+                        color: $color-text-weak;
+                        font-weight: 400 !important;
+                    }
+                }
+            }
+            .ftu-tooltip-pad-gray {
+                background: #fff;
+                border-top: 1px solid $color-border !important;
+                color: $color-text-default;
+                font-size: 12px;
+                padding: 8px 16px 8px 16px !important;
+
+                .layer-folder-path {
+                    font-size: 11px;
+                    color: $color-text-weak !important;
+                    text-transform: uppercase;
+                    letter-spacing: .0625rem;
+                    font-weight: 400 !important;
+                    padding-bottom: 4px;
+
+                    .ftu-icon-icon {
+                        width: 19px !important;
+                        height: 21px !important;
+                        margin-right: 6px;
+                        position: relative;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#myposition-infobubble {
+    margin: -10px;
+    background: $color-background;
+    font-family: "Salesforce Sans",Arial,sans-serif;
+
+    .layout-tooltip {
+        background: #fff;
+        border-top: 1px solid $color-border;
+
+        .actionbutton {
+            font-family: "Salesforce Sans",Arial,sans-serif;
+            background: #fff;
+            border: 1px solid $color-border;
+            color: $color-brand-dark;
+            box-shadow: none;
+            cursor: pointer;
+            width: calc(100% - 8px);
+            box-sizing: border-box;
+            margin-right: 4px !important;
+            display: inline-block;
+
+            &:hover, &:focus {
+                background-color: $color-background;
+                color: $color-brand-dark;
+            }
+
+            &:active {
+                color: $color-brand-darker;
+                background-color: #eef1f6;
+            }
+        }
+    }
+    .myposition-table-wrapper {
+        padding: 20px 20px 3px;
+
+        td {
+            font-family: 'Salesforce Sans',Arial,sans-serif;
+            color: $color-text-default;
+            font-size: 12px;
+
+            .tooltip-label {
+                padding-right: 12px;
+                color: $color-text-weak;
+            }
+        }
+    }
+}
+
+.slds-scope {
+
+    table.live-tracking-history-tooltip-table {
+
+        tr {
+            td {
+                vertical-align: top;
+
+                input[type="text"], input[type="time"] {
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+
+                .select2-container--default .select2-selection--single {
+                    min-width: 0; 
+                }
+
+                select.slds-select {
+                    -webkit-appearance: none;
+                    padding-left: 0.5rem;
+                    padding-right: 1.5rem;
+                }
+
+                .tracking-history-content {
+                    .tracking-history-forms-full {
+                        float:none !important;
+                        padding: 0 !important;
+
+                        label[class*="cor"] {
+                            border-radius: 2px;
+                            margin-right:0;
+                        }
+
+                        input[id*="cor"]:checked + label:before {
+                            content: "\55" !Important;
+                            background-image: none !important;
+                            display: block;
+                            position: absolute;
+                            z-index: 99;
+                            font-size: 11px;
+                            background-size: 14px 14px;
+                            width: 14px;
+                            background-position: 0 0;
+                            height: 14px;
+                            top: 0;
+                            font-family: "ma-icons-2" !important;
+                            left: 1px;
+                            color: #fff;
+                            line-height: 15px;
+                        }
+
+                        .colorIsChecked {
+                            top:0;
+                            left:0;
+                            margin:0;
+                            background-image: none !Important;
+
+                            &:before {
+                                content: "\55" !Important;
+                                background-image: none !important;
+                                display: block;
+                                position: absolute;
+                                z-index: 99;
+                                font-size: 11px;
+                                background-size: 14px 14px;
+                                width: 14px;
+                                background-position: 0 0;
+                                height: 14px;
+                                top: 0;
+                                font-family: "ma-icons-2" !important;
+                                left: 1px;
+                                color: #fff;
+                                line-height: 15px;
+                            }
+                        }
+
+                        label[class*="cor"]:hover {
+                            border-color: rgba(0,0,0,0.32);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //ArcGIS tooltips
+    #tooltip-content.slds-info-window-wrapper {
+        .tooltip-wrap {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            
+            .tooltip-header {
+                border-bottom: none;
+            }
+
+            .slds-tabs--default {
+                background: none;
+                border: none;
+                display: block;
+                width: 100%;
+
+                .infowindow-master-tabs {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
+                    background-color: $color-background;
+                    border: 1px solid $color-border;
+                    border-radius: 0;
+                    padding-left: 0;
+                    margin-left: -1px;
+
+                    .slds-tabs--default__item {
+                        position: relative;
+                        margin-bottom: -1px;
+                        padding: 0;
+                        letter-spacing: normal;
+                        text-transform: none;
+
+                        + .slds-tabs--default__item {
+                            margin-left: -1px;
+                        }
+
+                        &::after {
+                            content: none!important;
+                        }
+
+                        &:first-child a {
+                            border-left: 0;
+                            border-radius: 0.25rem 0 0 0;
+                        }
+
+                        &.slds-active {
+                            a {
+                                background-color: white;
+                                color: $color-brand-dark;
+                                border-color: $color-border;
+                                font-weight: 700;
+                            }
+
+                            &:first-child a {
+                                border-left: 1px solid #fff;
+                            }
+                        }
+
+                        a {
+                            font-size: 11px;
+                            max-width: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            display: block;
+                            text-decoration: none;
+                            cursor: pointer;
+                            height: 2rem;
+                            line-height: 2rem;
+                            padding: 0 .5rem;
+                            color: $color-text-weak;
+                            background-clip: padding-box;
+                            border-left: 1px solid transparent;
+                            border-right: 1px solid transparent;
+
+                            &:hover {
+                                border-color: $color-border;
+                                color: $color-brand-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ma-arcgis-tooltip {
+        .layout-tooltip {
+            padding: 12px 12px 8px 16px;
+        }
+    }
+}

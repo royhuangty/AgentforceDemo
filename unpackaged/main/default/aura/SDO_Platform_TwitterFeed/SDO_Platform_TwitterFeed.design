@@ -1,0 +1,4 @@
+<design:component label="Platform - Twitter Feed (SDO_Platform_TwitterFeed)">
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="username" label="Twitter Handle" />
+</design:component>

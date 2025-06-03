@@ -1,0 +1,75 @@
+<apex:page controller="maps.AdvRoute" standardstylesheets="false" showHeader="true" sidebar="false" title="Salesforce Maps Advanced">
+    
+    <c:Oops rendered="{! useMapsOopsPage }" />
+    <apex:outputPanel rendered="{! !useMapsOopsPage }">
+        <c:AdvRouteLabels />
+        <c:AdvRouteUtils vueType="mainPage" />
+
+        <!-- if is sf classic 2019 -->
+        <apex:outputPanel layout="none" rendered="{! $User.UIThemeDisplayed == 'Theme3' }">
+            <!-- styling for fullscreen app layout for SF classic -->
+            <style type="text/css">
+                body #mainPage .x-btn button, 
+                body #mainPage .btn, 
+                body #mainPage .btnImportant, 
+                body #mainPage .btnDisabled, 
+                body #mainPage .btnCancel, 
+                body #mainPage .menuButton .menuButtonButton, 
+                body #mainPage .menuButton .menuButtonMenu a, 
+                body #mainPage .menuButton .menuButtonMenu input.theOption, 
+                #mainPage h1, 
+                #mainPage h2, 
+                #mainPage h3, 
+                #mainPage h4, 
+                #mainPage h5, 
+                #mainPage h6,
+                #mainPage td {
+                    font-family: "Salesforce Sans", Arial, sans-serif;
+                }
+
+                #contentWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+            
+                .bPageFooter.noTableFooter {
+                    padding-top: 6px;
+                    margin-bottom: 1px;
+                }
+
+                .bodyDiv {
+                    position: relative;
+                    float: none;
+                    height: auto;
+                    flex-grow: 1;
+                }
+
+                #bodyTable {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+
+                #bodyTable .noSidebarCell {
+                    padding: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                html body.sfdcBody, .hasMotif {
+                    padding: 0 10px;
+                }
+
+                body .slds-button {
+                    font-size: 12px;
+                    margin: 0;
+                }
+            </style>
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:page>

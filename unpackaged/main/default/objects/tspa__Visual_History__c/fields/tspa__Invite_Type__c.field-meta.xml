@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__Invite_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Invite Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Video and Audio</fullName>
+                <default>false</default>
+                <label>Video and Audio</label>
+            </value>
+            <value>
+                <fullName>Photo</fullName>
+                <default>false</default>
+                <label>Photo</label>
+            </value>
+            <value>
+                <fullName>Mirroring</fullName>
+                <default>false</default>
+                <label>Mirroring</label>
+            </value>
+            <value>
+                <fullName>Desktop Sharing</fullName>
+                <default>false</default>
+                <label>Desktop Sharing</label>
+            </value>
+            <value>
+                <fullName>Observer</fullName>
+                <default>false</default>
+                <label>Observer</label>
+            </value>
+            <value>
+                <fullName>Two-way Video</fullName>
+                <default>false</default>
+                <label>Two-way Video</label>
+            </value>
+            <value>
+                <fullName>Visual Journey</fullName>
+                <default>false</default>
+                <label>Visual Journey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

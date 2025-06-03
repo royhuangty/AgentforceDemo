@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>APN - Advanced Practice Nurse</fullName>
+        <default>false</default>
+        <label>APN - Advanced Practice Nurse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PC - Professional Counselor</fullName>
+        <default>false</default>
+        <label>PC - Professional Counselor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PT - Physical Therapist</fullName>
+        <default>false</default>
+        <label>PT - Physical Therapist</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LPN - Licensed Practical Nurse</fullName>
+        <default>false</default>
+        <label>LPN - Licensed Practical Nurse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MD - Medical Doctor (MD)</fullName>
+        <default>false</default>
+        <label>MD - Medical Doctor (MD)</label>
+    </standardValue>
+</StandardValueSet>

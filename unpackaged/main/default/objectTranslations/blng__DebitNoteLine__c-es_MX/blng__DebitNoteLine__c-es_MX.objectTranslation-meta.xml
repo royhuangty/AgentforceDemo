@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partida de nota de débito</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partidas de nota de débito</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Line Layout</layout>
+        <sections>
+            <label>Mediciones de ingresos</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Reglas y Tratamientos</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Dirección impositiva</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número de partida</nameFieldLabel>
+</CustomObjectTranslation>

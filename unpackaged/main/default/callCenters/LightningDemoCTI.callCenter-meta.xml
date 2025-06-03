@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenter xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <adapterUrl>https://li1748817365141.my.salesforce.com//apex/demoAdapterPage</adapterUrl>
+    <customSettings>{&quot;reqTimeout&quot;:&quot;5000&quot;,&quot;reqStandbyUrl&quot;:&quot;https://li1748817365141.my.salesforce.com//apex/demoAdapterPage&quot;,&quot;reqSoftphoneHeight&quot;:&quot;500&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;350&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Classic_and_Lightning&quot;}</customSettings>
+    <displayName>Lightning Demo CTI</displayName>
+    <displayNameLabel>Display Name</displayNameLabel>
+    <internalNameLabel>InternalName</internalNameLabel>
+    <sections>
+        <items>
+            <label>Lightning CTI Adapter URL</label>
+            <name>reqAdapterUrl</name>
+            <value>https://li1748817365141.my.salesforce.com//apex/demoAdapterPage</value>
+        </items>
+        <items>
+            <label>CTI Adapter URL</label>
+            <name>reqStandbyUrl</name>
+            <value>https://li1748817365141.my.salesforce.com//apex/demoAdapterPage</value>
+        </items>
+        <items>
+            <label>Timeout</label>
+            <name>reqTimeout</name>
+            <value>5000</value>
+        </items>
+        <items>
+            <label>Use CTI API</label>
+            <name>reqUseApi</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Softphone Height</label>
+            <name>reqSoftphoneHeight</name>
+            <value>500</value>
+        </items>
+        <items>
+            <label>Softphone Width</label>
+            <name>reqSoftphoneWidth</name>
+            <value>350</value>
+        </items>
+        <items>
+            <label>Salesforce Compatibility Mode</label>
+            <name>reqSalesforceCompatibilityMode</name>
+            <value>Classic_and_Lightning</value>
+        </items>
+        <label>General Info</label>
+        <name>reqGeneralInfo</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Primary Call Button (Left)</label>
+            <name>popRecordUrl</name>
+            <value>003Hu00003sdvtoIAA</value>
+        </items>
+        <items>
+            <label>Secondary Call Button (Right)</label>
+            <name>popRecordUrl2</name>
+            <value>003Hu00003sdvtoIAA</value>
+        </items>
+        <items>
+            <label>Button 1</label>
+            <name>Button1PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 2</label>
+            <name>Button2PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 3</label>
+            <name>Button3PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 4</label>
+            <name>Button4PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 5</label>
+            <name>Button5PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 6</label>
+            <name>Button6PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 7</label>
+            <name>Button7PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 8</label>
+            <name>Button8PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Button 9</label>
+            <name>Button9PopUrl</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Button Assignments</label>
+        <name>buttonAssignments</name>
+    </sections>
+    <sections>
+        <items>
+            <label>1. Label</label>
+            <name>Label1</name>
+            <value>Start CTI Flow</value>
+        </items>
+        <items>
+            <label>1. URL</label>
+            <name>Url1</name>
+            <value>/flow/SDO_Service_CTI_ID_V</value>
+        </items>
+        <items>
+            <label>2. Label</label>
+            <name>Label2</name>
+            <value>Go to Google</value>
+        </items>
+        <items>
+            <label>2. URL</label>
+            <name>Url2</name>
+            <value>https://www.google.com</value>
+        </items>
+        <items>
+            <label>3. Label</label>
+            <name>Label3</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>3. URL</label>
+            <name>Url3</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>4. Label</label>
+            <name>Label4</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>4. URL</label>
+            <name>Url4</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning Before Call Actions</label>
+        <name>lightningBeforeURLActions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>1. Label</label>
+            <name>Label1</name>
+            <value>Start CTI Flow</value>
+        </items>
+        <items>
+            <label>1. URL</label>
+            <name>Url1</name>
+            <value>/flow/SDO_Service_CTI_ID_V</value>
+        </items>
+        <items>
+            <label>2. Label</label>
+            <name>Label2</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>2. URL</label>
+            <name>Url2</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>3. Label</label>
+            <name>Label3</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>3. URL</label>
+            <name>Url3</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>4. Label</label>
+            <name>Label4</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>4. URL</label>
+            <name>Url4</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning During Call Actions</label>
+        <name>lightningDuringURLActions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Pop New Case</label>
+            <name>popNewCase</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop New Lead</label>
+            <name>popNewLead</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop URL 1</label>
+            <name>popUrl1</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Pop URL 2</label>
+            <name>popUrl2</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning Call Accepted (Primary)</label>
+        <name>lightningCallAccepted</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Pop New Case</label>
+            <name>popNewCase</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop New Lead</label>
+            <name>popNewLead</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop Logged Call</label>
+            <name>popLoggedCall</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Pop URL 1</label>
+            <name>popUrl1</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Pop URL 2</label>
+            <name>popUrl2</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning Call Ended (Primary)</label>
+        <name>lightningCallEnded</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Pop New Case</label>
+            <name>popNewCase</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop New Lead</label>
+            <name>popNewLead</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop URL 1</label>
+            <name>popUrl1</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Pop URL 2</label>
+            <name>popUrl2</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning Call Accepted (Secondary)</label>
+        <name>lightningCallAccepted2</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Pop New Case</label>
+            <name>popNewCase</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop New Lead</label>
+            <name>popNewLead</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Pop Logged Call</label>
+            <name>popLoggedCall</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Pop URL 1</label>
+            <name>popUrl1</name>
+            <value xsi:nil="true" />
+        </items>
+        <items>
+            <label>Pop URL 2</label>
+            <name>popUrl2</name>
+            <value xsi:nil="true" />
+        </items>
+        <label>Lightning Call Ended (Secondary)</label>
+        <name>lightningCallEnded2</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Outside Prefix</label>
+            <name>reqOutsidePrefix</name>
+            <value>9</value>
+        </items>
+        <items>
+            <label>Long Distance Prefix</label>
+            <name>reqLongDistPrefix</name>
+            <value>1</value>
+        </items>
+        <items>
+            <label>International Prefix</label>
+            <name>reqInternationalPrefix</name>
+            <value>01</value>
+        </items>
+        <label>Dialing Options</label>
+        <name>reqDialingOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Simulated Incoming Name</label>
+            <name>incomingName</name>
+            <value>Lauren Bailey</value>
+        </items>
+        <items>
+            <label>Simulated Incoming Phone Number</label>
+            <name>reqIncomingNumber</name>
+            <value>4157157447</value>
+        </items>
+        <items>
+            <label>Minimum Number of Digits to Dial</label>
+            <name>reqMinNumDigitsToDial</name>
+            <value>4</value>
+        </items>
+        <label>Phone Demo Settings (Primary)</label>
+        <name>reqPhoneDemoSettings</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Simulated Incoming Name</label>
+            <name>incomingName</name>
+            <value>Tom James</value>
+        </items>
+        <items>
+            <label>Simulated Incoming Phone Number</label>
+            <name>reqIncomingNumber</name>
+            <value>9325552450</value>
+        </items>
+        <items>
+            <label>Minimum Number of Digits to Dial</label>
+            <name>reqMinNumDigitsToDial</name>
+            <value>4</value>
+        </items>
+        <label>Phone Demo Settings (Secondary)</label>
+        <name>reqPhoneDemoSettings2</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Incoming Call Ringtone</label>
+            <name>incomingRingtone</name>
+            <value>SDO_OpenCTI_Inbound/SlickCTI_InboundRing.mp3</value>
+        </items>
+        <items>
+            <label>Outgoing Call Ringtone</label>
+            <name>outgoingRingtone</name>
+            <value>SDO_OpenCTI_Outbound/SlickCTI_Outbound.mp3</value>
+        </items>
+        <label>Call Ringtones (Static Resource)</label>
+        <name>callRingtones</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Primary Call Button Icon</label>
+            <name>primaryIcon</name>
+            <value>alert</value>
+        </items>
+        <items>
+            <label>Secondary Call Button Icon</label>
+            <name>secondaryIcon</name>
+            <value>help</value>
+        </items>
+        <label>Button Icons (https://www.lightningdesignsystem.com/icons/#utility)</label>
+        <name>buttonIcons</name>
+    </sections>
+</CallCenter>

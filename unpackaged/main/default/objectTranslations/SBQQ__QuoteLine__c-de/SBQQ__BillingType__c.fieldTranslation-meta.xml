@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Abrechnungsart = Zeitpunkt der Abrechnung. Bei Abrechnung im Voraus werden Kunden Produkte oder Services vor Lieferung/Leistung in Rechnung gestellt. Bei rückwirkender Abrechnung werden Produkte oder Services den Kunden nach Lieferung/Leistung berechnet.</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </CustomFieldTranslation>

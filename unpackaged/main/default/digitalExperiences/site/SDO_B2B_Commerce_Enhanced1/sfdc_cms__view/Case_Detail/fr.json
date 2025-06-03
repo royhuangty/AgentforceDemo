@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Case Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Détail du ticket"
+        },
+        "id" : "1d23059a-f87d-4949-b094-dc94d3f3b72b"
+      }, {
+        "id" : "fefe9912-8bfa-436b-9699-8d005be1ed77",
+        "attributes" : {
+          "text" : "Ici, vous trouverez des informations complètes sur le dossier en question, y compris son statut, sa priorité, et ses détails clés. Utilisez les sections suivantes pour explorer les détails spécifiques, les mises à jour, et les actions entreprises. Si vous avez des questions ou si vous avez besoin d'une assistance supplémentaire, n'hésitez pas à contacter notre équipe de support. Nous sommes là pour garantir une résolution fluide de votre dossier."
+        }
+      }, {
+        "id" : "50513d7c-4e72-46ce-b344-89a02e3c3af4",
+        "attributes" : {
+          "mainTitleText" : "Détail du ticket"
+        }
+      }, {
+        "id" : "7649affa-881f-411e-9a04-6d51bb58f8ec",
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        }
+      } ]
+    }
+  },
+  "urlName" : "case-detail"
+}

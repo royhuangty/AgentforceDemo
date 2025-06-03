@@ -1,0 +1,24 @@
+.slds-scope {
+    .slds-media__figure {
+	    &.ma-slds-media__figure {
+    		background-color: $blue;
+    		border-radius: 4px;
+    		width: 32px;
+    		height: 32px;
+    		padding: 5px 0 0 5px;
+    		
+    		img, svg, .slds-icon {
+        		width: 22px;
+                height: auto;
+                font-size: 22px;
+                line-height: 1;
+                color: #fff;
+                text-align: center;
+    		}
+    	}
+	}
+	
+	.slds-brand-band::before {
+		background-image: url('../../img/banner-brand-default.png'),linear-gradient(0deg, rgba(25,85,148,0) 0, #195594);
+	}
+}

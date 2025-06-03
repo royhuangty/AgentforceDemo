@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>engage_reports__Engage_Email_Template__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Engage Email Template</label>
+    <referenceTo>engage_reports__Engage_Email_Template__c</referenceTo>
+    <relationshipLabel>Engage Sends</relationshipLabel>
+    <relationshipName>Engage_Sends</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

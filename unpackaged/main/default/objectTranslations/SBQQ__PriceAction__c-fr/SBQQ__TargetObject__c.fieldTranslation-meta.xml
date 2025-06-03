@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Utilisez le devis, la ligne de devis ou le prix indicatif de ligne de devis lorsque l&#39;étendue d&#39;évaluation de la règle de prix est le calcul. Utilisez l&#39;option produit lorsque l&#39;étendue d&#39;évaluation de règle de prix est la configuration.</help>
+        <label><!-- Target Object --></label>
+        <name>SBQQ__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Product Option</masterLabel>
+            <translation>Option produit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation>Devis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line</masterLabel>
+            <translation>Ligne de devis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line Pricing Guidance</masterLabel>
+            <translation>Prix indicatif de ligne de devis</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

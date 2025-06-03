@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Account</field>
+    </columns>
+    <columns>
+        <field>Contact.ActionCadenceTracker$ActionCadence</field>
+    </columns>
+    <columns>
+        <field>Contact.ActionCadenceTracker$RelatedToAttributionType</field>
+    </columns>
+    <columns>
+        <field>Contact.ActionCadenceTracker$LastCompletedStep.StepTitle</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Which contacts are in cadences?</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.ActionCadenceTracker$State</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>R</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Id</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contacts with Cadence Trackers</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Contacts_and_Sales_Cadence_Trackers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

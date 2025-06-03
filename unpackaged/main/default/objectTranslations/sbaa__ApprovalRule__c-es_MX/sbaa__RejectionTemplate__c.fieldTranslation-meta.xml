@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Búsqueda de consulta de la plantilla de recuperación asociada con el rechazo de esta regla</help>
+        <label><!-- Rejection Template --></label>
+        <name>sbaa__RejectionTemplate__c</name>
+        <relationshipLabel><!-- Rejected Approval Rules --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Sélectionnez le type d&#39;enregistrement à utiliser pour la distribution du revenu.</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

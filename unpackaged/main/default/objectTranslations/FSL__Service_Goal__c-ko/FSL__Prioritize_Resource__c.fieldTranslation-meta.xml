@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Prioritize Resource --></label>
+        <name>FSL__Prioritize_Resource__c</name>
+        <picklistValues>
+            <masterLabel>Least Qualified</masterLabel>
+            <translation>최소 자격 만족</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Most Qualified</masterLabel>
+            <translation>최대 자격 만족</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

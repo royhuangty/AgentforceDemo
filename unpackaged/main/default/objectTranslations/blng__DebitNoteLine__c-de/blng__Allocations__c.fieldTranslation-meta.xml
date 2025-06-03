@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Betrag dieser Zeile, der Rechnungen zugeordnet ist. Enthält keine Steuern.</help>
+        <label><!-- Invoice Line Allocations --></label>
+        <name>blng__Allocations__c</name>
+    </CustomFieldTranslation>

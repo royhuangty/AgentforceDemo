@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Schedule for discounts based on subscription term. Setting this to &quot;Group&quot; applies the discount rate for the group term, while setting it to &quot;Quote&quot; applies the discount rate for the entire quote term, regardless of the different terms in your groups. --></help>
+        <label><!-- Term Discount Schedule --></label>
+        <name>SBQQ__TermDiscountSchedule__c</name>
+        <relationshipLabel><!-- Subscriptions (Term Discouned) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Action is considered complete after a member clicks the tile. --></help>
+        <label><!-- Complete Task When Action clicked? --></label>
+        <name>Ptnr_Onbd_Fmwk__Complete_Task_When_Action_clicked__c</name>
+    </CustomFieldTranslation>

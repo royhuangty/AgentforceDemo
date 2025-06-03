@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Field that&apos;s acted upon by the aggregate function. --></help>
+        <label><!-- Aggregate Field --></label>
+        <name>sbaa__AggregateField__c</name>
+        <picklistValues>
+            <masterLabel>List_Total__c</masterLabel>
+            <translation><!-- List_Total__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity</masterLabel>
+            <translation><!-- Quantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subtotal</masterLabel>
+            <translation><!-- Subtotal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Price</masterLabel>
+            <translation><!-- Total Price --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

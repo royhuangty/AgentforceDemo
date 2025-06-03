@@ -1,0 +1,216 @@
+#layersWrap {
+    overflow: hidden;
+
+    #layersSearchWrapper #foldersearch-results-contents .searchresults-placeholder {
+        padding: .5rem;
+        font-size: 16px;
+    }
+}
+
+.ma-folder-content-wrap {
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+    width: 100%;
+    position: absolute;
+
+	.ma-nested-wrap {
+	    flex: 1 0 auto;
+	    order: 2;
+	    overflow-x: hidden;
+	    position: relative;
+
+	    .ma-nested-item {
+	    	position:absolute;
+	    	width:100%;
+	    	height:100%;
+	    	overflow-x:hidden;
+	    	left:0;
+	    	top:0;
+	    	@include transition(all .2s ease);
+
+		    	&.ma-nested-item--left {
+	    			transform: translate(-100%, 0);
+	    		}
+
+		    	&.ma-nested-item--right {
+	    			transform: translate(100%, 0);
+				}
+	    	}
+	    }
+	}
+
+
+// folder items
+
+// .ma-folder-item {
+//     @include flexbox();
+//     @include flexAlign(flex-start);
+//     margin: 0;
+//     width: 100%;
+//     background-color: $white;
+//     border-bottom: 1px solid $color-border;
+//     padding: 0 0 0 8px;   
+
+//     .layer-toggle {
+//         padding: 21px 12px 12px 8px;
+//     }
+
+//     .layer-nest-click-area {
+//         flex-grow: 1;
+//         overflow: hidden;
+//         @include flexAlign(flex-start);
+
+//         .layer-nest-click-area-inner {
+//             @include flexbox();
+//             @include flexDirection(row);
+//             @include flexAlign(flex-start);
+
+//             > div {
+//                 // @include flex(0 0 auto); 
+
+//                 &.layer-type-icon {
+//                     padding: 15px 8px 12px;
+
+//                     .ma-icon {
+//                         font-size: 28px;
+//                         line-height: 1;
+//                         width: 28px;
+//                         height: 28px;
+
+//                         img {
+//                             display: none;
+//                         }
+
+//                         &[type="arcgisonline"] {
+//                             img {
+//                                 display: inline;
+//                             }
+//                         }
+
+//                         &.ma-icon-folder {
+//                             color: $medium-gray;
+//                         }
+
+//                         &.ma-icon-checkin {
+//                             color: $green;
+//                         }
+
+//                         &.ma-icon-shape-layer {
+//                             color: $red;
+//                         }
+
+//                         &.ma-icon-shape-layer {
+//                             color: $red;
+//                         }
+
+//                         &.ma-icon-favorite {
+//                             color: $yellow;
+//                         }
+
+//                         &.ma-icon-apps-admin {
+//                             color: $magenta;
+//                         }
+//                     }
+//                 }
+
+//                 &.ma-item-name {
+//                     padding: 21px 8px 12px;
+//                     line-height: 1.3;
+//                     font-size: 16px;
+//                     flex-grow: 1;
+//                     overflow: hidden;
+
+//                     .ma-item-name-title {
+//                         max-width: 100%;
+//                         text-overflow: ellipsis;
+//                         overflow: hidden;
+//                         white-space: nowrap;
+//                     }
+
+//                     .ma-item-name-subtitle {
+//                         font-size: 12px;
+//                         color: $text-sf;
+//                         line-height: 1;
+//                         margin-top:6px;
+//                     }
+
+//                     .ma-item-folder-path {
+//                         font-size: 12px;
+//                         color: $text-sf;
+//                         line-height: 1;
+//                         margin-top:8px;
+
+//                         .ma-icon {
+//                             float:left;
+//                             margin-right:6px;
+//                             color: $medium-gray;
+//                         }
+//                     }
+//                 }
+
+//                 &.layer-action-icon {
+//                     padding: 19px 8px 12px 4px;
+//                     font-size:1.25rem;
+//                     color: $medium-gray;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+#recentLayersList {
+    margin-bottom: 24px;
+}
+
+#plotOnStartupList {
+    margin-top:0;
+    margin-bottom: 16px;
+}
+
+
+
+#layersIndividualBody {
+    position: relative;
+    flex: 1 0 0;
+    overflow-y: scroll;
+    margin-bottom: 57px;
+
+    .legend-wrap .legend-count {
+        display:none;
+    }
+
+    .layers-individual-filter-wrap {
+        padding-bottom: 16px;
+    }
+}
+
+
+#layersTopBarTabIndicator {
+    position: absolute;
+    width:33.33%;
+    height:3px;
+    background-color: $light-blue;
+    left:0;
+    bottom: 0;
+    z-index:3;
+    pointer-events: none;
+    transform: translate(0,0);
+    @include transition(.2s all ease);
+    
+    &.pos-center {
+        transform: translate(94%, 0);
+    }   
+    &.pos-right {
+        transform: translate(200%, 0);
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+
+#layersIndividualBody {
+    margin-bottom: 0;
+}
+
+}

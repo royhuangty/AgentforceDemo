@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Escolha se todos os valores serão rastreados ou apenas as alterações do valor rastreado anterior.</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>Todos os valores</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>Qualquer alteração</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

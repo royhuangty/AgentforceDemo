@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>O pagamento está em andamento e a fatura está bloqueada. Antes de desbloqueá-la, verifique se já foi criado um pagamento para esta fatura.</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </CustomFieldTranslation>

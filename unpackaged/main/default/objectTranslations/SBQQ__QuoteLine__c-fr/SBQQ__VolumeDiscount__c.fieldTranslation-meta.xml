@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Spécifiez les remises sur volume en % du prix du prod. à déduire en utilisant la quant. ou durée achetée. Vous pouvez définir les plages de quant. ou durée sur des niv. avec différents % de remise, ou appliquer des barèmes de remise à la durée de l&#39;abon.</help>
+        <label><!-- Volume Discount --></label>
+        <name>SBQQ__VolumeDiscount__c</name>
+    </CustomFieldTranslation>

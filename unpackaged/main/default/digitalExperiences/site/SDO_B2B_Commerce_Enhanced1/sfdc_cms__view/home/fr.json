@@ -1,0 +1,418 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Énergie alimentée par l'énergie solaire"
+        },
+        "id" : "1f132fc2-dfc0-4994-ad8b-4801d65bb04c"
+      }, {
+        "id" : "821d09ba-ffac-4a68-8fd6-0777022de235",
+        "attributes" : {
+          "text" : "Stockez l'énergie excédentaire pour des opérations ininterrompues. Nos batteries garantissent une alimentation électrique constante et une résilience opérationnelle."
+        }
+      }, {
+        "id" : "16bef6a2-bf37-48d6-b1a0-c4397d078959",
+        "attributes" : {
+          "text" : "Acheter maintenant"
+        }
+      }, {
+        "id" : "86827b41-2cf6-4a0d-9c87-04d90fe28ace",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "d2b7ba59-6cca-4d0e-aff1-56e4e480a554",
+        "attributes" : {
+          "text" : "Livraison gratuite"
+        }
+      }, {
+        "id" : "b65493d8-25b3-4d76-ae31-4c15f6878449",
+        "attributes" : {
+          "text" : "Profitez de la livraison gratuite pour toutes les commandes de plus de 75 € et des retours gratuits."
+        }
+      }, {
+        "id" : "2c946886-7af9-48ce-ad80-3b005d47d209",
+        "attributes" : {
+          "text" : "Service exceptionnel"
+        }
+      }, {
+        "id" : "3bd4afb5-4853-4f45-b593-2997231a16dd",
+        "attributes" : {
+          "text" : "Notre priorité absolue est votre satisfaction, à chaque fois."
+        }
+      }, {
+        "id" : "aae9fb9b-2ce3-4144-8bac-dfd789ca226c",
+        "attributes" : {
+          "text" : "Expédition Internationale"
+        }
+      }, {
+        "id" : "751d84b2-297c-41e0-8ed4-8286b351b5ee",
+        "attributes" : {
+          "text" : "Livraison Globale : Atteignez N'importe Où, Nous Vous L'apportons"
+        }
+      }, {
+        "id" : "a9b923a3-e2b3-4f49-9d8a-58cf71e68487",
+        "attributes" : {
+          "text" : "Cashback pour votre carte"
+        }
+      }, {
+        "id" : "29e0f7c7-8ddb-4275-80a0-e9273e87d307",
+        "attributes" : {
+          "text" : "Gagnez des Récompenses, Débloquez des Avantages avec Notre Programme de Fidélité !"
+        }
+      }, {
+        "id" : "15ea8e6d-bc5c-4590-9c26-d2007f44c065",
+        "attributes" : {
+          "text" : "Recharge de Véhicule"
+        }
+      }, {
+        "id" : "7ba883ec-69fe-4fac-bb21-12531f80763c",
+        "attributes" : {
+          "text" : "Stockage d'Énergie"
+        }
+      }, {
+        "id" : "b7af90db-afe1-4762-935b-d9cea5ba354d",
+        "attributes" : {
+          "text" : "Énergie Éolienne"
+        }
+      }, {
+        "id" : "fa48086d-e8f0-4d7d-82b3-583237f5d0de",
+        "attributes" : {
+          "text" : "Bâtiments Intelligents"
+        }
+      }, {
+        "id" : "31896583-f3bc-4fb5-9c55-9fb4fe2d66a5",
+        "attributes" : {
+          "text" : "Préparation aux Urgences"
+        }
+      }, {
+        "id" : "910f55df-ce25-4a93-b3eb-64a3d5259104",
+        "attributes" : {
+          "headerText" : "Acheter par catégorie"
+        }
+      }, {
+        "id" : "de4201ca-c669-424d-8485-e3fe3a43ed85",
+        "attributes" : {
+          "text" : "Commande Rapide"
+        }
+      }, {
+        "id" : "1699ded7-6f45-488d-8136-deadf0a99608",
+        "attributes" : {
+          "text" : "Produit"
+        }
+      }, {
+        "id" : "5c7248e7-768a-480b-9c36-371da463872e",
+        "attributes" : {
+          "text" : "Quantité"
+        }
+      }, {
+        "id" : "127f4d7d-c783-4f18-a7e4-df04b5dd9e10",
+        "attributes" : {
+          "searchInputPlaceHolderText" : "Entrez la Réf.",
+          "addEntryButtonText" : "+ Ajouter un Produit",
+          "minimumValueGuideText" : "La quantité minimale est de {0}",
+          "maximumValueGuideText" : "La quantité maximale est de {0}",
+          "incrementValueGuideText" : "Vendu par tranches de {0}",
+          "addToCartButtonText" : "Ajouter au panier",
+          "addToCartButtonProcessingText" : "Ajout...",
+          "skuLabelText" : "Réf. {0}"
+        }
+      }, {
+        "id" : "03abacc3-1439-40a5-a145-1769d3c5eb0a",
+        "attributes" : {
+          "text" : "Témoignages clients"
+        }
+      }, {
+        "id" : "8bae8064-b24e-4873-8b76-2431a279c8e9",
+        "attributes" : {
+          "text" : "Cirrus Energy a révolutionné notre entreprise grâce à ses solutions solaires. Leur expertise et leur engagement en faveur de l'énergie durable ont eu un impact significatif sur nos opérations."
+        }
+      }, {
+        "id" : "d3e9790a-30da-4134-9844-db0cba96b2c0",
+        "attributes" : {
+          "text" : "Choisir Cirrus Energy a été un tournant décisif. Leurs systèmes d'énergie solaire ont non seulement réduit notre empreinte carbone, mais ont également amélioré nos résultats financiers. Nous ne pourrions pas être plus satisfaits."
+        }
+      }, {
+        "id" : "45dc4f14-9f5b-424b-9db5-3332a7f18729",
+        "attributes" : {
+          "text" : "L'engagement de Cirrus Energy envers la qualité et l'innovation est inégalé. Ils nous ont fourni des solutions énergétiques fiables qui ont augmenté notre productivité et notre compétitivité."
+        }
+      }, {
+        "id" : "d62d779d-50cb-4aae-ab79-c5d86fecf8ea",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/b2b-partner.jpeg\",\"altText\":\"Produits d'énergie solaire\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "95de7978-f814-40f8-8a73-44b685964a66",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/free-shipping-icon.svg\",\"altText\":\"Livraison gratuite pour les commandes supérieures à 75 €\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "373aafa4-239d-4b99-ad17-18ac3c0f37c2",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "26fa9886-a17a-4f5e-81df-9972e84a400a",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "f3bf7c57-f0b2-4002-a4b2-d54261051f76",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/customer-service-icon.svg\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "8ddda2cb-be35-40f0-b56c-2156d0620d58",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "7d518ac5-527e-46d8-bec8-5dd26f1493c2",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "78f196fc-8520-4577-a44a-754254777710",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/international-shipping-icon.svg\",\"altText\":\"Expédition internationale\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "3811ce0b-3120-486d-9de9-66cdc0c4f046",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "c667907b-fb41-4abc-a2cb-bb9fd5094c8f",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "e6198804-db0b-45fd-a9ee-85da0da8d9ec",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/cashback-icon.svg\",\"altText\":\"Cashback sur les achats\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "c07ba326-1ae1-4879-8026-7d4813a33ac2",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "3837192c-f0bd-4995-aefd-75fca9b647fd",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "3f3c3233-d1d9-42ff-94b8-9b05f6d2f1eb",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/vehicle-charging-b2b.jpg\",\"altText\":\"Chargement du véhicule\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "2123090f-aa08-4dbc-a831-27f03ee1a310",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "f4bd0bae-bb80-4ed8-8bb9-ea651db6eb0d",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "21295bd7-ae8c-4a1f-b29b-b10c718fa15b",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/energy-storage-b2b.jpg\",\"altText\":\"Stockage d'énergie\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "784c53ab-822f-435f-9eab-f8686d9106bd",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "05128a8c-4cf0-4515-b0e1-139f579939f9",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "7ed7affa-fa98-4ffe-ac7e-3f99d8d1d4e2",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/batteries-b2b.jpg\",\"altText\":\"Batteries\",\"contentKey\": \"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "cdfa383b-d938-4a8a-a93f-017b026f25a7",
+        "attributes" : {
+          "text" : "Batteries"
+        }
+      }, {
+        "id" : "504cf32d-9811-4f7a-92f0-9107391fecea",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "3324c72d-e379-4f99-8a18-7277b441b7ea",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "7394490f-1795-4de1-87b6-7e6c2211e5b7",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/wind-energy-b2b.jpg\",\"altText\":\"Énergie éolienne\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "e47ca990-df41-4af3-b573-4879bbf284bb",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "744ef201-e88a-471e-8d19-dbb69c716f99",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "8042e885-5823-4769-b9c7-47dca97afbc8",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/smart-cities-b2b.jpg\",\"altText\":\"Bâtiments intelligents\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "5b063a29-9309-4aeb-8eca-f76b91d90d79",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "6469cb5b-c5a9-477f-bee4-d3e39a22cc75",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "2b083a24-dd72-4405-a9b5-4ad3261a3403",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/emergency-prep-b2b.jpg\",\"altText\":\"Préparation d'urgence\",\"contentKey\":\"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "0481a6de-d3ad-4849-a0d6-f44958f1e362",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "94bd56a3-4016-4729-adb4-059e469c7d94",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "c7674ac9-d76c-4c7f-bc7c-29730522fbfb",
+        "attributes" : {
+          "overflowMenuLabel" : "Plus"
+        }
+      }, {
+        "id" : "5de74c9e-1237-4ee6-afa4-7d50cb5155f4",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Site+Images/Case_Icon.jpg\",\"altText\":\"\",\"contentKey\":\" \",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "f2f5b0bc-2722-41b4-b987-de152538d964",
+        "attributes" : {
+          "text" : "{!Item.Subject}"
+        }
+      }, {
+        "id" : "62432a63-ac0a-4658-a40e-e25838562fae",
+        "attributes" : {
+          "text" : "{!Item.CaseNumber}"
+        }
+      }, {
+        "id" : "0661b01f-d1e9-4212-95eb-bd3673403b4b",
+        "attributes" : {
+          "text" : "{!Item.Status}"
+        }
+      }, {
+        "id" : "6bdfd5ea-39ab-4802-9956-7afd2d102abf",
+        "attributes" : {
+          "text" : "{!Item.Subject}"
+        }
+      }, {
+        "id" : "e02139ab-213d-448c-a980-7149e3f55e79",
+        "attributes" : {
+          "text" : "Voir"
+        }
+      }, {
+        "id" : "b23b6e33-6085-4235-b03c-997a0dc11dd9",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "4cf676bf-e981-4807-8ddd-88b77ba3eb1b",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/testimonial1.jpg\",\"altText\":\"Témoignage client 1\",\"contentKey\": \"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "9e89a116-437f-45c3-b7f3-58e42c551854",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "65c80dbc-7cd3-47af-b2ae-c9a1da6457c5",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "a4ee7e72-28c2-407f-aa1e-15d812d5d532",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/testimonial2.jpg\",\"altText\":\"Témoignage client 2\",\"contentKey\": \"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "073fe9db-5509-416e-b2c0-06df8dd743e0",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "1fe41858-632e-4228-8fc2-7fc62f76fe80",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "77ced98b-217a-48da-a65e-b40db648165d",
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/testimonial3.jpg\",\"altText\":\"Témoignage client 3\",\"contentKey\": \"\",\"contentType\":null}}"
+        }
+      }, {
+        "id" : "a4a2f2a2-5666-46b7-a975-0ef2c3f3a81c",
+        "attributes" : {
+          "text" : "En savoir plus"
+        }
+      }, {
+        "id" : "0626b141-8615-414c-aea6-b61aa5b80d9d",
+        "attributes" : {
+          "text" : "Contactez-nous"
+        }
+      }, {
+        "id" : "2d7cddcd-cac5-4659-ae1f-cbaa877ce9d7",
+        "attributes" : {
+          "pageTitle" : "Maison"
+        }
+      }, {
+        "id" : "b7441238-cc1c-4543-961f-796916fc1eab",
+        "attributes" : {
+          "text" : "Nous n'avons trouvé aucune commande pour cette période."
+        }
+      }, {
+        "id" : "829d5ac6-a915-4007-8971-9221bc3a5432",
+        "attributes" : {
+          "text" : "Essayez de modifier vos paramètres de filtre."
+        }
+      }, {
+        "id" : "8ca87acc-b5e4-4f3d-b371-fdc297a172fc",
+        "attributes" : {
+          "text" : "Continuer vos achats"
+        }
+      }, {
+        "id" : "3eb53e7e-16a7-4a57-b474-d094254906a7",
+        "attributes" : {
+          "viewDetailsLinkLabel" : "Voir les détails",
+          "reorderButtonLabel" : "Commander à Nouveau"
+        }
+      } ]
+    }
+  },
+  "urlName" : "home"
+}

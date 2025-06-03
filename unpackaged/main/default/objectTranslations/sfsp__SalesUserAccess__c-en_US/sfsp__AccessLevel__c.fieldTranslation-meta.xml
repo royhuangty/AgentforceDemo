@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Access Level --></label>
+        <name>sfsp__AccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Editor</masterLabel>
+            <translation><!-- Editor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viewer</masterLabel>
+            <translation><!-- Viewer --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

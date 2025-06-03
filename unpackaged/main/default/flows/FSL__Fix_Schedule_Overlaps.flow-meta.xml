@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Calls an action that checks whether the overlap occurred today.</description>
+        <name>CheckIfOverlapIsToday</name>
+        <label>Check If Overlap Is Today</label>
+        <locationX>611</locationX>
+        <locationY>134</locationY>
+        <actionName>FSL__IsStartTodayAction</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>IsOverlapToday</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>eventType</name>
+            <value>
+                <elementReference>objectType</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>objectId</name>
+            <value>
+                <elementReference>objectId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>timezoneName</name>
+            <value>
+                <elementReference>serviceResourceTimezone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>FSL__IsStartTodayAction</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <description>Calls an action that fixes the schedule when an overlap occurs because a service appointment ended late or is expected to end late.</description>
+        <name>RunFixScheduleOverlaps</name>
+        <label>Fix Schedule Overlaps</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <actionName>FSL__RunFixScheduleOverlaps</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>EndTime</name>
+            <value>
+                <elementReference>end</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ResourceId</name>
+            <value>
+                <elementReference>serviceResourceId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ResourceTimeZone</name>
+            <value>
+                <elementReference>serviceResourceTimezone</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SchedulingPolicyId</name>
+            <value>
+                <elementReference>GetSchedulingPolicy.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>StartTime</name>
+            <value>
+                <elementReference>start</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>FSL__RunFixScheduleOverlaps</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Determines whether the service appointment ended late or is expected to end late.</description>
+        <name>IsLateEnd</name>
+        <label>Is Late End?</label>
+        <locationX>380</locationX>
+        <locationY>350</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>EndedLate</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>statusCategory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>InProgress</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>statusCategory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>statusCategory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CannotComplete</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IsOverlapLong</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the schedule overlap is equal to or more than ten minutes.</description>
+        <name>IsOverlapLong</name>
+        <label>Is Overlap Long?</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>LongOverlap</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>overlapLengthMinutes</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>10.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetSchedulingPolicy</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the overlap occurred today.</description>
+        <name>IsOverlapToday</name>
+        <label>Is Overlap Today?</label>
+        <locationX>611</locationX>
+        <locationY>242</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>OverlapToday</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CheckIfOverlapIsToday</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IsLateEnd</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Fixes the schedule when a service appointment ends later than expected.</description>
+    <environments>Default</environments>
+    <interviewLabel>Fix Schedule Overlaps {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>Fix Schedule Overlaps</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Gets the Customer First scheduling policy used when running the Fix Schedule Overlaps action.</description>
+        <name>GetSchedulingPolicy</name>
+        <label>Get Scheduling Policy</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>RunFixScheduleOverlaps</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer First</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FSL__Scheduling_Policy__c</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>485</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckIfOverlapIsToday</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>Stores the type of resource absence that caused the overlap. If the overlap was caused by a service appointment, this field is empty.</description>
+        <name>absenceType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the end date and time of the day that the overlap occurs.</description>
+        <name>end</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the ID of the object that caused the overlap that’s passed into the flow.</description>
+        <name>objectId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the type of object that triggered the overlap.</description>
+        <name>objectType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the total length of the overlap in minutes.</description>
+        <name>overlapLengthMinutes</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Stores the ID of the service resource that has the overlap that’s passed into the flow.</description>
+        <name>serviceResourceId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the timezone of the service resource that has the overlap.</description>
+        <name>serviceResourceTimezone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the ID of the service territory where the overlapping events occurred.</description>
+        <name>serviceTerritoryId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the start date and time of the day that the overlap occurs.</description>
+        <name>start</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the status category of the service appointment that caused the overlap. If the overlap was caused by a resource absence, this field is empty.</description>
+        <name>statusCategory</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the comments added to the service appointment. If the overlap was caused by a resource absence, this field is empty.</description>
+        <name>subject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the ID of the user that initiated the overlap and its corresponding fields that are passed into the flow.</description>
+        <name>userId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the ID of the service appointment&#39;s work type that caused the overlap. If the overlap was caused by a resource absence, this field is empty.</description>
+        <name>workTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

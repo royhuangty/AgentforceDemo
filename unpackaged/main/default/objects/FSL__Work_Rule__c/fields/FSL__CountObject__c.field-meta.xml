@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__CountObject__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>The object containing the custom field that&#39;s used for the count.</inlineHelpText>
+    <label>Count object</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ServiceAppointment</fullName>
+                <default>true</default>
+                <label>Service Appointment</label>
+            </value>
+            <value>
+                <fullName>WorkOrder</fullName>
+                <default>false</default>
+                <label>Work Order</label>
+            </value>
+            <value>
+                <fullName>WorkOrderLineItem</fullName>
+                <default>false</default>
+                <label>Work Order Line Item</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

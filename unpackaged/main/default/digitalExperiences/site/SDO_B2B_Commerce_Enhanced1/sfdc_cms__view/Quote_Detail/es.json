@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Quote Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Detalles de presupuesto"
+        },
+        "id" : "aa12f058-438e-40ce-af20-e313a8c36cd3"
+      }, {
+        "attributes" : {
+          "text" : "Explore el desglose detallado de sus presupuestos en esta página. Obtenga información sobre los servicios ofrecidos, los costes asociados y la validez de cada presupuesto. Navegue por las siguientes secciones para comprender los detalles de las condiciones propuestas. Si tiene alguna pregunta o necesita información adicional, no dude en ponerse en contacto con nuestro equipo dedicado. Estamos aquí para garantizar la transparencia y abordar cualquier consulta que pueda tener con respecto a sus presupuestos."
+        },
+        "id" : "8fa739cf-5660-4c4a-938a-d993009a4b8c"
+      }, {
+        "attributes" : {
+          "mainTitleText" : "Detalles de presupuesto"
+        },
+        "id" : "7adcfa68-6723-4613-8e20-643095f8d9d1"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "2a587096-1e2d-41cc-b846-3c1910c49bc3"
+      } ]
+    }
+  },
+  "urlName" : "quote-detail"
+}

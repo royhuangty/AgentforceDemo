@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(RowCount - CDF1:SUM &gt; 0, (RowCount - CDF1:SUM)/MessagingSession.Name:UNIQUE,0)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Average number of messages sent per session by the end user</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>MessagingEndUser.MessagingSession$CreatedDate</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Customer Messages</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(CDF1:SUM &gt; 0, CDF1:SUM/MessagingSession.Name:UNIQUE,0)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Average number of messages sent per session by the agent</description>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>MessagingEndUser.MessagingSession$CreatedDate</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Agent Messages</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <downGroupingContext>MessagingEndUser.MessagingSession$CreatedDate</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Session Count</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA2</column>
+        </chartSummaries>
+        <chartType>Line</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>MessagingEndUser.MessagingSession$CreatedDate</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Average Messages per Session per Day</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>MessagingEndUser.MessagingSession$Name</field>
+    </columns>
+    <columns>
+        <field>MessagingEndUser$Name</field>
+    </columns>
+    <columns>
+        <field>MessagingEndUser.MessagingSession.ConversationEntry$ActorName</field>
+    </columns>
+    <columns>
+        <field>MessagingEndUser.MessagingSession.ConversationEntry$Message</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>MessagingEndUser.MessagingSession.ConversationEntry$HasAttachments</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(ISPICKVAL(ConversationEntry.ActorType , &quot;EndUser&quot;), 1, 0)</calculatedFormula>
+        <dataType>Double</dataType>
+        <description>Was the message sent by the agent?</description>
+        <developerName>CDF1</developerName>
+        <label>Is Agent</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>Shows the average number of messages an agent and a customer is sending per session, trending over time</description>
+    <filter>
+        <criteriaItems>
+            <column>MessagingEndUser.MessagingSession.ConversationEntry$ActorType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1,2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>MessagingEndUser.MessagingSession.ConversationEntry$EntryType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>MessagingEndUser.MessagingSession$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>MessagingEndUser.MessagingSession.ConversationEntry$ActorType</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Average Messages per Session per Day</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>DE_Reports_Users_Sessions_and_Conversations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>MessagingEndUser.MessagingSession$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>MessagingEndUser$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Why do this project? 
+What happens if we don’t do it? 
+Why do it now? 
+How critical will the impact of the project be? --></help>
+        <label><!-- Business Justification --></label>
+        <name>Business_Justification__c</name>
+    </CustomFieldTranslation>

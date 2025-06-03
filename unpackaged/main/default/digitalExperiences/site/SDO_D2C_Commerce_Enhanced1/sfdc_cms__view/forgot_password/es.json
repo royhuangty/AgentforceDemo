@@ -1,0 +1,24 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Forgot Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "cancelButtonLabel" : "Cancelar",
+          "instructionsLabel" : "Para restablecer su contraseña, introduzca su nombre de usuario. Enviaremos un vínculo de restablecimiento de contraseña a la dirección de correo electrónico asociada con su cuenta.",
+          "submitButtonLabel" : "Restablecer",
+          "titleLabel" : "¿Ha olvidado su contraseña?",
+          "usernameLabel" : "Nombre de usuario"
+        },
+        "id" : "dbb35278-dd41-4741-8a85-db92411a9c91"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Contraseña olvidada"
+        },
+        "id" : "c63caf9b-6768-48c2-84e5-cbd6a643f153"
+      } ]
+    }
+  },
+  "urlName" : "forgot-password"
+}

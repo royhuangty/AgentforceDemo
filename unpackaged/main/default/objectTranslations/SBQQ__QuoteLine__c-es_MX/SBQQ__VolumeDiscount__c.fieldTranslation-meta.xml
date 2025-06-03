@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Especifique descuentos por volumen según un % del precio que se descontará con la cantidad o plazo adquiridos. Establezca intervalos de cantidad o plazo en niveles de diferentes porcentajes. Aplique programaciones de descuentos a Plazo de suscripción.</help>
+        <label><!-- Volume Discount --></label>
+        <name>SBQQ__VolumeDiscount__c</name>
+    </CustomFieldTranslation>

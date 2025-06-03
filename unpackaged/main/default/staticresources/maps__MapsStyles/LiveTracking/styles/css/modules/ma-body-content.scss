@@ -1,0 +1,12 @@
+#maBodyContent {
+	height: 100%;
+    background-color: #fff;
+}
+
+.ma-body-content {
+	display:none;
+
+	&.is-active {
+		display:flex;
+	}
+}

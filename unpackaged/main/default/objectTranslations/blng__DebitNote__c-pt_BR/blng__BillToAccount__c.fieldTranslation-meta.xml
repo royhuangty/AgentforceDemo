@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Bill To Account --></label>
+        <name>blng__BillToAccount__c</name>
+        <relationshipLabel><!-- Debit Notes (Bill To Account) --></relationshipLabel>
+    </CustomFieldTranslation>

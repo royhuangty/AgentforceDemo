@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Menentukan berapa menit setelah kalender akhir hari sumber daya akan tersedia untuk perjalanan  (ditanggung sumber daya). 
+Jika kosong, berapapun jumlah perjalanan sebelum awal hari kerja bersifat valid.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

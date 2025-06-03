@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CHILD_LAST_UPDATE</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>SDO_Community_Course_Enrollment__c.Enrollment_Status__c</secondaryGroupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Enrollment by Date</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <description>Shows course enrollees over time.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>SDO_Community_Course_Enrollment__c.Enrollment_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <field>CHILD_LAST_UPDATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Enrollment Over Time</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$SDO_Community_Training_Course__c$SDO_Community_Course_Enrollment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SDO_Community_Training_Course__c.Starts__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

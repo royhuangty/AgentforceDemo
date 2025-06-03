@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina lo que se factura.
+        Se facturarán productos de pedido activos, resúmenes de uso o transacciones de facturación con una Fecha de próxima facturación/Sustituir fecha de próxima facturación antes o igual a la fecha programada.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

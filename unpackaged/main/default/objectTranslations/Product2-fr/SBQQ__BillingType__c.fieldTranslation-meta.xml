@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le type de facturation définit la date de facturation. La facturation anticipée permet de facturer vos clients avant la livraison des produits ou services. La facturation différée permet de facturer vos clients après la livraison des produits ou services.</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </CustomFieldTranslation>

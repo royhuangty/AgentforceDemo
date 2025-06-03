@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>決定資源行事曆上一天開始時間之前有多少分鐘可花費在出差路途上 (為資源支出)。
+若為空白，則工作日開始前花費在出差路途上的時間不受限制。</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

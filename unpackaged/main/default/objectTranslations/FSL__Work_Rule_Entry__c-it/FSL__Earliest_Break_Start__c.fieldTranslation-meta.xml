@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Numero di minuti dall&#39;inizio della disponibilità della risorsa di servizio all&#39;ora di inizio della prima pausa consentita. Ad esempio, immettere 120 per pianificare una pausa almeno due ore dopo l&#39;inizio della giornata.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-tr</name>
+    <style>none</style>
+    <subject>Görsel Uzaktan Yardımcı Davetiyesi</subject>
+    <textOnly>Merhaba,
+Sizin için çevrimiçi bir uzaktan toplantı planlandı
+Toplantının ayrıntılarını görmek ve toplantıya girmek için &quot;Katıl&quot; tuşuna tıklayın.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

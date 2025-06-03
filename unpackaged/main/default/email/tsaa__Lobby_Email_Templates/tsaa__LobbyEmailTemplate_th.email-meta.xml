@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-th</name>
+    <style>none</style>
+    <subject>คำเชิญผู้ช่วยระยะไกลแบบวิชวล</subject>
+    <textOnly>สวัสดี
+มีกำหนดการประชุมทางไกลออนไลน์สำหรับคุณ
+คลิกปุ่ม &quot;เข้าร่วม&quot; เพื่อดูรายละเอียดและเข้าสู่การประชุม
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

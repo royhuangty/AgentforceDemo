@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Polígono de mapa</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Polígonos de mapas</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nombre de polígono</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
+        <name>FSL__Polygon_Color_HEX_Format</name>
+    </validationRules>
+</CustomObjectTranslation>

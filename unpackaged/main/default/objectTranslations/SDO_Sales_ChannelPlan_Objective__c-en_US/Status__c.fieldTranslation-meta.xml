@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Accomplished Objective</masterLabel>
+            <translation><!-- Accomplished Objective --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceeded Expectations</masterLabel>
+            <translation><!-- Exceeded Expectations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half-way</masterLabel>
+            <translation><!-- Half-way --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three Quarters</masterLabel>
+            <translation><!-- Three Quarters --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

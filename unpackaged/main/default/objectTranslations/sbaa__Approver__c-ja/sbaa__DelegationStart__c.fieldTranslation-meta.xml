@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>承認の代理が開始する日</help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </CustomFieldTranslation>

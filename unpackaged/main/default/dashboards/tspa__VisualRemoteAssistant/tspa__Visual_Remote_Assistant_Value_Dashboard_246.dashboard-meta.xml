@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <chartTheme>light</chartTheme>
+    <colorPalette>accessible</colorPalette>
+    <dashboardChartTheme>light</dashboardChartTheme>
+    <dashboardColorPalette>accessible</dashboardColorPalette>
+    <dashboardGridLayout>
+        <dashboardGridComponents>
+            <colSpan>6</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>FORMULA1</column>
+                </chartSummary>
+                <componentType>Gauge</componentType>
+                <decimalPrecision>0</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <footer>Ratio between all VRA users&#39; session avg to the top users quartile average, for the past 30 days.</footer>
+                <gaugeMax>80.0</gaugeMax>
+                <gaugeMin>0.0</gaugeMin>
+                <groupingSortProperties />
+                <header>Value Realization</header>
+                <indicatorBreakpoint1>27.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>54.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>tspa__VRAAdoptionReport246/tspa__Value_Realization_246</report>
+                <showPercentage>false</showPercentage>
+                <showRange>false</showRange>
+                <showTotal>true</showTotal>
+                <showValues>false</showValues>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>10</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>tspa__Visual_Remote_Assistant_Statistics__c.tspa__Potential_Value__c</column>
+                </chartSummary>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>tspa__Visual_Remote_Assistant_Statistics__c.tspa__Current_Value__c</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Potential Value: Top users quartile 30d avg number of sessions times MAU times 12 times session average $-value.</footer>
+                <groupingColumn>tspa__Visual_Remote_Assistant_Statistics__c.tspa__Session_Average_Value__c</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Potential &amp; Actual Annualized Value</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>tspa__VRAAdoptionReport246/tspa__Potential_Annualize_Value_246</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>10</rowSpan>
+        </dashboardGridComponents>
+        <numberOfColumns>12</numberOfColumns>
+        <rowHeight>36</rowHeight>
+    </dashboardGridLayout>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>true</isGridLayout>
+    <owner>roy.huang@lidd.com2025_06_1_18-35-54.demo</owner>
+    <runningUser>roy.huang@lidd.com2025_06_1_18-35-54.demo</runningUser>
+    <textColor>#000000</textColor>
+    <title>Visual Remote Assistant Value Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

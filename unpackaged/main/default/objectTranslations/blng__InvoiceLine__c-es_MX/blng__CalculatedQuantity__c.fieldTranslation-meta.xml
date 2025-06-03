@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Indica el número actual de veces que se está aplicando el cargo para la partida. Si factura mensualmente durante 45 días, este valor será 1,5.</help>
+        <label><!-- Calculated Quantity --></label>
+        <name>blng__CalculatedQuantity__c</name>
+    </CustomFieldTranslation>

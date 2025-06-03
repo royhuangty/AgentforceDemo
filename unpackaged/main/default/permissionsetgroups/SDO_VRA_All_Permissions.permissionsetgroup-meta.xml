@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all perm sets for Visual Remote Assistant Functionality.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>VRA - All Permissions</label>
+    <permissionSets>SDO_VRA_Base_Access</permissionSets>
+    <permissionSets>tsaa__VRA_Experiences_Sites</permissionSets>
+    <permissionSets>tsaa__VRA_Scheduling</permissionSets>
+    <permissionSets>tspa__VRA_Coummunity_End_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

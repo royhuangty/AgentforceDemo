@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Den typ av objekt som räknas i arbetsregeln.</help>
+        <label><!-- Count Type --></label>
+        <name>FSL__CountType__c</name>
+        <picklistValues>
+            <masterLabel>Assignments</masterLabel>
+            <translation>Tilldelningar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Value</masterLabel>
+            <translation>Eget värde</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration</masterLabel>
+            <translation>Tidslängd</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

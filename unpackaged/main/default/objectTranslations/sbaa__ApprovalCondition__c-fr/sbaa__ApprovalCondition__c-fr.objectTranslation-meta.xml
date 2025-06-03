@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Condition d’approbation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conditions d’approbation</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Condition Layout</layout>
+        <sections>
+            <label>Information filtrée</label>
+            <section>Filtered Information</section>
+        </sections>
+        <sections>
+            <label>Information testée</label>
+            <section>Tested Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de la condition</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You may specify only one type of filter and it must match Filter Type. --></errorMessage>
+        <name>sbaa__Filter_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide a value for either Tested Field or Tested Variable. --></errorMessage>
+        <name>sbaa__Tested_Target_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Masukkan jumlah menit yang menggambarkan waktu diam di antara janji temu layanan. Tujuan ini meminimalisir kesenjangan yang sama dengan atau lebih tinggi dari nilai yang dimasukkan.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Suma de los importes de pago asignados al Encabezado de factura. Solo debe utilizarse cuando no se están utilizando asignaciones de nivel de partida.</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </CustomFieldTranslation>

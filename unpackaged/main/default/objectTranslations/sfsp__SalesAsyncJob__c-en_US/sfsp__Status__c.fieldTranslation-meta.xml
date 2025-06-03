@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Status --></label>
+        <name>sfsp__Status__c</name>
+        <picklistValues>
+            <masterLabel>Failure</masterLabel>
+            <translation><!-- Failure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation><!-- Queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Running</masterLabel>
+            <translation><!-- Running --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warning</masterLabel>
+            <translation><!-- Warning --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

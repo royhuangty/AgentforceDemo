@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Total de todos los ingresos que están distribuidos en una programación de ingresos pero aún no están reconocidos.</help>
+        <label><!-- Unrecognized --></label>
+        <name>blng__Unrecognized__c</name>
+    </CustomFieldTranslation>

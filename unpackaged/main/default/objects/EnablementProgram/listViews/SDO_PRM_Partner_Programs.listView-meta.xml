@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_PRM_Partner_Programs</fullName>
+    <columns>Owner</columns>
+    <columns>Name</columns>
+    <columns>Status</columns>
+    <columns>PublishedDateTime</columns>
+    <columns>TotalDays</columns>
+    <columns>Description</columns>
+    <columns>TotalAssigned</columns>
+    <columns>TotalCompleted</columns>
+    <columns>TotalBehind</columns>
+    <columns>Type</columns>
+    <columns>Network</columns>
+    <columns>DoesAllowSelfEnrollment</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type</field>
+        <operation>equals</operation>
+        <value>External</value>
+    </filters>
+    <label>Partner Programs</label>
+</ListView>

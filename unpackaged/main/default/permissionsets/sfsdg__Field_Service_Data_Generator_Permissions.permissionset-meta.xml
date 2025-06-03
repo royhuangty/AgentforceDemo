@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Includes access to Apex classes &quot;sfsdg.fsdgController&quot; and &quot;sfsdg.fsdgHelper&quot; used by the Field Service Data Generator, and limited access to Account, Operating Hours, Work Type, Service Territory, Work Order, Work Order Line Item, Service Appointment</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Field Service Data Generator Permissions</label>
+    <classAccesses>
+        <apexClass>sfsdg__fsdgController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>sfsdg__fsdgHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceAppointment.FSL__Auto_Schedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceAppointment.FSL__GanttLabel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>WorkType.FSL__Due_Date_Offset__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <tabSettings>
+        <tab>sfsdg__Field_Service_Data_Generator</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

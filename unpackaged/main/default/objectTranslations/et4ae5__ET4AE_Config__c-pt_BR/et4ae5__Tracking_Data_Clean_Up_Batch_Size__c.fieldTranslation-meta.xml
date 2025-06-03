@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Insira o número de registros para excluir por lote. Exclua até 2.000 registros por lote.</help>
+        <label><!-- Tracking Data Cleanup Batch Size --></label>
+        <name>et4ae5__Tracking_Data_Clean_Up_Batch_Size__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Quote that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI. --></help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Discount Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

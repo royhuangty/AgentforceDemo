@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EnblProgramTaskProgress$LearningItemProgress.Owner.Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$CompletedPercent</field>
+    </columns>
+    <description>Analyze an exercise’s completion status based on program sections.</description>
+    <filter>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.TaskCategory</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Exercise</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnblProgramSection.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>no section</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnblProgramSection.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$ProgressStatus</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Exercise Completion Status by Section</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Program_Task_Progress_sfdcSESv59__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EnblProgramTaskProgress$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select if invoices should be posted by default. Otherwise, invoices are generated as drafts. --></help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </CustomFieldTranslation>

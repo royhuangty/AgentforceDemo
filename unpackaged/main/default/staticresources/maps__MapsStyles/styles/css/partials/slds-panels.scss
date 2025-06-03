@@ -1,0 +1,12 @@
+.slds-scope {
+	.slds-filters__item-popover-positioner-left-bottom {
+		position: absolute;
+		left: calc(100% + 16px);
+		bottom: 0;
+
+		&.slds-is-fixed {
+			position: fixed;
+			z-index: 100;
+		}
+	}
+}

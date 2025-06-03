@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up sent to customers on webinar</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Webinar Follow-up</name>
+    <style>none</style>
+    <subject>Webinar Follow up</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

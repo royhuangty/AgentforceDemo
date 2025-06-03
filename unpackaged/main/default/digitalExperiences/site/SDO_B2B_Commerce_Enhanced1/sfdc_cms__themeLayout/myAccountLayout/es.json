@@ -1,0 +1,47 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "My Account Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 12px; color: rgb(255, 255, 255);\">¡Ahorre 10 % en todas las baterías!</strong></p>"
+        },
+        "id" : "b5f10a39-1c58-4eaa-935c-ec53bbbb984e"
+      }, {
+        "attributes" : {
+          "placeholderText" : "Introducir palabra clave"
+        },
+        "id" : "994ab546-ced2-40c7-8c37-332b16085230"
+      }, {
+        "attributes" : {
+          "logOutLabel" : "Cerrar sesión",
+          "loginLinkText" : "Iniciar sesión"
+        },
+        "id" : "d76a6b8c-c6d4-4787-b34b-98727a9efba6"
+      }, {
+        "attributes" : {
+          "headingLabelText" : "Seleccione su ubicación",
+          "pickerButtonLabelText" : "Cambiar ubicación"
+        },
+        "id" : "a560548f-df7e-4725-817f-fc5c58d56f77"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">© Copyright 2023 Salesforce.com, inc. | Esta no es una empresa real. </span></p><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">It is used for Salesforce demos. No orders will be processed.<span class=\"ql-cursor\"></span></span></p>"
+        },
+        "id" : "2eb016c6-cab5-4f75-b88c-4d14b27faffc"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<div class=\"social-media-icons\">\n <div class=\"social-media-icon facebook\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/facebook-icon.png\">\n </div>\n <div class=\"social-media-icon twitter\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/twitter-icon.png\">\n </div>\n <div class=\"social-media-icon instagram\"><img height=\"24\" src=\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/Commerce_Images/instagram-icon.png\">\n </div>\n</div>"
+        },
+        "id" : "ae8db552-f1bf-484d-8a4e-7a0ba80ff46d"
+      }, {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "82fcb281-4367-4a22-bd19-8da389f5165a"
+      } ]
+    }
+  },
+  "urlName" : "my-account-layout"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die Daten die das Gateway für nachfolgende Transaktionen verwendet</help>
+        <label><!-- Gateway Reference Details --></label>
+        <name>blng__GatewayReferenceDetails__c</name>
+    </CustomFieldTranslation>

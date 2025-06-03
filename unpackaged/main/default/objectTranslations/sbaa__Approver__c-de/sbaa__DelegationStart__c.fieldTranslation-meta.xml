@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Datum, an dem die Genehmigungsdelegierung beginnt</help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </CustomFieldTranslation>

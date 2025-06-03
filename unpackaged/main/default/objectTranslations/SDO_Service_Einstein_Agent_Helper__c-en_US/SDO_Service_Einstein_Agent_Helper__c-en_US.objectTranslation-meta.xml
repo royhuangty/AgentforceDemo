@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Einstein Agent Helper</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Einstein Agent Helpers</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Einstein Agent Helper Layout</layout>
+        <sections>
+            <label><!-- Recommendation --></label>
+            <section>Recommendation</section>
+        </sections>
+        <sections>
+            <label><!-- Rule --></label>
+            <section>Rule</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

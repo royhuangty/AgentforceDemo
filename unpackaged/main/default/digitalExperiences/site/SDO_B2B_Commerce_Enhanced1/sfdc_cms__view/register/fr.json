@@ -1,0 +1,27 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Register",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "firstnameLabel" : "Prénom",
+          "lastnameLabel" : "Nom",
+          "passwordLabel" : "Créer un mot de passe",
+          "phoneNumberLabel" : "Numéro de téléphone",
+          "confirmPasswordLabel" : "Confirmez le mot de passe",
+          "submitButtonLabel" : "S'inscrire",
+          "cancelLinkLabel" : "Vous avez déjà un compte ?",
+          "emailLabel" : "E-mail"
+        },
+        "id" : "aa886c1e-2f41-4f63-89f7-ffe77c4923af"
+      }, {
+        "id" : "7b3bcf6f-2522-484a-9174-39270b0af01a",
+        "attributes" : {
+          "pageTitle" : "S'Inscrire"
+        }
+      } ]
+    }
+  },
+  "urlName" : "register"
+}

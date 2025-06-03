@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lightning Scheduler Flow to Book Appointment</description>
+    <flowDefinition>SDO_Scheduler_Outbound_Flow_from_Contact2</flowDefinition>
+    <label>Schedule Training</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

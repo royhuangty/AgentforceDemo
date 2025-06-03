@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Revenue distribution method used for assigning review across periods --></help>
+        <label><!-- Revenue Distribution Method --></label>
+        <lookupFilter>
+            <errorMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Activation&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></errorMessage>
+            <informationalMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Posting&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></informationalMessage>
+        </lookupFilter>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Distribution Method) --></relationshipLabel>
+    </CustomFieldTranslation>

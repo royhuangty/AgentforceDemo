@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Recommended Product Parent --></label>
+        <name>Recommended_Product_Parent__c</name>
+        <relationshipLabel><!-- Cross-Sell Products Recommendations --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Campo con el que evaluar el campo o la variable probados</help>
+        <label><!-- Filter Field --></label>
+        <name>sbaa__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nombre</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-ja</name>
+    <style>none</style>
+    <subject>視覚リモートアシスタントの招待</subject>
+    <textOnly>こんにちは、
+オンラインのリモート・ミーティングが予定されています。
+「参加」ボタンをクリックすると、ミーティングの詳細が表示され、ミーティングにご参加いただけます。
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

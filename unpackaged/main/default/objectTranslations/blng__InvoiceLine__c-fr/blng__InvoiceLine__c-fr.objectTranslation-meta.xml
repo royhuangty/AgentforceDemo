@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ligne de facture</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lignes de facture</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Line Layout</layout>
+        <sections>
+            <label>Solde AR</label>
+            <section>AR Balance</section>
+        </sections>
+        <sections>
+            <label>Informations sur la fréquence de facturation</label>
+            <section>Billing Frequency Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la règle de facturation</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur la règle du Grand livre</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Paiements et remboursements</label>
+            <section>Payments and Refunds</section>
+        </sections>
+        <sections>
+            <label>Informations sur les prix</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la comptabilisation du revenu</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informations fiscales</label>
+            <section>Tax Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la règle fiscale</label>
+            <section>Tax Rule Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du produit</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

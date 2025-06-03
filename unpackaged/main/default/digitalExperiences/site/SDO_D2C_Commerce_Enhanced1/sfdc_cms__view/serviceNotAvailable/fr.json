@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Service Not Available",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 40px 25px;\">\n <div style=\"background: url(assets/images/serviceNotAvailable.svg) center no-repeat; background-size: content; height: 331px; width: 100%; max-width: 538px;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n <h1><b style=\"font-size: 2em\">Il semble que le site soit temporairement indisponible</b></h1> <br>\n <p><span style=\"font-size: 1.5em;\">Veuillez réessayer dans quelques instants.</span></p>\n</div>"
+        },
+        "id" : "883c1396-90a6-4ebe-8ed8-88a8af8b2032"
+      } ]
+    }
+  },
+  "urlName" : "service-not-available"
+}

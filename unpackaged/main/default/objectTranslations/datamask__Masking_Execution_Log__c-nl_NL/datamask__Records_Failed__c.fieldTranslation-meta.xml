@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Het totale aantal records dat is mislukt voor dit object.</help>
+        <label><!-- Records Failed --></label>
+        <name>datamask__Records_Failed__c</name>
+    </CustomFieldTranslation>

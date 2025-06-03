@@ -1,0 +1,247 @@
+<apex:page standardstylesheets="false" controller="maps.CustomDispositionForm" showHeader="false" sidebar="false"  showChat="false">
+
+    <apex:variable var="RequestPlatform" value="{!IF($CurrentPage.parameters.platform == null || $CurrentPage.parameters.platform == 'null', 'tablet', LOWER($CurrentPage.parameters.platform))}" />
+
+    <!-- PAGE IS DEPRICATED IN V2 PLEASE USE maps__ClickToCreateForm -->
+    <apex:form >
+        <div class="CustomDispositionFormTable fieldSetTable">
+
+            <apex:repeat value="{!fields}" var="f">
+                <apex:outputPanel rendered="{! IF(RequestPlatform == 'tablet' && f.typeAsString == 'REFERENCE', false, true)}" layout="none">
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'DATE'}">
+                        <div class="slds-form-element slds-m-vertical_small">
+                            <label class="fieldLabel dateLabel slds-form-element__label">{!f.Label}<apex:outputText value="*" rendered="{!f.Required || f.DBRequired}"/></label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} slds-input datePick" />
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'BOOLEAN'}">
+                        <div class="slds-form-element slds-m-top_small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath}" />
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString != 'DATE' && f.typeAsString != 'BOOLEAN' && f.typeAsString != 'MULTIPICKLIST'}">
+                        <div class="fieldInput slds-form-element__control slds-m-vertical_small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath}  fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:inputField value="{!obj[f.fieldPath]}" styleClass="get-input {!f.fieldPath} slds-input slds-text-body_regular" />
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel layout="none" rendered="{!f.typeAsString == 'MULTIPICKLIST'}">
+                        <div class="fieldInput slds-form-element__control slds-m-vertical_small">
+                            <label class="fieldLabel type-{!f.typeAsString} slds-form-element__label">
+                                <apex:outputText rendered="{!f.Required || f.DBRequired}">
+                                    <abbr class='slds-required' title='required'>*</abbr>
+                                </apex:outputText>
+                                {!f.Label}
+                            </label>
+
+                            <div class="field::{!f.fieldPath} fieldInput slds-form-element__control" data-type="{!f.typeAsString}" data-field="{!f.fieldPath}">
+                                <div>
+                                    <apex:selectList value="{!obj[f.fieldPath]}" multiselect="true" styleClass="{!f.fieldPath} get-input">
+                                        <apex:selectOptions value="{!multiSelectFields[f.fieldPath]}"/>
+                                    </apex:selectList>
+
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+
+                </apex:outputPanel>
+
+            </apex:repeat>
+
+        </div>
+
+
+    </apex:form>
+
+    <script>
+        jQuery(function () {
+            picklist.initialized = false;
+            picklist.initAll();
+            $('.fieldSetTable select').addClass('slds-select');
+            $('.fieldSetTable select').parent('div').addClass('slds-select_container');
+            $('.lookupInput input').addClass('slds-input');
+            $('.multiSelectPicklistCell img').removeClass('slds-input');
+            // if mobile, handle lookup fields using our logic (sf popup fails)
+            try {
+                if (MA && MA.isMobile) {
+                    $('.fieldInput select.slds-select.get-input').css('-moz-appearance', 'auto');
+                    $('.fieldInput select.slds-select.get-input').css('-webkit-appearance', 'auto');
+                    $('.fieldInput .slds-select_container select.slds-select.get-input').css('padding-top', '0px');
+                    $('.fieldInput .slds-select_container select.slds-select.get-input').css('padding-bottom', '0px');
+                    $('.dateInput').addClass('slds-grid slds-grid_vertical');
+                    // find all lookup inputs and remove the popup button
+                    var $lookupRows = $('.fieldInput[data-type="REFERENCE"]');
+                    $lookupRows.each(function(i, row) {
+                        var $row = $(row);
+                        // grab the field name
+                        var fieldAPI = $row.attr('data-field');
+                        $row.addClass('slds-input-has-icon slds-input-has-icon_right');
+                        // empty out the field container and create new row html
+                        var rowHTML = '<input class="actual-form-value" style="display:none;"/><input style="border: 1px solid #dddbda;padding-left: 0.75rem;" readonly="readonly" class="get-input '+fieldAPI+' slds-input" maxlength="255" size="20" type="text"/><div style="color: #b0adab;" class="slds-icon slds-input__icon slds-input__icon_right ma-icon icon-left ma-icon-search"></div>';
+                        $row.empty().html(rowHTML);
+
+                        // attach listener to input to show our search popup
+                        attachSalesforceSearchPopup($row, fieldAPI);
+                    });
+                }
+            } catch (e) {}
+
+        });
+        function attachSalesforceSearchPopup($row, fieldAPI) {
+            $row.on('click', '.get-input',function() {
+                $('.js-search-modal-wrapper').hide();
+                MALayers.showModal('dynamicSearchModal');
+                $('#dynamicSearchModal').removeData();
+
+                //keep track of origin
+                $('#dynamicSearchModal').data('domOrigin',$(this));
+                //clear any previous
+                $('#searchDynamicInput').val('');
+                var $searchModal = $('#dynamicSearchModal');
+                $searchModal.find('.search-empty-state').removeClass('hidden');
+                $searchModal.find('.search-results-wrapper').addClass('hidden');
+                $('#searchDynamicInput').focus();
+
+                //remove any previous event listener
+                $('#dynamicSearchModal').off('keyup','#searchDynamicInput');
+
+                //attach event listener to input
+                $('#dynamicSearchModal').on('keyup','#searchDynamicInput',function () {
+                    var $input = $(this);
+                    var searchTerm = $input.val();
+                    var $searchModal = $('#dynamicSearchModal');
+                    var $searchResults = $searchModal.find('.search-table-view').empty();
+                    if (searchTimeout !== null) {
+                        clearTimeout(searchTimeout);
+                    }
+
+                    if(searchTerm === '') {
+                        $searchModal.find('.search-empty-state').removeClass('hidden');
+                        $searchModal.find('.search-results-wrapper').addClass('hidden');
+                        return;
+                    }
+
+                    searchTimeout = setTimeout(function() {
+                        searchTimeout = null;
+                        var $favLoading = MAToastMessages.showLoading({message:'{!JSENCODE($Label.MA_Loading)}',timeOut:0,extendedTimeOut:0});
+
+                        searchLookupOptions_Id(fieldAPI, searchTerm).then(function(res) {
+                            $searchModal.find('.search-empty-state').addClass('hidden');
+                            $searchModal.find('.search-results-wrapper').removeClass('hidden');
+                            MAToastMessages.hideMessage($favLoading);
+                            $favLoading = null;
+                            if(res.success) {
+                                var resultHTML = '';
+                                var resultData = res.lookupOptions || [];
+                                var resultHTML = '';
+                                if(resultData.length === 0) {
+                                    //show no results
+                                    $searchResults.html('<li class="table-view-cell">No Results</li>');
+                                }
+                                else {
+                                    $.each(resultData, function (index, data) {
+                                        resultHTML += '<li class="table-view-cell dataSuccess" data-id="'+htmlEncode(data.value)+'">'+htmlEncode(data.label)+'</li>';
+                                    });
+
+                                    $searchResults.html(resultHTML);
+
+                                    //attach click handler to rows
+                                    $searchResults.off('click','.dataSuccess');
+                                    $searchResults.on('click','.dataSuccess',function () {
+                                        var $row = $(this);
+                                        var dataId = $row.attr('data-id');
+                                        var rowVal = $row.text();
+
+                                        var $searchOriginLocation = $('#dynamicSearchModal').data('domOrigin');
+                                        // update with text and update the hidden input with actual value
+                                        $searchOriginLocation.attr('data-id',dataId).val(rowVal);
+                                        // using hidden input to keep code change to minimum to match current sf flow
+                                        $searchOriginLocation.parent().find('.actual-form-value').val(dataId);
+
+                                        //hide modal
+                                        MALayers.hideModal('dynamicSearchModal',false);
+                                        $('.js-search-modal-wrapper').show();
+                                    });
+                                }
+                            }
+                            else {
+                                $searchResults.html('<li class="table-view-cell">No Results</li>');
+                            }
+                        });
+                    },500);
+                });
+
+                $('#dynamicSearchModal').off('click','.clearOriginInput');
+                $('#dynamicSearchModal').on('click','.clearOriginInput',function () {
+                    var $searchOriginLocation = $('#dynamicSearchModal').data('domOrigin');
+                    $searchOriginLocation.removeAttr('data-id').val('');
+                    $searchOriginLocation.parent().find('.actual-form-value').val('');
+                });
+
+                //add modal hide functionality
+                $('#dynamicSearchModal').off('click','.hideDynamicModal');
+                $('#dynamicSearchModal').on('click','.hideDynamicModal',function() {
+                    MALayers.hideModal('dynamicSearchModal', false);
+                    $('.js-search-modal-wrapper').show();
+                });
+            });
+        }
+        function searchLookupOptions_Id (fieldName, searchTerm) {
+            var dfd = $.Deferred();
+            var processData = {
+                ajaxResource : 'TooltipAJAXResources',
+                action			: 'get_lookup_options',
+                baseObject: '{!objectLabel}',
+                fieldName: fieldName,
+                term: searchTerm
+            };
+
+            Visualforce.remoting.Manager.invokeAction('maps.RemoteFunctions.processAJAXRequest',
+                processData,
+                function(res, event) {
+                    if(event.status) {
+                        if (res && res.success) {
+                            dfd.resolve(res);
+                        } else {
+                            console.warn(res);
+                            dfd.resolve({lookupOptions: []});
+                        }
+                    } else {
+                        console.warn(res, event);
+                        dfd.resolve({lookupOptions: []});
+                    }
+                },{buffer:false,escape:false}
+            );
+            return dfd.promise();
+        }
+    </script>
+</apex:page>

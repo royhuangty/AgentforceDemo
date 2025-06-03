@@ -1,0 +1,142 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<template>
+	<template if:true={hasProducts}>
+		<!-- ACCORDION -->
+		<lightning-accordion allow-multiple-sections-open onsectiontoggle={handleSectionToggle}
+			active-section-name={activeSections}>
+			<!-- ACCORDION SECTION -->
+			<lightning-accordion-section name="b2bProdRecSection" label={crossSell_Title}>
+				<!-- ACCORDION SECTION BODY -->
+
+                <template if:true={isStacked}>
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <template for:each={CSModifiedProducts} for:item="Product">
+                            <div class="slds-col slds-size_1-of-1" key={Product.id}>
+                                <div class="slds-grid slds-gutters slds-var-m-bottom_medium">
+                                    <template if:true={displayImages}>
+                                        <div class="slds-col slds-size_1-of-6">
+                                            <a href={Product.fullUrl} target="_self">
+                                                <img src={Product.defaultImage.url} />
+                                            </a>
+                                        </div>
+                                    </template>
+
+                                    <div class="slds-col">
+                                        <h1 class="slds-text-heading_medium slds-var-m-top_x-small">
+                                            <a href={Product.fullUrl} target="_self">
+                                                {Product.fields.Name}
+                                            </a>
+                                        </h1>
+
+                                        <template if:true={displayDescription}>
+                                            <p class="slds-text-body_small slds-var-m-vertical_x-small">
+                                                {Product.fields.Description}
+                                            </p>
+                                        </template>
+                                    </div>
+
+                                    <div class="slds-col slds-size_2-of-6 slds-align_absolute-center">
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                <span class="slds-form-element__addon slds-text-title_caps">
+                                                    <lightning-formatted-number currency-code={Product.currency}
+                                                        format-style="currency" value={Product.unitPrice}
+                                                        class="slds-text-heading_small">
+                                                    </lightning-formatted-number>
+                                                </span>
+
+                                                <template if:true={Product.showAddToCart}>
+                                                    <template if:true={displayQty}>
+                                                        <input type="number" class="slds-input" id={Product.id} value="1"
+                                                        min="1" max="100000" aria-describedby="input-error-message-230"
+                                                        aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
+                                                        onchange={handleQTYChange} />
+                                                    </template>
+                                                    
+
+                                                    <span class="slds-form-element__addon">
+                                                        <lightning-button-icon id={Product.id} icon-name="utility:cart"
+                                                            onclick={addProductToCart}
+                                                            alternative-text={labels.component.addToCart}
+                                                            title={labels.component.addToCart}></lightning-button-icon>
+                                                    </span>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+
+                <template if:true={isGrid}>
+                    <c-b2b-content-aware>
+                        <div class="slds-grid slds-gutters slds-wrap" slot="contentAwareSlot">
+                            <template for:each={CSModifiedProducts} for:item="Product">
+                                <div class="slds-col" key={Product.id} data-content="aware">
+                                    <article class="slds-var-m-bottom_small">
+                                        <div>
+                                            <a href={Product.fullUrl}>
+                                                <img src={Product.defaultImage.url} />
+                                            </a>
+                                        </div>
+    
+                                        <h1 class="slds-text-heading_medium slds-var-m-top_x-small">
+                                            <a href={Product.fullUrl}>
+                                                {Product.fields.Name}
+                                            </a>
+                                        </h1>
+    
+                                        <template if:true={displayDescription}>
+                                            <p class="slds-text-body_small slds-var-m-vertical_x-small">
+                                                {Product.fields.Description}
+                                            </p>
+                                        </template>
+    
+                                        
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                <span class="slds-form-element__addon slds-text-title_caps">
+                                                    <lightning-formatted-number currency-code={Product.currency}
+                                                        format-style="currency" value={Product.unitPrice}
+                                                        class="slds-text-heading_small">
+                                                    </lightning-formatted-number>
+                                                </span>
+
+                                                <template if:true={Product.showAddToCart}>
+                                                    <input type="number" class="slds-input" id={Product.id} value="1"
+                                                        min="1" max="100000" aria-describedby="input-error-message-230"
+                                                        aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
+                                                        onchange={handleQTYChange} />
+
+                                                    <span class="slds-form-element__addon">
+                                                        <lightning-button-icon id={Product.id} icon-name="utility:cart"
+                                                            onclick={addProductToCart}
+                                                            alternative-text={labels.component.addToCart}
+                                                            title={labels.component.addToCart}></lightning-button-icon>
+                                                    </span>
+                                                </template>
+                                            </div>
+                                        </div>
+    
+                                    </article>
+                                </div>
+                            </template>
+                        </div>
+                    </c-b2b-content-aware>
+                </template>
+				
+
+			</lightning-accordion-section>
+		</lightning-accordion>
+	</template>
+</template>

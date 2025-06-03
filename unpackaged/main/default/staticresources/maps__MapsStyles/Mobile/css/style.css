@@ -1,0 +1,667 @@
+#map_canvas {
+    height: 100%;
+    height: 100vh;
+}
+#splashScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #276AA1;
+    z-index: 1000;
+    white-space: nowrap;
+    text-align: center;
+}
+#splashScreen .loading-img {
+    max-width: 552px;
+    max-height: 323px;
+    width: 100%;
+    vertical-align: middle;
+}
+.query-item.dynamicQuery {
+    pointer-events: none;
+    opacity: 0.5;
+}
+#query-footer {
+    padding: 0px;
+}
+#query-wrapper ion-content, #folder-wrapper ion-content {
+    top: 44px;
+    background : #F2F2F2;
+    height: auto;
+}
+#query-wrapper .recentQuery-list {
+    position: relative;
+}
+.query-item {
+    padding-right: 60px;
+    padding-left: 54px;
+    background: #FFF;
+}
+.query-item label{
+    width: 100%;
+    height: 45px;
+}
+.query-item label input{
+    position: absolute;
+    right: 30px;
+}
+.legend-img img {
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 20px;
+}
+li.item.disabled {
+    display:none;
+}
+.tab-style {
+    border-width: 0px 0px 3px 0px !important;
+    border-color: #dbea53 !important;
+    font-size: 16px;
+}
+.back-button-hide {
+    display:none !important;
+}
+.back-button-show {
+    display:block;
+}
+#map-footer {
+    height: 50px;
+    display: none;
+}
+#refreshLayersButton {
+    display: none;
+    bottom: 30px !important;
+}
+#ma-menu .ma-header{
+    height: 60px;
+    padding: 13px 25px;
+}
+#ma-menu .side-menu-content {
+    top: 60px !important;
+}
+#mapanything-logo > img {
+    width: 220px;
+}
+#ma-menu .more-info-item {
+      padding: 10px 16px !important;
+}
+/* Ionic Overrides */
+.bar {
+    height: 50px;
+}
+.bar .title {
+    height: 50px !important;
+    line-height: 50px !important;
+}
+.has-header {
+    top: 50px !important;
+}
+.has-subheader {
+    top: 92px !important;
+}
+#map-view {
+}
+#map-view[nav-view="cached"] {
+    display:block !important;
+    visibility: hidden;
+}
+.listView-list .record-name, .listView-list .record-address {
+    max-width: 70%;
+    white-space: normal;
+}
+.listView-list .record-name {
+    font-weight: bold;
+    font-size : 14px;
+}
+.listView-list .moreinfo-button{
+    position: absolute;
+    top: 7px;
+    font-size: 30px;
+    left: 7px;
+    padding: 15px;
+}
+.search-list {
+    display:none;
+}
+.search-list.active {
+    display:block;
+}
+.listView-list .more-info-true {
+      background: #ECECEC;
+}
+.listView-list .action-buttons-wrapper {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.routeInfinite .icon {
+      color: #387EF5 !important;
+}
+.listView-list .more-info-false {
+      background: #F8F8F8;
+}
+.listView-list .record-info {
+    font-size: 12px;
+    padding: 5px 0px 0px 5px;
+}
+.listView-list .info-wrapper {
+    padding: 15px 15px 15px 60px;
+}
+.routePlotted,.timeBased {
+    line-height :18px !important;
+}
+.listView-list .record-checkin {
+    padding: 15px 15px 0px 20px;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.settings-tab {
+    display:none;
+}
+.settings-tab.active {
+    display:block;
+}
+#map-shadow-header {
+    display:none;
+    position: absolute;
+    top: 0px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(10%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 10%,rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 10%,rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 10%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 10%,rgba(0,0,0,0) 100%);
+    height: 60px;
+    z-index: 10;
+    width: 100%;
+}
+#map-shadow-header.active {
+    display:block;
+}
+.listView-list .record-distance {
+    float: right;
+}
+.listView-list .record-tooltips {
+    padding: 0px 15px 15px 20px;
+}
+.listView-list .record-tooltips .label {
+    padding-right: 5px;
+}
+.listView-list .button-checkin {
+    border-color: #9D9D9D;
+    background-color: #B0B0B0;
+    color: #fff;
+}
+.listView-list .button-checkin.checkedIn{
+    border-color: #e42012;
+    background-color: #ef473a;
+    color: #fff;
+}
+.listView-list .button-checkin.checkedOut{
+    border-color: #28a54c;
+    background-color: #33cd5f;
+    color: #fff;
+}
+.marker-info-wrapper {
+    position: absolute;
+    bottom: 0px;
+    height: 62px;
+    padding: 0px;
+    display: none;
+}
+.tab-item.active {
+    border-width: 0px 0px 3px 0px !important;
+    border-color: #dbea53 !important;
+    font-size: 16px;
+}
+.marker-info-wrapper.active {
+    height: 75%;
+}
+.marker-info-wrapper.active .marker-info-header {
+    border-color: #0c63ee;
+    background-color: #387ef5;
+    color: #fff;
+}
+.float-icon-left {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+.invalid {
+    background-color: #FFD5D5;
+}
+.query-status {
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+}
+.map-view-button {
+    position: absolute;
+    bottom: -70px;
+    right: 30px;
+    z-index: 10000;
+    border-radius: 55px;
+    height: 55px;
+    width: 55px;
+    box-shadow: -1px 1px 8px #698CC3;
+}
+.marker-info {
+    height: 100%;
+    padding: 0px;
+    width: 100%;
+}
+.col.active {
+    color: #B8D0F9;
+}
+#map-view .search-header {
+    position: absolute;
+    top: 10px;
+    width: 98%;
+    left: 1%;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: 2px 2px 5px #ABABAB;
+}
+#map-view .menu-button:before, #map-view .locate-button:before {
+    font-size: 25px !important;
+    line-height: 25px !important;
+}
+.placeHolder {
+    color:silver !important;
+}
+#map-view .search-wrapper {
+    background: white;
+    width: 100%;
+    line-height: 38px;
+    font-size: 16px;
+    margin: 0px 5px;
+    cursor:pointer;
+    color:black;
+}
+.modal-backdrop.active {
+    background: rgba(0, 0, 0, 0.2);
+}
+#search-options-modal{
+    top: 0 ;
+    bottom: 0 ; 
+    left: 0 ;
+    right: 0 ;
+    width: 100% ;
+}
+#search-options-modal .search-header button {
+    color: white;
+}
+#search-options-modal .search-header {
+    border-bottom: none;
+}
+#search-options-modal .search-sub-header {
+    border-top: none;
+}
+.blue-input {
+    background: #387EF5 !important;
+    color: white !important;
+    border: none !important;
+    width: 100%;
+}
+.white-input {
+    background: #FFFFFF !important;
+    color: black !important;
+    border: none !important;
+    width: 100%;
+}
+#search-wrapper[data-searchtype="markers"] #search-markers, #search-wrapper[data-searchtype="autocomplete"] #search-autocomplete {
+    display: block;
+}
+.blue-input::-webkit-input-placeholder {
+    color: white ;
+}
+.blue-input::-moz-placeholder {
+    color: white ;
+}
+.blue-input::-ms-input-placeholder { /* IE10+ */
+    color: white ;
+}
+.white-input::-webkit-input-placeholder {
+    color: #B2B2B2 ;
+}
+.white-input::-moz-placeholder {
+    color: #B2B2B2 ;
+}
+.white-input::-ms-input-placeholder { /* IE10+ */
+    color: #B2B2B2 ;
+}
+#map-view .search-wrapper .search-input{
+    font-size: 16px;
+    line-height: normal;
+    width: 100%;
+}
+.marker-info .record-name {
+    font-size: 16px;
+    margin-right: 60px;
+}
+.marker-info[data-type='marker'] .checkin-info.list {
+    display:block;
+}
+.tooltips.list .input-label, .checkin-info.list .checkin-label {
+    font-size: 16px;
+}
+.tooltips.list .tooltip-value, .checkin-info.list .checkin-value {
+    font-size: 12px;
+    color: #626262;
+    padding-right: 15px;
+}
+.marker-info .record-info, .marker-info .record-address {
+    font-size: 14px;
+}
+.marker-info .record-distance {
+    float:right;
+    font-size: 12px;
+    width: 45%;
+    text-align: right;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.marker-info-header {
+    width: 100%;
+    padding: 10px 10px;
+    height: 60px;
+}
+.rec-checkin.checkedOut {
+    color : #33cd5f;
+}
+.rec-checkin.checkedIn {
+    color : #EF473A;
+}
+.marker-info-header .navigate-button {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    border-color: #0c63ee;
+    background-color: #387ef5;
+    color: #fff;
+}
+.marker-info-wrapper.active .navigate-button {
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+}
+.small-font {
+    font-size: 12px !important;
+}
+.rec-checkin.checkIn-disabled {
+    display:none;
+}
+.action-buttons-wrapper {
+    text-align: center;
+    color: #387EF5;
+    display: none;
+}
+.marker-info-wrapper .marker-info[data-type='marker'] .action-buttons-wrapper, 
+.marker-info-wrapper .marker-info[data-type='waypoint'] .action-buttons-wrapper, 
+.marker-info-wrapper .marker-info[data-type='poi'] .action-buttons-wrapper,
+.marker-info-wrapper .marker-info[data-type='favorite'] .action-buttons-wrapper,
+.marker-info-wrapper .marker-info[data-type='myPos'] .action-buttons-wrapper,
+.marker-info-wrapper .marker-info[data-type='click2create'] .action-buttons-wrapper,
+.marker-info-wrapper .marker-info[data-type='moreWaypoint'] .action-buttons-wrapper  {
+    display: block;
+}
+.marker-info-wrapper .marker-info[data-type="favorite"] .col.rec-checkin,
+.marker-info-wrapper .marker-info[data-type="favorite"] .col.rec-moreAct,
+.marker-info-wrapper .marker-info[data-type='myPos'] .col.rec-checkin,
+.marker-info-wrapper .marker-info[data-type='myPos'] .col.rec-view,
+.marker-info-wrapper .marker-info[data-type='myPos'] .navigate-button,
+.marker-info-wrapper .marker-info[data-type="poi"] .col.rec-checkin, 
+.marker-info-wrapper .marker-info[data-type="poi"] .col.rec-view, 
+.marker-info-wrapper .marker-info[hide-buttons="true"] .action-buttons-wrapper, 
+.marker-info-wrapper .marker-info[data-type="waypoint"] .col.rec-checkin, 
+.marker-info-wrapper .marker-info[data-type="waypoint"] .col.rec-addtoroute,
+.marker-info-wrapper .marker-info[data-type="waypoint"] .col.rec-moreAct,
+.marker-info-wrapper .marker-info[data-type="moreWaypoint"] .col.rec-addtoroute,
+.marker-info-wrapper .marker-info[data-type="moreWaypoint"] .col.rec-moreAct,
+#search-markers, 
+#search-autocomplete, 
+.marker-info .checkin-info.list {
+    display:none;
+}
+.action-buttons-wrapper .icon,  .general-info-wrapper .icon{
+    font-size: 24px;
+}
+.general-info-wrapper .icon{
+    color: #626262;
+}
+.navigate-right-icon {
+    font-size: 20px !important;
+    color: silver;
+}
+.action-buttons-wrapper .action-text {
+    font-size: 12px;
+}
+.marker-info-wrapper.active {
+    background-color: #E4E4E4;
+}
+.action-buttons-wrapper {
+    background: white;
+}
+.general-info-wrapper a,  .marker-info[data-type='poi'] .tooltips a{
+    background-color: #E4E4E4;;
+    border-top: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
+}
+.scroll-list {
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+.float-right {
+    float: right;
+}
+#route-wrapper .route-date, #currentRoute-wrapper .route-info {
+    line-height: 44px;
+        padding: 10px 20px 0px 20px;
+}
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+    border-bottom: 1px solid #387EF5;
+}
+.icon-med, .icon-med:before {
+    font-size: 24px !important;
+}
+.icon-sm, .icon-sm:before {
+    font-size: 16px !important;
+}
+.icon-gray, .icon-gray:before {
+    color: #818181  !important;
+}
+#createrecord-fieldset-errors, #customDis-fieldset-errors{
+    display:none;
+    padding: 5px 15px;
+    border: 1px solid #F00;
+    background-color: rgba(255, 0, 0, 0.05);
+    color: #DF5555;
+    font-weight: bold;
+    font-size: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Salesforce overwrites */
+.fSetOverWrite .fieldSetTable {
+    width: 100%;
+}
+.fSetOverWrite .fieldSetTable tr{
+    border-bottom: 1px solid #E2E2E2;
+    display: block;
+}
+.fSetOverWrite .fieldSetTable tr:first-child {
+    border-top: 1px solid #e2e2e2;
+}
+.fSetOverWrite .fieldSetTable tr:last-child {
+    border-bottom: none;
+}
+.fSetOverWrite .fieldSetTable td {
+    position: relative;
+    border-bottom: none;
+}
+.fSetOverWrite .fieldSetTable .fieldLabel {
+    padding: 15px 5px 16px 16px;
+    width:30%;
+    max-width:30%;
+    display:inline-block;
+    vertical-align: top;
+}
+.fSetOverWrite .fieldSetTable .fieldInput {
+    width: 68%;
+    display:inline-block;
+}
+.fSetOverWrite .fieldSetTable td[data-type="picklist"] {
+    padding: 10px;
+    float: right;
+}
+.fSetOverWrite .fieldSetTable td[data-type="combobox"] > a {
+    display:none;
+}
+.fSetOverWrite .fieldSetTable td[data-type="picklist"] select{
+    float: right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px 48px 5px 0px;
+    width: 100%;
+    border: none;
+    background: #fff;
+    color: #333;
+    text-indent: 0.01px;
+    text-overflow: '';
+    white-space: nowrap;
+    font-size: 14px;
+    cursor: pointer;
+    direction: rtl;
+}
+.fSetOverWrite .fieldSetTable td[data-type="picklist"]:after {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    color: #999;
+    content: "";
+    pointer-events: none;
+}
+.fSetOverWrite .fieldSetTable td[data-type="boolean"] span,
+.fSetOverWrite .fieldSetTable td[data-type="boolean"] input,
+.fSetOverWrite .fieldSetTable td[data-type="datetime"] span,
+.fSetOverWrite .fieldSetTable td[data-type="string"] span {
+    float: right;
+}
+.fSetOverWrite .fieldSetTable td[data-type="boolean"] {
+    padding-right: 20px;
+}
+.fSetOverWrite .fieldSetTable td[data-type="multipicklist"] select {
+    height: 60px;
+    max-height: 60px;
+    width: 100px;
+    max-width: 100px;
+}
+.fSetOverWrite .fieldSetTable .dateLabel, .fSetOverWrite .fieldSetTable .fieldLabel.type-datetime {
+    vertical-align: top;
+}
+.fSetOverWrite .fieldSetTable span.dateFormat {
+    float:right;
+}
+.fSetOverWrite .fieldSetTable td input[type="text"],
+.fSetOverWrite .fieldSetTable td textarea {
+    text-align: right;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 220px;
+    -moz-box-flex: 1;
+    -moz-flex: 1 220px;
+    -ms-flex: 1 220px;
+    flex: 1 220px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding-right: 24px;
+    background-color: transparent;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 3px;
+}
+.fsWrapper .fSetOverWrite .button {
+    border-color: #b2b2b2 !important;
+    background-color: #f8f8f8 !important;
+    color: #444 !important;
+    position: relative !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 47px;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-radius: 2px !important;
+    vertical-align: top !important;
+    text-align: center !important;
+    text-overflow: ellipsis !important;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}
+.fsWrapper .button.button-stable {
+    background-color: #f8f8f8 !important;
+    color: #444 !important;
+    background-image: none !important;
+    border: 1px solid #b2b2b2 !important;
+}
+.fsWrapper .button.button-positive, .popup-buttons .button.button-positive {
+    background-color: #387ef5 !important;
+    color: #fff !important;
+    background-image: none !important;
+    border: 1px solid #0c63ee !important;
+}
+.fsWrapper .type-multipicklist, .fSetOverWrite .fieldSetTable td[data-type="multipicklist"]{
+    display: block;
+    border-bottom: none;
+}
+.fSetOverWrite .fieldSetTable td[data-type="multipicklist"] tr {
+    border-bottom: none;
+}
+.fsWrapper .fSetOverWrite span.dateInput {
+    width: 100%;
+}
+.legend-row .legend-name {
+    margin-left: 3%
+}
+.legend-row .legend-img {
+    height: 30px;
+    position: absolute;
+    right: 2%;
+    top: 10px;
+}
+.legend-row.empty {
+    display : none;
+}
+.legend-row .legend-count{
+    position: absolute;
+    left: 60%;
+}
+@media only screen and (max-width : 375px) {
+    .action-buttons-wrapper .action-text {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width : 320px) {
+    .action-buttons-wrapper .action-text {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,497 @@
+#bodyCell {
+    height: 100%;
+}
+
+body {
+    .bodyDiv #bodyTable {
+        padding: 0;
+        table-layout: fixed;
+    }
+
+    > form > .slds-scope {
+        height: 100%;
+    }
+
+    // > .slds-scope:last-child, > .slds-scope:nth-last-child(2) {
+    //     height: auto;
+    // }
+
+    &.iframeEmbed > form {
+        height: 100%;
+    }
+}
+
+.noSidebarCell, .sidebarCell .fixed {
+    width: 100% !important;
+}
+
+.section-header-title {
+    font-size: 1rem;
+}
+
+.ui-autocomplete.ui-front.ui-menu {
+    z-index: 9999;
+}
+
+html, body {
+    height: 100%;
+}
+
+.ui-autocomplete.ui-front.ui-menu {
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+//override common.css
+.slds-scope {
+    .ui-widget, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+        font-size: 13px;
+    }
+
+    .slds-navigation-list--vertical-wrap {
+        overflow-y: auto;
+    }
+
+    .layer-wrapper-wizard {
+        .blue {
+            background-color: #0070d2 !important;
+
+            &:hover {
+                background-color: #005fb2 !important;
+
+                .slds-radio--faux {
+                    background-color: transparent !important;
+                }
+            }
+    
+            .slds-radio--faux {
+                background-color: #0070d2 !important;
+
+                &:hover { 
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+
+    #adminsettings {
+        background-color: #fff;
+        height: auto;
+
+        #ClearDebugLogs {
+            vertical-align: bottom;
+        }
+        
+        .ui-tabs > ul.ui-tabs-nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            border-bottom: 2px solid #dddbda;
+            padding: 0;
+            margin: 0;
+            font-family: 'Salesforce Sans',Arial,sans-serif;
+
+            li.ui-state-default {
+                top: auto;
+                float: none!important;
+                color: $color-text-weak!important;
+                position: relative;
+                padding: 0 0.75rem!important;
+                margin-bottom: -2px!important;
+                border: none!important;
+                border-radius: 0!important;
+                background-color: transparent!important;
+
+                &::after {
+                    display: block;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    position: absolute;
+                    height: 2px;
+                }
+
+                &:hover::after {
+                    background-color: $color-brand;
+                }
+                
+                a.ui-tabs-anchor {
+                    color: $color-text-weak;
+                    font-size: 0.8125rem!important;
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                    text-decoration: none;
+                    cursor: pointer;
+                    height: 2.5rem;
+                    line-height: 2.5rem;
+                    border: 0;
+                    font-size: 0.8125rem!important;
+                    padding: 0!important;
+                    float: none!important;
+
+                    &:hover {
+                        color: $color-brand-darker;
+                    }
+                }
+            }
+
+            li.ui-state-active {
+                color: $color-text-default;
+                
+                &::after {
+                    background-color: $color-brand;
+                }
+
+                a.ui-tabs-anchor {
+                    color: $color-text-default;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    ul li {
+        margin-left: 0;
+    }
+
+    .slds-brand-band {
+        background: #b0c4df;
+        // min-height: 100vh;
+        border-radius: 0 0 .25rem .25rem;
+
+        .flex-column > .flex-row {
+            min-height: 0; 
+            
+            > .flex-grow-1 {
+                overflow: scroll;
+                background-color: #fff;
+                min-height: 0;
+
+                &.routes-schedule-container {
+                    overflow: hidden;
+
+                    > div {
+                        height: 100%;
+
+                        .slds-tabs_default {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .slds-tabs_default__nav .slds-tabs_default__item {
+                                margin-bottom: 4px;
+                            }
+
+                            .slds-tabs_default__content {
+                                height: 100%;
+                                overflow: auto;
+
+                                .events-tab-content {
+                                    height: 100%;
+
+                                    .slds-vertical-tabs {
+                                        height: 100%;
+
+                                        .slds-vertical-tabs__content {
+                                            overflow: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .permission-filter-table {
+                    tbody > tr > td {
+                        vertical-align: bottom;
+                    }
+                }
+                
+                #permissions-filters tbody tr td {
+                    white-space: nowrap;
+                    padding-right: 5px;
+
+                    input[type=text] {
+                        margin-right: 24px;
+                        background-color: white;
+                        border: 1px solid #dddbda;
+                        border-radius: 0.25rem;
+                        -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+                        transition: border 0.1s linear, background-color 0.1s linear;
+                        display: inline-block;
+                        padding: 0 1.25rem 0 0.75rem;
+                        line-height: 1.25rem; 
+                        min-height: calc(1.25rem + (1px * 2)); 
+                        background-position-x: 98%!important;
+                    }
+                }
+
+                .permissions-grid-paging {
+                    display: none;
+                    color: $color-text-icon-alt;
+                    padding-right: 20px;
+
+                    #permissions-pageinfo {
+                        white-space: nowrap;
+                    }
+                }
+
+                #permissions-buttons button.slds-is-selected {
+                    color: white; 
+                    background-color: $color-brand-dark;
+                }
+
+                #permissions-grid {
+                    tbody tr {
+                        td:last-child, th:last-child {
+                            border-right: 1px solid $color-border;
+                        }
+                    }
+
+                    th input {
+                        color: $color-text-default;
+                        width: 44px;
+                    }
+
+                    tr.grid-header > th > .inline {
+                        padding-right: 0!important;
+                        text-align: center;
+                        display: block;
+
+                        &:first-child {
+                            padding-top: 6px;
+                        }
+                    }
+
+                    input {
+                        margin-right: 24px;
+                        background-color: white;
+                        border: 1px solid #dddbda;
+                        border-radius: 0.25rem;
+                        -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+                        transition: border 0.1s linear, background-color 0.1s linear;
+                        display: inline-block;
+                        padding: 0 0 0 0.15rem;
+                        line-height: 1.25rem; 
+                        min-height: calc(1.25rem + (1px * 2)); 
+                        background-position-x: 98%!important;
+                        width: 80px;
+                    }
+                    
+                    .massaction.setting {
+                        color: $color-text-default;
+
+                        &.link {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .button-layouts-label td {
+                    vertical-align: top;
+                }
+
+                #assignmentAutoAssignmentTab .slds-modal {
+                    position: fixed;
+
+                    .slds-modal__container {
+                        padding: 11rem 0 7rem;
+                        height: 100%;
+                    }
+                }
+
+                #batchAutomationAutoAssignmentTab {
+                    .ma-toast {
+                        height: 100%;
+                    }
+                }
+
+                &.ma-settings-body-wrap {
+                    overflow: hidden;
+                    height: auto;
+
+                    #adminsettings {
+                        height: 100%;
+
+                        .TopTabs {
+                            height: 100%;
+                            overflow: hidden;
+
+                            .ui-tabs-panel {
+                                overflow: auto;
+                                height: calc(100% - 40px);
+                                position: relative;
+                                background: rgb(255, 255, 255);
+                                border-radius: 0 0 .25rem .25rem;
+                                background-clip: padding-box;                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:before {
+            z-index: 0;
+        }
+
+        > .flex-column {
+            z-index: 1;
+            background-color: $color-background;
+            border-radius: .25rem;
+        }
+
+        .slds-card.box.gray {
+            padding: 0.75rem 1rem!important;
+        }
+    }
+    
+    &.noSidebarCell {
+        padding: 0;
+    }
+
+    .buttoncolumn .actionbutton {
+        height: auto;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .setting-table tr td {
+        padding: 3px 3px;
+
+        .slds-input, .slds-select_container {
+            width: 150px;
+        }
+
+        select, .slds-input {
+            text-align: left;
+        }
+
+        select {
+            float: none;
+        }
+    }
+
+    .FieldMappingTable > tbody > tr > td {
+        padding: 3px;
+
+        input {
+            max-width: 150px;
+        }
+    }
+
+    .MAbutton {
+        box-shadow: none;
+        min-width: 0;
+        min-height: 0;
+        
+        &.button-blue {
+            background-color: $color-brand-dark;
+            border: 1px solid transparent;
+            border-color: transparent;
+        }
+
+        &:hover {
+            background-color: $color-brand-darker;
+        }
+    }
+
+    #MAIORow .slds-button {
+        line-height: 1.5;
+    }
+
+    .slds-button_brand {
+        &:hover {
+            background-color: $color-brand-darker;
+            border: 1px solid transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        &[disabled], &:disabled {
+            background: rgb(201, 199, 197);
+            border-color: rgb(201, 199, 197);
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    .ui-combobox input {
+        height: 32px;
+    }
+
+    #newbatch-frequency-monthly-wrapper {
+        border: none;
+
+        .ui-combobox input {
+            width: 80px;
+        }
+    }
+
+    .FieldMappingTable .ui-combobox {
+        width: 100%;
+
+        input {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .ma-settings-tooltip {
+        display: inline-block;
+        position: relative;
+
+        .slds-popover_tooltip.in {
+            width: 20rem;
+            visibility: hidden;
+        }
+
+        .slds-form-element:hover + .slds-popover_tooltip.in {
+            visibility: visible;
+        }
+    }
+}
+
+.comboBox {
+	height: 32px;
+	background-color: white;
+	background: white;
+	padding-right: 30px;
+	font-weight: bold!important;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0.3em;
+    line-height: normal;
+    background: transparent url(/resource/1537446381000/maps__QueryEditor/images/icons/combobox-arrow-16.png) no-repeat center;
+    background-position: 95%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border: 1px solid #d3d3d3;
+    border-radius: 4px 0px 0px 4px;
+}
+
+#contentWrapper {
+    height: 100%;
+
+    .outerNoSidebar {
+        height: 100%;
+    }
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}

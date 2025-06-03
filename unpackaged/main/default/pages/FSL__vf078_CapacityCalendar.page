@@ -1,0 +1,201 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceResource" extensions="FSL.Ctrl078_CapacityCalendar">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<head>
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'dhtmlxscheduler.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__dhxContextMenu, 'dhtmlxmenu.css')}" />
+		<apex:stylesheet value="{!$Resource.FSL__css078_CapacityCalendar}" />
+		<apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'dhtmlxscheduler.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_minical.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.FSL__dhxScheduler42fix, 'ext/dhtmlxscheduler_tooltip.js')}" />
+
+		<!-- <apex:includeScript value="{!URLFOR($Resource.dhxScheduler42fix, 'ext/dhtmlxscheduler_collision.js')}" /> -->
+		<apex:includeScript value="{!URLFOR($Resource.FSL__dhxContextMenu, 'dhtmlxmenu.js')}" />
+
+		<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+		<script type='text/javascript' src='/support/console/31.0/integration.js' ></script>
+		<apex:includeScript value="{!$Resource.FSL__js078_CapacityCalendar}" />
+		<apex:includeScript value="{!$Resource.FSL__datePickerConf}" />
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__FontAwesome44, 'css/font-awesome.min.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+		<apex:includeScript value="{!$Resource.FSL__MomentJS}" />
+		<apex:includeScript value="{!$Resource.FSL__DefineMomentTimezones}" />
+		<apex:includeScript value="{!$Resource.FSL__ResourceCapacity}" />
+
+	</head>
+
+	<div id="notCapacityBasedLightbox" class="LightboxBlackContainer">
+		<div class="capacityLightboxPopUp notCapacityBasedLightboxWindow">
+			<div class="lightboxHeaderContainer slds-theme--error slds-theme--alert-texture">
+				<span class="light-box-header">{!$Label.Capacity_calendar_unavailable}</span>
+			</div>
+			<div class="lightboxContentContainer notCapacityBasedContent">
+				{!$Label.Capacity_Based_option_not_selected}
+			</div>
+		</div>
+    </div>
+
+	<div id="capacityLightbox" class="capacityLightboxPopUp">
+			<div class="lightboxHeaderContainer" id="capacityLightboxHeader">
+					<svg id="capacityLightboxClose" aria-hidden="true" class="slds-icon CloseLightbox capacityLightboxClose">
+						 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+					 </svg>
+				<h1 id="capacityName" class="light-box-header">{!$Label.New_Capacity}</h1>
+				<div class="ExtendedForm">
+					<a target="_blank" title="{!$Label.ExtandedForm}">
+						<svg aria-hidden="true" class="slds-icon">
+							 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+						 </svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="lightboxContentContainer capacityLighboxContent">
+				<div id="leftside">
+					<div class="fieldRow">
+						<label class="lightboxLabel" for="lightbox-HoursCapacity">{!$Label.Hours_Capacity}</label><input type="number" min="0" value="0" id="lightbox-HoursCapacity"/>
+					</div>
+					<div class="fieldRow">
+						<label class="lightboxLabel" for="lightbox-ServicesCapacity">{!$Label.Services_Capacity}</label><input type="number" min="0" value="0" id="lightbox-ServicesCapacity"/>
+					</div>
+					<div class="fieldRow">
+						<label class="lightboxLabel" for="lightbox-PeriodStart">{!$Label.Period_Start}</label><input type="text" value="" id="lightbox-PeriodStart" readonly="readonly" onclick="showCapacityLightboxMinical()"/>
+					</div>
+				</div>
+				<div id="rightside">
+					<div class="fieldRow">
+						<input type="radio" id='dailyCap' name="timePeriodRadioBtn" checked="checked" value="Day" /><label for="dailyCap">{!$Label.Day}</label>
+					</div>
+
+					<div id="dailyExplained" class="durationExplained">
+					</div>
+
+					<div class="fieldRow">
+						<input type="radio" id='weeklyCap' name="timePeriodRadioBtn" value="Week" /><label for="weeklyCap">{!$Label.Week}</label>
+					</div>
+					<div id="weeklyExplained" class="durationExplained">
+						{!$Label.You_selected_an_entire_week_clicking_save_will_create_a_weekly_capacity_beginni} 
+					</div>
+					<div class="fieldRow">
+						<input type="radio" id='monthlyCap' name="timePeriodRadioBtn"  value="Month" /><label for="monthlyCap">{!$Label.Month}</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="lightboxControllers capacityLightboxButtons">
+				<div class="lightboxSaveButton" id="saveBtn">{!$Label.Save}</div>
+			</div>
+	</div>
+
+    <div id="multiUpdateLightbox" class="LightboxBlackContainer">
+		<div class="capacityLightboxPopUp multiUpdateLightboxWindow">
+			<div class="lightboxHeaderContainer" id="capacityLightboxHeader">
+				<svg id="multiUpdateClose" aria-hidden="true" class="slds-icon CloseLightbox capacityLightboxClose">
+					 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+					 </svg>
+				<h1 class="light-box-header">{!$Label.Update_Capacities}</h1>
+			</div>
+			<div class="lightboxContentContainer capacityLighboxContent">
+				<div class="fieldRow">
+					<label class="lightboxLabel" for="multiHoursCapacity">{!$Label.Hours_Capacity}</label><input type="number" value="0" id="multiHoursCapacity"/>
+				</div>
+				<div class="fieldRow">
+					<label class="lightboxLabel" for="multiServicesCapacity">{!$Label.Services_Capacity}</label><input type="number" value="0" id="multiServicesCapacity"/>
+				</div>
+			</div>
+			<div class="lightboxControllers capacityLightboxButtons">
+				<div class="lightboxSaveButton" id="multipleSaveBtn">{!$Label.Save}</div>
+			</div>
+		</div>
+    </div>
+
+
+    <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+        <div class="dhx_cal_navline">
+            <div id="DatesLeftArrow" class="dhx_cal_prev_button">&nbsp;</div>
+            <div id="DatesRightArrow" class="dhx_cal_next_button">&nbsp;</div>
+            <div id="DatesToday" class="dhx_cal_today_button truncate"></div>
+            <div id="DatesJumpTo" onclick="show_minical()"><i class="fa fa-calendar"></i></div>
+            <div class="dhx_cal_date"></div>
+            <!-- <div class="dhx_minical_icon" id="dhx_minical_icon" onclick="show_minical()">&nbsp;</div> -->
+            <div id="ganttSettings">
+			    <input type="checkbox" id="includeWeekEndCheckBox" name="includeWeekEnd" checked="checked" value="Include Weekends"/><label for="includeWeekEndCheckBox">{!$Label.BusinessHours_IncludeWeekends}</label>
+			    <label id="defCapLabel" for="defaultCapacity">{!$Label.Default_Capacity}</label><input type="number" min="0" value="0" id="defaultCapacity"/>
+		    </div>
+        </div>
+        <div class="dhx_cal_header"></div>
+        <div class="dhx_cal_data"></div>
+    </div>
+
+    <script>
+    	var sfdcUser = '{!JSENCODE($User.username)}';
+		var userLocale = "{!userLocale}";
+		var showWeekend = JSON.parse(localStorage.getItem(sfdcUser + '_showWeekend'));
+    	var defaultCapacity = JSON.parse(localStorage.getItem(sfdcUser + '_defaultCapacity')) != "" ? JSON.parse(localStorage.getItem(sfdcUser + '_defaultCapacity')) : 0;
+    	var resourceId = '{!ServiceResource.Id}';
+    	var isCapacityBased = {!ServiceResource.IsCapacityBased};
+
+    	var remoteActions = {
+    		 	getMonthlyCapacities: '{!$RemoteAction.Ctrl078_CapacityCalendar.getMonthlyCapacities}',
+    	 		saveChangesToCapacity: '{!$RemoteAction.Ctrl078_CapacityCalendar.saveChangesToCapacity}',
+    	 		updateMultipleCapacities: '{!$RemoteAction.Ctrl078_CapacityCalendar.updateMultipleCapacities}',
+    	 		deleteCapacities: '{!$RemoteAction.Ctrl078_CapacityCalendar.deleteCapacities}'
+    	}
+		var customLabels = {
+			New_Capacity: '{!JSENCODE($Label.New_Capacity)}',
+			Hours_Capacity: '{!JSENCODE($Label.Hours_Capacity)}',
+			Period_Start: '{!JSENCODE($Label.Period_Start)}',
+			Duration_Type: '{!JSENCODE($Label.Duration_Type)}',
+			NumberOfServices: '{!JSENCODE($Label.NumberOfServices)}',
+			Services_Capacity: '{!JSENCODE($Label.Services_Capacity)}',
+			NumServicesScheduled: '{!JSENCODE($Label.NumServicesScheduled)}',
+			NumHoursScheduled: '{!JSENCODE($Label.NumHoursScheduled)}',
+			Today: '{!JSENCODE($Label.Today)}',
+			capacity_selected_more_than_1_day: '{!JSENCODE($Label.capacity_selected_more_than_1_day)}',
+            booked:                         					"{!JSENCODE($Label.booked)}",
+			x_Hours_scheduled_out_of_y:							"{!JSENCODE($Label.x_Hours_scheduled_out_of_y)}",
+			Start:                     					"{!JSENCODE($Label.Start_time)}",
+            Finish:                    					"{!JSENCODE($Label.Finish_time)}",
+            Update:                    					"{!JSENCODE($Label.OverideSkillsOb)}",
+            Delete:                    					"{!JSENCODE($Label.Delete)}",
+            delete_capacities_are_you_sure:				"{!JSENCODE($Label.delete_capacities_are_you_sure)}",
+            You_are_not_allowed_to_delete_capacities:   "{!JSENCODE($Label.You_are_not_allowed_to_delete_capacities)}",
+            Delete_capacity_failed:                    	"{!JSENCODE($Label.Delete_capacity_failed)}",
+            wentWrongContactSysAdmin:                    	"{!JSENCODE($Label.wentWrongContactSysAdmin)}",
+			maximum_service_appointments_and_hours_allowed:			"{!JSENCODE($Label.maximum_service_appointments_and_hours_allowed)}",
+			maximum_service_appointments_allowed:   "{!JSENCODE($Label.maximum_service_appointments_allowed)}",
+			maximum_hours_allowed:                  "{!JSENCODE($Label.maximum_hours_allowed)}",
+		};
+
+		var durationLabels = {
+			Day: '{!JSENCODE($Label.Day)}',
+			Week: '{!JSENCODE($Label.Week)}',
+			Month: '{!JSENCODE($Label.Month)}',
+		}
+
+    	var SelectedEventsArray = [];
+    	var contextShown = false;
+    	var lastRightClickedEvent;
+        var startOnMonday = {!firstDayOfTheWeek};
+
+		//var capacities = {};
+
+		var fieldNames = {
+			ResourceCapacity: {
+				EndDate: '{!$ObjectType.ServiceResourceCapacity.Fields.EndDate.Name}',
+				HoursInUse__c: '{!$ObjectType.ServiceResourceCapacity.Fields.HoursInUse__c.Name}',
+				CapacityInHours: '{!$ObjectType.ServiceResourceCapacity.Fields.CapacityInHours.Name}',
+				MinutesUsed__c: '{!$ObjectType.ServiceResourceCapacity.Fields.MinutesUsed__c.Name}',
+				ServiceResource: '{!$ObjectType.ServiceResourceCapacity.Fields.ServiceResourceId.Name}',
+				ServiceResource__r: '{!$ObjectType.ServiceResourceCapacity.Fields.ServiceResourceId.RelationshipName}',
+				StartDate: '{!$ObjectType.ServiceResourceCapacity.Fields.StartDate.Name}',
+				TimePeriod: '{!$ObjectType.ServiceResourceCapacity.Fields.TimePeriod.Name}',
+				Work_Items_Allocated__c: '{!$ObjectType.ServiceResourceCapacity.Fields.Work_Items_Allocated__c.Name}',
+				CapacityInWorkItems: '{!$ObjectType.ServiceResourceCapacity.Fields.CapacityInWorkItems.Name}'
+			}
+		};
+
+    </script>
+</html>
+
+</apex:page>

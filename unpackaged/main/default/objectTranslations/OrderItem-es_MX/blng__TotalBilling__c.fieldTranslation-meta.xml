@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>La suma de todas las partidas e impuestos para este pedido.</help>
+        <label><!-- Total Billings --></label>
+        <name>blng__TotalBilling__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Action de produit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Actions de produit</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Product Action Layout</layout>
+        <sections>
+            <label>Informations sur le filtre</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>N° d&#39;action du produit</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Value Attribute required since the Value Field is a global Configuration Attribute field. --></errorMessage>
+        <name>SBQQ__Value_attr_required_if_global_field</name>
+    </validationRules>
+</CustomObjectTranslation>

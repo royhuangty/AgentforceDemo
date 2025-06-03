@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entité juridique</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entités juridiques</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de l’entité juridique</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

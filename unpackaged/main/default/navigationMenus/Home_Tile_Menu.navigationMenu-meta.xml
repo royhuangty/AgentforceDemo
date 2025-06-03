@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SDO - Consumer</container>
+    <containerType>Network</containerType>
+    <label>Home Tile Menu</label>
+    <navigationMenuItem>
+        <label>Get Help</label>
+        <menuItemBranding>
+            <tileImage>ICON_SMALL_Contact_Support</tileImage>
+        </menuItemBranding>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/support</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Topics</label>
+        <menuItemBranding>
+            <tileImage>ICON_SMALL_Browse_Documentation</tileImage>
+        </menuItemBranding>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/topiccatalog</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Discuss</label>
+        <menuItemBranding>
+            <tileImage>ICON_SMALL_Discuss</tileImage>
+        </menuItemBranding>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/community-home</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

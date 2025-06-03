@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <constantType>Image</constantType>
+        <primitiveValues>
+            <contentAssetName>SDO_Service_Console_App</contentAssetName>
+            <type>ImageAsset</type>
+        </primitiveValues>
+    </constants>
+    <constants>
+        <constantType>Title</constantType>
+        <primitiveValues>
+            <textValue>Your Link Title Here</textValue>
+            <type>Text</type>
+        </primitiveValues>
+    </constants>
+    <constants>
+        <constantType>Url</constantType>
+        <primitiveValues>
+            <type>Url</type>
+            <urlValue>https://www.example.com</urlValue>
+        </primitiveValues>
+    </constants>
+    <description>Used in SDO Service - Case Closed - Triggered Outbound Message</description>
+    <label>CaseClosedAutomatedMessage</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Good news {!$Parameters.FirstName}! Your case, #{!$Parameters.CaseNumber} has been resolved. If you need anything else, just let us know.</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <parameters>
+        <parameterType>CustomPrimitive</parameterType>
+        <primitiveTypeDetails>
+            <isList>false</isList>
+            <isRequired>false</isRequired>
+            <label>First Name</label>
+            <name>FirstName</name>
+            <valueType>Text</valueType>
+        </primitiveTypeDetails>
+    </parameters>
+    <parameters>
+        <parameterType>CustomPrimitive</parameterType>
+        <primitiveTypeDetails>
+            <isList>false</isList>
+            <isRequired>false</isRequired>
+            <label>Case Number</label>
+            <name>CaseNumber</name>
+            <valueType>Text</valueType>
+        </primitiveTypeDetails>
+    </parameters>
+    <type>Notification</type>
+</ConversationMessageDefinition>

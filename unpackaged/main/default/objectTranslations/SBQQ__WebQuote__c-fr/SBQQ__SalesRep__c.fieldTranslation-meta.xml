@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Commercial responsable de ce devis, s&#39;il est différent de l&#39;utilisateur propriétaire de l&#39;enregistrement du devis.</help>
+        <label><!-- Sales Rep --></label>
+        <name>SBQQ__SalesRep__c</name>
+        <relationshipLabel><!-- Web Quotes --></relationshipLabel>
+    </CustomFieldTranslation>

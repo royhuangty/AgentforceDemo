@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="168px" viewBox="0 0 178 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>vennDiagramNone</title>
+    <g id="vennDiagramNone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M89.5,0 C120.704088,0 146,25.2959116 146,56.5 C146,58.115451 145.932202,59.715067 145.799297,61.2961579 C164.826576,70.2399311 178,89.5815565 178,112 C178,142.927946 152.927946,168 122,168 C109.661121,168 98.254299,164.009391 88.9997601,157.2484 C79.7465191,164.009105 68.3393213,168 56,168 C25.072054,168 0,142.927946 0,112 C0,89.2044678 13.6203174,69.5901312 33.1667673,60.8511752 C33.0557416,59.416566 33,57.9647926 33,56.5 C33,25.2959116 58.2959116,0 89.5,0 Z" id="Combined-Shape" fill="#C2E8FF" opacity="0.5"></path>
+        <circle id="Oval" stroke="#8CD3F8" stroke-width="2" cx="122" cy="112" r="55"></circle>
+        <circle id="Oval" stroke="#8CD3F8" stroke-width="2" cx="56" cy="112" r="55"></circle>
+        <circle id="Oval" stroke="#8CD3F8" stroke-width="2" cx="89.5" cy="56.5" r="55.5"></circle>
+    </g>
+</svg>

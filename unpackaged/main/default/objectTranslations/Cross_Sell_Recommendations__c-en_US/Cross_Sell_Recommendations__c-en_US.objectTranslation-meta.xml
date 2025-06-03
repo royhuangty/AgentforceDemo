@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cross-Sell Recommendation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cross-SellRecommendations</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cannot have the product as part of its own recommendation --></errorMessage>
+        <name>impossible_recommendation_on_itself</name>
+    </validationRules>
+</CustomObjectTranslation>

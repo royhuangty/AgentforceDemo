@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Gdy opcja jest zaznaczona, porównaj pole Min. rozmiar zespołu dla Zlecenia pracy lub Elementu wiersza zlecenia pracy z rzeczywistą dostępną wartością Członków zespołu serwisowego. 
+Porównaj Min. rozmiar zespołu z polem Rozmiar zespołu w Zespół serwisowego</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

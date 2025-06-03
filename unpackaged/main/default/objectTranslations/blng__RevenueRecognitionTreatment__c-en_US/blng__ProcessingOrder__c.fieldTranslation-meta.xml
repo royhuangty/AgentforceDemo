@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter 1 if this revenue treatment should be processed before all other treatments, 2 if it should be second, etc. --></help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </CustomFieldTranslation>

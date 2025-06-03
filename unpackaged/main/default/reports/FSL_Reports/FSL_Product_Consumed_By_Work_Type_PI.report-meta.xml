@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder$Name</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ProductsConsumed$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>WorkOrder.ProductsConsumed$QuantityConsumed</field>
+    </columns>
+    <description>Report for FSL System Admin</description>
+    <filter>
+        <criteriaItems>
+            <column>WorkOrder.ProductsConsumed$ProductItem.Product2</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder$WorkType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder.ProductsConsumed$ProductItem.Product2</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FSL Product Consumed By Work Type PI</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FSL_Work_Order_With_Product_Consumed__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

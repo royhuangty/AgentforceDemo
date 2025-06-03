@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Video_URI__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Enter the URI for the MP4 video.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For videos hosted by external URLs, you will need to create a CSP Trusted Site for the domain.</inlineHelpText>
+    <label>Video URI</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

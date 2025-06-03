@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Summary Format --></label>
+        <name>sfsp__SummaryFormat__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max</masterLabel>
+            <translation><!-- Max --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Median</masterLabel>
+            <translation><!-- Median --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Min</masterLabel>
+            <translation><!-- Min --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PercentOfFocus</masterLabel>
+            <translation><!-- PercentOfFocus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sum</masterLabel>
+            <translation><!-- Sum --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

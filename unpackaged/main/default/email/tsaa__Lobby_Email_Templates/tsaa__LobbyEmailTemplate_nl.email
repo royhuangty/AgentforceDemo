@@ -1,0 +1,10 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+Hallo, <br>Er is een online afstandsvergadering voor u ingepland<br>Klik op de knop 'Deelnemen' om de vergaderingsdetails te bekijken en aan de vergadering deel te nemen.
+
+<p><a href="{!meeting_url}" target="_blank">Deelnemen</a></p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LearningItemAssignment.EnblProgramTaskProgress$CompletedPercent</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(LearningItemAssignment.Progress.DaysInProgress &gt; EnblProgramTaskProgress.EnblProgramTaskDefinition.Day, &quot;Behind&quot;, IF(OR(ISNULL(EnblProgramTaskProgress.CompletedPercent),EnblProgramTaskProgress.CompletedPercent = 0.0), &quot;Not completed&quot;, IF(EnblProgramTaskProgress.CompletedPercent = 1, IF(EnblProgramTaskProgress.CompletedOnDay &lt;= EnblProgramTaskProgress.EnblProgramTaskDefinition.Day, &quot;Completed on time&quot;, &quot;Completed late&quot;), &quot;Not Completed&quot;)))</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Completion Status</description>
+        <developerName>CDF1</developerName>
+        <label>Completion Status</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Analyze how long assignees take to complete an exercise and their completion percentage.</description>
+    <filter>
+        <criteriaItems>
+            <column>LearningItemAssignment.EnblProgramTaskProgress$EnblProgramTaskDefinition.TaskCategory</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Exercise</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment.EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment.EnblProgramTaskProgress$EnblProgramTaskDefinition.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Exercise Completion Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Milestone_and_Exercise_Progress__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LearningItemAssignment.EnblProgramTaskProgress$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

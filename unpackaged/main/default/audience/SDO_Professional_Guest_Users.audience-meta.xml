@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>SDO Professional Guest Users</audienceName>
+    <container>SDO - Professional</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>UserType</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Guest</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>3baa4d42-84c9-4608-974e-9bd6092e6db4$#$97ecf46e-a21d-4382-9812-6222c3d8aba4</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Professional_HTML_Editor_3_Component</targetValue>
+        </target>
+        <target>
+            <groupName>3baa4d42-84c9-4608-974e-9bd6092e6db4$#$533181b1-a986-48c8-85b3-44e450e82a1a</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Professional_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>3baa4d42-84c9-4608-974e-9bd6092e6db4$#$aab6ae33-a6c7-4921-8b0b-9ff5bef7bcf5</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Professional_HTML_Editor_1_Component</targetValue>
+        </target>
+        <target>
+            <groupName>ab2cf596-539c-4901-989f-f81a86031c6a$#$a284cb63-9224-4924-a534-378ca9113136</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Help_Center_HTML_Editor_1_Component</targetValue>
+        </target>
+        <target>
+            <groupName>ab2cf596-539c-4901-989f-f81a86031c6a$#$9bb62571-3ab7-4e8f-a042-4870ab4916b0</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Help_Center_HTML_Editor_3_Component</targetValue>
+        </target>
+        <target>
+            <groupName>3baa4d42-84c9-4608-974e-9bd6092e6db4$#$cc2d848d-e1c1-43a6-8d2d-ce8b62b85639</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Professional_Section_1_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

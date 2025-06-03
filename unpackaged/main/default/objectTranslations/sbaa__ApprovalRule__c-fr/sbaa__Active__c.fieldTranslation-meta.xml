@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cochée si la règle doit être évaluée lors de la soumission pour approbation</help>
+        <label><!-- Active --></label>
+        <name>sbaa__Active__c</name>
+    </CustomFieldTranslation>

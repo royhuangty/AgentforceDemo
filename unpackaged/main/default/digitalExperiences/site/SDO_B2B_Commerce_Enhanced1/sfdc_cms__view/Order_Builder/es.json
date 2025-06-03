@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Builder",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "Generador de pedidos"
+        },
+        "id" : "e3862102-a1f4-4802-83a9-dc7594d7435f"
+      } ]
+    }
+  },
+  "urlName" : "order-builder"
+}

@@ -1,0 +1,83 @@
+#engage_campaign_report_container .ie-fix {
+  max-width: 98vw;
+}
+#engage_campaign_report_container .content-wrapper {
+  min-width: 1180px;
+  min-height: 500px;
+  margin: auto;
+}
+#engage_campaign_report_container .content-wrapper.placeholder {
+  height: 500px;
+}
+#engage_campaign_report_container .slds-table--cell-buffer tr > th:first-child + td {
+  padding-left: 1.5rem;
+}
+#engage_campaign_report_container .white-background {
+  background-color: #fff;
+}
+#engage_campaign_report_container .gray-background {
+  background-color: #f4f6f9;
+}
+#engage_campaign_report_container .slds-color__text_gray-7 {
+  color: #b0adab;
+}
+#engage_campaign_report_container .thick-border-left {
+  border-left: 4px solid #d8dde6;
+}
+#engage_campaign_report_container .slds-table.contains-grouping th.grouping {
+  vertical-align: top;
+}
+#engage_campaign_report_container .slds-table.contains-grouping tr.last-of-group td:first-child {
+  border-top: none;
+}
+#engage_campaign_report_container .capitalized {
+  text-transform: capitalize;
+}
+#engage_campaign_report_container .donut-chart svg {
+  overflow: visible;
+}
+#engage_campaign_report_container .donut-chart-center {
+  position: absolute;
+  width: 100%;
+  top: 35.5%;
+}
+#engage_campaign_report_container .donut-key .donut-key-dot {
+  padding: 0.40625rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+#engage_campaign_report_container .donut-key .donut-key-dot.donut-key-dot-blue {
+  background-color: #4a90e2;
+}
+#engage_campaign_report_container .donut-key .donut-key-dot.donut-key-dot-grey {
+  background-color: #b5becb;
+}
+#engage_campaign_report_container .main-page .slds-grid--vertical-stretch .slds-box {
+  min-height: 200px;
+  position: relative;
+}
+#engage_campaign_report_container .slds-dropdown {
+  z-index: 10000;
+}
+#engage_campaign_report_container .slds-dropdown__item .slds-icon--selected.blue-check-mark {
+  fill: #0070D2;
+  width: 0.75rem;
+  height: .75rem;
+  line-height: 1;
+  padding-bottom: 0.1rem;
+}
+#engage_campaign_report_container .slds-spinner_container {
+  height: 100%;
+  width: 100%;
+}
+#engage_campaign_report_container .engage-reports-header-dropdown {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#engage_campaign_report_container .alerts-wrapper .alert-wrapper.closed {
+  display: none;
+}
+#engage_campaign_report_container .alerts-wrapper .alert-wrapper .slds-notify_container {
+  position: static;
+}

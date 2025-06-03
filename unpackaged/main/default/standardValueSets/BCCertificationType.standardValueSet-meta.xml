@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Allergy and Immunology</fullName>
+        <default>false</default>
+        <label>Allergy and Immunology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Colon and Rectal Surgery</fullName>
+        <default>false</default>
+        <label>Colon and Rectal Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emergency Medicine</fullName>
+        <default>false</default>
+        <label>Emergency Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Medicine</fullName>
+        <default>false</default>
+        <label>Internal Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Neurological Surgery</fullName>
+        <default>false</default>
+        <label>Neurological Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Obstetrics and Gynecology</fullName>
+        <default>false</default>
+        <label>Obstetrics and Gynecology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Orthopedic Surgery</fullName>
+        <default>false</default>
+        <label>Orthopedic Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pathology</fullName>
+        <default>false</default>
+        <label>Pathology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physical Medicine and Rehabilitation</fullName>
+        <default>false</default>
+        <label>Physical Medicine and Rehabilitation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Preventive Medicine</fullName>
+        <default>false</default>
+        <label>Preventive Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Radiology</fullName>
+        <default>false</default>
+        <label>Radiology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Thoracic Surgery</fullName>
+        <default>false</default>
+        <label>Thoracic Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Anesthesiology</fullName>
+        <default>false</default>
+        <label>Anesthesiology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dermatology</fullName>
+        <default>false</default>
+        <label>Dermatology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Family Medicine</fullName>
+        <default>false</default>
+        <label>Family Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medical Genetics and Genomics</fullName>
+        <default>false</default>
+        <label>Medical Genetics and Genomics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nuclear Medicine</fullName>
+        <default>false</default>
+        <label>Nuclear Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ophthalmology</fullName>
+        <default>false</default>
+        <label>Ophthalmology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Otolaryngology - Head and Neck Surgery</fullName>
+        <default>false</default>
+        <label>Otolaryngology - Head and Neck Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pediatrics</fullName>
+        <default>false</default>
+        <label>Pediatrics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plastic Surgery</fullName>
+        <default>false</default>
+        <label>Plastic Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Psychiatry and Neurology</fullName>
+        <default>false</default>
+        <label>Psychiatry and Neurology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Surgery</fullName>
+        <default>false</default>
+        <label>Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Urology</fullName>
+        <default>false</default>
+        <label>Urology</label>
+    </standardValue>
+</StandardValueSet>

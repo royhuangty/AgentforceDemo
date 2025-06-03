@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Tipo de campo de data do Objeto de destino selecionado ao qual a Data inicial efetiva e a Data final efetiva fazem referência ao aplicar as Regras de aprovação</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>Data de criação</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>Data de envio</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

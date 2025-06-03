@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Autoriser les configurations d’offre groupée enfant jusqu&#39;au niveau spécifié que les actions de cette règle doivent cibler lorsqu&#39;elles sont exécutées dans le configurateur, pour les règles de sélection uniquement.</help>
+        <label><!-- Child Bundle Action Level --></label>
+        <name>SBQQ__DescendingActionNesting__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation>1</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

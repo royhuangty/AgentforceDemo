@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Contact Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Detalles de usuario"
+        },
+        "id" : "6b2aaef0-ff8a-402c-87eb-36616ab8ec59"
+      }, {
+        "attributes" : {
+          "text" : "Bienvenido a la página de Detalles del usuario, aquí encontrará información completa del usuario. Explore de forma sencilla detalles, actualizaciones y acciones tomadas en relación con los perfiles de usuario. Si tiene preguntas o necesita ayuda, nuestro equipo de asistencia está aquí para garantizar una resolución fluida de sus consultas."
+        },
+        "id" : "2112dcfc-13f7-47d8-a610-b89825022810"
+      }, {
+        "attributes" : {
+          "mainTitleText" : "Usuario"
+        },
+        "id" : "12da9978-fb21-4d9b-ad1a-d550962ad6e4"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "1b8e87b8-d27a-48a3-ab46-7d8fce7ae945"
+      } ]
+    }
+  },
+  "urlName" : "contact-detail"
+}

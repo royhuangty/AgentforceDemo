@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Aufschlag als Prozentsatz des Vorjahrespreises. Eingabe des resultierenden Preises in das Feld &quot;Regulärer Preis&quot;. Aufschläge werden jedes Jahr erhoben. Auf das erste Jahr eines Abonnements kann kein Aufschlag erhoben werden.</help>
+        <label><!-- Uplift --></label>
+        <name>SBQQ__Uplift__c</name>
+    </CustomFieldTranslation>

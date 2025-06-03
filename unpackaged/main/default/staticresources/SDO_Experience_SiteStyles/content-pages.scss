@@ -1,0 +1,1472 @@
+@import "scss-variables";
+
+/*
+ * COMPONENT STYLES
+ * 
+ * This CSS file contains styles that reference the Experience Cloud's primary Experience Cloud 
+ * components. 
+ *
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+
+
+/* Home Page */
+.comm-page-home {
+
+	// primary nav & hero
+	@media only screen and (min-width: 961px) {
+		.forceCommunityDashboard {
+			margin-bottom: -100px;
+
+			.desktopDashboardsDashboard {
+				.dashboardContainer {
+					margin-top: -100px;
+					width: 97%;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 961px) {
+		.forceCommunityDashboard {
+			header .header {
+				display: none;
+			}
+
+			.dashboardsEclairComponent {
+				h2.header {
+					font-size: var(--font-size-base);
+				}
+			}
+		}
+	}
+
+	.cb-section.forceCommunitySection .cb-section_row {
+
+		/* Media query for tablet devices */
+		@media only screen and (max-width: 960px) {
+			.slds-large-size_8-of-12 {
+				order: 2;
+			}
+
+			.slds-large-size_4-of-12 {
+				order: 1;
+			}
+		}
+
+		/* Media query for mobile devices */
+		@media only screen and (max-width: 480px) {
+			.slds-large-size_8-of-12 {
+				order: 2;
+			}
+
+			.slds-large-size_4-of-12 {
+				order: 1;
+			}
+		}
+	}
+
+	.cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12 {
+		.forceCommunityBannerLayout {
+			.js-content {
+				background-color: var(--hero-background-color);
+				border-radius: var(--border-radius-lg);
+				box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, var(--hero-box-shadow-transparency)) inset;
+				padding: 40px;
+				margin-left: 8%;
+
+				@media only screen and (max-width: 961px) {
+					width: auto !important;
+				}
+
+				@media only screen and (max-width: 480px) {
+					.js-content-navButton.bannerLayoutButton {
+						padding: 10px 13px;
+					}
+				}
+
+				.js-content-navButton.bannerLayoutButton {
+					padding: 10px 40px;
+				}
+			}
+
+			.slds-template__container {
+				.slds-grid_vertical-align-center {
+					justify-content: left;
+				}
+			}
+		}
+	}
+
+	.forceCommunityDynamicCollectionGrid {
+		.viewMoreButton {
+			font-size: var(--font-size-sm); // 14px
+		}
+	}
+
+	.forceCommunityLeadInbox {
+		.slds-text-heading--small {
+			font-size: var(--font-size-md); // 18px
+		}
+
+		.slds-dropdown-trigger_click {
+			button {
+				border-color: #747474;
+			}
+		}
+
+		.forceCommunityLeadInboxStencil {
+			.primaryField {
+				max-width: 70% !important;
+				padding: 0em 0.7em;
+
+				.emailuiFormattedEmail {
+					color: $brand-color-lwc;
+				}
+			}
+		}
+	}
+
+	// Key Areas Featured Topics
+	.keyAreas {
+		margin-bottom: 40px;
+
+		ul>li:before {
+			content: none !important;
+		}
+
+		.topicItem {
+			height: fit-content !important;
+			width: 33.33%;
+
+			div.topicImage {
+				font-size: 20px;
+				margin-bottom: 6px;
+				text-align: center;
+			}
+
+			div.topicContent {
+				background-color: transparent !important;
+				text-align: center;
+
+				div.topicLabel {
+					font-size: var(--font-size-sm);
+					color: var(--text-default-color);
+					font-weight: var(--font-weight-normal) !important;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	// Partner Program Button
+	.register-button {
+		margin-bottom: 40px;
+		padding: 0em 3em;
+
+		a {
+			display: block;
+			width: 100%;
+
+			button {
+				font-size: var(--font-size-md);
+				height: 40px;
+				width: 100%;
+			}
+		}
+
+		
+	}
+}
+
+/* My Account - User Settings Page */
+.forceCommunityUserSettingsCustomizable {
+
+	.accountSection,
+	.locationSection,
+	.profileVisibilitySection,
+	.emailNotificationsSection {
+		border-top: 1px solid var(--light-gray-border-color);
+		padding: 25px 0;
+	}
+
+	h2.texttitle {
+		color: $brand-color-lwc !important;
+		font-size: var(--font-size-md);
+		font-weight: var(--font-weight-bold);
+	}
+
+
+	input[type=checkbox]:checked {
+		background: transparent !important;
+		border: 1px solid var(--light-gray-border-color) !important;
+		color: var(--medium-gray-color) !important;
+	}
+
+	input[type=checkbox]:checked:after,
+	input[type=checkbox]:checked:disabled:after {
+		height: 5px;
+		width: 10px;
+		border-bottom: 2px solid var(--dark-gray-color) !important;
+		border-left: 2px solid var(--dark-gray-color) !important;
+	}
+
+	input[type=checkbox]:disabled {
+		background: var(--light-gray-background-color) !important;
+		border: 1px solid var(--light-gray-border-color) !important;
+	}
+}
+
+/* My Account - User Profile */
+.forceCommunityUserProfileBody {
+	.cProfileViewBody {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: var(--border-radius-none) !important;
+		overflow: auto;
+
+		.cUserProfileCon {
+			margin-top: 0;
+			padding: 0;
+			padding-top: 0;
+
+			.cProfileHeaderCon {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.cUserProfileDetailCon.large {
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+
+				.profileDetailView {
+					.userDetailHeader {
+						margin-bottom: 20px;
+
+						h1 .profileName {
+							font-size: var(--font-size-xl); // 24px
+							color: $brand-color-lwc;
+							font-weight: var(--font-weight-bold);
+						}
+					}
+
+					.slds-p-vertical--medium {
+						padding-top: 0;
+					}
+
+					.detailsData {
+						.forcePageBlockSectionRow.slds-gutters_small {
+							margin-bottom: 10px;
+						}
+
+						.forcePageBlockItemView.full {
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* My Account - Left Column Navigation */
+.forceCommunitySection {
+	.comm-tile-menu__item {
+
+		&.slds-size_6-of-12,
+		&.slds-size--6-of-12 {
+			width: 100% !important;
+		}
+
+		&.slds-p-around_small,
+		&.slds-p-around--small {
+			padding: 0;
+		}
+
+		.comm-tile-menu__item-link {
+			max-width: 100% !important;
+			display: block;
+
+			.comm-tile-menu__item-tile {
+				border-bottom: 1px solid var(--light-gray-border-color);
+				height: 40px !important;
+			}
+		}
+	}
+}
+
+/* My Account - Home */
+.comm-page-my-account {
+	.comm-tile-menu__item {
+		margin-bottom: 10px;
+
+		&.slds-size_6-of-12,
+		&.slds-size--6-of-12 {
+			width: 100% !important;
+		}
+
+		&.slds-p-around_small,
+		&.slds-p-around--small {
+			padding: 0;
+		}
+
+		.comm-tile-menu__item-link {
+			border: 1px solid #dddddd;
+			border-radius: var(--border-radius-lg);
+			max-width: 100% !important;
+
+			.comm-tile-menu__item-tile {
+				border-bottom: none;
+				height: 60px !important;
+			}
+		}
+	}
+}
+
+/* My Account - Account Information Page */
+.comm-page-custom-account-information {
+	header.forceCommunityRecordHeadline {
+		background-color: var(--light-gray-background-color);
+		border-radius: var(--border-radius-md);
+		padding: 10px;
+
+		.slds-page-header__detail-row {
+			background-color: transparent !important;
+		}
+	}
+
+	.forceCommunityRecordHomeTabs {
+
+		.recordHomePrimaryContent,
+		.recordHomeSecondaryContent {
+			width: 100%;
+		}
+	}
+
+	button.slds-section__title-action {
+		margin-top: 20px;
+
+		.test-id__section-header-title {
+			color: $brand-color-lwc !important;
+			font-size: var(--font-size-md);
+			font-weight: var(--font-weight-bold);
+		}
+	}
+}
+
+/* My Account - Security & Privacy (User Settings) */
+.comm-page-usersettings {
+	.forceCommunityUserSettingsCustomizable .row {
+		border-bottom: none !important;
+		margin-bottom: 0;
+
+		h1.texttitle {
+			display: none;
+		}
+	}
+
+	.forceCommunityUserSettingsInternal {
+		.row.slds-m-top--medium {
+			margin-top: 0;
+
+			.paddingcancelsave {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+/* My Account - Member Management */
+.comm-page-custom-member-directory {
+	.forceCommunityRelatedList {
+		min-height: 400px !important;
+
+		.test-listViewManager {
+			.slds-page-header {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+
+			&.slds-card {
+				border: none !important;
+			}
+		}
+	}
+}
+
+/* Search Page */
+.forceCommunitySearch {
+	gap: 20px;
+	margin-bottom: 60px;
+
+	.slds-medium-size_1-of-6 {
+		width: 250px !important;
+	}
+
+	.slds-nav-vertical__section {
+		.slds-nav-vertical__title {
+			display: none;
+		}
+
+		.scopesBlock {
+
+			.slds-nav-vertical__item:hover:before,
+			.slds-nav-vertical__item.slds-is-active:before {
+				background: var(--light-gray-background-color);
+			}
+
+			.slds-nav-vertical__item {
+				border-bottom: 1px solid var(--light-gray-border-color);
+			}
+		}
+	}
+
+	.slds-nav-vertical__action:hover {
+		box-shadow: none;
+	}
+
+	.slds-border_right {
+		border-right: none;
+	}
+
+	.forceSearchSearchResultsGridHeader {
+		.slds-page-header__title {
+			font-size: var(--font-size-xl); // 24px
+			font-weight: var(--font-weight-light);
+		}
+	}
+}
+
+/* Appointment Confirmation Page */
+.comm-page-custom-appointment-confirmation, .comm-page-custom-sfs-appointment-confirmation {
+	h1.headline {
+		display: none;
+	}
+	.info-container {
+		.info-title {
+			color: $brand-color-lwc;
+		}
+		.info-item {
+			color: var(--text-default-color);
+			font-size: var(--font-size-sm);
+		}
+	}
+}
+
+/* Contactless Signature */
+.comm-page-custom-contactless-signature, .comm-page-custom-sfs-appointment-confirmation {
+	div[data-component-label="Contactless Signature"] {
+		.main-container[FSAA-tsPreviewAndSignServiceReportLWC_tsPreviewAndSignServiceReportLWC] {
+			margin-bottom: auto;
+
+			h1.title { display: none; }
+
+			label {
+				font-size: var(--font-size-sm);
+				//margin-bottom: 16px;
+			}
+
+			button.report {
+				border: 1px solid var(--light-gray-border-color);
+				border-radius: 8px;
+				padding: 12px 28px;
+
+				.report-meta {
+					font-size: var(--font-size-xs);
+				}
+			}
+
+			div.name-input {
+				font-size: var(--font-size-sm);
+
+				label.slds-form-element__label {
+					font-size: var(--font-size-sm);
+				}
+
+				input.slds-input {
+					color: var(--dark-gray-color);
+					font-size: var(--font-size-sm);
+					height: 40px;
+				}
+			}
+
+			div.checkbox-container {
+				margin: 0;
+
+				.checkbox-label-container {
+					margin-top: 10px;
+
+					.slds-form-element__label {
+						color: var(--medium-gray-color);
+						font-size: var(--font-size-sm) !important;
+					}
+				}
+			}
+
+			p.sig-label {
+				color: var(--medium-gray-color);
+				font-size: var(--font-size-sm);
+				margin-bottom: 5px;
+				margin-top: 20px;
+			}
+
+			canvas[FSAA-tsSignatureCapture_tsSignatureCapture] {
+				background: var(--light-gray-background-color);
+				border: 1px solid var(--light-gray-border-color);
+				border-radius: 10px;
+			}
+
+			.canvas_box {
+				.canvas-water-mark {
+					p.canvas-text {
+						color: #aaaaaa;
+						font-family: cursive;
+						font-size: var(--font-size-xxxl);
+						height: 120px;
+					}
+				}
+			}
+
+			.bottom {
+				position: relative !important;
+
+				.next:enabled {
+					background-color: $brand-color-lwc;
+				}
+			}
+		}
+	}
+}
+
+/* Library - Home */
+.comm-page-custom-learning {
+
+	/* Dynamic Learning Section */
+	.dynamic-articles {
+		margin: 20px;
+
+		// Media query for desktop
+		@media only screen and (min-width: 961px) {
+			margin-top: 40px;
+		}
+
+		.copy {
+			h2 {
+				color: var(--dark-gray-color);
+				font-size: var(--font-size-md);
+			}
+			p {
+				color: var(--medium-gray-color);
+				font-size: var(--font-size-sm);
+			}
+		}
+		.button {
+			
+			a {
+				button {
+					height: 40px;
+					width: 100%;
+				}
+			}
+
+			// Media query for mobile
+			@media only screen and (max-width: 480px) {
+				margin: 20px 0;
+			}
+
+			// Media query for tablet 
+			@media only screen and (max-width: 960px) {
+				margin: 20px 0;
+			}
+
+			// Media query for desktop
+			@media only screen and (min-width: 961px) {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+/* Self-Service Scheduling */
+.comm-page-custom-self-service-scheduling {
+	.slds-box {
+		border: none;
+		padding: 0;
+	}
+}
+
+/* 'Blog' page || Articles Landing page */
+.comm-page-custom-blog {
+
+	.forceCommunityRichText {
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.selfServiceTopicArticleList .selfServiceArticleListItem {
+			margin: 0px;
+		}
+	}
+}
+
+/* CMS content detail - news, video, flex, blogs */
+.comm-page-managed-content-news,
+.comm-page-managed-content-Blogs,
+.comm-page-managed-content-flexContent,
+.comm-page-managed-content-externalVideo {
+	.forceCommunityDynamicCollectionGrid {
+		padding: 60px 40px;
+		background-color: var(--light-gray-background-color);
+		border-radius: var(--border-radius-lg);
+
+		.forceCommunityTileLayout.forceCommunityFlexTileLayout {
+			margin-top: 10px;
+
+			div:first-child {
+				box-shadow: none;
+			}
+		}
+
+		h1.slds-text-heading_medium {
+			color: var(--dark-gray-color);
+			font-size: var(--font-size-lg);
+			font-weight: var(--font-weight-bold);
+		}
+	}
+
+	.slds-rich-text-editor__output {
+		line-height: 32px;
+		font-size: var(--font-size-base);
+	}
+}
+
+/* Documentation */
+.comm-page-custom-documentation {
+	.forceCommunityDynamicCollectionGrid {
+		.forceCommunityCardLayout {
+			.container {
+				box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+
+				.mediaContainer {
+					margin-top: 20px;
+
+					.contentImage {
+						background-size: auto !important;
+					}
+				}
+
+				div:nth-child(2) {
+					padding: 20px 20px 20px 0px;
+				}
+
+				@media only screen and (max-width: 480px) {
+					.mediaContainer {
+						margin-top: inherit;
+
+						.contentImage {
+							background-color: var(--light-gray-background-color) !important;
+						}
+					}
+
+					div:nth-child(2) {
+						padding: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 'Topic Detail' Page */
+.comm-page-topic {
+	.forceCommunityHeadline {
+		margin-bottom: -30px;
+
+		h1.headlineTitle {
+			font-size: var(--font-size-xxl);
+			text-align: left;
+			font-weight: var(--font-weight-light);
+			color: var(--base-color-black);
+			padding: 0;
+		}
+	}
+
+	.forceCommunityTopicDescription {
+		padding: 0;
+		font-size: var(--font-size-base);
+	}
+
+	.forceTopicFeaturedTopics ul.topicList {
+		gap: 30px;
+
+		/* Media query for tablet devices */
+		@media only screen and (max-width: 768px) {
+			gap: 15px;
+		}
+
+		/* Media query for mobile devices */
+		@media only screen and (max-width: 480px) {
+			gap: 15px;
+
+			li.topicItem {
+				width: 50% !important;
+			}
+		}
+
+		li.topicItem {
+			height: 99px;
+			max-width: auto;
+			min-width: auto;
+			padding: 9px 0;
+			width: 14.5%;
+
+			.topicImage {
+				padding-top: 4rem;
+			}
+
+			.topicLabel {
+				margin-top: 2rem;
+				font-size: var(--font-size-xs);
+			}
+		}
+	}
+
+	.cms-content-block {
+		.cms-card {
+			padding: 0;
+			border-radius: var(--border-radius-xl);
+
+			.cms-card-image {
+				padding: 0;
+
+				img {
+					border-radius: var(--border-radius-xl) var(--border-radius-xl) var(--border-radius-none) var(--border-radius-none);
+				}
+			}
+
+			.cms-card-footer {
+				display: none;
+			}
+		}
+	}
+}
+
+/* 'Training Courses List' Page styles */
+.comm-page-list-a1R {
+	.forceCommunitySection {
+		.cb-section_column {
+			&.slds-large-size_6-of-12 {
+				&:first-child {
+					padding: 16px 20px 16px 16px;
+				}
+
+				&:last-child {
+					padding: 16px 20px 16px 20px;
+				}
+			}
+		}
+	}
+
+	.forceCommunityRecordListStandard {
+		a {
+			font-size: var(--font-size-sm);
+		}
+
+		.listTitle {
+			display: none;
+			text-transform: capitalize !important;
+		}
+
+		.forceBaseListView thead th {
+			border-top: 1px solid var(--lwc-colorBorder);
+			border-right: 1px solid var(--lwc-colorBorder);
+			line-height: 20px;
+			letter-spacing: -0.25px;
+		}
+
+		.viewAllLink {
+			text-align: center;
+		}
+	}
+
+	.js-dynamic-collection {
+		.forceCommunityDynamicCollectionGrid {
+			.mediaContainer {
+				margin-bottom: 20px;
+				margin-right: 20px;
+				width: 100px !important;
+
+				.js-content-subtitle {
+					font-size: var(--font-size-sm);
+				}
+			}
+
+			.resetMarginLeft {
+				gap: 0;
+			}
+
+			.slds-no-space {
+				padding: 0 !important;
+
+				.js-content-eyebrow {
+					margin-top: 0 !important;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.forceCommunityCarousel {
+			.forceCommunityCardLayout {
+				.slds-is-relative.slds-grid.slds-p-around_medium.slds-grid_vertical-align-center {
+					padding: 0;
+				}
+			}
+
+			a.previousAction {
+				margin-right: 0;
+			}
+
+			a.nextAction {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+/* Support | Support Search */
+.comm-page-global-search,
+.comm-page-custom-support {
+	.kbStencilRecord {
+		.formattedTextLookupTitle {
+			font-weight: var(--font-weight-bold);
+			font-size: var(--font-size-sm);
+		}
+	}
+}
+
+/* 'Events' page styles */
+.box[cccalendar-ccUpcomingEvents_ccUpcomingEvents] {
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+	border: 2px solid var(--base-color-white) !important;
+	border-radius: var(--border-radius-lg);
+	padding: 20px;
+
+	.eventHeader {
+		padding: 0px;
+
+		.titleH2Container h2 {
+			font-size: var(--font-size-base);
+			font-weight: var(--font-weight-bold);
+			color: var(--lwc-dxpGBrand);
+		}
+	}
+
+
+	.cccalendar_modal__content {
+		padding: 0px;
+
+		.slds-size_12-of-12 {
+			padding: 0;
+
+			.cccalendar_eventButtonSpan {
+				margin-top: 20px;
+				padding: 3px 30px;
+			}
+		}
+	}
+}
+
+/* 'Support' | Support Home & Community Home Page styles */
+.comm-page-custom-help-center,
+.comm-page-custom-community-home,
+.comm-page-custom-support {
+
+	/* Media query for mobile devices */
+	@media only screen and (max-width: 960px) {
+		.forceCommunitySection .cb-section_row .cb-section_column:only-child {
+			margin: 0 auto;
+			width: 90%;
+
+			.contentImage {
+				background-size: cover !important;
+			}
+		}
+	}
+
+	.forceCommunityDynamicCollectionGrid {
+
+		.forceCommunityFlexTileLayout,
+		.forceCommunityFlexTileLayout>.slds-grid {
+			border-radius: 12px;
+			border: none;
+			box-shadow: 0px 1px 6px 0px rgba(153, 153, 153, 0.2);
+		}
+	}
+
+	.forceCommunityRecordListStandard,
+	.forceCommunityRecordListCompact {
+		h2.listTitle {
+			display: none;
+		}
+
+		.listContent {
+			border-top: 1px solid var(--light-gray-border-color);
+
+			.forceCommunityRecordListCompactCard.forceRecordLayout .template {
+				border-color: var(--light-gray-border-color);
+
+				.primaryField {
+					font-size: var(--font-size-sm);
+				}
+
+				.secondaryFields li::after {
+					font-weight: var(--font-weight-bold);
+				}
+			}
+		}
+
+		.viewAllLink {
+			text-align: center;
+		}
+	}
+
+	.forceCommunityDynamicCollectionGrid {
+		.resetMarginLeft {
+			.slds-text-heading_small {
+				font-size: var(--font-size-sm) !important;
+			}
+		}
+
+		.forceCommunityCardLayout {
+
+			ul.slds-m-top_small,
+			ul.slds-m-top--small {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.forceListRecord {
+		.tableRowGroup {
+
+			/* Media query for mobile devices */
+			@media only screen and (max-width: 960px) {
+				margin-bottom: 10px;
+			}
+		}
+
+		.itemTitle {
+
+			/* Media query for mobile devices */
+			@media only screen and (max-width: 960px) {
+				font-size: var(--font-size-md);
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	// right column customization
+	.slds-large-size_4-of-12 {
+		.ui-widget:not(:last-child) {
+			margin-bottom: 0 !important;
+		}
+
+		//Product Registration
+		.js-content.forceCommunityTileLayout>div:first-child {
+			background-color: transparent;
+			border: none !important;
+
+			div.slds-p-around_medium {
+				padding: 0;
+			}
+		}
+	}
+
+	// right column button customization
+	.forceCommunityHtmlBlock {
+
+		.support-button,
+		.register-button {
+			display: block;
+			width: 100%;
+
+			&.slds-grid_align-center {
+				justify-content: flex-start;
+			}
+
+			button {
+				border-radius: 4px;
+				height: 32px;
+				width: 100%;
+			}
+		}
+
+		.register-button {
+			margin-top: 20px;
+		}
+	}
+
+	// Need Support Container
+	.need-support-container {
+		align-items: center;
+		background-color: var(--light-gray-background-color);
+		border-radius: 10px;
+		display: flex;
+		padding: 20px;
+
+		@media only screen and (max-width: 480px) {
+			margin-bottom: 40px;
+		}
+
+		.slds-large-size_3-of-12 {
+			padding-right: 20px;
+			width: fit-content;
+
+			button.slds-button {
+				min-width: 150px;
+			}
+		}
+
+		h4 {
+			margin-bottom: 0 !important;
+			font-size: var(--font-size-base);
+		}
+
+		p {
+			font-size: var(--font-size-sm);
+		}
+	}
+
+	// Next Best Action
+	article.forceCommunityNbaWidget {
+		&.slds-card {
+			border: none;
+			box-shadow: none;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+
+			.slds-card__header {
+				padding: 0;
+
+				h2 {
+					font-size: var(--font-size-md);
+					font-weight: var(--font-weight-bold);
+					margin-top: 60px;
+				}
+			}
+
+			.slds-card__body {
+				&.slds-m-horizontal_x-small {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				ul li {
+					.slds-box {
+						background-color: var(--light-gray-background-color);
+
+						.nbaAcceptRejectBlock {
+							display: flex;
+							align-content: stretch;
+							justify-content: space-evenly;
+
+							button {
+								width: 48%;
+								display: inline-block;
+
+								&.test-acceptButton {
+									background-color: var(--lwc-dxpGBrand);
+									border-color: var(--lwc-dxpGBrand);
+									color: white;
+								}
+
+								&.test-rejectButton {
+									background-color: white;
+									border-color: var(--lwc-dxpGBrand);
+									color: var(--lwc-dxpGBrand);
+								}
+							}
+						}
+					}
+
+					.slds-m-horizontal_x-small {
+						margin-left: 0;
+						margin-right: 0;
+					}
+
+					.nbaDescription {
+						font-size: var(--font-size-base);
+						color: var(--text-default-color);
+						margin-bottom: 30px;
+					}
+
+					.nbaImage {
+						height: 115px;
+						border-radius: var(border-radius-xl);
+					}
+				}
+			}
+		}
+	}
+}
+
+.comm-page-custom-support,
+.comm-page-custom-help-center {
+
+	.forceCommunityDynamicCollectionGrid .forceCommunityCardLayout {
+		.slds-is-relative.slds-col.slds-no-space.slds-p-around_medium {
+			padding: 1rem 0rem !important;
+		}
+	}
+
+}
+
+/* Community Home' Page styles */
+.comm-page-custom-community-home,
+.comm-page-custom-community-groups {
+	.forceCommunityRecordListCompact {
+		border-top: 1px solid #dddddd;
+
+		.listTitleContainer {
+			display: none;
+		}
+
+		.viewAllLink {
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+
+	.compactFeedList .compactFeedItem {
+		.titleContainer {
+			p .title.uiOutputText{
+				font-size: var(--font-size-sm);
+			}
+		}
+	}
+}
+
+/* 'Register' Page styles */
+.comm-page-self-register {
+	.salesforceIdentitySelfRegister2 {
+		@media only screen and (min-width: 768px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+
+			.inputContainer {
+				margin: 10px 5px;
+				width: 47%;
+			}
+
+			div:has(button) {
+				display: contents;
+			}
+		}
+	}
+}
+
+/* Login pages */
+.comm-page-login-home,
+.comm-page-self-register,
+.comm-page-forgot-password,
+.comm-page-check-password,
+.salesforceIdentityLoginBody2 {
+	#centerPanel {
+		border-radius: 20px;
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.15);
+		max-width: 550px !important;
+		padding: 2em;
+		color: var(--medium-gray-color) !important;
+
+		@media only screen and (min-width: 768px) {
+			min-width: 500px;
+		}
+
+		.inverseTextColor {
+			color: var(--medium-gray-color);
+		}
+
+		.uiButton {
+			border-radius: var(--border-radius-xl) !important;
+		}
+
+		h2,
+		h2 span {
+			color: $text-weak-color;
+			font-size: var(--font-size-lg);
+		}
+
+		p {
+			color: $text-default-color;
+			font-size: var(--font-size-sm);
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/* Work Orders */
+.comm-page-list-0WO {
+	.forceCommunityRecordListStandard {
+		margin-top: -15px;
+
+		.listTitle {
+			display: none;
+		}
+
+		.forceBaseListView thead th {
+			border-top: none;
+			border-right: none;
+		}
+	}
+}
+
+/* Resources */
+.comm-page-files {
+	div[data-fqn="forceCommunity:workspacesList"] {
+		.test-listViewManager {
+			&.slds-card {
+				background-color: transparent !important;
+				border: none;
+			}
+
+			.slds-theme_default,
+			.slds-theme--default {
+				background-color: transparent !important;
+			}
+		}
+	}
+}
+
+/* Funds & Requests */
+.comm-page-custom-funds-and-requests {
+	.sf_flowmodalCcp_launchFlowModal {
+
+		.slds-p-vertical_medium,
+		.slds-p-vertical--medium {
+			padding-top: 50px;
+		}
+	}
+
+	.campaign-TemplateTile-NoImageUpperBorder {
+		border-top: 1px solid var(--light-gray-border-color) !important;
+		border-top-width: 1px !important;
+	}
+}
+
+/* Marketing Home - Partners */
+.comm-page-custom-marketing-home {
+
+	.forceCommunitySection .cb-section_column:first-child {
+		padding: 16px;
+	}
+
+	// Campaigns
+	.forceCommunityCampaignTileList {
+		>.slds-card {
+			border: none;
+		}
+
+		.forceChatterObjectHomeTileView section {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.forceCommunityCampaignTileTemplate {
+
+			&.slds-p-around_small,
+			&.slds-p-around--small {
+
+				// Media query for desktop
+				@media only screen and (min-width: 1063px) {
+					padding: 0;
+				}
+			}
+
+			&.slds-size--1-of-1 {
+
+				// Media query for desktop
+				@media only screen and (min-width: 1063px) {
+					margin-bottom: 20px;
+					width: 48%;
+				}
+			}
+
+			.campaign-TemplateTile-Border {
+				border-radius: 12px;
+				border-color: var(--light-gray-border-color);
+
+				div.highlight-text {
+					background-color: $brand-color-lwc !important;
+				}
+			}
+
+			.hero-image-icon {
+				border-radius: 12px 12px 0 0;
+			}
+		}
+	}
+}
+
+/* Error Pages */
+.comm-page-too-many-requests,
+.comm-page-service-not-available {
+	.themeLayoutStarterWrapper>.footer {
+		display: none;
+	}
+}
+
+/* Campaign List */
+div[data-component-label="Campaign Marketplace"] {
+	h1 {
+		&.slds-page-header__title {
+			font-size: var(--font-size-md);
+			font-weight: var(--font-weight-bold);
+			margin-bottom: 10px;
+		}
+
+		&.slds-p-horizontal_small {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.forceCommunityCampaignTileList {
+		.slds-card {
+			border: none;
+			border-style: none !important;
+			box-shadow: none;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+		}
+
+		.forceCommunityCampaignTileTemplate {
+			&:first-child {
+				padding-left: 0 !important;
+			}
+
+			&:last-child {
+				padding-right: 0 !important;
+			}
+
+			.campaign-TemplateTile-Border {
+				border-radius: 12px;
+			}
+
+			.hero-image-icon {
+				border-radius: 12px 12px 0 0;
+			}
+		}
+	}
+}
+
+/* Campaign Detail */
+header.forceCommunityRecordHeadline {
+	background-color: var(--light-gray-background-color);
+	border: 1px solid var(--light-gray-border-color);
+	border-radius: 10px;
+	padding: 10px;
+
+	ul.slds-page-header__detail-row {
+		background-color: transparent;
+	}
+}
+
+/* My Profile Tile Menu Nav Highlight */
+.comm-page-custom-account-information {
+	.comm-tile-menu {
+		a[href*="/account-settings/account-information"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-usersettings {
+	.comm-tile-menu {
+		a[href*="/settings/home"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-detail-005 {
+	.comm-tile-menu {
+		a[href*="/personal-settings/profile/home"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-messages {
+	.comm-tile-menu {
+		a[href*="/personal-settings/messages/home"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-account-branding {
+	.comm-tile-menu {
+		a[href*="/account-settings/account-branding"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-member-directory,
+.comm-page-custom-member-management {
+	.comm-tile-menu {
+		a[href*="/account-settings/member-management"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-order-history {
+	.comm-tile-menu {
+		a[href*="/account-settings/order-history"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-assets {
+	.comm-tile-menu {
+		a[href*="/account-settings/assets"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-invoices {
+	.comm-tile-menu {
+		a[href*="/account-settings/invoices"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+.comm-page-custom-cases {
+	.comm-tile-menu {
+		a[href*="/account-settings/cases"] {
+			box-shadow: inset 4px 0 0 var(--lwc-dxpGBrand);
+		}
+	}
+}
+
+/* END of My Profile Tile Menu Nav Highlight */

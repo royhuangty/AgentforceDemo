@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Medicaid</fullName>
+        <default>false</default>
+        <label>Medicaid</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medicare</fullName>
+        <default>false</default>
+        <label>Medicare</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial For Individuals</fullName>
+        <default>false</default>
+        <label>Commercial For Individuals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial For Groups</fullName>
+        <default>false</default>
+        <label>Commercial For Groups</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exchange</fullName>
+        <default>false</default>
+        <label>Exchange</label>
+    </standardValue>
+</StandardValueSet>

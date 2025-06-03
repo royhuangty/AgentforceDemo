@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Termo de cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Termos de cotação</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Quote Term Layout</layout>
+        <sections>
+            <label>Corpo</label>
+            <section>Body</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº do termo</nameFieldLabel>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

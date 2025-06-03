@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求書合計 (税込)。小計 + 税金に等しくなります。</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </CustomFieldTranslation>

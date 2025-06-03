@@ -1,0 +1,148 @@
+.outer td.oRight {
+    padding: 0px;
+}
+
+.credential-overlay {
+    width: 50%;
+    float: left;
+}
+
+.credential-overlay:nth-child(odd) {
+    clear: both;
+}
+
+#credentials-container {
+    max-width: 947px;
+}
+
+.credential {
+    position: relative;
+    background-color: $color-background;
+    border: 1px solid $color-border;
+    border-radius: 0.25rem;
+}
+
+.credential-title {
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.credential-error {
+    background-color: #c23934;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+    margin-top: 12px;
+}
+
+.credential-terms-checkbox {
+    margin-right: 8px;
+}
+
+.credential-header-group {
+    font-size: 20px;
+    color: $color-text-default;
+}
+
+/*.credential-header-group:nth-child(2) {*/
+/*    height: 36px;*/
+/*}*/
+
+.credential-overlay:nth-child(even) .credential {
+    margin: 0 1.5rem 1.5rem 0;
+    padding: 16px;
+}
+
+.credential-overlay:nth-child(odd) .credential {
+    margin: 0 1.5rem 1.5rem 0;
+    padding: 16px;
+}
+
+.credential-label {
+    display: inline-block;
+    color: $color-text-weak;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-right: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.credential-label.credential-terms-label {
+    display:inline;
+}
+
+.credential-status {
+    background-color: #04844b;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.credential-terms-checkbox {
+    margin-right: 8px !important;
+}
+
+.credential-body-group:nth-child(4), .credential-body-group:nth-child(5) {
+    display: inline-block;
+}
+
+.noSidebarCell, #bodyCell, #bodyTable {
+    height:100%;
+}
+
+/* Alex you'll probably have to change this */
+.spinnerClass {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.6;
+}   
+
+.flex-direction-column {
+    flex-direction:column;
+}
+
+.form-layout-class {
+    height: 100%;
+}
+
+.credential-delete-button-wrap {
+    margin-left:16px;
+}
+
+.credential-checkbox-wrap {
+    position: relative;
+    margin-top:6px;
+    margin-bottom:12px;
+}
+
+.global-error-content {
+    /* from slds-notify-toast */
+        color: #fff;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        background: rgba(84,105,141,.95);
+        font-weight: 300;
+        border-radius: .25rem;
+        margin: .5rem;
+        padding: .75rem 3rem .75rem 1.5rem;
+        min-width: 30rem;
+        text-align: left;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+}

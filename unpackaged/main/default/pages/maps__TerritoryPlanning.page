@@ -1,0 +1,1178 @@
+<apex:page controller="maps.TerritoryPlanning" action="{!checkPermissions}" extensions="maps.TPRemoteActions,maps.TPRemoteActionsSecured" title="Salesforce Maps Territory Planning" sidebar="false" standardStyleSheets="false">
+    <!-- if is sf classic 2019 -->
+    <apex:outputPanel layout="none" rendered="{! $User.UIThemeDisplayed == 'Theme3' }">
+        
+        <!-- styling for fullscreen app layout for SF classic -->
+        <style type="text/css">
+            #maRoot {
+                height: 100%;
+            }
+    
+            .mainSplit {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            #contentWrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+    
+            .bPageFooter.noTableFooter {
+                padding-top: 6px;
+                margin-bottom: 1px;
+            }
+    
+            .bodyDiv {
+                position: relative;
+                float: none;
+                height: auto;
+                flex-grow: 1;
+                z-index: 0;
+            }
+    
+            #bodyTable {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+    
+            #bodyTable .noSidebarCell {
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-color: #eef4ff;
+                height: 100%;
+            }
+    
+            html body.sfdcBody,
+            #maRoot .hasMotif {
+                padding: 0 10px;
+                margin: 0;
+            }
+
+            .slds-scope button,
+            #maRoot button {
+                /* margin: initial; */
+            }
+    
+            .slds-scope .slds-button,
+            #maRoot .slds-button {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            /* .slds-scope .slds-button+.slds-button,
+            #maRoot .slds-button+.slds-button {
+                margin-left: .25rem;
+            } */
+
+            .slds-scope .slds-button-group .slds-button+.slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button--last .slds-button,
+            .slds-scope .slds-button-group .slds-button+.slds-button_last .slds-button,
+            .slds-scope .slds-button-group-list li+li .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button--last .slds-button,
+            #maRoot .slds-button-group .slds-button+.slds-button_last .slds-button,
+            #maRoot .slds-button-group-list li+li .slds-button {
+                margin-left: -1px;
+            }
+
+            .slds-scope .slds-builder-header__nav-item, 
+            .slds-scope .slds-builder-header__utilities-item,
+            #maRoot .slds-builder-header__nav-item, 
+            #maRoot .slds-builder-header__utilities-item {
+                margin-left: 0;
+            }
+
+            .slds-scope ul li, 
+            .slds-scope ol li,
+            #maRoot ul li,
+            #maRoot ol li {
+                margin-left: initial;
+                /* padding-left: initial; */
+            }
+
+            #mapControls button {
+                margin: 0;
+            }
+
+            ul li, ol li {
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+        </style>
+    </apex:outputPanel>
+
+    <!-- JS -->
+    <script>
+        var MATA = Object.assign({
+            RemoteActions: {
+
+                // Generic CRUD
+                Query: '{!$RemoteAction.TPRemoteActions.Query}',
+
+                GetSettings: '{!$RemoteAction.TPRemoteActions.GetSettings}',
+                GetDataSetsBatch: '{!$RemoteAction.TPRemoteActions.GetDataSetsBatch}',
+                GetDataSetSearch: '{!$RemoteAction.TPRemoteActions.GetDataSetSearch}',
+                GetDataSetById: '{!$RemoteAction.TPRemoteActions.GetDataSetById}',
+                GetUnformattedDataSet: '{!$RemoteAction.TPRemoteActions.GetUnformattedDataSet}',
+                GetUnformattedAlignment: '{!$RemoteAction.TPRemoteActions.GetUnformattedAlignment}',
+                GetDataSet: '{!$RemoteAction.TPRemoteActions.GetDataSet}',
+                GetAlignment: '{!$RemoteAction.TPRemoteActions.GetAlignment}',
+                GetUser: '{!$RemoteAction.TPRemoteActions.GetUser}',
+                GetUserList: '{!$RemoteAction.TPRemoteActions.GetUserList}',
+                GetUsersWithAccess: '{!$RemoteAction.TPRemoteActions.GetUsersWithAccess}',
+                GetUsersWithAccessList: '{!$RemoteAction.TPRemoteActions.GetUsersWithAccessList}',
+                GetHistory: '{!$RemoteAction.TPRemoteActions.GetHistory}',
+                GetApprovers: '{!$RemoteAction.TPRemoteActions.GetApprovers}',
+                GetUserRoles: '{!$RemoteAction.TPRemoteActions.GetUserRoles}',
+                GetCurrentUserDetails: '{!$RemoteAction.TPRemoteActions.GetCurrentUserDetails}',
+                GetAlignmentApprovalSettings: '{!$RemoteAction.TPRemoteActions.GetAlignmentApprovalSettings}',
+                GetFeed: '{!$RemoteAction.TPRemoteActions.GetFeed}',
+                GetFeedList: '{!$RemoteAction.TPRemoteActions.GetFeedList}',
+                GetScreenshotLocations: '{!$RemoteAction.TPRemoteActions.GetScreenshotLocations}',
+                GetContainerSets: '{!$RemoteAction.TPRemoteActions.GetContainerSets}',
+                GetContainers: '{!$RemoteAction.TPRemoteActions.GetContainers}',
+                GetSettings: '{!$RemoteAction.TPRemoteActions.GetSettings}',
+                UpdateUserAccess: '{!$RemoteAction.TPRemoteActions.UpdateUserAccess}',
+                PostFeedItem: '{!$RemoteAction.TPRemoteActions.PostFeedItem}',
+                UpdateLastViewed: '{!$RemoteAction.TPRemoteActions.UpdateLastViewed}',
+                // create data sets and alignments
+                InsertObjectBatch: '{!$RemoteAction.TPRemoteActions.InsertObjectBatch}',
+                UpdateObjectBatch: '{!$RemoteAction.TPRemoteActions.UpdateObjectBatch}',
+                CloneAlignment: '{!$RemoteAction.TPRemoteActions.CloneAlignment}',
+                CloneDataSet: '{!$RemoteAction.TPRemoteActions.CloneDataSet}',
+                StartJob: '{!$RemoteAction.TPRemoteActions.StartJob}',
+                CancelJob: '{!$RemoteAction.TPRemoteActions.CancelJob}',
+                RunDataSetSOQLBatch: '{!$RemoteAction.TPRemoteActions.RunDataSetSOQLBatch}',
+                RunDataSetReportBatch: '{!$RemoteAction.TPRemoteActions.RunDataSetReportBatch}',
+                GetLocationContainers: '{!$RemoteAction.TPRemoteActions.GetLocationContainers}',
+                UpsertUnitAssignmentBatch: '{!$RemoteAction.TPRemoteActions.UpsertUnitAssignmentBatch}',
+                UpsertUnitAssignmentBatchWithResults: '{!$RemoteAction.TPRemoteActions.UpsertUnitAssignmentBatchWithResults}',                
+                CreateJob: '{!$RemoteAction.TPRemoteActions.CreateJob}',
+                StartJob: '{!$RemoteAction.TPRemoteActions.StartJob}',
+                DeleteObjects: '{!$RemoteAction.TPRemoteActions.DeleteObjects}',
+                SaveAlignment: '{!$RemoteAction.TPRemoteActions.SaveAlignment}',
+                GetAlignmentHierarchy: '{!$RemoteAction.TPRemoteActions.GetAlignmentHierarchy}',
+                GetUnitData2: '{!$RemoteAction.TPRemoteActions.GetUnitData2}',
+                GetUnitDataById: '{!$RemoteAction.TPRemoteActions.GetUnitDataById}',
+                GetRangeChunkUnitCounts: '{!$RemoteAction.TPRemoteActions.GetRangeChunkUnitCounts}',
+                GetPkChunkingMetadata: '{!$RemoteAction.TPRemoteActions.GetPkChunkingMetadata}',
+                UpdatePreferences: '{!$RemoteAction.TPRemoteActions.UpdatePreferences}',
+                GetUnitData: '{!$RemoteAction.TPRemoteActions.GetUnitData}',
+                GetAccessibleAlignments: '{!$RemoteAction.TPRemoteActions.GetAccessibleAlignments}',
+                GetTerritoryRoles: '{!$RemoteAction.TPRemoteActions.GetTerritoryRoles}',
+                GetTerritoryModel: '{!$RemoteAction.TPRemoteActions.GetTerritoryModel}',
+                GetManualAssignments: '{!$RemoteAction.TPRemoteActions.GetManualAssignments}',
+
+                // query builder
+                GetTerritoryModels: '{!$RemoteAction.TPRemoteActions.GetTerritoryModels}',
+                GetRelatedFieldTypes: '{!$RemoteAction.TPRemoteActions.GetRelatedFieldTypes}',
+
+                // Area Roles
+                GetTerritoryPlanningRoles: '{!$RemoteAction.TPRemoteActions.GetTerritoryPlanningRoles}',
+
+                //reports and queries
+                GetReports: '{!$RemoteAction.TPRemoteActions.GetReports}',
+                GetReportMetadata: '{!$RemoteAction.TPRemoteActions.GetReportMetadata}',
+                GetReportObjectApiName: '{!$RemoteAction.TPRemoteActions.GetReportObjectApiName}',
+                SOQLQueryCount: '{!$RemoteAction.TPRemoteActions.SOQLQueryCount}',
+                RunDataSetSOQLBatch: '{!$RemoteAction.TPRemoteActions.RunDataSetSOQLBatch}',
+                RunDataSetReportBatch: '{!$RemoteAction.TPRemoteActions.RunDataSetReportBatch}',
+
+                //org inspection
+                GetAccountFields: '{!$RemoteAction.TPRemoteActions.GetAccountFields}',
+                GetUsers: '{!$RemoteAction.TPRemoteActions.GetUsers}',
+                GetCurrentUserDetails: '{!$RemoteAction.TPRemoteActions.GetCurrentUserDetails}',
+                GetGlobalDescribeObjects: '{!$RemoteAction.TPRemoteActions.GetGlobalDescribeObjects}',
+                GetDescribeSObjectResults: '{!$RemoteAction.TPRemoteActions.GetDescribeSObjectResults}',
+                GetGlobalDescribeFields: '{!$RemoteAction.TPRemoteActions.GetGlobalDescribeFields}',
+                GetObjectFieldNames: '{!$RemoteAction.TPRemoteActions.GetObjectFieldNames}',
+                GetObjectFieldDescribes: '{!$RemoteAction.TPRemoteActions.GetObjectFieldDescribes}',
+
+                // approvals
+                GetStandardPendingApprovals: '{!$RemoteAction.TPRemoteActions.GetStandardPendingApprovals}',
+                SearchStandardApprovals: '{!$RemoteAction.TPRemoteActions.SearchStandardApprovals}',
+                GetAreasWithAccessByUser: '{!$RemoteAction.TPRemoteActions.GetAreasWithAccessByUser}',
+                GetPendingQueueAlignments: '{!$RemoteAction.TPRemoteActions.GetPendingQueueAlignments}',
+                GetQueueForUser: '{!$RemoteAction.TPRemoteActions.GetQueueForUser}'
+            },
+            Labels: {
+                // Product Name
+                HomeScreen_Header_TerritoryPlanningProductName: '{!JSENCODE($Label.HomeScreen_Header_TerritoryPlanningProductName)}',
+
+                // Home Screen Navigation
+                HomeScreen_NavigationTabs_Home: '{!JSENCODE($Label.HomeScreen_NavigationTabs_Home)}',
+                HomeScreen_NavigationTabs_DataSets: '{!JSENCODE($Label.HomeScreen_NavigationTabs_DataSets)}',
+                HomeScreen_NavigationTabs_Alignments: '{!JSENCODE($Label.HomeScreen_NavigationTabs_Alignments)}',
+                HomeScreen_NavigationTabs_Settings: '{!JSENCODE($Label.HomeScreen_NavigationTabs_Settings)}',
+                
+                // Home Page
+                Homepage_PageHeader_PageTitle: '{!JSENCODE($Label.Homepage_PageHeader_PageTitle)}',
+                Homepage_PageHeader_CreateButton: '{!JSENCODE($Label.Homepage_PageHeader_CreateButton)}',
+                Homepage_PageHeader_CreateMenuAlignment: '{!JSENCODE($Label.Homepage_PageHeader_CreateMenuAlignment)}',
+                Homepage_PageHeader_CreateMenuDataSet: '{!JSENCODE($Label.Homepage_PageHeader_CreateMenuDataSet)}',
+                Homepage_PendingApprovalsCard_Title: '{!JSENCODE($Label.Homepage_PendingApprovalsCard_Title)}',
+                Homepage_PendingApprovalsCard_Description: '{!JSENCODE($Label.Homepage_PendingApprovalsCard_Description)}',
+                Homepage_PendingApprovalsCard_EmptyText: '{!JSENCODE($Label.Homepage_PendingApprovalsCard_EmptyText)}',
+                Homepage_AlignmentsCard_Title: '{!JSENCODE($Label.Homepage_AlignmentsCard_Title)}',
+                Homepage_AlignmentsCard_LoadingText: '{!JSENCODE($Label.Homepage_AlignmentsCard_LoadingText)}',
+                Homepage_DataSetsCard_Title: '{!JSENCODE($Label.Homepage_DataSetsCard_Title)}',
+                Homepage_DataSetsCard_LoadingText: '{!JSENCODE($Label.Homepage_DataSetsCard_LoadingText)}',
+                Homepage_LearningCenterCard_Title: '{!JSENCODE($Label.Homepage_LearningCenterCard_Title)}',
+                Homepage_LearningCenterCard_Description: '{!JSENCODE($Label.Homepage_LearningCenterCard_Description)}',
+                Homepage_SessionExpired_ErrorToast_Message: '{!JSENCODE($Label.Homepage_SessionExpired_ErrorToast_Message)}',
+                Homepage_ContainerSet_ErrorToast_Message: '{!JSENCODE($Label.Homepage_ContainerSet_ErrorToast_Message)}',
+                Homepage_ActivityCard_HistoryTabLabel: '{!JSENCODE($Label.Homepage_ActivityCard_HistoryTabLabel)}',
+                Homepage_ActivityCard_CommentsTabLabel: '{!JSENCODE($Label.Homepage_ActivityCard_CommentsTabLabel)}',
+                Homepage_HistoryTab_PicklistLabel: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistLabel)}',
+                Homepage_HistoryTab_RefreshButton: '{!JSENCODE($Label.Homepage_HistoryTab_RefreshButton)}',
+                Homepage_HistoryTab_ExpandAllButton: '{!JSENCODE($Label.Homepage_HistoryTab_ExpandAllButton)}',
+                Homepage_HistoryTab_NoHistoryFound: '{!JSENCODE($Label.Homepage_HistoryTab_NoHistoryFound)}',
+                Homepage_HistoryTab_NoMoreHistory: '{!JSENCODE($Label.Homepage_HistoryTab_NoMoreHistory)}',
+                Homepage_HistoryTab_PicklistAlignmentUpdate: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAlignmentUpdate)}',
+                Homepage_HistoryTab_PicklistAll: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAll)}',
+                Homepage_HistoryTab_PicklistOptimizedFocus: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistOptimizedFocus)}',
+                Homepage_HistoryTab_PicklistImportFromCSV: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistImportFromCSV)}',
+                Homepage_HistoryTab_PicklistAddFromCSV: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAddFromCSV)}',
+                Homepage_HistoryTab_PicklistEstimateTravelTime: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistEstimateTravelTime)}',
+                Homepage_HistoryTab_PicklistAlignmentDetailsUpdate: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAlignmentDetailsUpdate)}',
+                Homepage_HistoryTab_PicklistAlignmentSharingChange: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAlignmentSharingChange)}',
+                Homepage_HistoryTab_PicklistApprovalStatus: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistApprovalStatus)}',
+                Homepage_HistoryTab_PicklistPlanScenario: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPlanScenario)}',
+                Homepage_HistoryTab_PicklistPublishtoCSV: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoCSV)}',
+                Homepage_HistoryTab_PicklistPublishtoETM: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoETM)}',
+                Homepage_HistoryTab_PicklistPublishtoMaps: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoMaps)}',
+                Homepage_HistoryTab_PicklistPublishtoSalesforceFields: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoSalesforceFields)}',
+                Homepage_HistoryTab_PicklistPublishtoPDF: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoPDF)}',
+                Homepage_HistoryTab_PicklistPublishtoFSL: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistPublishtoFSL)}',
+                Homepage_HistoryTab_PicklistAddNewArea: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAddNewArea)}',
+                Homepage_HistoryTab_PicklistAreaOwnerChange: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistAreaOwnerChange)}',
+                Homepage_HistoryTab_PicklistRestoreSnapshot: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistRestoreSnapshot)}',
+                Homepage_HistoryTab_PicklistOwnerChanged: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistOwnerChanged)}',
+                Homepage_HistoryTab_PicklistClone: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistClone)}',
+                Homepage_HistoryTab_PicklistSnapshot: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistSnapshot)}',
+                Homepage_HistoryTab_PicklistCalculatedAttributes: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistCalculatedAttributes)}',
+                Homepage_HistoryTab_PicklistBulkRunRules: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistBulkRunRules)}',
+                Homepage_HistoryTab_PicklistUpdateAreaRule: '{!JSENCODE($Label.Homepage_HistoryTab_PicklistUpdateAreaRule)}',
+                Homepage_HistoryTab_UserUpdatedAlignment: '{!JSENCODE($Label.Homepage_HistoryTab_UserUpdatedAlignment)}',
+                Homepage_HistoryTab_UserOptimizedFocus: '{!JSENCODE($Label.Homepage_HistoryTab_UserOptimizedFocus)}',
+                Homepage_HistoryTab_UserUpdatedAlignmentDetails: '{!JSENCODE($Label.Homepage_HistoryTab_UserUpdatedAlignmentDetails)}',
+                Homepage_HistoryTab_UserImportedCSV: '{!JSENCODE($Label.Homepage_HistoryTab_UserImportedCSV)}',
+                Homepage_HistoryTab_UserAddedCSV: '{!JSENCODE($Label.Homepage_HistoryTab_UserAddedCSV)}',
+                Homepage_HistoryTab_UserEstimatedTravelTime: '{!JSENCODE($Label.Homepage_HistoryTab_UserEstimatedTravelTime)}',
+                Homepage_HistoryTab_UserChangedAlignmentSharing: '{!JSENCODE($Label.Homepage_HistoryTab_UserChangedAlignmentSharing)}',
+                Homepage_HistoryTab_UserChangedApprovalStatus: '{!JSENCODE($Label.Homepage_HistoryTab_UserChangedApprovalStatus)}',
+                Homepage_HistoryTab_UserPlannedScenario: '{!JSENCODE($Label.Homepage_HistoryTab_UserPlannedScenario)}',
+                Homepage_HistoryTab_UserPublishedtoCSV: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoCSV)}',
+                Homepage_HistoryTab_UserPublishedtoETM: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoETM)}',
+                Homepage_HistoryTab_UserPublishedtoMaps: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoMaps)}',
+                Homepage_HistoryTab_UserPublishedtoSalesforceFields: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoSalesforceFields)}',
+                Homepage_HistoryTab_UserPublishedtoPDF: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoPDF)}',
+                Homepage_HistoryTab_UserPublishedtoFSL: '{!JSENCODE($Label.Homepage_HistoryTab_UserPublishedtoFSL)}',
+                Homepage_HistoryTab_UserChangedOwnership: '{!JSENCODE($Label.Homepage_HistoryTab_UserChangedOwnership)}',
+                Homepage_HistoryTab_UserCloned: '{!JSENCODE($Label.Homepage_HistoryTab_UserCloned)}',
+                Homepage_HistoryTab_UserTookSnapshot: '{!JSENCODE($Label.Homepage_HistoryTab_UserTookSnapshot)}',
+                Homepage_HistoryTab_UserCalculatedAttribute: '{!JSENCODE($Label.Homepage_HistoryTab_UserCalculatedAttribute)}',
+                Homepage_HistoryTab_UserAddedNewArea: '{!JSENCODE($Label.Homepage_HistoryTab_UserAddedNewArea)}',
+                Homepage_HistoryTab_UserAreaOwnerChanged: '{!JSENCODE($Label.Homepage_HistoryTab_UserAreaOwnerChanged)}',
+                Homepage_HistoryTab_UserRestoreSnapshot: '{!JSENCODE($Label.Homepage_HistoryTab_UserRestoreSnapshot)}',
+                Homepage_HistoryTab_BulkRunRules: '{!JSENCODE($Label.Homepage_HistoryTab_BulkRunRules)}',
+                Homepage_HistoryTab_UpdateAreaRules: '{!JSENCODE($Label.Homepage_HistoryTab_UpdateAreaRules)}',
+                Homepage_HistoryTab_LoadingText: '{!JSENCODE($Label.Homepage_HistoryTab_LoadingText)}',
+                Homepage_HistoryTab_EmptyStateHeading: '{!JSENCODE($Label.Homepage_HistoryTab_EmptyStateHeading)}',
+                Homepage_HistoryTab_EmptyStateBody: '{!JSENCODE($Label.Homepage_HistoryTab_EmptyStateBody)}',
+                Homepage_RecentDatasets_ViewAllButton: '{!JSENCODE($Label.Homepage_RecentDatasets_ViewAllButton)}',
+                Homepage_RecentDatasets_EmptyStateHeader: '{!JSENCODE($Label.Homepage_RecentDatasets_EmptyStateHeader)}',
+                Homepage_RecentDatasets_EmptyStateHelpTextDataset: '{!JSENCODE($Label.Homepage_RecentDatasets_EmptyStateHelpTextDataset)}',
+                Homepage_RecentDatasets_CreateButton: '{!JSENCODE($Label.Homepage_RecentDatasets_CreateButton)}',
+                Homepage_LearningCenter_HelpTopicsTitle: '{!JSENCODE($Label.Homepage_LearningCenter_HelpTopicsTitle)}',
+                Homepage_LearningCenter_TrailblazerCommunityLink: '{!JSENCODE($Label.Homepage_LearningCenter_TrailblazerCommunityLink)}',
+                Homepage_LearningCenter_SalesforceHelpLink: '{!JSENCODE($Label.Homepage_LearningCenter_SalesforceHelpLink)}',
+                Homepage_LearningCenter_TrailheadLink: '{!JSENCODE($Label.Homepage_LearningCenter_TrailheadLink)}',
+                Homepage_LearningCenter_ReleaseNotesTitle: '{!JSENCODE($Label.Homepage_LearningCenter_ReleaseNotesTitle)}',
+                Homepage_LearningCenter_Summer23Link: '{!JSENCODE($Label.Homepage_LearningCenter_Summer23Link)}',
+                Homepage_LearningCenter_Winter24Link: '{!JSENCODE($Label.Homepage_LearningCenter_Winter24Link)}',
+                Homepage_LearningCenter_Spring23Link: '{!JSENCODE($Label.Homepage_LearningCenter_Spring23Link)}',
+
+                // alignment data set component
+                AlignmentDataSetView_Alignment_Name: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Name)}',
+                AlignmentDataSetView_Alignment_CreatedDate: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_CreatedDate)}',
+                AlignmentDataSetView_Alignment_CreatedBy: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_CreatedBy)}',
+                AlignmentDataSetView_Alignment_LastUpdated: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_LastUpdated)}',
+                AlignmentDataSetView_Alignment_LastUpdatedBy: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_LastUpdatedBy)}',
+                AlignmentDataSetView_Alignment_Status: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Status)}',
+                AlignmentDataSetView_Alignment_Launch: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Launch)}',
+                AlignmentDataSetView_Alignment_AnalyzeCompare: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_AnalyzeCompare)}',
+                AlignmentDataSetView_Alignment_Share: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Share)}',
+                AlignmentDataSetView_Alignment_Edit: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Edit)}',
+                AlignmentDataSetView_Alignment_Clone: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Clone)}',
+                AlignmentDataSetView_Alignment_Delete: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Delete)}',
+                AlignmentDataSetView_Alignment_ScreenshotAssistiveText: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_ScreenshotAssistiveText)}',
+                AlignmentDataSetView_Alignment_Dataset: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Dataset)}',
+                AlignmentDataSetView_Alignment_CreatedDate: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_CreatedDate)}',
+                AlignmentDataSetView_Alignment_CreatedBy: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_CreatedBy)}',
+                AlignmentDataSetView_Alignment_LastModifiedDate: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_LastModifiedDate)}',
+                AlignmentDataSetView_Alignment_LastModifiedBy: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_LastModifiedBy)}',
+                AlignmentDataSetView_Alignment_SharedWith: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_SharedWith)}',
+                AlignmentDataSetView_Alignment_Status: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Status)}',
+                AlignmentDataSetView_DataSet_Name: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Name)}',
+                AlignmentDataSetView_DataSet_CreatedDate: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_CreatedDate)}',
+                AlignmentDataSetView_DataSet_CreatedBy: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_CreatedBy)}',
+                AlignmentDataSetView_DataSet_LastModified: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_LastModified)}',
+                AlignmentDataSetView_DataSet_LastModifiedBy: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_LastModifiedBy)}',
+                AlignmentDataSetView_DataSet_Sharedwith: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Sharedwith)}',
+                AlignmentDataSetView_DataSet_AlignmentCount: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_AlignmentCount)}',
+                AlignmentDataSetView_DataSet_AddAlignment: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_AddAlignment)}',
+                AlignmentDataSetView_ContainerSet_Invalid: '{!JSENCODE($Label.AlignmentDataSetView_ContainerSet_Invalid)}',
+                AlignmentDataSetView_SunsetPopover_Header: '{!JSENCODE($Label.AlignmentDataSetView_SunsetPopover_Header)}',
+                AlignmentDataSetView_Alignment_ContainerSet_Invalid: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_ContainerSet_Invalid)}',
+                AlignmentDataSetView_DataSet_Share: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Share)}',
+                AlignmentDataSetView_DataSet_Edit: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Edit)}',
+                AlignmentDataSetView_DataSet_Clone: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Clone)}',
+                AlignmentDataSetView_DataSet_Archive: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Archive)}',
+                AlignmentDataSetView_DataSet_Unarchive: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Unarchive)}',
+                AlignmentDataSetView_DataSet_Delete: '{!JSENCODE($Label.AlignmentDataSetView_DataSet_Delete)}',
+                AlignmentDataSetView_OverflowMenu_ShowMore: '{!JSENCODE($Label.AlignmentDataSetView_OverflowMenu_ShowMore)}',
+                AlignmentDataSetView_Alignment_Processing: '{!JSENCODE($Label.AlignmentDataSetView_Alignment_Processing)}',
+                AlignmentDataSetView_Dataset_Processing: '{!JSENCODE($Label.AlignmentDataSetView_Dataset_Processing)}',
+                AlignmentDataSetView_ErrorPopover_Header: '{!JSENCODE($Label.AlignmentDataSetView_ErrorPopover_Header)}',
+                AlignmentDataSetView_ErrorPopover_Body: '{!JSENCODE($Label.AlignmentDataSetView_ErrorPopover_Body)}',
+                AlignmentDataSetView_DuplicateUnitsPopover_Header: '{!JSENCODE($Label.AlignmentDataSetView_DuplicateUnitsPopover_Header)}',
+                AlignmentDataSetView_DuplicateUnitsPopover_DataSource: '{!JSENCODE($Label.AlignmentDataSetView_DuplicateUnitsPopover_DataSource)}',
+                AlignmentDataSetView_DuplicateUnitsPopover_UnitCount: '{!JSENCODE($Label.AlignmentDataSetView_DuplicateUnitsPopover_UnitCount)}',
+                AlignmentDataSetView_ApprovalStatusLabel_Approved: '{!JSENCODE($Label.AlignmentDataSetView_ApprovalStatusLabel_Approved)}',
+                AlignmentDataSetView_ApprovalStatusLabel_Pending: '{!JSENCODE($Label.AlignmentDataSetView_ApprovalStatusLabel_Pending)}',
+                AlignmentDataSetView_ApprovalStatusLabel_NotSubmitted: '{!JSENCODE($Label.AlignmentDataSetView_ApprovalStatusLabel_NotSubmitted)}',
+                AlignmentDataSetView_TableSortBy: '{!JSENCODE($Label.AlignmentDataSetView_TableSortBy)}',
+                Homepage_RecentAlignments_ViewAllButton: '{!JSENCODE($Label.Homepage_RecentAlignments_ViewAllButton)}',
+                Homepage_RecentAlignments_EmptyStateHeader: '{!JSENCODE($Label.Homepage_RecentAlignments_EmptyStateHeader)}',
+                Homepage_RecentAlignments_EmptyStateHelpTextAlignment: '{!JSENCODE($Label.Homepage_RecentAlignments_EmptyStateHelpTextAlignment)}',
+                Homepage_RecentAlignments_EmptyStateHelpTextDataset: '{!JSENCODE($Label.Homepage_RecentAlignments_EmptyStateHelpTextDataset)}',
+                Homepage_RecentAlignments_CreateButton: '{!JSENCODE($Label.Homepage_RecentAlignments_CreateButton)}',
+                PendingApprovals_Table_Alignment: '{!JSENCODE($Label.PendingApprovals_Table_Alignment)}',
+                PendingApprovals_Table_SubmittedBy: '{!JSENCODE($Label.PendingApprovals_Table_SubmittedBy)}',
+                PendingApprovals_Table_SubmittedDate: '{!JSENCODE($Label.PendingApprovals_Table_SubmittedDate)}',
+                PendingApprovals_Table_Dataset: '{!JSENCODE($Label.PendingApprovals_Table_Dataset)}',
+                PendingApprovals_Table_Launch: '{!JSENCODE($Label.PendingApprovals_Table_Launch)}',
+                
+                // Comments Tab
+                CommentsTab_Header_SortButton: '{!JSENCODE($Label.CommentsTab_Header_SortButton)}',
+                CommentsTab_Header_ActionMenuLatestPosts: '{!JSENCODE($Label.CommentsTab_Header_ActionMenuLatestPosts)}',
+                CommentsTab_Header_ActionMenuMostRecentActivity: '{!JSENCODE($Label.CommentsTab_Header_ActionMenuMostRecentActivity)}',
+                CommentsTab_Header_SearchLabel: '{!JSENCODE($Label.CommentsTab_Header_SearchLabel)}',
+                CommentsTab_Header_RefreshButton: '{!JSENCODE($Label.CommentsTab_Header_RefreshButton)}',
+                CommentsTab_CommentBody_Title: '{!JSENCODE($Label.CommentsTab_CommentBody_Title)}',
+                CommentsTab_CommentBody_SingleComment: '{!JSENCODE($Label.CommentsTab_CommentBody_SingleComment)}',
+                CommentsTab_CommentBody_NumberofComments: '{!JSENCODE($Label.CommentsTab_CommentBody_NumberofComments)}',
+                CommentsTab_CommentBody_ExpandButton: '{!JSENCODE($Label.CommentsTab_CommentBody_ExpandButton)}',
+                CommentsTab_CommentBody_UserAvatarTitle: '{!JSENCODE($Label.CommentsTab_CommentBody_UserAvatarTitle)}',
+                CommentsTab_CommentBody_ExpandCounter: '{!JSENCODE($Label.CommentsTab_CommentBody_ExpandCounter)}',
+                CommentsTab_CommentsBody_EmptyStateText: '{!JSENCODE($Label.CommentsTab_CommentsBody_EmptyStateText)}',
+                Homepage_CommentsTab_NoCommentsFound: '{!JSENCODE($Label.Homepage_CommentsTab_NoCommentsFound)}',
+                Homepage_CommentsTab_NoMoreComments: '{!JSENCODE($Label.Homepage_CommentsTab_NoMoreComments)}',
+                Homepage_CommentsTab_LoadingText: '{!JSENCODE($Label.Homepage_CommentsTab_LoadingText)}',
+                
+                // Data sets page
+                DataSetsPage_PageHeader_CreateButton: '{!JSENCODE($Label.DataSetsPage_PageHeader_CreateButton)}',
+                DataSetsPage_PageHeader_NumberofDataSets: '{!JSENCODE($Label.DataSetsPage_PageHeader_NumberofDataSets)}',
+                DataSetsPage_PageHeader_UpdatingInProgress: '{!JSENCODE($Label.DataSetsPage_PageHeader_UpdatingInProgress)}',
+                DataSetsPage_PageHeader_UpdatedTime: '{!JSENCODE($Label.DataSetsPage_PageHeader_UpdatedTime)}',
+                DataSetsPage_PageHeader_SearchLabel: '{!JSENCODE($Label.DataSetsPage_PageHeader_SearchLabel)}',
+                DataSetsPage_PageHeader_RefreshButton: '{!JSENCODE($Label.DataSetsPage_PageHeader_RefreshButton)}',
+                DataSetsPage_PageHeader_AllDatasets: '{!JSENCODE($Label.DataSetsPage_PageHeader_AllDatasets)}',
+                DataSetsPage_PageHeader_ActiveDatasets: '{!JSENCODE($Label.DataSetsPage_PageHeader_ActiveDatasets)}',
+                DataSetsPage_PageHeader_ArchivedDatasets: '{!JSENCODE($Label.DataSetsPage_PageHeader_ArchivedDatasets)}',
+                DataSetsPage_EmptyState_Header: '{!JSENCODE($Label.DataSetsPage_EmptyState_Header)}',
+                DataSetsPage_EmptyState_Text: '{!JSENCODE($Label.DataSetsPage_EmptyState_Text)}',
+                DataSetsPage_EmptyStateNoResults_Text: '{!JSENCODE($Label.DataSetsPage_EmptyStateNoResults_Text)}',
+                DataSetsPage_PageHeader_NumberofDaysSinceUpdate: '{!JSENCODE($Label.DataSetsPage_PageHeader_NumberofDaysSinceUpdate)}',
+                DataSetsPage_PageHeader_NumberofHoursSinceUpdate: '{!JSENCODE($Label.DataSetsPage_PageHeader_NumberofHoursSinceUpdate)}',
+                DataSetsPage_PageHeader_NumberofMinutesSinceUpdate: '{!JSENCODE($Label.DataSetsPage_PageHeader_NumberofMinutesSinceUpdate)}',
+                DataSetsPage_PageHeader_NumberofSecondsSinceUpdate: '{!JSENCODE($Label.DataSetsPage_PageHeader_NumberofSecondsSinceUpdate)}',
+                DataSetsPage_DatasetList_LoadingText: '{!JSENCODE($Label.DataSetsPage_DatasetList_LoadingText)}',
+                DataSetsPage_DatasetList_NoMoreDatasets: '{!JSENCODE($Label.DataSetsPage_DatasetList_NoMoreDatasets)}',
+                DataSetsPage_DatasetList_NoDatasetsFound: '{!JSENCODE($Label.DataSetsPage_DatasetList_NoDatasetsFound)}',
+                DataSetsPage_DatasetList_NoMoreSearchResults: '{!JSENCODE($Label.DataSetsPage_DatasetList_NoMoreSearchResults)}',
+                DataSetsPage_DatasetList_NoSearchResults:  '{!JSENCODE($Label.DataSetsPage_DatasetList_NoSearchResults)}',
+
+                // Alignments Page
+                AlignmentsPage_PageHeader_CreateButton: '{!JSENCODE($Label.AlignmentsPage_PageHeader_CreateButton)}',
+                AlignmentsPage_PageHeader_NumberofAlignments: '{!JSENCODE($Label.AlignmentsPage_PageHeader_NumberofAlignments)}',
+                AlignmentsPage_PageHeader_UpdatingInProgress: '{!JSENCODE($Label.AlignmentsPage_PageHeader_UpdatingInProgress)}',
+                AlignmentsPage_PageHeader_UpdatedTime: '{!JSENCODE($Label.AlignmentsPage_PageHeader_UpdatedTime)}',
+                AlignmentsPage_PageHeader_SearchLabel: '{!JSENCODE($Label.AlignmentsPage_PageHeader_SearchLabel)}',
+                AlignmentsPage_PageHeader_RefreshButton: '{!JSENCODE($Label.AlignmentsPage_PageHeader_RefreshButton)}',
+                AlignmentsPage_PageHeader_AllAlignments: '{!JSENCODE($Label.AlignmentsPage_PageHeader_AllAlignments)}',
+                AlignmentsPage_PageHeader_ActiveAlignments: '{!JSENCODE($Label.AlignmentsPage_PageHeader_ActiveAlignments)}',
+                AlignmentsPage_PageHeader_ArchivedAlignments: '{!JSENCODE($Label.AlignmentsPage_PageHeader_ArchivedAlignments)}',
+                AlignmentsPage_EmptyState_Header: '{!JSENCODE($Label.AlignmentsPage_EmptyState_Header)}',
+                AlignmentsPage_EmptyState_Text: '{!JSENCODE($Label.AlignmentsPage_EmptyState_Text)}',
+                AlignmentsPage_PageHeader_CardLayout: '{!JSENCODE($Label.AlignmentsPage_PageHeader_CardLayout)}',
+                AlignmentsPage_PageHeader_ListLayout: '{!JSENCODE($Label.AlignmentsPage_PageHeader_ListLayout)}',
+                AlignmentsPage_AlignmentList_LoadingText: '{!JSENCODE($Label.AlignmentsPage_AlignmentList_LoadingText)}',
+                AlignmentsPage_AlignmentList_NoMoreAlignments: '{!JSENCODE($Label.AlignmentsPage_AlignmentList_NoMoreAlignments)}',
+                AlignmentsPage_AlignmentList_NoAlignmentsWereFound: '{!JSENCODE($Label.AlignmentsPage_AlignmentList_NoAlignmentsWereFound)}',
+                AlignmentsPage_AlignmentList_NoMoreSearchResults: '{!JSENCODE($Label.AlignmentsPage_AlignmentList_NoMoreSearchResults)}',
+                AlignmentsPage_AlignmentList_NoSearchResults: '{!JSENCODE($Label.AlignmentsPage_AlignmentList_NoSearchResults)}',
+
+                // Data Set Details
+                DataSetDetails_PageHeader_Title: '{!JSENCODE($Label.DataSetDetails_PageHeader_Title)}',
+                DataSetDetails_PageHeader_AddAlignmentButton: '{!JSENCODE($Label.DataSetDetails_PageHeader_AddAlignmentButton)}',
+                DataSetDetails_PageHeader_Share: '{!JSENCODE($Label.DataSetDetails_PageHeader_Share)}',
+                DataSetDetails_PageHeader_Edit: '{!JSENCODE($Label.DataSetDetails_PageHeader_Edit)}',
+                DataSetDetails_Tabs_DetailsLabel: '{!JSENCODE($Label.DataSetDetails_Tabs_DetailsLabel)}',
+                DataSetDetails_Tabs_AlignmentLabel: '{!JSENCODE($Label.DataSetDetails_Tabs_AlignmentLabel)}',
+                DataSetDetails_DetailFields_Name: '{!JSENCODE($Label.DataSetDetails_DetailFields_Name)}',
+                DataSetDetails_DetailFields_Description: '{!JSENCODE($Label.DataSetDetails_DetailFields_Description)}',
+                DataSetDetails_DetailFields_CreatedDate: '{!JSENCODE($Label.DataSetDetails_DetailFields_CreatedDate)}',
+                DataSetDetails_DetailFields_CreatedBy: '{!JSENCODE($Label.DataSetDetails_DetailFields_CreatedBy)}',
+                DataSetDetails_DetailFields_LastModified: '{!JSENCODE($Label.DataSetDetails_DetailFields_LastModified)}',
+                DataSetDetails_DetailFields_LastModifiedBy: '{!JSENCODE($Label.DataSetDetails_DetailFields_LastModifiedBy)}',
+                DataSetDetails_DetailFields_SharedWith: '{!JSENCODE($Label.DataSetDetails_DetailFields_SharedWith)}',
+                DataSetDetails_DetailFields_NumberofAlignments: '{!JSENCODE($Label.DataSetDetails_DetailFields_NumberofAlignments)}',
+                DataSetDetails_DataSourcesSection_Title: '{!JSENCODE($Label.DataSetDetails_DataSourcesSection_Title)}',
+                DataSetDetails_DataSourcesSection_DataSourceType: '{!JSENCODE($Label.DataSetDetails_DataSourcesSection_DataSourceType)}',
+                DataSetDetails_DataSourcesSection_AssignmentField: '{!JSENCODE($Label.DataSetDetails_DataSourcesSection_AssignmentField)}',
+                DataSetDetails_DataSourcesSection_Placeholder: '{!JSENCODE($Label.DataSetDetails_DataSourcesSection_Placeholder)}',
+                DataSetDetails_DataSourcesSection_EditQueryButton: '{!JSENCODE($Label.DataSetDetails_DataSourcesSection_EditQueryButton)}',
+                DataSetDetails_BoundariesSection_Title: '{!JSENCODE($Label.DataSetDetails_BoundariesSection_Title)}',
+                DataSetDetails_BoundariesSection_Boundary: '{!JSENCODE($Label.DataSetDetails_BoundariesSection_Boundary)}',
+                DataSetDetails_BoundariesSection_Country: '{!JSENCODE($Label.DataSetDetails_BoundariesSection_Country)}',
+                DataSetDetails_BoundariesSection_Vintage: '{!JSENCODE($Label.DataSetDetails_BoundariesSection_Vintage)}',
+                
+                // Edit Query Modal
+                DataSetDetails_EditQueryModal_Title: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_Title)}',
+                DataSetDetails_EditQueryModal_FiltersPicklist: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FiltersPicklist)}',
+                DataSetDetails_EditQueryModal_FilterPopoverField: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FilterPopoverField)}',
+                DataSetDetails_EditQueryModal_FilterPopoverOperatorCombobox: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FilterPopoverOperatorCombobox)}',
+                DataSetDetails_EditQueryModal_FilterPopoverValueInput: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FilterPopoverValueInput)}',
+                DataSetDetails_EditQueryModal_FilterPopoverDismissButton: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FilterPopoverDismissButton)}',
+                DataSetDetails_EditQueryModal_FilterPopoverApplyButton: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_FilterPopoverApplyButton)}',
+                DataSetDetails_EditQueryModal_WhereTextArea: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_WhereTextArea)}',
+                DataSetDetails_EditQueryModal_TestQueryButton: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_TestQueryButton)}',
+                DataSetDetails_EditQueryModal_QueryResults: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_QueryResults)}',
+                DataSetDetails_EditQueryModal_QueryResultsError: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_QueryResultsError)}',
+                DataSetDetails_EditQueryModal_CancelButton: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_CancelButton)}',
+                DataSetDetails_EditQueryModal_DoneButton: '{!JSENCODE($Label.DataSetDetails_EditQueryModal_DoneButton)}',
+                
+                // Alignment Details
+                AlignmentDetails_PageHeader_Title: '{!JSENCODE($Label.AlignmentDetails_PageHeader_Title)}',
+                AlignmentDetails_PageHeader_OpenAlignmentButton: '{!JSENCODE($Label.AlignmentDetails_PageHeader_OpenAlignmentButton)}',
+                AlignmentDetails_PageHeader_ShareButton: '{!JSENCODE($Label.AlignmentDetails_PageHeader_ShareButton)}',
+                AlignmentDetails_PageHeader_AnalyzeCompareButton: '{!JSENCODE($Label.AlignmentDetails_PageHeader_AnalyzeCompareButton)}',
+                AlignmentDetails_PageHeader_EditButton: '{!JSENCODE($Label.AlignmentDetails_PageHeader_EditButton)}',
+                AlignmentDetails_Body_DetailsTitle: '{!JSENCODE($Label.AlignmentDetails_Body_DetailsTitle)}',
+                AlignmentDetails_DetailFields_Name: '{!JSENCODE($Label.AlignmentDetails_DetailFields_Name)}',
+                AlignmentDetails_DetailFields_Description: '{!JSENCODE($Label.AlignmentDetails_DetailFields_Description)}',
+                AlignmentDetails_DetailFields_CreatedDate: '{!JSENCODE($Label.AlignmentDetails_DetailFields_CreatedDate)}',
+                AlignmentDetails_DetailFields_CreatedBy: '{!JSENCODE($Label.AlignmentDetails_DetailFields_CreatedBy)}',
+                AlignmentDetails_DetailFields_LastModified: '{!JSENCODE($Label.AlignmentDetails_DetailFields_LastModified)}',
+                AlignmentDetails_DetailFields_LastModifiedBy: '{!JSENCODE($Label.AlignmentDetails_DetailFields_LastModifiedBy)}',
+                AlignmentDetails_DetailFields_SharedWith: '{!JSENCODE($Label.AlignmentDetails_DetailFields_SharedWith)}',
+                AlignmentDetails_DetailFields_DatasetName: '{!JSENCODE($Label.AlignmentDetails_DetailFields_DatasetName)}',
+                AlignmentDetails_DetailFields_ApprovalStatus: '{!JSENCODE($Label.AlignmentDetails_DetailFields_ApprovalStatus)}',
+                
+                // Clone Modal
+                CloneModal_Body_EditName: '{!JSENCODE($Label.CloneModal_Body_EditName)}',
+                CloneModal_Body_ObjectName: '{!JSENCODE($Label.CloneModal_Body_ObjectName)}',
+                CloneModal_Body_DoneButton: '{!JSENCODE($Label.CloneModal_Body_DoneButton)}',
+                CloneModal_Body_CopyOf: '{!JSENCODE($Label.CloneModal_Body_CopyOf)}',
+                CloneModal_Header_AlignmentTitle: '{!JSENCODE($Label.CloneModal_Header_AlignmentTitle)}',
+                CloneModal_Header_DataSetTitle: '{!JSENCODE($Label.CloneModal_Header_DataSetTitle)}',
+                CloneModal_Body_LegendLabel: '{!JSENCODE($Label.CloneModal_Body_LegendLabel)}',
+                CloneModal_Body_ShareCheckboxLabel: '{!JSENCODE($Label.CloneModal_Body_ShareCheckboxLabel)}',
+                CloneModal_Body_RefreshCheckboxLabel: '{!JSENCODE($Label.CloneModal_Body_RefreshCheckboxLabel)}',
+                CloneModal_Body_CloneSpecificAlignmentsCheckboxLabel: '{!JSENCODE($Label.CloneModal_Body_CloneSpecificAlignmentsCheckboxLabel)}',
+                CloneModal_Footer_CancelButton: '{!JSENCODE($Label.CloneModal_Footer_CancelButton)}',
+                CloneModal_Footer_CloneButton: '{!JSENCODE($Label.CloneModal_Footer_CloneButton)}',
+                
+                // Delete Modal
+                DeleteModal_Header_AlignmentTitle: '{!JSENCODE($Label.DeleteModal_Header_AlignmentTitle)}',
+                DeleteModal_Header_DataSetTitle: '{!JSENCODE($Label.DeleteModal_Header_DataSetTitle)}',
+                DeleteModal_Body_ConfirmationText: '{!JSENCODE($Label.DeleteModal_Body_ConfirmationText)}',
+                DeleteModal_Footer_CancelButton: '{!JSENCODE($Label.DeleteModal_Footer_CancelButton)}',
+                DeleteModal_Footer_DeleteButton: '{!JSENCODE($Label.DeleteModal_Footer_DeleteButton)}',
+
+                // Archive Modal
+                ArchiveModal_Header_DataSetTitle: '{!JSENCODE($Label.ArchiveModal_Header_DataSetTitle)}',
+                ArchiveModal_Body_ConfirmationText: '{!JSENCODE($Label.ArchiveModal_Body_ConfirmationText)}',
+                ArchiveModal_Footer_CancelButton: '{!JSENCODE($Label.ArchiveModal_Footer_CancelButton)}',
+                ArchiveModal_Footer_ArchiveButton: '{!JSENCODE($Label.ArchiveModal_Footer_ArchiveButton)}',
+                
+                // Unarchive Modal
+                UnarchiveModal_Header_DataSetTitle: '{!JSENCODE($Label.UnarchiveModal_Header_DataSetTitle)}',
+                UnarchiveModal_Body_ConfirmationText: '{!JSENCODE($Label.UnarchiveModal_Body_ConfirmationText)}',
+                UnarchiveModal_Footer_CancelButton: '{!JSENCODE($Label.UnarchiveModal_Footer_CancelButton)}',
+                UnarchiveModal_Footer_UnarchiveButton: '{!JSENCODE($Label.UnarchiveModal_Footer_UnarchiveButton)}',
+
+
+                Homescreen_Toasts_CloseButton: '{!JSENCODE($Label.Homescreen_Toasts_CloseButton)}',
+
+                // from tp
+                // Create Data Set Details Modal
+                CreateDataSetTypeModal_Body_TPV1_Title: '{!JSENCODE($Label.CreateDataSetTypeModal_Body_TPV1_Title)}',
+                CreateDataSetTypeModal_Body_TPV1_Description: '{!JSENCODE($Label.CreateDataSetTypeModal_Body_TPV1_Description)}',
+                CreateDataSetTypeModal_Body_TPV2_Title: '{!JSENCODE($Label.CreateDataSetTypeModal_Body_TPV2_Title)}',
+                CreateDataSetTypeModal_Body_TPV2_Description: '{!JSENCODE($Label.CreateDataSetTypeModal_Body_TPV2_Description)}',
+                CreateDataSetDetailsModal_Header_ModalTitle: '{!JSENCODE($Label.CreateDataSetDetailsModal_Header_ModalTitle)}',
+                CreateDataSetDetailsModal_Body_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_InstructionScopedNotificationHeader)}',
+                CreateDataSetDetailsModal_Body_InstructionScopedNotification: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_InstructionScopedNotification)}',
+                CreateDataSetDetailsModal_Body_DataSetNameInput: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetNameInput)}',
+                CreateDataSetDetailsModal_Body_DataSetDescriptionTextArea: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetDescriptionTextArea)}',
+                CreateDataSetDetailsModal_Body_DataSetBoundariesSelection: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetBoundariesSelection)}',
+                CreateDataSetDetailsModal_Body_DataSetBoundariesPlaceholderText: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetBoundariesPlaceholderText)}',
+                CreateDataSetDetailsModal_Body_DataSetBoundariesClearSearchIcon: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetBoundariesClearSearchIcon)}',
+                CreateDataSetDetailsModal_Body_DataSetBoundariesProcessingPill: '{!JSENCODE($Label.CreateDataSetDetailsModal_Body_DataSetBoundariesProcessingPill)}',
+                CreateDataSetDetailsModal_Footer_CancelButton: '{!JSENCODE($Label.CreateDataSetDetailsModal_Footer_CancelButton)}',
+                CreateDataSetDetailsModal_Footer_NextButton: '{!JSENCODE($Label.CreateDataSetDetailsModal_Footer_NextButton)}',
+                CreateDataSetDetailsModal_FilterBoundaries_Title: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundaries_Title)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_PopoverHeader: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_PopoverHeader)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesInContextSearch: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesInContextSearch)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesClearSearchButton: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesClearSearchButton)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesClearAll: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesClearAll)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesSelectAll: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_BoundariesSelectAll)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_CancelButton: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_CancelButton)}',
+                CreateDataSetDetailsModal_FilterBoundariesPopover_ApplyButton: '{!JSENCODE($Label.CreateDataSetDetailsModal_FilterBoundariesPopover_ApplyButton)}',
+                CreateDataSetDetailsModal_ContainerSetSelector_Points: '{!JSENCODE($Label.CreateDataSetDetailsModal_ContainerSetSelector_Points)}',
+                CreateDataSetDetailsModal_RequiredInputErrorPopover_PopoverHeader: '{!JSENCODE($Label.CreateDataSetDetailsModal_RequiredInputErrorPopover_PopoverHeader)}',
+                CreateDataSetDetailsModal_RequiredInputErrorPopover_ProvideNameErrorText: '{!JSENCODE($Label.CreateDataSetDetailsModal_RequiredInputErrorPopover_ProvideNameErrorText)}',
+                CreateDataSetDetailsModal_RequiredInputErrorPopover_MaxCharactersErrorText: '{!JSENCODE($Label.CreateDataSetDetailsModal_RequiredInputErrorPopover_MaxCharactersErrorText)}',
+                CreateDataSetDetailsModal_Country_Level_Container: '{!JSENCODE($Label.CreateDataSetDetailsModal_Country_Level_Container)}',
+
+                // Create Data Set Data Sources Modal
+                CreateDataSetDataSourcesModal_Header_ModalTitle: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Header_ModalTitle)}',
+                CreateDataSetDataSourcesModal_Body_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_InstructionScopedNotificationHeader)}',
+                CreateDataSetDataSourcesModal_Body_InstructionScopedNotification: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_InstructionScopedNotification)}',
+                CreateDataSetDataSourcesModal_Body_SearchReportsInput: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SearchReportsInput)}',
+                CreateDataSetDataSourcesModal_Body_BuildObjectQueryButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_BuildObjectQueryButton)}',
+                CreateDataSetDataSourcesModal_Body_BuildTerritoryModelQueryButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_BuildTerritoryModelQueryButton)}',
+                CreateDataSetDataSourcesModal_Body_SelectedReportsCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SelectedReportsCount)}',
+                CreateDataSetDataSourcesModal_Body_SelectedQueriesCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SelectedQueriesCount)}',
+                CreateDataSetDataSourcesModal_Body_RecordCountLoading: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_RecordCountLoading)}',
+                CreateDataSetDataSourcesModal_Body_SelectedRecordCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SelectedRecordCount)}',
+                CreateDataSetDataSourcesModal_Body_AvailableRecordCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_AvailableRecordCount)}',
+                CreateDataSetDataSourcesModal_Body_QueriesHeader: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_QueriesHeader)}',
+                CreateDataSetDataSourcesModal_BodyQueriesDataTable_IncludeinDataSet: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyQueriesDataTable_IncludeinDataSet)}',
+                CreateDataSetDataSourcesModal_BodyQueriesDataTable_QueryName: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyQueriesDataTable_QueryName)}',
+                CreateDataSetDataSourcesModal_BodyQueriesDataTable_SOQLQuery: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyQueriesDataTable_SOQLQuery)}',
+                CreateDataSetDataSourcesModal_BodyQueriesDataTable_RecordCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyQueriesDataTable_RecordCount)}',
+                CreateDataSetDataSourcesModal_BodyQueriesDataTable_AggregateRecords: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyQueriesDataTable_AggregateRecords)}',
+                CreateDataSetDataSourcesModal_Body_SelectQueryCheckboxButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SelectQueryCheckboxButton)}',
+                CreateDataSetDataSourcesModal_Body_QueryOverflowMenuAssistiveText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_QueryOverflowMenuAssistiveText)}',
+                CreateDataSetDataSourcesModal_Body_QueryOverflowMenuEdit: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_QueryOverflowMenuEdit)}',
+                CreateDataSetDataSourcesModal_Body_QueryOverflowMenuDelete: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_QueryOverflowMenuDelete)}',
+                CreateDataSetDataSourcesModal_Body_ReportsHeader: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_ReportsHeader)}',
+                CreateDataSetDataSourcesModal_Body_LoadingRecordsMessage: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_LoadingRecordsMessage)}',
+                CreateDataSetDataSourcesModal_Processing_LoadingContainers: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Processing_LoadingContainers)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_IncludeinDataSet: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_IncludeinDataSet)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_ReportName: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_ReportName)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_Description: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_Description)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_Folder: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_Folder)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_Owner: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_Owner)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_RecordCount: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_RecordCount)}',
+                CreateDataSetDataSourcesModal_BodyReportsDataTable_AggregateRecords: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_BodyReportsDataTable_AggregateRecords)}',
+                CreateDataSetDataSourcesModal_Body_SelectReportCheckboxButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Body_SelectReportCheckboxButton)}',
+                CreateDataSetDataSourcesModal_Footer_PreviousButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Footer_PreviousButton)}',
+                CreateDataSetDataSourcesModal_Footer_CancelButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Footer_CancelButton)}',
+                CreateDataSetDataSourcesModal_Footer_SaveButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Footer_SaveButton)}',
+                CreateDataSetDataSourcesModal_Footer_NextButton: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_Footer_NextButton)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_PopoverHeader: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_PopoverHeader)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_NoDataSourceErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_NoDataSourceErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_ExceededMaxErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_ExceededMaxErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_ReportLoadingErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_ReportLoadingErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_EmptyReportErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_EmptyReportErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_MaxNumberOfAttemptsReportErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_MaxNumberOfAttemptsReportErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_ReportNotAvailableErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_ReportNotAvailableErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_GenericReportErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_GenericReportErrorText)}',
+                CreateDataSetDataSourcesModal_WarningTooltip_ExceededRecommendedWarningText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_WarningTooltip_ExceededRecommendedWarningText)}',
+                CreateDataSetDataSourcesModal_ErrorTooltip_ExceededMaxErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorTooltip_ExceededMaxErrorText)}',
+                CreateDataSetDataSourcesModal_ErrorPopover_ReportMaxErrorText: '{!JSENCODE($Label.CreateDataSetDataSourcesModal_ErrorPopover_ReportMaxErrorText)}',
+
+                // Build Object Query Modal
+                BuildObjectQueryModal_Header_ModalTitle: '{!JSENCODE($Label.BuildObjectQueryModal_Header_ModalTitle)}',
+                BuildObjectQueryModal_Body_InstructionScopedNotificationHeader: '{!JSENCODE($Label.BuildObjectQueryModal_Body_InstructionScopedNotificationHeader)}',
+                BuildObjectQueryModal_Body_InstructionScopedNotification: '{!JSENCODE($Label.BuildObjectQueryModal_Body_InstructionScopedNotification)}',
+                BuildObjectQueryModal_Body_QueryNameInput: '{!JSENCODE($Label.BuildObjectQueryModal_Body_QueryNameInput)}',
+                BuildObjectQueryModal_Body_ObjectCombobox: '{!JSENCODE($Label.BuildObjectQueryModal_Body_ObjectCombobox)}',
+                BuildObjectQueryModal_Body_ViewAllSalesforceObjectsCheckboxToggle: '{!JSENCODE($Label.BuildObjectQueryModal_Body_ViewAllSalesforceObjectsCheckboxToggle)}',
+                BuildObjectQueryModal_Body_FieldsLookup: '{!JSENCODE($Label.BuildObjectQueryModal_Body_FieldsLookup)}',
+                BuildObjectQueryModal_Body_FiltersLookup: '{!JSENCODE($Label.BuildObjectQueryModal_Body_FiltersLookup)}',
+                BuildObjectQueryModal_Body_SelectedFiltersCardAssistiveText: '{!JSENCODE($Label.BuildObjectQueryModal_Body_SelectedFiltersCardAssistiveText)}',
+                BuildObjectQueryModal_Body_SelectedFiltersCardDeleteButton: '{!JSENCODE($Label.BuildObjectQueryModal_Body_SelectedFiltersCardDeleteButton)}',
+                BuildObjectQueryModal_CreateFilterPopover_Label: '{!JSENCODE($Label.BuildObjectQueryModal_CreateFilterPopover_Label)}',
+                BuildObjectQueryModal_CreateFilterPopover_OperatorCombobox: '{!JSENCODE($Label.BuildObjectQueryModal_CreateFilterPopover_OperatorCombobox)}',
+                BuildObjectQueryModal_CreateFilterPopover_ValueInput: '{!JSENCODE($Label.BuildObjectQueryModal_CreateFilterPopover_ValueInput)}',
+                BuildObjectQueryModal_CreateFilterPopover_DismissButton: '{!JSENCODE($Label.BuildObjectQueryModal_CreateFilterPopover_DismissButton)}',
+                BuildObjectQueryModal_CreateFilterPopover_ApplyButton: '{!JSENCODE($Label.BuildObjectQueryModal_CreateFilterPopover_ApplyButton)}',
+                BuildObjectQueryModal_Body_SOQLQueryInput: '{!JSENCODE($Label.BuildObjectQueryModal_Body_SOQLQueryInput)}',
+                BuildObjectQueryModal_Body_SOQLQueryInputLive: '{!JSENCODE($Label.BuildObjectQueryModal_Body_SOQLQueryInputLive)}',
+                BuildObjectQueryModal_Body_TestQueryButton: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryButton)}',
+                BuildObjectQueryModal_Body_TestQueryProcessing: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryProcessing)}',
+                BuildObjectQueryModal_Body_TestQuerySuccess: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQuerySuccess)}',
+                BuildObjectQueryModal_Body_TestQueryGeneralError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryGeneralError)}',
+                BuildObjectQueryModal_Body_TestQueryFromNotFoundError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryFromNotFoundError)}',
+                BuildObjectQueryModal_Body_TestQueryEmptyError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryEmptyError)}',
+                BuildObjectQueryModal_Body_TestQueryNoRecordsError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryNoRecordsError)}',
+                BuildObjectQueryModal_Body_TestQueryCountResponseError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_TestQueryCountResponseError)}',         
+                BuildObjectQueryModal_Body_OperatorOptionEquals: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionEquals)}',
+                BuildObjectQueryModal_Body_OperatorOptionNotEqualTo: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionNotEqualTo)}',
+                BuildObjectQueryModal_Body_OperatorOptionLessThan: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionLessThan)}',
+                BuildObjectQueryModal_Body_OperatorOptionGreaterThan: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionGreaterThan)}',
+                BuildObjectQueryModal_Body_OperatorOptionLessOrEqual: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionLessOrEqual)}',
+                BuildObjectQueryModal_Body_OperatorOptionGreaterOrEqual: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionGreaterOrEqual)}',
+                BuildObjectQueryModal_Body_OperatorOptionIn: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionIn)}',
+                BuildObjectQueryModal_Body_OperatorOptionNotIn: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionNotIn)}',
+                BuildObjectQueryModal_Body_OperatorOptionLike: '{!JSENCODE($Label.BuildObjectQueryModal_Body_OperatorOptionLike)}',
+                BuildObjectQueryModal_Body_FailedSFObjectRetrievalMessageError: '{!JSENCODE($Label.BuildObjectQueryModal_Body_FailedSFObjectRetrievalMessageError)}',
+                BuildObjectQueryModal_Footer_PreviousButton: '{!JSENCODE($Label.BuildObjectQueryModal_Footer_PreviousButton)}',
+                BuildObjectQueryModal_Footer_CancelButton: '{!JSENCODE($Label.BuildObjectQueryModal_Footer_CancelButton)}',
+                BuildObjectQueryModal_Footer_SaveButton: '{!JSENCODE($Label.BuildObjectQueryModal_Footer_SaveButton)}',
+                BuildObjectQueryModal_ErrorPopover_PopoverHeader: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_PopoverHeader)}',
+                BuildObjectQueryModal_ErrorPopover_NoQuerySpecifiedErrorText: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_NoQuerySpecifiedErrorText)}',
+                BuildObjectQueryModal_ErrorPopover_ProvideNameErrorText: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_ProvideNameErrorText)}',
+                BuildObjectQueryModal_ErrorPopover_NoFieldsErrorText: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_NoFieldsErrorText)}',
+                BuildObjectQueryModal_ErrorPopover_NotSupportedErrorText: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_NotSupportedErrorText)}',
+                BuildObjectQueryModal_ErrorPopover_PolymorphicErrorText: '{!JSENCODE($Label.BuildObjectQueryModal_ErrorPopover_PolymorphicErrorText)}',
+
+                // Build Territory Model Query Modal
+                BuildTerritoryModelQueryModal_Header_ModalTitle: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Header_ModalTitle)}',
+                BuildTerritoryModelQueryModal_Body_TerritoryModelCombobox: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritoryModelCombobox)}',
+                BuildTerritoryModelQueryModal_Body_TerritoryLookup: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritoryLookup)}',
+                BuildTerritoryModelQueryModal_Body_TerritoryLookupRemoveImported: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritoryLookupRemoveImported)}',
+                BuildTerritoryModelQueryModal_Body_TerritorySearchIcon: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritorySearchIcon)}',
+                BuildTerritoryModelQueryModal_Body_TerritoryClearIcon: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritoryClearIcon)}',
+                BuildTerritoryModelQueryModal_Body_TerritorySearchPlaceholderText: '{!JSENCODE($Label.BuildTerritoryModelQueryModal_Body_TerritorySearchPlaceholderText)}',
+
+                // Create Data Set Unit Configuration Modal
+                CreateDataSetUnitConfigurationModal_Header_ModalHeader: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Header_ModalHeader)}',
+                CreateDataSetUnitConfigurationModal_Header_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Header_InstructionScopedNotificationHeader)}',
+                CreateDataSetUnitConfigurationModal_Header_InstructionScopedNotification: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Header_InstructionScopedNotification)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitTypeNameInput: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitTypeNameInput)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitTypeNameHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitTypeNameHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitIDFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitIDFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitIDFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitIDFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitAssignmentFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitAssignmentFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitAssignmentFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitAssignmentFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_ImportObjectFieldsToggle: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_ImportObjectFieldsToggle)}',
+                CreateDataSetUnitConfigurationModal_Body_ImportObjectFieldsToggleHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_ImportObjectFieldsToggleHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitNameFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitNameFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_UnitNameFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_UnitNameFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_PointBoundaryFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_PointBoundaryFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_PointBoundaryFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_PointBoundaryFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_BoundaryFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_BoundaryFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_BoundaryFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_BoundaryFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_CountryFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_CountryFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_CountryFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_CountryFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_LatitudeFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_LatitudeFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_LongitudeFieldCombobox: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_LongitudeFieldCombobox)}',
+                CreateDataSetUnitConfigurationModal_Body_LatLongFieldComboboxHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_LatLongFieldComboboxHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsGroupLabel: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsGroupLabel)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsDuelingPicklist: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsDuelingPicklist)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveSelectionLeft: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveSelectionLeft)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldMoveLeftHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldMoveLeftHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveSelectionRight: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveSelectionRight)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveRightHelpText: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsMoveRightHelpText)}',
+                CreateDataSetUnitConfigurationModal_Body_Available: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_Available)}',
+                CreateDataSetUnitConfigurationModal_Body_SelectAll: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_SelectAll)}',
+                CreateDataSetUnitConfigurationModal_Body_None: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_None)}',
+                CreateDataSetUnitConfigurationModal_Body_AttributeFieldsSelected: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_AttributeFieldsSelected)}',
+                CreateDataSetUnitConfigurationModal_Body_ImportfromCSVButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_ImportfromCSVButton)}',
+                CreateDataSetUnitConfigurationModal_Footer_PreviousButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Footer_PreviousButton)}',
+                CreateDataSetUnitConfigurationModal_Footer_CancelButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Footer_CancelButton)}',
+                CreateDataSetUnitConfigurationModal_Footer_NextButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Footer_NextButton)}',
+                CreateDataSetUnitConfigurationModal_Footer_FinishButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Footer_FinishButton)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_UnitIdError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_UnitIdError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_UnitNameError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_UnitNameError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_LatitudeError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_LatitudeError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_LongitudeError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_LongitudeError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_PointBoundaryError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_PointBoundaryError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_BoundaryError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_BoundaryError)}',
+                CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_CountryError: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_RequiredInputErrorPopover_CountryError)}',
+
+                // Import From CSV Modal
+                CreateDataSetUnitConfigurationModal_Body_ImportfromCSVButton: '{!JSENCODE($Label.CreateDataSetUnitConfigurationModal_Body_ImportfromCSVButton)}',
+                CreateDataSetUnitImportFromCSVModal_Header_ModalHeader: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Header_ModalHeader)}',
+                CreateDataSetUnitImportFromCSVModal_Body_CSVUploadGroupLabel: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_CSVUploadGroupLabel)}',
+                CreateDataSetUnitImportFromCSVModal_Body_InstructionText: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_InstructionText)}',
+                CreateDataSetUnitImportFromCSVModal_Body_CSVFileSelector: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_CSVFileSelector)}',
+                CreateDataSetUnitImportFromCSVModal_Body_Upload: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_Upload)}',
+                CreateDataSetUnitImportFromCSVModal_Body_OrDropFile: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_OrDropFile)}',
+                CreateDataSetUnitImportFromCSVModal_Body_UniqueIDGroupLabel: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_UniqueIDGroupLabel)}',
+                CreateDataSetUnitImportFromCSVModal_Body_InstructionTextArea: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_InstructionTextArea)}',
+                CreateDataSetUnitImportFromCSVModal_Body_UnitIDCombobox: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_UnitIDCombobox)}',
+                CreateDataSetUnitImportFromCSVModal_Body_InstructionTextSuggested: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_InstructionTextSuggested)}',
+                CreateDataSetUnitImportFromCSVModal_Body_ColumnHeadersGroupLabel: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_ColumnHeadersGroupLabel)}',
+                CreateDataSetUnitImportFromCSVModal_Body_DataLimitWarning: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_DataLimitWarning)}',
+                CreateDataSetUnitImportFromCSVModal_Body_DuplicateWarning: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_DuplicateWarning)}',
+                CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableImport: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableImport)}',
+                CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableColumnHeader: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableColumnHeader)}',
+                CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableAttributeName: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableAttributeName)}',
+                CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableAttributeDataType: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_ColumnDataTableAttributeDataType)}',
+                CreateDataSetUnitImportFromCSVModal_Body_FieldLookup: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_FieldLookup)}',
+                CreateDataSetUnitImportFromCSVModal_Body_FieldsImported: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_FieldsImported)}',
+                CreateDataSetUnitImportFromCSVModal_Body_FieldsOverwritten: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_FieldsOverwritten)}',
+                CreateDataSetUnitImportFromCSVModal_Body_FieldsCreated: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_FieldsCreated)}',
+                CreateDataSetUnitImportFromCSVModal_Body_MatchFields: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_MatchFields)}',
+                CreateDataSetUnitImportFromCSVModal_Body_Status: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_Status)}',
+                CreateDataSetUnitImportFromCSVModal_Body_NewField: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_NewField)}',
+                CreateDataSetUnitImportFromCSVModal_Body_FormattingHyperlink: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Body_FormattingHyperlink)}',
+                CreateDataSetUnitImportFromCSVModal_Footer_ImportButton: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Footer_ImportButton)}',
+                CreateDataSetUnitImportFromCSVModal_Footer_CancelButton: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_Footer_CancelButton)}',
+                CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_ColumnHeaderError: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_ColumnHeaderError)}',
+                CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_InvalidNameError: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_InvalidNameError)}',
+                CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_InvalidAttribute: '{!JSENCODE($Label.CreateDataSetUnitImportFromCSVModal_RequiredInputErrorPopover_InvalidAttribute)}',
+                CreateAlignmentDetailsModal_RequiredInputErrorPopover_AlignmentNameError: '{!JSENCODE($Label.CreateAlignmentDetailsModal_RequiredInputErrorPopover_AlignmentNameError)}',
+                CreateAlignmentDetailsModal_RequiredInputErrorPopover_AlignmentNameLengthError: '{!JSENCODE($Label.CreateAlignmentDetailsModal_RequiredInputErrorPopover_AlignmentNameLengthError)}',
+                // Create Alignment Details Modal
+                CreateAlignmentDetailsModal_Header_ModalHeader: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Header_ModalHeader)}',
+                CreateAlignmentDetailsModal_Header_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Header_InstructionScopedNotificationHeader)}',
+                CreateAlignmentDetailsModal_Header_InstructionScopedNotification: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Header_InstructionScopedNotification)}',
+                CreateAlignmentDetailsModal_Body_AlignmentNameInput: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Body_AlignmentNameInput)}',
+                CreateAlignmentDetailsModal_Body_AlignmentDescriptionTextArea: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Body_AlignmentDescriptionTextArea)}',
+                CreateAlignmentDetailsModal_Body_DetailsUpdateHistoryRecord_Name: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Body_DetailsUpdateHistoryRecord_Name)}',
+                CreateAlignmentDetailsModal_EditDetails_HistoryRecord_NameChange: '{!JSENCODE($Label.CreateAlignmentDetailsModal_EditDetails_HistoryRecord_NameChange)}',
+                CreateAlignmentDetailsModal_EditDetails_HistoryRecord_DescriptionChange: '{!JSENCODE($Label.CreateAlignmentDetailsModal_EditDetails_HistoryRecord_DescriptionChange)}',
+                CreateAlignmentDetailsModal_EditDetails_HistoryRecord_AddAreas: '{!JSENCODE($Label.CreateAlignmentDetailsModal_EditDetails_HistoryRecord_AddAreas)}',
+                CreateAlignmentDetailsModal_EditDetails_HistoryRecord_RemoveAreas: '{!JSENCODE($Label.CreateAlignmentDetailsModal_EditDetails_HistoryRecord_RemoveAreas)}',
+                CreateAlignmentDetailsModal_EditDetails_HistoryRecord_ChangeAreas: '{!JSENCODE($Label.CreateAlignmentDetailsModal_EditDetails_HistoryRecord_ChangeAreas)}',
+                CreateAlignmentDetailsModal_Footer_CancelButton: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Footer_CancelButton)}',
+                CreateAlignmentDetailsModal_Footer_PreviousButton: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Footer_PreviousButton)}',
+                CreateAlignmentDetailsModal_Footer_NextButton: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Footer_NextButton)}',
+                CreateAlignmentDetailsModal_Footer_SaveButton: '{!JSENCODE($Label.CreateAlignmentDetailsModal_Footer_SaveButton)}',
+
+                // Create Alignment Territory Model Modal
+                CreateAlignmentTerritoryModelModal_Header_ModalHeader: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_ModalHeader)}',
+                CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationHeader)}',
+                CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationTop: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationTop)}',
+                CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationBottom: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_InstructionScopedNotificationBottom)}',
+                CreateAlignmentTerritoryModelModal_Header_PopulateSampleButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_PopulateSampleButton)}',
+                CreateAlignmentTerritoryModelModal_Header_ImportModelButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Header_ImportModelButton)}',
+                CreateAlignmentTerritoryModelModal_ImportPopover_CancelButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportPopover_CancelButton)}',
+                CreateAlignmentTerritoryModelModal_ImportPopover_ImportButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportPopover_ImportButton)}',
+                CreateAlignmentTerritoryModelModal_ImportPopover_NextButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportPopover_NextButton)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_ImportingData: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_ImportingData)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_PopoverHeader: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_PopoverHeader)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupAlignment: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupAlignment)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupSFTerrModel: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupSFTerrModel)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupDataSet: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupDataSet)}',
+                CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupCSV: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportModelPopover_RadioGroupCSV)}',
+                CreateAlignmentTerritoryModelModal_ImportAlignmentPopover_AlignmentLookup: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportAlignmentPopover_AlignmentLookup)}',
+                CreateAlignmentTerritoryModelModal_ImportAlignmentPopover_LookupPlaceholder: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportAlignmentPopover_LookupPlaceholder)}',
+                CreateAlignmentTerritoryModelModal_ImportAlignmentPop_ImpBoundaryAssignCheck: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportAlignmentPop_ImpBoundaryAssignCheck)}',
+                CreateAlignmentTerritoryModelModal_ImportTerritoryModelPopover_TerrModelCombo: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportTerritoryModelPopover_TerrModelCombo)}',
+                CreateAlignmentTerritoryModelModal_ImportTerritoryModelPopover_TerritoryTree: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportTerritoryModelPopover_TerritoryTree)}',
+                CreateAlignmentTerritoryModelModal_ImportTerritoryModelPop_RoleInTerritoryCombo: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportTerritoryModelPop_RoleInTerritoryCombo)}',
+                CreateAlignmentTerritoryModelModal_ImportTerritoryModelPop_RolePlaceholder: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportTerritoryModelPop_RolePlaceholder)}',
+                CreateAlignmentTerritoryModelModal_ImportDataSetPopover_DataSourceCombobox: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportDataSetPopover_DataSourceCombobox)}',
+                CreateAlignmentTerritoryModelModal_ImportDataSetPopover_AreaLevelsSlider: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportDataSetPopover_AreaLevelsSlider)}',
+                CreateAlignmentTerritoryModelModal_ImportDataSetPopover_LevelFieldLookup: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportDataSetPopover_LevelFieldLookup)}',
+                CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVFileSelector: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVFileSelector)}',
+                CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVUploadButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVUploadButton)}',
+                CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVorDropFile: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportCSVPopover_CSVorDropFile)}',
+                CreateAlignmentTerritoryModelModal_ImportCSVPopover_AreaColumnLookup: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportCSVPopover_AreaColumnLookup)}',
+                CreateAlignmentTerritoryModelModal_ImportCSVPopover_ParentColumnLookup: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ImportCSVPopover_ParentColumnLookup)}',
+                CreateAlignmentTerritoryModelModal_Body_TerritoryModelLevelHeader: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_TerritoryModelLevelHeader)}',
+                CreateAlignmentTerritoryModelModal_Body_EditAreaNameButtonIcon: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_EditAreaNameButtonIcon)}',
+                CreateAlignmentTerritoryModelModal_Popover_RemoveLevelPopover: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Popover_RemoveLevelPopover)}',
+                CreateAlignmentTerritoryModelModal_Popover_RemoveLevelHelpText: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Popover_RemoveLevelHelpText)}',
+                CreateAlignmentTerritoryModelModal_Popover_CancelButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Popover_CancelButton)}',
+                CreateAlignmentTerritoryModelModal_Popover_DeleteButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Popover_DeleteButton)}',
+                CreateAlignmentTerritoryModelModal_Body_AddChildAreasButtonIcon: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_AddChildAreasButtonIcon)}',
+                CreateAlignmentTerritoryModelModal_Body_DeleteAreaButtonIcon: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_DeleteAreaButtonIcon)}',
+                CreateAlignmentTerritoryModelModal_Body_EditAreaNameInput: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_EditAreaNameInput)}',
+                CreateAlignmentTerritoryModelModal_Body_ShareAreaNameInput: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ShareAreaNameInput)}',
+                CreateAlignmentTerritoryModelModal_Body_FailedImport: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_FailedImport)}',
+                CreateAlignmentTerritoryModelModal_Body_FailedImportDownload: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_FailedImportDownload)}',
+                CreateAlignmentTerritoryModelModal_Body_DownloadingImportLog: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_DownloadingImportLog)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorDuplicate: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorDuplicate)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorLong: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorLong)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorBlank: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorBlank)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorHierarchyLimit: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorHierarchyLimit)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorInvalidParent: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorInvalidParent)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorSameAreaParent: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorSameAreaParent)}',
+                CreateAlignmentTerritoryModelModal_Body_ImportErrorAreaLimit: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Body_ImportErrorAreaLimit)}',
+                CreateAlignmentTerritoryModelModal_AddChildAreasPopover_PopoverHeader: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_AddChildAreasPopover_PopoverHeader)}',
+                CreateAlignmentTerritoryModelModal_AddChildAreasPopover_CancelButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_AddChildAreasPopover_CancelButton)}',
+                CreateAlignmentTerritoryModelModal_AddChildAreasPopover_SaveButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_AddChildAreasPopover_SaveButton)}',
+                CreateAlignmentTerritoryModelModal_Footer_NextButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Footer_NextButton)}',
+                CreateAlignmentTerritoryModelModal_Footer_CancelButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Footer_CancelButton)}',
+                CreateAlignmentTerritoryModelModal_Footer_PreviousButton: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_Footer_PreviousButton)}',
+                CreateAlignmentTerritoryModelModal_ErrorPopover_MaximumLevels: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_ErrorPopover_MaximumLevels)}',
+                CreateAlignmentTerritoryModelModal_RequiredInputErrorPopover_NoAreaserror: '{!JSENCODE($Label.CreateAlignmentTerritoryModelModal_RequiredInputErrorPopover_NoAreaserror)}',
+                CreateAlignmentModal_ImportTerritoryModelPopover_IncludeAssignmentRules: '{!JSENCODE($Label.CreateAlignmentModal_ImportTerritoryModelPopover_IncludeAssignmentRules)}',
+                CreateAlignmentModal_ImportTerritoryModelPopover_BoundaryAssignmentField: '{!JSENCODE($Label.CreateAlignmentModal_ImportTerritoryModelPopover_BoundaryAssignmentField)}',
+                CreateAlignmentModal_ImportTerritoryModelPopover_BoundaryAssignmentFieldTooltip: '{!JSENCODE($Label.CreateAlignmentModal_ImportTerritoryModelPopover_BoundaryAssignmentFieldTooltip)}',
+                CreateAlignmentModal_ImportTerritoryModelPopover_LockManualAssignments: '{!JSENCODE($Label.CreateAlignmentModal_ImportTerritoryModelPopover_LockManualAssignments)}',
+                CreateAlignmentModal_AlignmentHierarchyTree_MissingRuleCriteriaFields: '{!JSENCODE($Label.CreateAlignmentModal_AlignmentHierarchyTree_MissingRuleCriteriaFields)}',
+                CreateAlignmentModal_AlignmentHierarchyTree_NoRulesToImport: '{!JSENCODE($Label.CreateAlignmentModal_AlignmentHierarchyTree_NoRulesToImport)}',
+                BrowserModal_DeleteDataSetPopover_PopoverHeader: '{!JSENCODE($Label.BrowserModal_DeleteDataSetPopover_PopoverHeader)}',
+                BrowserModal_DeleteDataSetPopover_ConfirmationText: '{!JSENCODE($Label.BrowserModal_DeleteDataSetPopover_ConfirmationText)}',
+                BrowserModal_DeleteDataSetPopover_CancelButton: '{!JSENCODE($Label.BrowserModal_DeleteDataSetPopover_CancelButton)}',
+                BrowserModal_DeleteDataSetPopover_DeleteButton: '{!JSENCODE($Label.BrowserModal_DeleteDataSetPopover_DeleteButton)}',
+                BrowserModal_DeleteAlignmentPopover_PopoverHeader: '{!JSENCODE($Label.BrowserModal_DeleteAlignmentPopover_PopoverHeader)}',
+                BrowserModal_DeleteAreaPopover_PopoverHeader: '{!JSENCODE($Label.BrowserModal_DeleteAreaPopover_PopoverHeader)}',
+                BrowserModal_DeleteAlignmentPopover_ConfirmationText: '{!JSENCODE($Label.BrowserModal_DeleteAlignmentPopover_ConfirmationText)}',
+                BrowserModal_DeleteAlignmentPopover_CancelButton: '{!JSENCODE($Label.BrowserModal_DeleteAlignmentPopover_CancelButton)}',
+                BrowserModal_DeleteAlignmentPopover_DeleteButton: '{!JSENCODE($Label.BrowserModal_DeleteAlignmentPopover_DeleteButton)}',
+                AlignmentBuilder_LoadingMessage_ImportingData: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_ImportingData)}',
+                AlignmentBuilder_LoadingMessage_DownloadingErrorLog: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_DownloadingErrorLog)}',
+                AlignmentBuilder_LoadingMessage_BuildingDataSource: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_BuildingDataSource)}',
+                AlignmentBuilder_LoadingMessage_SavingDataset: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_SavingDataset)}',
+                AlignmentBuilder_LoadingMessage_CreatingAssignments: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_CreatingAssignments)}',
+                AlignmentBuilder_LoadingMessage_SendImportedData: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_SendImportedData)}',
+                AlignmentBuilder_LoadingMessage_SendImportedDataProgress: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_SendImportedDataProgress)}',
+                AlignmentBuilder_LoadingMessage_SavingAlignment: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_SavingAlignment)}',
+                AlignmentBuilder_LoadingMessage_CollectingUnitDataProgress: '{!JSENCODE($Label.AlignmentBuilder_LoadingMessage_CollectingUnitDataProgress)}',
+                AlignmentBuilder_QueryBuilder_ErrorMessage: '{!JSENCODE($Label.AlignmentBuilder_QueryBuilder_ErrorMessage)}',
+                AlignmentBuilder_SaveDataset_ErrorMessage: '{!JSENCODE($Label.AlignmentBuilder_SaveDataset_ErrorMessage)}',
+                AlignmentBuilder_CloneDataset_MissingExternalAttributeError: '{!JSENCODE($Label.AlignmentBuilder_CloneDataset_MissingExternalAttributeError)}',
+                AlignmentBuilder_EditAlignment_SuccessMessage: '{!JSENCODE($Label.AlignmentBuilder_EditAlignment_SuccessMessage)}',
+                AlignmentBuilder_Legend_LegendActionsCombobox_UnlockUnits: '{!JSENCODE($Label.AlignmentBuilder_Legend_LegendActionsCombobox_UnlockUnits)}',
+                AlignmentBuilder_AddChildAreasPopover_AreaLevelsSlider: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_AreaLevelsSlider)}',
+                AlignmentBuilder_AddChildAreasPopover_AreaLevelNameFieldLabel: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_AreaLevelNameFieldLabel)}',
+                AlignmentBuilder_AddChildAreasPopover_LevelNameInput: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_LevelNameInput)}',
+                AlignmentBuilder_AddChildAreasPopover_NumberOfAreasCounter: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_NumberOfAreasCounter)}',
+                AlignmentBuilder_AddChildAreasPopover_NumberOfAreasPerCounter: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_NumberOfAreasPerCounter)}',
+                AlignmentBuilder_AddChildAreasPopover_NumberOfAreasDecrement: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_NumberOfAreasDecrement)}',
+                AlignmentBuilder_AddChildAreasPopover_NumberOfAreasIncrement: '{!JSENCODE($Label.AlignmentBuilder_AddChildAreasPopover_NumberOfAreasIncrement)}',
+                AlignmentBuilder_Map_HardLimitErrorMessage: '{!JSENCODE($Label.AlignmentBuilder_Map_HardLimitErrorMessage)}',
+
+                // Create Alignment Assignment Modal
+                CreateAlignmentAssignmentModal_Body_AssignmentHeader: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_AssignmentHeader)}',
+                CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationHeader: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationHeader)}',
+                CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationTop: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationTop)}',
+                CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationBottom: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Header_InstructionScopedNotificationBottom)}',
+                CreateAlignmentAssignmentModal_Body_AreaOwnerLookup: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_AreaOwnerLookup)}',
+                CreateAlignmentAssignmentModal_Body_AreaOwnerLookupPlaceholder: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_AreaOwnerLookupPlaceholder)}',
+                CreateAlignmentAssignmentModal_Body_UnitAssignmentInput: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_UnitAssignmentInput)}',
+                CreateAlignmentAssignmentModal_Body_PollAsyncRetryLimitError: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_PollAsyncRetryLimitError)}',
+                CreateAlignmentAssignmentModal_Body_PollAsyncUnknownError: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Body_PollAsyncUnknownError)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPopover_OptionsButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPopover_OptionsButton)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPopover_UnitTypeReadOnlyInput: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPopover_UnitTypeReadOnlyInput)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPopover_AssignmentFieldInput: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPopover_AssignmentFieldInput)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPopover_FillTerritoryNameButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPopover_FillTerritoryNameButton)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPop_FillTerritoryOwnerIDButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPop_FillTerritoryOwnerIDButton)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPopover_FillTerritoryOwnerName: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPopover_FillTerritoryOwnerName)}',
+                CreateAlignmentAssignmentModal_AssignmentOptionsPop_LeaveUnitsUnassignedCheckbox: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_AssignmentOptionsPop_LeaveUnitsUnassignedCheckbox)}',
+                CreateAlignmentAssignmentModal_Footer_AutomaticallyAssignCheckbox: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Footer_AutomaticallyAssignCheckbox)}',
+                CreateAlignmentAssignmentModal_UnassignedUnits_WarningMessage: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_UnassignedUnits_WarningMessage)}',
+                CreateAlignmentAssignmentModal_Footer_PreviousButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Footer_PreviousButton)}',
+                CreateAlignmentAssignmentModal_Footer_CancelButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Footer_CancelButton)}',
+                CreateAlignmentAssignmentModal_Footer_FinishButton: '{!JSENCODE($Label.CreateAlignmentAssignmentModal_Footer_FinishButton)}',
+
+                // Edit Data Set Modal
+                EditDataSetModal_Header_ModalHeader: '{!JSENCODE($Label.EditDataSetModal_Header_ModalHeader)}',
+                EditDataSetModal_Body_DataSetNameInput: '{!JSENCODE($Label.EditDataSetModal_Body_DataSetNameInput)}',
+                EditDataSetModal_Body_DataSetDescriptionTextArea: '{!JSENCODE($Label.EditDataSetModal_Body_DataSetDescriptionTextArea)}',
+                EditDataSetModal_Body_CreatedReadOnlyInput: '{!JSENCODE($Label.EditDataSetModal_Body_CreatedReadOnlyInput)}',
+                EditDataSetModal_Body_UpdatedReadOnlyInput: '{!JSENCODE($Label.EditDataSetModal_Body_UpdatedReadOnlyInput)}',
+                EditDataSetModal_Body_BoundariesCardwithTiles: '{!JSENCODE($Label.EditDataSetModal_Body_BoundariesCardwithTiles)}',
+                EditDataSetModal_Body_DataSourcesCardwithTiles: '{!JSENCODE($Label.EditDataSetModal_Body_DataSourcesCardwithTiles)}',
+                EditDataSetModal_Body_BoundaryText: '{!JSENCODE($Label.EditDataSetModal_Body_BoundaryText)}',
+                EditDataSetModal_Body_FilterText: '{!JSENCODE($Label.EditDataSetModal_Body_FilterText)}',
+                EditDataSetModal_Body_VintageText: '{!JSENCODE($Label.EditDataSetModal_Body_VintageText)}',
+                EditDataSetModal_Body_DataSourcesText: '{!JSENCODE($Label.EditDataSetModal_Body_DataSourcesText)}',
+                EditDataSetModal_Body_TypeNameText: '{!JSENCODE($Label.EditDataSetModal_Body_TypeNameText)}',
+                EditDataSetModal_Body_AssignmentFieldText: '{!JSENCODE($Label.EditDataSetModal_Body_AssignmentFieldText)}',
+                EditDataSetModal_Footer_CancelButton: '{!JSENCODE($Label.EditDataSetModal_Footer_CancelButton)}',
+                EditDataSetModal_Footer_ApplyButton: '{!JSENCODE($Label.EditDataSetModal_Footer_ApplyButton)}',
+                EditDataSetModal_Body_AggregatedText: '{!JSENCODE($Label.EditDataSetModal_Body_AggregatedText)}',
+                EditDataSetModal_Body_NONEText: '{!JSENCODE($Label.EditDataSetModal_Body_NONEText)}',
+
+                // Share Data Set / Alignment Modal
+                ShareDataSetModal_Header_ModalHeaderandInstruction: '{!JSENCODE($Label.ShareDataSetModal_Header_ModalHeaderandInstruction)}',
+                ShareDataSetModal_Body_AddUserLookup: '{!JSENCODE($Label.ShareDataSetModal_Body_AddUserLookup)}',
+                ShareDataSetModal_Body_IndividualAccessHeader: '{!JSENCODE($Label.ShareDataSetModal_Body_IndividualAccessHeader)}',
+                ShareDataSetModal_Body_AccessLevelCombobox: '{!JSENCODE($Label.ShareDataSetModal_Body_AccessLevelCombobox)}',
+                ShareDataSetModal_Body_AlignmentApproversHeader: '{!JSENCODE($Label.ShareDataSetModal_Body_AlignmentApproversHeader)}',
+                ShareDataSetModal_Body_DataSetandAlignmentOwnerPill: '{!JSENCODE($Label.ShareDataSetModal_Body_DataSetandAlignmentOwnerPill)}',
+                ShareDataSetModal_Body_MakeOwnerButton: '{!JSENCODE($Label.ShareDataSetModal_Body_MakeOwnerButton)}',
+                ShareDataSetModal_Body_ExplanationText: '{!JSENCODE($Label.ShareDataSetModal_Body_ExplanationText)}',
+                ShareAlignmentModal_Body_SubText: '{!JSENCODE($Label.ShareAlignmentModal_Body_SubText)}',
+                ShareAlignmentModal_Body_ShareWithText: '{!JSENCODE($Label.ShareAlignmentModal_Body_ShareWithText)}',
+                ShareAlignmentModal_Body_ManageText: '{!JSENCODE($Label.ShareAlignmentModal_Body_ManageText)}',
+                ShareDataSetModal_Footer_CancelButton: '{!JSENCODE($Label.ShareDataSetModal_Footer_CancelButton)}',
+                ShareDataSetModal_Footer_SaveButton: '{!JSENCODE($Label.ShareDataSetModal_Footer_SaveButton)}',
+                ShareDataSetModal_Footer_SharingCheckbox: '{!JSENCODE($Label.ShareDataSetModal_Footer_SharingCheckbox)}',
+                ShareDataSetModal_Footer_AccessLevelCombobox: '{!JSENCODE($Label.ShareDataSetModal_Footer_AccessLevelCombobox)}',
+                ShareAlignmentModal_Footer_LinkSharingOnLabel: '{!JSENCODE($Label.ShareAlignmentModal_Footer_LinkSharingOnLabel)}',
+                ShareAlignmentModal_Footer_LinkSharingOffLabel: '{!JSENCODE($Label.ShareAlignmentModal_Footer_LinkSharingOffLabel)}',
+                ShareAlignmentModal_Footer_LinkSharingAdditionalText: '{!JSENCODE($Label.ShareAlignmentModal_Footer_LinkSharingAdditionalText)}',
+                ShareAlignmentModal_Body_CommenterLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_CommenterLabel)}',
+                ShareAlignmentModal_Body_EditorLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_EditorLabel)}',
+                ShareAlignmentModal_Body_RemoveAccessLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_RemoveAccessLabel)}',
+                ShareAlignmentModal_Body_CommenterLabelDesc: '{!JSENCODE($Label.ShareAlignmentModal_Body_CommenterLabelDesc)}',
+                ShareAlignmentModal_Body_EditorLabelDesc: '{!JSENCODE($Label.ShareAlignmentModal_Body_EditorLabelDesc)}',
+                ShareAlignmentModal_Body_ShowLessLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_ShowLessLabel)}',
+                ShareAlignmentModal_Body_ShowMoreLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_ShowMoreLabel)}',
+                ShareAlignmentModal_Body_SelectAreasLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_SelectAreasLabel)}',
+                ShareAlignmentModal_Notification_UserHasAccessNotification: '{!JSENCODE($Label.ShareAlignmentModal_Notification_UserHasAccessNotification)}',
+                ShareAlignmentModal_Body_AreaTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_AreaTextLabel)}',
+                ShareAlignmentModal_Body_EnableFeedTrackingMessage: '{!JSENCODE($Label.ShareAlignmentModal_Body_EnableFeedTrackingMessage)}',
+                ShareAlignmentModal_Comment_AccessLevelRevoked: '{!JSENCODE($Label.ShareAlignmentModal_Comment_AccessLevelRevoked)}',
+                ShareAlignmentModal_Comment_AccessLevelChange: '{!JSENCODE($Label.ShareAlignmentModal_Comment_AccessLevelChange)}',
+                ShareAlignmentModal_Comment_GrantAccessUsers: '{!JSENCODE($Label.ShareAlignmentModal_Comment_GrantAccessUsers)}',
+                ShareAlignmentModal_Comment_GrantAccessUser: '{!JSENCODE($Label.ShareAlignmentModal_Comment_GrantAccessUser)}',
+                ShareAlignmentModal_Comment_RevokeAccessUsers: '{!JSENCODE($Label.ShareAlignmentModal_Comment_RevokeAccessUsers)}',
+                ShareAlignmentModal_Comment_RevokeAccessUser: '{!JSENCODE($Label.ShareAlignmentModal_Comment_RevokeAccessUser)}',
+                ShareAlignmentModal_Comment_RevokeTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_RevokeTextLabel)}',
+                ShareAlignmentModal_Comment_SetLevelTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_SetLevelTextLabel)}',
+                ShareAlignmentModal_Comment_PublicAccessLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_PublicAccessLabel)}',
+                ShareAlignmentModal_Comment_FromTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_FromTextLabel)}',
+                ShareAlignmentModal_Comment_ToTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_ToTextLabel)}',
+                ShareAlignmentModal_Comment_YouHaveBeenAddedLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_YouHaveBeenAddedLabel)}',
+                ShareAlignmentModal_Comment_AlignmentSharingChangeLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_AlignmentSharingChangeLabel)}',
+                ShareAlignmentModal_Comment_OwnerChangeLabel: '{!JSENCODE($Label.ShareAlignmentModal_Comment_OwnerChangeLabel)}',
+                ShareAlignmentModal_Notification_ChangesSavedNotification: '{!JSENCODE($Label.ShareAlignmentModal_Notification_ChangesSavedNotification)}',
+                ShareAlignmentModal_Body_SearchAreasPlaceholder: '{!JSENCODE($Label.ShareAlignmentModal_Body_SearchAreasPlaceholder)}',
+                ShareAlignmentModal_Body_ClearSearchTermTitle: '{!JSENCODE($Label.ShareAlignmentModal_Body_ClearSearchTermTitle)}',
+                ShareAlignmentModal_Body_ClearSearchTerm: '{!JSENCODE($Label.ShareAlignmentModal_Body_ClearSearchTerm)}',
+                ShareAlignmentModal_Body_SelectedText: '{!JSENCODE($Label.ShareAlignmentModal_Body_SelectedText)}',
+                ShareAlignmentModal_Body_NotSelectedText: '{!JSENCODE($Label.ShareAlignmentModal_Body_NotSelectedText)}',
+                ShareAlignmentModal_Body_ChildItemsText: '{!JSENCODE($Label.ShareAlignmentModal_Body_ChildItemsText)}',
+                ShareAlignmentModal_Body_ExpandNodeText: '{!JSENCODE($Label.ShareAlignmentModal_Body_ExpandNodeText)}',
+                ShareAlignmentModal_Body_RequiredTitle: '{!JSENCODE($Label.ShareAlignmentModal_Body_RequiredTitle)}',
+                ShareAlignmentModal_Body_SelectedCount: '{!JSENCODE($Label.ShareAlignmentModal_Body_SelectedCount)}',
+                ShareAlignmentModal_SelectAreasPopover_CancelButton: '{!JSENCODE($Label.ShareAlignmentModal_SelectAreasPopover_CancelButton)}',
+                ShareAlignmentModal_SelectAreasPopover_ApplyButton: '{!JSENCODE($Label.ShareAlignmentModal_SelectAreasPopover_ApplyButton)}',
+                ShareAlignmentModal_SelectAreasPopover_All: '{!JSENCODE($Label.ShareAlignmentModal_SelectAreasPopover_All)}',
+                ShareAlignmentModal_Body_AreasTextLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_AreasTextLabel)}',
+                ShareAlignmentModal_Body_AreaLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_AreaLabel)}',
+                ShareAlignmentModal_Body_AreasLabel: '{!JSENCODE($Label.ShareAlignmentModal_Body_AreasLabel)}',
+                ShareAlignmentModal_Footer_CopyLinkLabel: '{!JSENCODE($Label.ShareAlignmentModal_Footer_CopyLinkLabel)}',
+
+                // Edit Alignment Details Modal
+                EditAlignmentModal_Header_ModalHeader: '{!JSENCODE($Label.EditAlignmentModal_Header_ModalHeader)}',
+                EditAlignmentDetailsModal_Header_AlignmentHeader: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_AlignmentHeader)}',
+                EditAlignmentDetailsModal_Header_ConfirmChanges: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_ConfirmChanges)}',
+                EditAlignmentDetailsModal_Header_ModalHeader: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_ModalHeader)}',
+                EditAlignmentDetailsModal_Body_AlignmentDescription: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_AlignmentDescription)}',
+                EditAlignmentDetailsModal_Body_AlignmentNameInput: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_AlignmentNameInput)}',
+                EditAlignmentDetailsModal_Body_ImportFromLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ImportFromLabel)}',
+                EditAlignmentDetailsModal_Body_ImportModelLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ImportModelLabel)}',
+                EditAlignmentDetailsModal_Footer_CancelButton: '{!JSENCODE($Label.EditAlignmentDetailsModal_Footer_CancelButton)}',
+                EditAlignmentDetailsModal_Footer_NextButton: '{!JSENCODE($Label.EditAlignmentDetailsModal_Footer_NextButton)}',
+                EditAlignmentDetailsModal_Footer_ImportButton: '{!JSENCODE($Label.EditAlignmentDetailsModal_Footer_ImportButton)}',
+                EditAlignmentDetailsModal_LoadingText_ImportLoadingMsg: '{!JSENCODE($Label.EditAlignmentDetailsModal_LoadingText_ImportLoadingMsg)}',
+                EditAlignmentDetailsModal_Body_EditAreaNameLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_EditAreaNameLabel)}',
+                EditAlignmentDetailsModal_Body_AddChildAreasLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_AddChildAreasLabel)}',
+                EditAlignmentDetailsModal_Body_DeleteAreaLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DeleteAreaLabel)}',
+                EditAlignmentDetailsModal_Body_ShareLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ShareLabel)}',
+                EditAlignmentDetailsModal_Body_RecordsNotImportLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_RecordsNotImportLabel)}',
+                EditAlignmentDetailsModal_Body_DownloadLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DownloadLabel)}',
+                EditAlignmentDetailsModal_Body_RegionLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_RegionLabel)}',
+                EditAlignmentDetailsModal_Body_DistrictLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DistrictLabel)}',
+                EditAlignmentDetailsModal_Body_TerritoryLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_TerritoryLabel)}',
+                EditAlignmentDetailsModal_Body_RegionLabelParam: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_RegionLabelParam)}',
+                EditAlignmentDetailsModal_Body_DistrictLabelParam: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DistrictLabelParam)}',
+                EditAlignmentDetailsModal_Body_TerritoryLabelParam: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_TerritoryLabelParam)}',
+                EditAlignmentDetailsModal_Header_NoUpdatesHeading: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_NoUpdatesHeading)}',
+                EditAlignmentDetailsModal_Header_ConfirmUpdateHeading: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_ConfirmUpdateHeading)}',
+                EditAlignmentDetailsModal_Header_ConfirmUpdateSubheading: '{!JSENCODE($Label.EditAlignmentDetailsModal_Header_ConfirmUpdateSubheading)}',
+                EditAlignmentDetailsModal_Body_NameLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_NameLabel)}',
+                EditAlignmentDetailsModal_Body_DescriptionLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DescriptionLabel)}',
+                EditAlignmentDetailsModal_Body_NewLevelLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_NewLevelLabel)}',
+                EditAlignmentDetailsModal_Body_LevelIndexLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_LevelIndexLabel)}',
+                EditAlignmentDetailsModal_Body_LevelLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_LevelLabel)}',
+                EditAlignmentDetailsModal_Body_RemovedLevelLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_RemovedLevelLabel)}',
+                EditAlignmentDetailsModal_Body_ChangedLevelLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ChangedLevelLabel)}',
+                EditAlignmentDetailsModal_Body_OldNameLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_OldNameLabel)}',
+                EditAlignmentDetailsModal_Body_NewNameLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_NewNameLabel)}',
+                EditAlignmentDetailsModal_Body_ModifiedAreaTitle: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ModifiedAreaTitle)}',
+                EditAlignmentDetailsModal_Body_OwnerLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_OwnerLabel)}',
+                EditAlignmentDetailsModal_Body_ImpactLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ImpactLabel)}',
+                EditAlignmentDetailsModal_Body_NewAreaLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_NewAreaLabel)}',
+                EditAlignmentDetailsModal_Body_DeletedAreaLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DeletedAreaLabel)}',
+                EditAlignmentDetailsModal_Body_NewAreasLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_NewAreasLabel)}',
+                EditAlignmentDetailsModal_Body_DeletedAreasLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_DeletedAreasLabel)}',
+                EditAlignmentDetailsModal_Body_ModifiedAreasLabel: '{!JSENCODE($Label.EditAlignmentDetailsModal_Body_ModifiedAreasLabel)}',
+                EditAlignmentChangeReviewModal_Body_ImpactAssignedUnitsUnassigned: '{!JSENCODE($Label.EditAlignmentChangeReviewModal_Body_ImpactAssignedUnitsUnassigned)}',
+                EditAlignmentChangeReviewModal_Body_ImpactNameChanged: '{!JSENCODE($Label.EditAlignmentChangeReviewModal_Body_ImpactNameChanged)}',
+                EditAlignmentChangeReviewModal_Body_ImpactOwnerChanged: '{!JSENCODE($Label.EditAlignmentChangeReviewModal_Body_ImpactOwnerChanged)}',
+                EditAlignmentChangeReviewModal_Body_ImpactAssignedUnitsTransitioned: '{!JSENCODE($Label.EditAlignmentChangeReviewModal_Body_ImpactAssignedUnitsTransitioned)}',
+                
+                // Alignment Builder Modal Toasts
+                ClonedModal_Message_DatasetCloned: '{!JSENCODE($Label.ClonedModal_Message_DatasetCloned)}',
+                ClonedModal_Message_AlignmentCloned: '{!JSENCODE($Label.ClonedModal_Message_AlignmentCloned)}',
+                ArchiveModalToasts_Message_DatasetArchived: '{!JSENCODE($Label.ArchiveModalToasts_Message_DatasetArchived)}',
+                UnarchiveModalToasts_Message_DatasetUnarchived: '{!JSENCODE($Label.UnarchiveModalToasts_Message_DatasetUnarchived)}',
+                DeleteModalToasts_Message_DatasetDeleted: '{!JSENCODE($Label.DeleteModalToasts_Message_DatasetDeleted)}',
+                DeleteModalToasts_Message_AlignmentDeleted: '{!JSENCODE($Label.DeleteModalToasts_Message_AlignmentDeleted)}',
+                ShareModalToasts_Message_DatasetShared: '{!JSENCODE($Label.ShareModalToasts_Message_DatasetShared)}',
+                ShareModalToasts_Message_AlignmentShared: '{!JSENCODE($Label.ShareModalToasts_Message_AlignmentShared)}',
+                EditDataSetModalToasts_Message_DatasetSaved: '{!JSENCODE($Label.EditDataSetModalToasts_Message_DatasetSaved)}',
+                AlignmentBuilderToasts_Message_DatasetCreated: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_DatasetCreated)}',
+                AlignmentBuilderToasts_Message_AlignmentCreated: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_AlignmentCreated)}',
+                AlignmentBuilderToasts_Message_AlignmentSaved: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_AlignmentSaved)}',
+                AlignmentBuilderToasts_Message_UnabletoSave: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_UnabletoSave)}',
+                AlignmentBuilderToasts_Message_UnabletoGetDataSet: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_UnabletoGetDataSet)}',
+                AlignmentBuilderToasts_Message_UpdateSuccessful: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_UpdateSuccessful)}',
+                AlignmentBuilderToasts_Message_UnabletoDelete: '{!JSENCODE($Label.AlignmentBuilderToasts_Message_UnabletoDelete)}',
+                
+                // Date Format
+                Homescreen_Formatting_Date: '{!JSENCODE($Label.Homescreen_Formatting_Date)}',
+                Homescreen_Formatting_LongDate: '{!JSENCODE($Label.Homescreen_Formatting_LongDate)}',
+                Homescreen_Formatting_DateTime: '{!JSENCODE($Label.Homescreen_Formatting_DateTime)}',
+                Homescreen_Formatting_DateTimeLong: '{!JSENCODE($Label.Homescreen_Formatting_DateTimeLong)}',
+                Homescreen_Formatting_Time: '{!JSENCODE($Label.Homescreen_Formatting_Time)}',
+
+                // No Access
+                NoAccessModal_Title: '{!JSENCODE($Label.NoAccessModal_Title)}',
+                NoAccessModal_CloseButton: '{!JSENCODE($Label.NoAccessModal_CloseButton)}',
+                NoAccessModal_RequestAccessButton: '{!JSENCODE($Label.NoAccessModal_RequestAccessButton)}',
+                NoAccessModal_ChatterMessage: '{!JSENCODE($Label.NoAccessModal_ChatterMessage)}',
+                NoAccessModal_ToastMessage: '{!JSENCODE($Label.NoAccessModal_ToastMessage)}',
+
+                // Locked Record
+                EntityIsLocked_Toast: '{!JSENCODE($Label.EntityIsLocked_Toast)}',
+                EntityIsLocked_ActionsDisabled: '{!JSENCODE($Label.EntityIsLocked_ActionsDisabled)}',
+
+                // Misconfigured Dataset
+                MisconfiguredDataset_Toast: '{!JSENCODE($Label.MisconfiguredDataset_Toast)}',
+                MisconfiguredDataset_Alignment_Error: '{!JSENCODE($Label.MisconfiguredDataset_Alignment_Error)}',
+
+                // Private user object sharing
+                NoUserAccess_Toast_Error: '{!JSENCODE($Label.NoUserAccess_Toast_Error)}',
+                NoUserAccess_Inline_Error: '{!JSENCODE($Label.NoUserAccess_Inline_Error)}',
+
+                // SLDS Labels
+                SLDS: {
+                    Picklist: {
+                        cancel: "{!JSENCODE($Label.slds_picklist_cancel)}",
+                        clear: "{!JSENCODE($Label.slds_picklist_clear)}",
+                        loading: "{!JSENCODE($Label.slds_picklist_loading)}",
+                        noSearchResults: "{!JSENCODE($Label.slds_picklist_no_results)}",
+                        placeholder: "{!JSENCODE($Label.slds_picklist_placeholder)}",
+                        removeTitle: "{!JSENCODE($Label.slds_picklist_remove)}",
+                        removeAssistiveText: "{!JSENCODE($Label.slds_picklist_remove_assistive)}",
+                        required: "{!JSENCODE($Label.slds_picklist_required)}",
+                        save: "{!JSENCODE($Label.slds_picklist_save)}",
+                        search: "{!JSENCODE($Label.slds_picklist_search)}",
+                        comboboxSearchAssistiveText: "{!JSENCODE($Label.slds_picklist_search_assistive)}"
+                    },
+                    DatePicker: {
+                        nextMonth: "{!JSENCODE($Label.slds_datepicker_next_month)}",
+                        pickYear: "{!JSENCODE($Label.slds_datepicker_pick_year)}",
+                        previousMonth: "{!JSENCODE($Label.slds_datepicker_previous_month)}",
+                        selectDate: "{!JSENCODE($Label.slds_datepicker_select_date)}",
+                        today: "{!JSENCODE($Label.slds_datepicker_today)}"
+                    },
+                    Popover: {
+                        close: "{!JSENCODE($Label.slds_popover_close_dialog)}"
+                    },
+                    ColorPicker: {
+                        default: "{!JSENCODE($Label.slds_color_picker_default)}",
+                        custom: "{!JSENCODE($Label.slds_color_picker_custom)}",
+                        hex: "{!JSENCODE($Label.slds_color_picker_hex)}",
+                        cancel: "{!JSENCODE($Label.slds_color_picker_cancel)}",
+                        done: "{!JSENCODE($Label.slds_color_picker_done)}",
+                        assistiveTextInstructions: "{!JSENCODE($Label.slds_color_picker_assistive_text_instructions)}",
+                        assistiveTextSaturation: "{!JSENCODE($Label.slds_color_picker_assistive_text_saturation)}",
+                        assistiveTextBrightness: "{!JSENCODE($Label.slds_color_picker_assistive_text_brightness)}",
+                        assistiveTextSelectHue: "{!JSENCODE($Label.slds_color_picker_assistive_text_select_hue)}",
+                        titleR: "{!JSENCODE($Label.slds_color_picker_title_r)}",
+                        titleG: "{!JSENCODE($Label.slds_color_picker_title_g)}",
+                        titleB: "{!JSENCODE($Label.slds_color_picker_title_b)}",
+                        assistiveTextRed: "{!JSENCODE($Label.slds_color_picker_assistive_text_red)}",
+                        assistiveTextGreen: "{!JSENCODE($Label.slds_color_picker_assistive_text_green)}",
+                        assistiveTextBlue: "{!JSENCODE($Label.slds_color_picker_assistive_text_blue)}"
+                    },
+                    Modal: {
+                        close: "{!JSENCODE($Label.slds_modal_close)}"
+                    }
+                }
+            },
+            SessionId: "{!$Api.Session_ID}"
+        }, JSON.parse("{!JSENCODE(viewData)}"));
+
+        if (MATA.betaFlags.TP_EnhancedSecurity) {
+            // SECURED REMOTE ACTIONS
+            MATA.RemoteActions['GetUnitData'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnitData}';
+            MATA.RemoteActions['GetUnitData2'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnitData2}';
+            MATA.RemoteActions['GetUnitDataById'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnitDataById}';
+            MATA.RemoteActions['UpsertUnitAssignmentBatch'] = '{!$RemoteAction.TPRemoteActionsSecured.UpsertUnitAssignmentBatch}';
+            MATA.RemoteActions['UpsertUnitAssignmentBatchWithResults'] = '{!$RemoteAction.TPRemoteActionsSecured.UpsertUnitAssignmentBatchWithResults}';
+            MATA.RemoteActions['GetRangeChunkUnitCounts'] = '{!$RemoteAction.TPRemoteActionsSecured.GetRangeChunkUnitCounts}';
+            MATA.RemoteActions['GetPkChunkingMetadata'] = '{!$RemoteAction.TPRemoteActionsSecured.GetPkChunkingMetadata}';
+            MATA.RemoteActions['InsertObjectBatch'] = '{!$RemoteAction.TPRemoteActionsSecured.InsertObjectBatch}',
+            MATA.RemoteActions['UpdateObjectBatch'] = '{!$RemoteAction.TPRemoteActionsSecured.UpdateObjectBatch}',
+            MATA.RemoteActions['DeleteObjects'] = '{!$RemoteAction.TPRemoteActionsSecured.DeleteObjects}'
+            MATA.RemoteActions['UpdatePreferences'] = '{!$RemoteAction.TPRemoteActionsSecured.UpdatePreferences}',            
+            MATA.RemoteActions['UpdateUserAccess'] = '{!$RemoteAction.TPRemoteActionsSecured.UpdateUserAccess}',
+            MATA.RemoteActions['UpdateLastViewed'] = '{!$RemoteAction.TPRemoteActionsSecured.UpdateLastViewed}',
+            MATA.RemoteActions['GetDataSetSearch'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSetSearch}',
+            MATA.RemoteActions['GetDataSetById'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSetById}',
+            MATA.RemoteActions['GetDataSetsBatch'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSetsBatch}',
+            MATA.RemoteActions['GetDataSet'] = '{!$RemoteAction.TPRemoteActionsSecured.GetDataSet}',                        
+            MATA.RemoteActions['GetAccessibleAlignments'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAccessibleAlignments}',
+            MATA.RemoteActions['GetAlignment'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAlignment}',
+            MATA.RemoteActions['GetAlignmentHierarchy'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAlignmentHierarchy}',
+            MATA.RemoteActions['GetAreasWithAccessByUser'] = '{!$RemoteAction.TPRemoteActionsSecured.GetAreasWithAccessByUser}',
+            MATA.RemoteActions['GetUnformattedAlignment'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnformattedAlignment}',            
+            MATA.RemoteActions['GetUnformattedDataSet'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUnformattedDataSet}',
+            MATA.RemoteActions['CloneAlignment'] = '{!$RemoteAction.TPRemoteActionsSecured.CloneAlignment}',
+            MATA.RemoteActions['CloneDataSet'] = '{!$RemoteAction.TPRemoteActionsSecured.CloneDataSet}',
+            MATA.RemoteActions['GetUsersWithAccess'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUsersWithAccess}',
+            MATA.RemoteActions['GetUsersWithAccessList'] = '{!$RemoteAction.TPRemoteActionsSecured.GetUsersWithAccessList}',
+            MATA.RemoteActions['SaveAlignment'] = '{!$RemoteAction.TPRemoteActionsSecured.SaveAlignment}',
+            MATA.RemoteActions['GetFeed'] = '{!$RemoteAction.TPRemoteActionsSecured.GetFeed}',
+            MATA.RemoteActions['GetFeedList'] = '{!$RemoteAction.TPRemoteActionsSecured.GetFeedList}',
+            MATA.RemoteActions['PostFeedItem'] = '{!$RemoteAction.TPRemoteActionsSecured.PostFeedItem}'
+        }
+    </script>
+
+    <!-- App Root -->
+    <div id='mata-vue-root'></div>
+    <script src="{!resourcePath}/dist/bundle.js"></script>
+
+    <!-- Pendo -->
+    <apex:outputPanel layout="none" rendered="{!pendoEnabled}">
+        <script>
+            (function(apiKey){
+                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                pendo.initialize({
+                    visitor: { 
+                        id: '{!JSENCODE($User.Id)}',
+                        email: '{!JSENCODE($User.Email)}',
+                        firstName: '{!JSENCODE($User.FirstName)}',
+                        lastName: '{!JSENCODE($User.LastName)}',
+                        userName: '{!JSENCODE($User.Username)}',
+                        userAgent: window.navigator.userAgent
+                    },
+                    account: { 
+                        id: '{!JSENCODE($Organization.Id)}',
+                        name: '{!JSENCODE($Organization.Name)}'
+                    }
+                });
+            })('{!JSENCODE(pendoKey)}');
+        </script>
+    </apex:outputPanel>
+
+    <!-- Pendo Disabled -->
+    <apex:outputPanel layout="none" rendered="{!pendoEnabled == false}">
+        <script>
+            var pendo = {
+                track(){
+                }
+            };
+        </script>
+    </apex:outputPanel>
+
+    <!-- NewRelic -->
+    <c:NewRelic rendered="{!monitoringEnabled}" accountID="{!newRelicAccountID}" agentID="{!newRelicAgentID}" applicationID="{!newRelicApplicationID}" trustKey="{!newRelicTrustKey}" licenseKey="{!newRelicLicenseKey}" />
+</apex:page>

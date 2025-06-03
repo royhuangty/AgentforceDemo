@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-esemény --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-események --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményem --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeim --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseménye --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményei --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményt --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményeket --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimet --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményét --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeit --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseménynek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményeknek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemnek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimnek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményének --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeinek --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményében --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Inessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiben --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményéből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Elative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiből --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseménybe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekbe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményembe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimbe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményébe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Illative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeibe --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseménytől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményektől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemtől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimtől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményétől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeitől --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményéhez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Allative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeihez --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseménnyé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekké --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemmé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimmé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményévé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Translative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeivé --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseménnyel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekkel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemmel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimmel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményével --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeivel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimre --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményére --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Sublative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeire --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményeken --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményén --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Superessive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményein --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményéről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Delative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiről --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményéért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Causalfinal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiért --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Essiveformal</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményekig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményemig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményéig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Termanative</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiig --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-eseményenként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>None</possessive>
+        <value><!-- FSLHealth-események --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-eseményeimként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>First</possessive>
+        <value><!-- FSLHealth-események --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>false</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-eseményeiként --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Distributive</caseType>
+        <plural>true</plural>
+        <possessive>Second</possessive>
+        <value><!-- FSLHealth-események --></value>
+    </caseValues>
+    
+    
+    <startsWith><!-- Vowel --></startsWith>
+</CustomObjectTranslation>

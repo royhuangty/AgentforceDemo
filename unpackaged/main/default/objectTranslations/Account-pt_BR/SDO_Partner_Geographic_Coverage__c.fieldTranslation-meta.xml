@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Partner Geographic Coverage --></label>
+        <name>SDO_Partner_Geographic_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMEA</masterLabel>
+            <translation><!-- EMEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LACA</masterLabel>
+            <translation><!-- LACA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North America</masterLabel>
+            <translation><!-- North America --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cómo se calculará el importe: porcentaje del total, importe fijo o restante después de que se procesen otros tratamientos.</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

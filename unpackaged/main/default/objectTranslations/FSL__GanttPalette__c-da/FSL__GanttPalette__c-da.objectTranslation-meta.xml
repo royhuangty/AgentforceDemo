@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>Gantt-paletten</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value>Gantt-palet</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>Gantt-palet</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>Gantt-paletterne</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value>Gantt-paletter</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>Gantt-paletter</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Navn på Gantt-palet</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Gantt Palette --></label>
+        <name>FSL__FSL_Public_Gantt_Palette</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
+        <name>FSL__Color_Level_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

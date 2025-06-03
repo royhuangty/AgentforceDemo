@@ -1,0 +1,113 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"8a1cde09-8be2-48c6-813d-e12b8a4d5a11\",\"columns\":[{\"UUID\":\"820749a0-b7ae-4a8b-9350-46515f0aebb3\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : { },
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "small",
+                "text" : "Order History",
+                "textAlign" : "left",
+                "textDecoration" : "{\"bold\": true}",
+                "textDisplayInfo" : "{\"textStyle\": \"heading-medium\", \"headingTag\": \"h2\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "04575c9e-b0a9-435d-80b1-d1dc0def3f65",
+              "type" : "component"
+            } ],
+            "id" : "820749a0-b7ae-4a8b-9350-46515f0aebb3",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "8a1cde09-8be2-48c6-813d-e12b8a4d5a11",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"73f3e03e-e2d8-44e0-af5a-9cb46de9125a\",\"columns\":[{\"UUID\":\"a8c4bf31-e562-4159-995b-a85ce3859ca9\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "accountId" : "",
+                "dxpStyle" : { },
+                "noOrderMessageText" : "After you place an order, it appears here.",
+                "noResultsText" : "To view orders, adjust your filters.",
+                "numberOfMonthsForFilter" : 12,
+                "orderSummaryFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"Id\",\"label\": \"Order Number\",\"type\": \"Lookup()\"},{\"entity\": \"OrderSummary\",\"name\": \"OrderedDate\",\"label\": \"Ordered Date\",\"type\": \"Date/Time\"},{\"entity\": \"OrderSummary\",\"name\": \"Status\",\"label\": \"Status\",\"type\": \"Picklist\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\"}]",
+                "ordersListCount" : 25,
+                "reorderLabel" : "Start Reorder",
+                "showMoreLabel" : "Show More",
+                "showOrdersListFilter" : true,
+                "showOrdersListSortBy" : true,
+                "showReorder" : true,
+                "showViewDetailsLink" : true,
+                "viewDetailsLinkLabel" : "View Details",
+                "viewMoreOrderBehaviour" : "SHOW_MORE"
+              },
+              "definition" : "commerce_builder:orders",
+              "id" : "eda11cb4-5d0e-42cf-b075-16b1b6e1cc67",
+              "type" : "component"
+            } ],
+            "id" : "a8c4bf31-e562-4159-995b-a85ce3859ca9",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "73f3e03e-e2d8-44e0-af5a-9cb46de9125a",
+          "type" : "component"
+        } ],
+        "id" : "233ee38d-e3c9-43e6-a6aa-5cbc65da7f4d",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { },
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "229cbfc5-6ee7-40c2-bf24-52d3b37a7231",
+          "type" : "component"
+        } ],
+        "id" : "3061c38e-e22d-40a6-8327-bad33d24e2da",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "b5410410-c908-4d34-9168-94ce73f84aa1",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "MyAccount",
+    "viewType" : "list-1Os"
+  },
+  "urlName" : "order-summary-list"
+}

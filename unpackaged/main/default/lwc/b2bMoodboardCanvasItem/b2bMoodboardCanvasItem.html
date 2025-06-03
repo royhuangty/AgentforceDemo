@@ -1,0 +1,70 @@
+<template>
+	<div data-sfid={product.id} class="moodboard-item draggable" draggable="true" ondragstart={handleDragStart}
+		ondrag={handleDrag} ondragend={handleDragEnd} onclick={handleClick} style={boxStyles}>
+		<div class="slds-is-relative containerInner">
+			<div class="slds-float_left slds-var-p-around_x-small">
+				<button class="slds-button slds-button_icon" title="Close" onclick={handleRemove}>
+					<svg class="slds-button__icon" aria-hidden="true">
+						<use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close">
+						</use>
+					</svg>
+				</button>
+			</div>
+
+			<div class="slds-float_right slds-var-p-around_x-small">
+				<button class="slds-button slds-button_icon" title="Info" onclick={showTooltip}>
+					<svg class="slds-button__icon" aria-hidden="true">
+						<use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+					</svg>
+				</button>
+			</div>
+
+			<template if:true={showNubbin}>
+				<section class="slds-popover slds-popover_small slds-nubbin_left-top detailTooltip" role="dialog">
+					<button
+						class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+						title={labels.moodboardItem.buttonClose} onclick={hideTooltip}>
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close">
+							</use>
+						</svg>
+						<span class="slds-assistive-text">{labels.moodboardItem.buttonClose}</span>
+					</button>
+					<div class="slds-popover__body" id="dialog-body-id-98">
+						<div class="slds-scrollable_none prodName" title={product.name}>
+							{product.name}
+						</div>
+						<div class="slds-scrollable_none prodSKU">{sku}</div>
+						<div class="slds-scrollable_none prodPrice">
+							<lightning-formatted-number value={unitPrice} format-style="currency"
+								currency-code={currencyCode} currency-display-as="symbol">
+							</lightning-formatted-number>
+						</div>
+					</div>
+				</section>
+			</template>
+
+			<div class="slds-is-absolute slds-text-align_center detailOverlay">
+				<template if:true={displayName}>
+					<div class="slds-scrollable_none slds-var-p-horizontal_xx-small prodName" title={product.name}>
+						{product.name}
+					</div>
+				</template>
+
+				<template if:true={displaySku}>
+					<div class="slds-scrollable_none slds-var-p-horizontal_xx-small prodSKU">
+						{sku}
+					</div>
+				</template>
+
+				<template if:true={displayPrice}>
+					<div class="slds-scrollable_none slds-var-p-horizontal_xx-small prodPrice">
+						<lightning-formatted-number value={unitPrice} format-style="currency"
+							currency-code={currencyCode} currency-display-as="symbol">
+						</lightning-formatted-number>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+</template>

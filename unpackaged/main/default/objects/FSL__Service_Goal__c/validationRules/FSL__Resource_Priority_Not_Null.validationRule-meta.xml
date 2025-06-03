@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Resource_Priority_Not_Null</fullName>
+    <active>true</active>
+    <description>Resource priority objective&#39;s resource property Field cannot be null</description>
+    <errorConditionFormula>RecordType.DeveloperName  = &#39;Objective_Resource_Priority&#39;  &amp;&amp;  FSL__Resource_Priority_Field__c = NULL</errorConditionFormula>
+    <errorDisplayField>FSL__Resource_Priority_Field__c</errorDisplayField>
+    <errorMessage>Resource Priority Field should not be empty</errorMessage>
+</ValidationRule>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Acțiune contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Acțiunea contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Acțiuni contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Acțiunile contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Acțiunii contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Acțiunii contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Acțiunilor contor FMA --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Acțiunilor contor FMA --></value>
+    </caseValues>
+    
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

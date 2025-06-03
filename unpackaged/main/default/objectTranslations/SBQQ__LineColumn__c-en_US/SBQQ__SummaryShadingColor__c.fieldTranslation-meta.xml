@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify color (in Hex) for cell background in the summary row for this column. Leaving blank inherits shading color for the template. --></help>
+        <label><!-- Summary Shading Color --></label>
+        <name>SBQQ__SummaryShadingColor__c</name>
+    </CustomFieldTranslation>

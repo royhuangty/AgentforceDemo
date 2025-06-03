@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Quote Line View --></label>
+        <name>EditLinesFieldSetName__c</name>
+        <picklistValues>
+            <masterLabel>Amendment</masterLabel>
+            <translation><!-- Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing</masterLabel>
+            <translation><!-- Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation><!-- Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dates</masterLabel>
+            <translation><!-- Dates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detail</masterLabel>
+            <translation><!-- Detail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Margin</masterLabel>
+            <translation><!-- Margin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__LineEditor</masterLabel>
+            <translation><!-- SBQQ__LineEditor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

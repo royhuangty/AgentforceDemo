@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Búsqueda de la regla de facturación asignada a este producto de pedido.</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </CustomFieldTranslation>

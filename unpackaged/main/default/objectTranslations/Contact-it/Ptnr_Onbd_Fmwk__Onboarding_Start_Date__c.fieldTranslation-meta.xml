@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This determines when the contact&apos;s onboarding journey needs to begin.When left blank, start date is taken to be the date when the onboarding plan is attached to the contact. It drives calculation of step duration. --></help>
+        <label><!-- Onboarding Start Date --></label>
+        <name>Ptnr_Onbd_Fmwk__Onboarding_Start_Date__c</name>
+    </CustomFieldTranslation>

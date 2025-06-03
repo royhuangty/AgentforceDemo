@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référence à la ligne de facture associée à ce calendrier de revenu.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

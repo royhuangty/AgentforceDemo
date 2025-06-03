@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Étape (niveau) à laquelle cette approbation est requise.</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </CustomFieldTranslation>

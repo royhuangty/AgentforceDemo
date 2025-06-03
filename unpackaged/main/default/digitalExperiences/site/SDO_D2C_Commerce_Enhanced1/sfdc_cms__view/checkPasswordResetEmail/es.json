@@ -1,0 +1,22 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Check Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "checkEmailMessage" : "Compruebe la cuenta de correo electrónico asociada con su nombre de usuario para obtener el vínculo para restablecer su contraseña. Si no recibe un mensaje de correo electrónico, consulte su carpeta de email no deseado. O bien póngase en contacto con su administrador.",
+          "returnButtonLabel" : "Volver a inicio de sesión",
+          "titleLabel" : "Ahora compruebe su correo electrónico"
+        },
+        "id" : "08aa1736-9000-4b1b-ba8a-e8e1c899f557"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Comprobar contraseña"
+        },
+        "id" : "a9b75d83-a51b-409c-8983-d1cf394cde99"
+      } ]
+    }
+  },
+  "urlName" : "check-password"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__ShowFavoriteTerritoriesTab__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Default tab to show on the territories window</description>
+    <label>Show Favorite Territories Tab</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

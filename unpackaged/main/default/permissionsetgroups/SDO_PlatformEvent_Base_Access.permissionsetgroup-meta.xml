@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to all Platform Event Wizard Functionality.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Platform - Event Wizard Base Access</label>
+    <permissionSets>SDO_Platform_Event_Wizard</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,68 @@
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+
+@import 'vendor/_normalize.min.css';
+
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'base/_typography';
+@import 'base/_layout';
+// @import 'base/_placeholders';
+
+/* FRAMEWORK - Structure and layout files.
+========================================================================== */
+
+// @import 'framework/_grid';
+// @import 'framework/_breakpoints';
+// @import 'framework/_layout';
+
+/* MODULES - Re-usable site elements.
+========================================================================== */ 
+
+
+/* From the framework */
+@import 'modules/_tabs'; /* remove unecessary styles before packaging */
+@import 'modules/_actionbar'; /* remove unecessary styles before packaging */
+@import 'modules/_buttons'; /* remove unecessary styles before packaging */
+@import 'modules/_forms'; /* remove unecessary styles before packaging */
+@import 'modules/_breadcrumbs'; /* remove unecessary styles before packaging */
+@import 'modules/_dropdowns'; /* remove unecessary styles before packaging */
+@import 'modules/_illustrations'; /* remove unecessary styles before packaging */
+@import 'modules/_toasts'; /* remove unecessary styles before packaging */
+@import 'modules/_modals'; /* remove unecessary styles before packaging */
+@import 'modules/_action_sheet'; /* remove unecessary styles before packaging */
+
+/* Custom modules */
+@import 'modules/_empty_states.scss';
+@import 'modules/_map';
+@import 'modules/_notifications';
+@import 'modules/_layers';
+@import 'modules/_routes';
+@import 'modules/_routes_calendar';
+@import 'modules/_routes_list';
+@import 'modules/_tables';
+@import 'modules/_waypoint';
+@import 'modules/_list';
+@import 'modules/_legend';
+@import 'modules/_bottombar';
+@import 'modules/_topbar';
+@import 'modules/_navdrawer';
+@import 'modules/_schedule';
+@import 'modules/_search';
+@import 'modules/_settings';
+@import 'modules/_loading-screen';
+@import 'modules/_map-tooltips';
+@import 'modules/_custom_dispositions';
+@import 'modules/_polygon_actions';
+@import 'modules/_save_folder_popup.scss';
+@import 'modules/_datepicker.scss';
+
+@import 'base/_utilities';
+
+
+/* Mockup modules ***** DELETE BEFORE MOVING INTO PRODUCTION ***** */
+
+@import 'modules/_mockups';

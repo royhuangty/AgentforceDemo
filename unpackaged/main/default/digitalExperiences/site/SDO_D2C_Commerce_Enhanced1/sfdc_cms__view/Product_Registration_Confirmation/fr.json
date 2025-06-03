@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product Registration Confirmation",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "Confirmation d'enregistrement du produit"
+        },
+        "id" : "1ec5f064-9c5a-4417-93f9-5acea946c427"
+      } ]
+    }
+  },
+  "urlName" : "product-registration-confirmation"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- User who rejected this Approval --></help>
+        <label><!-- Rejected By --></label>
+        <name>sbaa__RejectedBy__c</name>
+        <relationshipLabel><!-- Approvals (Rejected By) --></relationshipLabel>
+    </CustomFieldTranslation>

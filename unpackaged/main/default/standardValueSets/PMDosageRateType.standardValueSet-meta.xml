@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Frequency Ratio</fullName>
+        <default>false</default>
+        <label>Frequency Ratio</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Frequency Range</fullName>
+        <default>false</default>
+        <label>Frequency Range</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Frequency</fullName>
+        <default>false</default>
+        <label>Frequency</label>
+    </standardValue>
+</StandardValueSet>

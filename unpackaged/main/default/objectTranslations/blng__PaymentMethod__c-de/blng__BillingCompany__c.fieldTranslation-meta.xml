@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Unternehmen für die Rechnungsanschrift der Karte</help>
+        <label><!-- Company --></label>
+        <name>blng__BillingCompany__c</name>
+    </CustomFieldTranslation>

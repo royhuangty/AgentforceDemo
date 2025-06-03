@@ -1,0 +1,1211 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <!-- Import the Design System style sheet -->
+    <apex:slds />
+    <apex:includeLightning />  <!-- REQUIRED SLDS WRAPPER -->
+    
+    <style type="text/css">
+        .supervisor-metric-inner-card-title-container {
+        min-width: 118px;
+        display: flex;
+        }
+        .card-detail-number {
+        font-weight: 700;
+        font-size: var(--lwc-fontSize10);
+        color: #181818;
+        }
+        .slds-wcag {
+        --slds-g-color-neutral-base-10: #181818;
+        }
+        .slds-scope .slds-card__header {
+        padding-top: 5px;
+        color: #5C5C5C;
+        }
+        
+        .card-donut-chart-text {font-size: var(--lwc-fontSize2);font-weight: var(--lwc-fontWeightRegular);}
+        .supervisor-metrics-card-container {height: var(--lwc-sizeMedium)}
+        .supervisor-metric-inner-card-container {height: var(--lwc-sizeXxSmall)}
+        .supervisor-metric-help-text-style {display: inline;vertical-align: text-bottom;}
+        .supervisor-metric-inner-card-title {display: inline;font-weight: var(--lwc-fontWeightRegular);font-size: var(--lwc-fontSize3);padding-top: 3px;}
+        .supervisor-metric-card-badge {--sds-c-badge-color-background: white;}
+        .supervisor-metric-inner-card-title-container {min-width: 118px;display: flex;}
+        .supervisor-metric-empty-state {height: 216px;width: 100%;}
+
+
+        .slds-button.slds-button_icon.slds-button_icon-more, .slds-button.slds-button_icon.slds-button_icon-border {
+            color: #0250D9;
+            border-radius: 15rem;
+            border-color: #5c5c5c;
+        }
+        
+        /* Ensure the icon container is a perfect circle */
+        .slds-media__figure .slds-icon_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; /* Adjust size as needed */
+            height: 32px;
+            border-radius: 50%;
+        }
+        
+        /* Adjust the size of the SVG inside */
+        .slds-media__figure .slds-icon {
+            width: 32px; /* Adjust size as needed */
+            height: 32px;
+        }
+
+        
+        .slds-scope .slds-card__header-title {
+            font-family: var(--lwc-fontFamily, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol');
+            font-size: 20px;
+            font-weight: 400;
+            color: #03234D !important;
+        }
+        
+        /* Make the Current badge a rounded rectangle */
+        .slds-badge.current-badge {
+            border-radius: 0.25rem;
+            padding: 4px 8px;
+            background-color: #ffffff;
+            border-color: #c9c9c9;
+            color: #5c5c5c ;
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+        
+        /* Light gray text for 'No filter applied' */
+        .slds-text-body_regular {
+            color: #5C5C5C;
+        }
+        
+        /* Custom breakpoint for Two columns */
+        @media screen and (max-width: 1430px) {
+            .custom-two-columns {
+                width: 50% !important;
+            }
+        }
+       
+        /* Add curved bezel and remove border */
+        .slds-card {
+            border: none !important; 
+            border-radius: 12px !important; 
+            box-shadow: none !important; 
+        }
+        .slds-box {
+            border-radius: 12px !important;
+        }
+        
+        /* Ensure the metrics card container respects the column size */
+        .supervisor-metrics-card-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: calc(100% - 5%); /* Keeps spacing between columns */
+            padding: 0; /* Add padding to maintain spacing */
+            margin: 0;
+        }
+        /* Make sure the chart container resizes but does not remove spacing */
+        .chart-default-style {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 0.5rem; /* Add spacing inside the card */
+        }
+        /* Ensure the chart itself adapts without breaking the layout */
+        .chart {
+            width: 100% !important;
+            max-width: 100%;
+        }
+
+    </style>
+    
+    <style type="text/css">
+        .omniSupervisorPanel {font-family:var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'); font-size:12.5px; position:absolute; bottom:0; top:0; left:0; right:0; background-color:var(--slds-g-color-neutral-base-100, #ffffff); overflow-y:auto; overflow-x:hidden}
+        .omniSupervisorPanel div.bBody {overflow-x:auto; height:100%}
+        @font-face {font-family:'compactfeedicons'; src:url('/fonts/feed/compactfeedicons.eot'); src:url('/fonts/feed/compactfeedicons.eot?#iefix') format('embedded-opentype'),url('/fonts/feed/compactfeedicons.woff') format('woff'),url('/fonts/feed/compactfeedicons.ttf') format('truetype'); font-weight:normal; font-style:normal}
+        .omniSupervisorPanel .feedicon {font-family:"compactfeedicons"; color:var(--slds-g-color-neutral-base-50, #747474); display:block; float:left; margin-right:10px}
+        .omniSupervisorPanel img.ChannelIcon {padding-right:10px}
+        .omniSupervisorPanel .tabTitleText {font-size:170%; font-weight:500; display:inline-block; vertical-align:super; padding-left:20px}
+        .omniSupervisorPanel .tabTitle {display:inline-block; color:var(--slds-g-color-neutral-base-10, #181818); padding-left:20px; background-repeat:no-repeat; background-position:left center; margin:8px 10px 8px 30px}
+        .omniSupervisorPanel .omniToast {display:none}
+        .omniSupervisorPanel .uiTabset--default .tabs__item {text-transform:initial}
+        .omniSupervisorPanel .uiTabset--default .tabs__item>a {padding:10px 20px 10px 20px}
+        .omniSupervisorPanel .omniAgentsTab .uiTabset--default .tabs__nav {border-bottom:0}
+        iframe.omniSupervisorPanel {display:none}
+        .omniSupervisorPanel table.AgentList, .omniSupervisorPanel table.AgentsByQueue {margin-top:0}
+        .omniSupervisorPanel .omniPager select.pagerPageSize {height:initial}
+    </style>
+
+    <apex:variable var="numFlags" value="5" />
+
+    <div class="slds-scope omniSupervisorPanel" style="width:100%;height100%">  
+        <div class="slds-card__header slds-grid slds-p-bottom_Xx-small">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate slds-p-left_small">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-metrics" > 
+                        <svg aria-hidden="true" class="slds-icon" style="border-radius: 50%">
+                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                 xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#metrics">
+                            </use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h1 class="tabTitleText slds-p-left_none">
+                        <span>Omni-Channel Wallboard</span>
+                    </h1>
+                </div>
+                <div class="slds-no-flex supervisor-time-filter-button">
+                    <div style="position: relative; display: inline-block;">
+                        <lightning-button-menu class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button class="slds-button slds-button_icon slds-button_icon-more"  aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" onclick="toggleDropdown('timeDropdown')">
+                                <lightning-primitive-icon variant="bare">
+                                    <svg class="slds-button__icon" focusable="false" data-key="clock" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g><g>
+                                        <path d="M26 2C12.8 2 2 12.8 2 26s10.8 24 24 24 24-10.8 24-24S39.2 2 26 2zm0 42c-9.9 0-18-8.1-18-18S16.1 8 26 8s18 8.1 18 18-8.1 18-18 18z"></path>
+                                        <path d="M29.4 26.2c-.3-.3-.4-.7-.4-1.1v-9.6c0-.8-.7-1.5-1.5-1.5h-3c-.8 0-1.5.7-1.5 1.5v12.1c0 .4.2.8.4 1.1l7.4 7.4c.6.6 1.5.6 2.1 0L35 34c.6-.6.6-1.5 0-2.1l-5.6-5.7z"></path></g></g>
+                                    </svg>
+                                </lightning-primitive-icon>
+                                <lightning-primitive-icon variant="bare">
+                                    <svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g>
+                                        <path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g>
+                                    </svg>
+                                </lightning-primitive-icon>
+                                <span class="slds-assistive-text">timeFilter</span>
+                            </button>
+                        </lightning-button-menu>
+                        <div id="timeDropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -25px; width: 140px; z-index: 1000;">
+                            <div class="slds-dropdown__body slds-p-around_small">
+                                <div class="slds-scrollable" style="max-height: 200px;">
+                                    <div style="border-color:#03234D; border-line: 2px;">✔&nbsp;&nbsp;&nbsp;Last hour</div>
+                                    <div style="padding-top: 15px; padding-left: 20px;">Last 45 minutes</div>
+                                    <div style="padding-top: 15px; padding-left: 20px;">Last 30 minutes</div>
+                                    <div style="padding-top: 15px; padding-left: 20px;">Last 15 minutes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-no-flex supervisor-filter-button">
+                    <div style="position: relative; display: inline-block;">
+                        <lightning-button-icon>
+                            <button class="slds-button slds-button_icon slds-button_icon-border" title="Filter" type="button" part="button button-icon" onclick="toggleDropdown('filterDropdown')">
+                                <lightning-primitive-icon variant="bare">
+                                    <svg class="slds-button__icon" focusable="false" data-key="filter" aria-hidden="true" viewBox="0 0 100 100" part="icon"><g>
+                                        <path d="M77 20H21c-1.9 0-2.8 2.1-1.6 3.5l24.2 28.6c.8.9 1.1 2.1 1.1 3.3v22.7c0 1 1 1.9 2 1.9h4.4c1 0 1.8-.9 1.8-1.9V55.5c0-1.3.5-2.4 1.4-3.3l24.3-28.6c1.2-1.4.3-3.6-1.6-3.6z"></path></g>
+                                    </svg>
+                                </lightning-primitive-icon>
+                                <span class="slds-assistive-text">Settings</span>
+                            </button>
+                        </lightning-button-icon>
+                        <div id="filterDropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: auto; right: -160px; width: 400px; z-index: 1000; overflow-x: auto;">
+                            <div class="slds-dropdown__header slds-p-around_small">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_1-of-3" style="padding: 0; padding-left: 10px;">
+                                        <input type="text" class="slds-input" placeholder="Queues" style="border: 2px solid #d8dde6;"/>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-3" style="padding: 0; padding-right: 10px;">
+                                        <input type="text" class="slds-input" placeholder="Search..." style="border: 2px solid #d8dde6;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-dropdown__body slds-p-around_small">
+                                <div class="slds-scrollable" style="max-height: 200px;">
+                                    <div><label class="slds-checkbox"> <input type="checkbox" /> <span class="slds-checkbox_faux"></span> ABR Queue</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> BYOC Queue</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Battery</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Billing</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Chat</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Chat 2</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Escalation Queue</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> General</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> General Voice</label></div>
+                                    <div><label class="slds-checkbox"><input type="checkbox" /> <span class="slds-checkbox_faux"></span> Messaging Customer Support</label></div>
+                                </div>
+                            </div>
+                            <div class="slds-dropdown__footer slds-p-around_small slds-text-align_right" style="border-top: 1px solid #ddd; display: flex; justify-content: center;">
+                                <div class="slds-button-group" role="group">
+                                    <button class="slds-button slds-button_neutral" style="border-radius: 20px 0 0 20px;" onclick="toggleDropdown('filterDropdown')">Cancel</button>
+                                    <button class="slds-button slds-button_brand" style="border-radius: 0 20px 20px 0;">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <!-- Work Item Status -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">
+                    <div>
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-record-lookup" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#record_lookup">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Work Item Status</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                                <div class="slds-is-relative">
+                                    <lightning-button-menu slot="actions" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                        <button class="slds-button slds-button_icon slds-button_icon-more" aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" onclick="toggleDropdown('chart1Dropdown')">
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon" focusable="false" data-key="chart" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><g>
+                                                        <path d="M45.5 23.4L25 34.7c-1.4.7-3-.3-3-1.8V8.4c0-1-1-1.8-1.9-1.5-10 2.8-17.2 12.5-16 23.6 1.1 10.1 9.2 18.3 19.4 19.4C36.8 51.3 48 41 48 28c0-1.2-.1-2.4-.3-3.6-.2-1-1.3-1.5-2.2-1z"></path>
+                                                        <path d="M27.7 28l19.7-10.5c1.2-.6 1.6-2.2.8-3.3C43.7 8 36.7 3.5 28.7 2.2 27.3 1.9 26 3 26 4.4V27c0 .9.9 1.4 1.7 1z"></path>
+                                                    </g></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <span class="slds-assistive-text">Show Menu</span>
+                                        </button>
+                                    </lightning-button-menu>
+                                    <div id="chart1Dropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -30px; width: 162px; z-index: 1000; margin-top: 1px;">
+                                        <div class="slds-dropdown__body slds-p-around_small">
+                                            <div class="slds-scrollable" style="max-height: 200px;">
+                                                <div style="padding-left: 20px;">Metric Chart</div>
+                                                <div style="padding-top: 15px;">✔&nbsp;&nbsp;&nbsp;Donut Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Vertical Bar Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Horizontal Bar Chart</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                        <div>
+                            <article class="slds-card slds-card_boundary slds-m-around_x-small slds-theme_default">
+                                <div><div class="slds-media slds-media_center">
+                                    <div class="slds-media__figure">
+                                        <omni-chart><div class="chart-default-style slds-p-around_medium">
+                                            <setup_einstein_shared-chart>
+                                                <div class="container" name="container">
+                                                    <div class="chartingSection" name="chart">
+                                                        <div class="chart ng-cursor-default" data-ngname="Work Item Status">
+                                                            <div style="position: relative;">
+                                                                <div class="ps-container" style="z-index: 2; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0); width: 288px; height: 184px; left: 0px; top: 0px;">
+                                                                    <div style="width: 288px; height: 184px;">
+                                                                        <div  id="compContainer1" />
+                                                                    </div>
+                                                                    
+                                                                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                                                        <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                                                                    </div>
+                                                                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                                                        <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <canvas class="chart" style="z-index: 1;position: absolute;-webkit-font-smoothing: antialiased;width: 288px;height: 184px;left: 0px;top: 0px;" width="288" height="184"></canvas>
+                                                            </div>
+                                                            <div data-ngname="legend_Work Item Status" style="display: none;">
+                                                                <div style="position: relative;">
+                                                                    <div style="z-index: 3; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0);"></div>
+                                                                    <canvas class="legend" style="z-index: 2; position: absolute; -webkit-font-smoothing: antialiased;"></canvas>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ng-annotations-container" style="margin: 0px; width: 288px; height: 184px;"></div>
+                                                        </div>
+                                                        <span class="sizeErrorSpan slds-hide">Not enough space to display the chart.</span></div><div class="errorSection" name="error">
+                                                    </div>
+                                                </div>
+                                            </setup_einstein_shared-chart>
+                                            </div>
+                                        </omni-chart>
+                                        
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="slds-truncate">
+                                            <lightning-icon class="slds-list-inline slds-icon-utility-record slds-icon_container" style="--slds-c-icon-color-foreground-default: #3290ED" icon-name="utility:record">
+                                                <span style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)" part="boundary">
+                                                    <lightning-primitive-icon size="small" variant="">
+                                                        <svg class="slds-icon slds-icon-text-default slds-icon_small" focusable="false" data-key="record" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 8c9.9 0 18 8.1 18 18s-8.1 18-18 18S8 35.9 8 26 16.1 8 26 8z"></path></g>
+                                                        </svg>
+                                                    </lightning-primitive-icon>
+                                                    <span class="slds-assistive-text">Assigned</span>
+                                                </span>
+                                            </lightning-icon>
+                                            <p class="slds-list_inline card-donut-chart-text slds-m-around_x-small" id="assignedText" >17% Assigned</p>
+                                        </div>
+                                        <div class="slds-truncate">
+                                            <lightning-icon class="slds-list-inline slds-icon-utility-record slds-icon_container" style="--slds-c-icon-color-foreground-default: #9D53F2" icon-name="utility:record">
+                                                <span style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)" part="boundary">
+                                                    <lightning-primitive-icon size="small" variant="">
+                                                        <svg class="slds-icon slds-icon-text-default slds-icon_small" focusable="false" data-key="record" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 8c9.9 0 18 8.1 18 18s-8.1 18-18 18S8 35.9 8 26 16.1 8 26 8z"></path></g>
+                                                        </svg>
+                                                    </lightning-primitive-icon>
+                                                    <span class="slds-assistive-text">In Progress</span>
+                                                </span>
+                                            </lightning-icon>
+                                            <p class="slds-list_inline card-donut-chart-text slds-m-around_x-small" id="inProgressText" >33% In Progress</p>
+                                        </div>
+                                        <div class="slds-truncate">
+                                            <lightning-icon class="slds-list-inline slds-icon-utility-record slds-icon_container" style="--slds-c-icon-color-foreground-default: #26ABA4" icon-name="utility:record">
+                                                <span style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)" part="boundary">
+                                                    <lightning-primitive-icon size="small" variant="">
+                                                        <svg class="slds-icon slds-icon-text-default slds-icon_small" focusable="false" data-key="record" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 8c9.9 0 18 8.1 18 18s-8.1 18-18 18S8 35.9 8 26 16.1 8 26 8z"></path></g>
+                                                        </svg>
+                                                    </lightning-primitive-icon>
+                                                    <span class="slds-assistive-text">Waiting</span>
+                                                </span>
+                                            </lightning-icon>
+                                            <p class="slds-list_inline card-donut-chart-text slds-m-around_x-small" id="waitingText" >50% Waiting</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Agent Capacity Status -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card >                 
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">                   
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-historical-adherence" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#historical_adherence">
+                                            </use>
+                                        </svg>
+                                    </span>                         
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Agent Capacity Status</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                                <div class="slds-is-relative">
+                                    <lightning-button-menu slot="actions" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                        <button class="slds-button slds-button_icon slds-button_icon-more" aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" onclick="toggleDropdown('chart2Dropdown')">
+                                            <lightning-primitive-icon variant="bare"><svg class="slds-button__icon" focusable="false" data-key="chart" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g><g><path d="M45.5 23.4L25 34.7c-1.4.7-3-.3-3-1.8V8.4c0-1-1-1.8-1.9-1.5-10 2.8-17.2 12.5-16 23.6 1.1 10.1 9.2 18.3 19.4 19.4C36.8 51.3 48 41 48 28c0-1.2-.1-2.4-.3-3.6-.2-1-1.3-1.5-2.2-1z"></path><path d="M27.7 28l19.7-10.5c1.2-.6 1.6-2.2.8-3.3C43.7 8 36.7 3.5 28.7 2.2 27.3 1.9 26 3 26 4.4V27c0 .9.9 1.4 1.7 1z"></path></g></g></svg></lightning-primitive-icon>
+                                            <lightning-primitive-icon variant="bare"><svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g><path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g></svg></lightning-primitive-icon>
+                                            <span class="slds-assistive-text">Show Menu</span>
+                                        </button>
+                                    </lightning-button-menu>
+                                    <div id="chart2Dropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -30px; width: 162px; z-index: 1000; margin-top: 1px;">
+                                        <div class="slds-dropdown__body slds-p-around_small">
+                                            <div class="slds-scrollable" style="max-height: 200px;">
+                                                <div style="padding-left: 20px;">Metric Chart</div>
+                                                <div style="padding-top: 15px;">✔&nbsp;&nbsp;&nbsp;Donut Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Vertical Bar Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Horizontal Bar Chart</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>                          
+                        <article class="slds-card slds-card_boundary slds-m-around_x-small slds-theme_default">                                  
+                            <omni-chart>
+                                <div class="chart-default-style slds-p-around_small">
+                                    <setup_einstein_shared-chart>
+                                        <div class="container" name="container">
+                                            <div class="chartingSection" name="chart">
+                                                <div class="chart ng-cursor-default" data-ngname="Agent Capacity Status">
+                                                    <div style="position: relative;">
+                                                        <div style="z-index: 2; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0); width: 100%; height: 188px; left: 0px; top: 0px;" class="ps-container" data-ps-id="093637eb-17e8-089e-a63d-129a0d380d3d">
+                                                            <div style="width: 100%; height: 188px;">
+                                                                <div  id="compContainer2" />
+                                                                <!-- Where chart is rendered -->
+                                                            </div>
+                                                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                                                <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                                                            </div>
+                                                            <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                                                <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <canvas class="chart" style="z-index: 1; position: absolute; -webkit-font-smoothing: antialiased; width: 100%; height: 188px; left: 0px; top: 0px;" width="531" height="192"></canvas>
+                                                    </div>        
+                                                    <div data-ngname="legend_Agent Capacity Status" style="display: none;">
+                                                        <div style="position: relative;">
+                                                            <div style="z-index: 3; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0);"></div>
+                                                            <canvas class="legend" style="z-index: 2; position: absolute; -webkit-font-smoothing: antialiased;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ng-annotations-container" style="margin: 0px; width: 531px; height: 192px;"></div>
+                                                </div>
+                                                <span class="sizeErrorSpan slds-hide">Not enough space to display the chart.</span>
+                                            </div>
+                                            <div class="errorSection" name="error"></div>
+                                        </div>
+                                    </setup_einstein_shared-chart>
+                                </div>
+                            </omni-chart>                                  
+                        </article>                   
+                    </article>
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            <!-- Wait Time= -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">              
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-past-chat" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#past_chat">
+                                            </use>
+                                        </svg>
+                                    </span>       
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Wait Time</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                            </header>
+                        </div>
+                        <div>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <div class="supervisor-metric-inner-card-title-container">
+                                                <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Average Wait Time</p>     
+                                            </div>
+                                            <p class="card-detail-number slds-truncate" id="avgWaitTime" value="7555">2 h 3 m 15 s</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1">
+                                    <article  class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <div class="supervisor-metric-inner-card-title-container">
+                                                <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Longest Wait Time </p>
+                                            </div>
+                                            <p class="card-detail-number slds-truncate" id="longestWaitTime" value="180000">1 d 9 h 10 m 45 s</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            <!-- Agent Capacity -->       
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-work-capacity-usage" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#work_capacity_usage">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Agent Capacity</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                                <div class="slds-is-relative">
+                                    <lightning-button-menu slot="actions" class="slds-dropdown-trigger slds-dropdown-trigger_click" >
+                                        <button class="slds-button slds-button_icon slds-button_icon-more" aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" data-position-id="lgcp-1000001" onclick="toggleDropdown('chart3Dropdown')">
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon" focusable="false" data-key="chart" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><g>
+                                                        <path d="M45.5 23.4L25 34.7c-1.4.7-3-.3-3-1.8V8.4c0-1-1-1.8-1.9-1.5-10 2.8-17.2 12.5-16 23.6 1.1 10.1 9.2 18.3 19.4 19.4C36.8 51.3 48 41 48 28c0-1.2-.1-2.4-.3-3.6-.2-1-1.3-1.5-2.2-1z"></path>
+                                                        <path d="M27.7 28l19.7-10.5c1.2-.6 1.6-2.2.8-3.3C43.7 8 36.7 3.5 28.7 2.2 27.3 1.9 26 3 26 4.4V27c0 .9.9 1.4 1.7 1z"></path>
+                                                        </g></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <span class="slds-assistive-text">Show Menu</span>
+                                        </button>  
+                                    </lightning-button-menu>
+                                    <div id="chart3Dropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -30px; width: 162px; z-index: 1000; margin-top: 1px;">
+                                        <div class="slds-dropdown__body slds-p-around_small">
+                                            <div class="slds-scrollable" style="max-height: 200px;">
+                                                <div style="padding-left: 20px;">Metric Chart</div>
+                                                <div style="padding-top: 15px;">✔&nbsp;&nbsp;&nbsp;Donut Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Vertical Bar Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Horizontal Bar Chart</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+
+                        <div class="">
+                            <article class="slds-card slds-card_boundary slds-m-around_x-small slds-theme_default">
+                                <div><div class="slds-media slds-media_center">
+                                    <div class="slds-media__figure">
+                                        <omni-chart><div class="chart-default-style slds-p-around_medium">
+                                            <setup_einstein_shared-chart>
+                                                <div class="container" name="container">
+                                                    <div class="chartingSection" name="chart">
+                                                        <div class="chart ng-cursor-default" data-ngname="Work Item Status">
+                                                            <div style="position: relative;">
+                                                                <div class="ps-container" style="z-index: 2; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0); width: 288px; height: 184px; left: 0px; top: 0px;">
+                                                                    <div style="width: 288px; height: 184px;">
+                                                                        <div  id="compContainerCapacity" />
+                                                                    </div>
+                                                                    
+                                                                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                                                        <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                                                                    </div>
+                                                                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                                                        <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <canvas class="chart" style="z-index: 1;position: absolute;-webkit-font-smoothing: antialiased;width: 288px;height: 184px;left: 0px;top: 0px;" width="288" height="184"></canvas>
+                                                            </div>
+                                                            <div data-ngname="legend_Work Item Status" style="display: none;">
+                                                                <div style="position: relative;">
+                                                                    <div style="z-index: 3; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0);"></div>
+                                                                    <canvas class="legend" style="z-index: 2; position: absolute; -webkit-font-smoothing: antialiased;"></canvas>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ng-annotations-container" style="margin: 0px; width: 288px; height: 184px;"></div>
+                                                        </div>
+                                                        <span class="sizeErrorSpan slds-hide">Not enough space to display the chart.</span></div><div class="errorSection" name="error">
+                                                    </div>
+                                                </div>
+                                            </setup_einstein_shared-chart>
+                                            </div>
+                                        </omni-chart>
+                                        
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="slds-truncate">
+                                            <lightning-icon class="slds-list-inline slds-icon-utility-record slds-icon_container" style="--slds-c-icon-color-foreground-default: #3290ED" icon-name="utility:record">
+                                                <span style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)" part="boundary">
+                                                    <lightning-primitive-icon size="small" variant="">
+                                                        <svg class="slds-icon slds-icon-text-default slds-icon_small" focusable="false" data-key="record" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 8c9.9 0 18 8.1 18 18s-8.1 18-18 18S8 35.9 8 26 16.1 8 26 8z"></path></g>
+                                                        </svg>
+                                                    </lightning-primitive-icon>
+                                                    <span class="slds-assistive-text">Used Capacity</span>
+                                                </span>
+                                            </lightning-icon>
+                                            <p class="slds-list_inline card-donut-chart-text slds-m-around_x-small" id="usedCapacityText" >50% Used Capacity</p>
+                                        </div>
+                                        <div class="slds-truncate">
+                                            <lightning-icon class="slds-list-inline slds-icon-utility-record slds-icon_container" style="--slds-c-icon-color-foreground-default: #9D53F2" icon-name="utility:record">
+                                                <span style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)" part="boundary">
+                                                    <lightning-primitive-icon size="small" variant="">
+                                                        <svg class="slds-icon slds-icon-text-default slds-icon_small" focusable="false" data-key="record" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 8c9.9 0 18 8.1 18 18s-8.1 18-18 18S8 35.9 8 26 16.1 8 26 8z"></path></g>
+                                                        </svg>
+                                                    </lightning-primitive-icon>
+                                                    <span class="slds-assistive-text">Available Capacity</span>
+                                                </span>
+                                            </lightning-icon>
+                                            <p class="slds-list_inline card-donut-chart-text slds-m-around_x-small" id="availableCapacityText" >50% Available Capacity</p>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>            
+                    </article>
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            
+            <!-- Agent Presence Status -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-people" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#people">
+                                            </use>
+                                        </svg>
+                                    </span>  
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Agent Presence Statuses</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                                <div class="slds-is-relative">
+                                    <lightning-button-menu slot="actions" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                        <button class="slds-button slds-button_icon slds-button_icon-more" aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" onclick="toggleDropdown('chart4Dropdown')">
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon" focusable="false" data-key="chart" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><path d="M45.5 23.4L25 34.7c-1.4.7-3-.3-3-1.8V8.4c0-1-1-1.8-1.9-1.5-10 2.8-17.2 12.5-16 23.6 1.1 10.1 9.2 18.3 19.4 19.4C36.8 51.3 48 41 48 28c0-1.2-.1-2.4-.3-3.6-.2-1-1.3-1.5-2.2-1z"></path>
+                                                        <path d="M27.7 28l19.7-10.5c1.2-.6 1.6-2.2.8-3.3C43.7 8 36.7 3.5 28.7 2.2 27.3 1.9 26 3 26 4.4V27c0 .9.9 1.4 1.7 1z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                        </button>
+                                    </lightning-button-menu>
+                                    <div id="chart4Dropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -30px; width: 162px; z-index: 1000; margin-top: 1px;">
+                                        <div class="slds-dropdown__body slds-p-around_small">
+                                            <div class="slds-scrollable" style="max-height: 200px;">
+                                                <div style="padding-left: 20px;">Metric Chart</div>
+                                                <div style="padding-top: 15px;">✔&nbsp;&nbsp;&nbsp;Donut Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Vertical Bar Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Horizontal Bar Chart</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                        
+                        <article class="slds-card slds-card_boundary slds-m-around_x-small slds-theme_default">
+                            
+                            <omni-chart>
+                                <div class="chart-default-style slds-p-around_small">
+                                    <setup_einstein_shared-chart>
+                                        <div class="container" name="container">
+                                            <div class="chartingSection" name="chart">
+                                                <div class="chart ng-cursor-default" data-ngname="Agent Presence Statuses">
+                                                    <div style="position: relative;">
+                                                        <div style="z-index: 2; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0); width: 100%; height: 188px; left: 0px; top: 0px;" class="ps-container" data-ps-id="093637eb-17e8-089e-a63d-129a0d380d3d">
+                                                            <div style="width: 100%; height: 188px;">
+                                                                <div  id="compContainer3" />
+                                                                <!-- Where chart is rendered -->
+                                                            </div>
+                                                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                                                <div class="ps-scrollbar-x"  style="left: 0px; width: 0px;"></div>
+                                                            </div>
+                                                            <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                                                <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <canvas class="chart" style="z-index: 1; position: absolute; -webkit-font-smoothing: antialiased; width: 100%; height: 188px; left: 0px; top: 0px;" width="531" height="192"></canvas>
+                                                    </div>        
+                                                    <div data-ngname="legend_Agent Presence Statuses" style="display: none;">
+                                                        <div style="position: relative;">
+                                                            <div style="z-index: 3; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0);">
+                                                                <div ></div>
+                                                            </div>
+                                                            <canvas class="legend" style="z-index: 2; position: absolute; -webkit-font-smoothing: antialiased;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ng-annotations-container" style="margin: 0px; width: 531px; height: 192px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </setup_einstein_shared-chart>
+                                </div>
+                            </omni-chart>       
+                        </article>
+                    </article>      
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            
+            <!-- Raised Flags -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">
+                        
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-custom-custom26" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/custom-sprite/svg/symbols.svg#custom26">
+                                            </use>
+                                        </svg>
+                                    </span>  
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span  class="slds-m-right_x-small">Raised Flags</span>
+                                        <span class="slds-badge slds-badge_lightest">Current</span></div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col">
+                                <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <div class="supervisor-metric-inner-card-title-container">
+                                            <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Raised Flags</p>                                                                            
+                                            <div class="slds-form-element__icon" part="help-text">
+                                                <lightning-button-icon variant="bare">
+                                                    <button class="slds-button slds-button_icon slds-button_icon-bare" type="button" part="button button-icon" aria-describedby="salesforce-lightning-tooltip-bubble_8af5028e-5cb8-e21a-58c3-48cb0bd400cb">
+                                                        <lightning-primitive-icon variant="bare"><svg class="slds-button__icon" focusable="false" data-key="info" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                            <g><path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></g>
+                                                            </svg>
+                                                        </lightning-primitive-icon>
+                                                    </button>
+                                                </lightning-button-icon>
+                                            </div>                                        
+                                        </div>
+                                        <!-- Variable used here -->
+                                        <p id="numRaisedFlags"  class="card-detail-number slds-truncate numRaisedFlags">{!numFlags}</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>                                             
+                    </article>                
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            
+            
+            <!-- Agent Work Status -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">                   
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-product-transfer-state" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#product_transfer_state">
+                                            </use>
+                                        </svg>
+                                    </span>  
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Agent Work Status</span>
+                                        <span class="slds-badge slds-badge_lightest">Last Hour</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                                <div class="slds-is-relative">
+                                    <lightning-button-menu slot="actions" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                        <button class="slds-button slds-button_icon slds-button_icon-more" aria-expanded="false" value="" aria-haspopup="true" type="button" part="button button-icon" onclick="toggleDropdown('chart5Dropdown')">
+                                            <lightning-primitive-icon variant="bare"><svg class="slds-button__icon" focusable="false" data-key="chart" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                <g><path d="M45.5 23.4L25 34.7c-1.4.7-3-.3-3-1.8V8.4c0-1-1-1.8-1.9-1.5-10 2.8-17.2 12.5-16 23.6 1.1 10.1 9.2 18.3 19.4 19.4C36.8 51.3 48 41 48 28c0-1.2-.1-2.4-.3-3.6-.2-1-1.3-1.5-2.2-1z"></path>
+                                                    <path d="M27.7 28l19.7-10.5c1.2-.6 1.6-2.2.8-3.3C43.7 8 36.7 3.5 28.7 2.2 27.3 1.9 26 3 26 4.4V27c0 .9.9 1.4 1.7 1z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                            <lightning-primitive-icon variant="bare">
+                                                <svg class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 52 52" part="icon">
+                                                    <g><path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></g>
+                                                </svg>
+                                            </lightning-primitive-icon>
+                                        </button>
+                                    </lightning-button-menu>
+                                    <div id="chart5Dropdown" class="slds-dropdown slds-hide" style="position: absolute; top: 100%; left: -30px; width: 162px; z-index: 1000; margin-top: 1px;">
+                                        <div class="slds-dropdown__body slds-p-around_small">
+                                            <div class="slds-scrollable" style="max-height: 200px;">
+                                                <div style="padding-left: 20px;">Metric Chart</div>
+                                                <div style="padding-top: 15px;">✔&nbsp;&nbsp;&nbsp;Donut Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Vertical Bar Chart</div>
+                                                <div style="padding-top: 15px; padding-left: 20px;">Horizontal Bar Chart</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                        <article class="slds-card slds-card_boundary slds-m-around_x-small slds-theme_default">
+                            <omni-chart>
+                                <div class="chart-default-style slds-p-around_small">
+                                    <div class="container" name="container">
+                                        <div class="chartingSection" name="chart">
+                                            <div class="chart" data-ngname="Agent Work Status">
+                                                <div style="position: relative;">
+                                                    <div style="z-index: 2; position: absolute; overflow: hidden; background-color: rgba(255, 255, 255, 0); width: 100%; height: 188px; left: 0px; top: 0px;" >
+                                                        <div style="width: 100%; height: 188px;">
+                                                            <div  id="compContainer4" /> 
+                                                            <!-- Where chart is rendered -->
+                                                        </div>
+                                                        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" lwc-5acuv4f5ve5="" style="left: 0px; width: 0px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                                            <div class="ps-scrollbar-y" style="top: 0px; height: 0px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <canvas class="chart" style="z-index: 1; position: absolute; -webkit-font-smoothing: antialiased; width: 100%; height: 188px; left: 0px; top: 0px;" width="531" height="192"></canvas>
+                                                </div>
+                                                <div class="ng-annotations-container" lwc-5acuv4f5ve5="" style="margin: 0px; width: 531px; height: 192px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </omni-chart>                            
+                        </article>                       
+                    </article>                    
+                </omni-supervisor-metrics-card>
+            </div>
+            
+            
+            <!-- Work Performance -->
+            <div class="slds-col slds-size_1-of-3 slds-large-size_1-of-3 slds-medium-size_1-of-2 custom-two-columns">
+                <omni-supervisor-metrics-card>
+                    <article class="slds-card slds-theme_shade slds-card_boundary slds-m-around_small slds-box supervisor-metrics-card-container">             
+                        <div class="slds-card__header slds-grid">
+                            <header  class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-holiday-operating-hours" > 
+                                        <svg aria-hidden="true" class="slds-icon">
+                                            <use xmlns:xlink="http://www.w3.org/2000/xlink"
+                                                 xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#holiday_operating_hours">
+                                            </use>
+                                        </svg>
+                                    </span>  
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-card__header-title">
+                                        <span class="slds-m-right_x-small">Work Performance</span>
+                                        <span class="slds-badge slds-badge_lightest">Last Hour</span>
+                                    </div>
+                                    <div class="slds-text-body_regular slds-m-top_xx-small">No filter applied</div>
+                                </div>
+                            </header>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-2">
+                                <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <div class="supervisor-metric-inner-card-title-container">
+                                            <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Average Work Handle Time</p>
+                                            <div class="supervisor-metric-help-text-style">
+                                                
+                                                <div class="slds-form-element__icon" part="help-text">
+                                                    <lightning-button-icon variant="bare">
+                                                        <button class="slds-button slds-button_icon slds-button_icon-bare" type="button" part="button button-icon" aria-describedby="salesforce-lightning-tooltip-bubble_8af5028e-5cb8-e21a-58c3-48cb0bd400cb">
+                                                            <lightning-primitive-icon variant="bare">
+                                                                <svg class="slds-button__icon" focusable="false" data-key="info" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g>
+                                                                    <path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></g>
+                                                                </svg>
+                                                            </lightning-primitive-icon>
+                                                        </button>
+                                                    </lightning-button-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p  class="card-detail-number slds-truncate" id="avgHandleTime" value="1020" >17 m</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <div class="supervisor-metric-inner-card-title-container">
+                                            <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Average Speed to Answer</p>
+                                            <div class="supervisor-metric-help-text-style">
+                                                <div class="slds-form-element__icon" part="help-text">
+                                                    <lightning-button-icon variant="bare">
+                                                        <button class="slds-button slds-button_icon slds-button_icon-bare" type="button" part="button button-icon" aria-describedby="salesforce-lightning-tooltip-bubble_8af5028e-5cb8-e21a-58c3-48cb0bd400cb">
+                                                            <lightning-primitive-icon variant="bare">
+                                                                <svg class="slds-button__icon" focusable="false" data-key="info" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g>
+                                                                    <path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></g>
+                                                                </svg>
+                                                            </lightning-primitive-icon>
+                                                        </button>
+                                                    </lightning-button-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-detail-number slds-truncate" id="avgSpeedToAnswer" value="240" >4 m</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <div class="supervisor-metric-inner-card-title-container">
+                                            <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">Average Active Work Time</p>
+                                            <div class="supervisor-metric-help-text-style">
+                                                <div class="slds-form-element__icon" part="help-text">
+                                                    <lightning-button-icon variant="bare">
+                                                        <button class="slds-button slds-button_icon slds-button_icon-bare" type="button" part="button button-icon" aria-describedby="salesforce-lightning-tooltip-bubble_8af5028e-5cb8-e21a-58c3-48cb0bd400cb">
+                                                            <lightning-primitive-icon variant="bare">
+                                                                <svg class="slds-button__icon" focusable="false" data-key="info" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g>
+                                                                    <path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></g>
+                                                                </svg>
+                                                            </lightning-primitive-icon>
+                                                        </button>
+                                                    </lightning-button-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p  class="card-detail-number slds-truncate" id="avgActiveTime" value="600" >10 m</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <article class="slds-card slds-card_boundary slds-m-around_x-small slds-p-around_x-small slds-theme_default supervisor-metric-inner-card-container">
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <div class="supervisor-metric-inner-card-title-container">
+                                            <p class="slds-m-right_xx-small supervisor-metric-inner-card-title slds-truncate">After Conversation Time</p>
+                                            <div class="supervisor-metric-help-text-style">
+                                                <div class="slds-form-element__icon" part="help-text">
+                                                    <lightning-button-icon variant="bare">
+                                                        <button class="slds-button slds-button_icon slds-button_icon-bare" type="button" part="button button-icon" aria-describedby="salesforce-lightning-tooltip-bubble_8af5028e-5cb8-e21a-58c3-48cb0bd400cb">
+                                                            <lightning-primitive-icon variant="bare">
+                                                                <svg class="slds-button__icon" focusable="false" data-key="info" aria-hidden="true" viewBox="0 0 52 52" part="icon"><g>
+                                                                    <path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></g>
+                                                                </svg>
+                                                            </lightning-primitive-icon>
+                                                        </button>
+                                                    </lightning-button-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-detail-number slds-truncate" id="avgACW" value="300" >5 m</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>                    
+                    </article>
+                </omni-supervisor-metrics-card>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+            $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                       {feedName:"WorkItemStatus", randomNumber : 123},
+                                       "compContainer1",
+                                       function(cmp) {
+                                           console.log("c:VFPageApp loaded successfully in VF page");
+                                       }
+                                      );
+        });
+        
+       
+        
+        $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+            $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                       {feedName:"AgentCapacityStatus"},
+                                       "compContainer2",
+                                       function(cmp) {
+                                           console.log("c:VFPageApp loaded successfully in VF page");
+                                       }
+                                      );
+        });
+        
+        
+        $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+            $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                       {feedName:"AgentCapacity", randomNumber: 0.5},
+                                       "compContainerCapacity",
+                                       function(cmp) {
+                                           console.log("c:VFPageApp loaded successfully in VF page");
+                                       }
+                                      );
+        });
+        
+        $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+            $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                       {feedName:"AgentPresenceStatuses"},
+                                       "compContainer3",
+                                       function(cmp) {
+                                           console.log("c:VFPageApp loaded successfully in VF page");
+                                       }
+                                      );
+        });
+        
+        $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+            $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                       {feedName:"AgentWorkStatus"},
+                                       "compContainer4",
+                                       function(cmp) {
+                                           console.log("c:VFPageApp loaded successfully in VF page");
+                                       }
+                                      );
+        });
+        
+        self.setInterval(function() {
+            console.log("main timer triggered");
+            var random = Math.random();
+            var isIncrement = random <= 0.22;
+            var isDecrement = random > 0.66;
+            
+            document.getElementById("compContainerCapacity").innerHTML = ""
+            document.getElementById("usedCapacityText").innerHTML = Math.round(random*100) + "% Used Capacity";
+            document.getElementById("availableCapacityText").innerHTML = Math.round(100 - (random*100)) + "% Available Capacity";
+            
+            $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+                $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                           {feedName:"AgentCapacity", randomNumber: random},
+                                           "compContainerCapacity",
+                                           function(cmp) {
+                                               console.log("c:VFPageApp loaded successfully in VF page");
+                                           }
+                                          )
+                                      });
+                                      
+             document.getElementById("compContainer1").innerHTML = "";
+             var randomString = Math.round(random >= 0.1 ? random * 1000 : random >= 0.01 ? random * 10000 : random * 100000).toString();
+             var total = parseInt(randomString[0]) + parseInt(randomString[1]) + parseInt(randomString[2]);
+             
+              // Take the first 3 non-zero digits of the random number and use those as the values for Assigned, In Progress and Waiting
+             document.getElementById("assignedText").innerHTML = Math.round((parseInt(randomString[0]) / total) * 100 )  + "% Assigned";
+             document.getElementById("inProgressText").innerHTML = Math.round((parseInt(randomString[1]) / total) * 100) + "% In Progress";
+             document.getElementById("waitingText").innerHTML = Math.round((parseInt(randomString[2]) / total) * 100) + "% Waiting";
+             
+             $Lightning.use("c:SDO_Service_ChartJSComponent", function() {
+                    $Lightning.createComponent("c:SDO_Service_RealTimeChart",
+                                               {feedName:"WorkItemStatus", randomNumber : random},
+                                               "compContainer1",
+                                               function(cmp) {
+                                                   console.log("c:VFPageApp loaded successfully in VF page");
+                                               }
+                                              );
+                });
+            
+            var currentFlagsValue = parseInt(document.getElementById("numRaisedFlags").innerText);
+            
+            document.getElementById("numRaisedFlags").innerText = isIncrement ? currentFlagsValue + 1 : (isDecrement && currentFlagsValue > 0 ? currentFlagsValue - 1 : currentFlagsValue);
+                    
+            var currentAvgWorkValue = parseInt(document.getElementById("avgHandleTime").getAttribute("value"));
+            var currentAvgSpeedValue = parseInt(document.getElementById("avgSpeedToAnswer").getAttribute("value"));
+            var currentAvgActiveValue = parseInt(document.getElementById("avgActiveTime").getAttribute("value"));
+            var currentAvgACWValue = parseInt(document.getElementById("avgACW").getAttribute("value"));
+            
+            if (isDecrement)
+            {
+                currentAvgWorkValue -= Math.floor(Math.random() * 10);
+                currentAvgSpeedValue -= Math.floor(Math.random() * 10);
+                currentAvgActiveValue -= Math.floor(Math.random() * 10);
+                currentAvgACWValue -= Math.floor(Math.random() * 10);
+            }
+            else if (isIncrement)
+            {
+                currentAvgWorkValue += Math.floor(Math.random() * 10);
+                currentAvgSpeedValue += Math.floor(Math.random() * 10);
+                currentAvgActiveValue += Math.floor(Math.random() * 10);
+                currentAvgACWValue += Math.floor(Math.random() * 10);
+            }
+            else
+            {
+                return;
+            }
+            
+            document.getElementById("avgHandleTime").setAttribute("value", currentAvgWorkValue);
+            document.getElementById("avgHandleTime").innerText = formatTime(currentAvgWorkValue);
+               
+            document.getElementById("avgSpeedToAnswer").setAttribute("value", currentAvgSpeedValue);
+            document.getElementById("avgSpeedToAnswer").innerText = formatTime(currentAvgSpeedValue);
+            
+            document.getElementById("avgActiveTime").setAttribute("value", currentAvgActiveValue);
+            document.getElementById("avgActiveTime").innerText = formatTime(currentAvgActiveValue);
+            
+            document.getElementById("avgACW").setAttribute("value", currentAvgACWValue);
+            document.getElementById("avgACW").innerText = formatTime(currentAvgACWValue);
+    
+            
+            
+        }, Math.floor((Math.random() * 6000) + 4000)); // Wait 4-10 seconds
+        
+        self.setInterval(function() {
+            var random = Math.random();
+            var isDecrement = random > 0.93;
+            
+            var currentAvgValue = parseInt(document.getElementById("avgWaitTime").getAttribute("value"));
+            var currentLongValue = parseInt(document.getElementById("longestWaitTime").getAttribute("value"));
+            if (isDecrement)
+            {
+                currentAvgValue -= Math.floor(random * 30);
+                currentLongValue -= Math.floor(random * 30);
+            }
+            else
+            {
+                // Add a second to each
+                currentAvgValue++;
+                currentLongValue++
+            }
+            
+            
+            document.getElementById("avgWaitTime").setAttribute("value", currentAvgValue);
+            document.getElementById("avgWaitTime").innerText = formatTime(currentAvgValue);
+            document.getElementById("longestWaitTime").setAttribute("value", currentLongValue);
+            document.getElementById("longestWaitTime").innerText = formatTime(currentLongValue);
+            
+          }, 1000); 
+       
+         function formatTime(seconds) {
+            var days = Math.floor(seconds / (3600 * 24));
+            var hours   = Math.floor((seconds - (days * 86400)) / 3600);
+            var minutes = Math.floor((seconds - (hours * 3600) - (days * 86400)) / 60);
+            var seconds = seconds - (hours * 3600) - (minutes * 60) - (days * 86400);
+            var retString = "";
+    
+    
+            if (days > 0) {
+                retString = days + " d ";
+            }         
+            if (hours > 0) {
+                retString += hours + " h ";
+            } else if (days > 0) { 
+                retString += "0 h "; 
+            }
+            
+            if (minutes > 0) {
+                retString += minutes + " m ";
+            } else if (days > 0 || hours > 0) { 
+                retString += "0 m "; 
+            }
+            
+            return retString + seconds + " s ";
+        }; 
+          
+        function toggleDropdown(dropdownId) {
+            let dropdown = document.getElementById(dropdownId);
+            if (dropdown) {
+                dropdown.classList.toggle("slds-hide");
+            }
+        }
+
+    </script>
+    
+    
+    
+</apex:page>

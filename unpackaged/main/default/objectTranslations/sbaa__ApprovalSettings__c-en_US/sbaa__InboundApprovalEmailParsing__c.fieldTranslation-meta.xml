@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Line Break = Captures everything in between the first and second line breaks as comments. Blank Line = Captures everything in betweeen the first line break and the first blank line as comments. --></help>
+        <label><!-- Approval Email Comments End Indicator --></label>
+        <name>sbaa__InboundApprovalEmailParsing__c</name>
+    </CustomFieldTranslation>

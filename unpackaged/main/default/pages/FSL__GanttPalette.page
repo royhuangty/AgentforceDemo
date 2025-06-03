@@ -1,0 +1,21 @@
+<apex:page sidebar="false" showheader="false" title="Gantt Palette Editor">
+
+    <c:GanttPaletteSalesforceComponent ></c:GanttPaletteSalesforceComponent>
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.js')}" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem260, 'styles/salesforce-lightning-design-system.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+
+    <apex:includeScript value="/support/console/41.0/integration.js"/>
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 100%; background: #FFFFFF;">
+        <head>
+            <meta charset="utf-8" /><link href="{!URLFOR($Resource.GanttPaletteBuild, '/static/css/main.c609b245.css')}" rel="stylesheet" /></head>
+        <body style="height: 100%; padding-bottom: 0px;">
+            <div id="GanttPaletteAppRoot" style="height: 100%"></div>
+            <script type="text/javascript" src="{!URLFOR($Resource.GanttPaletteBuild, '/static/js/main.dd15fefc.js')}"></script>
+        </body>
+    </html>
+</apex:page>

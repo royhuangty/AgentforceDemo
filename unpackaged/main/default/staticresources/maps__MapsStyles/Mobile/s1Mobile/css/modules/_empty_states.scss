@@ -1,0 +1,23 @@
+.empty-state-wrap {
+	padding: 1.5rem;
+	text-align: center;
+
+	.slds-m-bottom--large {
+		margin-bottom: 1.5rem;
+	}
+
+	h4 {
+	    font-size: 1.125rem;
+	    line-height: 1.714;
+	    font-weight: 400;
+	    text-transform: none;
+	    color: #6b6d70;
+	    letter-spacing: 0;
+	}
+
+	p {
+	    color: #6b6d70;
+	    font-size: 13px;
+	    margin-top: 0;
+	}
+}

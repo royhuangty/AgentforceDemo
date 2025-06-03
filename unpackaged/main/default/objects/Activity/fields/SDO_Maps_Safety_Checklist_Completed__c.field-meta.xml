@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Maps_Safety_Checklist_Completed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>What: Used in the Safety Checklist Flow. Who: Dylan Friddle &amp; Aaron Bendickson. When: Aug 30,2021</description>
+    <label>Safety Checklist Completed</label>
+    <type>Checkbox</type>
+</CustomField>

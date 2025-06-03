@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bezieht sich auf das Umsatzrealisierungsverfahren, das in dem Umsatzplan ausgewählt ist, der zur Berechnung dieser Transaktion verwendet wird.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </CustomFieldTranslation>

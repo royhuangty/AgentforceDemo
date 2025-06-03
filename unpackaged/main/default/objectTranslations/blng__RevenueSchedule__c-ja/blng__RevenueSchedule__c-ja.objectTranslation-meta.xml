@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>収益スケジュール</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>収益日</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>収益メトリクス</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>ソースレコード</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>サマリー情報</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>名前</nameFieldLabel>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

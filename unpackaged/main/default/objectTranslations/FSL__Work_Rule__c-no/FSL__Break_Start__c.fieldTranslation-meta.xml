@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestemmer minimumsstarttid for pauser (i formatet: {HH:MM}) for å opprette pauser. 
+La dette feltet være tomt hvis du ikke vil opprette pauser.</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

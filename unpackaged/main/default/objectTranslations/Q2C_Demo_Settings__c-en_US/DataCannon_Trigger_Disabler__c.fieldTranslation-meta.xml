@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used to disable triggers, workflow rules and process builders that cause errors in the DataCannon --></help>
+        <label><!-- DataCannon Trigger Disabler --></label>
+        <name>DataCannon_Trigger_Disabler__c</name>
+    </CustomFieldTranslation>

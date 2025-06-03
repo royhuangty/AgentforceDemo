@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Variable d&#39;approbation responsable du calcul du total de la liste</help>
+        <label><!-- List Variable --></label>
+        <name>sbaa__ListVariable__c</name>
+        <relationshipLabel><!-- Approval Variables (List Variable) --></relationshipLabel>
+    </CustomFieldTranslation>

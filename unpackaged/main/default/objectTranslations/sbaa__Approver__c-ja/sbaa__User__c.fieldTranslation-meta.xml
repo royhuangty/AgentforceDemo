@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>承認者が単一ユーザの場合、そのユーザをルックアップします</help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </CustomFieldTranslation>

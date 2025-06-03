@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Entry criteria for the job&apos;s Tracking Event records to be processed --></help>
+        <label><!-- Entry Stage --></label>
+        <name>Entry_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Mixpanel Event</masterLabel>
+            <translation><!-- Mixpanel Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixpanel Profile</masterLabel>
+            <translation><!-- Mixpanel Profile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processed</masterLabel>
+            <translation><!-- Processed --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

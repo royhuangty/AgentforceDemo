@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>PMT Resource Allocation Layout</layout>
+        <sections>
+            <label><!-- Allocation --></label>
+            <section>Allocation</section>
+        </sections>
+        <sections>
+            <label><!-- Hours --></label>
+            <section>Hours</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Actual hours worked cannot be negative numbers --></errorMessage>
+        <name>inov8__Hours_Cant_be_negative</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hours can only be self updated --></errorMessage>
+        <name>inov8__Self_update_hours</name>
+    </validationRules>
+</CustomObjectTranslation>

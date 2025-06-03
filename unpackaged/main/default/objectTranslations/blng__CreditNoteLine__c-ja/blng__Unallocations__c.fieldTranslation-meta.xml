@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求書から割り当て解除された、この品目の金額</help>
+        <label><!-- Unallocations --></label>
+        <name>blng__Unallocations__c</name>
+    </CustomFieldTranslation>

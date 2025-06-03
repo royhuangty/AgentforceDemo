@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Aggregate function used to calculate this variable. --></help>
+        <label><!-- Aggregate Function --></label>
+        <name>sbaa__AggregateFunction__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Count</masterLabel>
+            <translation><!-- Count --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max</masterLabel>
+            <translation><!-- Max --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Min</masterLabel>
+            <translation><!-- Min --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sum</masterLabel>
+            <translation><!-- Sum --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

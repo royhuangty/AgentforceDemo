@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求の対象を決定します。
+        有効な注文商品、使用量サマリー、または請求トランザクションのうち、[次の請求日] または [次の請求日の上書き] が [目標日] 以前のものが請求されます。</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

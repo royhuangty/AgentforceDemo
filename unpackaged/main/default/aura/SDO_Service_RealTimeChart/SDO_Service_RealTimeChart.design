@@ -1,0 +1,4 @@
+<design:component >
+	<design:attribute name="feedName" label="Feed Name" default="" />
+    <design:attribute name="randomNumber" label="Random Number" default="" />
+</design:component>

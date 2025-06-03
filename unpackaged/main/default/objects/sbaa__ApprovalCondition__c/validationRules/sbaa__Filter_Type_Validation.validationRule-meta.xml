@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sbaa__Filter_Type_Validation</fullName>
+    <active>true</active>
+    <description>Ensures correct configuration of Filter Type, Filter Value, Filter Variable and Filter Field.</description>
+    <errorConditionFormula>(ISPICKVAL(sbaa__FilterType__c, &#39;Value&#39;) &amp;&amp; (NOT(ISPICKVAL(sbaa__FilterField__c, &#39;&#39;)) || NOT(ISBLANK(sbaa__FilterVariable__c))))
+
+||
+
+(ISPICKVAL(sbaa__FilterType__c, &#39;Variable&#39;) &amp;&amp; (ISBLANK(sbaa__FilterVariable__c) || NOT(ISPICKVAL(sbaa__FilterField__c, &#39;&#39;)) || NOT(ISBLANK(sbaa__FilterValue__c))))
+
+||
+
+(ISPICKVAL(sbaa__FilterType__c, &#39;Field&#39;) &amp;&amp; (ISPICKVAL(sbaa__FilterField__c, &#39;&#39;) || NOT(ISBLANK(sbaa__FilterValue__c)) || NOT(ISBLANK(sbaa__FilterVariable__c))))</errorConditionFormula>
+    <errorMessage>You may specify only one type of filter and it must match Filter Type.</errorMessage>
+</ValidationRule>

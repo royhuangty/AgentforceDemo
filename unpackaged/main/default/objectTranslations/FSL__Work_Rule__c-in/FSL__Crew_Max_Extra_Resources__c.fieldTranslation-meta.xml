@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Masukkan jumlah jika Anda ingin membatasi jumlah sumber daya layanan tambahan yang dapat ditambahkan ke kru. Biarkan kosong jika sumber daya layanan dapat ditambahkan berapa pun jumlahnya.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

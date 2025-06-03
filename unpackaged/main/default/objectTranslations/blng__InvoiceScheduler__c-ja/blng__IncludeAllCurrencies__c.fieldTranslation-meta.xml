@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この請求書のすべての通貨を処理するには、[はい] を選択します。</help>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </CustomFieldTranslation>

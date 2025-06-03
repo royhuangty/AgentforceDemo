@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is automatically calculated from closed opportunities. --></help>
+        <label><!-- Total Sales --></label>
+        <name>SDO_Sales_Closed_Won_Value__c</name>
+    </CustomFieldTranslation>

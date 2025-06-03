@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Inpatient</fullName>
+        <default>false</default>
+        <label>Inpatient</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outpatient</fullName>
+        <default>false</default>
+        <label>Outpatient</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Community</fullName>
+        <default>false</default>
+        <label>Community</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Patient Specified</fullName>
+        <default>false</default>
+        <label>Patient Specified</label>
+    </standardValue>
+</StandardValueSet>

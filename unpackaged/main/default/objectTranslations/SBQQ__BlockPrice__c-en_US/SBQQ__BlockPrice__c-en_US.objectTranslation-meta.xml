@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Block Price Layout</layout>
+        <sections>
+            <label><!-- Snapshot Information --></label>
+            <section>Snapshot Information</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- EditAll --></label>
+        <name>SBQQ__EditAll</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Champ testé lors de l&#39;évaluation de la condition</help>
+        <label><!-- Tested Field --></label>
+        <name>sbaa__TestedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>Montant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nom</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Probability</masterLabel>
+            <translation>Probabilité</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-de</name>
+    <style>none</style>
+    <subject>Einladung visueller Fernbedienungsassistent</subject>
+    <textOnly>Hallo,
+Für Sie wurde ein Online-Fernmeeting angesetzt
+Klicken Sie auf die Schaltfläche „Teilnehmen“, um die Meeting-Details anzuzeigen und am Meeting teilzunehmen.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

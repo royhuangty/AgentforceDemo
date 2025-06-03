@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatform xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <activationPlatformConnectorType>OAUTH</activationPlatformConnectorType>
+    <dataConnector>cdpactvstrgptnr__dv360Platform1714424677406</dataConnector>
+    <description>Create activation targets using a connected Google DV360 account.</description>
+    <enabled>false</enabled>
+    <includeSegmentNames>false</includeSegmentNames>
+    <masterLabel>Google Display &amp; Video 360</masterLabel>
+    <outputFormat>JSON</outputFormat>
+    <outputGrouping>PER_ACCOUNT</outputGrouping>
+    <periodicRefreshFrequecy>REFRESH_30</periodicRefreshFrequecy>
+    <platformType>Advertising</platformType>
+    <refreshFrequency xsi:nil="true"/>
+    <refreshMode>INCREMENTAL</refreshMode>
+</ActivationPlatform>

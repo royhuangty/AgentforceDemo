@@ -1,0 +1,25 @@
+<aura:component
+  controller="SDO_Tool_Insights_InsightGeneratorCtrl"
+  implements="c:SDO_Tool_Insights_InsightInterface"
+>
+  <aura:attribute name="recordId" type="string"></aura:attribute>
+  <aura:attribute name="insight" type="Map" default="{}"></aura:attribute>
+  <aura:attribute name="typeOptions" type="Map[]"></aura:attribute>
+  <aura:attribute name="trendTypeOptions" type="Map[]"></aura:attribute>
+  <aura:attribute
+    name="disableSave"
+    type="Boolean"
+    default="true"
+  ></aura:attribute>
+
+  <aura:handler
+    name="change"
+    value="{!v.insight}"
+    action="{!c.handleValueChange}"
+  />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+
+  <div class="action-body">
+    This feature has been deprecated and is no longer being sold.
+  </div>
+</aura:component>

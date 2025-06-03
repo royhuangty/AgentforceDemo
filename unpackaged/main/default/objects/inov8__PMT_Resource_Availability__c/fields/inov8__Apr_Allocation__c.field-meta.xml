@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Apr_Allocation__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Rolled up allocation for the month</description>
+    <label>Apr Allocation</label>
+    <summarizedField>inov8__PMT_Resource_Allocation__c.inov8__Apr__c</summarizedField>
+    <summaryForeignKey>inov8__PMT_Resource_Allocation__c.inov8__Resource_Availability__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

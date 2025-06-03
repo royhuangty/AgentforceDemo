@@ -1,0 +1,93 @@
+@import "scss-variables";
+
+/*
+ * HEADER & FOOTER STYLES
+ * 
+ * This CSS file contains styles that reference the Experience Cloud's header and footer.  This
+ * file includes the Salesforce navigation styles, logo constraints and profile styles.
+ * 
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+
+/* This is the drop shadow underneath the header bar */
+.header .forceCommunityThemeHeaderCompact {
+	box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, 0.28);
+}
+
+.comm-drilldown-navigation__bar .slds-list__item {
+	font-size: var(--font-size-sm);
+}
+
+// Footer
+.themeLayoutStarterWrapper>.footer {
+	background-color: rgba(28, 28, 28, 0.9);
+	color: var(--base-color-white);
+	margin-top: 60px;
+	padding: 20px 0;
+
+	a {
+		color: var(--base-color-white) !important;
+	}
+
+	.footer-container {
+		align-items: center;
+		/* Vertically centers children */
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		max-width: 1200px;
+
+		.col {
+			box-sizing: border-box;
+			margin: 10px;
+		}
+
+		.col:nth-child(2) {
+			flex: 1;
+		}
+
+		.links {
+			text-align: center;
+		}
+
+		.social-media {
+			justify-content: right;
+
+			.fa-brands {
+				font-size: var(--font-size-md);
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+/* Media query for tablet devices */
+@media only screen and (max-width: 768px) {
+	.footer .footer-container {
+		flex-direction: column;
+		/* Change to a column layout */
+		align-items: stretch;
+		/* Stretch children to fill width */
+	}
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+	.footer .footer-container {
+		padding: 0 40px;
+	}
+
+	.footer .footer-container .col {
+		width: 100% !important;
+		/* Set full width for all columns */
+		text-align: center !important;
+		/* Center align text */
+		margin: 10px 0;
+		/* Adjust margin */
+	}
+}

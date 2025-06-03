@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Refers to the revenue recognition treatment selected in the revenue schedule used to calculate this transaction. --></help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </CustomFieldTranslation>

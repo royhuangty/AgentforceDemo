@@ -1,0 +1,14 @@
+#maBodyContent {
+  padding: 0 !Important; }
+
+.ma-body-content.is-active {
+  display: block !important;
+  /*update this in scss for all pages */ }
+
+th div {
+  resize: vertical; }
+
+#maBodyContent {
+  border-radius: 0 0 4px 4px; }
+
+/*# sourceMappingURL=ma-page-summaries-dashboard.css.map */

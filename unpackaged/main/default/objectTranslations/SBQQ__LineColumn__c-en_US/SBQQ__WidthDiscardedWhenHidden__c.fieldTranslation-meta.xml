@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox for conditionally displayed column to replace another column(s). Leaving this box unselected will re-allocate width of this column when it&apos;s hidden to another column therefore keeping table width unchanged. --></help>
+        <label><!-- Discard Width When Hidden --></label>
+        <name>SBQQ__WidthDiscardedWhenHidden__c</name>
+    </CustomFieldTranslation>

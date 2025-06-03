@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Street Address 1 of Card&apos;s billing address --></help>
+        <label><!-- Street Address 1 --></label>
+        <name>blng__BillingStreet__c</name>
+    </CustomFieldTranslation>

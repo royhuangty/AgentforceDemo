@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Create a Visit Window that indicates the ideal visit days and times for a specific customer.  Maps Advanced will ensure all future visits are made within these windows during routing optimization.  Created by: Aaron Bendickson Aug, 18 2023 --></help>
+        <label><!-- Maps Advanced Route Visit Windows --></label>
+        <name>Maps_Advanced_Route_Visit_Windows__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </CustomFieldTranslation>

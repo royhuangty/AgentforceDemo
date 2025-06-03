@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Conta de GL</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contas de GL</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome da conta GL</nameFieldLabel>
+</CustomObjectTranslation>

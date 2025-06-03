@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Provides a URL to an icon representing the type of knowledge article. --></help>
+        <label><!-- Article Type Icon URL --></label>
+        <name>Article_Type_Icon_URL__c</name>
+    </CustomFieldTranslation>

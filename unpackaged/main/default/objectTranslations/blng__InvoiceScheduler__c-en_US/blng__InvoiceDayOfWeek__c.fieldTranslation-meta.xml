@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If invoice type is weekly, select a number for the day of the week. Sunday=1 --></help>
+        <label><!-- Invoice Day Of Week --></label>
+        <name>blng__InvoiceDayOfWeek__c</name>
+    </CustomFieldTranslation>

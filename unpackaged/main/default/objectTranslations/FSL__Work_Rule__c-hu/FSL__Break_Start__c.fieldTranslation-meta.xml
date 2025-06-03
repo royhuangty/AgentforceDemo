@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Meghatározza a minimális kezdési időt (formátum: {ÓÓ:PP}) a szünetek létrehozásához. 
+Hagyja üresen a mezőt, ha nem szeretne szüneteket létrehozni.</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

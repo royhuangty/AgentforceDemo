@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Sélectionnez un ou plusieurs destinataires pour l&#39;e-mail de notification d&#39;approbation.</help>
+        <label><!-- Approval Recipients --></label>
+        <name>sbaa__ApprovalRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Émetteur initial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Enregistrement créé par</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Propriétaire de l&#39;enregistrement</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

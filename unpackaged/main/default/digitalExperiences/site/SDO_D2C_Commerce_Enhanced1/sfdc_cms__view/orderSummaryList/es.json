@@ -1,0 +1,52 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mi cuenta"
+        },
+        "id" : "b54f6cf3-cf71-4c72-9499-86e19dcfa20f"
+      }, {
+        "attributes" : {
+          "text" : "Historial de pedidos"
+        },
+        "id" : "73d4f481-f233-4762-8771-aacf6363b59a"
+      }, {
+        "attributes" : {
+          "text" : "No pudimos encontrar ningún pedido de ese período de tiempo."
+        },
+        "id" : "50442c83-e3a2-4ba3-ae7f-30a88c89e6f0"
+      }, {
+        "attributes" : {
+          "text" : "Intente cambiar la configuración de su filtro."
+        },
+        "id" : "f8848e17-375c-48da-9d08-2ddd07bfb06a"
+      }, {
+        "attributes" : {
+          "text" : "Seguir comprando"
+        },
+        "id" : "1896c854-8b78-4876-a1c3-48c66aff4ea6"
+      }, {
+        "attributes" : {
+          "orderSummaryFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"OrderNumber\",\"label\": \"Número de resumen de pedido\",\"type\": \"Text(255)\",\"expression\": \"{!OrderSummary.OrderSummary.OrderNumber}\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\",\"expression\": \"{!OrderSummary.OrderSummary.GrandTotalAmount}\"}]",
+          "reorderButtonLabel" : "Iniciar la realización del pedido de nuevo",
+          "viewDetailsLinkLabel" : "Ver detalles"
+        },
+        "id" : "08cc89ed-766e-4e8d-9228-f19cf9e184ce"
+      }, {
+        "attributes" : {
+          "text" : "Número de pedido:"
+        },
+        "id" : "1a7d6d02-719d-4203-8e35-8508aec764e3"
+      }, {
+        "attributes" : {
+          "text" : "{!OrderSummary.orderNumber}"
+        },
+        "id" : "93e0c460-5549-496b-9c73-1d6b1780c99f"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

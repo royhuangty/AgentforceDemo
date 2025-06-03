@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Úgy állítja be az ütemezést, hogy az utazási megfontolásokba beemelje vagy abból kizárja a nap első és utolsó, a szervizerőforrás telephelyére érkező vagy onnan induló utazását</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

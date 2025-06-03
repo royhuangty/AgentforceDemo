@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Allopathic and Osteopathic Physicians</fullName>
+        <default>false</default>
+        <label>Allopathic and Osteopathic Physicians</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physician Assistants and Advanced Practice Nursing Providers</fullName>
+        <default>false</default>
+        <label>Physician Assistants and Advanced Practice Nursing Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chiropractic Providers</fullName>
+        <default>false</default>
+        <label>Chiropractic Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Eye and Vision Service Providers</fullName>
+        <default>false</default>
+        <label>Eye and Vision Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ambulatory Health Care Facilities</fullName>
+        <default>false</default>
+        <label>Ambulatory Health Care Facilities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Laboratories</fullName>
+        <default>false</default>
+        <label>Laboratories</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Podiatric Medicine and Surgery Service Providers</fullName>
+        <default>false</default>
+        <label>Podiatric Medicine and Surgery Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Suppliers</fullName>
+        <default>false</default>
+        <label>Suppliers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Respiratory, Developmental, Rehabilitative, and Restorative Service Providers</fullName>
+        <default>false</default>
+        <label>Respiratory, Developmental, Rehabilitative, and Restorative Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transportation Services</fullName>
+        <default>false</default>
+        <label>Transportation Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agencies</fullName>
+        <default>false</default>
+        <label>Agencies</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Behavioral Health and Social Service Providers</fullName>
+        <default>false</default>
+        <label>Behavioral Health and Social Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Speech, Language, and Hearing Service Providers</fullName>
+        <default>false</default>
+        <label>Speech, Language, and Hearing Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technologists, Technicians, and Other Technical Service Providers</fullName>
+        <default>false</default>
+        <label>Technologists, Technicians, and Other Technical Service Providers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hospitals</fullName>
+        <default>false</default>
+        <label>Hospitals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nursing and Custodial Care Facilities</fullName>
+        <default>false</default>
+        <label>Nursing and Custodial Care Facilities</label>
+    </standardValue>
+</StandardValueSet>

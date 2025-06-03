@@ -1,0 +1,24 @@
+.slds-scope {
+    .slds-button-group {
+        &.slds-button-group--shadow {
+            border-color: transparent;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.32);
+            border-radius:4px;
+
+            .slds-button {
+            	border-color: transparent;
+            	border-left-color: $border-gray;
+
+            	&:first-child {
+            		border-left-color: transparent;
+            	}
+
+            	&.slds-is-active {
+                    background-color: $sf-blue;
+            		border-left-color: $sf-blue;
+            		color:#fff;
+            	}
+            }
+        }
+    }
+}

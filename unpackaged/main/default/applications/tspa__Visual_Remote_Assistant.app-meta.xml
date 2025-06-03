@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Visual Remote Assistant - Connectivity &amp; Flow Check</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Visual Remote Assistant - Admin</label>
+    <navType>Console</navType>
+    <tabs>tspa__Visual_Configuration_Panel</tabs>
+    <tabs>tspa__Visual_History__c</tabs>
+    <tabs>tspa__NotificationsFromTechsee__c</tabs>
+    <tabs>tspa__TechSeeSessions__c</tabs>
+    <tabs>tspa__TechSee_Account_Creation__c</tabs>
+    <tabs>tspa__MiniDashboard_API_Details__c</tabs>
+    <tabs>tspa__Visual_Remote_Assistant_Recording__c</tabs>
+    <tabs>tspa__Visual_Remote_Assistant_VJ_Invites__c</tabs>
+    <tabs>tspa__VRA_logs__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>tspa__Visual_Remote_Assistant_Admin_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>tspa__MiniDashboard_API_Details__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__NotificationsFromTechsee__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__TechSeeSessions__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__TechSee_Account_Creation__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__VRA_logs__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__Visual_Configuration_Panel</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__Visual_History__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__Visual_Remote_Assistant_Recording__c</tab>
+        </mappings>
+        <mappings>
+            <tab>tspa__Visual_Remote_Assistant_VJ_Invites__c</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

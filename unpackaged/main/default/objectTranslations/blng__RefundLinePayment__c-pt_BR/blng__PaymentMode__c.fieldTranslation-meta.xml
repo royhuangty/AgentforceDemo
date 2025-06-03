@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Modo de pagamento.
+1. &quot;Eletrônico&quot;, quando Pagamentos/Reembolsos são feitos pela Central de pagamento.
+2. &quot;Externo&quot;, quando Pagamentos/Reembolsos são feitos manualmente com Dinheiro em espécie/Cheque.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

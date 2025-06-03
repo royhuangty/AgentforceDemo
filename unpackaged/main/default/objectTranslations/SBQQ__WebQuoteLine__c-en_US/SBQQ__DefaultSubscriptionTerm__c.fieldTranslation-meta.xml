@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first generated. --></help>
+        <label><!-- Default Subscription Term --></label>
+        <name>SBQQ__DefaultSubscriptionTerm__c</name>
+    </CustomFieldTranslation>

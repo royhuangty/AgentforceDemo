@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Product --></label>
+        <name>Products__c</name>
+        <picklistValues>
+            <masterLabel>GC1000 series</masterLabel>
+            <translation><!-- GC1000 series --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC10001</masterLabel>
+            <translation><!-- GC10001 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC20002</masterLabel>
+            <translation><!-- GC20002 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5000 series</masterLabel>
+            <translation><!-- GC5000 series --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC50000</masterLabel>
+            <translation><!-- GC50000 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

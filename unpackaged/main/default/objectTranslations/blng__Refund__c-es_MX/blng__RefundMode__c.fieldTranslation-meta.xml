@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>El modo externo que representa un reembolso que se realizó en un sistema externo y el modo electrónico representa un reembolso que está procesado por Salesforce</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </CustomFieldTranslation>

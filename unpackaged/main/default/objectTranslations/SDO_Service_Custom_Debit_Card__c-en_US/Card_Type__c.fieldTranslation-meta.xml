@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Card Type --></label>
+        <name>Card_Type__c</name>
+        <picklistValues>
+            <masterLabel>Adventures</masterLabel>
+            <translation><!-- Adventures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Astro Yetti</masterLabel>
+            <translation><!-- Astro Yetti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friends</masterLabel>
+            <translation><!-- Friends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohana</masterLabel>
+            <translation><!-- Ohana --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__LinkedIn_Advertising</activationPlatform>
+    <destinationName>lastName</destinationName>
+    <fieldName>LastName</fieldName>
+    <isFromSourceObject>false</isFromSourceObject>
+    <isRequired>false</isRequired>
+    <masterLabel>LastName</masterLabel>
+    <objectName>Individual</objectName>
+</ActivationPlatformActvAttr>

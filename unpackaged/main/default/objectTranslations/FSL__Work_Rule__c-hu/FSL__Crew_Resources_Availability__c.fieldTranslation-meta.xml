@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bejelölve: a munkarend. vagy munkarend.-sortétel Személyzet minimális mérete mezőjét a ténylegesen elérhető szervizszem. tagokkal hasonl. össze.
+Nincs bejelölve: a Személyzet minimális mérete mezőt a szerv. szem. Személyzet mérete mezőjével hasonl. össze.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

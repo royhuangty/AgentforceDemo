@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceLiveAgent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <embeddedServiceConfig>SDO_Service_Standard_Chat</embeddedServiceConfig>
+    <embeddedServiceQuickActions>
+        <embeddedServiceLiveAgent>EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989</embeddedServiceLiveAgent>
+        <order>1</order>
+        <quickActionDefinition>SDO_Service_Snapin_Contact_PreChat9</quickActionDefinition>
+    </embeddedServiceQuickActions>
+    <embeddedServiceQuickActions>
+        <embeddedServiceLiveAgent>EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989</embeddedServiceLiveAgent>
+        <order>2</order>
+        <quickActionDefinition>SDO_Service_Snapin_Case_PreChat7</quickActionDefinition>
+    </embeddedServiceQuickActions>
+    <enabled>true</enabled>
+    <fontSize>Medium</fontSize>
+    <isOfflineCaseEnabled>false</isOfflineCaseEnabled>
+    <isQueuePositionEnabled>false</isQueuePositionEnabled>
+    <liveChatButton>SDO_Service_Chat</liveChatButton>
+    <liveChatDeployment>SDO_Service_Live_Agent_Community_Chat</liveChatDeployment>
+    <masterLabel>EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989</masterLabel>
+    <prechatEnabled>true</prechatEnabled>
+    <scenario>Service</scenario>
+</EmbeddedServiceLiveAgent>

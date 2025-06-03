@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>エラー条件</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Error Condition Layout</layout>
+        <sections>
+            <label>条件情報</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>条件番号</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- A Filter Type of &apos;Variable&apos; must have a Filter Variable. --></errorMessage>
+        <name>SBQQ__FilterCombinationValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This combination of ProductRule.Scope and ErrorCondition.TestedObject is not valid. --></errorMessage>
+        <name>SBQQ__ScopeAndErrorConditionTestedObject</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tested Attribute required since the Tested Field is a global Configuration Attribute field. --></errorMessage>
+        <name>SBQQ__Tested_attr_required_if_global_field</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must specify either Tested Field or Tested Variable. --></errorMessage>
+        <name>SBQQ__Tested_field_or_variable_required</name>
+    </validationRules>
+</CustomObjectTranslation>

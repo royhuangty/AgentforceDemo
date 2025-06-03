@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <auraComponent>qbranch__QHome</auraComponent>
+    <description>Q Home is the entry point of the XDO experience. It provides a collection of resources to get the most out of your demo org.</description>
+    <label>Q Home</label>
+    <motif>Custom61: Castle</motif>
+</CustomTab>

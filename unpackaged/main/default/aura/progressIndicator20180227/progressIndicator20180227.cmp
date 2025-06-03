@@ -1,0 +1,8 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <aura:attribute name="steps" type="String" default="Step1,Step2,Step3"/>
+    <aura:attribute name="currentStep" type="String" default="Step1"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div>
+        {!v.body}
+    </div>
+</aura:component>

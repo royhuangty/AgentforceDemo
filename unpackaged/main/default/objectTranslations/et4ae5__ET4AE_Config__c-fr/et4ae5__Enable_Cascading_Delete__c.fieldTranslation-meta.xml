@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Supprimez automatiquement les enregistrements de données de suivi parent et enfant lors de l&#39;utilisation de l&#39;outil de nettoyage des données de suivi. Pour éviter les limites du gouverneur Apex sur les tâches de suppression par lots, désactivez la suppression en cascade.</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

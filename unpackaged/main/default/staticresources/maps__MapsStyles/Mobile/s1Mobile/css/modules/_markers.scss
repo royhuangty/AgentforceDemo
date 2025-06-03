@@ -1,0 +1,391 @@
+#currentLocationDot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    background: #4285F4;
+    position: fixed;
+    border: 2px solid #ffffff;
+    box-shadow: inset 0 1px 0px 0 rgba(255, 255, 255, 0.25), 0 0 0 8px rgba(0, 0, 0, 0.13);
+    left: calc(50% - .5rem);
+    top: calc(50% - .5rem);
+    z-index: 2000;
+    visibility: hidden;
+    transform: scale(0,0);
+    @include transition(all .15s);
+
+    &.in {
+    	visibility: visible;
+    	transform: scale(1,1);
+    }
+}
+
+#mapMarkerPin {
+    width: 28px;
+    height: 70px;
+    background-image: url(../images/marker_pin.png);
+    background-size: 100% auto;
+    position: fixed;
+    left: 50%;
+    margin-left: -14px;
+    top: 71px;
+    background-position: top center;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    &.in {
+    	opacity: 1;
+    }
+}
+
+.ma-marker-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    background: $red;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px 0px 0 rgba(255,255,255,0.25);
+}
+
+
+
+
+.marker-info-view {
+	background-color: $light-gray;
+	@include flex(0 0 0);
+	order: 3;
+	box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.16);
+	z-index: 700;
+	overflow: hidden;
+	@include transition(flex-grow .3s, visibility 0s linear .3s);
+	position: relative;
+	visibility: hidden;
+	height: 100%;
+
+	&.in {
+		@include flex(3 0 0);
+		visibility: visible;
+		@include transition(flex-grow .3s ease, visibility 0s linear 0s);
+	}
+
+	.markerinfo-inner {
+		position:absolute;
+		width:100%;
+		height: 100%;
+		left:0;
+		top:0;
+		overflow: hidden;
+	}
+
+	$actionBarHeight : 61px;
+
+	.markerinfo-actions {
+		@include flexbox();
+		@include flexDirection(row);
+		width:100%;
+		left:0;
+		top:0;
+		background-color: $light-blue;
+		position:absolute;
+		padding: 0 .25rem;
+		height: $actionBarHeight;
+		z-index: 15;
+
+		.markerinfo-action-button {
+			text-align: center;
+		    flex: 1 0 0;
+		    line-height: 1;
+		    font-size: 1rem;
+		    font-size: .625rem;
+		    padding: .75rem 0;
+		    padding: .75rem 0;
+		    color: $white;
+		    background-color: transparent;
+		    outline: 0;
+		    border: 0;
+
+			    .ma-icon {
+			    font-size: 1.25rem;
+			}
+
+		}
+	}
+
+	.markerinfo-content {
+	    overflow: hidden;
+	    margin-top: 61px;
+	    z-index: 10;
+	    background-color: $white;
+	    position:relative;
+	    height: 100%;
+	    max-height: calc(100% - #{$actionBarHeight});
+
+
+	    .ma-control-group-content-wrap {
+	    	max-height: calc(100% - #{$actionBarHeight});
+	    	overflow-x: hidden;
+	    	overflow-y: scroll;
+	    	-webkit-overflow-scrolling: touch;
+	    	margin-top: $actionBarHeight;
+	    	position: relative;
+	    	height:100%;
+	    }
+
+	    .ma-control-group-link-wrap {
+		    position: absolute;
+		    width: 100%;
+		    left: 0;
+		    top: 0;
+	    }
+
+
+
+	    .ma-tab-link {
+		    flex-grow: 1;
+		}
+
+		.ma-tab-link-group-scoped {
+			border-left:0;
+			border-right:0;
+		}
+
+		.ma-tab-link-group-scoped .ma-tab-link:first-child {
+			border-radius:0;
+		}
+
+		.ma-tab-link-group-scoped .ma-tab-link:last-child {
+			border-radius:0;
+		}
+
+		.ma-tab-content-group-scoped .ma-tab-content {
+			border:0;
+			border-radius:0;
+			padding: 2rem 0;
+		}
+
+	    .markerinfo-segment-item {
+		    padding: .5rem 1rem;
+		    color: $dark-blue;
+		    font-size: 1rem;
+		    line-height: 1.4;
+
+		    label {
+		    	font-size: .75rem;
+		    	display:block;
+		    	color: $text-sf;
+		    }
+
+		    .contact-action {
+			    margin-left: 1rem;
+			}
+		}
+
+		.markerinfo-segment-content {
+			padding: 1rem 0;
+
+	    	&.full-height {
+				min-height: calc(100% + 10px);
+	    	}
+		}
+	}
+
+	.markerinfo-segment.collapsed {
+
+		.markerinfo-segment-content {
+			padding:0 0;
+			max-height: 0 !important;
+		}
+
+		.markerinfo-segment-header .ma-icon {
+			@include rotate(-90);
+		}
+	}
+
+	.markerinfo-segment-header {
+	    color: $text-sf;
+	    background-color: $light-gray;
+	    font-size: .875rem;
+	    font-weight: 400;
+	    line-height: 1.25;
+	    padding: .5rem 1rem;
+	    text-transform: uppercase;
+
+	    .ma-icon {
+	    	width: 1rem;
+		    height: 1rem;
+		    margin: 0 .5rem 0 0;
+		    font-size: 1rem;
+		    line-height: 1;
+		    display: block;
+		    float: left;
+		    @include transition(all .15s);
+	    }
+	}
+}
+
+#refreshButton {
+    position: fixed;
+    z-index: 600;
+    bottom: 64px;
+    right: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(visibility 0s linear .15s, bottom .15s ease 0s, opacity .15s ease 0s);
+
+    &.in {
+    	visibility: visible;
+    	bottom: 76px;
+    	opacity: 1;
+    	@include transition(visibility 0s linear 0s, bottom .15s ease 0s, opacity .15s ease 0s);
+    }
+}
+
+#markerLayout #mapMarkerNavigate {
+	opacity: 0;
+	top: -73px;
+    @include transition(all .2s ease .01s);
+}
+
+#markerLayout.in #mapMarkerNavigate {
+	opacity: 1;
+	top: -53px;
+    @include transition(all .2s ease .01s);
+}
+
+#mapMarkerNavigate {
+    position: absolute;
+    left: -51px;
+    opacity: 1;
+
+	    button {
+	    display: block;
+	    width: 130px;
+	    background-color: $light-blue !Important;
+
+	    &:before {
+	    	content: ' ';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 12px 0 12px;
+			border-color: $light-blue transparent transparent transparent;
+			position: absolute;
+			left: 50%;
+			margin-left: -12px;
+			bottom:-15px;
+	    }
+	}
+}
+
+#mapWaypointNavigate {
+    position: absolute;
+    left: calc(50% - 65px);
+    top:1rem;
+    opacity: 1;
+
+	    button {
+	    display: block;
+	    width: 130px;
+	    background-color: $light-blue !Important;
+
+	    &:before {
+	    	content: ' ';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 12px 0 12px;
+			border-color: $light-blue transparent transparent transparent;
+			position: absolute;
+			left: 50%;
+			margin-left: -12px;
+			bottom:-15px;
+	    }
+	}
+}
+
+#mapRoute {
+	@include flex(2 1 auto);
+	background-image: url(../images/map_route.png);
+	background-size: 1527px 1252px;
+	background-position: center;
+	max-height: 50%;
+    @include transition(all .35s);
+
+	&.view-shrink {
+	    max-height: 0;
+    	@include transition(all .35s);
+	}
+}
+
+.waypoint-navigate-left {
+    background-color: rgba(22,50,92,0.8);
+    font-size:1rem;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    border-radius: 0 4px 4px 0;
+    line-height: 1;
+    top: calc(50% - 2.5rem);
+}
+
+.waypoint-navigate-right {
+    background-color: rgba(22,50,92,0.8);
+    font-size:1rem;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    height: 5rem;
+    position: absolute;
+    right: 0;
+    width: 2rem;
+    border-radius: 4px 0 0 4px;
+    line-height: 1;
+    top: calc(50% - 2.5rem);
+}
+
+#waypointInfo {
+	&.view-grow {
+		@include flex(10 0 auto);
+	}
+}
+
+#maMasterWrap #mapMarkerNavigate {
+	opacity: 0;
+	top: -73px;
+    @include transition(all .2s ease .01s);
+}
+
+#maMasterWrap.marker-tooltip-in #mapMarkerNavigate {
+	opacity: 1;
+	top: -53px;
+    @include transition(all .2s ease .01s);
+}
+
+#mapMarkerNavigate {
+    position: absolute;
+    left: -51px;
+    opacity: 1;
+
+	    button {
+	    display: block;
+	    width: 130px;
+	    background-color: $light-blue !Important;
+
+	    &:before {
+	    	content: ' ';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 12px 0 12px;
+			border-color: $light-blue transparent transparent transparent;
+			position: absolute;
+			left: 50%;
+			margin-left: -12px;
+			bottom:-15px;
+	    }
+	}
+}

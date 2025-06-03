@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to all Einstein Prediction Builder Functionality.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Einstien - Prediction Builder</label>
+    <permissionSets>SDO_Einstein_PredictionBuilder</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

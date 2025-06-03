@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>กำหนดเวลาเริ่มการหยุดพักขั้นต่ำ (ในรูปแบบ: {HH:MM}) เพื่อสร้างการหยุดพัก 
+ปล่อยให้ฟิลด์นี้ว่างเปล่า ถ้าคุณไม่ต้องการสร้างการหยุดพัก</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

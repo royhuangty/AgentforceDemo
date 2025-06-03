@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Art des Datumsfelds aus dem ausgewählten Zielobjekt, auf das sich &quot;Gültiges Startdatum&quot; und &quot;Gültiges Enddatum&quot; beim Anwenden von Genehmigungsregeln beziehen</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>Erstellt am</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>Gesendet am</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

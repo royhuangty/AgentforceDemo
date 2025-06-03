@@ -1,0 +1,71 @@
+<apex:page controller="maps.ChatterFeed" sidebar="false" showHeader="false" showChat="false">
+    
+    <style type='text/css'>
+        .publisherpollchoiceinput {
+            width: 230px;
+        }
+        .fileFormInputElement {
+            width: 190px;
+        }
+        .contentPublisherSlideDown table.postInput td {
+            text-align: left !important;
+        }
+        .chatterPublisherFileActionContainerLeft {
+            display: none;
+        }
+        .accountMru .mruIcon {
+            background-image: none;
+        }
+
+        .cxLikersOverlay.overlayDialog {
+            width: 100% !important;
+            left: 0;
+            top: 0;
+            margin-top: 0 !important;
+            margin-left: 0 !important;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .cxallfeedactions .feeditemActionMenu {
+            right: 0;
+        }
+
+        .feeditembody {
+            max-width: calc(100% - 35px);
+        }
+        .lookupInput input {
+            padding-right:2rem !important;
+        }
+        html {
+            overflow: hidden;
+        }
+    </style>
+    
+    <script type='text/javascript'>
+    
+        
+        window.onload = function () {
+            try {
+                //make html tag 100%
+                document.documentElement.style.height = '100%';
+                document.documentElement.style.width = '100%';
+                //make body 100%
+                document.body.style.width = '100%';
+                document.body.style.height = 'calc(100% - 20px)';
+            }
+            catch(e) {
+                console.warn('failed styling')
+            }
+        };
+        
+    
+    </script>
+
+    <div id='chatter-wrapper' style='overflow: scroll;height:100%;padding: 10px; width: calc(100% - 20px);'>
+        <!--<a href='#' onclick='chatter.getFeed().refresh(chatter.getFeed().config); return false;' style="position: absolute; right: 5px; color: #015BA7; text-decoration: none;">Refresh Feed</a>-->
+        <a href='#' onclick="parent.$(parent.$.find('iframe')[0]).attr('src', parent.$(parent.$.find('iframe')[0]).attr('src')); return false;" style="float:right; color: #015BA7; text-decoration: none;">{!JSENCODE($Label.MA_Refresh_Feed)}</a>
+        <chatter:follow entityId="{!chatterEntityId}" />
+        <chatter:feed entityId="{!chatterEntityId}"  />
+    </div>
+</apex:page>

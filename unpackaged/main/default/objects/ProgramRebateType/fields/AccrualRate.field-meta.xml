@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccrualRate</fullName>
+    <inlineHelpText>The rate of accrual based on the value selected in the Measure Type field. For example, when the measure type is percent and you enter 10, the accrual rate is 10%.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

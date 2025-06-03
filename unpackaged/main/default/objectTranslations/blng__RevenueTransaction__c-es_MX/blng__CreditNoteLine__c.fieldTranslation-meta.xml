@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Búsqueda en la nota de crédito asociada con esta programación de ingresos.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </CustomFieldTranslation>

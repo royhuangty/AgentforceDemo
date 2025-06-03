@@ -1,0 +1,162 @@
+/*
+ * HERO STYLES
+ * 
+ * This CSS file contains styles that reference the Experience Cloud's Hero. In this file, you
+ * can edit the block background behind the text, change the location of the placement, etc.
+ * 
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+/* Main Hero - Call to Action Hero's */
+.comm-page-home .hero,
+.comm-page-custom-community-home .hero,
+.comm-page-custom-community .hero,
+.comm-page-list-a1R .hero,
+.comm-page-my-account .hero,
+.comm-page-custom-learning .hero,
+.comm-page-custom-marketing-home .hero,
+.comm-page-custom-sales .hero {
+  margin-bottom: 40px;
+}
+.comm-page-home .hero .content,
+.comm-page-custom-community-home .hero .content,
+.comm-page-custom-community .hero .content,
+.comm-page-list-a1R .hero .content,
+.comm-page-my-account .hero .content,
+.comm-page-custom-learning .hero .content,
+.comm-page-custom-marketing-home .hero .content,
+.comm-page-custom-sales .hero .content {
+  background-color: var(--hero-background-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, var(--hero-box-shadow-transparency)) inset;
+  margin: 60px 0;
+  padding: 40px;
+  /* Media query for tablet devices */
+}
+.comm-page-home .hero .content h1,
+.comm-page-home .hero .content h2,
+.comm-page-custom-community-home .hero .content h1,
+.comm-page-custom-community-home .hero .content h2,
+.comm-page-custom-community .hero .content h1,
+.comm-page-custom-community .hero .content h2,
+.comm-page-list-a1R .hero .content h1,
+.comm-page-list-a1R .hero .content h2,
+.comm-page-my-account .hero .content h1,
+.comm-page-my-account .hero .content h2,
+.comm-page-custom-learning .hero .content h1,
+.comm-page-custom-learning .hero .content h2,
+.comm-page-custom-marketing-home .hero .content h1,
+.comm-page-custom-marketing-home .hero .content h2,
+.comm-page-custom-sales .hero .content h1,
+.comm-page-custom-sales .hero .content h2 {
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+}
+.comm-page-home .hero .content p,
+.comm-page-custom-community-home .hero .content p,
+.comm-page-custom-community .hero .content p,
+.comm-page-list-a1R .hero .content p,
+.comm-page-my-account .hero .content p,
+.comm-page-custom-learning .hero .content p,
+.comm-page-custom-marketing-home .hero .content p,
+.comm-page-custom-sales .hero .content p {
+  font-size: var(--font-size-md);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  line-height: 24px;
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .comm-page-home .hero .content,
+  .comm-page-custom-community-home .hero .content,
+  .comm-page-custom-community .hero .content,
+  .comm-page-list-a1R .hero .content,
+  .comm-page-my-account .hero .content,
+  .comm-page-custom-learning .hero .content,
+  .comm-page-custom-marketing-home .hero .content,
+  .comm-page-custom-sales .hero .content {
+    width: 80% !important;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .comm-page-home .hero .bgImage,
+  .comm-page-custom-community-home .hero .bgImage,
+  .comm-page-custom-community .hero .bgImage,
+  .comm-page-list-a1R .hero .bgImage,
+  .comm-page-my-account .hero .bgImage,
+  .comm-page-custom-learning .hero .bgImage,
+  .comm-page-custom-marketing-home .hero .bgImage,
+  .comm-page-custom-sales .hero .bgImage {
+    /* Adjust background position for tablet */
+    background-position-x: -700px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .comm-page-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-custom-community-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-custom-community .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-list-a1R .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-my-account .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-custom-learning .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-custom-marketing-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase,
+  .comm-page-custom-sales .hero .jepsonHomeHero.forceCommunityThemeHeroBase {
+    padding: 2.2rem 1rem !important;
+  }
+  .comm-page-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-custom-community-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-custom-community .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-list-a1R .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-my-account .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-custom-learning .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-custom-marketing-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage,
+  .comm-page-custom-sales .hero .jepsonHomeHero.forceCommunityThemeHeroBase .bgImage {
+    /* Adjust background position for mobile */
+    background-position-x: -895px !important;
+  }
+  .comm-page-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-custom-community-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-custom-community .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-list-a1R .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-my-account .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-custom-learning .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-custom-marketing-home .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content,
+  .comm-page-custom-sales .hero .jepsonHomeHero.forceCommunityThemeHeroBase .content {
+    margin: 28px 20px;
+    padding: 25px;
+  }
+  .comm-page-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-custom-community-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-custom-community .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-list-a1R .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-my-account .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-custom-learning .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-custom-marketing-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter,
+  .comm-page-custom-sales .hero .jepsonInnerHero.forceCommunityThemeHeroStarter {
+    padding: 2.2rem 1rem !important;
+  }
+  .comm-page-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-custom-community-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-custom-community .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-list-a1R .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-my-account .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-custom-learning .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-custom-marketing-home .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content,
+  .comm-page-custom-sales .hero .jepsonInnerHero.forceCommunityThemeHeroStarter .content {
+    margin: 28px 20px;
+    padding: 25px;
+  }
+}
+
+/* Hero of type Search */
+.comm-page-custom-help-center h2.contentTitle,
+.comm-page-custom-support h2.contentTitle,
+.comm-page-global-search h2.contentTitle {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5) !important;
+}

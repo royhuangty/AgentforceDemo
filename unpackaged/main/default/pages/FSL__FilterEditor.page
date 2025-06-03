@@ -1,0 +1,30 @@
+<apex:page sidebar="false" showheader="false" title="Filter Editor" standardController="FSL__Gantt_Filter__c">
+
+    <c:FilterEditorSalesforceStuff ></c:FilterEditorSalesforceStuff>
+
+    <script>
+        window.FilterEditor =  (function(fe) {
+            fe.id = '{!FSL__Gantt_Filter__c.Id}' || null;
+            return fe;
+        })((window.FilterEditor) || {})
+    </script>
+
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.js')}" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+
+    <apex:includeScript value="/support/console/41.0/integration.js"/>
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <meta charset="utf-8" /><link href="{!URLFOR($Resource.FilterEditorBuild, '/static/css/main.4ab15225.css')}" rel="stylesheet" /></head>
+        <body>
+            <div id="FilterAppRoot"></div>
+            <script type="text/javascript" src="{!URLFOR($Resource.FilterEditorBuild, '/static/js/main.537fcd74.js')}"></script>
+         
+        </body>
+    </html>
+</apex:page>

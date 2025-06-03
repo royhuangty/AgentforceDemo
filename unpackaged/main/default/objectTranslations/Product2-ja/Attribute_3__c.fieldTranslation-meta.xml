@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Home Audio --></label>
+        <name>Attribute_3__c</name>
+        <picklistValues>
+            <masterLabel>Home Theatre</masterLabel>
+            <translation><!-- Home Theatre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-Room Audio</masterLabel>
+            <translation><!-- Multi-Room Audio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speakers</masterLabel>
+            <translation><!-- Speakers --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

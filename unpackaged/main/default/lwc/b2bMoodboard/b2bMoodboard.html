@@ -1,0 +1,249 @@
+<template>
+	<!-- LOADING SPINNER -->
+	<template if:true={showLoadingSpinner}>
+		<lightning-spinner alternative-text={labels.moodboard.altPleaseWait} size="medium"></lightning-spinner>
+	</template>
+
+	<!-- SHOW FOR WIDTH < X-LARGE -->
+	<div class="slds-hide_x-large">
+		<div class="slds-text-heading_large slds-text-align_center">
+			{labels.moodboard.largeScreensOnly}
+		</div>
+	</div>
+
+	<!-- SHOW FOR WIDTH === X-LARGE -->
+	<div class="slds-show_x-large slds-container_x-large slds-container_center">
+		<!-- MOODBOARD ACTIONS -->
+		<div class="slds-grid slds-gutters container">
+			<div class="slds-col slds-size_1-of-3">
+				<!-- SEARCH -->
+				<div class="slds-form-element slds-var-m-bottom_small">
+					<lightning-input type="search" label={labels.moodboard.searchProductsPlaceholder}
+						variant="label-hidden" placeholder={labels.moodboard.searchProductsPlaceholder}
+						value={searchTerm} oncommit={handleInputCommit}>
+					</lightning-input>
+				</div>
+			</div>
+
+			<div class="slds-col slds-size_2-of-3">
+				<div class="slds-grid slds-gutters">
+					<!-- LOAD MOODBOARD -->
+					<div class="slds-col slds-size_1-of-2">
+						<div class="slds-form-element slds-var-m-bottom_small">
+							<lightning-combobox name="selectMoodboard"
+								label={labels.moodboard.selectMoodboardPlaceholder} variant="label-hidden"
+								value={moodBoardId} options={moodBoardOptions}
+								placeholder={labels.moodboard.selectMoodboardPlaceholder}
+								onchange={handleMoodboardOptionChange}>
+							</lightning-combobox>
+						</div>
+					</div>
+
+					<!-- MOODBOARD BUTTONS -->
+					<div class="slds-col slds-size_1-of-2 slds-text-align_right">
+						<lightning-button-group>
+							<template if:true={moodBoardHasProducts}>
+								<template if:true={moodBoardId}>
+									<lightning-button variant="neutral" label={labels.moodboard.buttonSave}
+										onclick={handleSaveMoodboard} data-id="save">
+									</lightning-button>
+								</template>
+
+								<template if:false={moodBoardId}>
+									<lightning-button variant="neutral" label={labels.moodboard.buttonSave} disabled>
+									</lightning-button>
+								</template>
+
+								<lightning-button label={labels.moodboard.buttonSaveAs} onclick={openModal}
+									data-id="saveAs"></lightning-button>
+
+								<lightning-button label={labels.moodboard.buttonClear} onclick={handleClearMoodboard}>
+								</lightning-button>
+
+								<template if:false={moodBoardId}>
+									<lightning-button label={labels.moodboard.buttonDelete} disabled></lightning-button>
+								</template>
+
+								<template if:true={moodBoardId}>
+									<lightning-button variant="destructive-text" label={labels.moodboard.buttonDelete}
+										onclick={openModal} data-id="delete"></lightning-button>
+								</template>
+							</template>
+
+							<template if:false={moodBoardHasProducts}>
+								<lightning-button variant="neutral" label={labels.moodboard.buttonSave} disabled>
+								</lightning-button>
+
+								<lightning-button label={labels.moodboard.buttonSaveAs} disabled></lightning-button>
+
+								<lightning-button label={labels.moodboard.buttonClear} disabled></lightning-button>
+
+								<lightning-button label={labels.moodboard.buttonDelete} disabled></lightning-button>
+							</template>
+						</lightning-button-group>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PANELS -->
+		<div class="slds-grid slds-gutters container">
+			<!-- PRODUCT BANK -->
+			<div class="slds-col slds-size_1-of-3">
+				<div class="slds-box slds-box_xx-small moodboard-panel product-bank">
+					<template for:each={productBank} for:item="product">
+						<c-b2b-moodboard-bank-item key={product.id} product={product} onadd={handleAdd}>
+						</c-b2b-moodboard-bank-item>
+					</template>
+				</div>
+			</div>
+
+			<!-- MOODBOARD -->
+			<div class="slds-col slds-size_2-of-3">
+				<div class="slds-box slds-box_x-small moodboard-panel slds-is-relative drop-zone"
+					ondragover={handleDragOver} ondrop={handleDrop}>
+					<template for:each={moodBoard} for:item="product">
+						<c-b2b-moodboard-canvas-item item-id={product.id} key={product.id} product={product}
+							display-name={displayNames} display-sku={displaySKUs} display-price={displayPrices}
+							onitemdragstart={handleDragStart} onitemdrag={handleDrag} onitemdragend={handleDragEnd}
+							onremove={handleRemove} onclickevent={handleClick} onupdateevent={handleUpdateEvent}>
+						</c-b2b-moodboard-canvas-item>
+					</template>
+				</div>
+			</div>
+		</div>
+
+		<!-- TOTAL / ADD TO CART -->
+		<div class="slds-grid slds-gutters container">
+			<div class="slds-col slds-size_1-of-3"></div>
+
+			<div class="slds-col slds-size_1-of-3 slds-text-align_center">
+				<div class="slds-box slds-var-m-top_small">
+					<div class="slds-text-heading_small slds-var-m-vertical_x-small">
+						{labels.moodboard.displayOptions}
+					</div>
+
+					<div class="slds-grid slds-gutters container">
+						<!-- TOGGLE NAMES -->
+						<div class="slds-col slds-size_1-of-3">
+							<lightning-input type="toggle" label={labels.moodboard.displayOptionName} name="showName"
+								message-toggle-active="" message-toggle-inactive=""
+								class="slds-float_right slds-var-m-vertical_x-small" onchange={handleToggleNames}>
+							</lightning-input>
+						</div>
+
+						<!-- TOGGLE SKUS -->
+						<div class="slds-col slds-size_1-of-3">
+							<lightning-input type="toggle" label={labels.moodboard.displayOptionSku} name="showSKU"
+								message-toggle-active="" message-toggle-inactive=""
+								class="slds-float_right slds-var-m-vertical_x-small" onchange={handleToggleSKUs}>
+							</lightning-input>
+						</div>
+
+						<!-- TOGGLE PRICES -->
+						<div class="slds-col slds-size_1-of-3">
+							<lightning-input type="toggle" label={labels.moodboard.displayOptionPrice} name="showPrice"
+								message-toggle-active="" message-toggle-inactive=""
+								class="slds-float_right slds-var-m-vertical_x-small" onchange={handleTogglePrices}>
+							</lightning-input>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-col slds-size_1-of-3 slds-text-align_center">
+				<div class="slds-box slds-var-m-top_small">
+					<div class="slds-text-heading_small slds-var-m-vertical_x-small">
+						{labels.moodboard.moodboardTotal}
+					</div>
+					<div class="slds-text-heading_medium slds-var-m-vertical_x-small">
+						<lightning-formatted-number value={runningTotal} format-style="currency"
+							currency-code={currencyCode} currency-display-as="symbol">
+						</lightning-formatted-number>
+					</div>
+					<button class="slds-button slds-button_brand slds-button_stretch" onclick={handleAddToCart}>
+						{labels.moodboard.buttonAddToCart}
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MOODBOARD MODAL -->
+	<template if:true={isModalOpen}>
+		<!-- SAVE MOODBOARD -->
+		<template if:true={isSaveModal}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open"
+				aria-labelledby="modal-heading-saveMoodboard" aria-modal="true"
+				aria-describedby="modal-content-saveMoodboard">
+				<div class="slds-modal__container">
+					<header class="slds-modal__header slds-modal__header_empty">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+							title={labels.moodboard.buttonClose} onclick={closeModal}>
+							<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+								<use
+									xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close">
+								</use>
+							</svg>
+							<span class="slds-assistive-text">{labels.moodboard.buttonClose}</span>
+						</button>
+					</header>
+
+					<div class="slds-modal__content slds-var-p-around_medium" id="modal-content-saveMoodboard">
+						<div class="slds-form-element slds-var-m-bottom_small">
+							<lightning-input type="text" label={labels.moodboard.saveAsPlaceholder}
+								variant="label-hidden" max-length="80" value={moodBoardName}
+								placeholder={labels.moodboard.saveAsPlaceholder} onchange={handleMoodboardNameChange}>
+							</lightning-input>
+						</div>
+					</div>
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_neutral" onclick={closeModal}>
+							{labels.moodboard.buttonCancel}
+						</button>
+						<button class="slds-button slds-button_brand" onclick={handleSaveMoodboard} data-id="save-new">
+							{labels.moodboard.buttonSaveNew}
+						</button>
+					</footer>
+				</div>
+			</section>
+		</template>
+
+		<!-- DELETE MOODBOARD -->
+		<template if:true={isDeleteModal}>
+			<section role="alertdialog" tabindex="0" class="slds-modal slds-fade-in-open"
+				aria-labelledby="modal-heading-deleteMoodboard" aria-modal="true"
+				aria-describedby="modal-content-deleteMoodboard">
+				<div class="slds-modal__container">
+					<header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+							title={labels.moodboard.buttonClose} onclick={closeModal}>
+							<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+								<use
+									xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close">
+								</use>
+							</svg>
+							<span class="slds-assistive-text">{labels.moodboard.buttonClose}</span>
+						</button>
+						<h2 class="slds-text-heading_medium" id="prompt-heading-id">
+							{labels.moodboard.deleteModalHeading}
+						</h2>
+					</header>
+
+					<div class="slds-modal__content slds-var-p-around_medium" id="modal-content-deleteMoodboard">
+						<p>{labels.moodboard.deleteModalDescription}</p>
+					</div>
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_neutral" onclick={closeModal}>
+							{labels.moodboard.buttonCancel}
+						</button>
+						<button class="slds-button slds-button_destructive" onclick={handleDeleteMoodboard}>
+							{labels.moodboard.buttonDeleteConfirm}
+						</button>
+					</footer>
+				</div>
+			</section>
+		</template>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</template>
+</template>

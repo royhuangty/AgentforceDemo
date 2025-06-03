@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvAccountForecastSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accountFieldName>AccountId</accountFieldName>
+    <calculationFrequency>Monthly</calculationFrequency>
+    <description>Sample Advanced Account Forecast Set</description>
+    <dimensions>
+        <advAcctForecastDimName>Product</advAcctForecastDimName>
+        <dimensionFieldName>ProductId</dimensionFieldName>
+        <dimensionSourceName>DefaultForecastDimensionSource</dimensionSourceName>
+        <hierarchySequenceNumber>1</hierarchySequenceNumber>
+    </dimensions>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>7</adjustmentDayCount>
+        <frequency>Month</frequency>
+        <profileName>admin</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastFactObjectName>AdvAccountForecastFact</forecastFactObjectName>
+    <forecastFormulas>
+        <endPeriod>24</endPeriod>
+        <formulaExpression>OpportunityQuantity + max(LastYearOrderQuantity,OrderQuantity) + 0.8 * SalesAgreementQuantity</formulaExpression>
+        <formulaType>QUANTITY</formulaType>
+        <startPeriod>1</startPeriod>
+    </forecastFormulas>
+    <forecastFormulas>
+        <endPeriod>24</endPeriod>
+        <formulaExpression>OpportunityRevenue + max(LastYearOrderRevenue,OrderRevenue) + 0.8 * SalesAgreementRevenue</formulaExpression>
+        <formulaType>REVENUE</formulaType>
+        <startPeriod>1</startPeriod>
+    </forecastFormulas>
+    <forecastPeriodGroupName>DefaultForecastPeriodGroup</forecastPeriodGroupName>
+    <forecastQuantityFieldName>ForecastedQuantity</forecastQuantityFieldName>
+    <forecastRevenueFieldName>ForecastedRevenue</forecastRevenueFieldName>
+    <forecastSetFieldName>AdvAcctForecastSetPartnerId</forecastSetFieldName>
+    <forecastSetName>Sample Forecast Set</forecastSetName>
+    <forecastStatusFieldName>Status</forecastStatusFieldName>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Forecast Revenue</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>DATA_PROCESSING_ENGINE_DEFINITION</computationMethod>
+        <forecastDataMeasureName>ForecastedRevenue</forecastDataMeasureName>
+        <forecastMeasureName>Forecast Revenue</forecastMeasureName>
+        <forecastMeasureType>REVENUE</forecastMeasureType>
+        <isAdjustmentTracked>false</isAdjustmentTracked>
+    </measureDefinitions>
+    <periodFieldName>PeriodId</periodFieldName>
+    <rolloverFrequency>Monthly</rolloverFrequency>
+    <status>Inactive</status>
+</AdvAccountForecastSet>

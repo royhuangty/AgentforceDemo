@@ -1,0 +1,103 @@
+@import "scss-variables";
+
+/*
+ * HERO STYLES
+ * 
+ * This CSS file contains styles that reference the Experience Cloud's Hero. In this file, you
+ * can edit the block background behind the text, change the location of the placement, etc.
+ * 
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+
+/* Main Hero - Call to Action Hero's */
+.comm-page-home,
+.comm-page-custom-community-home,
+.comm-page-custom-community,
+.comm-page-list-a1R,
+.comm-page-my-account,
+.comm-page-custom-learning,
+.comm-page-custom-marketing-home,
+.comm-page-custom-sales {
+	.hero {
+		margin-bottom: 40px;
+
+		.content {
+			background-color: var(--hero-background-color);
+			border-radius: var(--border-radius-lg);
+			box-shadow: 0px 1px 6px 0px rgba(32, 33, 36, var(--hero-box-shadow-transparency)) inset;
+			margin: 60px 0;
+			padding: 40px;
+
+			h1,
+			h2 {
+				font-size: var(--font-size-xl);
+				font-style: normal;
+				font-weight: var(--font-weight-normal);
+				line-height: normal;
+			}
+
+			p {
+				font-size: var(--font-size-md);
+				font-style: normal;
+				font-weight: var(--font-weight-normal);
+				line-height: 24px;
+			}
+
+			/* Media query for tablet devices */
+			@media only screen and (min-width: 481px) and (max-width: 960px) {
+				width: 80% !important;
+			}
+		}
+
+		// Media query for tablet devices
+		@media only screen and (min-width: 481px) and (max-width: 960px) {
+			.bgImage {
+				/* Adjust background position for tablet */
+				background-position-x: -700px !important;
+			}
+		}
+
+		// Media query for mobile devices
+		@media only screen and (max-width: 480px) {
+
+			.jepsonHomeHero.forceCommunityThemeHeroBase {
+				padding: 2.2rem 1rem !important;
+
+				.bgImage {
+					/* Adjust background position for mobile */
+					background-position-x: -895px !important;
+				}
+
+				.content {
+					margin: 28px 20px;
+					padding: 25px;
+				}
+			}
+
+			.jepsonInnerHero.forceCommunityThemeHeroStarter {
+				padding: 2.2rem 1rem !important;
+
+				.content {
+					margin: 28px 20px;
+					padding: 25px;
+				}
+			}
+		}
+	}
+}
+
+/* Hero of type Search */
+.comm-page-custom-help-center,
+.comm-page-custom-support,
+.comm-page-global-search {
+	h2.contentTitle {
+		font-size: var(--font-size-xxl);
+		font-weight: var(--font-weight-bold);
+		text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5) !important;
+	}
+}

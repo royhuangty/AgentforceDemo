@@ -1,0 +1,130 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "31cd1b19-c9c3-44d7-b9d9-4df0f698d65a",
+  "label" : "KnowledgeBase",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f3ad8b08-b848-4afa-a03e-7f13ba525d4a",
+          "columns" : [ {
+            "UUID" : "d9d3bad9-fde9-43fe-b9ef-e6ab1b755c54",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f3ad8b08-b848-4afa-a03e-7f13ba525d4a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>Search the Knowledge Base</h1><p>Our comprehensive knowledge base contains our entire history of product experience. Need help getting started? Search and filter to find articles related to your topic of interest!</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d8cbfd0b-2c19-4ea5-b1a0-93a2c1713ab6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "704279c8-6689-4cee-9b17-cfff91bdcb71",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "839b5367-6c59-4abd-b51b-80a4125202ca",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Search"
+              }, {
+                "UUID" : "7e4646ff-f89d-4a03-9f82-90cda246080b",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Categories"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "704279c8-6689-4cee-9b17-cfff91bdcb71",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "c:SDO_Community_simpleKnowledgeSearch",
+              "id" : "9399d52a-bea4-4154-8e72-905c4181155b",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "839b5367-6c59-4abd-b51b-80a4125202ca",
+            "regionLabel" : "Search",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "numberOfArticles" : 5,
+                "showTitle" : true,
+                "title" : "Top Articles",
+                "topicList" : [ ]
+              },
+              "componentName" : "forceCommunity:topArticleList",
+              "id" : "f00c7fcd-363a-408d-a1f5-a2b51827747b",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "7e4646ff-f89d-4a03-9f82-90cda246080b",
+            "regionLabel" : "Categories",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d9d3bad9-fde9-43fe-b9ef-e6ab1b755c54",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2565c3d6-346d-49d5-a46f-e05246e47d87",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "KnowledgeBase"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "585b326d-b648-4453-a105-5f4e64576fa8",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "da533bce-11a7-41df-92f3-56beebdbad54",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-knowledgebase"
+}

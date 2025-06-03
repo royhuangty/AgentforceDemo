@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This field will change automatically when you click the “Analyze Roof Type” button. --></help>
+        <label><!-- Roof Type --></label>
+        <name>Roof_Type__c</name>
+        <picklistValues>
+            <masterLabel>Flat</masterLabel>
+            <translation><!-- Flat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitched</masterLabel>
+            <translation><!-- Pitched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

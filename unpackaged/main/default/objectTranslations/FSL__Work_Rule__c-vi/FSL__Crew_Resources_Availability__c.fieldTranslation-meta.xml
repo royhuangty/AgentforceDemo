@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Khi đánh dấu chọn, so sánh trường Quy Mô Nhóm Tối Thiểu trên Yêu Cầu Công Việc hoặc Mục Dòng Yêu Cầu Công Việc với Thành Viên Nhóm Dịch Vụ có sẵn thực tế. 
+Nếu không đánh dấu chọn, so sánh trường Quy Mô Nhóm Tối Thiểu với Quy Mô Nhóm trên Nhóm Dịch Vụ.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

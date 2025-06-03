@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_WEM_My_Scheduling_Preferences</fullName>
+    <columns>Name</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastModifiedBy</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Name</field>
+        <operation>contains</operation>
+        <value>Tim Service</value>
+    </filters>
+    <label>My Scheduling Preferences</label>
+</ListView>

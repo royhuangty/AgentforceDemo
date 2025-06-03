@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workforce_Engagement_Resource_Absences</fullName>
+    <columns>Resource</columns>
+    <columns>Type</columns>
+    <columns>Start</columns>
+    <columns>End</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Resource</field>
+        <operation>contains</operation>
+        <value>Service</value>
+    </filters>
+    <label>Workforce Engagement Resource Absences</label>
+</ListView>

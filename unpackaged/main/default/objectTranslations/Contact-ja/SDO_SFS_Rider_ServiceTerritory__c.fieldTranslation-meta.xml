@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The Service Territory of the Contact (for Rider to schedule service appointments) --></help>
+        <label><!-- Rider Service Territory --></label>
+        <name>SDO_SFS_Rider_ServiceTerritory__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </CustomFieldTranslation>

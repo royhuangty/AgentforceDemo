@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Amount of this line allocated to refunds --></help>
+        <label><!-- Refunds (Allocations) --></label>
+        <name>blng__RefundsAllocations__c</name>
+    </CustomFieldTranslation>

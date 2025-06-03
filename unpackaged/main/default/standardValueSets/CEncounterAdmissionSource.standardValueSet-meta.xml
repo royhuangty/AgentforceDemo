@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Another Hospital</fullName>
+        <default>false</default>
+        <label>Another Hospital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emergency Department</fullName>
+        <default>false</default>
+        <label>Emergency Department</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outpatient Department</fullName>
+        <default>false</default>
+        <label>Outpatient Department</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-Hospital Birth</fullName>
+        <default>false</default>
+        <label>In-Hospital Birth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General Practitioner Referral</fullName>
+        <default>false</default>
+        <label>General Practitioner Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Medical Practitioner Referral</fullName>
+        <default>false</default>
+        <label>Other Medical Practitioner Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nursing Home</fullName>
+        <default>false</default>
+        <label>Nursing Home</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Psychiatric Hospital</fullName>
+        <default>false</default>
+        <label>Psychiatric Hospital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rehabilitation Facility</fullName>
+        <default>false</default>
+        <label>Rehabilitation Facility</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+</StandardValueSet>

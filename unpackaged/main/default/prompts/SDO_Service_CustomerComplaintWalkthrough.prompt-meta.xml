@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Service - Introduction to Service Cloud</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;We&#39;ve rolled out some new enhancements to Service Cloud we think you&#39;ll really enjoy!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click &lt;b&gt;Next&lt;/b&gt; to check them out!&lt;/p&gt;</body>
+        <customApplication>SDO_Service_Console</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <header>Service In-App Tips</header>
+        <isPublished>false</isPublished>
+        <masterLabel>Service - Introduction to Service Cloud Step 1</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2020-08-24</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Service Cloud Updates</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://www.youtube.com/embed/vD8a05jWCaA</videoLink>
+    </promptVersions>
+    <promptVersions>
+        <body>This is where you categorize your cases, interact with customers, and log any of those interactions to keep track of everything that has happened</body>
+        <customApplication>standard__Service</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>Service - Introduction to Service Cloud Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>Lets Check Out the Case View</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>This will help us to track all of the custome complaints, challenges, and information leading to the case for better reporting and future training</body>
+        <customApplication>standard__Service</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>Service - Introduction to Service Cloud Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>Fill out the Details of the Case</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <actionButtonLabel>Feedback</actionButtonLabel>
+        <actionButtonLink>https://sdodemo-main-166ce2cf6b6-1705b550be1.force.com/consumer/survey/runtimeApp.app?invitationId=0Ki6g000000dKkC&amp;surveyName=new_survey_for_walkthrough&amp;UUID=bcd33a52-dce2-427d-b56f-959675d48a29</actionButtonLink>
+        <body>&lt;p&gt;By rolling out the Customer Complaint field and the associated Learning Assignments/Recommendations, we hope to help you become more effective in your job!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Let us know how we did! Please click &lt;b&gt;Feedback &lt;/b&gt;to let us know your thoughts!&lt;/p&gt;</body>
+        <customApplication>standard__Service</customApplication>
+        <displayType>DockedComposer</displayType>
+        <header>Pacifica&#39;s In-App Tips</header>
+        <isPublished>false</isPublished>
+        <masterLabel>Service - Introduction to Service Cloud Step 4</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Case</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>We Hope This Helps!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

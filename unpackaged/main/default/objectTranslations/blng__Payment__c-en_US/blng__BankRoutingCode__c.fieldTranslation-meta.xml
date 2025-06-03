@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The valid Routing number of the Bank, this is also called as ABA code --></help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </CustomFieldTranslation>

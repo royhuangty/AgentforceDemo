@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dagelijks overzicht activum Maps Live</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dagelijkse overzichten activum Maps Live</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Maps Live Asset Daily Summary Layout</layout>
+        <sections>
+            <label>Gerelateerde kilometerstand</label>
+            <section>Mileage Related</section>
+        </sections>
+        <sections>
+            <label>Gerelateerde tijd</label>
+            <section>Time Related</section>
+        </sections>
+        <sections>
+            <label>Totale aantal gebeurtenissen</label>
+            <section>Total Events</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Naam van dagelijks overzicht live activu</nameFieldLabel>
+</CustomObjectTranslation>

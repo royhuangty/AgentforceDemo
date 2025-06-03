@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "My Profile",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mon Compte"
+        },
+        "id" : "e8136313-d682-4b0a-ac17-e8292d00e798"
+      }, {
+        "attributes" : {
+          "text" : "Mon Profil"
+        },
+        "id" : "ef204166-7beb-44cb-8cb0-53d79a74bdea"
+      }, {
+        "attributes" : {
+          "text" : "Coordonnées"
+        },
+        "id" : "c7c3c5e2-f587-4136-99d5-152ecaf19b21"
+      }, {
+        "attributes" : {
+          "text" : "Réinitialisation du mot de passe"
+        },
+        "id" : "730ec1bc-b61f-4d50-9255-ac1f8d345ab2"
+      } ]
+    }
+  },
+  "urlName" : "my-profile"
+}

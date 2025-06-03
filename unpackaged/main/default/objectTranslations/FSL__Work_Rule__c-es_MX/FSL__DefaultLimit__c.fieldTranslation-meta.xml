@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Un límite para el conteo. Un límite en el recursos de servicio sustituye este valor.</help>
+        <label><!-- Default Limit --></label>
+        <name>FSL__DefaultLimit__c</name>
+    </CustomFieldTranslation>

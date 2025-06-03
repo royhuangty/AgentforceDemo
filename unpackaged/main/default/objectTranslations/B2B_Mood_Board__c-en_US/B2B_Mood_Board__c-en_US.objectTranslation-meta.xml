@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>B2B Moodboard</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>B2B Moodboards</value>
+    </caseValues>
+    
+    
+    
+    
+    <layouts>
+        <layout>B2B Moodboard Layout</layout>
+        <sections>
+            <label><!-- Data --></label>
+            <section>Data</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

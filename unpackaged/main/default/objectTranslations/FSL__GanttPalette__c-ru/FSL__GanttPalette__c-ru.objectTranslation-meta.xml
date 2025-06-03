@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Палитра Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Палитры Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Палитру Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Палитры Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Палитры Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Палитр Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Палитре Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Палитрам Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Палитрой Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Палитрами Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value>Палитре Ганта</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value>Палитрах Ганта</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Имя палитры Ганта</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Gantt Palette --></label>
+        <name>FSL__FSL_Public_Gantt_Palette</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
+        <name>FSL__Color_Level_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

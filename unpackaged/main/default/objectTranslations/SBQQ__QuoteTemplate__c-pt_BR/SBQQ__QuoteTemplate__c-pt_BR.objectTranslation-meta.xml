@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Modelo de cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Modelos de cotação</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Quote Template Layout</layout>
+        <sections>
+            <label>Informações corporativas</label>
+            <section>Corporate Information</section>
+        </sections>
+        <sections>
+            <label>Informações de estilo do grupo</label>
+            <section>Group Style Information</section>
+        </sections>
+        <sections>
+            <label>Informações de cabeçalho/rodapé</label>
+            <section>Header/Footer Information</section>
+        </sections>
+        <sections>
+            <label>Informações da página</label>
+            <section>Page Information</section>
+        </sections>
+        <sections>
+            <label>Opções de impressão</label>
+            <section>Print Options</section>
+        </sections>
+        <sections>
+            <label>Títulos da seção</label>
+            <section>Section Titles</section>
+        </sections>
+        <sections>
+            <label>Informações de estilo</label>
+            <section>Style Information</section>
+        </sections>
+        <sections>
+            <label>Termos e condições</label>
+            <section>Terms &amp; Conditions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do modelo</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Footer Height can not be blank if Page Number Position is set to Footer. --></errorMessage>
+        <name>SBQQ__Blank_Footer_Height</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Header Height can not be blank if Page Number Position is set to Header. --></errorMessage>
+        <name>SBQQ__Blank_Header_Height</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,88 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "¡Gracias por tu compra!"
+        },
+        "id" : "af2df17c-dfa8-4080-8ea5-989bfee4e83a"
+      }, {
+        "id" : "63ced90b-7429-4ff4-bbca-b2ec9acee428",
+        "attributes" : {
+          "text" : "Su número de pedido es {!Route.orderNumber}. Utilice este número de pedido para realizar un seguimiento de su compra."
+        }
+      }, {
+        "id" : "276d6ab5-75ef-4a79-b65e-86456d60c9cc",
+        "attributes" : {
+          "text" : "Pronto recibirás un correo electrónico con los detalles de tu pedido."
+        }
+      }, {
+        "id" : "6e10482a-3b46-46ca-b8a5-5e2dcf685a87",
+        "attributes" : {
+          "companyNameLabel" : "Nombre de empresa",
+          "shippingAddressLabel" : "Dirección de envío",
+          "phoneNumberLabel" : "Número de teléfono",
+          "shippingMethodLabel" : "Método de envío",
+          "shippingChargesLabel" : "Gastos de envío",
+          "deliveryTimelineLabel" : "Llegando",
+          "emailAddressLabel" : "ID de correo electrónico"
+        }
+      }, {
+        "id" : "3f29a2df-f91c-4356-a835-2d6f1d669953",
+        "attributes" : {
+          "text" : "Ordenar productos"
+        }
+      }, {
+        "id" : "27d83e9c-d889-41f6-ba22-dccde7753201",
+        "attributes" : {
+          "text" : "Detalles de facturación"
+        }
+      }, {
+        "id" : "2fd37da4-81ec-40dc-b9c1-e7c9491da1f5",
+        "attributes" : {
+          "billingAddressLabel" : "Dirección de Envio",
+          "emailAddressLabel" : "Correo electrónico",
+          "paymentMethodLabel" : "Método de pago"
+        }
+      }, {
+        "id" : "e8ffa18c-3786-456f-abef-37cdef77c0d9",
+        "attributes" : {
+          "text" : "Continuar comprando"
+        }
+      }, {
+        "id" : "9f73169c-7bb4-4796-b34d-cd7395b0e575",
+        "attributes" : {
+          "text" : "Total pagado"
+        }
+      }, {
+        "id" : "4a8cab14-e09b-47e8-9758-afa3f015ee2e",
+        "attributes" : {
+          "text" : "Continuar comprando"
+        }
+      }, {
+        "id" : "5f582b01-5c57-47a1-af84-f090b9d0595f",
+        "attributes" : {
+          "text" : "Impuestos"
+        }
+      }, {
+        "id" : "deb23969-8666-4780-899f-52e7161a0fbf",
+        "attributes" : {
+          "text" : "Envío"
+        }
+      }, {
+        "id" : "27e8d94c-2798-48f8-b13f-5434d30c9d8f",
+        "attributes" : {
+          "text" : "Total parcial"
+        }
+      }, {
+        "id" : "80344a0e-d8d1-4f02-8197-651c5838f336",
+        "attributes" : {
+          "text" : "Promociones aplicadas"
+        }
+      } ]
+    }
+  },
+  "urlName" : "order"
+}

@@ -1,0 +1,105 @@
+
+#maMasterWrap {
+    .ma-polygon-drawing-container {
+        visibility: hidden;
+        @include transition(0s visibility .2s);
+        z-index: 6000;
+
+        .ma-polygon-header {
+            background-color: $dark-blue;
+            z-index: 1000;
+            position: fixed;
+            width: 100%;
+
+            @media screen and (min-width: 769px) {
+                width: calc(100% - 67px);
+                margin-left: 67px;
+                @include transition(width .2s, margin-left .2s);    
+            }
+            
+            .ma-polygon-top-options {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 8px;
+            
+                .ma-polygon-edit-container {
+                    display: flex;
+                    
+                    .ma-icon {
+                        background: none;
+                        border: none;
+                        color: $white;
+                    }
+                }
+
+                .ma-polygon-buttons-container .ma-button--transparent {
+                    color: $white;
+                }
+            }
+
+            .ma-polygon-bottom-info {
+                padding: 8px;
+                text-align: center;
+                color: $white;
+                background-color: #004090;
+            }
+        }
+
+        .ma-polygon-footer {
+            position: fixed;
+            bottom: 0px;
+            z-index: 2000;
+            width: 100%;
+            text-align: center;
+            background-color: #54698d;
+            padding: 18px 8px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            @media screen and (min-width: 769px) {
+                width: calc(100% - 67px);
+                margin-left: 67px;
+                @include transition(width .2s, margin-left .2s);        
+            }
+
+            .ma-icon {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                font-size: 24px;
+            }
+
+
+        }
+
+        &.in {
+            @include transition(0s visibility 0s);
+            visibility: visible;
+        }
+    }
+
+    &.sidebar-in {
+        @media screen and (min-width: 769px) {
+            .ma-polygon-drawing-container {
+                .ma-polygon-header, .ma-polygon-footer {
+                    margin-left: 492px;
+                    width: calc(100% - 492px);
+                }
+            } 
+        }
+    }
+
+    &.sidebar-over-in {
+        @media screen and (min-width: 769px) {
+            .ma-polygon-drawing-container {
+                .ma-polygon-header, .ma-polygon-footer {
+                    margin-left: 425px;
+                    width: calc(100% - 425px);
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Primary Care</fullName>
+        <default>false</default>
+        <label>Primary Care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Specialist</fullName>
+        <default>false</default>
+        <label>Specialist</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dual</fullName>
+        <default>false</default>
+        <label>Dual</label>
+    </standardValue>
+</StandardValueSet>

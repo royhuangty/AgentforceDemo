@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>El identificador de la transacción que se utilizó para identificar este reembolso en la pasarela de pago</help>
+        <label><!-- Payment Gateway Transaction ID --></label>
+        <name>blng__PaymentGatewayTransactionID__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Timeline Configuration Layout</layout>
+        <sections>
+            <label><!-- API name of field to use in tooltips (Optional) --></label>
+            <section>API name of field to use in tooltips (Optional)</section>
+        </sections>
+        <sections>
+            <label><!-- Icon and background colour to use for each record --></label>
+            <section>Icon and background colour to use for each record</section>
+        </sections>
+        <sections>
+            <label><!-- If the UI API is supported but you want a related record shown. (Optional) --></label>
+            <section>If the UI API is supported but you want a related record shown. (Optional)</section>
+        </sections>
+        <sections>
+            <label><!-- Override the record shown when a user clicks on a record. (Optional) --></label>
+            <section>Override the record shown when a user clicks on a record. (Optional)</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Big Objects cannot be used in the timeline. Timeline supports standard and custom objects only. --></errorMessage>
+        <name>bmpyrckt__No_Big_Objects_Allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- External Objects cannot be used in the timeline. Timeline supports standard and custom objects only. --></errorMessage>
+        <name>bmpyrckt__No_External_Objects_Allowed</name>
+    </validationRules>
+</CustomObjectTranslation>

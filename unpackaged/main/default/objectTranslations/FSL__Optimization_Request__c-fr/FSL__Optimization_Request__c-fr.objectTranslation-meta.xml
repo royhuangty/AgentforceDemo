@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Requête d’optimisation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requêtes d’optimisation</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Numéro de requête d’optimisation</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- Related Service Territory --></label>
+        <name>FSL__Related_Service_Territory</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- Related Service Territory Member --></label>
+        <name>FSL__Related_Service_Territory_Member</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Meghatározza, hogy az erőforrás naptárában a nap kezdése előtt hány perc lesz elérhető az utazáshoz (az erőforrás költségére).
+Ha üres, a munkanap kezdése előtt korlátlan mennyiségű utazás lehetséges.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

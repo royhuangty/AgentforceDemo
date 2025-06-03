@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>All Internal Users</fullName>
+        <default>false</default>
+        <label>All Internal Users</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Reps</fullName>
+        <default>false</default>
+        <label>Sales Reps</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Agents</fullName>
+        <default>false</default>
+        <label>Service Agents</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumers</fullName>
+        <default>false</default>
+        <label>Consumers</label>
+    </customValue>
+    <customValue>
+        <fullName>B2B Customers</fullName>
+        <default>false</default>
+        <label>B2B Customers</label>
+    </customValue>
+    <customValue>
+        <fullName>Partners</fullName>
+        <default>false</default>
+        <label>Partners</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>Used for Next Best Action to target recommendations.</description>
+    <masterLabel>Recommendation Audience</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

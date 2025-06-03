@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Insira uma quantidade de minutos que represente uma lacuna de tempo ocioso entre os compromissos de serviço. Este objetivo minimiza as lacunas que são iguais ou superiores ao valor inserido.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

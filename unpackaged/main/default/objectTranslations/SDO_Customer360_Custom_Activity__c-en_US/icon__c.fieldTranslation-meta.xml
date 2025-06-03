@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The Lightning Design System name of the icon. Names are written in the format &apos;utility:down&apos; where &apos;utility&apos; is the category, and &apos;down&apos; is the specific icon to be displayed. --></help>
+        <label><!-- Icon --></label>
+        <name>icon__c</name>
+    </CustomFieldTranslation>

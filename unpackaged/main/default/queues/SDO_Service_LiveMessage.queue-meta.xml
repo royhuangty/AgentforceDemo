@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>SMS</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>SDO_Service_SupportAgents</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueRoutingConfig>SDO_Service_Tier_1_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

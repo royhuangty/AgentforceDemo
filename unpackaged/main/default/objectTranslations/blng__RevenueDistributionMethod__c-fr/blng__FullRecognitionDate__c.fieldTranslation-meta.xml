@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si la méthode de distribution sélectionnée est Complet, sélectionnez Manuel pour saisir une date.</help>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </CustomFieldTranslation>

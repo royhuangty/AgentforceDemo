@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>Omni_Routing_KPIs_1.WorkVolume</field>
+        <isDerived>false</isDerived>
+        <label>Work Volume</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Omni_Routing_KPIs_1.TotalCost</field>
+        <formatCustomFormat>[&quot;$#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Omni_Routing_KPIs_1.I</field>
+        <formatCustomFormat>[&quot;#%&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>Omni_Routing_KPIs_1.ServiceLevel</field>
+        <formatCustomFormat>[&quot;#%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Omni_Routing_KPIs</waveVisualization>
+</WaveXmd>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>回収する権利のある有効終了日</help>
+        <label><!-- Effective End Date --></label>
+        <name>blng__EffectiveEndDate__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Service_Linking_Object_Reference_Field__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Represents the reference field on the linking object that is matched with the service appointment matching field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The reference field on the linking object that is matched with the service appointment matching field</inlineHelpText>
+    <label>Linking Object Reference Field</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,252 @@
+<apex:page standardstylesheets="false" controller="maps.BaseObjects" sidebar="false" title="Salesforce Maps Settings" extensions="maps.RemoteActions,maps.RemoteFunctions,maps.LiveRemoteFunctions,maps.LiveControllerHelper,maps.AdminAJAXResources,maps.DataLayers,maps.AutoAssignmentController,maps.TerritoryRemoteFunctions,maps.CustomEventConfigController,maps.Click2CreateSettings,maps.OAuth,maps.UserAJAXResources,maps.Util,maps.TerritoryPlanning,maps.TPRemoteActions,maps.AdvRouteRemoting,maps.MapsCustomActions">
+    <c:System />
+    <div id="ma-vue-root"></div>
+
+    <script>
+        window.advancedFeatureLicenseEnabled = {!advancedFeatureLicenseEnabled};
+        window.liveTrackingFeatureLicenseEnabled = {!liveTrackingFeatureLicenseEnabled};
+        window.territoryPlanningEnabled = {!TerritoryPlanningEnabled};
+    </script>
+
+    <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-3.6.0.min.js')}"></script>
+    <c:SFMaps />
+    <c:Admin />
+    <c:Shared />
+    <c:StaticResources />
+    <c:SLDS />
+    <script type='text/javascript'>
+        MASystem.Labels = {
+            ...MASystem.AdminLabels,
+            ...MASystem.SharedLabels,
+            ...MASystem.SRLabels,
+            ...MASystem.SLDSLabels
+        };
+
+        delete MASystem.AdminLabels;
+        delete MASystem.SharedLabels;
+        delete MASystem.SRLabels;
+        delete MASystem.SLDSLabels;
+    </script>
+    <script type='text/javascript' src="{!resourcePaths['MapsJS']}/JSHelperFunctions.js"></script>
+    <script async="true" defer="true" type='text/javascript' src="{!URLFOR($Resource.MapsJS, 'JSActionFramework.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'toastr/toastr.min.js')}"></script>
+    <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.Maps3rdPartyPlugins, 'toastr/toastr.min.css')}"></link>
+    <link rel="stylesheet" type="text/css" href="{!resourcePaths['VueAdmin']}/build/main.css"></link>
+
+    <!-- jQuery UI -->
+    <script type='text/javascript' src="{!URLFOR($Resource.Maps3rdPartyPlugins, 'jquery/jquery-ui.min.js')}"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.maps__Maps3rdPartyPlugins, 'jquery/jquery-ui.css')}"/>
+    <script type='text/javascript'>
+        var baseURL = '{!BaseURL}';
+        toastr.options = {
+            "positionClass": "toast-bottom-right",
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+            "iconClasses" : {
+                "success" : "toast-success",
+                "error"   : "toast-error",
+                "warning" : "toast-warning",
+                "info"    : "toast-info"
+            }
+        };
+
+        var MAToastMessages = {
+            showMessage : function(options,type) {
+                type = type || 'info';
+                options = $.extend({
+                    message : '',
+                    subMessage : '',
+                    timeOut : 3000,
+                    extendedTimeOut : 1000,
+                    position : 'toast-bottom-right',
+                    closeButton : false,
+                    onclick : null
+                }, options || {});
+
+                toastr.options.timeOut = options.timeOut;
+                toastr.options.extendedTimeOut = options.extendedTimeOut;
+                toastr.options.positionClass = options.position;
+                toastr.options.closeButton = options.closeButton;
+                toastr.options.onclick = options.onclick;
+
+                if(type === 'loading') {
+                    var $message = toastr['info'](options.subMessage,options.message);
+                    $message.addClass('ma-toast-loading').removeClass('toast-info');
+                    return $message;
+                }
+                else {
+                    return toastr[type](options.subMessage,options.message);
+                }
+
+
+            },
+            showSuccess : function(options) {
+                return MAToastMessages.showMessage(options,'success');
+            },
+            showLoading : function(options) {
+                return MAToastMessages.showMessage(options,'loading');
+            },
+            showWarning : function(options) {
+                return MAToastMessages.showMessage(options,'warning');
+            },
+            showError : function(options) {
+                return MAToastMessages.showMessage(options,'error');
+            },
+            hideMessage : function (toast) {
+                toastr.clear(toast);
+                toast.remove();
+                toast = null;
+            }
+        } 
+    </script>
+    <!-- Webpack Style Output -->
+    <!-- <link rel="stylesheet" type="text/css" href="{!resourcePaths['MapsJS']}/dist/core/styles.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.MapsStyles,'css/ui-minimaps.css')}" />
+    <!-- icon-font -->
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsFonts, 'styles.css')}"/>
+    <!-- Maps Configuration Page Styling -->
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsStyles, 'styles/css/ma-configuration-ui.css')}"/>
+    <apex:outputPanel layout="none" rendered="{!PendoEnabled}">
+        <script>
+            (function(apiKey){
+                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                // Call this whenever information about your visitors becomes available
+                // Please use Strings, Numbers, or Bools for value types.
+                pendo.initialize({
+                    visitor: { 
+                        id: '{!JSENCODE($User.Id)}',
+                        email: '{!JSENCODE($User.Email)}',
+                        firstName: '{!JSENCODE($User.FirstName)}',
+                        lastName: '{!JSENCODE($User.LastName)}',
+                        userName: '{!JSENCODE($User.Username)}',
+                        userAgent: window.navigator.userAgent
+                    },
+
+                    account: { 
+                        id: '{!JSENCODE($Organization.Id)}', // Highly recommended
+                        name: '{!JSENCODE($Organization.Name)}'
+                        // planLevel:    // Optional
+                        // planPrice:    // Optional
+                        // creationDate: // Optional
+
+                        // You can add any additional account level key-values here,
+                        // as long as it's not one of the above reserved names.
+                    }
+                });
+            })('{!JSENCODE(pendoKey)}');
+        </script>
+    </apex:outputPanel>
+
+    <script>
+        var $Images = {
+            priorityOther: "{!URLFOR($Resource.maps__MapsStyles, 'images/Priority-tooltip.png')}",
+            priorityEinstein: "{!URLFOR($Resource.maps__MapsStyles, 'images/Einstein-tooltip.png')}",
+            priorityPardot: "{!URLFOR($Resource.maps__MapsStyles, 'images/Pardot-tooltip.png')}",
+            chatterStatusLoader: "{!URLFOR($Resource.maps__MapsStyles, 'images/chatterstatus-loader.gif')}",
+        };
+
+        var MARemoting = {
+            processAJAXRequest : '{!$RemoteAction.RemoteFunctions.processAJAXRequest}',
+            AdminStartUpAction: '{!$RemoteAction.AdminAJAXResources.AdminStartUpAction}',
+            getSavedData: '{!$RemoteAction.DataLayers.getDataV2}',
+            MapAnythingIORequest: '{!$RemoteAction.RemoteFunctions.MapAnythingIORequest}',
+            processAJAXRequest: '{!$RemoteAction.RemoteFunctions.processAJAXRequest}',
+            saveDataLayer: '{!$RemoteAction.DataLayers.doSaveV2}',
+            saveNewMapTile: '{!$RemoteAction.RemoteFunctions.saveNewMapTile}',
+            removeMapTile: '{!$RemoteAction.RemoteFunctions.removeMapTile}',
+            getLogACallFieldSets: '{!$RemoteAction.RemoteFunctions.getLogACallFieldSets}',
+            NearbyMap: {
+                read: '{!$RemoteAction.RemoteActions.getMiniMapSettings}',
+                save: '{!$RemoteAction.RemoteActions.saveMiniMapSetting}',
+                delete: '{!$RemoteAction.RemoteActions.deleteMiniMapSetting}',
+                getAllowableSObjects: '{!$RemoteAction.RemoteActions.getAllowableSObjects}',
+                getSObjectInfoBySObjectName: '{!$RemoteAction.RemoteActions.getSObjectInfoBySObjectName}',
+            },
+            Click2Create: {
+                getPicklistFieldOptions: '{!$RemoteAction.Click2CreateSettings.getPicklistFieldOptions}',
+                getC2CSettings: '{!$RemoteAction.Click2CreateSettings.getC2CSettings}',
+                saveC2CSettings: '{!$RemoteAction.Click2CreateSettings.saveC2CSettings}'
+            },
+            CustomActions: {
+                getQuickActions: '{!$RemoteAction.MapsCustomActions.fetchQuickActions}',
+                getLightningComponents: '{!$RemoteAction.MapsCustomActions.fetchLightningComponents}'
+            }
+        };
+
+        function removeNamespace(namespace, obj) {
+            try {
+                var namespacePrefix = namespace + '__';
+                $.each(obj, function (key, val) {
+                    if (key.indexOf(namespacePrefix) === 0) {
+                        obj[key.replace(namespacePrefix, '')] = val;
+                        delete obj[key];
+
+                        //go recursive if this is an object
+                        if (obj[key.replace(namespacePrefix, '')] !== null && typeof obj[key.replace(namespacePrefix, '')] == 'object') {
+                            removeNamespace(namespace, obj[key.replace(namespacePrefix, '')]);
+                        }
+                    } else if (typeof val == 'object') {
+                        removeNamespace(namespace, val);
+                    }
+                });
+            } catch (err) { } //this is most likely due to a null value being passed.  in any case, returning the original objects seems the correct action if we can't manipulate it
+
+            return obj;
+        };
+
+        function showModal (modalId) {
+            $('#' + modalId + '').addClass('in');
+            $('#' + modalId + ' .slds-scope .slds-modal').addClass('slds-fade-in-open');
+            /*if ( $($Id).has('.ma-modal-search-input') ) {
+            $($Id).find('.ma-modal-search-input').focus();
+            } else {}*/
+            if ($('.backdrop').length == 0) {
+                $('<div class="backdrop slds-backdrop"></div>').appendTo('body');
+            }
+            $('.backdrop').addClass('active visible slds-backdrop_open');
+        }
+        function showErrors(html) {
+            hideModal();
+            var popup = MA.Popup.showMAAlert({
+                header: 'Field Erros',
+                template: html
+            });
+            popup.then(function() {
+                showModal('dialog-createfields');
+            });
+        }
+        function hideModal(modalSelector, hideMask) {
+            hideMask = hideMask === false ? false : true;
+            if (modalSelector != undefined) {
+                //$('#'+modalSelector+'').removeClass('in');
+                $('#' + modalSelector + ' .slds-scope .slds-modal').removeClass('slds-fade-in-open');
+            } else {
+                //hide all modals
+                //$('.ma-modal').removeClass('in');
+                $('.maModal .slds-scope .slds-modal').removeClass('slds-fade-in-open');
+            }
+
+            if (hideMask) {
+                $('#modalScreen').removeClass('in');
+                $('.backdrop').removeClass('active visible slds-backdrop_open');
+            }
+        }
+
+    </script>
+
+    <!-- JS Color -->
+    <apex:includeScript value="{!URLFOR($Resource.maps__Maps3rdPartyPlugins, 'jscolor/jscolor.js')}"/>
+    <script type="text/javascript" src="{!resourcePaths['VueAdmin']}/build/bundle.js"></script>
+</apex:page>

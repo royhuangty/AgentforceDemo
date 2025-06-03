@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Service_Schedule_Time_Property__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Service Schedule Time Property</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SchedStartTime</fullName>
+                <default>true</default>
+                <label>SchedStartTime</label>
+            </value>
+            <value>
+                <fullName>SchedEndTime</fullName>
+                <default>false</default>
+                <label>SchedEndTime</label>
+            </value>
+            <value>
+                <fullName>SchedStartTime__c</fullName>
+                <default>false</default>
+                <label>SchedStartTime__c</label>
+            </value>
+            <value>
+                <fullName>SchedEndTime__c</fullName>
+                <default>false</default>
+                <label>SchedEndTime__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

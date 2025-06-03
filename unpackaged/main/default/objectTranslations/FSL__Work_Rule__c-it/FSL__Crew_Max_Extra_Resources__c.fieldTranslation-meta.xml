@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Inserire un numero se si desidera limitare il numero di risorse di servizio aggiuntive che possono essere aggiunte alla squadra. Lasciare vuoto per rendere possibile l’aggiunta di qualsiasi numero di risorse di servizio.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestemmer hvor mange minutter før ressursens start på dagen i kalenderen ressursen vil være tilgjengelig for reise (til ressursens kostnad).
+Når det ikke er utfylt, er all reise før starten på arbeidsdagen gyldig.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

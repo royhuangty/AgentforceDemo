@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- All revenue for a revenue schedule that is available to be adjusted or distributed. --></help>
+        <label><!-- Available --></label>
+        <name>blng__Available__c</name>
+    </CustomFieldTranslation>

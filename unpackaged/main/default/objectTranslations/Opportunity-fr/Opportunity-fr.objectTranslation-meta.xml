@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Deal Desk --></label>
+        <name>sbaa__DealDesk</name>
+    </fieldSets>
+    <layouts>
+        <layout>CPQ Opportunity Layout</layout>
+        <sections>
+            <label><!-- Recalculating --></label>
+            <section>Recalculating</section>
+        </sections>
+        <sections>
+            <label><!-- Salesforce CPQ Information --></label>
+            <section>Salesforce CPQ Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Opportunity</layout>
+        <sections>
+            <label><!-- Marketing Information --></label>
+            <section>Marketing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Summary --></label>
+            <section>Opportunity Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Partner Opportunity</layout>
+        <sections>
+            <label><!-- Marketing Information --></label>
+            <section>Marketing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Summary --></label>
+            <section>Opportunity Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Einstein Configuration - Deal Insights --></label>
+        <name>EMC__Einstein_Configuration_Deal_Insights</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Einstein Configuration - ECI --></label>
+        <name>EMC__Einstein_Configuration_ECI</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Einstein Configuration - ECI Sales Signals --></label>
+        <name>EMC__Einstein_Configuration_ECI_Sales_Signals</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Einstein Configuration - ECI Video --></label>
+        <name>EMC__Einstein_Configuration_ECI_Video</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Einstein Configuration - Einstein Coach --></label>
+        <name>EMC__Einstein_Configuration_Einstein_Coach</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Mass Edit Related Lists --></label>
+        <name>MERL__MassEditRelatedListsQA</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Order --></label>
+        <name>SBQQ__CreateOrderLightning</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Insights --></label>
+        <name>SDO_Einstein_Configuration_Insights</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Score --></label>
+        <name>SDO_Einstein_Configuration_Score</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Opportunity Details --></label>
+        <name>SDO_Sales_Messaging_OpportunityDetails</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Recall Approvals --></label>
+        <name>sbaa__RecallMobile</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Submit for Approval --></label>
+        <name>sbaa__SubmitMobile</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Opportunities created by or for partners. --></description>
+        <label><!-- Channel (Partner) --></label>
+        <name>ChannelPartner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Simple Opportunities with products. --></description>
+        <label><!-- Simple Opportunity --></label>
+        <name>SimpleOpportunity</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Contract --></label>
+        <name>SBQQ__Amend_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrder --></label>
+        <name>SBQQ__CreateOrder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Document --></label>
+        <name>SBQQ__Include_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PreviewApprovals --></label>
+        <name>sbaa__PreviewApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RecallApprovals --></label>
+        <name>sbaa__RecallApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResendRequestEmail --></label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SubmitForApproval --></label>
+        <name>sbaa__SubmitForApproval</name>
+    </webLinks>
+</CustomObjectTranslation>

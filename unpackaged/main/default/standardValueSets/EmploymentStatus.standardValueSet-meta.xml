@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Employed</fullName>
+        <default>false</default>
+        <label>Employed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Self-Employed</fullName>
+        <default>false</default>
+        <label>Self-Employed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Home Maker</fullName>
+        <default>false</default>
+        <label>Home Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retired</fullName>
+        <default>false</default>
+        <label>Retired</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Student</fullName>
+        <default>false</default>
+        <label>Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unemployed with Income</fullName>
+        <default>false</default>
+        <label>Unemployed with Income</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unemployed without Income</fullName>
+        <default>false</default>
+        <label>Unemployed without Income</label>
+    </standardValue>
+</StandardValueSet>

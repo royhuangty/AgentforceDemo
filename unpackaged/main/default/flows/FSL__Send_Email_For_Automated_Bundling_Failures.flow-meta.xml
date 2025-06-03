@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Gets the admin user’s email address and username. This is the first admin user in the org according to alphabetical order.</description>
+        <name>ReturnAdminUserDetails</name>
+        <label>Return Admin User Details</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <actionName>FSL__ReturnAdminUser</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>SendEmail</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>FSL__ReturnAdminUser</nameSegment>
+        <outputParameters>
+            <assignToReference>userEmail</assignToReference>
+            <name>userMail</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>userName</assignToReference>
+            <name>userName</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends an email to the Field Service admin to notify them of the failed Automated Bundling optimization requests</description>
+        <name>SendEmail</name>
+        <label>Send Email</label>
+        <locationX>50</locationX>
+        <locationY>684</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>userEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectTextTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyTextTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <description>Counts how many failed Automated Bundling optimization requests there were today and stores the total in the countAutomatedBundlingOptimizationRequests variable.</description>
+        <name>CountFailedAutomatedBundlingOptimizationRequests</name>
+        <label>Count Failed Automated Bundling Requests</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <assignmentItems>
+            <assignToReference>countAutomatedBundlingOptimizationRequests</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>GetFailedAutomatedBundlingOptimizationRequests</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ReturnAdminUserDetails</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Determines whether there were any failed Automated Bundling optimization requests today.</description>
+        <name>DidAutomatedBundlingFail</name>
+        <label>Did Automated Bundling Fail?</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>FailedAutomatedBundlingOptimizationRequestsExist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetFailedAutomatedBundlingOptimizationRequests</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CountFailedAutomatedBundlingOptimizationRequests</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Sends an email to the Field Service admin to notify them about failed Automated Bundling optimization requests.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Last24Hours</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime}-1</expression>
+    </formulas>
+    <interviewLabel>Send Email For Automated Bundling Failures {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>Send Email For Automated Bundling Failures</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Gets today’s failed Automated Bundling optimization requests</description>
+        <name>GetFailedAutomatedBundlingOptimizationRequests</name>
+        <label>Get Failed Automated Bundling Requests</label>
+        <locationX>182</locationX>
+        <locationY>252</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>DidAutomatedBundlingFail</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FSL__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Failed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FSL__Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Automated Bundling</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>Last24Hours</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>FSL__Optimization_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetFailedAutomatedBundlingOptimizationRequests</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-11-01</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <description>Stores the formatted email body text to use when the Automated Bundling optimization requests have failed.</description>
+        <name>EmailBodyTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;Hello {!userName},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;We wanted to inform you that {!countAutomatedBundlingOptimizationRequests} of your optimization requests failed.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;Type: Automated Bundling&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;To learn more about the failed request, see &lt;/span&gt;&lt;a href=&quot;https://help.salesforce.com/s/articleView?id=sf.pfs_monitor_optimization_requests.htm&amp;amp;type=5&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 10pt; background-color: transparent; color: rgb(17, 85, 204); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;&lt;u&gt;Monitor Field Service Schedule Optimization Requests&lt;/u&gt;&lt;/a&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;To learn more about the flow that sent this email, see &lt;/span&gt;&lt;a href=&quot;https://help.salesforce.com/s/articleView?id=sf.fs_set_up_bundling_automatic.htm&amp;amp;type=5&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 10pt; background-color: transparent; color: rgb(17, 85, 204); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;&lt;u&gt;Monitor the Automatic Bundling Requests&lt;/u&gt;&lt;/a&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;Regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: rgb(0, 0, 0); font-family: &amp;quot;Salesforce Sans&amp;quot;, sans-serif;&quot;&gt;Salesforce Field Service&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Stores the email subject to use when the Automated Bundling optimization requests have failed.</description>
+        <name>EmailSubjectTextTemplate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Salesforce Field Service Automated Bundling schedule optimization request failed</text>
+    </textTemplates>
+    <variables>
+        <description>Counts how many Automated Bundling optimization requests failed</description>
+        <name>countAutomatedBundlingOptimizationRequests</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Stores the user’s email address.</description>
+        <name>userEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the user&#39;s name.</description>
+        <name>userName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

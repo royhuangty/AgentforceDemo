@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Equivalent</fullName>
+        <default>false</default>
+        <label>Equivalent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Equivalent composition</fullName>
+        <default>false</default>
+        <label>Equivalent composition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Brand composition</fullName>
+        <default>false</default>
+        <label>Brand composition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Generic composition</fullName>
+        <default>false</default>
+        <label>Generic composition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Therapeutic alternative</fullName>
+        <default>false</default>
+        <label>Therapeutic alternative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Therapeutic brand</fullName>
+        <default>false</default>
+        <label>Therapeutic brand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Therapeutic generic</fullName>
+        <default>false</default>
+        <label>Therapeutic generic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Formulary</fullName>
+        <default>false</default>
+        <label>Formulary</label>
+    </standardValue>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+</StandardValueSet>

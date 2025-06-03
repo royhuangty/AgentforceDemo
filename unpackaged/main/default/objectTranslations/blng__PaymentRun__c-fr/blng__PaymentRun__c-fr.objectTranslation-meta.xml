@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Exécution de paiement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Exécutions de paiement</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de l’exécution de paiement</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- CleanUpPaymentRun --></label>
+        <name>blng__CleanUpPaymentRun</name>
+    </webLinks>
+</CustomObjectTranslation>

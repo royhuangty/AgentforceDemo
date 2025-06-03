@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    <validationRules>
+        <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
+        <name>FSL__Not_Zero</name>
+    </validationRules>
+</CustomObjectTranslation>

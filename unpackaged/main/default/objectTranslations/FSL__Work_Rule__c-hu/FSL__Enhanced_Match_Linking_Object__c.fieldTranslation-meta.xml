@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Azon elágazási objektum, amelynek használatával a szervizerőforrásokat összekapcsolják azzal az objektummal, amelyre a szerviztalálkozó egyező mezője hivatkozik</help>
+        <label><!-- Linking Object --></label>
+        <name>FSL__Enhanced_Match_Linking_Object__c</name>
+    </CustomFieldTranslation>

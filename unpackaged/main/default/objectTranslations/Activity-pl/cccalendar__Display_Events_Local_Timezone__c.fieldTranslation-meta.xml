@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Check to display event&apos;s local timezone in event details --></help>
+        <label><!-- Display Event&apos;s Local Timezone --></label>
+        <name>cccalendar__Display_Events_Local_Timezone__c</name>
+    </CustomFieldTranslation>

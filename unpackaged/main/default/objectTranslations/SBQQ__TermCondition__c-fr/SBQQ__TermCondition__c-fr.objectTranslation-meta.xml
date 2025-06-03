@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Condition de la durée</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conditions de la durée</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>N° de condition</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
+        <name>SBQQ__Field_and_Variable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
+        <name>SBQQ__Field_or_Variable</name>
+    </validationRules>
+</CustomObjectTranslation>

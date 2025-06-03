@@ -1,0 +1,887 @@
+<apex:page controller="datamask.ExecutionPrep_Controller" action="{!onLoad}" lightningStylesheets="true" title="Data Mask Execution">
+
+    <script src="../../soap/ajax/46.0/connection.js" type="text/javascript" />
+    <apex:slds />
+    <style>
+    	td{
+        	padding-bottom: 5px !important;
+        }
+    	th{
+        	padding-bottom: 5px !important;  
+            font-size: 1.1rem;
+        }
+    	img{
+            margin-left: 10px;
+        }
+    	.static-section {
+            margin-top: 15px;
+        }
+        
+        .static-section-header {
+            font-size: 1.2rem;
+            text-align: left;
+            color: #000;
+            padding-top: 30px;
+        }
+    	
+    </style>
+    
+    <script type="text/javascript"> 
+        
+    //console.log('vf page loaded');
+
+    // Set variable flag to indicate when processing
+    var isProcessing = false;
+    
+    document.onbeforeunload = function(event){
+        console.log('before unload isProcessing: ', isProcessing);
+        if(isProcessing){
+            return confirm('A Data Mask execution is currently preparing.  Are you sure you want to navigate away from this page?');    
+        }
+    }
+    
+    //Set VF timeout to max of 2 mins at page level 
+    Visualforce.remoting.timeout = 120000; 
+    
+    //Set AJAX timeout to 20 mins (conversion to MS)
+    var AJAXtimeout = 20 * (60 * 1000);     
+    var chunkSize = 50000;
+    var queryLimit = 100000;
+
+    sforce.connection.sessionId = "{!$Api.Session_ID}";
+    // Map to hold the chunklist for the object results
+    var chunkList = {};
+    
+    var offsetIdMap = {};
+    var totalQueryMoreSize = {};
+    var totalQueriesCompleted = {};
+    // Not sure why used
+    var objectQueriesCompleted = {};
+    // Not sure why used
+    var objectAllQueriesCompleted = {};     
+    var errors = [];
+    var objects = [];
+    var devName;
+    var objectName;
+    var masterField;
+    var isPoly;
+    var recordCount = 0;
+    var totalChunks = 0;
+    let progress = [
+        { Progress: "", Status: "" }
+    ];
+    var selectedConfig;
+    var trueLastId;
+    
+    function setupAdHoc(){
+        
+        // Get the selected config
+        var selectElements = document.getElementsByClassName("configSelection");
+        var selectElement = selectElements[0];
+        var opt = selectElement.options[selectElement.selectedIndex];
+        selectedConfig = opt.value;
+        
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ExecutionPrep_Controller.setupAdHocRun}',
+            selectedConfig,
+            function (results, event) {
+                var resEls = document.getElementsByClassName("startProcessMsg");
+                var resEl = resEls[0];
+                if(event.status){
+                    // resEl.style.color = "green";
+                    // resEl.innerHTML = "Data Mask Process started successfully.";
+                } else if(event.type === 'exception'){
+                    resEl.style.color = "red";
+                    resEl.innerHTML = "There was a problem starting the Data Mask process.";
+                    console.log('!!! save creds error: ', event.message);
+                    console.log('', event.where);
+                }
+            }
+        );
+        
+    }
+    
+    // Will loop through the objects one at a time here
+    // call the chunkEntireDB method with an index[0]
+    function objectPrep(devName, batchData) {
+        //console.log('objectPrep called: ' + devName);
+        if(devName === null) {
+            
+            devName = objects[0].devName;
+            objectName = objects[0].apiName;
+            masterField = objects[0].masterField;
+            isPoly = objects[0].isPoly;
+            if(isPoly) {
+                var lastRecord = sforce.connection.query('SELECT ' + masterField  + ' FROM ' + objectName + ' ORDER BY ' + masterField + ' DESC LIMIT 1');
+                var records = lastRecord.getArray("records");
+                trueLastId = records[0][masterField];
+            }
+            progress = [{Progress: objectName, Status: "spinner"}];
+            //console.log('objectName: ' + objectName + ', masterField: ' + masterField + ', isPoly: ' + isPoly);
+            chunkList[objectName] = {};
+            chunkEntireDB(objectName, null, masterField, isPoly);
+            
+        } else {
+            
+            batchData = JSON.stringify(batchData);
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ExecutionPrep_Controller.storeBatchPrepDataPoly}',
+                selectedConfig, devName, batchData, recordCount, isPoly,
+                function (results, event) {
+                    
+                    objects.shift();
+                    
+                    if(objects.length){
+                        
+                        recordCount = 0;
+                        devName = objects[0].devName;
+                        objectName = objects[0].apiName;
+                        masterField = objects[0].masterField;
+                        isPoly = objects[0].isPoly;
+                        if(isPoly) {
+                            var lastRecord = sforce.connection.query('SELECT ' + masterField  + ' FROM ' + objectName + ' ORDER BY ' + masterField + ' DESC LIMIT 1');
+                            var records = lastRecord.getArray("records");
+                            //console.log('lastRecord: ' + records[0][masterField]);
+                            trueLastId = records[0][masterField];
+                        }
+                        progress = [{Progress: objectName, Status: "spinner"}];
+                        //console.log('else objectName: ' + objectName + ', masterField: ' + masterField + ', isPoly: ' + isPoly);
+                        chunkList[objectName] = {};
+                        chunkEntireDB(objectName, null, masterField, isPoly);
+                        
+                    } else {
+                        
+                        console.log('No more objects to prep.');
+                        setupAdHoc();
+                        adHocStartMessage();
+                        isProcessing = false;
+                    }   
+                    
+                },
+                {escape: false, buffer: false}
+            );
+        }
+    }
+    
+    function getMaskingObjects() {
+
+        if(!{!isSandbox}){
+            console.log("Cannot run Data Mask on Production Data");
+            return;
+        }
+
+        isProcessing = true;
+		        
+        var buttonElements = document.getElementsByClassName("prepButton");
+        var buttonElement = buttonElements[0];
+        buttonElement.disabled = true;
+        
+        var selectElements = document.getElementsByClassName("configSelection");
+        var selectElement = selectElements[0];
+        var opt = selectElement.options[selectElement.selectedIndex];
+        selectedConfig = opt.value;
+        
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ExecutionPrep_Controller.getMaskingObjectsByIdPoly}',
+            selectedConfig,
+            function (results, event) {
+                
+                objects = results;
+                console.log('objects: ', objects);
+                if(objects.length) {
+                	objectPrep(null, null);
+                    //generateTableHead(table, data);
+                    prepStartMessage();
+                } else {
+                    console.log('No objects.');
+                    noObjectsMessage();
+                }
+                
+            },
+            {escape: false, buffer: false}
+        );
+        
+    }
+    
+    //getMaskingObjects();
+
+    function chunkEntireDB(objectName, lastId, objectMasterField, runInPoly) {
+        
+        // Setting the objectName spot in the chunkList to an empty list
+        //chunkList[objectName] = [];
+        // Not sure why used
+        objectQueriesCompleted[objectName] = 0;
+        // Not sure why used
+        objectAllQueriesCompleted[objectName] = false;
+        
+        totalQueriesCompleted[objectName] = 0;
+        
+        var SOQL;
+        if(objectMasterField !== undefined && runInPoly){
+            if(lastId === null) {
+                SOQL = ("SELECT " + objectMasterField + " FROM " + objectName + " WHERE " + objectMasterField + " != null ORDER BY " + objectMasterField + " ASC LIMIT " + queryLimit);
+            } else if(lastId !== trueLastId) {
+                SOQL = ("SELECT " + objectMasterField + " FROM " + objectName + " WHERE " + objectMasterField + " != null AND " + objectMasterField + " >= '" + lastId + "' ORDER BY " + objectMasterField + " ASC LIMIT " + queryLimit);
+            } else {
+                console.log('lastId: ' + lastId + ' = trueLastId: ' + trueLastId);
+                objectPrep(objectName, chunkList[objectName]);
+                return;
+            }
+        } else if(objectMasterField !== undefined && !runInPoly) {
+            if(lastId === null) {
+                SOQL = ("SELECT Id FROM " + objectName + " WHERE " + objectMasterField + " = null ORDER BY Id LIMIT " + queryLimit);
+            } else {
+                SOQL = ("SELECT Id FROM " + objectName + " WHERE " + objectMasterField + " = null AND Id  > '" + lastId + "'  ORDER BY Id LIMIT " + queryLimit);
+            }
+        } else {
+            if(lastId === null) {
+                SOQL = ("SELECT Id FROM " + objectName + " ORDER BY Id LIMIT " + queryLimit);
+            } else {
+                SOQL = ("SELECT Id FROM " + objectName + " WHERE Id > '" + lastId + "' ORDER BY Id LIMIT " + queryLimit);
+            }
+        }
+        
+        var result = sforce.connection.query(SOQL, {
+            onSuccess: function(result) {
+                // resultValues is the retObj JSON from the getResultValues
+                var resultValues = getResultValues(result);
+                //console.log('result: ', result);
+                //console.log('resultvalues: ', resultValues);
+                
+                // type from the response is the sObject in Salesforce
+                objectName = resultValues.type;     
+                
+                // add the first result to our object before we fire off all the subsequent ones in parallel
+                if(resultValues.type in offsetIdMap) {
+                    offsetIdMap[objectName][resultValues.offset] = resultValues; 
+                } else {    
+                    offsetIdMap[objectName] = {};
+                    offsetIdMap[objectName][resultValues.offset] = resultValues;
+                    //console.log('offsetIdMap: ', offsetIdMap);
+                }
+        
+            
+                if (resultValues.totalSize <= 2000) {
+                
+                    // this means there is no cursor Id, we got all the records returned to us
+                    // chunk is just the first and last Id in the locator, jump right to success
+                    totalQueryMoreSize[objectName] = 1;
+                    qmSuccess(result);
+                    
+                } else {
+                    
+                    //> 2000 records means that we need to chunk
+                    //get the loop size
+                    var loopSize = Math.floor(resultValues.totalSize / chunkSize);
+                    
+                    //we need to know ahead of time how many times we are going to call doQueryMore, so when the 
+                    //results come back async, we know if we are done or not
+                    totalQueryMoreSize[objectName] = loopSize;
+                    //console.log('totalQueryMoreSize: ' + totalQueryMoreSize[objectName]);
+            
+                    //in case it didn't divide evenly, will have to fire off one more query of a custom size
+                    //the offset will be the total number of records in the querylocator minus the leftover
+                    //EX: 100,002, R=2, offset = 100,002 - 2 = 100,000
+                    var remainder = resultValues.totalSize % chunkSize;
+                    //console.log('remainder formula: ' + resultValues.totalSize + ' % ' + chunkSize + ' = ' + remainder);
+                    
+                    //in some cases we don't need another queryMore for the remainder.
+                    //if total records - running total is less than chunk size, the last id query will get us everything
+                    var runningTotal = (chunkSize * loopSize);
+                    //console.log('runningTotal: ' + runningTotal);
+                    if ((resultValues.totalSize - runningTotal) < chunkSize) {
+                        remainder = 0;
+                    }
+                    
+                    //if the chunks divide perfectly into the totalSize, subtract one from the loopsize
+                    //otherwise we will be requesting an offset that doesn't exist at the end.
+                    if ((resultValues.totalSize - runningTotal) == 0) {
+                        loopSize --;
+                        totalQueryMoreSize[objectName] --;
+                    }
+                    
+                    if (remainder > 0) {
+                        totalQueryMoreSize[objectName] ++;
+                    }   
+                
+                    //add in one more for the query of the last Id
+                    totalQueryMoreSize[objectName] ++;
+            
+                    //fire off all the queryMores for loopSize
+                    for (var i=1; i<=loopSize; i++) {
+                        var offset = chunkSize * i;
+                        //console.log('remainder offset: ' + offset);
+                        doQueryMore(resultValues.cursorId, offset); 
+                    } 
+                    
+                    //fire off one more if there was a remainder
+                    if (remainder > 0) {
+                        var offset = (resultValues.totalSize - remainder);
+                        //console.log('remainder offset: ' + offset);
+                        doQueryMore(resultValues.cursorId, offset);     
+                    }               
+            
+                    //now fire off one more to get the last Id in the cursor
+                    var offset = (resultValues.totalSize - 1);
+                    doQueryMore(resultValues.cursorId, offset);
+                    
+                }
+
+            
+            },
+            onFailure: function(error) {
+                var qErr = {};
+                qErr.status = false;
+                qErr.type = 'exception';
+                qErr.message = 'Problem getting query locator: ' + error;
+                // Adding to the error array
+                checkErrors(qErr);                 
+            }, 
+            timeout: AJAXtimeout
+        });     
+        
+
+
+    }
+
+    function doQueryMore(cursorId, offset) {
+        var ql = cursorId + '-' + offset;
+        console.log('queryMore ql: ', ql);
+        sforce.connection.queryMore(ql, {
+            onSuccess: qmSuccess,
+            onFailure: queryError,
+            timeout: AJAXtimeout
+        });
+    }
+    
+    function qmSuccess(result) {   
+        
+        // builds the retObj JSON Object again from the result in the getResultValues method
+        var resultValues = getResultValues(result);
+        //console.log('resultValues qm: ', resultValues);  
+        
+        // set the Object Name in the Map in the return from the query above
+        if (resultValues.type in offsetIdMap) {
+            offsetIdMap[resultValues.type][resultValues.offset] = resultValues; 
+        } else {    
+            offsetIdMap[resultValues.type] = {};
+            offsetIdMap[resultValues.type][resultValues.offset] = resultValues; 
+        }
+        totalQueriesCompleted[resultValues.type] ++;
+
+        //console.log(totalQueryMoreSize[resultValues.type] + ', ' + totalQueriesCompleted[resultValues.type]);
+        if (totalQueryMoreSize[resultValues.type] == totalQueriesCompleted[resultValues.type]) {
+            //console.log('Calling allQueriesComplete.');
+            allQueriesComplete(resultValues.type, resultValues.totalSize);
+        }
+        
+        if (isNaN(totalQueriesCompleted[resultValues.type])) {
+            console.log('Transition objects: ' + objectName);
+            //progress = [{ Progress: objectName, Status: "....completed." }];
+            progress = [{Progress: objectName, Status: "checkmark"}];
+            //generateTable(table, progress);
+            objectPrep(objectName, chunkList[objectName]);
+        }
+    }
+
+    function queryError(error) {
+        var qErr = {};
+        qErr.status = false;
+        qErr.type = 'exception';
+        qErr.message = 'error';
+        //Adding to the error array
+        checkErrors (qErr);
+    }
+
+    function getResultValues(result) {
+        // Creating a JSON object
+        var retObj = {};
+        retObj.totalSize = -1;
+        retObj.cursorId = '';
+        retObj.offset = 999999999999; //~1T records.  using this to put last result at the end of the sort, its QL will be null
+        retObj.firstRecordId = '';
+        retObj.lastRecordId = '';
+        retObj.type = '';
+        
+        //get the querylocator from the result
+        var ql = result.queryLocator;
+        
+        //ql will look like this:
+        //01gHu0000D25iyKIA1-2000
+        
+        //split the ql into cursorId and offset
+        if (ql != null) { //if there are no more records to get, ql will be null
+            var arrQL = ql.split('-');
+            if (arrQL.length == 2) {
+                retObj.cursorId = arrQL[0];
+                retObj.offset   = arrQL[1];
+            }   
+        }
+        
+        //get the total size, convert to int
+        retObj.totalSize = parseInt(result['size']);        
+        
+        //get the first record Id
+        var firstRecordFound = false;
+        if ('records' in result) {
+            //see if it is in an array
+            if(isPoly){
+                if (Object.prototype.toString.call(result.records) === '[object Array]') {
+                    if (result.records.length > 0) {
+                        retObj.firstRecordId = result.records[0][masterField];
+                        retObj.type = result.records[0].type;
+                        //console.log('first record found in group: ' + retObj.firstRecordId + ' - ' + result.records[0][masterField]);
+                        firstRecordFound = true;
+                    }           
+                } else {
+                    //or else just a single object
+                    if (masterField in result.records) {
+                        retObj.firstRecordId = result.records[masterField];
+                        retObj.type = result.records.type;
+                        //console.log('first record found in single object: ' + retObj.firstRecordId + ' - ' + result.records[masterField]);
+                        firstRecordFound = true;                
+                    }
+                }
+            } else {
+                if (Object.prototype.toString.call(result.records) === '[object Array]') {
+                    if (result.records.length > 0) {
+                        retObj.firstRecordId = result.records[0].Id;
+                        retObj.type = result.records[0].type;
+                        //console.log('first record found in group: ' + retObj.firstRecordId);
+                        firstRecordFound = true;
+                    }           
+                } else {
+                    //or else just a single object
+                    if ('Id' in result.records) {
+                        retObj.firstRecordId = result.records.Id;
+                        retObj.type = result.records.type;
+                        //console.log('first record found in single object: ' + retObj.firstRecordId);
+                        firstRecordFound = true;                
+                    }
+                }
+            }
+        }
+        
+        //get the last record Id
+        var lastRecordFound = false;
+        if ('records' in result) {
+            //see if it is in an array
+            if(isPoly){
+                if (Object.prototype.toString.call(result.records) === '[object Array]') {
+                    if (result.records.length > 0) {
+                        retObj.lastRecordId = result.records[result.records.length-1][masterField];
+                        //console.log('last record found in group: ' + retObj.lastRecordId);
+                        lastRecordFound = true;
+                    }           
+                } else {
+                    //or else just a single object
+                    if (masterField in result.records) {
+                        retObj.lastRecordId = result.records[masterField];
+                        //console.log('last record found in single object: ' + retObj.lastRecordId);
+                        lastRecordFound = true;             
+                    }
+                }
+            } else {
+                if (Object.prototype.toString.call(result.records) === '[object Array]') {
+                    if (result.records.length > 0) {
+                        retObj.lastRecordId = result.records[result.records.length-1].Id;
+                        //console.log('last record found in group: ' + retObj.lastRecordId);
+                        lastRecordFound = true;
+                    }           
+                } else {
+                    //or else just a single object
+                    if ('Id' in result.records) {
+                        retObj.lastRecordId = result.records.Id;
+                        //console.log('last record found in single object: ' + retObj.lastRecordId);
+                        lastRecordFound = true;             
+                    }
+                }
+            }
+        }
+        
+        console.log('retObj: ', retObj);
+        return retObj;
+        
+    }
+
+
+
+
+    function allQueriesComplete(type, totalSize) {
+        
+        // build an array of all the keys so we can sort them
+        var offsetArray = [];
+        for (var offset in offsetIdMap[type]) {
+            offsetArray.push(parseInt(offset));
+        }
+                                            
+        offsetArray.sort(function(a,b) { return a - b; });
+        recordCount += totalSize;
+        
+        //loop from the beginning to the next to last one
+        //don't need the last since it just contains the very last Id - special case
+        
+        if(offsetArray.length == 1) {
+            
+            var range = {};
+            range.firstId = offsetIdMap[type][offsetArray[0]].firstRecordId;
+            range.lastId = offsetIdMap[type][offsetArray[0]].lastRecordId;
+            //range.isLast = true;
+            range.recordCount = recordCount;
+            //console.log('offsetArray.length == 1');
+            //chunkList[type].push(range);
+            chunkList[type][recordCount] = range;
+            objectPrep(objectName, chunkList[objectName]);
+            
+        } else {
+            
+            //console.log('offsetArray.length != 1: ' + offsetArray.length);
+            
+            for (var i=0; i<(offsetArray.length-1); i++) {
+                
+                var range = {};
+                range.firstId = '';
+                range.lastId = '';
+                //range.isLast = false;
+                
+                var currOffset = offsetArray[i];
+                var nextOffset = offsetArray[i+1];
+                //range.firstId = offsetIdMap[type][currOffset].firstRecordId;
+                //range.recordCount = recordCount;
+                range["firstId"] = "" + offsetIdMap[type][currOffset].firstRecordId;
+                range["recordCount"] = recordCount;
+            
+                var lastLoop = false;
+                if (i == (offsetArray.length-2)) {
+                    lastLoop = true;
+                }
+    
+                if (lastLoop) {
+                    
+                    //range.isLast = true;
+                    //the last Id will be the actual last Id from the very last chunk
+                    //range.last  = offsetIdMap[type][nextOffset].lastRecordId;
+                    range["lastId"] = "" + offsetIdMap[type][nextOffset].lastRecordId;
+                    //console.log('chunk on object: ' + objectName);
+                    //chunkEntireDB(objectName, range.last);
+                    chunkEntireDB(objectName, range["lastId"], masterField, isPoly);
+                    
+                } else {
+                    
+                    //the last Id will be the first from the next chunk (have to use < logic)
+                    //range.last = offsetIdMap[type][nextOffset].firstRecordId;
+                    range["lastId"] = "" + offsetIdMap[type][nextOffset].firstRecordId;
+                    
+                }
+                
+                //console.log('offsetArray.length != 1 range: ', range);
+                //console.log('chunkList[type]: ', chunkList[type]);
+                //chunkList[type].push(range);
+                //chunkList[type][recordCount] = range;
+                chunkList[type][recordCount] = range;
+                
+            }
+        }
+        
+        console.log('chunkList', chunkList);
+        //console.log('***done***');  
+
+        /*for (var i=0; i<chunkList[type].length; i++) {
+            queryChunk(i);
+        }*/
+        
+    }       
+        
+        
+    function checkErrors (event) { 
+        if (event.status) {            
+
+        } else if (event.type === 'exception') {
+            //Pushing to the error array
+            errors.push(event.message + ' : ' + event.type);
+        } else {
+            //Pushing to the error array
+            errors.push(event.message);
+        }
+        
+        if (errors.length == 0) {
+
+        } else {
+            console.log('***errors***');
+            console.log(errors);
+            errorMessage(errors[0]);
+        }
+    }           
+        
+    //=============
+    
+    var objectAnums = [];
+    var queryChunkCount = 0;
+    
+    function queryChunk(chunkIndex) {
+        
+        var chunk = chunkList[objectName][chunkIndex];
+        
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ExecutionPrep_Controller.queryChunk}',
+            chunk.first, chunk.last, chunk.isLast, chunkList[objectName],
+            function (result, event) {
+                
+                //console.log('loop all: ', result);
+                
+                var doRetry = checkRetry(event);                    
+                if (doRetry == false) {
+                    checkErrors(event);
+                }               
+                
+                if (event.status) {
+                    
+                    queryChunkCount++;
+                    if (queryChunkCount == chunkList[objectName].length) {
+                        //allQueryChunksComplete();
+                    }       
+                }
+                                
+                if (doRetry) {
+                    queryChunk(chunkIndex);     
+                }
+
+            },
+            {escape: false, buffer: false}
+        );  
+
+    }
+    
+    
+    function checkRetry(event) {
+        var doRetry = false;
+        if (event.type === 'exception') {
+            if ((event.message.indexOf("timeout") > -1) ||
+                (event.message.indexOf("Remoting request invalid for your session") > -1) || 
+                (event.message.indexOf("Logged in") > -1)) {
+                doRetry = true; 
+            }   
+        }  
+        return doRetry;     
+    }
+    
+    </script>
+	
+    <apex:slds />
+    <div class="wrapper" style="padding-left: 20px;">
+        <div class="static-section" style="background-color: white;margin-right: 12px;">
+            <div class="static-section-header">
+                Data Mask Execution
+            </div>
+        </div>
+        <apex:form >
+            <div style="display: {!IF(isSandbox, 'block', 'none')}">
+                <div class="slds-col slds-size_12-of-12 slds-m-top_large">
+                    <div class="slds-text-body_regular">
+                        Click the button below to run Data Mask for the selected configuration.
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-m-top_large">
+                    <apex:selectList styleClass="configSelection" size="1" value="{!selectedConfig}" multiselect="false" style="width: 50%;">
+                    	<apex:selectOptions value="{!configList}"/>
+                    </apex:selectList>
+                </div>
+                <div class="slds-col slds-size_10-of-12 slds-m-top_large">
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-m-top_large">
+                    <div style="display: inline-block; padding-right: 20px;">
+                        <apex:CommandButton styleClass="slds-button slds-button--success slds-not-selected prepButton" value="Run Data Mask" onclick="getMaskingObjects()" onComplete="return null;"/>
+                    </div>
+                    <div class="startProcessMsg" style="display: inline-block; padding-left: 10px;">
+                        
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-m-top_large slds-p-bottom_x-large">
+                    
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" style="display: {!IF(isSandbox, 'none', 'block')}">
+                <div class="slds-col slds-size_12-of-12 slds-m-top_large slds-p-left_medium">
+                    <div class="slds-text-body_regular" style="width: 75%;">
+                        The Data Mask application cannot be used on Production Data.  To execute a Configuration, you must be in a Sandbox environment.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-col slds-size_12-of-12 slds-m-top_large slds-p-bottom_x-medium">
+                <table>
+                    <col width="20%"/>
+                    <col width="80%"/>
+                </table>
+            </div>
+            <div class="statusPanel" style="text-align: center; width: 80%;">
+                
+            </div>
+        </apex:form>
+        <br />
+        <br />
+        
+    </div>
+    
+    <script>
+    
+    function generateTableHead(table, data) {
+        let thead = table.createTHead();
+        let row = thead.insertRow();
+        for (let key of data) {
+            let th = document.createElement("th");
+            var text;
+            console.log('key: ', key);
+            if(key == "Progress"){
+                text = document.createTextNode("Data Preparation Progress");
+            } else {
+            	text = document.createTextNode(key);
+            }
+            th.appendChild(text);
+            row.appendChild(th);
+        }
+    }
+    
+    function generateTable(table, data) {
+        //console.log('!!! table: ', table);
+        //console.log('!!! data: ', data);
+        for (let element of data) {
+            if(data[0]["Status"] == "checkmark"){
+                //console.log('!!! table: ', table);
+                var rows = table.rows.length;
+                //console.log('!!! rows: ', rows);
+                var deleted = table.deleteRow(rows - 1);
+                //console.log('!!! deleted: ', deleted);
+            }
+            let row = table.insertRow();
+            for (key in element) {
+                let cell = row.insertCell();
+                //let text = document.createTextNode(element[key]);
+                var text
+                if(element[key] == "spinner"){
+                    text = document.createElement('img');
+                    text.src = "{!URLFOR($Resource.spinner)}";
+                    text.height = 30;
+                    text.width = 30;
+                } else if(element[key] == "checkmark"){
+                    text = document.createElement('img');
+                    text.src = "{!URLFOR($Resource.greencheck)}";
+                    text.height = 30;
+                    text.width = 30;
+                } else {
+                    text = document.createTextNode(element[key]);
+                }
+                cell.appendChild(text);
+            }
+        }
+    }
+    
+    function prepStartMessage(){
+        var statusEl = document.getElementsByClassName('statusPanel')[0];
+        
+        var text = document.createTextNode("Hang tight and go grab a coffee while we prepare your Data Mask process, this might take a little while.")
+        text.display = 'block';
+        statusEl.appendChild(text);
+        
+        var lineBreak = document.createElement("br");
+        statusEl.appendChild(lineBreak);
+        
+        var text2 = document.createTextNode("Note: Don't close the browser while preparing.  Closing the browser before preparations are done will require starting over.");
+        text2.display = 'block';
+        statusEl.appendChild(text2);
+        
+        var lineBreak2 = document.createElement("br");
+        statusEl.appendChild(lineBreak2);
+        
+        var spinner = document.createElement('img');
+        spinner.src = "{!URLFOR($Resource.spinner)}";
+        spinner.height = 60;
+        spinner.width = 60;
+        spinner.display = 'block';
+        statusEl.appendChild(spinner);
+        
+    }
+    
+    function adHocStartMessage(){
+        var statusEl = document.getElementsByClassName('statusPanel')[0];
+        
+        statusEl.innerHTML = '';
+        
+        var text = document.createTextNode("Your Data Mask process has been prepared and is now running on the servers.")
+        text.display = 'block';
+        statusEl.appendChild(text);
+        
+        var lineBreak = document.createElement("br");
+        statusEl.appendChild(lineBreak);
+        
+        var text2 = document.createTextNode("You may now navigate away from this page or close this browser window");
+        text2.display = 'block';
+        statusEl.appendChild(text2);
+        
+        var lineBreak2 = document.createElement("br");
+        statusEl.appendChild(lineBreak2);
+        
+        var spinner = document.createElement('img');
+        spinner.src = "{!URLFOR($Resource.greencheck)}";
+        spinner.height = 60;
+        spinner.width = 60;
+        spinner.display = 'block';
+        statusEl.appendChild(spinner);
+        
+    }
+
+    function noObjectsMessage(){
+        var statusEl = document.getElementsByClassName('statusPanel')[0];
+        
+        statusEl.innerHTML = '';
+        
+        var text = document.createTextNode("The selected configuration does not have any objects configured for processing.")
+        text.display = 'block';
+        statusEl.appendChild(text);
+        
+        var lineBreak = document.createElement("br");
+        statusEl.appendChild(lineBreak);
+        
+        var text2 = document.createTextNode("Please configure at least 1 object for processing, or select a different configuration.");
+        text2.display = 'block';
+        statusEl.appendChild(text2);
+        
+        var lineBreak2 = document.createElement("br");
+        statusEl.appendChild(lineBreak2);
+        
+    }
+    
+    function errorMessage(errorMsg){
+    	var statusEl = document.getElementsByClassName('statusPanel')[0];
+        
+        statusEl.innerHTML = '';
+        
+        var text = document.createTextNode("There was a problem while preparing your Data Mask Execution.  If this problem persists, please contact Data Mask Support.")
+        text.display = 'block';
+        statusEl.appendChild(text);
+        
+        var lineBreak = document.createElement("br");
+        statusEl.appendChild(lineBreak);
+        
+        var text2 = document.createTextNode("Error message: " + errorMsg);
+        text2.display = 'block';
+        statusEl.appendChild(text2);
+        
+        var lineBreak2 = document.createElement("br");
+        statusEl.appendChild(lineBreak2);
+        
+        var spinner = document.createElement('img');
+        spinner.src = "{!URLFOR($Resource.redx)}";
+        spinner.height = 60;
+        spinner.width = 60;
+        spinner.display = 'block';
+        statusEl.appendChild(spinner);
+        
+    }
+    
+    let table = document.querySelector("table");
+    let data = Object.keys(progress[0]);
+    
+    </script>
+    
+</apex:page>

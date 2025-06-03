@@ -1,0 +1,382 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment" extensions="FSL.Ctrl739_ComplexWork">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <head>
+
+            <script type='text/javascript' src='/support/console/31.0/integration.js' />
+            <script type='text/javascript' src='/support/api/38.0/interaction.js' />
+
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+            <apex:stylesheet value="{!$Resource.FSL__css739_ComplexWork}" />
+
+            <apex:includeScript value="{!$Resource.FSL__cometd}" />
+            <apex:includeScript value="{!$Resource.FSL__cometdReplayExtension}" />
+            <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+            <apex:includeScript value="{!$Resource.FSL__jqueryCometd}" />
+
+            <apex:includeScript value="{!$Resource.FSL__MomentJS}" />
+            <apex:includeScript value="{!$Resource.FSL__MomentTimezone}" />
+            <apex:includeScript value="{!$Resource.FSL__DefineMomentTimezones}" />
+            <apex:includeScript value="{!$Resource.FSL__angular150min}" />
+
+            <apex:includeScript value="{!$Resource.FSL__d3v3}" />
+            <apex:includeScript value="{!$Resource.FSL__graphlibdot}" />
+            <apex:includeScript value="{!$Resource.FSL__dagred3}" />
+
+            <apex:includeScript value="{!$Resource.FSL__MstClientResolver}" />
+            <apex:includeScript value="{!$Resource.FSL__js739_ComplexWorkCtrlAndApp}" />
+            <apex:includeScript value="{!$Resource.FSL__js739_ComplexWorkServices}" />
+
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+
+        </head>
+
+
+
+        <body ng-app="ComplexWork" ng-controller="mainCtrl">
+
+
+            <div class="ng-cloak" id="SchedulingInProgress" ng-show="schedulingFinished">
+
+                <span class="close-button" ng-hide="isScheduleRunning()" ng-click="schedulingFinished = false">X</span>
+
+                <div id="SchedulingResultTable">
+
+                    <h1>{!$Label.ComplexSchedulingServices}</h1>
+
+                    <div class="complex-table">
+                        <div class="complex-row-header">
+                            <div class="complex-row-header-name">{!$Label.ComplexServiceAppointment}</div>
+                            <div class="complex-row-header-result">{!$Label.ComplexSchedulingResult}</div>
+                        </div>
+
+                        <div class="complex-row" ng-repeat="scheduleResult in schedulingProgress track by $index" ng-class="{'scheduling': scheduleResult.scheduling, 'schedule-error': scheduleResult.error}">
+
+                            <div class="comlex-sched-row" ng-if="scheduleResult.scheduling">
+                                <div class="complex-service-name">
+                                    {{scheduleResult.service.AppointmentNumber}}
+                                </div>
+
+                                <div class="complex-scheduling-result">
+                                    {!JSENCODE($Label.schedulingComplexz)}
+                                </div>
+                            </div>
+
+                            <div class="comlex-sched-row" ng-if="!scheduleResult.scheduling && scheduleResult.error">
+                                <div class="complex-service-name">
+                                    {{scheduleResult.service.AppointmentNumber}}
+                                </div>
+
+                                <div class="complex-scheduling-result">
+                                    {{ scheduleResult.result }}
+                                </div>
+                            </div>
+
+
+                            <div class="comlex-sched-row" ng-if="!scheduleResult.scheduling && !scheduleResult.error" ng-repeat="result in scheduleResult.result track by $index">
+                                <div class="complex-service-name">
+                                    {{ serviceIdToName[result.Service.Id] }}
+                                </div>
+
+                                <div class="complex-scheduling-result">
+                                    {{ displayScheduleResult(result) }}
+                                </div>
+                            </div>
+
+                            <div class="comlex-sched-row" ng-if="!scheduleResult.scheduling && !scheduleResult.error && scheduleResult.result.length === 0">
+                                <div class="complex-service-name">
+                                    {{ scheduleResult.service.AppointmentNumber }}
+                                </div>
+
+                                <div class="complex-scheduling-result">
+                                    {!JSENCODE($Label.ComplexNoCandidates)}
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="lightbox-container ng-cloak" ng-show="showServiceLightbox.id">
+                <span class="close-button" ng-click="showServiceLightbox.id = null">X</span>
+
+                <div class="lightbox">
+
+                    <h1>
+                        {{showServiceLightbox.name}}
+                        <a class="open-in-layout" href="{{'../' + showServiceLightbox.id}}" target="_blank">{!$Label.OpenInLayout}</a>
+                    </h1>
+
+
+
+                    <iframe ng-if="showServiceLightbox.id" ng-src="{{saPage + '?id=' + showServiceLightbox.id}}"></iframe>
+                </div>
+            </div>
+
+
+
+            <div class="lightbox-container ng-cloak" ng-show="selectNewService">
+                <span class="close-button" ng-click="selectNewService = null">X</span>
+
+                <div class="lightbox">
+                    <h1>{!$Label.SelectServiceApp}</h1>
+                    <span class="showing-related" title="{!$Label.showing_related_services}">{!$Label.showing_related_services} &nbsp;</span>
+                    <select class="select-sa" ng-model="showBy" ng-change="handleFieldChange()" ng-disabled="loadingFieldSet">
+                        <option ng-repeat="field in lookupFields" value="{{field}}" ng-bind="field"></option>
+                    </select>
+                    <span class="select-arrow">^</span>&nbsp;
+
+                    {!$Label.and} &nbsp;
+
+                    <select class="select-sa" ng-init="showChainOptions = 'all'" ng-model="showChainOptions">
+                        <option value="all">{!$Label.All}</option>
+                        <option value="inChain">{!$Label.InChain}</option>
+                        <option value="notInChain">{!$Label.NotInChain}</option>
+                    </select>
+                    <span class="select-arrow">^</span>
+
+                    <input id="filter-text" placeholder="{!JSENCODE($Label.SearchSAc)}" type="text" ng-model="filterText.AppointmentNumber" />
+
+                    <span id="add-current" ng-click="selectCurrentInLb()" title="{!JSENCODE($Label.AddCurrent)}">{!JSENCODE($Label.AddCurrent)}</span>
+                        <div id="ServiceListContainer">
+                            <div class="dcNoRelatedServicesFound" ng-if="noRelatedServiceFound">
+                                {!$Label.noRelatedServicesFound}
+                            </div>
+                            <div ng-if="!noRelatedServiceFound">
+                                <img class="dcSpinner" src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" ng-if="loadingData"/>
+                                <table>
+
+                                    <tr class="service-row">
+                                        <td class="service-cell dcTableHeaders" ng-repeat="field in fields"
+                                            ng-init="$parent.sortDir = '+'; $parent.sortByField = '-LastModifiedDate'"
+                                            ng-click="$parent.sortDir = $parent.sortDir == '+' ? '-' : '+'; $parent.sortByField = field.JsAPIName">
+                                            {{field.Label.decodeHTML().replace('ID', '')}}
+                                        </td>
+                                    </tr>
+
+                                    <tr class="service-row" ng-if="!loadingData"
+                                        ng-repeat="service in relatedServices[showBy] | orderBy: sortDir + sortByField | filter:filterText"
+                                        ng-show="showChainOptions == 'all' || (showChainOptions == 'inChain' && isInChain(service.Id)) || (showChainOptions == 'notInChain' && !isInChain(service.Id))"
+                                        ng-click="handleServiceSelected(service)">
+                                        <td class="service-cell" ng-repeat="field in fields">
+                                            {{ formatFieldToDisplay(service[field.FullAPIName], field, service) }}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <span id="dcShowMore" ng-click="handleShowMoreServices()" ng-if="showMoreButton[showBy]">{!JSENCODE($Label.ShowMoreServices)}</span>
+                        </div>
+                </div>
+            </div>
+
+
+            <div id="List" class="ng-cloak" ng-show="!inGantt && serviceId">
+
+                <div id="SavingDependecy" ng-show="savingDependency || removingDependency">
+                    <img src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+                    <div ng-show="savingDependency">{!$Label.AddingDependency}</div>
+                    <div ng-show="removingDependency">{!$Label.RemovingDependency}</div>
+                </div>
+
+
+                <div id="AddNew">
+
+                    <h1>{!$Label.AddnewDependency}</h1>
+                    <p class="add-new-intro">{!$Label.AddnewDependency_intro}</p>
+                    
+                    <div class="input-container">
+                        <label class="input-sa-label truncate" for="firstSA" title="{!$Label.firstSA}">{!$Label.firstSA}</label>
+                        <input class="input-sa" id="firstSA" type="text" ng-click="selectNewService = 'sa1'" readonly="readonly" ng-model=" newServicesSelected.sa1.AppointmentNumber"/>
+                            <svg aria-hidden="true" class="slds-icon slds-icon-search-sa" ng-click="selectNewService = 'sa1'">
+                              <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                            </svg>
+                    </div>
+                    <div class="input-container">
+                        <label class="input-sa-label truncate" for="secondSA" title="{!$Label.secondSA}">{!$Label.secondSA}</label>
+                        <input class="input-sa" type="text" id="secondSA" ng-click="selectNewService = 'sa2'" readonly="readonly" ng-model="newServicesSelected.sa2.AppointmentNumber"/>
+                        <svg aria-hidden="true" class="slds-icon slds-icon-search-sa" ng-click="selectNewService = 'sa2'">
+                          <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                        </svg>
+                    </div>
+
+                    <div class="input-container">
+
+                        <label class="input-sa-label truncate" for="select-dep-drop">{!$Label.Dependency_Type}</label>
+                        <select id="select-dep-drop" class="select-sa" ng-model="timeDepSelect">
+                            <option value="Same Start">{!$Label.SameStart}</option>
+                            <option value="Start After Finish">{!$Label.StartAfterFinish}</option>
+                            <option value="Start After Finish And Same Day">{!$Label.StartAfterFinishAndSameDay}</option>
+                            <option value="Immediately Follow">{!$Label.ImmediatelyFollowedBy}</option>
+                        </select>
+
+                        <span class="select-arrow">^</span>
+                    </div>
+
+                    <div id="SameResourceContainer" ng-style="{opacity: timeDepSelect === 'Immediately Follow' ? 0.38 : 1}">
+                        <input id="SameResourceInput" ng-model="sameResource" type="checkbox" ng-disabled="timeDepSelect === 'Immediately Follow'" /> <label for="SameResourceInput">{!$Label.ServiceAppReqSameRes}</label>
+                    </div>
+
+                    <button ng-click="addTimeDependency(newServicesSelected.sa1.Id, newServicesSelected.sa2.Id, timeDepSelect, sameResource)">{!$Label.AddNewDep}</button>
+
+                </div>
+
+
+                <div ng-repeat="service in chain">
+
+                    <div class="service-parent" ng-init="collapse = false" ng-click="collapse = !collapse">
+                        <span class="relations-collapse">
+                            <span ng-show="collapse">-</span>
+                            <span ng-show="!collapse">+</span>
+                        </span>
+                        {{service.name}}
+                    </div>
+
+                    <div class="service-related" ng-repeat="relation in service.relations" ng-show="collapse">
+                        <div class="single-related-text">
+                            <span ng-show="relation.dependency === 'Start After Finish And Same Day'">
+                                <span class="relation-name" ng-click="showServiceLightbox.id = service.id; showServiceLightbox.name = service.name">{{service.name}}</span>
+                                {!$Label.shouldStartAfter}
+                                 <span class="relation-name" ng-click="showServiceLightbox.id = relation.id; showServiceLightbox.name = relation.name">{{relation.name}}</span>
+                                  ({!$Label.SameDayCOmplex})
+                            </span>
+
+                            <span ng-show="relation.dependency === 'Start After Finish'">
+                                <span class="relation-name" ng-click="showServiceLightbox.id = service.id; showServiceLightbox.name = service.name">{{service.name}}</span>
+                                {!$Label.shouldStartAfter}
+                                 <span class="relation-name" ng-click="showServiceLightbox.id = relation.id; showServiceLightbox.name = relation.name">{{relation.name}}</span>
+                            </span>
+
+                            <span ng-show="relation.dependency === 'Same Start'">
+                                <span class="relation-name" ng-click="showServiceLightbox.id = service.id; showServiceLightbox.name = service.name">{{service.name}}</span>
+                                {!$Label.shouldStartsameTime}
+                                <span class="relation-name" ng-click="showServiceLightbox.id = relation.id; showServiceLightbox.name = relation.name">{{relation.name}}</span>
+                            </span>
+
+                            <span ng-show="relation.dependency === 'Immediately Follow'">
+                                <span class="relation-name" ng-click="showServiceLightbox.id = service.id; showServiceLightbox.name = service.name">{{service.name}}</span>
+                                {!$Label.ShouldImmediatelyFollow}
+                                <span class="relation-name" ng-click="showServiceLightbox.id = relation.id; showServiceLightbox.name = relation.name">{{relation.name}}</span>
+                            </span>
+
+                            <span ng-show="!relation.dependency && relation.sameResource">
+                                <span class="relation-name" ng-click="showServiceLightbox.id = service.id; showServiceLightbox.name = service.name">{{service.name}}</span>
+                                {!$Label.haveSameResource}
+                                <span class="relation-name" ng-click="showServiceLightbox.id = relation.id; showServiceLightbox.name = relation.name">{{relation.name}}</span>
+                            </span>
+
+                        </div>
+
+                        <span ng-show="relation.sameResource && relation.dependency"> ({!$Label.SameResourceCompelx})</span>
+                        <span class="relation-delete" ng-click="removeTimeDependency(relation.relationId)">x</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="GraphContainer" class="ng-cloak"  ng-class="{'view-in-gantt': inGantt}">
+
+                <svg  id="DagrananaBatman">
+                    <g></g>
+                </svg>
+               
+                <!--<div id="recenter-graph" ng-hide="isChainEmpty()" ng-click="recenterGraph()">Recenter</div>-->
+
+                <div id="ScheduleButton" ng-hide="inGantt || isChainEmpty()" ng-click="scheduleByOrder()">{!$Label.ScheduleChain}</div>
+
+
+                <div id="NoChainFound" ng-show="!inGantt && isChainEmpty() && serviceId">{!$Label.NoMSTChain} <a class="learn-more" target="_blank" href="https://help.salesforce.com/articleView?id=pfs_complex_work.htm">{!$Label.LearnMore}</a></div>
+
+            </div>
+
+
+            <div id="AfterSaving" ng-show="!serviceId">{!JSENCODE($Label.AfterSaving)}</div>
+
+
+        </body>
+
+
+
+        <script>
+
+            var sessionId = '{!$Api.Session_ID}';
+
+            var complex = {
+                statuses: JSON.parse('{!ServiceStatusDic}'),
+                statusTranslations: JSON.parse('{!JSENCODE(StatusTranslations)}'),
+                serviceId: '{!serviceId}',
+                timeZone: '{!UserTimeZone}',
+                serviceLightboxUrl: '{!customServiceLightbox}',
+                numberOfServicesToLoad: parseInt('{!numberOfServicesToLoad}'),
+
+                fieldNames: {
+                    timeDependency: {
+                        sa1: '{!$ObjectType.Time_Dependency__c.Fields.Service_Appointment_1__c.Name}',
+                        sa2: '{!$ObjectType.Time_Dependency__c.Fields.Service_Appointment_2__c.Name}',
+                        dependency: '{!$ObjectType.Time_Dependency__c.Fields.Dependency__c.Name}',
+                        sameResource: '{!$ObjectType.Time_Dependency__c.Fields.Same_Resource__c.Name}',
+                        root: '{!$ObjectType.Time_Dependency__c.Fields.Root_Service_Appointment__c.Name}'
+                    },
+
+                    FslOperationFieldNames: {
+                        ResultText: '{!$ObjectType.FSL_Operation__c.Fields.ResultText__c.Name}',
+                        Initiator: '{!$ObjectType.FSL_Operation__c.Fields.Initiator__c.Name}',
+                        Request_Type: '{!$ObjectType.FSL_Operation__c.Fields.Request_Type__c.Name}',
+                        Future_Method_Id__c:   '{!$ObjectType.FSL_Operation__c.Fields.Future_Method_Id__c.Name}',
+                    }
+                 },
+
+                labels: {
+                    Please44: "{!JSENCODE($Label.Please44)}",
+                    Please33: "{!JSENCODE($Label.Please33)}",
+                    Please22: "{!JSENCODE($Label.Please22)}",
+                    Please11: "{!JSENCODE($Label.Please11)}",
+                    Please00: "{!JSENCODE($Label.Please00)}",
+                    Please77: "{!JSENCODE($Label.Please77)}",
+                    Please99: "{!JSENCODE($Label.Please99)}",
+                    confirmComplex: "{!JSENCODE($Label.confirmComplex)}",
+                    schedulingComplexz: "{!JSENCODE($Label.schedulingComplexz)}",
+                    SameResourceCompelx: "{!JSENCODE($Label.SameResourceCompelx)}",
+                    SameDayResourceCOmplex: "{!JSENCODE($Label.SameDayResourceCOmplex)}",
+                    SameDayCOmplex: "{!JSENCODE($Label.SameDayCOmplex)}",
+                    ComplexNoCandidates: "{!JSENCODE($Label.ComplexNoCandidates)}",
+                    ComplexScheduledTo: "{!JSENCODE($Label.ComplexScheduledTo)}",
+                    LearnMore: "{!JSENCODE($Label.LearnMore)}",
+                    AddnewDependency_intro: "{!JSENCODE($Label.AddnewDependency_intro)}",
+                    ImmediatelyFollowSameResource: "{!JSENCODE($Label.ImmediatelyFollowSameResource)}",
+                    ImmediatelyFollowedBy: "{!JSENCODE($Label.ImmediatelyFollowedBy)}",
+                    noRelatedServicesFound: "{!JSENCODE($Label.noRelatedServicesFound)}",
+                    ShowMoreServices: "{!JSENCODE($Label.ShowMoreServices)}",
+                },
+
+
+                remoteActions: {
+                    getMstChain	: '{!$RemoteAction.Ctrl739_ComplexWork.getMstChain}',
+                    getRelatedServices : '{!$RemoteAction.Ctrl739_ComplexWork.getRelatedServices}',
+                    getComplexWorkLookupFields : '{!$RemoteAction.Ctrl739_ComplexWork.getComplexWorkLookupFields}',
+                    getRelatedServicesByLookupFieldId : '{!$RemoteAction.Ctrl739_ComplexWork.getRelatedServicesByLookupFieldId}',
+                    addTimeDependency: '{!$RemoteAction.Ctrl739_ComplexWork.addTimeDependency}',
+                    removeTimeDependency: '{!$RemoteAction.Ctrl739_ComplexWork.removeTimeDependency}',
+                    getServiceListFields: '{!$RemoteAction.Ctrl739_ComplexWork.getServiceListFields}',
+                    getTree: '{!$RemoteAction.Ctrl739_ComplexWork.getTree}',
+                    scheduleService: '{!$RemoteAction.Ctrl739_ComplexWork.scheduleService2}',
+                    getFslOperation: '{!$RemoteAction.Ctrl739_ComplexWork.getFslOperation}',
+                    getAsyncApexJob: '{!$RemoteAction.Ctrl739_ComplexWork.getAsyncApexJob}',
+                }
+            };
+
+            // if ({!noPushTopic}) {
+            //     alert('{!JSENCODE($Label.NoMstPushTopic)}')
+            // }
+
+        </script>
+
+    </html>
+
+</apex:page>

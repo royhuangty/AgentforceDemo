@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wahr, wenn der aktuelle Benutzer auch der unter &quot;Zugewiesen zu&quot; angegebene Benutzer ist</help>
+        <label><!-- Assigned To Me --></label>
+        <name>sbaa__AssignedToMe__c</name>
+    </CustomFieldTranslation>

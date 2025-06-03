@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référence à l’objet du livre comptable utilisé pour enregistrer l&#39;écriture de ce produit de commande.</help>
+        <label><!-- Finance Book (Accounting) --></label>
+        <name>blng__FinanceBookAccounting__c</name>
+        <relationshipLabel><!-- Order Products (Finance Book (Accounting)) --></relationshipLabel>
+    </CustomFieldTranslation>

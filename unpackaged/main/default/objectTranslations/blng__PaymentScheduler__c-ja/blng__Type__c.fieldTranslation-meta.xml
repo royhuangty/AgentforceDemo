@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>スケジュールの種別。
+1 回のみ - 支払スケジューラは 1 回のみ実行されます。
+毎日 - 支払スケジューラは毎日継続的に繰り返されます。</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

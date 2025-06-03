@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Geben Sie den URL an, zu dem navigiert werden soll. Sie haben Zugriff auf Felder von Belegposten-, Gruppen- und Angebotsdatensätzen, z. B.: http://www.salesforce.com, http://www.yoursite.com/{!Id} oder /{!SBQQ__Quote__c.Name}/{!SBQQ__YourCustomVar__c}</help>
+        <label><!-- URL --></label>
+        <name>SBQQ__URL__c</name>
+    </CustomFieldTranslation>

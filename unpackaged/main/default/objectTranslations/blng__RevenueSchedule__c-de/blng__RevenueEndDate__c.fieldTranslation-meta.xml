@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bezieht sich auf das Enddatum der Umsatzlaufzeit, das in der Umsatzregel definiert ist.</help>
+        <label><!-- Revenue End Date --></label>
+        <name>blng__RevenueEndDate__c</name>
+    </CustomFieldTranslation>

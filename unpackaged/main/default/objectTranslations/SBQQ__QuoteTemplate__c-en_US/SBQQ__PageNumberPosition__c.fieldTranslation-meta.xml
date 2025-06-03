@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify where the page numbers are displayed in the document. Defaults to Footer if the field is blank. --></help>
+        <label><!-- Page Number Position --></label>
+        <name>SBQQ__PageNumberPosition__c</name>
+        <picklistValues>
+            <masterLabel>Footer</masterLabel>
+            <translation><!-- Footer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Header</masterLabel>
+            <translation><!-- Header --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

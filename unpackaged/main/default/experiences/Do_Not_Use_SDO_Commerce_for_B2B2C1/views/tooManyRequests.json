@@ -1,0 +1,52 @@
+{
+  "appPageId" : "3a241bdb-3c0c-4a4f-b277-1b94130c2d69",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "53b2a07b-a05f-41cc-8ac4-c0c9f5092b02",
+  "label" : "Too Many Requests",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"b20abd44-034e-40fe-b436-89a206fa5806\",\"columns\":[{\"UUID\":\"d0dc0a56-16ed-4a2b-ac90-a9dc638c1b1c\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "b20abd44-034e-40fe-b436-89a206fa5806",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 30px 25px;\">\n\t<div style=\"background-image: url(assets/images/tooManyRequests.svg); background-size: contain; height: 350px; width: 100%; background-repeat: no-repeat; background-position: center;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<h1 class=\"slds-text-heading_large\">Looks like the site is experiencing higher than usual demand&#8230;</h1>\n\t<p class=\"slds-text-heading_small\">Don't go anywhere. We'll redirect you in a moment.</p>\n</div>"
+          },
+          "componentName" : "community_builder:htmlEditor",
+          "id" : "43e7b399-a6c8-464d-80f1-2b813351615a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "experience_availability:autoRefresh",
+          "id" : "6338d0fc-7837-4669-a502-9552d79cf8cb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d0dc0a56-16ed-4a2b-ac90-a9dc638c1b1c",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "b61c4e54-5b8f-4752-acd7-6134a49dfc84",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "ServiceNotAvailable",
+  "type" : "view",
+  "viewType" : "too-many-requests"
+}

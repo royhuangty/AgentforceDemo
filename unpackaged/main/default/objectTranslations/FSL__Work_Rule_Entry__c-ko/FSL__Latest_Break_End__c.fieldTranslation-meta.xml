@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>서비스 자원의 가용성 시작 시점을 기준으로 허용되는 가장 늦은 휴식 종료 시간까지의 시간(분)입니다. 예를 들어 점심 시간을 예약하기 위해 300을 입력하면 하루를 시작한 후 최대 5시간 이전에 끝내야 합니다.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

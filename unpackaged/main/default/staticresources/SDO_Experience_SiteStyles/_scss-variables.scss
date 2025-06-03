@@ -1,0 +1,82 @@
+// Sass variables
+//$hero-background-color: rgba(12, 15, 22, 0.6);
+$hero-border-radius: 10px;
+
+// Calculated font sizes based on the base font size
+$base-font-size: 	1rem; // Equivalent to 16px
+$font-size-xs: 	$base-font-size * 0.75;  	// Extra small (12px)
+$font-size-sm: 	$base-font-size * 0.875; 	// Small (14px)
+$font-size-md: 	$base-font-size * 1.125; 	// Medium (18px)
+$font-size-lg: 	$base-font-size * 1.25;  	// Large (20px)
+$font-size-xl: 	$base-font-size * 1.5;   	// Extra large (24px)
+$font-size-xxl: 	$base-font-size * 2;    		// Double extra large (32px)
+$font-size-xxxl: 	$base-font-size * 2.375; 	// Triple extra large (38px)
+
+// Border radius sizes
+$border-radius-none: 0px;
+$border-radius-xs: 4px;
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 10px;
+$border-radius-xl: 12px;
+
+// Text Color based on Brand Set
+$text-default-color: token(colorTextDefault);
+
+// Detail Text Color
+$text-label-color: t(colorTextLabel);
+$text-placeholder-color: t(colorTextPlaceholder);
+$text-weak-color: t(colorTextWeak);
+
+// Action Color
+$background-button-brand-color: t(colorBackgroundButtonBrand);
+$border-brand-color: t(colorBorderBrand);
+$border-button-brand-color: t(colorBorderButtonBrand);
+$brand-color: t(colorBrand);
+$brand-color-lwc: var(--lwc-colorBrand);
+$text-brand-color: t(colorTextBrand);
+$text-brand-color-lwc: var(--lwc-colorTextBrand);
+
+// Link Color
+$text-link-color: t(colorTextLink);
+$text-link-color-lwc: var(--lwc-colorTextLink);
+
+// Overlay Text Color
+$text-button-brand-color: t(colorTextButtonBrand);
+$text-button-brand-hover-color: t(colorTextButtonBrandHover);
+$text-inverse-color: t(colorTextInverse);
+$text-inverse-color-lwc: var(--lwc-colorTextInverse);
+
+// Border Color
+$border-color: t(colorBorder);
+$border-button-default-color: t(colorBorderButtonDefault);
+$border-input-color: t(colorBorderInput);
+$border-seperator-alt-color: t(colorBorderSeparatorAlt);
+
+// Primary Font
+$font-family: t(fontFamily);
+$font-family-lwc: var(--lwc-fontFamily);
+
+// Heading Font
+$font-family-heading: t(fontFamilyHeading);
+
+// Action Color Darker
+$background-button-brand-active: t(colorBackgroundButtonBrandActive);
+$background-button-brand-active-lwc: var(
+  --lwc-colorBackgroundButtonBrandActive
+);
+$background-button-brand-hover: t(colorBackgroundButtonBrandHover);
+
+// Hover Color
+$background-button-default-hover: t(colorBackgroundButtonDefaultHover);
+$background-row-hover: t(colorBackgroundRowHover);
+$background-row-selected: t(colorBackgroundRowSelected);
+$background-shade: t(colorBackgroundShade);
+
+// Link Color Darker
+$text-link-active: t(colorTextLinkActive);
+$text-link-hover: t(colorTextLinkHover);
+
+// Navigation Color
+$background-navigation-brand: var(--lwc-brandNavigationBackgroundColor);
+$background-navigation-text: var(--lwc-brandNavigationColorText);

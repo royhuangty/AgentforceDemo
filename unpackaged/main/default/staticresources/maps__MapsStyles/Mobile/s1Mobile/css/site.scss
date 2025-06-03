@@ -1,0 +1,176 @@
+#sf1-header {
+    position:absolute;
+    width:100%;
+    height: 44px;
+    background-color: $sf-blue;
+    padding: 0 .25rem;
+}
+
+#sf1-header .ma-icon {
+    font-size: 1.25rem;
+    line-height: .75rem;
+    color: #fff;
+    padding: .675rem .75rem 0;
+}
+
+.ma-toast.ma-toast--fixed-bottom {
+    bottom: 35px;
+}
+
+.ma-toast.ma-toast--fixed-bottom.in {
+    bottom: 71px;
+    visibility: visible;
+    opacity: 1;
+    @include transition(opacity .2s ease 0s, visibility 0s ease 0s, bottom .2s ease 0s);
+}
+
+.ma-toast.ma-toast-block {
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+}
+
+#mockupAppWrap {
+    @include flexbox();
+    @include flexDirection(column);
+    top:44px;
+    height: calc(100% - 44px);
+    width: 100%;
+    position:absolute;
+    overflow:hidden;
+}
+
+.example-panel-inset {
+    border: 1px solid $border-gray;
+}
+
+.iphone-wrap {
+    width: 340px;
+    position: relative;
+    background: #333437;
+    margin: 0 auto;
+    padding:60px 0;
+    border-radius:30px;
+}
+
+.iphone-inner {
+    width: 320px;
+    height: 568px;
+    position: relative;
+    background: rgba(126, 140, 153, 0.8);
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.ipad-landscape-wrap {
+    width: 1020px;
+    position: relative;
+    background: #333437;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius:30px;
+}
+
+.ipad-landscape-inner {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    background: rgba(126, 140, 153, 0.8);
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#examplePhone1 .ma-app-body {
+    max-height: calc(100% - 80px);
+    top: 40px;
+    z-index:200;
+}
+
+#ex2Parent {
+    z-index:300;
+}
+
+#ex2Child {
+    z-index:400;
+}
+
+#ex2Parent .ma-app-body {
+    max-height: calc(100% - 80px);
+    top: 40px;
+}
+
+#ex2Child .ma-app-body {
+    max-height: calc(100% - 95px);
+    top: 55px;
+}
+
+#ex3Edit .ma-app-body {
+    max-height: calc(100% - 55px);
+    top: 55px;
+}
+
+#example5 .ma-app-body {
+    max-height: calc(100% - 80px);
+    top: 40px;
+}
+
+.flex-wrap {
+    display:flex;
+}
+
+.iphone-grid-left {
+    width: 450px;
+    float:left;
+    position: relative;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.iphone-grid-right {
+    width: calc(100% - 450px);
+    float:left;
+}
+
+.ma-list {
+    margin-bottom: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.color-thumb {
+    border-radius: 8px;
+    /* box-shadow: 0 0 0 2px rgba(0,0,0,0.1); */
+    padding: 32px 10px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.pad-32-0 {
+    padding:32px 0;
+}
+
+.example-panel {
+    padding: 30px;
+    background: #fff;
+}
+
+img.sf-icon-fix {
+    transform-origin: center center;
+    transform: scale(1.5, 1.5);
+}
+
+.site-label {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+
+.ipad-landscape-inner {
+    background-color: #eef1f6;
+}
+
+}

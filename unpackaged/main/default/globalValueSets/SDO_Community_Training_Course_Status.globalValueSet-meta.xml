@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Interested</fullName>
+        <default>false</default>
+        <label>Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrolled</fullName>
+        <default>false</default>
+        <label>Enrolled</label>
+    </customValue>
+    <customValue>
+        <fullName>Withdrawn</fullName>
+        <default>false</default>
+        <label>Withdrawn</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>What: Common enrollment statuses for training courses.</description>
+    <masterLabel>Training Course Enrollment Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

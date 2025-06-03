@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For use in tax calculations. Destination city for this product. --></help>
+        <label><!-- Tax City --></label>
+        <name>blng__TaxCity__c</name>
+    </CustomFieldTranslation>

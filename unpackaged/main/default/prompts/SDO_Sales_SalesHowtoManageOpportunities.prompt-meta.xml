@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Sales - How to Manage Opportunities</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Click &lt;strong&gt;Next&lt;/strong&gt; to see how we manage opportunities with our new process&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>Sales In-App Tips</header>
+        <isPublished>true</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 1</masterLabel>
+        <publishedDate>2024-02-07</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2024-01-09</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>How to Work Opportunities</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://www.youtube.com/embed/oPARicXKhS8?si=Q2epJG_Te771Gi3O</videoLink>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;This is where you can find your list of Opportunities&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>BottomCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 2</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:TabDefinition.standard-Opportunity&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <title>Click Opportunities</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Choose your own adventure by clicking on any of the Opportunity Names!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Or, Search for the one you&#39;re looking for!&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>In-App Tips</header>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Select an Opportunity to Continue</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;This section allows you to see all of the historical information on this Opportunity - the calls, emails, calendar events and more.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;In addition, you can also schedule invites, make calls, create tasks, and send emails to your customers right from here&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 4</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;runtime_sales_activities_activityPanel&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;activityTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Review the Activities</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;This is where you can quickly see your Opportunity Stage and the Guidance for Success.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;If you&#39;re ready to move to the next stage, Click &lt;strong&gt;Mark Stage as Complete&lt;/strong&gt; to move it forward&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>BottomCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 5</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;runtime_sales_pathassistant_pathAssistant&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Check out PATH</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Here&#39;s where you&#39;ll fill in some of the information used to qualify your opportunities and log any important information.&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>TopRight</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 6</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_detailPanel&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;detailTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Click Details</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <actionButtonLabel>Feedback</actionButtonLabel>
+        <actionButtonLink>https://www.salesforce.com</actionButtonLink>
+        <body>&lt;p&gt;We hope this helped you to understand a little more about new releases.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;Feedback&lt;/strong&gt; to submit a Survey with useful feedback!&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Sales - How to Manage Opportunities Step 7</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>7</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Was that helpful?</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

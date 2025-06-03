@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>支払のモード。
+ 1. 支払ゲートウェイによって支払や返金を行うときは「電子」。
+ 2. 現金や小切手での支払により、支払や返金を行うときは「外部」。</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

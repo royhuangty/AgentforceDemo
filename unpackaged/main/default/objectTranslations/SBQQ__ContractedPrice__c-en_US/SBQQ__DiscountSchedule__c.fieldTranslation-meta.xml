@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Volume discount schedule to use for this product with this customer. --></help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Contracted Prices --></relationshipLabel>
+    </CustomFieldTranslation>

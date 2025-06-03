@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programación de consumo de producto de pedido</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programaciones de consumo de productos de pedido</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label>Información de regla de facturación</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Información de regla GL</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Información de reconocimiento de ingresos</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Información de impuestos</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de programación de consumo de pro</nameFieldLabel>
+</CustomObjectTranslation>

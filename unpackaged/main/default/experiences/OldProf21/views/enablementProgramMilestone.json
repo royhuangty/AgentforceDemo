@@ -1,0 +1,227 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "b92e299f-aeba-42be-bec6-24bc87729fc5",
+  "label" : "Enablement Program Milestone",
+  "regions" : [ {
+    "id" : "7ed9972b-38c2-48bb-8a49-aeb1dce3bdf6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4872f7ec-2a53-4860-aeb4-3becf014371e",
+          "columns" : [ {
+            "UUID" : "6df30f87-30a8-4540-8408-0fe7ad4b153a",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_contentDetailHeader"
+              },
+              "fqn" : "runtime_ses_ext:contentDetailHeader"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4872f7ec-2a53-4860-aeb4-3becf014371e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}",
+            "showDueDate" : true,
+            "titleHeadingLevel" : "h1"
+          },
+          "componentName" : "runtime_ses_ext:contentDetailHeader",
+          "id" : "9d85f406-726e-4179-af15-db996868daac",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6df30f87-30a8-4540-8408-0fe7ad4b153a",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0cfaf948-bb58-404a-ab08-34e5f9ebb7b4",
+          "columns" : [ {
+            "UUID" : "065e4245-aff9-4984-8bdf-b37f7d4c14c4",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ {
+              "attributes" : {
+                "richTextValue" : "<hr class=\"slds-m-top_none\"/>",
+                "sfdc:identifier" : "forceCommunity_htmlBlock"
+              },
+              "fqn" : "forceCommunity:htmlBlock"
+            }, {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_milestoneDetail"
+              },
+              "fqn" : "runtime_ses_ext:milestoneDetail"
+            }, {
+              "attributes" : {
+                "richTextValue" : "<hr/>",
+                "sfdc:identifier" : "forceCommunity_htmlBlock"
+              },
+              "fqn" : "forceCommunity:htmlBlock"
+            } ]
+          }, {
+            "UUID" : "1a94b19e-22e3-4095-8f6f-4487ae4e9f2f",
+            "columnKey" : "col2",
+            "columnName" : "column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ {
+              "attributes" : {
+                "displayAsCard" : "true",
+                "displayMode" : "compact",
+                "sfdc:identifier" : "runtime_ses_ext_programDetailHeader",
+                "showDescription" : "false"
+              },
+              "fqn" : "runtime_ses_ext:programDetailHeader"
+            }, {
+              "attributes" : {
+                "displayAsCard" : "true",
+                "sfdc:identifier" : "runtime_ses_ext_programOutcomeCard",
+                "showDescription" : "false",
+                "showIcon" : "false",
+                "title" : ""
+              },
+              "fqn" : "runtime_ses_ext:programOutcomeCard"
+            }, {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_ses_ext_programTaskListCard"
+              },
+              "fqn" : "runtime_ses_ext:programTaskListCard"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0cfaf948-bb58-404a-ab08-34e5f9ebb7b4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<hr class=\"slds-m-top_none\"/>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "10289ec1-923b-426e-a05f-1667c51828d5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "runtime_ses_ext:milestoneDetail",
+          "id" : "ae2e1c98-91ec-4da1-89ae-a7ed8695e658",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<hr/>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "a2cfd4fa-bd82-483c-b45c-9898f57c2230",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "065e4245-aff9-4984-8bdf-b37f7d4c14c4",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "displayAsCard" : true,
+            "displayMode" : "compact",
+            "recordId" : "{!recordId}",
+            "showDescription" : false,
+            "showDueDate" : true,
+            "titleHeadingLevel" : "h1"
+          },
+          "componentName" : "runtime_ses_ext:programDetailHeader",
+          "id" : "c3badb55-505e-4bc0-b575-3fe80923dc76",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "displayAsCard" : true,
+            "recordId" : "{!recordId}",
+            "showDescription" : false,
+            "showDueDate" : true,
+            "showIcon" : false,
+            "title" : "",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "small"
+          },
+          "componentName" : "runtime_ses_ext:programOutcomeCard",
+          "id" : "69eeaf1e-7329-4a5b-a33e-bd03e2682ef5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "displayAsCard" : true,
+            "recordId" : "{!recordId}",
+            "showDescription" : true,
+            "showDueDate" : true,
+            "showExpandOrCollapseButtons" : true,
+            "showIcons" : true,
+            "showProgress" : true,
+            "title" : "Milestones and Tasks",
+            "titleHeadingLevel" : "h2",
+            "titleStyle" : "small"
+          },
+          "componentName" : "runtime_ses_ext:programTaskListCard",
+          "id" : "24793d4d-bbdd-43e6-9968-abb3856e6bb1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1a94b19e-22e3-4095-8f6f-4487ae4e9f2f",
+        "regionLabel" : "column 2",
+        "regionName" : "col2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c9513360-f143-4f61-98cc-eaa66408d6d9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ea76da29-4074-4174-97f3-c8616bad4be5",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "enablement-program-milestone"
+}

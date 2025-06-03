@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Se o Aprovador for um Grupo, verificado se todos os membros precisam Aprovar para considerar a Aprovação aprovada</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </CustomFieldTranslation>

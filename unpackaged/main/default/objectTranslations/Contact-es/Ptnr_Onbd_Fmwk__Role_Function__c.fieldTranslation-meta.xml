@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- When defining a partner contact, use these values to broadly identify the contact&apos;s function. Field used to generate onboarding tasks apt for role if tasks are defined to map to functions --></help>
+        <label><!-- Role Function --></label>
+        <name>Ptnr_Onbd_Fmwk__Role_Function__c</name>
+    </CustomFieldTranslation>

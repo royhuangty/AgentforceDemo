@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Búsqueda del libro de finanzas donde se registrarán estos ingresos.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

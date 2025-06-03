@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>却下メール通知の受信者を 1 人以上選択します。</help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>初回申請者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>レコード作成者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>所有者</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

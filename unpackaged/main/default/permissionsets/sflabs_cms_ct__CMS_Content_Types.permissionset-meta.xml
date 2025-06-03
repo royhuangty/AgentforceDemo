@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CMS Content Types</label>
+    <classAccesses>
+        <apexClass>sflabs_cms_ct__CMS_ContentTypesCT</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <pageAccesses>
+        <apexPage>sflabs_cms_ct__CMS_ContentTypeDetails_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>sflabs_cms_ct__CMS_ContentTypes_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>sflabs_cms_ct__CMS_CreateContentType_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>sflabs_cms_ct__CMS_EditContentType_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>sflabs_cms_ct__CMS_Content_Types</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

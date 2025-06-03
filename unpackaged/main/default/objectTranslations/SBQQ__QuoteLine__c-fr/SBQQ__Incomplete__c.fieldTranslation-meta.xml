@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Indic. défini en interne par log. d&#39;appl. lorsqu&#39;une ligne est enreg. dans base de données incomplète, par ex. lors d&#39;éval. de règles de prix. Testez ce champ dans règles d&#39;éval. pour éviter décl. prémat. Ne pas ajouter à prés. de page ni mettre à jour.</help>
+        <label><!-- Incomplete --></label>
+        <name>SBQQ__Incomplete__c</name>
+    </CustomFieldTranslation>

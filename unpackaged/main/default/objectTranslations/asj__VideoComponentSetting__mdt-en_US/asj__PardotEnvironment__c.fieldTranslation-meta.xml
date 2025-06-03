@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The current org type for the connected Pardot Org. --></help>
+        <label><!-- Pardot Environment --></label>
+        <name>asj__PardotEnvironment__c</name>
+        <picklistValues>
+            <masterLabel>demo</masterLabel>
+            <translation><!-- demo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>production</masterLabel>
+            <translation><!-- production --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

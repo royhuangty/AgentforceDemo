@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Kilométrage d&#39;état du résumé live Maps</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Kilométrages d&#39;état du résumé live Maps</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du kilométrage dans l&#39;état, la régio</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

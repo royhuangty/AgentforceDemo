@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>バッチあたりの削除レコード数を入力します。バッチあたり最大 2000 件のレコードを削除できます。</help>
+        <label><!-- Tracking Data Cleanup Batch Size --></label>
+        <name>et4ae5__Tracking_Data_Clean_Up_Batch_Size__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(WorkCapacityUsage.AvailCapacityHours:SUM &lt;= -1, 0, (WorkCapacityUsage.TimeConsumedInHours:SUM /WorkCapacityUsage.AvailCapacityHours:SUM))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Work Stream Utilization</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(WorkCapacityUsage.AvailCapacityHours:SUM &lt;= -1, 0, (WorkCapacityUsage.AvailCapacityHours:SUM / 24))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Workstream work capacity availability</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA2</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>WorkCapacityUsage$StartDate</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Util. and Work Capacity Availability</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>WorkCapacityUsage$Name</field>
+    </columns>
+    <columns>
+        <field>WorkCapacityUsage$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>WorkCapacityUsage$CreatedDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WorkCapacityUsage$AvailCapacityHours</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WorkCapacityUsage$TimeConsumedInHours</field>
+    </columns>
+    <description>Identify weekly consumption trends by comparing the workstream usage to the work capacity availability for a service territory or all territories.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkCapacityUsage$ServiceTerritory</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkCapacityUsage$SvcApptFieldValue</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>WorkCapacityUsage$StartDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Weekly Workstream Util. and Availability</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>FSL__Work_Capacity_Usages__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkCapacityUsage$StartDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

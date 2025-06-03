@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Eliminare automaticamente i record di dati di tracking padre e figlio quando si utilizza lo Strumento di pulizia dati di tracking. Per evitare i limiti stabiliti dal governor Apex sui processi di eliminazione in batch disattivare l&#39;eliminazione a cascata.</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

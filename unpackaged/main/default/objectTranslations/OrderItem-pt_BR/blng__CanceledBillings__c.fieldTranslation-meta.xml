@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Total subtraído do produto do pedido devido a cancelamento, troca, etc.</help>
+        <label><!-- Canceled Billing Amount (without tax) --></label>
+        <name>blng__CanceledBillings__c</name>
+    </CustomFieldTranslation>

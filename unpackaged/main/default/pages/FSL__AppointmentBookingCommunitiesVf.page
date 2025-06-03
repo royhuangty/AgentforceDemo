@@ -1,0 +1,64 @@
+<apex:page controller="FSL.AppointmentBookingCommunityController" standardStylesheets="true" showHeader="false">
+
+
+    <script>
+
+        var userLocale = "{!UserLocale}";
+        var isCommunitiesPage = true;
+
+        var appBooking = {
+
+            isInCommunity:               '{!isInCommunity}',
+            appBookingSettings:          JSON.parse('{!JSENCODE(appBookingSettings)}'),
+            isAMPM:                      {!isCurrentUserUsesAMPMLocale},
+            policyPickerEnabled:         {!policyPickerEnabled},
+
+            icons: {
+                spinner: "{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}"
+            },
+
+            remoteActions: {
+                getFslOperation: '{!$RemoteAction.AppointmentBookingCommunityController.getFslOperation}',
+                getAsyncApexJob: '{!$RemoteAction.AppointmentBookingCommunityController.getAsyncApexJob}',
+                getPolicies: '{!$RemoteAction.AppointmentBookingCommunityController.getPolicies}',
+            },
+
+            fieldNames: {
+                settings: {
+                    Recommended_Threshold__c:   '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__Recommended_Threshold__c.Name}',
+                    Ideal_Threshold__c:         '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__Ideal_Threshold__c.Name}',
+                    Show_Grade_Explanation__c:  '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__Show_Grade_Explanation__c.Name}',
+                    AutoTerritoryPicker__c:     '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__AutoTerritoryPicker__c.Name}',
+                    LazyLoadBookingInHours__c:  '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__LazyLoadBookingInHours__c.Name}',
+                    ShowGoldenSlots__c:         '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__ShowGoldenSlots__c.Name}',
+                    ShowMoreOptions__c:         '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__ShowMoreOptions__c.Name}',
+                    Minimum_Grade__c:           '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__Minimum_Grade__c.Name}',
+                    SchedulingPolicyId__c:           '{!$ObjectType.FSL__AppointmentBookingSettings__c.fields.FSL__SchedulingPolicyId__c.Name}',
+                },
+
+                FslOperationFieldNames: {
+                    ResultText:     '{!$ObjectType.FSL__FSL_Operation__c.Fields.FSL__ResultText__c.Name}',
+                    Initiator:      '{!$ObjectType.FSL__FSL_Operation__c.Fields.FSL__Initiator__c.Name}',
+                    Request_Type:   '{!$ObjectType.FSL__FSL_Operation__c.Fields.FSL__Request_Type__c.Name}',
+                    Future_Method_Id__c:   '{!$ObjectType.FSL__FSL_Operation__c.Fields.FSL__Future_Method_Id__c.Name}',
+                }
+            }
+        };
+
+    </script>
+
+    <c:ChatterActionCommunities ></c:ChatterActionCommunities>
+    <c:AppointmentBooking ClassName="{!ClassName}"></c:AppointmentBooking>
+
+    <script>
+
+        // W-8557852
+        window.sharedCustomLabels = window.sharedCustomLabels || {};
+        window.sharedCustomLabels.titleWithoutObject = "{!JSENCODE($Label.FSL__Appointment_Booking)}"
+        window.sharedCustomLabels.actionButtonText = "{!JSENCODE($Label.FSL__Get_Appointments)}"
+
+        bootstrap.UpdatePermissionSetsBootstrap('BookAppointment','BookAppointment');
+        
+    </script>    
+    
+</apex:page>

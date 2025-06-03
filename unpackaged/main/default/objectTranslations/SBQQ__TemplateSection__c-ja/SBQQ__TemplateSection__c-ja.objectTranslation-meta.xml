@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>テンプレートセクション</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Template Section Layout</layout>
+        <sections>
+            <label>絞り込み情報</label>
+            <section>Filtering Information</section>
+        </sections>
+        <sections>
+            <label>改ページ</label>
+            <section>Page Breaks</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>セクション名</nameFieldLabel>
+    <webLinks>
+        <label><!-- IncludeDocument --></label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+</CustomObjectTranslation>

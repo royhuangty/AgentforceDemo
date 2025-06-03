@@ -1,0 +1,52 @@
+.slds-scope {
+    .slds-icon {
+        &.ma-icon {
+
+            &.slds-media__figure {
+                &.slds-icon--small {
+                    &:before {
+                        font-size: 24px;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        color: #fff;
+                    }
+                }
+            }
+            
+            &.slds-icon--x-small {
+                &:before {
+                    font-size:14px;
+                }
+            }
+        }
+    }
+    
+    .ma-icon {
+        &.slds-icon-text-default {
+            // color: $sf-text;
+        }
+
+        &.ma-icon-small {
+            font-size: .75rem;
+        }
+
+        &.ma-icon-medium {
+            font-size: 1.25rem;
+        }
+
+        &.ma-icon-large {
+            font-size: 1.5rem;
+        }
+
+        &.ma-icon-inverse {
+            color: #fff;
+        }
+        
+    }
+
+    .slds-icon_x-small.ma-icon, .slds-icon--x-small.ma-icon {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

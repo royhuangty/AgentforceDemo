@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sales Planning Data Setup Page</description>
+    <icon>sfsp__SalesPlanning/sfsp__SalesPlanningTabLogo.png</icon>
+    <label>Data Setup</label>
+    <motif>Custom300: TV Widescreen</motif>
+    <page>sfsp__SalesPlanningDataSetup</page>
+</CustomTab>

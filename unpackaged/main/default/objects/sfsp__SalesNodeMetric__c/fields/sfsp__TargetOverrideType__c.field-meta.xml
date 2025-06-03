@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfsp__TargetOverrideType__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amount</fullName>
+                <default>true</default>
+                <label>Amount</label>
+            </value>
+            <value>
+                <fullName>Percentage</fullName>
+                <default>false</default>
+                <label>Percentage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

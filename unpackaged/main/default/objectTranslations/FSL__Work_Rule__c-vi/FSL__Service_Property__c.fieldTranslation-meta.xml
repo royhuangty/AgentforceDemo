@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Property --></label>
+        <name>FSL__Service_Property__c</name>
+        <picklistValues>
+            <masterLabel>ArrivalWindowEndTime</masterLabel>
+            <translation>ArrivalWindowEndTime</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ArrivalWindowStartTime</masterLabel>
+            <translation>ArrivalWindowStartTime</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedEndTime</masterLabel>
+            <translation>Thời gian kết thúc đã lên lịch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedStartTime</masterLabel>
+            <translation>Thời gian bắt đầu đã lên lịch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceTerritory</masterLabel>
+            <translation>ServiceTerritory</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

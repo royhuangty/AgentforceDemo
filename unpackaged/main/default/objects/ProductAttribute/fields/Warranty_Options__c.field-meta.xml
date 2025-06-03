@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Options__c</fullName>
+    <label>Warranty Length</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>5 Years</fullName>
+                <default>false</default>
+                <label>5 Years</label>
+            </value>
+            <value>
+                <fullName>10 Years</fullName>
+                <default>false</default>
+                <label>10 Years</label>
+            </value>
+            <value>
+                <fullName>15 Years</fullName>
+                <default>false</default>
+                <label>15 Years</label>
+            </value>
+            <value>
+                <fullName>25 Years</fullName>
+                <default>false</default>
+                <label>25 Years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

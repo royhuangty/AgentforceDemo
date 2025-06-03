@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nachschlagevorgang zur Steuerhauptbuchregel für diesen Posten</help>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Debit Note Lines (Tax GL Treatment) --></relationshipLabel>
+    </CustomFieldTranslation>

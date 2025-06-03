@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Estados a los que esta regla de aprobación no debe aplicarse</help>
+        <label><!-- Excluded Statuses --></label>
+        <name>sbaa__ExcludedStatuses__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>Aprobada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>Pendiente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation>Recuperada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>Rechazada</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

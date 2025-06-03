@@ -1,0 +1,40 @@
+.flex-horizontal {
+	@include flexbox();
+	@include flex-direction(row);
+	width: 100%;
+
+	.flex-end {
+		margin-left: auto;
+	}
+}
+
+.flex-vertical {
+	@include flexbox();
+	@include flex-direction(column);
+	height: 100%;
+
+	.flex-end {
+		margin-top: auto;
+	}
+
+	.overflow-scroll-y {
+		overflow-y: auto;
+	}
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.flex-basis-0 {
+	flex-basis: 0;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0;
+}
+
+.flex-center {
+	align-item: center;
+	justify-content: center;
+}

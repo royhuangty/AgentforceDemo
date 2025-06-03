@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Corrige l&#39;augmentation de ce composant avec l&#39;augmentation du package parent. L&#39;augmentation s&#39;applique uniquement à des produits à segments multiples.</help>
+        <label><!-- Component Uplifted By Package --></label>
+        <name>SBQQ__ComponentUpliftedByPackage__c</name>
+    </CustomFieldTranslation>

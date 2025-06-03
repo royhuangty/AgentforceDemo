@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>__SLA_Hit_by_Request_1.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>__SLA_Hit_by_Request_1.SLA</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% SLA Hit</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>__SLA_Hit_by_Request_3.SLA</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% SLA Hit</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>__SLA_Hit_by_Request_2.SLA</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% SLA Hit</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Omni_SLA_Hit</waveVisualization>
+</WaveXmd>

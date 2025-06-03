@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Contact</contextRecordType>
+    <description>What: B2B Commerce Strategy used on the Contact Object. Who: Michael Cala. When: 2020.</description>
+    <filter>
+        <childNode>Load_PromotionPushes_a_B2B_Promotional_offer</childNode>
+        <label>Selector1</label>
+        <name>Selector1</name>
+        <expression>CONTAINS(Name, &#39;B2B&#39;)</expression>
+    </filter>
+    <label>B2B Commerce - Service NBA</label>
+    <recommendationLoad>
+        <childNode>X25_Discount</childNode>
+        <label>Load PromotionPushes a B2B Promotional offer</label>
+        <name>Load_PromotionPushes_a_B2B_Promotional_offer</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>B2B Commerce Service Promotion</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>25% Discount</label>
+        <name>X25_Discount</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>25% Discount</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Selector1</childNode>
+        <label>Output</label>
+        <name>Output_86a748ded764424c93797e1d7e2dc92f</name>
+    </union>
+</RecommendationStrategy>

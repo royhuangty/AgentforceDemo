@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_OMS_Serial_Number__c</fullName>
+    <description>What: Shipment item
+Who: Bill Macaulay When: Oct 2022
+Add fields to shipment items</description>
+    <displayFormat>{0000}-{0000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Serial Number</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

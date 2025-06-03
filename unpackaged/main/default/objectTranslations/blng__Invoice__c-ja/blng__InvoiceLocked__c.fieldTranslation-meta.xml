@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>支払処理が進んでおり、請求書はロックされています。ロック解除する前に、この請求書に対して支払がすでに作成されているかどうかを確認してください。</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </CustomFieldTranslation>

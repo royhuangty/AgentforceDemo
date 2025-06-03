@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permissions for Service Cloud Voice Demos. Who: Jesse Chase. When: 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Service - Service Cloud Voice Permissions</label>
+    <permissionSets>SDO_Service_Call_Recording_Access</permissionSets>
+    <permissionSets>force__ContactCenterAdmin</permissionSets>
+    <permissionSets>force__ContactCenterAgent</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(EnblProgramTaskProgress.IsCompleted:SUM==0,0,EnblProgramTaskProgress.CompletedOnDay:SUM/EnblProgramTaskProgress.IsCompleted:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Average Days to Complete</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Days to Complete</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>EnblProgramTaskProgress.IsCompleted:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>User Completion Rate</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>User Completion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>1-(EnblProgramTaskProgress.IsCompleted:SUM/RowCount)</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>User Incompletion Rate</description>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>User Incompletion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.Day</field>
+    </columns>
+    <description>Analyze an exercise&#39;s completion status based on average days to complete.</description>
+    <filter>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.TaskCategory</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Exercise</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Internal</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnblProgramSection.Sections</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Exercise Completion by Days to Complete</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Program_Task_Progress_sfdcSESv61__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EnblProgramTaskProgress$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

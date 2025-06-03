@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Spécifiez les remises en % ou montant à déduire du prix prod. en utilisant quant. ou durée achetée. Définissez des plages de quant./durée sur des niv. avec différents % de rem. La rem. s&#39;applique au prix catal. et le total est stocké dans le prix normal</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
+    </CustomFieldTranslation>

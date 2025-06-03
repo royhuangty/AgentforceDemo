@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Send List Email to Contacts</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Let&#39;s learn how to send list email to your contact list!&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>List email walkthrough</header>
+        <image>SDO_Sales_Send_List_Email_1</image>
+        <imageAltText>img</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>true</isPublished>
+        <masterLabel>Send List Email to Contacts Step 1</masterLabel>
+        <publishedDate>2025-05-04</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2024-01-08</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Sending list email to your contacts</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Make sure &lt;strong&gt;Contacts for Your Assigned Program &lt;/strong&gt;list view is selected&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>Send List Email to Contacts Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Select Your Assigned Program View</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Click &lt;strong&gt;Send List Email&lt;/strong&gt; button on the top right and use &lt;strong&gt;Your Assigned Program Email Template for Contacts&lt;/strong&gt;&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <image>SDO_Sales_Send_List_Email_button</image>
+        <imageAltText>img</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Send List Email to Contacts Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Send List Email to your Contacts</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

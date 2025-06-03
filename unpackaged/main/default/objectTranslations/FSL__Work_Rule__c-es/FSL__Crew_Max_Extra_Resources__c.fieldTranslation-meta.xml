@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Introduzca un número si desea limitar el número de recursos de servicio adicionales que puedan agregarse a la plantilla. Déjelo vacío si se puede agregar cualquier número de recursos de servicio.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

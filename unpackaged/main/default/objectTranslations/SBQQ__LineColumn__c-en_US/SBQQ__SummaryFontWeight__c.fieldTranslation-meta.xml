@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify font weight for text in the summary row for this column Leaving blank defaults to font weight for the column overall. --></help>
+        <label><!-- Summary Font Weight --></label>
+        <name>SBQQ__SummaryFontWeight__c</name>
+        <picklistValues>
+            <masterLabel>Bold</masterLabel>
+            <translation><!-- Bold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

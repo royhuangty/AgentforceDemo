@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "News Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "{!Content.contentTypeLabel}.{!Content.title}"
+        },
+        "id" : "0e17598c-a343-4190-a03c-b8e7d780a9b1"
+      } ]
+    }
+  },
+  "urlName" : "news-detail"
+}

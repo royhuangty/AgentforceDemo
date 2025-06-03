@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-ru</name>
+    <style>none</style>
+    <subject>Приглашение удаленного визуального помощника</subject>
+    <textOnly>Здравствуйте,
+Для вас была запланирована удаленная онлайн-конференция
+Нажмите кнопку &quot;Присоединиться&quot;, чтобы просмотреть сведения о конференции и войти в нее.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

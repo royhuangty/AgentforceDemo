@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Distributor for this quote. Defaulted from partner on opportunity with role of &quot;Distributor&quot;. --></help>
+        <label><!-- Distributor --></label>
+        <name>SBQQ__Distributor__c</name>
+        <relationshipLabel><!-- Distributor Quotes --></relationshipLabel>
+    </CustomFieldTranslation>

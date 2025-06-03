@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__PremiumPartnerTikTok</activationPlatform>
+    <destinationName>IDFA</destinationName>
+    <fieldName>AdvertiserId</fieldName>
+    <isFromSourceObject>false</isFromSourceObject>
+    <isRequired>false</isRequired>
+    <masterLabel>IDFA</masterLabel>
+    <objectName>Device</objectName>
+</ActivationPlatformActvAttr>

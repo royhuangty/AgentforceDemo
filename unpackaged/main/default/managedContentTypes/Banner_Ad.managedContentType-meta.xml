@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedContentType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A simple banner ad with a call to action to be used in storefronts and sites.</description>
+    <developerName>Banner_Ad</developerName>
+    <managedContentNodeTypes>
+        <helpText>This is the text that will appear as a title on the banner ad.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>true</isRequired>
+        <nodeLabel>Title</nodeLabel>
+        <nodeName>Title</nodeName>
+        <nodeType>NAMEFIELD</nodeType>
+        <placeholderText>Banner Ad Title Text</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Banner image. We recommend using an image size of roughly 200h x 800-1200w.</helpText>
+        <isLocalizable>false</isLocalizable>
+        <isRequired>true</isRequired>
+        <nodeLabel>Banner Image</nodeLabel>
+        <nodeName>image</nodeName>
+        <nodeType>IMG</nodeType>
+        <placeholderText>Please provide an image (200x800-1200)</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Teaser text that appears in CMS Collections and on banner components.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>true</isRequired>
+        <nodeLabel>Teaser</nodeLabel>
+        <nodeName>teaser</nodeName>
+        <nodeType>MTEXT</nodeType>
+        <placeholderText>Give a short summary of your banner with a call to action.</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Use this date field for anything time-sensitive or time-relevant on the banner ad.</helpText>
+        <isLocalizable>false</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Date</nodeLabel>
+        <nodeName>date</nodeName>
+        <nodeType>TEXT</nodeType>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Calls attention to this item. Flag to overlay atop the image or view preview in a collection.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Flag</nodeLabel>
+        <nodeName>flag</nodeName>
+        <nodeType>TEXT</nodeType>
+        <placeholderText>New! Popular!</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Short text that appears above the title.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Eyebrow</nodeLabel>
+        <nodeName>eyebrow</nodeName>
+        <nodeType>TEXT</nodeType>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Text that appears in your call to action button or link.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Call to Action Text</nodeLabel>
+        <nodeName>ctaText</nodeName>
+        <nodeType>TEXT</nodeType>
+        <placeholderText>Learn more here!</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>URL of the call to action.</helpText>
+        <isLocalizable>false</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Call to Action Link</nodeLabel>
+        <nodeName>ctaLink</nodeName>
+        <nodeType>URL</nodeType>
+        <placeholderText>https://your-call-to-action-link</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Auxilliary field to be used for arbitrary purposes, like adding more teaser text or featuring items.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Metadata 1</nodeLabel>
+        <nodeName>metadata1</nodeName>
+        <nodeType>MTEXT</nodeType>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Auxilliary field to be used for arbitrary purposes, like adding more teaser text or featuring items.</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Metadata 2</nodeLabel>
+        <nodeName>metadata2</nodeName>
+        <nodeType>MTEXT</nodeType>
+    </managedContentNodeTypes>
+    <masterLabel>Banner Ad</masterLabel>
+</ManagedContentType>

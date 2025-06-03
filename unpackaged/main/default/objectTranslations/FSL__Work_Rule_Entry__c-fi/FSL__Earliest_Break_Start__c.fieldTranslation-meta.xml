@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Minuuttien määrä palveluresurssin saatavuuden alkamisajasta aikaisimpaan sallittuun tauon alkamisaikaan. Syötä esimerkiksi luku 120 ajoittaaksesi tauon, joka on vähintään kaksi tuntia päivän alkamisajan jälkeen.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

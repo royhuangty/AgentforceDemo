@@ -1,0 +1,11 @@
+<design:component >
+        <design:attribute name="title" label="Title" />
+        <design:attribute name="staticRsrc" label="Image URL" />
+        <design:attribute name="width" label="Image Width" />
+        <design:attribute name="height" label="Image Height" />
+        <design:attribute name="alignment" label="Image Alignment" datasource="center,right,left" />
+        <design:attribute name="ldcIconName" label="LDS Icon Name" description="eg: standard:account"/>
+        <design:attribute name="showTitle" label="Show Title" />
+        
+
+</design:component>

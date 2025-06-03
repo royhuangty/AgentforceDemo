@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select &quot;Followed&quot; to display products you follow in Chatter before others when adding to quote. --></help>
+        <label><!-- Product Sort Preference --></label>
+        <name>SBQQ__ProductSortPreference__c</name>
+        <picklistValues>
+            <masterLabel>Followed</masterLabel>
+            <translation><!-- Followed --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

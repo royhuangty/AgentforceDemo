@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- List total of components in this configuration. This field is only populated if this line item references a configurable product. --></help>
+        <label><!-- Component List Total --></label>
+        <name>SBQQ__ComponentListTotal__c</name>
+    </CustomFieldTranslation>

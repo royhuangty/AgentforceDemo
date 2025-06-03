@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SDO - B2B Commerce Enhanced</container>
+    <containerType>Network</containerType>
+    <label>B2B Footer Menu</label>
+    <navigationMenuItem>
+        <label>Knowledge Center</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&amp;release=246&amp;type=5</target>
+        <type>ExternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Store Locator</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/myprofile</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Join Rewards Program</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/myprofile</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>My Rewards &amp; Benefits</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/myprofile</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Pay My Bill</label>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/myprofile</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Spécifiez quand cette règle doit être évaluée. Utilisé uniquement pour cibler une ligne de devis et lorsque le champ de l&#39;événement d&#39;évaluation n&#39;est pas pris en charge dans le calculateur hérité.</help>
+        <label><!-- Calculator Evaluation Event --></label>
+        <name>SBQQ__EvaluationEvent__c</name>
+        <picklistValues>
+            <masterLabel>After Calculate</masterLabel>
+            <translation>Après le calcul</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before Calculate</masterLabel>
+            <translation>Avant le calcul</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Calculate</masterLabel>
+            <translation>Pendant le calcul</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Initialization</masterLabel>
+            <translation>À l&#39;initialisation</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

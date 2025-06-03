@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Por padrão, aprovar qualquer Aprovação aprovará automaticamente todas as demais Aprovações atribuídas ao mesmo Usuário. Se essa caixa estiver marcada, uma Aprovação originada por essa Regra não será aprovada automaticamente e deverá ser aprovada de modo explícito.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </CustomFieldTranslation>

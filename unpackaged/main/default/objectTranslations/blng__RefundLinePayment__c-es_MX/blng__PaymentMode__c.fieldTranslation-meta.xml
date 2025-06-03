@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Modo de pago.
+ 1. &quot;Electrónico&quot; siempre que los pagos/reembolsos se realicen a través de Pasarela de pago.
+ 2. &quot;Externo&quot; siempre que los pagos/reembolsos se realicen manualmente en metálico o con cheque.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

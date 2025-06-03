@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Utilisé avec Approbateurs dynamiques, le champ contenant la valeur Approbateur utilisée pour cette règle</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>Créé par</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

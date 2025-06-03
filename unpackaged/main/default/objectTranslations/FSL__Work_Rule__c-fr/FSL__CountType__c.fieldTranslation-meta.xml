@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Le type d&#39;élément décompté dans la règle de travail.</help>
+        <label><!-- Count Type --></label>
+        <name>FSL__CountType__c</name>
+        <picklistValues>
+            <masterLabel>Assignments</masterLabel>
+            <translation>Attributions</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Value</masterLabel>
+            <translation>Valeur personnalisée</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration</masterLabel>
+            <translation>Durée</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

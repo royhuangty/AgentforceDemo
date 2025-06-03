@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>xDO_Type__c</name>
+        <picklistValues>
+            <masterLabel>Base xDO Component</masterLabel>
+            <translation><!-- Base xDO Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Pack</masterLabel>
+            <translation><!-- Data Pack --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo Component</masterLabel>
+            <translation><!-- Demo Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End to End Demo</masterLabel>
+            <translation><!-- End to End Demo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry Solution</masterLabel>
+            <translation><!-- Industry Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Localization Pack</masterLabel>
+            <translation><!-- Localization Pack --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Play</masterLabel>
+            <translation><!-- Sales Play --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

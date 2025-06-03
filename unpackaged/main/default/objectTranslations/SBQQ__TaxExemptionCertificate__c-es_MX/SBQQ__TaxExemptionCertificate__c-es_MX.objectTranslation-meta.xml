@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Certificado de exención fiscal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Certificados de exención fiscal</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Tax Exemption Certificate Layout</layout>
+        <sections>
+            <label>Información de la compañía</label>
+            <section>Company Information</section>
+        </sections>
+        <sections>
+            <label>Certificado fiscal</label>
+            <section>Tax Certificate</section>
+        </sections>
+        <sections>
+            <label>Detalles de certificado fiscal</label>
+            <section>Tax Certificate Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de certificado de exención fiscal</nameFieldLabel>
+</CustomObjectTranslation>

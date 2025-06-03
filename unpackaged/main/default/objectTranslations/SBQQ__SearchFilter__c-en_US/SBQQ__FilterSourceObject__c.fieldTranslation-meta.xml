@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Object that sources value for use in filtering. --></help>
+        <label><!-- Filter Source Object --></label>
+        <name>SBQQ__FilterSourceObject__c</name>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

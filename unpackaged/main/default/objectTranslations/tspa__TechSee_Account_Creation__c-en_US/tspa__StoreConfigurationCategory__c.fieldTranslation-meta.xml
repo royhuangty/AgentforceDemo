@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- StoreConfigurationCategory --></label>
+        <name>tspa__StoreConfigurationCategory__c</name>
+        <picklistValues>
+            <masterLabel>Non USA &amp; Canada App Store user</masterLabel>
+            <translation><!-- Non USA &amp; Canada App Store user --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA &amp; Canada App Store user</masterLabel>
+            <translation><!-- USA &amp; Canada App Store user --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

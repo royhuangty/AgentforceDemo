@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- MapAnything Click2Create --></label>
+        <name>MapAnything_Click2Create</name>
+    </fieldSets>
+    <layouts>
+        <layout>SDO - Lead</layout>
+        <sections>
+            <label><!-- Lead Scoring --></label>
+            <section>Lead Scoring</section>
+        </sections>
+        <sections>
+            <label><!-- Pardot Information --></label>
+            <section>Pardot Information</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Lead Community</layout>
+        <sections>
+            <label><!-- Deal Registration --></label>
+            <section>Deal Registration</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Partner Lead</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Lead Details --></label>
+        <name>SDO_Sales_Messaging_LeadDetails</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send SMS --></label>
+        <name>SDO_Service_Send_SMS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Behavior Score --></label>
+        <name>SDO_Tool_Einstein_Configuration_Behavior_Score</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tool - Einstein Configuration - Score --></label>
+        <name>SDO_Tool_Einstein_Configuration_Score</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Add to Nurture List --></label>
+        <name>pi__Add_to_Nurture_List</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Used when a potential partner applies to the partner program. --></description>
+        <label><!-- Lead - Partner Application --></label>
+        <name>Lead_Partner_Application</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used by partners to register leads in the Partner Community. --></description>
+        <label><!-- Lead - Deal Registration --></label>
+        <name>SDO_Lead_DealRegistration</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Standard lead qualification and conversion process. --></description>
+        <label><!-- Lead --></label>
+        <name>SDO_Lead_Default</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_It --></label>
+        <name>Map_It</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete_Records --></label>
+        <name>Mass_Delete_Records</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_SMS --></label>
+        <name>et4ae5__Send_ExactTarget_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

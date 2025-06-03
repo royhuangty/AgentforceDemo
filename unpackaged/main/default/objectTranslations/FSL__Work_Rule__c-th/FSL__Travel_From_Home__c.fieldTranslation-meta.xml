@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>กำหนดเวลาเป็นนาทีก่อนการเริ่มวันในปฏิทินของทรัพยากรสำหรับการเดินทาง (โดยค่าใช้จ่ายของทรัพยากร)
+ถ้าว่างเปล่า จำนวนเงินค่าเดินทางใด ๆ ก่อนเริ่มวันทำงานจะถูกต้อง</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

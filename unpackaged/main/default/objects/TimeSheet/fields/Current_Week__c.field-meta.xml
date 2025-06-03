@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Week__c</fullName>
+    <description>MOD(FLOOR( (  StartDate   -DATEVALUE(&quot;2019-01-01&quot; ))/7),53)+1 = MOD(FLOOR( (Today() -DATEVALUE(&quot;2019-01-01&quot; ))/7),53)+1</description>
+    <formula>MOD(FLOOR( (  StartDate   -DATEVALUE(&quot;2019-01-01&quot; ))/7),53)+1 = MOD(FLOOR( (Today() -DATEVALUE(&quot;2019-01-01&quot; ))/7),53)+1</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If ticked - this is the default Time Sheet</inlineHelpText>
+    <label>Current Week</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

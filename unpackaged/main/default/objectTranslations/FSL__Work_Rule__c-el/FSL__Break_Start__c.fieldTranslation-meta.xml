@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Καθορίζει τον ελάχιστο χρόνο έναρξης διαλείμματος (στη μορφή: {ΩΩ:ΛΛ}) για τη δημιουργία διαλειμμάτων.
+Αφήστε αυτό το πεδίο κενό, αν δεν θέλετε να δημιουργήσετε διαλείμματα.</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

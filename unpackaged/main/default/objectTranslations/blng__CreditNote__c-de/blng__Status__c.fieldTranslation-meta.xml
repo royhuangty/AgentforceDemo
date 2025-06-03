@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Aktueller Status der Gutschrift. Möglich sind: &quot;Entwurf&quot;, &quot;Gebucht&quot; oder &quot;Storniert&quot;</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </CustomFieldTranslation>

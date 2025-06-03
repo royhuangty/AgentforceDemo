@@ -1,0 +1,42 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "My Account Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\">Achetez plus, économisez plus&nbsp;!</p><p style=\"text-align: center;\">Économisez 10&nbsp;% sur les commandes de plus de 250&nbsp;€</p>"
+        },
+        "id" : "7662ae93-9e30-4308-a481-86f69d0e8c4b"
+      }, {
+        "attributes" : {
+          "placeholderText" : "Entrez un mot clé"
+        },
+        "id" : "5cc65a50-884c-4956-a7f0-109c5c219064"
+      }, {
+        "attributes" : {
+          "logOutLabel" : "Déconnection",
+          "loginLinkText" : "Se Connecter"
+        },
+        "id" : "6b50d299-5860-4a92-b3d3-b4499632d3bd"
+      }, {
+        "attributes" : {
+          "headingLabelText" : "Sélectionnez votre emplacement",
+          "pickerButtonLabelText" : "Changer de lieu"
+        },
+        "id" : "1b4c7f67-47b1-4e07-b0e6-ab189a232b83"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">© Copyright 2024 Salesforce.com, inc. | Ce n'est pas une vraie entreprise. </span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">﻿Ce site est utilisé pour les démonstrations Salesforce. Aucune commande ne sera traitée.</span></p><p><br></p>"
+        },
+        "id" : "173f5982-4276-4683-a21d-d53348e5d0b2"
+      }, {
+        "attributes" : {
+          "text" : "Mon Compte"
+        },
+        "id" : "95f8742d-e1ff-49ee-9b7f-96b47e4b79cf"
+      } ]
+    }
+  },
+  "urlName" : "my-account-layout"
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Custom_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Custom Objective Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Objective_Minimize_Engineer_Idle_Time</fullName>
+                <default>false</default>
+                <label>Minimize Engineer Idle Time</label>
+            </value>
+            <value>
+                <fullName>Objective_Minimize_Use_Of_Elasticity</fullName>
+                <default>false</default>
+                <label>Minimize Use Of Elasticity</label>
+            </value>
+            <value>
+                <fullName>Objectiveֿ_Priority_By_Distance_To_Engineer</fullName>
+                <default>false</default>
+                <label>Priority By Distance To Engineer</label>
+            </value>
+            <value>
+                <fullName>Objective_Travel_From_Home_Base</fullName>
+                <default>false</default>
+                <label>Travel From Home Base</label>
+            </value>
+            <value>
+                <fullName>Objective_Skill_Level</fullName>
+                <default>false</default>
+                <label>Skill Level</label>
+            </value>
+            <value>
+                <fullName>Objective_Asap</fullName>
+                <default>false</default>
+                <label>ASAP</label>
+            </value>
+            <value>
+                <fullName>Objective_Minimize_Travel</fullName>
+                <default>false</default>
+                <label>Minimize Travel</label>
+            </value>
+            <value>
+                <fullName>Objective_Minimize_Overtime</fullName>
+                <default>false</default>
+                <label>Minimize Overtime</label>
+            </value>
+            <value>
+                <fullName>Objective_Resource_Priority</fullName>
+                <default>false</default>
+                <label>Resource Priority</label>
+            </value>
+            <value>
+                <fullName>Objective_PreferredEngineer</fullName>
+                <default>false</default>
+                <label>Preferred Resource</label>
+            </value>
+            <value>
+                <fullName>Objective_Task_Priority</fullName>
+                <default>false</default>
+                <label>Task Priority</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

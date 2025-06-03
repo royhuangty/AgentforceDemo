@@ -1,0 +1,23 @@
+<apex:page controller="maps.TerritoryPlanning" action="{!checkPermissions}" extensions="maps.TPRemoteActions" title="Salesforce Maps Territory Planning" sidebar="false" standardStyleSheets="false">
+  <h4>Keep window open to prevent an early session timeout.</h4>
+
+  <!-- JS -->
+  <script>
+    const channel = new BroadcastChannel('territory_planning');
+
+    // send all active actions along with their tokens
+    channel.postMessage({'actions': Visualforce.remoting.last.actions['maps.TPRemoteActions'].ms});
+
+    channel.onmessage = function(e) {
+        if (e.data === 'refresh') {
+          console.log('Received refresh request'); // check for refresh requests
+          location.reload();
+        }
+        else {
+          console.log('non-refresh request received');
+          console.log(e);
+        }
+    };
+
+  </script>
+</apex:page>

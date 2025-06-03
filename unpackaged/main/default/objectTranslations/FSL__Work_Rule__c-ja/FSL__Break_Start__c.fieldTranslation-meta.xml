@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>休憩の最早開始時刻 ({HH:MM} の形式) を指定して休憩を作成します。 
+休憩を作成しない場合は、この項目を空のままにします。</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

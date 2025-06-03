@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Para desactivar esta entidad legal, deje en blanco la casilla de verificación. Esto no afectará a las transacciones o asignaciones pasadas o vigentes.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </CustomFieldTranslation>

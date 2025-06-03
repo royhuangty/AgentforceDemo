@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Количество минут от начала доступности сервисного ресурса до самого позднего разрешенного времени окончания перерыва. Например, введите значение &quot;300&quot; для планирования окончания перерыва на обед как максимум через пять часов после начала дня.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to all Quip Functionality.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Quip - Base Access</label>
+    <permissionSets>SDO_Quip_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

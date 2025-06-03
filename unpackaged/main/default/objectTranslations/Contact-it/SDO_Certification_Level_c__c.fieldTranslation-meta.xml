@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Certification Level --></label>
+        <name>SDO_Certification_Level_c__c</name>
+        <picklistValues>
+            <masterLabel>Architect</masterLabel>
+            <translation><!-- Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate</masterLabel>
+            <translation><!-- Associate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expert</masterLabel>
+            <translation><!-- Expert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

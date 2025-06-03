@@ -1,0 +1,26 @@
+.THIS div.title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.THIS .products {
+    height: 400px;
+    text-align: center;
+}
+.THIS .products .product  {
+    width: 25%;
+    height: 450px;
+    padding: 10px;
+    display: inline-block;
+}
+.THIS .products .product img  {
+    cursor: pointer;
+    max-height: 300px;
+    width: auto;
+}
+.THIS .products .product .name  {
+    display: block;
+    font-weight: 800;
+    font-size: 1em;
+}

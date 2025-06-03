@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Der Status &quot;Fehlgeschlagen&quot; bedeutet, dass der Erstattungsposten nicht erstellt werden konnte. Prüfen Sie die Systemkonfiguration.</help>
+        <label><!-- Refund Line Creation Status --></label>
+        <name>blng__RefundLineCreationStatus__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>预约依赖性</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <nameFieldLabel>预约依赖性名称</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Select a dependency type. --></errorMessage>
+        <name>FSL__Dependency_Is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- We couldn&apos;t create a dependency between the service appointments. Ask your Salesforce admin to give you permissions for all of the Time Dependency custom object fields. --></errorMessage>
+        <name>FSL__Root_Is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Immediately Follow dependency requires Same Resource --></errorMessage>
+        <name>FSL__Same_Resource_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Service appointment 2 is required. --></errorMessage>
+        <name>FSL__Service_Appointment_2_Is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
+        <name>FSL__Service_Appointment_2_Not_Changed</name>
+    </validationRules>
+</CustomObjectTranslation>

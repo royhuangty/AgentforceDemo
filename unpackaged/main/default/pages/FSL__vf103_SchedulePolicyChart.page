@@ -1,0 +1,57 @@
+<apex:page standardController="FSL__Scheduling_Policy__c" extensions="FSL.Ctrl103_SchedulePolicyChart" showHeader="true" sidebar="true">
+
+	<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlxChart, 'dhtmlxchart.css')}" /> 
+   	<apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlxChart, 'dhtmlxchart.js')}" />
+	<center>
+	<div id="chartDiv" style="width:400px;height:250px;margin:20px;"></div>
+	</center>
+	<script>
+
+    var fieldNames = {
+        Weight__c: '{!$ObjectType.Scheduling_Policy_Goal__c.Fields.Weight__c.Name}',
+        Service_Goal__c: '{!$ObjectType.Scheduling_Policy_Goal__c.Fields.Service_Goal__c.Name}',
+        Service_Goal__r: '{!$ObjectType.Scheduling_Policy_Goal__c.Fields.Service_Goal__c.RelationshipName}',
+    };
+
+    function encodeHTML(input) {
+        return input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    
+	var goals = JSON.parse('{!JSENCODE(goals)}');
+
+    for (var i = goals.length - 1; i >= 0; i--) {
+        goals[i].Name = encodeHTML(goals[i][fieldNames.Service_Goal__r].Name);
+        goals[i].Weight = goals[i][fieldNames.Weight__c];
+        delete goals[i].attributes;
+        delete goals[i].Id;
+        delete goals[i][fieldNames.Service_Goal__c];
+        delete goals[i][fieldNames.Service_Goal__r];
+        delete goals[i][fieldNames.Weight__c];
+    };
+        var chart =  new dhtmlXChart({
+            container:"chartDiv",
+            view:"radar",
+            value:"#Weight#",
+            tooltip:{
+                template:"#Name#"
+            },
+            color:"#3399ff",
+            line:{
+                color:"#3399ff",
+                width:1
+            },
+            fill:"#3399ff",
+			xAxis:{
+				template:"#Name#"
+			},
+            disableItems:true,
+            alpha: 0.2,
+			
+        });
+       
+        chart.parse(goals,"json");
+
+	</script>
+	
+</apex:page>

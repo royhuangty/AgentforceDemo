@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Určuje, koľko minút môže zdroj pred začiatkom dňa zapísanom v kalendári stráviť cestovaním (na vlastné náklady).
+Ak nie je zadaná žiadna hodnota, čas strávený cestovaním pred začiatkom pracovného dňa môže byť ľubovoľný.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

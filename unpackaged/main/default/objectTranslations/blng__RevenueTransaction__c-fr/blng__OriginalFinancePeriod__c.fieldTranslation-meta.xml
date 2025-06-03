@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référence à la période de financement d&#39;origine définie dans le calendrier de revenu.</help>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </CustomFieldTranslation>

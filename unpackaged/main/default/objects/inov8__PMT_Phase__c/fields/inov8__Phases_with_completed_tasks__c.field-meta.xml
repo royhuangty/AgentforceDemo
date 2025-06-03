@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Phases_with_completed_tasks__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Phases with completed tasks</label>
+    <summaryFilterItems>
+        <field>inov8__PMT_Task__c.inov8__Status__c</field>
+        <operation>equals</operation>
+        <value>&quot;Completed&quot;, &quot;Closed, not Completed&quot;</value>
+    </summaryFilterItems>
+    <summaryForeignKey>inov8__PMT_Task__c.inov8__Phase__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

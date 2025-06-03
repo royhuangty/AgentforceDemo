@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>FSL__Type__c</name>
+        <picklistValues>
+            <masterLabel>Automated Bundling</masterLabel>
+            <translation>自動バンドル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fill-In Schedule</masterLabel>
+            <translation>代行スケジュール</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fix Overlaps</masterLabel>
+            <translation>重複を解消</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Optimization</masterLabel>
+            <translation>グローバル最適化</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Nearby SAs</masterLabel>
+            <translation>近辺の SA をまとめる</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Bundling</masterLabel>
+            <translation>ライブバンドル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Schedule Optimization</masterLabel>
+            <translation>リソーススケジュールの最適化</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA Reshuffle</masterLabel>
+            <translation>SA 入れ替え</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

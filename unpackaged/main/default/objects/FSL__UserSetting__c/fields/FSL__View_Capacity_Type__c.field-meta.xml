@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__View_Capacity_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Show only capacities with chosen duration</description>
+    <label>View Capacity Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Day</fullName>
+                <default>false</default>
+                <label>Day</label>
+            </value>
+            <value>
+                <fullName>Week</fullName>
+                <default>false</default>
+                <label>Week</label>
+            </value>
+            <value>
+                <fullName>Month</fullName>
+                <default>false</default>
+                <label>Month</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

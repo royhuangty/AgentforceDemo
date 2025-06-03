@@ -1,0 +1,222 @@
+.slds-scope {
+
+  .slds-select_container.slds-select_short {
+
+      &::before {
+        top: 6px;
+      }
+
+      &::after {
+        bottom: 6px;
+      }
+
+      .slds-select {
+        height: 26px;
+        font-size: 12px;
+      }
+    }
+
+  .slds-select-group {
+
+    .slds-select_container {
+
+      .slds-select {
+        border-right-width: 0;
+        border-radius: 0;
+      }
+
+      &:last-child {
+
+        .slds-select {
+          border-right-width: 1px;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+
+      &:first-child {
+
+        .slds-select {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+      }
+    }
+  }
+
+    .form-column-width-1 {
+      max-width: 320px;
+    }
+    
+    .slds-form-element {
+            &.inline-editable {
+
+      &.inverse {
+
+          .slds-input {
+            background-color: transparent;
+            color:#fff;
+            border-bottom-color: $transparent-white-25;
+
+            &:focus {
+              border-bottom-color: $light-blue !important;
+              border-right: 0 !important;
+            }
+          }
+
+          .slds-input__icon {
+            color: $transparent-white-5;
+          }
+
+          .inline-editable-confirm-button {
+            border-color: transparent;
+          }
+
+          &.on-background--blue-4 {
+
+            .slds-input {
+
+                &:focus {
+                  background-color: $blue-4;
+                }
+              }
+          }
+      }
+
+      &:focus {
+        border-color: #19AAE3;
+        background-color: #ffffff;
+        padding: 0 14px 0 10px;
+        min-height: 39px; 
+      }
+
+      .ma-icon-edit {
+        color: #9faab5;
+        right: .5rem;
+      }
+
+      .inline-editable-clear-button {
+        visibility: hidden;
+        max-width: 0;
+        opacity: 0;
+        line-height: 1;
+        right: 0;
+        top: 16px;
+        transition: 0s visibility 0.03s, 0s max-width 0.03s, 0s right 0.03s; 
+      }
+
+      .inline-editable-confirm-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        visibility: hidden;
+        max-width: 0;
+        max-height: 22px;
+        opacity: 0;
+        transition: 0s visibility .2s, .2s max-width 0s, 0s max-height 0.2s, .2s opacity 0s; 
+      }
+
+      .slds-input {   
+        border-color: transparent;
+        background-color: transparent;
+        border-bottom-color: $border-gray;
+        border-radius: 0;
+        transition: .2s all;
+        max-width: 100%; 
+        padding-left: 0;
+        padding-right: 2rem;
+
+        &:focus {
+          border-color: #0094D2;
+          padding-left: 10px;
+          background-color: #fff;
+          margin-top: 0;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          max-width: calc(100% - 32px);
+          transition: .2s all;
+          position: relative;
+          z-index: 10;
+
+          ~ .ma-icon {
+            top: 10px;
+            transition: .2s all; 
+        }
+
+        ~ .ma-icon-edit {
+          visibility: hidden;
+          opacity: 0;
+          transition: 0s all; 
+        }
+
+        ~ .inline-editable-clear-button {
+          visibility: visible;
+          right: 2.75rem;
+          max-width: 21px;
+          opacity: 1;
+          transition: 0s visibility 0s, 0s max-width 0s, .2s opacity 0s, .2s right 0s;
+          z-index: 20; 
+        }
+
+        + .inline-editable-confirm-button {
+          visibility: visible;
+          max-width: 32px;
+          max-height: 32px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          opacity: 1;
+          transition: 0s visibility 0s, .2s max-width 0s, 0s max-height 0s, .2s opacity 0s; 
+        }
+      }
+    }
+  }
+
+        &.multiselect-has-header {
+
+          .slds-select {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+    }
+    
+    .slds-form-element__control {
+        .slds-button--icon {
+            &.slds-input__icon {
+                .ma-icon {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .slds-input__icon {
+        &.ma-icon {
+            font-size: 16px;
+            &:before {
+                font-size: 16px;
+                color: #9faab5;
+            }
+        }        
+        .slds-icon-text-default {
+            &.ma-icon {
+                font-size: 16px;
+                width: auto;
+                height: auto;
+                line-height: 1;
+                height: 16px;
+            }
+        }
+    }
+    
+    .slds-input-has-icon--right {
+        &.slds-input-has-icon--right-compact {
+            .slds-input {
+                padding-right: 2rem;
+            }
+            .slds-input__icon {
+                right: 9px;
+            }
+        }
+    }
+}

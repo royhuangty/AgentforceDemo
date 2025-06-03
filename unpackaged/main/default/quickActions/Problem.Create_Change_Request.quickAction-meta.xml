@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>SDO_Service_Create_Change_From_Problem</flowDefinition>
+    <label>Create Change Request</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

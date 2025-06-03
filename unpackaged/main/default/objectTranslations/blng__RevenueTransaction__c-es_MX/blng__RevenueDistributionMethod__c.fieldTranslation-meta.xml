@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Hace referencia al método de distribución seleccionado en la programación de ingresos. Describe cómo se propagan los ingresos durante un periodo de tiempo establecido, todo de una vez o un periodo de tiempo ingresado manualmente.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Comma-delimited list of keywords used for rejecting via email --></help>
+        <label><!-- Rejected Keywords --></label>
+        <name>sbaa__RejectedKeywords__c</name>
+    </CustomFieldTranslation>

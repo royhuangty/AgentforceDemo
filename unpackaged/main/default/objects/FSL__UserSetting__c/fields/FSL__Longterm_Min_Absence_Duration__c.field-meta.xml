@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Longterm_Min_Absence_Duration__c</fullName>
+    <defaultValue>8</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Minimum duration of Resource Absence to show on the long term view</description>
+    <externalId>false</externalId>
+    <label>Longterm Minimum Absence Duration</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

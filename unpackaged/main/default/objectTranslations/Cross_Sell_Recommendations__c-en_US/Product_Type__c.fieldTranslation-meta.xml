@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accessories</masterLabel>
+            <translation><!-- Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitive</masterLabel>
+            <translation><!-- Competitive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complementary</masterLabel>
+            <translation><!-- Complementary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CrossSell</masterLabel>
+            <translation><!-- CrossSell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Related</masterLabel>
+            <translation><!-- Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RequiredItem</masterLabel>
+            <translation><!-- RequiredItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Superseded</masterLabel>
+            <translation><!-- Superseded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UpSell</masterLabel>
+            <translation><!-- UpSell --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

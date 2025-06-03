@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Power Source --></label>
+        <name>Power_Source__c</name>
+        <picklistValues>
+            <masterLabel>Electric</masterLabel>
+            <translation><!-- Electric --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solar</masterLabel>
+            <translation><!-- Solar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water</masterLabel>
+            <translation><!-- Water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wind</masterLabel>
+            <translation><!-- Wind --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

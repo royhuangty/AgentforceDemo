@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfsp__AssignmentBehavior__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Assignment Behavior</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exclusive</fullName>
+                <default>false</default>
+                <label>Exclusive</label>
+            </value>
+            <value>
+                <fullName>Non-Exclusive</fullName>
+                <default>false</default>
+                <label>Non-Exclusive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

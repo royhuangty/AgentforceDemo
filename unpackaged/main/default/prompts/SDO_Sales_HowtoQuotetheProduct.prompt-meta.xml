@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>How to Quote the Product</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;This will let you choose which Opportunity to receive guided selling best practices on.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You will also walk through the entire Quoting process in Salesforce!&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <delayDays>1</delayDays>
+        <displayType>DockedComposer</displayType>
+        <experience>Lightning</experience>
+        <header>In-App Tips</header>
+        <isPublished>true</isPublished>
+        <masterLabel>How to Quote the Product Step 1</masterLabel>
+        <publishedDate>2024-02-07</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2024-01-09</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Select An Opportunity</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Understanding the current Oppprtunity and where its at is important to making sure you have the right products piped and the right people involved&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to Quote the Product Step 2</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_detailPanel&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;detailTabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Let&#39;s Review Details!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Go to the Products Tab and click &lt;strong&gt;Add Products&lt;/strong&gt;&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to Quote the Product Step 3</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:StandardButton.OpportunityLineItem.MultiAdd&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_relatedListSingleContainer&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabTab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.SimpleOpportunity</targetRecordType>
+        <title>Add Products</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;This will open up the Quote Builder so you can add generate the quote for the customer&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to Quote the Product Step 4</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:StandardButton.SBQQ__Quote__c.New&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;force_relatedListSingleContainer2&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2,&quot;interactions&quot;:[{&quot;unless&quot;:{&quot;css&quot;:&quot;[aria-selected=true]&quot;},&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tab2Tab&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;type&quot;:&quot;click&quot;}]}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>Generate a New Quote Here</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Fill in this opportunity field to tag your quote to the opportunity&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <elementRelativePosition>LeftCenter</elementRelativePosition>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to Quote the Product Step 5</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:RecordField.SBQQ__Quote__c.SBQQ__Opportunity2__c&quot;}},&quot;attributes&quot;:{&quot;id&quot;:&quot;e749965136cc4d4d9fc02c6f9c4a08b7&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>SBQQ__Quote__c</targetPageKey1>
+        <targetPageKey2>new</targetPageKey2>
+        <targetPageKey3>{&quot;nooverride&quot;:&quot;true&quot;,&quot;onRecordTypeSelection&quot;:false}</targetPageKey3>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Tag your related opportunity</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Then click Save once finished&lt;/p&gt;</body>
+        <customApplication>SDO_Sales_App</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <isPublished>false</isPublished>
+        <masterLabel>How to Quote the Product Step 6</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>SBQQ__Quote__c</targetPageKey1>
+        <targetPageKey2>new</targetPageKey2>
+        <targetPageKey3>{&quot;onRecordTypeSelection&quot;:false}</targetPageKey3>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Fill out the Fields In This Form</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

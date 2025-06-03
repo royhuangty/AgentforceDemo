@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この収益スケジュールを使用する以前のすべてのトランザクションの合計。</help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </CustomFieldTranslation>

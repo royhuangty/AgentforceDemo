@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter values from the corresponding picklist field on Product Option object that you want to be hidden on this bundle. --></help>
+        <label><!-- Hidden Values --></label>
+        <name>SBQQ__HiddenValues__c</name>
+    </CustomFieldTranslation>

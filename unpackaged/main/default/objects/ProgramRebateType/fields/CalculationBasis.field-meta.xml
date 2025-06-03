@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CalculationBasis</fullName>
+    <inlineHelpText>Specify the basis for rebate amount calculation.Payout calculates the payout amount based on the benefit setup. Accrual calculates payouts based on the accrual rate, when provided, or the benefit setup. Payout and Accrual uses both methods to calculate the payout.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

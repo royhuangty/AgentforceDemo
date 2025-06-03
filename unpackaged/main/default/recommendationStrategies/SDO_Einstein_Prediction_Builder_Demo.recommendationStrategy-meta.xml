@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>SDO_Einstein_Customer_Profile__c</contextRecordType>
+    <description>What: Used for Prediction Builder demo.</description>
+    <if>
+        <childNode>Retention_Offer</childNode>
+        <childNode>Upsell</childNode>
+        <label>Attrition Risk</label>
+        <name>Attrition_Risk</name>
+        <childNodeExpression>
+            <childName>Upsell</childName>
+            <expression>$Record.Likelihood_to_Attrit_in_First_Year__c &lt;= 15</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Retention_Offer</childName>
+            <expression>$Record.Likelihood_to_Attrit_in_First_Year__c &gt; 15</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Einstein - Prediction Builder</label>
+    <recommendationLoad>
+        <label>Retention Offer</label>
+        <name>Retention_Offer</name>
+        <condition>
+            <field>Name</field>
+            <operator>CONTAINS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Retention</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Upsell</label>
+        <name>Upsell</name>
+        <condition>
+            <field>Name</field>
+            <operator>CONTAINS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Upsell</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Attrition_Risk</childNode>
+        <label>Output</label>
+        <name>Output_dee4ba2f387c46b490ae3c861c916efc</name>
+    </union>
+</RecommendationStrategy>

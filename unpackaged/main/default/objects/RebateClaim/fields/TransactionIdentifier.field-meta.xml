@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TransactionIdentifier</fullName>
+    <inlineHelpText>The identifier of the transaction between the manufacturer and distributor.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

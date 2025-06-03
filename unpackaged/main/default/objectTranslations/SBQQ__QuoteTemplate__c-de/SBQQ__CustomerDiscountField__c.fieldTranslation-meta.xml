@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Zur Berechnung eines Rabattes verwendetes Angebotsbelegpostenfeld. Der Wert aus diesem Feld wird vom Gesamtpreis abgezogen.</help>
+        <label><!-- Customer Discount Field --></label>
+        <name>SBQQ__CustomerDiscountField__c</name>
+        <picklistValues>
+            <masterLabel>Total Discount (Amt)</masterLabel>
+            <translation>Gesamtrabatt (Betrag)</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

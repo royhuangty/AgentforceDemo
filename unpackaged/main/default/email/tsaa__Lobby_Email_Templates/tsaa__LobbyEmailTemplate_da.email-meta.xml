@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-da</name>
+    <style>none</style>
+    <subject>Invitation fra Fjernvisningsassistent</subject>
+    <textOnly>Hej,
+Et online fjernmøde er blevet planlagt for dig
+Tryk på &quot;Tilslut&quot;-knappen for at se mødedetaljer og for at deltage i mødet.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

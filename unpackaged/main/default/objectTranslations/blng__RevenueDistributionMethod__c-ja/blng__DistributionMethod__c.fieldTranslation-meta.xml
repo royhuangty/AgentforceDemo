@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益の認識方法を選択します (日次、月次、または一斉合計)</help>
+        <label><!-- Distribution Method --></label>
+        <name>blng__DistributionMethod__c</name>
+    </CustomFieldTranslation>

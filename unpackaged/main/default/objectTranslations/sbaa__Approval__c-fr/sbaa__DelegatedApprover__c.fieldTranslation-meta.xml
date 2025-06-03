@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si l&#39;option Approbations déléguées est activée, référencez l&#39;approbateur délégué de cet approbateur</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegated Approvals --></relationshipLabel>
+    </CustomFieldTranslation>

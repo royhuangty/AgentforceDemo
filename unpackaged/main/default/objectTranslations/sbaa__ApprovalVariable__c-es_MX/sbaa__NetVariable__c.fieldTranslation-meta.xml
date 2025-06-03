@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Variable de aprobación responsable de calcular el Neto total</help>
+        <label><!-- Net Variable --></label>
+        <name>sbaa__NetVariable__c</name>
+        <relationshipLabel><!-- Approval Variables (Net Variable) --></relationshipLabel>
+    </CustomFieldTranslation>

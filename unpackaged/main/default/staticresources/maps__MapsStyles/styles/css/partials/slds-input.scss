@@ -1,0 +1,12 @@
+.slds-scope {
+	.slds-form-element__label {
+		abbr {
+			text-decoration: none !Important;
+			// remove dotted underline
+		}
+	}
+
+	.slds-input {
+		font-size: 13px;
+	}
+}

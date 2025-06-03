@@ -1,0 +1,158 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Checkout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Información de contacto"
+        },
+        "id" : "d76afaee-bf44-4d11-bd9b-aef6efbbaeea"
+      }, {
+        "attributes" : {
+          "text" : "Cambiar"
+        },
+        "id" : "ece30c28-6a2d-428d-b2a4-7fd83733302f"
+      }, {
+        "attributes" : {
+          "emailLabel" : "Correo electrónico",
+          "phoneNumberLabel" : "Número de teléfono"
+        },
+        "id" : "3dda542a-f716-4603-a749-eb2a5520da62"
+      }, {
+        "attributes" : {
+          "text" : "Continuar"
+        },
+        "id" : "da269a67-7fdc-43ff-b981-6f52fb7a6616"
+      }, {
+        "attributes" : {
+          "text" : "Envíos"
+        },
+        "id" : "4be7938b-1554-49fc-9426-b49380d351d6"
+      }, {
+        "attributes" : {
+          "text" : "Cambiar"
+        },
+        "id" : "78909e90-6599-4a29-86d2-c64be9a35dbe"
+      }, {
+        "attributes" : {
+          "text" : "Instrucciones de envío"
+        },
+        "id" : "8123b830-56a6-45b3-954f-ce429f9a04d1"
+      }, {
+        "attributes" : {
+          "text" : "Continuar"
+        },
+        "id" : "51a6a84b-258d-45b1-9dc0-160142f619d2"
+      }, {
+        "attributes" : {
+          "text" : "Opciones de envío"
+        },
+        "id" : "799cd769-bd23-4219-81c7-ee58353c72d1"
+      }, {
+        "attributes" : {
+          "text" : "Cambiar"
+        },
+        "id" : "ed9c8203-e09a-41e3-9b04-50fc746661bc"
+      }, {
+        "attributes" : {
+          "text" : "Continuar"
+        },
+        "id" : "017b8adb-3d31-41bb-8d56-1fc0dee3cf98"
+      }, {
+        "attributes" : {
+          "text" : "Pago"
+        },
+        "id" : "af4c5194-4286-4401-80ab-ef3d93afb830"
+      }, {
+        "attributes" : {
+          "text" : "Cambiar"
+        },
+        "id" : "83f4c36f-88d8-4c98-b45b-b9596fedacaf"
+      }, {
+        "attributes" : {
+          "billingAddressSameAsShippingAddressLabel" : "Igual que la dirección de envío",
+          "cardPaymentLabel" : "Tarjeta, Otros medios de pago",
+          "inputLabel" : "Número de orden de compra",
+          "phoneNumberLabel" : "Número de teléfono",
+          "purchaseOrderLabel" : "Orden de compra"
+        },
+        "id" : "133c9dac-717c-4eff-9767-fa80941d4319"
+      }, {
+        "attributes" : {
+          "text" : "Realizar pedido"
+        },
+        "id" : "f6b15a65-a90a-4bb6-9412-746b10c2bc95"
+      }, {
+        "attributes" : {
+          "text" : "Resumen"
+        },
+        "id" : "ec232529-6810-493e-ad7d-482a3769b45b"
+      }, {
+        "attributes" : {
+          "text" : "Promociones"
+        },
+        "id" : "9ebe7d3d-5674-4ddc-ad37-0afb473338f8"
+      }, {
+        "attributes" : {
+          "text" : "Envíos"
+        },
+        "id" : "1185d7b2-0fa6-4fa1-bc97-70d8dd1e899c"
+      }, {
+        "attributes" : {
+          "text" : "Subtotal"
+        },
+        "id" : "84837c6e-60c4-4c26-9200-6c641843f575"
+      }, {
+        "attributes" : {
+          "text" : "Impuestos incluidos"
+        },
+        "id" : "022130f3-c225-4e67-a85a-7823443f243e"
+      }, {
+        "attributes" : {
+          "text" : "Impuestos"
+        },
+        "id" : "3526b4bf-92ce-4b2d-aad7-2200c1bdcfd9"
+      }, {
+        "attributes" : {
+          "text" : "Total"
+        },
+        "id" : "f75673da-fb4c-452b-82b0-effcdb4ba755"
+      }, {
+        "attributes" : {
+          "sectionLabel" : "Pasar por caja exprés"
+        },
+        "id" : "b75b4baf-0896-4639-9613-1e4b55c417ab"
+      }, {
+        "attributes" : {
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "incrementValueGuideText" : "Vendido en incrementos de {0}",
+          "items" : "{!Cart.Items}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "pagination" : "{!Cart.Pagination}",
+          "productFieldMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Product Code\",\"type\":\"STRING\"}]",
+          "promotionsAppliedSavingsButtonText" : "{amount} ahorrado",
+          "skuLabel" : "N.º de SKU {0}"
+        },
+        "id" : "2e81ddc2-ae32-458e-a5f7-437e22910f70"
+      }, {
+        "attributes" : {
+          "text" : "Mostrar más"
+        },
+        "id" : "d7caf0b6-4a39-49d6-8b6d-c19a1ae9301f"
+      }, {
+        "id" : "a2433304-3d11-4a9f-89aa-df1b34398ae4",
+        "attributes" : {
+          "editAddressLabel" : "Editar dirección",
+          "newAddressButtonLabel" : "Nueva dirección",
+          "showMoreButtonLabel" : "Mostrar más",
+          "componentHeaderEditAddressLabel" : "Editar dirección",
+          "splitShipLinkLabel" : "Enviar a varias direcciones",
+          "makeDefaultAddressLabel" : "Convertir a dirección predeterminada"
+        }
+      } ]
+    }
+  },
+  "urlName" : "checkout"
+}

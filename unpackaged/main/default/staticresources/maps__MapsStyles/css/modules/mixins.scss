@@ -1,0 +1,39 @@
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-direction($val) {
+  -webkit-flex-direction: $val;
+      -ms-flex-direction: $val;
+          flex-direction: $val;
+}
+
+@mixin flex($val) {
+  -webkit-flex: $val;
+      -ms-flex: $val;
+          flex: $val;
+}
+
+@mixin flex-basis($val) {
+  -webkit-flex-basis: $val;
+      -ms-flex-basis: $val;
+          flex-basis: $val;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin border-radius($border-radius...) {
+    -moz-border-radius:    $border-radius;
+    -o-border-radius:      $border-radius;
+    -webkit-border-radius: $border-radius;
+    border-radius:         $border-radius;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Convenience field to support integration with Service Cloud. --></help>
+        <label><!-- Product Id --></label>
+        <name>SBQQ__ProductId__c</name>
+    </CustomFieldTranslation>

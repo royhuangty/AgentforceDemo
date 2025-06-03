@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Pesquisa da linha de nota de débito associada a essa agenda de receita.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

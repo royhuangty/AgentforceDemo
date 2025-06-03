@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>계산할 서비스 자원의 숫자 필드.</help>
+        <label><!-- Resource Property --></label>
+        <name>FSL__Resource_Property__c</name>
+        <picklistValues>
+            <masterLabel>IsActive</masterLabel>
+            <translation>활성화됨</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IsCapacityBased</masterLabel>
+            <translation>용량 기반</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

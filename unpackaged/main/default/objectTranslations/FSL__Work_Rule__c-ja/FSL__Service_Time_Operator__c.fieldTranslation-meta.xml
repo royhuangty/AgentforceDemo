@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Time Operator --></label>
+        <name>FSL__Service_Time_Operator__c</name>
+        <picklistValues>
+            <masterLabel>Before</masterLabel>
+            <translation>前</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before or Equal to</masterLabel>
+            <translation>以前</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equal to</masterLabel>
+            <translation>次の文字列と一致する</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Later than or Equal to</masterLabel>
+            <translation>以降</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

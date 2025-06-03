@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ProcessException$Name</field>
+    </columns>
+    <columns>
+        <field>ProcessException$Priority</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>ProcessException$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ProcessException$Category</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Process Exceptions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SDO_OMS_Process_Exceptions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ProcessException$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

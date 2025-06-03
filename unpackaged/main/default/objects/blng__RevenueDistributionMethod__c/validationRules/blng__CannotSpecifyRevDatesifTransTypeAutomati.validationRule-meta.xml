@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>blng__CannotSpecifyRevDatesifTransTypeAutomati</fullName>
+    <active>true</active>
+    <errorConditionFormula>((ISPICKVAL(blng__RevenueTransactionCreationProcess__c  , &#39;Automatic&#39;))  &amp;&amp;  
+(ISPICKVAL(blng__RevenueScheduleTermStartDate__c, &#39;Manual&#39;) ))
+ || 
+(ISPICKVAL(blng__RevenueTransactionCreationProcess__c, &#39;Automatic&#39;)
+&amp;&amp;
+(ISPICKVAL(blng__RevenueScheduleTermEndDate__c, &#39;Manual&#39;)))</errorConditionFormula>
+    <errorMessage>Cannot select Manual on Revenue Schedule Term Start Date or Revenue Schedule End Date when Revenue Transaction Creation Process is Automatic</errorMessage>
+</ValidationRule>

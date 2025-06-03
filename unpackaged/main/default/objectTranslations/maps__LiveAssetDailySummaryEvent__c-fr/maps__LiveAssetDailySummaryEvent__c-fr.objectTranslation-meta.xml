@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Événement de résumé quotidien d&#39;actif live Maps</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Événements de résumé quotidien d&#39;actif live Maps</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Maps Live Asset Daily Summary Event Layout</layout>
+        <sections>
+            <label>Adresse de fin</label>
+            <section>End Address</section>
+        </sections>
+        <sections>
+            <label>Lieu</label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label>Vitesse</label>
+            <section>Speed</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de l&#39;événement de résumé quotidien d</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

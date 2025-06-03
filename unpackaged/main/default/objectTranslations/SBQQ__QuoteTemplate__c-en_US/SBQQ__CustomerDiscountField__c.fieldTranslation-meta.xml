@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Quote Line field used to calculate a discount. The value from this field is subtracted from the total price. --></help>
+        <label><!-- Customer Discount Field --></label>
+        <name>SBQQ__CustomerDiscountField__c</name>
+        <picklistValues>
+            <masterLabel>Total Discount (Amt)</masterLabel>
+            <translation><!-- Total Discount (Amt) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

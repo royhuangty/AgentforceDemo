@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>サブスクリプション</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Subscription Search Filters --></label>
+        <name>SBQQ__SubscriptionSearchFilters</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Subscription Search Results --></label>
+        <name>SBQQ__SubscriptionSearchResults</name>
+    </fieldSets>
+    <layouts>
+        <layout>Subscription Layout</layout>
+        <sections>
+            <label>価格設定情報</label>
+            <section>Pricing Info</section>
+        </sections>
+        <sections>
+            <label>更新情報</label>
+            <section>Renewal Info</section>
+        </sections>
+        <sections>
+            <label>セグメント情報</label>
+            <section>Segment Info</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>サブスクリプション番号</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Preserve Bundle Structure is checked on Contract, Renewal Quantity cannot be different from Quantity. --></errorMessage>
+        <name>SBQQ__Renewal_Quantity_cannot_be_editable</name>
+    </validationRules>
+</CustomObjectTranslation>

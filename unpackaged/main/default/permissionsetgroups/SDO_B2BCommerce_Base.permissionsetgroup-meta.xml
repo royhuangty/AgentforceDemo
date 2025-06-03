@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes base permissions for B2B Commerce Demos. Who: Jesse Chase. When: 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>B2B Commerce - Base Access</label>
+    <permissionSets>B2B_Cart_Switcher</permissionSets>
+    <permissionSets>B2B_Cross_Sell_Recommendations_Admin</permissionSets>
+    <permissionSets>B2B_Cross_Sell_Recommendations_User</permissionSets>
+    <permissionSets>B2B_Featured_Products_Component</permissionSets>
+    <permissionSets>B2B_LE_Bundle_Product_Admin</permissionSets>
+    <permissionSets>B2B_LE_Bundle_Product_User</permissionSets>
+    <permissionSets>B2B_LE_Moodboard_User</permissionSets>
+    <permissionSets>B2B_LE_PDP_Inventory</permissionSets>
+    <permissionSets>B2B_LE_Video_Player_Admin</permissionSets>
+    <permissionSets>B2B_LE_Video_Player_Reader</permissionSets>
+    <permissionSets>QBrix_b2b_base_perms</permissionSets>
+    <permissionSets>SDO_B2BCommerce_Commerce_User_PSL</permissionSets>
+    <permissionSets>SDO_B2BCommerce_Featured_Products_Component</permissionSets>
+    <permissionSets>SDO_SCOM_Data_Cloud_Access</permissionSets>
+    <permissionSets>SDO_SCOM_OOA_Order_Approvals</permissionSets>
+    <permissionSets>SDO_SCOM_OOA_User_Registration</permissionSets>
+    <permissionSets>force__CopilotSalesforceAdmin</permissionSets>
+    <permissionSets>force__CopilotSalesforceUser</permissionSets>
+    <permissionSets>force__EinsteinGPTPromptTemplateManager</permissionSets>
+    <permissionSets>force__EinsteinGPTPromptTemplateUser</permissionSets>
+    <permissionSets>force__PaymentsAdministrator</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,25 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Historial de pedidos"
+        },
+        "id" : "6f89ba6e-eff4-490e-a619-caef2d7dcf59"
+      }, {
+        "attributes" : {
+          "noOrderMessageText" : "Después de crear un pedido, este aparecerá aquí.",
+          "noResultsText" : "Para ver los pedidos,ajuste sus filtros.",
+          "orderSummaryFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"Id\",\"label\": \"Número del pedido\",\"type\": \"Lookup()\"},{\"entity\": \"OrderSummary\",\"name\": \"OrderedDate\",\"label\": \"Fecha del pedido\",\"type\": \"Date/Time\"},{\"entity\": \"OrderSummary\",\"name\": \"Status\",\"label\": \"Estado\",\"type\": \"Picklist\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\"}]",
+          "reorderLabel" : "Iniciar la realización del pedido de nuevo",
+          "showMoreLabel" : "Mostrar más",
+          "viewDetailsLinkLabel" : "Ver detalles"
+        },
+        "id" : "5e74ec4d-3cab-4c3f-a68b-63e677668ae8"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

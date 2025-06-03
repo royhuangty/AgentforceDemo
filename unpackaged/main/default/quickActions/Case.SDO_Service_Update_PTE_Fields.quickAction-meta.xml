@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>SDO_Service_Update_Propensity_to_Escalate_Fields</flowDefinition>
+    <label>Update Propensity to Escalate Fields</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

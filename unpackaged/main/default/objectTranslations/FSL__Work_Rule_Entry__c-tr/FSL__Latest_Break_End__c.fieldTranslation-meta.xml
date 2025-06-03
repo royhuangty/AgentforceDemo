@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Hizmet kaynağının müsaitlik başlangıcı ile izin verilen en geç ara bitiş zamanı arasındaki dakika sayısı. Örneğin; bir öğle yemeği arasının gün başlangıcından en az fazla beş saat sonrasında bitmesini planlamak için 300 değerini girebilirsiniz.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

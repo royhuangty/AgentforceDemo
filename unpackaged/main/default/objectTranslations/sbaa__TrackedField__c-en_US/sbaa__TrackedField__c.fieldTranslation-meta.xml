@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- A Field (on a Tracked Object) that is being tracked --></help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation><!-- Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation><!-- Type --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

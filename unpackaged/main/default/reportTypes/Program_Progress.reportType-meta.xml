@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>LearningItemAssignment</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on program progress. Specific progress on milestones and exercises aren’t captured in this report.</description>
+    <label>Program Progress</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Assignee</displayNameOverride>
+            <field>Assignee</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>Assignee.Email</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Manager</displayNameOverride>
+            <field>Assignee.Manager.Name</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Name</displayNameOverride>
+            <field>LearningItem.EnablementProgram.Name</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Days</displayNameOverride>
+            <field>LearningItem.EnablementProgram.TotalDays</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Completed On Day</displayNameOverride>
+            <field>Progress.CompletedOnDay</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Completion Rate</displayNameOverride>
+            <field>Progress.CompletedPercent</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days in Progress</displayNameOverride>
+            <field>Progress.DaysInProgress</field>
+            <table>LearningItemAssignment</table>
+        </columns>
+        <masterLabel>Program Progress</masterLabel>
+    </sections>
+</ReportType>

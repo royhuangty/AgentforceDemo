@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>承認ルールを適用するときに有効開始日および有効終了日で参照される、選択された対象オブジェクトの日付項目の型。</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>作成日</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>申請日</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Exclui automaticamente os registros de dados de rastreamento pai e filho ao utilizar a Ferramenta de limpeza de dados de rastreamento. Para evitar os limites de controle do Apex em trabalhos de exclusão em lote, desative a exclusão em cascata.</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

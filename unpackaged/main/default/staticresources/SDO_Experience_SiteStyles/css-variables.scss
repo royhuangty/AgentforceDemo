@@ -1,0 +1,61 @@
+@import "scss-variables";
+
+/*
+ * VARIABLES
+ * 
+ * This CSS file contains variables that you can edit to change global elements, such as border-radius, 
+ * border colors, padding & margin, etc.
+ * 
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+
+// Assign Sass variables to CSS Variables
+:root {
+	/* Colors */
+	--base-color-white: #ffffff;
+	--base-color-black: #000000;
+
+	/* Gray Colors */
+	--light-gray-background-color: #f4f4f4;
+	--light-gray-border-color: #dddddd;
+	--warm-gray-color: #c9c9c9;
+	--medium-gray-color: #666666;
+	--dark-gray-color: #333333;
+
+	/* Font Colors */
+	--text-default-color: #{$text-default-color};	
+
+	/* Font Weights */
+	--font-weight-lighter: lighter;
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-weight-bolder: bolder;
+
+	/* Font Sizes */
+	--font-size-base: #{$base-font-size};	/* 16px */
+	--font-size-xs: #{$font-size-xs};		/* 12px */
+	--font-size-sm: #{$font-size-sm};		/* 14px */
+	--font-size-md: #{$font-size-md};		/* 18px */
+	--font-size-lg: #{$font-size-lg};		/* 20px */
+	--font-size-xl: #{$font-size-xl};		/* 24px */
+	--font-size-xxl: #{$font-size-xxl};	/* 32px */
+	--font-size-xxxl: #{$font-size-xxxl};	/* 38px */
+
+	/* Border Radius */
+	--border-radius-none: #{$border-radius-none}; 	/* 0px */
+	--border-radius-xs: #{$border-radius-xs}; 		/* 4px */
+	--border-radius-sm: #{$border-radius-sm}; 		/* 6px */
+	--border-radius-md: #{$border-radius-md}; 		/* 8px */
+	--border-radius-lg: #{$border-radius-lg}; 		/* 10px */
+	--border-radius-xl: #{$border-radius-xl}; 		/* 12px */
+	
+	/* Hero Styles */
+	--hero-background-color: rgba(12, 15, 22, var(--hero-background-transparency));
+	--hero-border-radius: var(--hero-border-radius);
+}

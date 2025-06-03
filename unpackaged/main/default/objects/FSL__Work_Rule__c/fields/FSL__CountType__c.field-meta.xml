@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__CountType__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>The type of item counted in the work rule.</inlineHelpText>
+    <label>Count Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assignments</fullName>
+                <default>true</default>
+                <label>Assignments</label>
+            </value>
+            <value>
+                <fullName>Duration</fullName>
+                <default>false</default>
+                <label>Duration</label>
+            </value>
+            <value>
+                <fullName>CustomValue</fullName>
+                <default>false</default>
+                <label>Custom Value</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求が品目に適用された実際の回数を示します。45 日間の月次請求書を発行する場合、この値は 1.5 になります。</help>
+        <label><!-- Calculated Quantity --></label>
+        <name>blng__CalculatedQuantity__c</name>
+    </CustomFieldTranslation>

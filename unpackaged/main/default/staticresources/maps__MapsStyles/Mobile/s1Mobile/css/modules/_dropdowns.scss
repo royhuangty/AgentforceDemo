@@ -1,0 +1,115 @@
+.ma-dropdown-wrap {
+	position:relative;
+	display: inline-block;
+}
+
+.ma-dropdown-list {
+	position:absolute;
+	margin:0;
+	padding:0;
+	top:100%;
+	left:0;
+	visibility: hidden;
+	opacity:0;
+    z-index: 7000;
+    min-width: 6rem;
+    max-width: 20rem;
+  	@include transition(visibility 0s linear .1s, opacity .1s linear 0s);
+}
+
+.ma-dropdown-list > ul {
+	list-style-type: none;
+    margin-top: .125rem;
+    border: 1px solid $border-gray;
+    border-radius: $radius;
+    padding: .25rem 0;
+    background: #fff;
+    box-shadow: $box-shadow;
+}
+
+.ma-dropdown-wrap.ma-dropdown--hover.ma-dropdown--hover--slow-fade .ma-dropdown-list {
+  	@include transition(visibility 0s linear .35s, opacity .1s linear .25s);
+ }	
+
+.ma-dropdown-wrap.ma-dropdown--click .ma-dropdown-list {
+  	@include transition(visibility 0s linear .1s, opacity .1s linear 0s);	
+}
+
+.ma-dropdown--right-aligned .ma-dropdown-list {
+	left:auto;
+	right:0;
+}
+
+.ma-dropdown-wrap.ma-dropdown--hover:hover .ma-dropdown-list {
+	opacity:1;
+	visibility: visible;
+  	@include transition(visibility 0s linear 0s, opacity .1s linear);
+}
+
+.ma-dropdown--click.in .ma-dropdown-list {
+	opacity:1;
+	visibility: visible;
+  	@include transition(visibility 0s linear 0s, opacity .1s linear);
+}
+
+.ma-dropdown-list li {
+    line-height: 1.5;
+    text-transform: none;
+    color: $dark-blue;
+    letter-spacing: 0;
+    font-size: .875rem;
+}
+
+.ma-dropdown-list li > a {
+    position: relative;
+    @include flexbox();
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    padding: .5rem 2rem .5rem .75rem;
+    line-height: 1.5;
+    color: $dark-blue;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: .875rem;
+    line-height: 1.5;
+    min-width: 10rem;
+}
+
+.ma-dropdown-list li>a:focus, .ma-dropdown-list li>a:hover {
+    outline: 0;
+    text-decoration: none;
+    background-color: $light-gray;
+}
+
+.ma-dropdown-list-divider {
+    margin: .25rem 0;
+    padding: 0;
+    height: 1px;
+    background-color: $border-gray;
+    width: 100%;
+}
+
+.ma-dropdown-list-header {
+	text-transform: uppercase;
+	color: $dark-blue;
+	font-weight: 700;
+	font-size: .6875rem;
+	padding: .5rem .7rem;
+	cursor: default;
+}
+
+.ma-dropdown-list-item-padding {
+	padding: .5rem .7rem;
+}
+
+.ma-dropdown-list li > a > .ma-icon {
+    margin-right: .5rem;
+    margin-top: .125rem;
+}
+
+.ma-dropdown--hover .ma-button {
+    cursor: default;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Slack perms like Standard User, Slack for Sales Cloud, Slack for Service Cloud, etc.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Slack for Service</label>
+    <permissionSets>SDO_Slack_Service_Swarming_User</permissionSets>
+    <permissionSets>force__SlackServiceUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

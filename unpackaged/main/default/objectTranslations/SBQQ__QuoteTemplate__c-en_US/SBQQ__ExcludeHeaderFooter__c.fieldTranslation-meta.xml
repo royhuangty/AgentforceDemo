@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Excludes template header and footer for First Page, Last Page, or both the First and Last Page. --></help>
+        <label><!-- Exclude Header &amp; Footer --></label>
+        <name>SBQQ__ExcludeHeaderFooter__c</name>
+        <picklistValues>
+            <masterLabel>First Page</masterLabel>
+            <translation><!-- First Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First and Last</masterLabel>
+            <translation><!-- First and Last --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Page</masterLabel>
+            <translation><!-- Last Page --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

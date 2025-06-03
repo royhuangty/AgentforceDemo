@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>text/javascript</contentType>
+    <description>What: used by the Embedded Service Component in Communities to populate values. No longer used by default but may have some use for org users. Who: Service Team.</description>
+</StaticResource>

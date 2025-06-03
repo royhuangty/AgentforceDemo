@@ -1,0 +1,40 @@
+.slds-scope {
+    .slds-notify_toast {
+        .ma-icon {
+            font-size: 21px;
+        }
+
+        &.slds-theme_warning {
+            button:not(.slds-button--neutral) {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+body #toast-container {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+
+    > .toast-error {
+        background-image: none!important;
+
+        &::before {
+            content: "\e069";
+            position: relative;
+            font-family: "ma-icons-2" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 24px;
+            line-height: 22px;
+            float: left;
+            margin-left: -1.5em;
+            color: #FFF;
+        }
+    }
+}

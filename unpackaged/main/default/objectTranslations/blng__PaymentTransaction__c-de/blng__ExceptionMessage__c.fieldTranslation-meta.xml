@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ausnahmemeldung
+Wenn eine Transaktion, jedoch keine Zahlung zum Ausgleich der Rechnung erstellt wird.</help>
+        <label><!-- Exception Message --></label>
+        <name>blng__ExceptionMessage__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,609 @@
+{
+  "activeBrandingSetId" : "5e25394c-2f15-4cc4-9283-011fa734c516",
+  "customCSS" : "",
+  "developerName" : "jepson",
+  "id" : "6790384a-5606-40ed-84bf-2487ca5afdd7",
+  "label" : "Jepson",
+  "layouts" : {
+    "Home" : "a5587653-8bf1-46d4-b5d3-82394e9b76f1",
+    "Inner" : "829f5f73-1b96-4150-b890-b8dfce169cd0",
+    "Login" : "f79113cc-e122-46a6-8d76-c52232c82a46",
+    "ServiceNotAvailable" : "f9a3f6a6-7e7f-4350-b03f-e4a052347704"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "f79113cc-e122-46a6-8d76-c52232c82a46",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "cca98865-1e81-49d6-bd48-83969586ef71",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "d6c2b9b3-f953-4734-8835-cb877aac251c",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "dd186ddf-7ee5-4575-885f-04aaa9115b29",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(255, 255, 255, 0.8)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : false
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "829f5f73-1b96-4150-b890-b8dfce169cd0",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0.3)",
+          "borderBottomColor" : "rgba(0, 0, 0, 0.5)",
+          "centerAlignLogo" : false,
+          "collapseNavMenu" : false,
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "#FFFFFF",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "#F0F0F0",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "headerHeight" : 16,
+          "linkActiveBorderColor" : "",
+          "linkColor" : "rgba(0, 0, 0, 0.8)",
+          "linkHoverColor" : "rgba(0, 0, 0, 0.7)",
+          "linkTextShadowColor" : "rgba(255, 255, 255, 0)",
+          "logoWidth" : 150,
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNavMenuOnLeft" : true,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true
+        },
+        "componentName" : "forceCommunity:themeHeaderCompact",
+        "id" : "773c0597-4822-41ae-baac-11c7f35f1824",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 15,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "customizableUserProfileMenuEditor" : "B2B_Default_User_Profile_Menu",
+              "menuStyleSettings" : "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
+            },
+            "componentName" : "forceCommunity:customizableUserProfileMenu",
+            "id" : "1eaf0fd8-2c5f-418c-a357-bced937ce06f",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "0e4cd499-0da7-448c-8db0-7ab382828bf8",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "",
+              "borderColor" : "",
+              "borderRadius" : "19",
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "iconColor" : "",
+              "placeholderText" : "Enter keyword or SKU number",
+              "placeholderTextColor" : "#4a4a4a",
+              "showSearchButton" : true,
+              "showSearchSuggestionsSetup" : true,
+              "suggestionsBackgroundColor" : "rgb(255, 255, 255)",
+              "suggestionsBackgroundHoverColor" : "rgb(249, 249, 250)",
+              "suggestionsDividerColor" : "rgb(217, 219, 221)",
+              "suggestionsTextColor" : "",
+              "suggestionsTextHoverColor" : "",
+              "textColor" : ""
+            },
+            "componentName" : "b2b_search_builder:searchInput",
+            "id" : "4b33bfc8-a34e-4f42-999e-0a107fcf12b6",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "4016e533-4200-4564-93dc-ba8bf31d7f78",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "NavigationMenuEditorRefresh" : "B2B_Commerce_Default_Navigation",
+              "alignment" : "left",
+              "showAppLauncher" : false,
+              "showBackLabel" : false,
+              "showHomeLink" : true
+            },
+            "componentName" : "forceCommunity:multiLevelNavigationWrapper",
+            "id" : "e1a64f7f-f90f-48db-bebd-2366b7291d52",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "75c6bcb8-81c9-4588-a074-6192e3c6c940",
+          "regionName" : "nav",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "cartCountType" : "TotalProductCount"
+            },
+            "componentName" : "b2b_buyer_builder:cartBadge",
+            "id" : "c594c838-482f-4d2a-95d7-90b8a9c40f3d",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "6641530c-6b77-40af-80ce-9378a7b66a77",
+          "regionName" : "cartIcon",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "77517ee0-5855-4e54-a135-d3135355f367",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "bgImage" : "background: #FFFFFF url(/sfsites/assets/themes/jepson-background.jpg) top center /cover",
+          "bgOverlayColor" : "rgba(255, 255, 255, 0.20)",
+          "captionText" : "Our Mission",
+          "captionTextColor" : "rgba(0, 0, 0, 0.8)",
+          "captionTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "contentAlignment" : "right",
+          "contentWidth" : 45,
+          "ctaBtnOneBgColor" : "",
+          "ctaBtnOneBgHoverColor" : "",
+          "ctaBtnOneBorderColor" : "rgba(10, 50, 198, 0)",
+          "ctaBtnOneOpenNewTab" : false,
+          "ctaBtnOneText" : "Our Projects",
+          "ctaBtnOneTextColor" : "",
+          "ctaBtnOneTextHoverColor" : "",
+          "ctaBtnOneUrl" : "",
+          "ctaBtnRadius" : 25,
+          "ctaBtnTwoBgColor" : "rgba(255, 255, 255, 0)",
+          "ctaBtnTwoBgHoverColor" : "rgba(255, 255, 255, 0.9)",
+          "ctaBtnTwoBorderColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoOpenNewTab" : false,
+          "ctaBtnTwoText" : "Contact Us",
+          "ctaBtnTwoTextColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoTextHoverColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoUrl" : "",
+          "ctaShowBtnOne" : true,
+          "ctaShowBtnTwo" : true,
+          "fixedHeroWidth" : true,
+          "heroHeight" : 162,
+          "heroWidth" : 1440,
+          "showCaption" : true,
+          "showSubtitle" : true,
+          "showTitle" : true,
+          "subtitleText" : "We specialize in the construction of unique and exclusive properties.  We deliver outstanding quality and design for leading architects and private clients around the world.",
+          "subtitleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "titleText" : "Your Dream Home",
+          "titleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "titleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "type" : "callToAction"
+        },
+        "componentName" : "forceCommunity:themeHeroStarter",
+        "id" : "1dd2748e-d12b-43c0-8437-f76f9d99dd03",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0)",
+              "borderRadius" : 25,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "#FFFFFF",
+              "placeholderText" : "Ask a question...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "publicDropdownBackgroundColor" : "#FFFFFF",
+              "publicDropdownBackgroundHoverColor" : "",
+              "publicDropdownBorderColor" : "#F0F0F0",
+              "publicDropdownTextColor" : "",
+              "publicDropdownTextHoverColor" : "",
+              "showSearchButton" : true,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 6,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearchHero",
+            "id" : "27dd57af-4c2a-4938-8142-5faec7e957b2",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "935143c8-0743-40c0-90df-ccd8db19bcdf",
+          "regionName" : "search",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "257ffacb-8632-4aa3-86ea-348a7f71e725",
+      "regionName" : "themeHero",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "backgroundColor" : "#ececec",
+          "colOneHeading" : "New to Cirrus?",
+          "colOneLinkFiveText" : "Privacy",
+          "colOneLinkFiveURL" : "#",
+          "colOneLinkFourText" : "Product Pricing",
+          "colOneLinkFourURL" : "#",
+          "colOneLinkOneText" : "What is Cirrus?",
+          "colOneLinkOneURL" : "#",
+          "colOneLinkThreeText" : "Customer Success",
+          "colOneLinkThreeURL" : "#",
+          "colOneLinkTwoText" : "Why Cirrus?",
+          "colOneLinkTwoURL" : "#",
+          "colThreeHeading" : "Popular Links",
+          "colThreeLinkFiveText" : "",
+          "colThreeLinkFiveURL" : "#",
+          "colThreeLinkFourText" : "DreamCirrus",
+          "colThreeLinkFourURL" : "#",
+          "colThreeLinkOneText" : "New Release Features",
+          "colThreeLinkOneURL" : "#",
+          "colThreeLinkThreeText" : "CirrusExchange",
+          "colThreeLinkThreeURL" : "#",
+          "colThreeLinkTwoText" : "Cirrus Mobile",
+          "colThreeLinkTwoURL" : "#",
+          "colTwoHeading" : "About Cirrus",
+          "colTwoLinkFiveText" : "Trust",
+          "colTwoLinkFiveURL" : "#",
+          "colTwoLinkFourText" : "Careers",
+          "colTwoLinkFourURL" : "#",
+          "colTwoLinkOneText" : "Our Story",
+          "colTwoLinkOneURL" : "#",
+          "colTwoLinkThreeText" : "Blog",
+          "colTwoLinkThreeURL" : "#",
+          "colTwoLinkTwoText" : "Newsroom",
+          "colTwoLinkTwoURL" : "#",
+          "ctaText" : "Call us at 1-800-667-6389",
+          "imgHeight" : "60px",
+          "imgUrl" : "https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/2020/Professional_Community_Logo.png",
+          "showExpCloudLogo" : false,
+          "showImage" : true,
+          "socialFacebook" : true,
+          "socialFacebookLink" : "salesforce",
+          "socialInstagram" : true,
+          "socialInstagramLink" : "salesforce",
+          "socialLinkedin" : true,
+          "socialLinkedinLink" : "salesforce",
+          "socialTwitter" : true,
+          "socialTwitterLink" : "salesforce",
+          "socialYoutube" : true,
+          "socialYoutubeLink" : "UCUpquzY878NEaZm5bc7m2sQ",
+          "textColor" : "#000"
+        },
+        "componentName" : "c:b2bFooter",
+        "id" : "5334eaff-8b6f-44c8-82bd-8c1021717a31",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "63e55183-e2a2-4bb6-bfc1-9c5243db9e69",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(255, 255, 255, 0.8)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "a5587653-8bf1-46d4-b5d3-82394e9b76f1",
+    "label" : "Home",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0.3)",
+          "borderBottomColor" : "rgba(0, 0, 0, 0.5)",
+          "centerAlignLogo" : false,
+          "collapseNavMenu" : false,
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "#FFFFFF",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "#F0F0F0",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "headerHeight" : 16,
+          "linkActiveBorderColor" : "",
+          "linkColor" : "rgba(0, 0, 0, 0.8)",
+          "linkHoverColor" : "rgba(0, 0, 0, 0.7)",
+          "linkTextShadowColor" : "rgba(255, 255, 255, 0)",
+          "logoWidth" : 150,
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNavMenuOnLeft" : true,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true
+        },
+        "componentName" : "forceCommunity:themeHeaderCompact",
+        "id" : "d3f22ce0-c3ff-45e1-82ad-83d49b0bde0e",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 15,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "customizableUserProfileMenuEditor" : "B2B_Default_User_Profile_Menu",
+              "menuStyleSettings" : "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
+            },
+            "componentName" : "forceCommunity:customizableUserProfileMenu",
+            "id" : "504bbe9d-a650-4584-a013-75ee70d9f5a2",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "4bf5b71a-54eb-43c9-ba7a-5520d6875b46",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "",
+              "borderColor" : "",
+              "borderRadius" : "19",
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "iconColor" : "",
+              "placeholderText" : "Enter keyword or SKU number",
+              "placeholderTextColor" : "#4a4a4a",
+              "showSearchButton" : true,
+              "showSearchSuggestionsSetup" : true,
+              "suggestionsBackgroundColor" : "rgb(255, 255, 255)",
+              "suggestionsBackgroundHoverColor" : "rgb(249, 249, 250)",
+              "suggestionsDividerColor" : "rgb(217, 219, 221)",
+              "suggestionsTextColor" : "",
+              "suggestionsTextHoverColor" : "",
+              "textColor" : ""
+            },
+            "componentName" : "b2b_search_builder:searchInput",
+            "id" : "461d5a97-4949-4425-b65c-976351b6a604",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "0b2435a7-8c57-4ee4-87a1-71bd2320b63c",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "NavigationMenuEditorRefresh" : "B2B_Commerce_Default_Navigation",
+              "alignment" : "left",
+              "showAppLauncher" : false,
+              "showBackLabel" : false,
+              "showHomeLink" : true
+            },
+            "componentName" : "forceCommunity:multiLevelNavigationWrapper",
+            "id" : "a5361342-918c-4c98-a54b-e712a8e5ee1f",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "69961651-89df-47b4-ac2e-9ce9e2eb9945",
+          "regionName" : "nav",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "cartCountType" : "TotalProductCount"
+            },
+            "componentName" : "b2b_buyer_builder:cartBadge",
+            "id" : "78ee40a2-178c-45eb-b046-9a5ad729fcd2",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "de0d3407-dd20-416a-a9c8-6b0c67aea5a8",
+          "regionName" : "cartIcon",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d2e28f6a-790a-4583-b9eb-60e4f1a690ec",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "bgImage" : "background: #FFFFFF url(/sfsites/c/file-asset/SDO_Community_B2BCommerce_HomeHero?v=1) top center /cover",
+          "bgOverlayColor" : "rgba(255, 255, 255, 0.20)",
+          "captionText" : "Our Mission",
+          "captionTextColor" : "rgba(0, 0, 0, 0.8)",
+          "captionTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "contentAlignment" : "right",
+          "contentWidth" : 45,
+          "ctaBtnOneBgColor" : "",
+          "ctaBtnOneBgHoverColor" : "",
+          "ctaBtnOneBorderColor" : "rgba(10, 50, 198, 0)",
+          "ctaBtnOneOpenNewTab" : false,
+          "ctaBtnOneText" : "Learn More",
+          "ctaBtnOneTextColor" : "",
+          "ctaBtnOneTextHoverColor" : "",
+          "ctaBtnOneUrl" : "",
+          "ctaBtnRadius" : 25,
+          "ctaBtnTwoBgColor" : "rgba(255, 255, 255, 0)",
+          "ctaBtnTwoBgHoverColor" : "rgba(255, 255, 255, 0.9)",
+          "ctaBtnTwoBorderColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoOpenNewTab" : false,
+          "ctaBtnTwoText" : "Browse Products",
+          "ctaBtnTwoTextColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoTextHoverColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoUrl" : "",
+          "ctaShowBtnOne" : true,
+          "ctaShowBtnTwo" : true,
+          "fixedHeroWidth" : true,
+          "heroHeight" : 165,
+          "heroWidth" : 1440,
+          "showCaption" : false,
+          "showSubtitle" : true,
+          "showTitle" : true,
+          "subtitleText" : "See how Cirrus is revolutionizing the energy industry",
+          "subtitleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "titleText" : "Bringing Energy Efficiency To You",
+          "titleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "titleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "type" : "callToAction"
+        },
+        "componentName" : "forceCommunity:themeHeroStarter",
+        "id" : "4ce96efe-b8e8-43b4-9823-dcab682ab378",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0)",
+              "borderRadius" : 25,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "#FFFFFF",
+              "placeholderText" : "Ask a question...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "publicDropdownBackgroundColor" : "#FFFFFF",
+              "publicDropdownBackgroundHoverColor" : "",
+              "publicDropdownBorderColor" : "#F0F0F0",
+              "publicDropdownTextColor" : "",
+              "publicDropdownTextHoverColor" : "",
+              "showSearchButton" : true,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 6,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearchHero",
+            "id" : "0b735129-b76e-416a-9a92-56d962865bb0",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "00255e0a-8c54-4c2a-b7d3-6067dd64e103",
+          "regionName" : "search",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "15ff8049-888f-43a9-8406-ef211141dbdb",
+      "regionName" : "themeHero",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "backgroundColor" : "#ececec",
+          "colOneHeading" : "New to Cirrus?",
+          "colOneLinkFiveText" : "Product Pricing",
+          "colOneLinkFiveURL" : "#",
+          "colOneLinkFourText" : "Privacy",
+          "colOneLinkFourURL" : "#",
+          "colOneLinkOneText" : "What is Cirrus?",
+          "colOneLinkOneURL" : "#",
+          "colOneLinkThreeText" : "Customer Success",
+          "colOneLinkThreeURL" : "#",
+          "colOneLinkTwoText" : "Why Cirrus?",
+          "colOneLinkTwoURL" : "#",
+          "colThreeHeading" : "Popular Links",
+          "colThreeLinkFiveText" : "",
+          "colThreeLinkFiveURL" : "#",
+          "colThreeLinkFourText" : "DreamCirrus",
+          "colThreeLinkFourURL" : "#",
+          "colThreeLinkOneText" : "New Release Features",
+          "colThreeLinkOneURL" : "#",
+          "colThreeLinkThreeText" : "CirrusExchange",
+          "colThreeLinkThreeURL" : "#",
+          "colThreeLinkTwoText" : "Cirrus Mobile",
+          "colThreeLinkTwoURL" : "#",
+          "colTwoHeading" : "About Cirrus",
+          "colTwoLinkFiveText" : "Trust",
+          "colTwoLinkFiveURL" : "#",
+          "colTwoLinkFourText" : "Careers",
+          "colTwoLinkFourURL" : "#",
+          "colTwoLinkOneText" : "Our Story",
+          "colTwoLinkOneURL" : "#",
+          "colTwoLinkThreeText" : "Blog",
+          "colTwoLinkThreeURL" : "#",
+          "colTwoLinkTwoText" : "Newsroom",
+          "colTwoLinkTwoURL" : "#",
+          "ctaText" : "Call us at 1-800-667-6389",
+          "imgHeight" : "60px",
+          "imgUrl" : "https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/2020/Professional_Community_Logo.png",
+          "showExpCloudLogo" : false,
+          "showImage" : true,
+          "socialFacebook" : true,
+          "socialFacebookLink" : "salesforce",
+          "socialInstagram" : true,
+          "socialInstagramLink" : "salesforce",
+          "socialLinkedin" : true,
+          "socialLinkedinLink" : "salesforce",
+          "socialTwitter" : true,
+          "socialTwitterLink" : "salesforce",
+          "socialYoutube" : true,
+          "socialYoutubeLink" : "UCUpquzY878NEaZm5bc7m2sQ",
+          "textColor" : "#000"
+        },
+        "componentName" : "c:b2bFooter",
+        "id" : "c4fecc45-178d-4010-afa3-54d3ef6c7eda",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "9cdef304-532f-414e-b6c2-78d8eafaf431",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "f9a3f6a6-7e7f-4350-b03f-e4a052347704",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "41211e87-f19f-4a8a-941c-bb309891d078",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "5476431a-e0bb-44ac-ae19-1128a5b09bd9",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

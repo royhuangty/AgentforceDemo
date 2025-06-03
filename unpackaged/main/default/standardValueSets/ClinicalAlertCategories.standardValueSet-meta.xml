@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Diet</fullName>
+        <default>false</default>
+        <label>Diet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Drug</fullName>
+        <default>false</default>
+        <label>Drug</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lab</fullName>
+        <default>false</default>
+        <label>Lab</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Subject Contact</fullName>
+        <default>false</default>
+        <label>Subject Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clinical</fullName>
+        <default>false</default>
+        <label>Clinical</label>
+    </standardValue>
+</StandardValueSet>

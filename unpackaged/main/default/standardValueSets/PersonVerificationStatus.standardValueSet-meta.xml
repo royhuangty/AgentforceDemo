@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Authorized</fullName>
+        <default>false</default>
+        <label>Authorized</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Verified</fullName>
+        <default>false</default>
+        <label>Verified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Confirmed</fullName>
+        <default>false</default>
+        <label>Confirmed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expired</fullName>
+        <default>false</default>
+        <label>Expired</label>
+    </standardValue>
+</StandardValueSet>

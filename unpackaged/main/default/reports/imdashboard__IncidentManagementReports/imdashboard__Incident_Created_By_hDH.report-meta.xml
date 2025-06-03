@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Incident$Name</field>
+    </columns>
+    <description>Incidents Created By Report</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>Incident$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Incident Created By</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>imdashboard__Incidents__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Incident$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

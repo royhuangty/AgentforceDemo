@@ -1,0 +1,13 @@
+.slds-scope {
+    .slds-badge {
+        &.navigation-badge {
+            display: block;
+            width: 20px;
+            text-align: center;
+            padding: 4px 0;
+            height: 20px;
+            margin: 0 8px 0 0;
+            float: left;
+        }
+    }
+}

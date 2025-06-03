@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatform xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <activationFlowType>SEGMENT</activationFlowType>
+    <activationPlatformAdditionalMetadata>{&quot;customerFileSources&quot;:[&quot;1P&amp;3P&quot;,&quot;3P&quot;,&quot;1P&quot;],&quot;activationPlatformEventMetadata&quot;:{&quot;supportedEventTypes&quot;:[],&quot;standardEventDetails&quot;:null,&quot;customEventDetails&quot;:null}}</activationPlatformAdditionalMetadata>
+    <activationPlatformConnectorType>OAUTH</activationPlatformConnectorType>
+    <dataConnector>cdpactvstrgptnr__Meta_Facebook1669683165348</dataConnector>
+    <description>Create activation targets using a connected Meta account.</description>
+    <enabled>true</enabled>
+    <includeSegmentNames>false</includeSegmentNames>
+    <masterLabel>Meta Custom Audiences</masterLabel>
+    <outputFormat>JSON</outputFormat>
+    <outputGrouping>PER_ACCOUNT</outputGrouping>
+    <periodicRefreshFrequecy>REFRESH_30</periodicRefreshFrequecy>
+    <platformProcessingType>Batch</platformProcessingType>
+    <platformType>Advertising</platformType>
+    <refreshFrequency xsi:nil="true" />
+    <refreshMode>INCREMENTAL</refreshMode>
+</ActivationPlatform>

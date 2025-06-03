@@ -1,0 +1,96 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6cb3d010-9392-4224-9a24-c1b87f7b0b6b",
+  "label" : "SFS Appointment Assistant",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c4b0f724-a26a-4da8-8134-be2b9ebdd7d2",
+          "columns" : [ {
+            "UUID" : "f0721c85-ce78-4d93-81e1-ca0cd27f89eb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c4b0f724-a26a-4da8-8134-be2b9ebdd7d2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bShowContactTechBtn" : false,
+            "customerMarkerIconLink" : "",
+            "sContactCenterPhoneNumber" : "",
+            "showETA" : true,
+            "showMap" : true,
+            "showTech" : true,
+            "showTechImage" : true,
+            "teamMemberMarkerIconLink" : "",
+            "unMaskTechLocation" : false
+          },
+          "componentName" : "FSAA:appointmentAssistantMain",
+          "id" : "d4bf0857-811b-402b-b51d-6dc6cc25b4f3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 18px;\">Your safety is our #1 Priority</strong></p><p><br></p><p><span style=\"font-size: 12px;\">We have include a photo of your technician who will be visiting today.</span></p><p><br></p><p><strong style=\"font-size: 18px;\">Covid Statement</strong></p><p><br></p><p><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">We are actively monitoring the coronavirus (COVID-19) situation and have measures in place to ensure we continue to serve our customers in a way that is safe for both customers and our employees. We are committed to serving the needs of our customers while also having the privilege and responsibility of providing an essential service that our communities rely on.</span></p><p><br></p><p><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">To help minimize impact to service, we will continue to refer to guidelines and protocol provided by the&nbsp;</span><a href=\"https://www.cdc.gov/\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 12px; color: rgb(0, 110, 156); background-color: rgb(255, 255, 255);\">CDC</a><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">&nbsp;and local health officials in the areas we serve.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "946df877-273e-4428-93d0-a4490347d90b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 16px; color: rgba(0, 0, 0, 0.91);\">Need a little extra help scheduling your service appointment? That's ok. Feel free to text with us or call us with the ? bubble in the lower part of your screen.</span>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ef686398-0f7c-49d0-8d96-a0e41699a0dc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f0721c85-ce78-4d93-81e1-ca0cd27f89eb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7d10a84f-e5ed-4c12-9ca7-1ad4b7274b7e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "SFS Appointment Assistant"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9e54998c-4269-48eb-a98c-87aab71ff3f4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "83881431-1484-4537-9190-da3eeddd0c7a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "custom-sfs-appointment-assistant"
+}

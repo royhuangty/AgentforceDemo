@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>tspa__Type__c</name>
+        <picklistValues>
+            <masterLabel>audioStatus</masterLabel>
+            <translation><!-- audioStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>customerDetails</masterLabel>
+            <translation><!-- customerDetails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>customerGeolocation</masterLabel>
+            <translation><!-- customerGeolocation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>desktopSharingStatus</masterLabel>
+            <translation><!-- desktopSharingStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>imageScanResults</masterLabel>
+            <translation><!-- imageScanResults --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mediaAccess</masterLabel>
+            <translation><!-- mediaAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>mirroringStatus</masterLabel>
+            <translation><!-- mirroringStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>observerInviteStatus</masterLabel>
+            <translation><!-- observerInviteStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sessionEnded</masterLabel>
+            <translation><!-- sessionEnded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smsDeliveryStatus</masterLabel>
+            <translation><!-- smsDeliveryStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>tosRejected</masterLabel>
+            <translation><!-- tosRejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>videoStatus</masterLabel>
+            <translation><!-- videoStatus --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>B2BLE_Guest_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>B2BLE Guest Access</label>
+        <sharedTo>
+            <guestUser>Do_Not_Use_SDO_B2B_Commerce</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>Cirrus Catalog</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>D2C_Guest_Access_W24</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>D2C Guest Access W24</label>
+        <sharedTo>
+            <guestUser>SDO_D2C_Commerce_Enhanced</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>Salesforce Commerce for B2C Catalog</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>SDO_B2C_Rule</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>What: Grants access for the B2B2C Demo store</description>
+        <label>B2C Rule</label>
+        <sharedTo>
+            <guestUser>Do_Not_Use_SDO_Commerce_for_B2B2C</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>Salesforce Commerce for B2C Catalog</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

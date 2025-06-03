@@ -1,0 +1,21 @@
+<apex:page showHeader="false" sidebar="false"   standardController="FSL__Work_Rule__c" extensions="FSL.EnhancedMatchRuleController" lightningStylesheets="true"  >  
+    <apex:includeLightning /> 
+    <div id="lightning" />
+    <script>       
+        let ns = '{!fslNamespace}';
+        if (ns === "" || ns === null || ns==false){
+            ns = 'c';
+        }
+        console.log(ns);
+ 
+        $Lightning.use(ns+":EnhancedMatchRuleApp", function() {
+
+            $Lightning.createComponent(
+                ns+":EnhancedMatchRule",
+                { recordId : '{!Work_Rule__c.id}' },
+                "lightning"
+            );
+        });
+    
+    </script>
+</apex:page>

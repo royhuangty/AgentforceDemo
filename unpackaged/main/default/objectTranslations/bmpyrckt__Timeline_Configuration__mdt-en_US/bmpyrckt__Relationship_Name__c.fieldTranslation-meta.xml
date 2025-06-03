@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The API name corresponding to the relationship between the objects. Note that custom relationships end with __r. --></help>
+        <label><!-- Relationship Name --></label>
+        <name>bmpyrckt__Relationship_Name__c</name>
+    </CustomFieldTranslation>

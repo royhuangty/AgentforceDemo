@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Account Activation message channel</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Account Activation Response</description>
+        <fieldName>response</fieldName>
+    </lightningMessageFields>
+    <masterLabel>AccountActivationToVideo</masterLabel>
+</LightningMessageChannel>

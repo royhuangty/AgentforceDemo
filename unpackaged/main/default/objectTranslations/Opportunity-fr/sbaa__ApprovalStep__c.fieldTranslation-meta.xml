@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Utilisée avec des approbateurs natifs pour indiquer l&#39;étape du processus d&#39;approbation dans laquelle se trouve l&#39;opportunité.</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </CustomFieldTranslation>

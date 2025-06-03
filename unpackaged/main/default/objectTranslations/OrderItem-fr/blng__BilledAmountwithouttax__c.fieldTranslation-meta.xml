@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>La somme de toutes les factures pour ce produit de commande (hors taxes).</help>
+        <label><!-- Billed Amount (without tax) --></label>
+        <name>blng__BilledAmountwithouttax__c</name>
+    </CustomFieldTranslation>

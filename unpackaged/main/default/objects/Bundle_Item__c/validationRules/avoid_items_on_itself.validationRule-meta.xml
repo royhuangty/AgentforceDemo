@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>avoid_items_on_itself</fullName>
+    <active>true</active>
+    <errorConditionFormula>Bundle_Item__c =  Bundle_Parent_Item__c</errorConditionFormula>
+    <errorMessage>Cannot have the bundle source product as part of its own bundle !!!</errorMessage>
+</ValidationRule>

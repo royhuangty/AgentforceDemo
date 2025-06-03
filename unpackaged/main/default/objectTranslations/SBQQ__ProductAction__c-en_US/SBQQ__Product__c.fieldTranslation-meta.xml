@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Choose the product to be automatically selected on the quote. Note: The product rule Type must be set to &quot;Selection&quot;. --></help>
+        <label><!-- Product --></label>
+        <name>SBQQ__Product__c</name>
+        <relationshipLabel><!-- Product Actions --></relationshipLabel>
+    </CustomFieldTranslation>

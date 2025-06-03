@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Paleta Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Palety Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Paletu Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Palety Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Palety Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Paliet Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Palete Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Paletám Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Paletou Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Paletami Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value>Palete Ganttovho diagramu</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value>Paletách Ganttovho diagramu</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <nameFieldLabel>Názov palety Ganttovho diagramu</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- FSL Public Gantt Palette --></label>
+        <name>FSL__FSL_Public_Gantt_Palette</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
+        <name>FSL__Color_Level_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

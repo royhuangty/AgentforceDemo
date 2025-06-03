@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Location of this action on the page. --></help>
+        <label><!-- Location --></label>
+        <name>SBQQ__Location__c</name>
+        <picklistValues>
+            <masterLabel>Account Panel</masterLabel>
+            <translation><!-- Account Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configurator</masterLabel>
+            <translation><!-- Configurator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Panel</masterLabel>
+            <translation><!-- Contract Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Line</masterLabel>
+            <translation><!-- Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Panel</masterLabel>
+            <translation><!-- Opportunity Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Panel</masterLabel>
+            <translation><!-- Order Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Document Panel</masterLabel>
+            <translation><!-- Quote Document Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Panel</masterLabel>
+            <translation><!-- Quote Panel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote/Group</masterLabel>
+            <translation><!-- Quote/Group --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

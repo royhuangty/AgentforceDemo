@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Solo se aplica cuando un producto tiene un valor de Sustitución fecha facturación completa (BTDO) durante un periodo. Combine un periodo parcial con el periodo completo anterior al crear una partida, o deje el periodo parcial como una partida separada.</help>
+        <label><!-- Period Treatment for BTDO --></label>
+        <name>blng__PeriodTreatmentForBTDO__c</name>
+    </CustomFieldTranslation>

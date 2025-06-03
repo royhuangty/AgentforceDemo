@@ -1,0 +1,127 @@
+<apex:page standardStylesheets="false" tabStyle="ExactTargetPhoenix__tab">
+    <apex:includeLightning />      
+    <apex:stylesheet value="{!URLFOR($Resource.et4ae5__componentStyles)}" />
+        
+    <div id="lightning" />
+
+    <script>
+    $Lightning.use("et4ae5:MarketingCloudSettingsApp", function() {
+        $Lightning.createComponent("et4ae5:MarketingCloudSettings", null, "lightning");      
+    });
+
+    </script>
+	<apex:outputPanel rendered="false">
+		<apex:outputText value="{!$Label.et4ae5__mobile}"/>
+		<apex:outputText value="{!$Label.et4ae5__email}"/>
+		<apex:outputText value="{!$Label.et4ae5__report}"/>
+		<apex:outputText value="{!$Label.et4ae5__campaign}"/>
+		<apex:outputText value="{!$Label.et4ae5__initLog}"/>
+		<apex:outputText value="{!$Label.et4ae5__mCCSettings}"/>
+		<apex:outputText value="{!$Label.et4ae5__editSttngs}"/>
+		<apex:outputText value="{!$Label.et4ae5__saveSttngs}"/>
+		<apex:outputText value="{!$Label.et4ae5__cancel}"/>
+		<apex:outputText value="{!$Label.et4ae5__account}"/>
+		<apex:outputText value="{!$Label.et4ae5__username}"/>
+		<apex:outputText value="{!$Label.et4ae5__mcType}"/>
+		<apex:outputText value="{!$Label.et4ae5__sendTypes}"/>
+		<apex:outputText value="{!$Label.et4ae5__general}"/>
+		<apex:outputText value="{!$Label.et4ae5__altRTs}"/>
+		<apex:outputText value="{!$Label.et4ae5__manage}"/>
+		<apex:outputText value="{!$Label.et4ae5__mcDpLnkAccss}"/>
+		<apex:outputText value="{!$Label.et4ae5__sends}"/>
+		<apex:outputText value="{!$Label.et4ae5__targetAud}"/>
+		<apex:outputText value="{!$Label.et4ae5__exclAudnc}"/>
+		<apex:outputText value="{!$Label.et4ae5__retryFldSnds}"/>
+		<apex:outputText value="{!$Label.et4ae5__retry}"/>
+		<apex:outputText value="{!$Label.et4ae5__myPCR}"/>
+		<apex:outputText value="{!$Label.et4ae5__allow}"/>
+		<apex:outputText value="{!$Label.et4ae5__automatedSnds}"/>
+		<apex:outputText value="{!$Label.et4ae5__Restriction}"/>
+		<apex:outputText value="{!$Label.et4ae5__enbldObjs}"/>
+		<apex:outputText value="{!$Label.et4ae5__notifications}"/>
+		<apex:outputText value="{!$Label.et4ae5__supTicRecp}"/>
+		<apex:outputText value="{!$Label.et4ae5__initLog}"/>
+		<apex:outputText value="{!$Label.et4ae5__trkDetail}"/>
+		<apex:outputText value="{!$Label.et4ae5__tracking}"/>
+		<apex:outputText value="{!$Label.et4ae5__aggrLvlTrc}"/>
+		<apex:outputText value="{!$Label.et4ae5__indlLvlTr}"/>
+		<apex:outputText value="{!$Label.et4ae5__trkingLnkDts}"/>
+		<apex:outputText value="{!$Label.et4ae5__trkingSntEvts}"/>
+		<apex:outputText value="{!$Label.et4ae5__frequency}"/>
+		<apex:outputText value="{!$Label.et4ae5__numDaysTrked}"/>
+		<apex:outputText value="{!$Label.et4ae5__Campaign_Member_Tracking}"/>
+		<apex:outputText value="{!$Label.et4ae5__advanced}"/>
+		<apex:outputText value="{!$Label.et4ae5__envirnmnt}"/>
+		<apex:outputText value="{!$Label.et4ae5__rootSoapAU}"/>
+		<apex:outputText value="{!$Label.et4ae5__rootRestAU}"/>
+		<apex:outputText value="{!$Label.et4ae5__authApiUrl}"/>
+		<apex:outputText value="{!$Label.et4ae5__enable}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0018}"/>
+		<apex:outputText value="{!$Label.et4ae5__etAcctType}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0065}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0119}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0175}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0044}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0019}"/>
+		<apex:outputText value="{!$Label.et4ae5__retryHelp}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0012}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0151}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0152}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0011}"/>
+		<apex:outputText value="{!$Label.et4ae5__logging}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0009}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0049}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0122x}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0123x}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0124x}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0125x}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0093}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0030}"/>
+		<apex:outputText value="{!$Label.et4ae5__Configure}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0074}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0073}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0072}"/>
+		<apex:outputText value="{!$Label.et4ae5__loggingOn}"/>
+		<apex:outputText value="{!$Label.et4ae5__loggingOff}"/>
+		<apex:outputText value="{!$Label.et4ae5__off}"/>
+		<apex:outputText value="{!$Label.et4ae5__onlyAdm}"/>
+		<apex:outputText value="{!$Label.et4ae5__bothAdmUsr}"/>
+		<apex:outputText value="{!$Label.et4ae5__tSOnlyAdm}"/>
+		<apex:outputText value="{!$Label.et4ae5__tSbothAdmUsr}"/>
+		<apex:outputText value="{!$Label.et4ae5__hourly}"/>
+		<apex:outputText value="{!$Label.et4ae5__daily}"/>
+		<apex:outputText value="{!$Label.et4ae5__enabled}"/>
+		<apex:outputText value="{!$Label.et4ae5__disabled}"/>
+		<apex:outputText value="{!$Label.et4ae5__doNotRetry}"/>
+		<apex:outputText value="{!$Label.et4ae5__allowed}"/>
+		<apex:outputText value="{!$Label.et4ae5__notAllowed}"/>
+		<apex:outputText value="{!$Label.et4ae5__Campaign_Member_Tracking}"/>
+		<apex:outputText value="{!$Label.et4ae5__Configure}"/>
+		<apex:outputText value="{!$Label.et4ae5__loggingOff}"/>											
+		<apex:outputText value="{!$Label.et4ae5__hourly}"/>
+		<apex:outputText value="{!$Label.et4ae5__loggingOn}"/>		
+		<apex:outputText value="{!$Label.et4ae5__msg0219}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0220}"/>
+		<apex:outputText value="{!$Label.et4ae5__validYourPerm}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0221}"/>
+		<apex:outputText value="{!$Label.et4ae5__srySmtgWrng}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0222}"/>
+		<apex:outputText value="{!$Label.et4ae5__setUpMCC}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0223}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0224}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0225}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0226}"/>
+		<apex:outputText value="{!$Label.et4ae5__updtYrSettgs}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0227}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0228}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0229}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0230}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0231}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0232}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0233}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0234}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0235}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0236}"/>
+		<apex:outputText value="{!$Label.et4ae5__msg0237}"/>
+	</apex:outputPanel>    
+</apex:page>

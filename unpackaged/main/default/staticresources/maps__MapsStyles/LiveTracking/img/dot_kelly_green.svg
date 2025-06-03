@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="10.5" cy="10.515152" rx="9.67689538" ry="9.76905819"></ellipse>
+        <linearGradient x1="0%" y1="49.9997843%" x2="99.9999872%" y2="49.9997843%" id="linearGradient-2">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g id="Oval">
+                <use fill="#7AD516" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <ellipse stroke-opacity="0.32" stroke="#000000" stroke-width="1" cx="10.5" cy="10.515152" rx="9.17689538" ry="9.26905819"></ellipse>
+            </g>
+            <ellipse id="Oval" fill="url(#linearGradient-2)" opacity="0.7" cx="10.5" cy="10.515152" rx="3.5129442" ry="3.5464015"></ellipse>
+        </g>
+    </g>
+</svg>

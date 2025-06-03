@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Transaction Layout</layout>
+        <sections>
+            <label><!-- ACH Details --></label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label><!-- Credit Card Details --></label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label><!-- Gateway Response --></label>
+            <section>Gateway Response</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Request Information --></label>
+            <section>Payment Request Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Attempt Refund &amp; Unlock Invoice --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+</CustomObjectTranslation>

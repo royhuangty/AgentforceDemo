@@ -1,0 +1,22 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Check Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "checkEmailMessage" : "Vérifiez le compte de messagerie associé à votre nom d'utilisateur pour le lien permettant de réinitialiser votre mot de passe. Si vous n'avez pas reçu d'e-mail, vérifiez votre dossier Spam. Ou contactez votre administrateur.",
+          "returnButtonLabel" : "Retour à la connexion",
+          "titleLabel" : "Maintenant, vérifiez votre courrier électronique"
+        },
+        "id" : "1e80f247-da67-493a-a2ca-1c274e9f5fbf"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Vérifier le mot de passe"
+        },
+        "id" : "6e8da02a-eba8-46b3-ba3e-157d7f0eae70"
+      } ]
+    }
+  },
+  "urlName" : "check-password"
+}

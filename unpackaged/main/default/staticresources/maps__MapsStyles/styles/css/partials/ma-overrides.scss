@@ -1,0 +1,147 @@
+body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
+    font-weight: normal;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+html body.sfdcBody, body, body * {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+}
+
+.ClickToCreateFormTable .dateInput input {
+    display: block;
+    border: 1px solid #dddbda !important;
+}
+
+.comboboxIcon, .comboboxIconOn {
+    background-image: url('/img/func_icons/util/combobox20.gif');
+    background-position: 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.comboboxIcon {
+    background-position: top left;
+}
+
+.comboboxIconOn {
+    background-position: top right;
+}
+
+.ClickToCreateFormTable .fieldInput[data-type="multipicklist"] .slds-select_container:after, .ClickToCreateFormTable .fieldInput[data-type="multipicklist"] .slds-select_container:before {
+    content: none;
+}
+
+.ClickToCreateFormTable .slds-form-element__control[data-type="picklist"]:after, .ClickToCreateFormTable .OwnerId.slds-input:after {
+    top: 21px;
+}
+
+.ClickToCreateFormTable a.OwnerId.slds-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ClickToCreateFormTable a.OwnerId.slds-input:after { 
+    content: none;
+}
+
+.lookupInput img {
+    vertical-align: middle;
+    margin-right: .25em;
+    background-repeat: no-repeat;
+}
+
+.lookupIcon, .lookupIconOn {
+    background-image: url('/img/func_icons/util/lookup20.gif');
+    background-position: 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.lookupIcon {
+    background-position: top left;
+}
+
+.lookupIconOn {
+    background-position: top right;
+}
+
+.ClickToCreateFormTable, .CustomDispositionFormTable {
+    .slds-select_container {
+        &::before, &::after {
+            content: none;
+        }
+    }
+
+    .multiSelectPicklistRow {
+        td {
+            &:nth-child(odd) {
+                width: 47%;
+            }
+
+            select[multiple] {
+                height: 12rem;
+                width: 100% !important;
+                overflow: auto;
+                border: 1px solid $color-border;
+                border-radius: .25rem;
+                padding: .25rem 0;
+
+                optgroup {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    -webkit-hyphens: auto;
+                    -ms-hyphens: auto;
+                    hyphens: auto;
+                    display: inline-block;
+                    color: $color-text-default;
+                    font-size: .75rem;
+                    padding-top: .25rem;
+                    padding-left: .25rem;
+                    margin-bottom: .125rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        .multiSelectPicklistCell {
+            vertical-align: top !important;
+
+            br {
+                display: none;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 2rem;
+                width: 2rem;
+                margin: .5rem .25rem;
+
+                &[title="Add"]::before {
+                    content: "\e16b";
+                }
+
+                &[title="Remove"]::before {
+                    content: "\e09a";
+                }
+
+                &::before {
+                    color: $color-button-icon-fill;
+                    font-family: "ma-icons-2" !important;
+                    font-style: normal !important;
+                    font-weight: normal !important;
+                    font-variant: normal !important;
+                    font-size: .875rem;
+                    text-transform: none !important;
+                    speak: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+    }
+}

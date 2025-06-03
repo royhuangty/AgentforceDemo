@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Marketing Intelligence Admin Perms</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Marketing Intelligence Admin</label>
+    <permissionSets>force__CopilotSalesforceAdmin</permissionSets>
+    <permissionSets>force__EMIAdmin</permissionSets>
+    <permissionSets>force__GenieAdmin</permissionSets>
+    <permissionSets>force__TableauEinsteinAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

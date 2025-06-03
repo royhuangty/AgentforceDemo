@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Should the job be scheduled? --></help>
+        <label><!-- Is Schedulable? --></label>
+        <name>Is_Schedulable__c</name>
+    </CustomFieldTranslation>

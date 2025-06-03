@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Деталізація часу для підрахунку.</help>
+        <label><!-- Count Time Resolution --></label>
+        <name>FSL__CountTimeResolution__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation>Щоденно</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

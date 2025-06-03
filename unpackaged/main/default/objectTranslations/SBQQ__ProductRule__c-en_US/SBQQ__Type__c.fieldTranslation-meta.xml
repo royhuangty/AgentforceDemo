@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Type of rule. Validation displays error messages. Selection causes products to be added or suggested. Alert displays a warning, but requires no rectification. Filter refines option lookup results for Dynamic Bundles. --></help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Alert</masterLabel>
+            <translation><!-- Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filter</masterLabel>
+            <translation><!-- Filter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selection</masterLabel>
+            <translation><!-- Selection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validation</masterLabel>
+            <translation><!-- Validation --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

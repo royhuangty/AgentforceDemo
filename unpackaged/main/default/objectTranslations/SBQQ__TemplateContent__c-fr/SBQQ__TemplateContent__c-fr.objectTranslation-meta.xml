@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contenu du modèle</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contenus du modèle</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Template Content Layout</layout>
+        <sections>
+            <label>Corps</label>
+            <section>Body</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du contenu</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

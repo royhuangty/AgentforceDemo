@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>B2B Cross Sell</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="effectiveAccountId" type="String" label="Effective Account Id" description="The ID of the account under which the user is acting (BETA)" default="{!CurrentUser.effectiveAccountId}"/>
+            <property name="recordId" type="String" label="Record Id" description="Automatically bind the page's record id to the component variable" default="{!recordId}"/>
+            <property name="displayType" type="String" label="Display Type" datasource="Grid,Stacked" default="Stacked"/>
+            <property name="crossSell_Title" type="String" label="Title" description="Enter CrossSell Component Title" default="Product Recommendations"/>
+            <property name="productType" type="String" label="Product Type" description="Enter the product type to display (Competitive, Related, RequiredItem, CrossSell, UpSell, Complementary, Accessories, Superseded).  No value will display all records."/>
+            <property name="displayImages" type="Boolean" label="Display Product Images" default="True"/>
+            <property name="displayDescription" type="Boolean" label="Display Product Description" description="Activate  it  to  display  Description" default="True"/>
+            <property name="displayQty" type="Boolean" label="Display Quantity" default="True"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

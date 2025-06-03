@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Calendrier de chiffre d&#39;affaires</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Calendriers de chiffre d&#39;affaires</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>Dates des revenus</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>Métriques des revenus</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Enregistrements sources</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>Informations récapitulatives</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>請求サイクル中に注文商品に [請求有効期限の上書き] (BTDO) 値がある場合にのみ適用されます。請求書品目の作成時に部分的な請求期間を以前の完全な期間と組み合わせるか、部分的な期間を個別の請求書品目として残します。</help>
+        <label><!-- Period Treatment for BTDO --></label>
+        <name>blng__PeriodTreatmentForBTDO__c</name>
+    </CustomFieldTranslation>

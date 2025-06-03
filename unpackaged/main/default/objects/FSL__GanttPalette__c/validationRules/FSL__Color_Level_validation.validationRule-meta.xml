@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Color_Level_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>FSL__ColorLevel__c &lt; 4 || FSL__ColorLevel__c &gt; 15</errorConditionFormula>
+    <errorDisplayField>FSL__ColorLevel__c</errorDisplayField>
+    <errorMessage>Color level value cannot be less than 4 or greater than 15</errorMessage>
+</ValidationRule>

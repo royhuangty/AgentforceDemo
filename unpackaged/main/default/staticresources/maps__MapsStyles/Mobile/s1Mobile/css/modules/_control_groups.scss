@@ -1,0 +1,15 @@
+.ma-control-group-link-wrap {
+    padding: .75rem;
+    @include flexbox();
+    @include flexDirection(row);
+    @include flexAlign(center);
+    justify-content: center;
+}
+
+.ma-control-group-content {
+	display:none;
+
+	&.active {
+		display:block;
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Optimization_KPI__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marking this field &#39;TRUE&#39; will include the service resource&#39;s metrics within the Optimization KPI reports and dashboards</description>
+    <label>Optimization KPI</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

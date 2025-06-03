@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>datamask__Type__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>Error</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Execution Completion</masterLabel>
+            <translation>Realización de ejecución</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Execution Start</masterLabel>
+            <translation>Inicio de ejecución</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Processing Completion</masterLabel>
+            <translation>Realización de procesamiento de objetos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Start</masterLabel>
+            <translation>Inicio de objeto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otros</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-Processing Completion</masterLabel>
+            <translation>Realización de postprocesamiento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Processing Completion</masterLabel>
+            <translation>Realización de preprocesamiento</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

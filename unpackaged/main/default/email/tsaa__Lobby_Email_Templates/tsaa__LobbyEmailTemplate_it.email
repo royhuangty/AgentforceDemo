@@ -1,0 +1,10 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+Salve, <br>È stata programmata per te una riunione remota online<br>Clicca sul pulsante "Partecipa" per visualizzare i dettagli della riunione e accedervi.
+
+<p><a href="{!meeting_url}" target="_blank">Partecipa</a></p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>При установке флажка поле &quot;Мин. размер раб. группы&quot; раб. заказа или элемента строки раб. заказа сравнивается с фактич. доступ. кол-вом участников сервис. раб. группы.
+В противном случае, оно сравнивается с полем &quot;Размер раб. группы&quot; сервис. раб. группы.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

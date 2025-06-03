@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programación de descuentos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programaciones de descuentos</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Discount Schedule Layout</layout>
+        <sections>
+            <label>Configuración avanzada</label>
+            <section>Advanced Settings</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de programación</nameFieldLabel>
+    <webLinks>
+        <label><!-- EditTiers --></label>
+        <name>SBQQ__EditTiers</name>
+    </webLinks>
+</CustomObjectTranslation>

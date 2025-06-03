@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Layout</layout>
+        <sections>
+            <label>割り当て/割り当て解除</label>
+            <section>Allocations / Unallocations</section>
+        </sections>
+        <sections>
+            <label>残高</label>
+            <section>Balance</section>
+        </sections>
+        <sections>
+            <label>支払の実行の情報</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>返金</label>
+            <section>Refunds</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>支払番号</nameFieldLabel>
+    <quickActions>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+</CustomObjectTranslation>

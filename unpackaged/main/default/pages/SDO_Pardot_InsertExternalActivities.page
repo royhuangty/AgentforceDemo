@@ -1,0 +1,38 @@
+<apex:page docType="html-5.0" sidebar="false" controller="SDO_Pardot_ImportDataFromCSVController">
+<apex:form >
+<div style="border:1px solid; width:2000px;">
+<div style="height:30px;width:150px;margin-top:20px;margin-left:20px;font-size:15px;color:blue;">
+EXTERNAL_ACTIVITIES_INSERT
+</div>
+<table>
+<tr>
+<td> Business Unit ID </td>
+<td> <apex:inputtext value="{!businessUnitId}"/> </td>
+</tr>
+<tr> 
+<td> Consumer Key </td>
+<td> <apex:inputtextarea value="{!key}" /> </td>
+</tr>
+<tr> 
+<td> Consumer Secret </td>
+<td> <apex:inputtextarea value="{!secret}" /> </td>
+</tr>
+<tr> 
+<td> Username </td>
+<td> <apex:inputtextarea value="{!username}" /> </td>
+</tr>
+<tr> 
+<td> Password </td>
+<td> <apex:inputtextarea value="{!password}" /> </td>
+</tr>
+<td> CSV File </td>
+<tr>
+<td> <apex:inputFile value="{!csvFileBody}"  filename="{!csvAsString}"/> </td>
+</tr>
+<tr>
+<td colspan="2" align="center"> <apex:commandButton value="Insert External Activities" style="color:red;" action="{!insertExternalActivities}" rerender=""/> </td>
+</tr>
+</table>
+</div>
+</apex:form>
+</apex:page>

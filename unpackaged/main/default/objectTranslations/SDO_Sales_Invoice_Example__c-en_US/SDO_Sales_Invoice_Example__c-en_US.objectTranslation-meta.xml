@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoice</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>SDO - Community Invoice Layout</layout>
+        <sections>
+            <label><!-- Invoice Details --></label>
+            <section>Invoice Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SDO - Invoice Layout</layout>
+        <sections>
+            <label><!-- Credit Notes --></label>
+            <section>Credit Notes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt, ob die Transaktion eine Zahlung erstellt hat. 
+Dies gilt nur für abgerechnete Transaktionen.</help>
+        <label><!-- Payment Created --></label>
+        <name>blng__IsPaymentProcessedSuccessfully__c</name>
+    </CustomFieldTranslation>

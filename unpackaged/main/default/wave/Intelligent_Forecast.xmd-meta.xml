@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_HandleTimeUpperBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.avg_HandleTimeUpperBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_HandleTimeLowerBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.avg_HandleTimeLowerBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_ForecastedHandleTime</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.avg_ForecastedHandleTime</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#144680</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_ActualHandleTime</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.avg_ActualHandleTime</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_ForecastedHandleTime</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.avg_ForecastedHandleTime</field>
+        <isDerived>false</isDerived>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#144680</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_ActualHandleTime</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.avg_ActualHandleTime</field>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_HandleTimeUpperBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.avg_HandleTimeUpperBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#8c4b02</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>avg_HandleTimeLowerBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.avg_HandleTimeLowerBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_VolumeUpperBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.sum_VolumeUpperBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_VolumeLowerBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.sum_VolumeLowerBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_ForecastedVolume</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.sum_ForecastedVolume</field>
+        <isDerived>false</isDerived>
+        <sortIndex>10</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#144680</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_ActualVolume</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Trellis_Chart.sum_ActualVolume</field>
+        <isDerived>false</isDerived>
+        <sortIndex>11</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_ForecastedVolume</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.sum_ForecastedVolume</field>
+        <isDerived>false</isDerived>
+        <sortIndex>12</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#144680</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_ActualVolume</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.sum_ActualVolume</field>
+        <isDerived>false</isDerived>
+        <sortIndex>13</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_VolumeUpperBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.sum_VolumeUpperBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>14</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#7526e3</formatValue>
+                <operator xsi:nil="true" />
+                <sortIndex xsi:nil="true" />
+                <value xsi:nil="true" />
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_VolumeLowerBound</referenceField>
+            <sortIndex xsi:nil="true" />
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Time_Series_Chart.sum_VolumeLowerBound</field>
+        <formatCustomFormat>[&quot;####&quot;,0]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>15</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Intelligent_Forecast</waveVisualization>
+</WaveXmd>

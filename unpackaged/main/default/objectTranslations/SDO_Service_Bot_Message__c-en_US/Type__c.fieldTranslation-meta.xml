@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Anything Else</masterLabel>
+            <translation><!-- Anything Else --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chit Chat</masterLabel>
+            <translation><!-- Chit Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confused</masterLabel>
+            <translation><!-- Confused --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Chat</masterLabel>
+            <translation><!-- End Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gratitude</masterLabel>
+            <translation><!-- Gratitude --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greetings</masterLabel>
+            <translation><!-- Greetings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joke</masterLabel>
+            <translation><!-- Joke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profanity</masterLabel>
+            <translation><!-- Profanity --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

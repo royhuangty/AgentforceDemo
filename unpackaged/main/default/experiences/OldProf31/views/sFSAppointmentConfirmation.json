@@ -1,0 +1,136 @@
+{
+  "appPageId" : "5a281a09-63a1-4755-befc-2f68e2516654",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "ce14335c-5ebe-4d8d-a521-5d844ffca6ed",
+  "label" : "SFS Appointment Confirmation",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "252fa13a-0a07-43f1-9641-b1daa3cefcd2",
+          "columns" : [ {
+            "UUID" : "0bcd7797-6224-475a-b0b9-208d9f76a45c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "252fa13a-0a07-43f1-9641-b1daa3cefcd2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "ArrivalWindowMethod" : "Arrival Windows",
+            "allowToConfirmAppt" : true,
+            "cancelButtonValidationString" : "Scheduled, Dispatched",
+            "cancelReasonPicklist" : "None",
+            "cancelStatusId" : "Canceled",
+            "confirmStatusId" : "Dispatched",
+            "minTimeToDisableReschedule" : 0,
+            "operatingHoursId" : "0OHKX000000MIL04AO",
+            "rescheduleButtonValidationString" : "Scheduled, Dispatched",
+            "rescheduleStatusId" : "Scheduled",
+            "schedulingHorizonUnit" : "Days",
+            "schedulingPolicyId" : "a16KX000000Hs54YAC",
+            "sechedulingHorizonValue" : 7,
+            "showCancelButton" : true,
+            "showCommentSection" : true,
+            "showCustomerAddress" : true,
+            "showCustomerName" : true,
+            "showEditLocationButton" : false,
+            "showRescheduleButton" : true
+          },
+          "componentName" : "FSAA:aaRebookingMain",
+          "id" : "c992bef8-ee00-4755-bd38-64cf3c3e76ce",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0bcd7797-6224-475a-b0b9-208d9f76a45c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "31985cd0-6da0-4cc3-b440-dbd6735203bb",
+          "columns" : [ {
+            "UUID" : "61b404e9-6100-4152-8088-c90c2fbe698a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 99
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "31985cd0-6da0-4cc3-b440-dbd6735203bb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 18px;\">Your safety is our #1 Priority</strong></p><p><span style=\"font-size: 12px;\">We will send you a photo of your technician on the day of the service visit.</span></p><p><br></p><p><strong style=\"font-size: 18px;\">Covid Statement</strong></p><p><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">We are actively monitoring the coronavirus (COVID-19) situation and have measures in place to ensure we continue to serve our customers in a way that is safe for both customers and our employees. We are committed to serving the needs of our customers while also having the privilege and responsibility of providing an essential service that our communities rely on.</span></p><p><br></p><p><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">To help minimize impact to service, we will continue to refer to guidelines and protocol provided by the&nbsp;</span><a href=\"https://www.cdc.gov/\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 12px; color: rgb(0, 110, 156); background-color: rgb(255, 255, 255);\">CDC</a><span style=\"font-size: 12px; color: rgb(68, 68, 68);\">&nbsp;and local health officials in the areas we serve.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c3064dae-9796-4d16-86f5-be3830d88ba7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 16px; color: rgba(0, 0, 0, 0.91);\">Need a little extra help scheduling your service appointment? That's ok. Feel free to text with us or call us with the ? bubble in the lower part of your screen.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "64fefa3d-11f7-4d32-b88b-b39a4a11d438",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "61b404e9-6100-4152-8088-c90c2fbe698a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e962988e-8504-434b-babb-6953e9843d24",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "SFS Appointment Confirmation"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "42913d67-e87a-40bf-b70d-6d3454085559",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a86ef42a-e09e-4e5b-8503-506f3a4e2ec3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-sfs-appointment-confirmation"
+}

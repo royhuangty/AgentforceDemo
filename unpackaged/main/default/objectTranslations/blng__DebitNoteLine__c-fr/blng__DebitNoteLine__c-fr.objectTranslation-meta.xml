@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ligne de note de débit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lignes de note de débit</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Line Layout</layout>
+        <sections>
+            <label>Métriques des revenus</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Règles et traitements</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Adresse fiscale</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Numéro de la ligne</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Règle d&#39;approbation qui a généré cette approbation.</help>
+        <label><!-- Rule --></label>
+        <name>sbaa__Rule__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </CustomFieldTranslation>

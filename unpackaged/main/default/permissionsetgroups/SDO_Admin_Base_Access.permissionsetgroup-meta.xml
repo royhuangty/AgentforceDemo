@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes base access for Admin users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Admin - Base Access</label>
+    <permissionSets>SDO_Platform_Email_Template_Builder</permissionSets>
+    <permissionSets>SDO_Platform_Feedback_Management</permissionSets>
+    <permissionSets>SDO_Platform_Files_Connect</permissionSets>
+    <permissionSets>SDO_Platform_Flow_User</permissionSets>
+    <permissionSets>SDO_Platform_Inclusiveness</permissionSets>
+    <permissionSets>SDO_Platform_Manage_Customer_Users</permissionSets>
+    <permissionSets>SDO_Platform_Survey_Advanced_Features</permissionSets>
+    <permissionSets>SDO_Tool_PSBulkActionEditor</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsAdmin</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsUser</permissionSets>
+    <permissionSets>xDO_Base_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

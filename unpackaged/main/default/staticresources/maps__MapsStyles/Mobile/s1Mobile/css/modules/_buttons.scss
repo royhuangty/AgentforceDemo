@@ -1,0 +1,263 @@
+button {
+    cursor: pointer;
+    text-transform: none;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.ma-button {
+	position: relative;
+    display: inline-block;
+    padding: 0;
+    background: 0 0;
+    background-clip: padding-box;
+    color: $blue;
+    font-size: 1rem;
+    line-height: 34px;
+    border:0;
+	border-radius: $radius;   
+    text-decoration: none;
+    -webkit-appearance: none;
+    white-space: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color 50ms linear,background-color 50ms linear;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border:1px solid transparent;
+    
+    &.lightly-padded {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    &.ma-button--shadow {
+        box-shadow: $box-shadow;
+    }
+
+    &.ma-button--invert {
+        color: $white;
+
+        &:active, &.active {
+            background-color: rgba(0,0,0,0.1);
+            color: $white;
+        }
+
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.ma-button--circle-large {
+        width: 55px;
+        height: 55px;
+        padding: 0;
+        text-align: center;
+        border-radius: 100px;
+
+        .ma-icon {
+            width:31px;
+            height:31px;
+            display:block;
+            font-size:31px;
+            line-height:1;
+        }
+    }
+
+}
+
+.ma-button:focus, .ma-button:hover {
+    color: $blue-2;
+    outline: 0 !Important;
+}
+
+.ma-button[disabled], .ma-button.disabled {
+    pointer-events: none;
+    opacity:0.5;
+}
+
+.ma-button[disabled] {
+    color: $border-gray;
+}
+
+.ma-button:active {
+    color: $blue-3;
+    outline: 0 !Important;
+}
+
+.ma-button--white {
+	background-color: $white;
+	color: $blue;
+    border: 1px solid $border-gray;
+}
+
+.ma-button--white:focus, .ma-button--white:hover {
+    background-color: $light-gray;
+}
+
+.ma-button--white:active {
+    background-color: $gray;
+}
+
+
+
+.ma-button.ma-button--blue {
+	@include btnTheme($blue);
+	color: $white;
+}
+
+.ma-button.ma-button--green {
+	@include btnTheme($green);
+	color: $white;
+}
+
+.ma-button.ma-button--red {
+	@include btnTheme($red);
+	color: $white;
+}
+
+.ma-button.ma-button--blue {
+	@include btnTheme($blue);
+	color: $white;
+}
+
+.ma-button.ma-button--yellow {
+	@include btnTheme($yellow);
+	color: $dark-blue;
+}
+
+.ma-button.icon-left .ma-icon {
+    width: 1rem;
+    height: 1rem;
+    margin: .5rem .5rem 0 0;
+    font-size: 1rem;
+    line-height: 1;
+    display: block;
+    float: left;
+}
+
+.ma-button.icon-right .ma-icon {
+    width: 1rem;
+    height: 1rem;
+    margin: .5rem 0 0 .5rem;
+    font-size: 1rem;
+    line-height: 1;
+    display: block;
+    float: right;
+}
+
+.ma-button.button-pad-light {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ma-button.compact {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ma-button-group {
+    @include flexbox();
+}
+
+.ma-button-group .ma-button+.ma-button {
+    margin-left: 0;
+}
+
+.ma-button+.ma-button{
+    margin-left: .25rem;
+}
+
+.ma-button-group .ma-button {
+    border-radius: 0;
+    border-left-width: 0;
+}
+
+.ma-button-group .ma-button:first-child {
+    border-radius: $radius 0 0 $radius;
+    border-left-width: 1px;
+}
+
+.ma-button-group .ma-button:last-child {
+    border-radius: 0 $radius $radius 0;
+}
+
+.background--light-gray .ma-button-group .ma-button {
+    border-color: $border-gray;
+    color: $text-sf;
+}
+
+.background--light-gray .ma-button-group .ma-button.active {
+    background-color: $border-gray;
+    color: $dark-blue;
+}
+
+.ma-button--icon-border, .ma-button--icon-border-filled, .ma-button--icon-container {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+}
+
+.ma-button--icon-more {
+    padding: 0 .5rem;
+}
+
+.ma-button--icon {
+    width: 1rem;
+    height: 1rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+.ma-button--icon.ma-button--icon--x-small {
+    width: .5rem;
+    height: .5rem;
+}
+
+.ma-button-group > *:last-child > .ma-button {
+    border-radius: 0 $radius $radius 0;
+    border-left-width:0;
+}
+
+img.button-spinner {
+    display: block;
+    float: left;
+    width: 21px;
+    height: 21px;
+    max-width: none;
+    margin: -2px 10px 0 0;
+}
+
+.inverted-color {
+    
+    .ma-button {
+        border: 0;
+        min-height: 36px;
+    }
+}
+
+.slds-scope .slds-button.slds-button_icon.slds-button_icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ma-icon {
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+
+.slds-scope .slds-button {
+    font-size: 16px;
+}
+
+.slds-scope .slds-button.slds-button_success[disabled] {
+    color: $color-text-default;
+    opacity: 0.5;
+    pointer-events: none;
+}

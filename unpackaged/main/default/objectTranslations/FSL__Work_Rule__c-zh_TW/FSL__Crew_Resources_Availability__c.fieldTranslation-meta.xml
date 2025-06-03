@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>選取時，將「工作指示」或「工作指示條列項目」中「最少工作人員數」欄位與實際可用的「服務工作人員成員」比較。
+否則，將「最少工作人員數」與「服務工作人員」中的「工作人員數」欄位比較。</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

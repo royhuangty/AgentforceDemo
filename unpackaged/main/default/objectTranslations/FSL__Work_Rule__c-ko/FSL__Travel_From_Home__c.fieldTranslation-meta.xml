@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>(자원의 비용으로) 하루의 자원 일정 시작 몇 분 전으로 이동할 수 있는지 결정합니다.
+비어 있으면 작업 시작 전 모든 이동량이 유효합니다.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

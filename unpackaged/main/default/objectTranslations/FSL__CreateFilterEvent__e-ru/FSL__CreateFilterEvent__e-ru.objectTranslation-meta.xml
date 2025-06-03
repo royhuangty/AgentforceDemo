@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Создание события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Создание событий фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Создание события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Создание событий фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Создания события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Создания событий фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Созданию события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Созданию событий фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Созданием события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Созданием событий фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value><!-- Создании события фильтрации --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value><!-- Создании событий фильтрации --></value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    <gender><!-- Neuter --></gender>
+</CustomObjectTranslation>

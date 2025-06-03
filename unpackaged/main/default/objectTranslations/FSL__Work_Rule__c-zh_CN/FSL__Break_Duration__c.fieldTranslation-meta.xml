@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>决定创建休息的长度。
+如果您不想创建休息，请将此字段留空。</help>
+        <label><!-- Break Duration (minutes) --></label>
+        <name>FSL__Break_Duration__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>กำหนดเวลาเป็นนาทีหลังสิ้นสุดวันในปฏิทินของทรัพยากรสำหรับการเดินทาง (โดยค่าใช้จ่ายของทรัพยากร)
+ถ้าว่างเปล่า จำนวนเงินค่าเดินทางใด ๆ หลังจากสิ้นสุดวันทำงานจะถูกต้อง</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

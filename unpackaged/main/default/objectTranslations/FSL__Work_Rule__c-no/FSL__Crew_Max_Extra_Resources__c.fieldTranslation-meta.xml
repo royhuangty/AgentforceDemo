@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Legg inn et tall hvis du vil begrense antall ekstra tjenesteressurser som kan legges til i mannskapet. La feltet være tomt hvis et hvilket som helst antall tjenesteressurser kan legges til.</help>
+        <label><!-- Maximum Additional Service Resources --></label>
+        <name>FSL__Crew_Max_Extra_Resources__c</name>
+    </CustomFieldTranslation>

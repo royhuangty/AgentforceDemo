@@ -1,0 +1,11 @@
+.slds-scope {
+    .slds-tabs--default__nav {
+        &.slds-tabs--default__nav--small {
+            .slds-tabs--default__link {
+                height: 2rem;
+                line-height: 2rem;
+                font-size: 10px;
+            }
+        }
+    }
+}

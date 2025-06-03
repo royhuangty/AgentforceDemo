@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="font-size: medium; background-color: rgb(255, 255, 255);">Thank you for scheduling an appointment with us. Use the information below to manage your appointment.&nbsp;</span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">Dear {!ServiceAppointment.First_Name__c},</font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial"><br></font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">Here is your appointment information:</font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">Appointment Number: {!ServiceAppointment.AppointmentNumber}</font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">Scheduled for: {!ServiceAppointment.SchStartDateFormatted__c}&nbsp;</font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">{!ServiceAppointment.SchStartTimeFormatted__c} - {!ServiceAppointment.SchEndTimeFormatted__c}</font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial"><br></font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial">Please use this link to make changes:&nbsp;</font><span style="font-size: 12pt;">{!ServiceAppointment.AppointmentUrlFormula__c}</span></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="arial"><br></font></div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><span style="font-size: 12pt;">Thank you again!</span></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

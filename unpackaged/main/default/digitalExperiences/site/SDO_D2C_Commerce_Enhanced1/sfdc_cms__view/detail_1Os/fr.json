@@ -1,0 +1,48 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary Details",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "showMoreProductLabel" : "Afficher plus",
+          "productFieldMapping" : "[{\"entity\": \"OrderItemSummary\",\"name\": \"StockKeepingUnit\",\"label\": \"REF Produit\",\"type\": \"Text(255)\",\"expression\": \"{!Order.OrderItemSummary.StockKeepingUnit}\"},{\"entity\": \"OrderItemSummary\",\"name\": \"Quantity\",\"label\": \"Quantité\",\"type\": \"Number(18, 0)\",\"expression\": \"{!Order.OrderItemSummary.Quantity}\"},{\"entity\": \"OrderItemSummary\",\"name\": \"TotalLineAdjustmentAmount\",\"label\": \"Ajustements de ligne\",\"type\": \"Roll-Up Summary ( Order Product Adjustment Line Item Summary)\",\"expression\": \"{!Order.OrderItemSummary.TotalLineAdjustmentAmount}\"},{\"entity\": \"OrderItemSummary\",\"name\": \"AdjustedLineAmount\",\"label\": \"Sous-Total\",\"type\": \"Formula (Currency)\",\"expression\": \"{!Order.OrderItemSummary.AdjustedLineAmount}\"}]",
+          "productUnavailableMessage" : "(Plus disponible)",
+          "otherAdjustmentsLabel" : "Autres ajustements",
+          "prefixToShippingGroup" : "Expédier à :",
+          "shippingGroupFieldMapping" : "[{\"entity\": \"OrderDeliveryMethod\",\"name\": \"Name\",\"label\": \"Nom\",\"type\": \"Text(255)\",\"expression\": \"{!Order.OrderDeliveryMethod.Name}\"},{\"entity\": \"OrderDeliveryGroupSummary\",\"name\": \"TotalLineAmount\",\"label\": \"Sous-total des frais d'expédition\",\"type\": \"Currency(16, 2)\",\"expression\": \"{!Order.OrderDeliveryGroupSummary.TotalLineAmount}\"}]"
+        },
+        "id" : "9bc6345b-864b-4138-b7ec-4079b385b828"
+      }, {
+        "id" : "a0dca373-4027-4c40-9dda-cd01e9387931",
+        "attributes" : {
+          "text" : "Commande: {!Order.Details.orderNumber}"
+        }
+      }, {
+        "id" : "4e938906-61e7-4ab2-9670-cf1902857c04",
+        "attributes" : {
+          "buttonText" : "Commander à nouveau"
+        }
+      }, {
+        "id" : "2eba5198-468b-47b4-9711-20b3b8de0432",
+        "attributes" : {
+          "orderSummaryHighlightsFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"OrderedDate\",\"label\": \"Date de Commande\",\"type\": \"Date/Time\",\"expression\": \"{!Order.OrderSummary.OrderedDate}\"},{\"entity\": \"OrderSummary\",\"name\": \"Status\",\"label\": \"Statut\",\"type\": \"Picklist\",\"expression\": \"{!Order.OrderSummary.Status}\"}]",
+          "highlightsTitle" : "Détails"
+        }
+      }, {
+        "id" : "16e1a8fc-6ea4-4aba-951c-1cb5d9784588",
+        "attributes" : {
+          "grossTaxOrdersFieldMapping" : "[\n{\"entity\": \"OrderSummary\",\"name\": \"TotalProductAmountWithTax\",\"label\": \"Sous-Total\",\"type\": \"Formula (Currency)\",\"expression\": \"{!Order.OrderSummary.TotalProductAmountWithTax}\"\n},\n{\"entity\": \"OrderAdjustmentAggregateSummary\",\"name\": \"TotalProductPromotionAmount\",\"label\": \"Promotions\",\"type\": \"Currency\",\"expression\": \"{!Order.OrderAdjustmentAggregateSummary.TotalProductPromotionAmount}\"\n},\n{\"entity\": \"OrderSummary\",\"name\": \"TotalAdjDeliveryAmtWithTax\",\"label\": \"Livraison\",\"type\": \"Formula (Currency)\",\"expression\": \"{!Order.OrderSummary.TotalAdjDeliveryAmtWithTax}\"\n},\n{\"entity\": \"OrderSummary\",\"name\": \"TotalTaxAmount\",\"label\": \"Taxes\",\"type\": \"Roll-Up Summary (SUM Order Product Summary)\",\"expression\": \"{!Order.OrderSummary.TotalTaxAmount}\"\n},\n{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\",\"expression\": \"{!Order.OrderSummary.GrandTotalAmount}\"\n}\n]",
+          "netTaxOrdersFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"TotalProductAmount\",\"label\": \"Sous-Total\",\"type\": \"Roll-Up Summary ( Order Product Summary)\",\"expression\": \"{!Order.OrderSummary.TotalProductAmount}\"},{\"entity\": \"OrderAdjustmentAggregateSummary\",\"name\": \"TotalProductPromotionAmount\",\"label\": \"Promotions\",\"type\": \"Currency\",\"expression\": \"{!Order.OrderAdjustmentAggregateSummary.TotalProductPromotionAmount}\"},{\"entity\": \"OrderSummary\",\"name\": \"TotalAdjustedDeliveryAmount\",\"label\": \"Livraison\",\"type\": \"Roll-Up Summary ( Order Product Summary)\",\"expression\": \"{!Order.OrderSummary.TotalAdjustedDeliveryAmount}\"},{\"entity\": \"OrderSummary\",\"name\": \"TotalTaxAmount\",\"label\": \"Taxes\",\"type\": \"Roll-Up Summary (SUM Order Product Summary)\",\"expression\": \"{!Order.OrderSummary.TotalTaxAmount}\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\",\"expression\": \"{!Order.OrderSummary.GrandTotalAmount}\"}]",
+          "totalsCardTitle" : "Total"
+        }
+      }, {
+        "id" : "ea6ababa-3baf-4a0f-9a3d-8227a4afa65c",
+        "attributes" : {
+          "promotionTitle" : "Promotions appliquées"
+        }
+      } ]
+    }
+  },
+  "urlName" : "order-summary-details"
+}

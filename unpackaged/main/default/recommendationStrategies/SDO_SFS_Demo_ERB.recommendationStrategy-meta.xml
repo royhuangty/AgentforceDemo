@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>WorkOrder</contextRecordType>
+    <description>What: Recommendation driven NBA to demonstrate ERB Concept. This is used by the SFS (Field Service Team). Who: Laura Bode &amp; SFS team. When: 2020.</description>
+    <label>SFS - Demo ERB</label>
+    <recommendationLoad>
+        <label>Load SE Recommendation</label>
+        <name>Load_SE_Recommendation</name>
+        <condition>
+            <field>Name</field>
+            <operator>STARTS_WITH</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Einstein Parts Recommendation</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Load_SE_Recommendation</childNode>
+        <label>Output</label>
+        <name>Output_aface7c60d1640239c4c4356ff7f401b</name>
+    </union>
+</RecommendationStrategy>

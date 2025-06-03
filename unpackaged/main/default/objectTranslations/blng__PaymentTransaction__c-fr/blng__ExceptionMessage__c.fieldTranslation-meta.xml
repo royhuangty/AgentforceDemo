@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Message d’exception
+Lorsqu’une transaction est créée et que le paiement n&#39;est pas créé contre la facture</help>
+        <label><!-- Exception Message --></label>
+        <name>blng__ExceptionMessage__c</name>
+    </CustomFieldTranslation>

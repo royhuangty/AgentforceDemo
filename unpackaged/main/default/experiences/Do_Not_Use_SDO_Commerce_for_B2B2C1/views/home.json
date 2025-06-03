@@ -1,0 +1,906 @@
+{
+  "appPageId" : "3a241bdb-3c0c-4a4f-b277-1b94130c2d69",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "aa0a7685-4dfc-4701-9630-2fd1b27d651d",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"e0cf658b-6fdb-47dd-b85f-d4e1f9d2560b\",\"columns\":[{\"UUID\":\"84b7a7c0-c92b-4290-a78f-6401b98800be\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "e0cf658b-6fdb-47dd-b85f-d4e1f9d2560b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerLinkHref" : "javascript:void(0)",
+            "bannerLinkTitle" : "Shop Now",
+            "cmsPickerState" : "{\"title\":\"\",\"alt\":\"\",\"url\":\"https://i.imgur.com/chAl59C.jpeg\",\"isFromCms\":false}",
+            "displayBannerLinkAsButton" : true,
+            "heroTextPosition" : "center",
+            "opacity" : 1,
+            "overlay" : false,
+            "showBannerLink" : true,
+            "slogan" : "Expertly crafted with pride",
+            "sloganColor" : "rgb(0, 0, 0)",
+            "title" : "Welcome to the Cirrus Spare Parts Store",
+            "titleColor" : "rgb(0, 0, 0)"
+          },
+          "componentName" : "b2c_lite_commerce:heroBannerUi",
+          "id" : "fdf2600b-2ad3-49da-9d28-ceb0c95ce1bc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "84b7a7c0-c92b-4290-a78f-6401b98800be",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"9c768f15-0da4-48ae-afb2-b1dd6e4aa63c\",\"columns\":[{\"UUID\":\"857e9ec3-4ece-4aab-8384-d13b94f99112\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "9c768f15-0da4-48ae-afb2-b1dd6e4aa63c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "browseStep" : 3,
+            "headerText" : "Shop By Category",
+            "pageSize" : 4
+          },
+          "componentName" : "b2c_lite_commerce:shopCategory",
+          "id" : "82af671f-c144-4f89-8ab7-ccf4f5f95461",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "857e9ec3-4ece-4aab-8384-d13b94f99112",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"1b6d7931-9b1a-4c0f-a918-dfeb6f660e95\",\"columns\":[{\"UUID\":\"ff81193f-d9a1-42bc-be4b-b4828b9c8e90\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "1b6d7931-9b1a-4c0f-a918-dfeb6f660e95",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "compareType" : "equals",
+            "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}",
+            "featuredProductStyle" : "Tiled",
+            "featuredProductsBackgroundColor" : "rgba(255, 255, 255, 1)",
+            "featuredProductsBodyAlignment" : "Center",
+            "featuredProductsBodySize" : "Regular",
+            "featuredProductsBorderColor" : "rgba(212, 212, 212, 1)",
+            "featuredProductsComponentBackgroundColor" : "rgba(255, 255, 255, 1)",
+            "featuredProductsDescriptionColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsHeading" : "Featured Products",
+            "featuredProductsHeadingAlignment" : "Center",
+            "featuredProductsHeadingColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsHeadingSize" : "Large",
+            "featuredProductsPriceColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsSkuColor" : "rgba(0, 0, 0, 1)",
+            "includePrices" : true,
+            "productSource" : "SKU List",
+            "showDescription" : true,
+            "showHeading" : true,
+            "showSKU" : true,
+            "skuList" : "B-1000, C-100, C-300, IL-100"
+          },
+          "componentName" : "c:b2bFeaturedProducts",
+          "id" : "9cf9f9e3-44b7-4e44-b931-0290fc5af490",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "bannerAlignment" : "center",
+            "bannerLinkAssistiveText" : "",
+            "borderColor" : "",
+            "borderRadius" : 0,
+            "borderWidth" : 0,
+            "buttonDirection" : "horizontal",
+            "buttonGroupAlignment" : "center",
+            "buttonGroupHeight" : 50,
+            "buttonGroupSpacingHorizontal" : "space-evenly",
+            "buttonGroupSpacingVertical" : "space-evenly",
+            "buttonGroupWidth" : 50,
+            "contentPadding" : "none",
+            "contentPosition" : "center left",
+            "contentWidth" : 50,
+            "height" : 354,
+            "imageFit" : "cover",
+            "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCYWAQBQF665DCNFLOXXYCKBQ6T4\",\"altText\":\"\",\"contentKey\":\"MCYWAQBQF665DCNFLOXXYCKBQ6T4\",\"contentType\":null}}",
+            "imagePosition" : "center center",
+            "isBannerLink" : false,
+            "overlayColor" : "",
+            "showButtons" : true,
+            "showSecondaryButton" : false,
+            "singleButtonAlignment" : "center",
+            "width" : 100
+          },
+          "componentName" : "dxp_content_layout:banner",
+          "id" : "3867083d-6e0c-40f8-9186-c30fa4de1cec",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Cirrus is here for you",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h1\", \"textStyle\": \"heading-large\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "49577395-0214-484b-93bd-58d03f5ccf74",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            }, {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "We have the parts you need for your renewable energy project",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "a705a000-32f1-4523-a7be-003207ce52df",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "8edbeb92-34f9-4a3b-a572-876ad98b56dd",
+            "regionName" : "contentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Learn More",
+                "type" : "primary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "8de14ab9-acaf-4973-8d61-1cf7f94b21c7",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "9b855aa6-f7d0-438a-80e2-49f4e099d7f0",
+            "regionName" : "bannerPrimaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Contact Us",
+                "type" : "secondary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "96f83e37-f8e8-427a-838d-87e1e8fca832",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "07b8b1a5-674c-456e-a86a-e9b136b25dad",
+            "regionName" : "bannerSecondaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "dxp_page_layout:placeHolder",
+              "id" : "570ab82e-3adb-4c20-bf5d-9f885af797da",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "6eca2d16-402a-49ec-a541-e0f426f5c686",
+            "regionName" : "placeholder",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ff81193f-d9a1-42bc-be4b-b4828b9c8e90",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"76812210-2f24-4891-9fc9-5d386c639bf0\",\"columns\":[{\"UUID\":\"763ed229-13af-4916-af93-39f79a81154b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "76812210-2f24-4891-9fc9-5d386c639bf0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "callToActionButtonLabel" : "Add To Cart",
+            "displayName" : true,
+            "displayPrice" : true,
+            "displayQuantitySelectorAndCallToActionButton" : false,
+            "headerText" : "Recommended for You",
+            "manualCategoryId" : "",
+            "manualProductId" : "",
+            "maxProductsVisible" : "4",
+            "minProductsVisible" : "2",
+            "priceToDisplay" : "strikethrough",
+            "quantitySelectorLabel" : "qty",
+            "selectedAnchorType" : "noContext",
+            "selectedRecNameCategoryManual" : "most-viewed-by-category",
+            "selectedRecNameCategoryRecord" : "most-viewed-by-category",
+            "selectedRecNameNoContext" : "personalized-for-shopper",
+            "selectedRecNameProductCart" : "similar-products",
+            "selectedRecNameProductManual" : "similar-products",
+            "selectedRecNameProductRecord" : "similar-products"
+          },
+          "componentName" : "b2c_lite_commerce:einsteinProductRecommendations",
+          "id" : "673ad598-60b3-4e1f-8dc4-7affaa022283",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "763ed229-13af-4916-af93-39f79a81154b",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"0c86650c-fbf8-4287-a62b-ec52c856b7f8\",\"columns\":[{\"UUID\":\"e64e1b01-3643-44ad-bfb8-c17e00cb91a5\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "0c86650c-fbf8-4287-a62b-ec52c856b7f8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "browseStep" : 1,
+            "categoryId" : "CHANGEMETOANID",
+            "headerText" : "Top Sellers",
+            "pageSize" : 6
+          },
+          "componentName" : "b2c_lite_commerce:topSellers",
+          "id" : "903dbde1-a398-495f-b9d4-8143175fb39d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(77, 83, 81)",
+            "borderRadius" : 0,
+            "borderWidth" : 0,
+            "buttonDirection" : "horizontal",
+            "buttonGroupAlignment" : "center",
+            "buttonGroupHeight" : 50,
+            "buttonGroupSpacingHorizontal" : "space-evenly",
+            "buttonGroupSpacingVertical" : "space-evenly",
+            "buttonGroupWidth" : 50,
+            "contentBackgroundColor" : "rgb(77, 83, 81)",
+            "contentPadding" : "none",
+            "contentPosition" : "center",
+            "contentWidth" : 100,
+            "height" : 415,
+            "imageAlignment" : "left",
+            "imageFit" : "cover",
+            "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCQFMDFDGLZ5GCVPMU3KOZSWKASI\",\"altText\":\"\",\"contentKey\":\"MCQFMDFDGLZ5GCVPMU3KOZSWKASI\",\"contentType\":null}}",
+            "imagePortion" : "66.67%",
+            "imagePosition" : "center center",
+            "isLink" : false,
+            "linkAssistiveText" : "",
+            "linkUrl" : "",
+            "showButtons" : true,
+            "showSecondaryButton" : false,
+            "singleButtonAlignment" : "center",
+            "width" : 80
+          },
+          "componentName" : "dxp_content_layout:card",
+          "id" : "b13c3b23-32c1-45f9-a64d-31f24ac7ea80",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "You're Mobile. So Are We.",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h1\", \"textStyle\": \"heading-large\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "3a5ad8a1-82f7-4bb1-9204-043748021b17",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            }, {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Download the Cirrus app to find a contractor, get service appointment reminders, access your warranties, and more!",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "1e55bf65-312d-4203-b316-e1ca9cfd7558",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "6c0c5af0-ca9a-4fb2-b152-641cb647d882",
+            "regionName" : "contentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Learn More",
+                "type" : "primary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "0a5b00e5-10c7-4e47-9b94-4acbc6039bad",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "ab8792ff-954d-4ad8-a17b-0f0a6e8d600f",
+            "regionName" : "primaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Contact Us",
+                "type" : "secondary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "27dd4281-0203-479d-8737-f1e2a84785d2",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "7f3297bf-019e-4ebf-914e-e09076cd051c",
+            "regionName" : "secondaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "dxp_page_layout:placeHolder",
+              "id" : "b101fe89-306c-4928-807b-5b43a28f35a7",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "9a18df1f-4676-4a2a-abd1-45eb773e068d",
+            "regionName" : "placeholder",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "borderColor" : "",
+            "borderWidth" : 0,
+            "buttonDirection" : "vertical",
+            "buttonGroupAlignment" : "left",
+            "buttonGroupHeight" : 50,
+            "buttonGroupSpacingHorizontal" : "space-evenly",
+            "buttonGroupSpacingVertical" : "space-evenly",
+            "buttonGroupWidth" : 50,
+            "contentBackgroundColor" : "rgb(255, 255, 255)",
+            "contentHeight" : 50,
+            "contentPadding" : "x-large",
+            "contentWidth" : 50,
+            "height" : 450,
+            "imageFit" : "cover",
+            "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCO74NQVQ6SZGG3OSFBB5QZIDB2A\",\"altText\":\"\",\"contentKey\":\"MCO74NQVQ6SZGG3OSFBB5QZIDB2A\",\"contentType\":null}}",
+            "imageLocation" : "left",
+            "imagePosition" : "center center",
+            "isLink" : false,
+            "linkAssistiveText" : "",
+            "overlapSize" : 75,
+            "overlayColor" : "",
+            "showButtons" : true,
+            "showSecondaryButton" : false,
+            "singleButtonAlignment" : "left",
+            "width" : 100
+          },
+          "componentName" : "dxp_content_layout:overlap",
+          "id" : "45c2d590-ea06-434c-b979-4de77393bfed",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Find your Cirrus Certified Contractor",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h1\", \"textStyle\": \"heading-large\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "ce965642-a660-485e-a768-5ba9d0852e03",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            }, {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "You don't have to take on your renewable energy project yourself. We can connect you with experienced technicians to assist every step of the way. ",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "859bd407-799b-429a-a737-0a4da36f3a70",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "d03da78c-599f-4393-be48-297da7c33450",
+            "regionName" : "contentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Learn More",
+                "type" : "primary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "320f3c1e-4da2-45f1-9abb-1434ee7eea43",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "1c2a37fe-b0bb-4d65-90b8-94adab46c576",
+            "regionName" : "primaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Contact Us",
+                "type" : "secondary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "76d4fc39-6b8d-4abf-9471-62ff44d1dc34",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "20ce7c95-dc0b-4aae-bc0b-157099fbbbd9",
+            "regionName" : "secondaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "dxp_page_layout:placeHolder",
+              "id" : "f79446d4-7bc3-4afa-9112-4cb6fa33eb9e",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "21e01430-8b4e-4477-8c8b-6f6092ead84e",
+            "regionName" : "placeholder",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "callToActionButtonLabel" : "Add to Cart",
+            "displayName" : true,
+            "displayPrice" : true,
+            "displayQuantitySelectorAndCallToActionButton" : false,
+            "headerText" : "Top Selling",
+            "manualCategoryId" : "",
+            "manualProductId" : "",
+            "maxProductsVisible" : "4",
+            "minProductsVisible" : "2",
+            "priceToDisplay" : "strikethrough",
+            "quantitySelectorLabel" : "qty",
+            "selectedAnchorType" : "noContext",
+            "selectedRecNameCategoryManual" : "most-viewed-by-category",
+            "selectedRecNameCategoryRecord" : "most-viewed-by-category",
+            "selectedRecNameNoContext" : "top-selling",
+            "selectedRecNameProductCart" : "similar-products",
+            "selectedRecNameProductManual" : "similar-products",
+            "selectedRecNameProductRecord" : "similar-products"
+          },
+          "componentName" : "b2c_lite_commerce:einsteinProductRecommendations",
+          "id" : "d1561604-fdc5-4875-9c10-c8a9d2621230",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e64e1b01-3643-44ad-bfb8-c17e00cb91a5",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "{\"url\":\"/sfsites/c/cms/delivery/media/MCUFKLP7OYCRCERDSRPZCTHZBAIM?height=144&width=192\",\"contentKey\":\"MCUFKLP7OYCRCERDSRPZCTHZBAIM\",\"altText\":\"\",\"contentType\":\"/sfsites/c/cms/delivery/media/MCUFKLP7OYCRCERDSRPZCTHZBAIM?height=144&width=192\",\"bgPosition\":\"center center\",\"bgSizeOrRepeat\":\"/cover\"}",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"ffe1d326-ae5e-4002-a260-c2e534dbadc4\",\"columns\":[{\"UUID\":\"3ee2efb9-203a-4e4a-8777-2be8e9d71b01\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "ffe1d326-ae5e-4002-a260-c2e534dbadc4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 36px; color: rgb(255, 255, 255);\">IN THE NEWS</span></p>"
+          },
+          "componentName" : "community_builder:richTextEditor",
+          "id" : "f3fe2eda-9c2b-4362-910d-f8dbdbfe67a8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3ee2efb9-203a-4e4a-8777-2be8e9d71b01",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"66f035be-8a1c-4f98-8693-798fae5f5d12\",\"columns\":[{\"UUID\":\"93cb5322-cdfb-484d-a60b-35673ee1e591\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"6\",\"seedComponents\":[]},{\"UUID\":\"40808ee7-b5f8-4224-aab4-c609771660f5\",\"columnName\":\"Column 2\",\"columnKey\":\"caed2\",\"columnWidth\":\"6\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "66f035be-8a1c-4f98-8693-798fae5f5d12",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "borderColor" : "",
+            "borderRadius" : 0,
+            "borderWidth" : 0,
+            "buttonDirection" : "horizontal",
+            "buttonGroupAlignment" : "center",
+            "buttonGroupHeight" : 45,
+            "buttonGroupSpacingHorizontal" : "space-evenly",
+            "buttonGroupSpacingVertical" : "space-evenly",
+            "buttonGroupWidth" : 75,
+            "height" : 325,
+            "imageFit" : "cover",
+            "imageHeight" : 60,
+            "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/cms/delivery/media/MCPP6UWNWPNZDNNH62IQRY5GTPPU\",\"altText\":\"\",\"contentKey\":\"MCPP6UWNWPNZDNNH62IQRY5GTPPU\",\"contentType\":null}}",
+            "imagePosition" : "center center",
+            "isLink" : false,
+            "linkAssistiveText" : "",
+            "showButtons" : true,
+            "showSecondaryButton" : false,
+            "singleButtonAlignment" : "center",
+            "width" : 100
+          },
+          "componentName" : "dxp_content_layout:tile2",
+          "id" : "b5c56bbb-994c-4d9c-a7c0-8d9570789aea",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Customers Embrace Community Solar",
+                "textAlign" : "center",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h2\", \"textStyle\": \"heading-large\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "85b3aeb8-432a-411b-b057-1842baffa25f",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "73b75c7b-66e6-4d6f-9232-60c643e0edb6",
+            "regionName" : "topContentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "The adoption rate is picking up, utilities and solar advocates say, because more consumers grasp the benefits of solar energy and more ratepayers who cannot, or don’t want to, buy their own solar systems find out they can participate in a system on a pro-rata basis.",
+                "textAlign" : "center",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "6b0233c9-8c7f-43ae-9694-3a12290b50a3",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "ba07e34f-e0b8-432a-b3f3-9b2eb4097e7a",
+            "regionName" : "contentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Learn More",
+                "type" : "primary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "f7608515-a465-4144-830b-7bb86d346976",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "06dc5bda-8508-4ba4-b2e0-de0476377edf",
+            "regionName" : "tilePrimaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Contact Us",
+                "type" : "secondary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "56804acc-435e-4a83-823c-8885084b17ff",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "bb25622e-a185-45a2-a7e5-6cb7d6c507da",
+            "regionName" : "tileSecondaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "dxp_page_layout:placeHolder",
+              "id" : "9a57c129-87b6-40ac-97c5-4d2858c6f20f",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "4f79ec75-e287-4257-8baf-626027e4d478",
+            "regionName" : "placeholder",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "93cb5322-cdfb-484d-a60b-35673ee1e591",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "borderColor" : "",
+            "borderRadius" : 0,
+            "borderWidth" : 0,
+            "buttonDirection" : "horizontal",
+            "buttonGroupAlignment" : "center",
+            "buttonGroupHeight" : 45,
+            "buttonGroupSpacingHorizontal" : "space-evenly",
+            "buttonGroupSpacingVertical" : "space-evenly",
+            "buttonGroupWidth" : 75,
+            "height" : 325,
+            "imageFit" : "cover",
+            "imageHeight" : 60,
+            "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/cms/delivery/media/MCDKCISIJYPJAGJFNWJWZ62UJ5Q4\",\"altText\":\"\",\"contentKey\":\"MCDKCISIJYPJAGJFNWJWZ62UJ5Q4\",\"contentType\":null}}",
+            "imagePosition" : "center center",
+            "isLink" : false,
+            "linkAssistiveText" : "",
+            "showButtons" : true,
+            "showSecondaryButton" : false,
+            "singleButtonAlignment" : "center",
+            "width" : 100
+          },
+          "componentName" : "dxp_content_layout:tile2",
+          "id" : "502aaece-f870-490f-bbf1-5da09310691a",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "How to Choose the Best Battery for a Solar Energy System",
+                "textAlign" : "center",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h2\", \"textStyle\": \"heading-large\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "15df1bdd-f9f5-48fc-a7a8-19c90e41cb64",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "452f9fec-de6d-4075-8efa-6fb86ad39383",
+            "regionName" : "topContentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "backgroundColor" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "You’ll come across a lot of complicated product specifications. The most important ones to use during your evaluation are the battery’s capacity & power ratings, depth of discharge (DoD), round-trip efficiency, warranty, and manufacturer. ",
+                "textAlign" : "center",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"headingTag\": \"h3\", \"textStyle\": \"heading-medium\"}"
+              },
+              "componentName" : "dxp_base:textBlock",
+              "id" : "588483a0-a641-49f6-9c32-a42b7492d825",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "34b2f507-944f-47b1-8993-d85f55d7eeed",
+            "regionName" : "contentRegion",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Learn More",
+                "type" : "primary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "5b329bb1-0ffc-4786-87c9-64035b24167d",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "ba1cdc40-5f07-410e-b73b-84d90f7155b4",
+            "regionName" : "tilePrimaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "alignment" : "center",
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Contact Us",
+                "type" : "secondary"
+              },
+              "componentName" : "dxp_base:button",
+              "id" : "5e9559de-8a6e-4b92-8410-36daf8915b70",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "d1c0c030-7799-467f-b2cc-5e74ed6ac99c",
+            "regionName" : "tileSecondaryButton",
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "dxp_page_layout:placeHolder",
+              "id" : "5fb629e2-a5a5-4bb2-b91f-5aa6e0f63ae3",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "55ecfe5d-f305-4d1e-96a0-6fdf1bf6c222",
+            "regionName" : "placeholder",
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "40808ee7-b5f8-4224-aab4-c609771660f5",
+        "regionLabel" : "Column 2",
+        "regionName" : "caed2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "682ae983-b2a5-4f6d-a351-f8e971c61993",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "pageTitle" : "Home",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "community_builder:seoAssistant",
+      "id" : "d9898f9a-2872-4f25-93dd-2577dc2736c1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "934cda7a-7165-43d7-80eb-7438ff537596",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

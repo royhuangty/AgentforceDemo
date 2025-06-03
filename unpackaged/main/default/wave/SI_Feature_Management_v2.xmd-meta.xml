@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>Knowledge_User_Summa_1.A</field>
+        <formatCustomFormat>[&quot;##&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_User_Summa_1.C</field>
+        <formatCustomFormat>[&quot;##&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Case_Attach_Rate_1.A</field>
+        <formatCustomFormat>[&quot;#,###.#%&quot;,1]</formatCustomFormat>
+        <formatDecimalSeparator>.</formatDecimalSeparator>
+        <formatThousandsSeparator>,</formatThousandsSeparator>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>AHC___internal_user_1.E</field>
+        <formatCustomFormat>[&quot;#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Average Handle Time</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_and_Atta_1.B</field>
+        <isDerived>false</isDerived>
+        <label>Attachments</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_and_Atta_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Engagements</label>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_and_Atta_2.B</field>
+        <isDerived>false</isDerived>
+        <label>Attachments</label>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>Engagements_and_Atta_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Engagements</label>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>Article_repeater_tab_1.A</field>
+        <formatCustomFormat>[&quot;####&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Effec_Summ_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Article Views</label>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Effec_Summ_1.B</field>
+        <isDerived>false</isDerived>
+        <label>AI Groundings</label>
+        <sortIndex>10</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Effec_Summ_1.C</field>
+        <isDerived>false</isDerived>
+        <label>Articles with Eng</label>
+        <sortIndex>11</sortIndex>
+    </measures>
+    <measures>
+        <field>Knowledge_Effec_Summ_1.E</field>
+        <isDerived>false</isDerived>
+        <label>AHT Savings</label>
+        <sortIndex>12</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>SI_Feature_Management_v2</waveVisualization>
+</WaveXmd>

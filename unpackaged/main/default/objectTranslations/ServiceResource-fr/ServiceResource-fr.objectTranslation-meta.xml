@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Crew Managment Resource Lightbox --></label>
+        <name>FSL__CrewManagment_Lightbox</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Emergency Fields --></label>
+        <name>FSL__Emergency_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Get Candidates Resource Details --></label>
+        <name>FSL__Get_Candidates_Resource_Details</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Resource Gantt Filter --></label>
+        <name>FSL__Resource_Gantt_Filter</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Resource Lightbox --></label>
+        <name>FSL__Resource_Lightbox</name>
+    </fieldSets>
+    <layouts>
+        <layout>FSL Service Resource Layout</layout>
+        <sections>
+            <label>Vues de ressource</label>
+            <section>Resource Views</section>
+        </sections>
+        <sections>
+            <label>VFS</label>
+            <section>VFS</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Service Resource Layout</layout>
+        <sections>
+            <label><!-- Appointment Assistant Location --></label>
+            <section>Appointment Assistant Location</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Generate Appointment Invite --></label>
+        <name>SDO_Scheduler_Generate_Appointment_Invite</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- Capacity Resource Can&apos;t Be of Type Crew --></errorMessage>
+        <name>FSL__Capacity_Resource_of_Type_Crew</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Resource travel speed must be greater than 0. --></errorMessage>
+        <name>FSL__Resource_travel</name>
+    </validationRules>
+</CustomObjectTranslation>

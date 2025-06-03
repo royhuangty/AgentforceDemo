@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Status of this revenue transaction. --></help>
+        <label><!-- Revenue Transaction Status --></label>
+        <name>blng__RevenueTransactionStatus__c</name>
+    </CustomFieldTranslation>

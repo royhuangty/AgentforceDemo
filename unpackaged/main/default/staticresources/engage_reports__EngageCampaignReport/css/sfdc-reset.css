@@ -1,0 +1,24 @@
+ul li,
+ol li {
+  margin-left: initial;
+  padding-left: initial;
+}
+.noSidebarCell,
+.sidebarCell .fixed {
+  padding: 0;
+}
+html body.sfdcBody {
+  padding: 0 !important;
+}
+html body.sfdcBody .slds-text-body--regular {
+  font-family: 'Salesforce Sans', Arial, sans-serif;
+}
+body.hasMotif {
+  margin: 0;
+}
+body.hasMotif .noSidebarCell {
+  padding: 0;
+}
+body.hasMotif .noSidebarCell .slds-text-body--regular * {
+  font-family: 'Salesforce Sans', Arial, sans-serif;
+}

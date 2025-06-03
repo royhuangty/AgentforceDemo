@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Removes Backup Workflow datetime which starts a trigger to process the send into a new state</description>
+    <environments>Default</environments>
+    <label>MCC_BackupTriggeredSendWorkflow</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

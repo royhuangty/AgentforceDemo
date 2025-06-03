@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt, was abgerechnet wird.
+        Aktive Auftragsprodukte, Nutzungszusammenfassungen oder Abrechnungstransaktionen mit &quot;Nächstes Abrechnungsdatum&quot;/&quot;Nächstes Abrechnungsdatum überschreiben&quot; vor oder am Zieldatum werden in Rechnung gestellt.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </CustomFieldTranslation>

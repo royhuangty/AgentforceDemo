@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Debit Note Layout</layout>
+        <sections>
+            <label><!-- Balance Details --></label>
+            <section>Balance Details</section>
+        </sections>
+        <sections>
+            <label><!-- Tax Address --></label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Apply Tax --></label>
+        <name>blng__ApplyTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancel Tax --></label>
+        <name>blng__CancelTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Estimate Tax --></label>
+        <name>blng__EstimateTax</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ApplyTax --></label>
+        <name>blng__ApplyTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CancelTax --></label>
+        <name>blng__CancelTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EstimateTax --></label>
+        <name>blng__EstimateTax</name>
+    </webLinks>
+</CustomObjectTranslation>

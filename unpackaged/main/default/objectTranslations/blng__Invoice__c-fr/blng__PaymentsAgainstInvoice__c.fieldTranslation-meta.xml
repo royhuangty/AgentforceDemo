@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Somme des montants de paiement alloués à l&#39;en-tête de facture. Ne doit être utilisé que lorsque vous n&#39;utilisez pas les allocations de niveau ligne.</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </CustomFieldTranslation>

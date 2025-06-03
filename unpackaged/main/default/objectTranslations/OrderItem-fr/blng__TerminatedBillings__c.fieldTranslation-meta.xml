@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Montant qui pourrait être annulé d&#39;un produit de commande basé sur la date de fin. Ne peut pas être supérieur au montant de facturation en attente.</help>
+        <label><!-- Terminated Billing Amount (without tax) --></label>
+        <name>blng__TerminatedBillings__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,146 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Cart",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Panier"
+        },
+        "id" : "b5a8746e-fb07-4780-b6e7-56b33108377e"
+      }, {
+        "attributes" : {
+          "text" : "Votre panier est vide"
+        },
+        "id" : "07a574b3-2d4a-4db9-aad9-8d85b9041fa3"
+      }, {
+        "attributes" : {
+          "text" : "Continuer mes achats"
+        },
+        "id" : "417257fa-716c-43f3-88ea-8a0f5649d229"
+      }, {
+        "attributes" : {
+          "text" : "Panier"
+        },
+        "id" : "c80edff6-d192-4cf9-896a-b222299ab1e0"
+      }, {
+        "attributes" : {
+          "text" : "({!Cart.Details.totalProductCount} articles)"
+        },
+        "id" : "09343d07-aa20-4f16-b758-f495796f54df"
+      }, {
+        "attributes" : {
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "incrementValueGuideText" : "Vendu par incréments de {0}",
+          "items" : "{!Cart.Items}",
+          "maximumValueGuideText" : "La quantité maximale est {0}",
+          "minimumValueGuideText" : "La quantité minimale est {0}",
+          "productFieldMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Code Produit:\",\"type\":\"STRING\"}]",
+          "promotionsAppliedSavingsButtonText" : "{amount} Économisé",
+          "skuLabel" : "REF# {0}"
+        },
+        "id" : "d32ff753-c7e1-430d-84f2-97a24ad47128"
+      }, {
+        "attributes" : {
+          "text" : "Afficher plus"
+        },
+        "id" : "37061584-ac27-485e-8a50-a99f95a5e8ab"
+      }, {
+        "attributes" : {
+          "text" : "Vider le panier"
+        },
+        "id" : "194e7fc2-9345-4d30-a4f1-6b3b7cabb0d8"
+      }, {
+        "attributes" : {
+          "text" : "Résumé"
+        },
+        "id" : "3c22b762-0e56-4009-aa88-8abd6bf20154"
+      }, {
+        "attributes" : {
+          "text" : "Promotions"
+        },
+        "id" : "50904e50-dcc6-4870-afdd-da2de994f02b"
+      }, {
+        "attributes" : {
+          "text" : "Expédition"
+        },
+        "id" : "af1f26cd-51b5-42f0-b7d1-629db248ffdf"
+      }, {
+        "attributes" : {
+          "text" : "Sous-total"
+        },
+        "id" : "8a5ff678-7e19-49fd-8b20-fde300adef53"
+      }, {
+        "attributes" : {
+          "text" : "Taxes incluses"
+        },
+        "id" : "23f0f959-46cd-48ca-8828-ff963974e2e9"
+      }, {
+        "attributes" : {
+          "text" : "Taxes"
+        },
+        "id" : "48e8d66e-4b77-4a27-8129-78cc6d1e2701"
+      }, {
+        "attributes" : {
+          "text" : "Total"
+        },
+        "id" : "4eb8018b-3f8c-4356-9517-b98e80187eb4"
+      }, {
+        "attributes" : {
+          "text" : "Codes de réduction"
+        },
+        "id" : "e7971487-e36b-47bc-85b9-26842a6271a3"
+      }, {
+        "attributes" : {
+          "applyCouponButtonProcessingText" : "Application",
+          "applyCouponButtonText" : "Appliquer",
+          "couponInputPlaceholderText" : "Code de réduction..."
+        },
+        "id" : "58d16ae4-96e1-4295-b994-1e91f02b9d7b"
+      }, {
+        "attributes" : {
+          "text" : "Entrez un code promo"
+        },
+        "id" : "a28227bc-3a02-4c2a-926e-063a09218489"
+      }, {
+        "attributes" : {
+          "text" : "Les promotions ne peuvent pas être appliquées aux abonnements."
+        },
+        "id" : "184f4764-8e47-4282-84e8-189327183b3e"
+      }, {
+        "attributes" : {
+          "termsAndConditionsTitleText" : "Termes et conditions"
+        },
+        "id" : "c2bafd7f-96c0-49d0-8a51-22eeba8a5c25"
+      }, {
+        "attributes" : {
+          "text" : "Termes & conditions"
+        },
+        "id" : "a6f4feaa-804a-40cf-b3ee-095eb493f991"
+      }, {
+        "attributes" : {
+          "text" : "Commander"
+        },
+        "id" : "5ad34298-933f-4ca6-8d2f-5e54512a85b4"
+      }, {
+        "attributes" : {
+          "sectionLabel" : "Commande Express"
+        },
+        "id" : "47e26f9e-ff12-4d01-8dfe-098342be50b4"
+      }, {
+        "attributes" : {
+          "addToCartButtonLabel" : "Ajouter au panier",
+          "skuLabel" : "REF:",
+          "unavailablePriceLabel" : "Prix indisponible"
+        },
+        "id" : "b9d28c2c-3bd8-4994-bb78-da7703c37f3e"
+      }, {
+        "attributes" : {
+          "text" : "Vous pourriez également aimer..."
+        },
+        "id" : "ac44309b-d45a-4816-8af5-266165ce94f0"
+      } ]
+    }
+  },
+  "urlName" : "cart"
+}

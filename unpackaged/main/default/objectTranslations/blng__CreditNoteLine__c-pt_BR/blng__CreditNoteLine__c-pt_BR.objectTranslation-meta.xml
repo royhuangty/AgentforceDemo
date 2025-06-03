@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Linha de notas de crédito</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Linhas de notas de crédito</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Credit Note Line Layout</layout>
+        <sections>
+            <label>Métricas de receita</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Regras e tratamentos</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Endereço do imposto</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número de linha</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cochez cette case pour réévaluer les conditions d&#39;approbation intelligente, même si les conditions remplies sont définies sur Tous ou Personnalisé. Si une condition d&#39;approbation intelligente renvoie True, la réévaluation s&#39;arrête et les conditions de la règle sont considérées comme remplies.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </CustomFieldTranslation>

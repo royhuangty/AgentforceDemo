@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Opredeljuje, koliko minut po koncu koledarskega delovnega dneva vira bo na voljo za potovanje (na stroške vira).
+Če je to polje prazno, je veljavna katera koli dolžina potovanja po koncu delovnega dne delovnega dne.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

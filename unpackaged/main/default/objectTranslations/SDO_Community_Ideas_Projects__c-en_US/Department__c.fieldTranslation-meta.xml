@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- What department is responsible for this project? --></help>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <picklistValues>
+            <masterLabel>Business Development &amp; Alliances</masterLabel>
+            <translation><!-- Business Development &amp; Alliances --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Support</masterLabel>
+            <translation><!-- Customer Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Services (HR)</masterLabel>
+            <translation><!-- Employee Services (HR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facilities &amp; Real Estate</masterLabel>
+            <translation><!-- Facilities &amp; Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation><!-- Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Services</masterLabel>
+            <translation><!-- Global Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology (IT)</masterLabel>
+            <translation><!-- Information Technology (IT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Salesforce App</masterLabel>
+            <translation><!-- Internal Salesforce App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Management</masterLabel>
+            <translation><!-- Product Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Research &amp; Development</masterLabel>
+            <translation><!-- Research &amp; Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

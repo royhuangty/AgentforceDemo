@@ -1,0 +1,18 @@
+<apex:page standardStylesheets="false">    
+	<apex:outputPanel rendered="false">
+		<apex:outputText value="{!$Label.et4ae5__Journeys}"/>
+		<apex:outputText value="{!$Label.et4ae5__AddToJourney}"/>
+		<apex:outputText value="{!$Label.et4ae5__AddToJourneyError}"/>
+		<apex:outputText value="{!$Label.et4ae5__AddToJourneySuccess}"/>		
+		<apex:outputText value="{!$Label.et4ae5__AddToJourneyEmptyFieldsErrorTitle}"/>
+		<apex:outputText value="{!$Label.et4ae5__FieldNotAvailableError}"/>
+		<apex:outputText value="{!$Label.et4ae5__DeserializationErrorAddToJourney}"/>				
+		<apex:outputText value="{!$Label.et4ae5__Select_Journey_Message}"/>
+		<apex:outputText value="{!$Label.et4ae5__SelectAJourney}"/>
+		<apex:outputText value="{!$Label.et4ae5__Journey_Name}"/>
+		<apex:outputText value="{!$Label.et4ae5__Journey_Description}"/>
+		<apex:outputText value="{!$Label.et4ae5__Business_Unit}"/>
+		<apex:outputText value="{!$Label.et4ae5__UnknownError}"/>		
+		<apex:outputText value="{!$Label.et4ae5__JourneyBuilderComponent}"/>
+	</apex:outputPanel>    
+</apex:page>

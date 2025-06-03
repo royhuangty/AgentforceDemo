@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Commit Mode --></label>
+        <name>FSL__Commit_Mode__c</name>
+        <picklistValues>
+            <masterLabel>AlwaysCommit</masterLabel>
+            <translation>AlwaysCommit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rollback</masterLabel>
+            <translation>Връщане към предишно стабилно състояние</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

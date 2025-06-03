@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Deal Registration Walkthrough</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Click on the&amp;nbsp;&lt;strong&gt;&quot;Register a Deal&quot;&lt;/strong&gt;&amp;nbsp;button to get started.&lt;/p&gt;</body>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <image>SDO_PRM_Deal_Registration_Image1</image>
+        <imageAltText>Register a Deal button</imageAltText>
+        <imageLocation>Bottom</imageLocation>
+        <isPublished>true</isPublished>
+        <masterLabel>Deal Registration Walkthrough Step 1</masterLabel>
+        <publishedDate>2025-05-05</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2024-11-26</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>Sales__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <timesToDisplay>30</timesToDisplay>
+        <title>Registering a Deal?</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Fill out the form below, and take note of the instructions to your right. Reach out to your CAM with questions.&lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Deal Registration Walkthrough Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>Deal_Registration__c</targetPageKey1>
+        <targetPageType>comm__namedPage</targetPageType>
+        <title>Fill Out Required Details</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <actionButtonLabel>Back to Enablement</actionButtonLabel>
+        <actionButtonLink>/partnercentral/s/enablementprogram/EnablementProgram/Default</actionButtonLink>
+        <body>&lt;p&gt;You&#39;ll see lead details here, as well as a way to convert them into opportunities in button bar on top.&lt;/p&gt;</body>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Site</experience>
+        <experienceContext>SDO_Partner_Central1</experienceContext>
+        <isPublished>false</isPublished>
+        <masterLabel>Deal Registration Walkthrough Step 3</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>Lead</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <title>Congrats!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

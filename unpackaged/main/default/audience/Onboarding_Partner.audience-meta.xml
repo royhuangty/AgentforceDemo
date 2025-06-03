@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Onboarding Partner</audienceName>
+    <container>OldPartner1</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>Contact.Account.$Account.SDO_Partnership_Status__c</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Onboarding</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>a1fe66d0-4da7-46bf-aa6f-234742c8806a$#$bc1bdc2a-25a3-485c-8d63-fd85a27aa4b1</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Flex_Section_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

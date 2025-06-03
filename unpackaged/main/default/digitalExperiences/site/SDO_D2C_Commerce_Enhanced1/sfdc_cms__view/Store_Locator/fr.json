@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Store Locator",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "trouver un magasins"
+        },
+        "id" : "7bf66aa1-601f-416e-88a5-d1c8820b0fe4"
+      } ]
+    }
+  },
+  "urlName" : "store-locator"
+}

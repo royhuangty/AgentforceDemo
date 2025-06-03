@@ -1,0 +1,25 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Historique des commandes"
+        },
+        "id" : "04575c9e-b0a9-435d-80b1-d1dc0def3f65"
+      }, {
+        "attributes" : {
+          "noOrderMessageText" : "Après avoir passé une commande, elle apparaît ici.",
+          "noResultsText" : "Pour afficher les commandes, ajustez vos filtres.",
+          "orderSummaryFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"Id\",\"label\": \"Numéro Commande\",\"type\": \"Lookup()\"},{\"entity\": \"OrderSummary\",\"name\": \"OrderedDate\",\"label\": \"Date de Commande\",\"type\": \"Date/Time\"},{\"entity\": \"OrderSummary\",\"name\": \"Status\",\"label\": \"Statut\",\"type\": \"Picklist\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\"}]",
+          "reorderLabel" : "Commander à nouveau",
+          "showMoreLabel" : "Afficher plus",
+          "viewDetailsLinkLabel" : "Afficher les détails"
+        },
+        "id" : "eda11cb4-5d0e-42cf-b075-16b1b6e1cc67"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

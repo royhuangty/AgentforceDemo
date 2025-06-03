@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Returns TRUE when the currently logged-in user is the one enrolled in the course. --></help>
+        <label><!-- Current User&apos;s Enrollment --></label>
+        <name>Current_User_s_Enrollment__c</name>
+    </CustomFieldTranslation>

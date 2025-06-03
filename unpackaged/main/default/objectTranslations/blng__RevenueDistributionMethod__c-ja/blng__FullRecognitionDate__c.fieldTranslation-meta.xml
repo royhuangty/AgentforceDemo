@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>選択した分配方法が完全の場合、[手動] を選択して日付を入力します。</help>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </CustomFieldTranslation>

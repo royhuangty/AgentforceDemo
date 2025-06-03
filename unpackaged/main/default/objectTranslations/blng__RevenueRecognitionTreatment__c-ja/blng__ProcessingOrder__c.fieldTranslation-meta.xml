@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この収益処理を他のすべての処理よりも前に実行する場合は 1 を入力し、2 番目に実行する場合は 2 を入力します。</help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </CustomFieldTranslation>

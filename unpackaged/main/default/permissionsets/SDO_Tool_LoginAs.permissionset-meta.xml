@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to the login as functionality. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Tool - Login As Tool Permission</label>
+    <classAccesses>
+        <apexClass>SDO_Tool_CommunityLoginCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SDO_Tool_LogMeInCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>User.External_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

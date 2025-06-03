@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認者</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Approver Layout</layout>
+        <sections>
+            <label>代理情報</label>
+            <section>Delegate Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>承認者名</nameFieldLabel>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

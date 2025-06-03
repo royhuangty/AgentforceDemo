@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Het aantal minuten vanaf het begin van de beschikbaarheid van de serviceresource tot de laatste toegestane eindtijd van de pauze. Voer bijvoorbeeld 300 in voor het inplannen van een lunchpauze die uiterlijk 5 uur na het begin van de werkdag is afgelopen.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

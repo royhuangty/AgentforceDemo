@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bidang isian numerik pada sumber daya layanan menjadi dasar penghitungan.</help>
+        <label><!-- Resource Property --></label>
+        <name>FSL__Resource_Property__c</name>
+        <picklistValues>
+            <masterLabel>IsActive</masterLabel>
+            <translation>Aktif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IsCapacityBased</masterLabel>
+            <translation>Berbasis Kapasitas</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

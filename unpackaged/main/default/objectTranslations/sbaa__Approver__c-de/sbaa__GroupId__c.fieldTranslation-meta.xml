@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wenn &quot;Genehmiger&quot; eine Gruppe und kein Einzelbenutzer ist, geben Sie hier die Gruppen-ID an</help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </CustomFieldTranslation>

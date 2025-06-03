@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Cart Upload",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "Carga de carrito"
+        },
+        "id" : "ce970ce7-8cd7-4016-830c-5aa12d57ddb3"
+      } ]
+    }
+  },
+  "urlName" : "cart-upload"
+}

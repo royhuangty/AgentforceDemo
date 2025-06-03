@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Geben Sie die Anzahl der Minuten ein, die einen Leerlaufzeitabstand zwischen Serviceterminen darstellt. Dieses Ziel minimiert die Abstände, die dem eingegebenen Wert entsprechen oder höher sind.</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

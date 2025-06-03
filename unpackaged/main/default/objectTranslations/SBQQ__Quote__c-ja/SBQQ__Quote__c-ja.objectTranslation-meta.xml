@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- Calculating Fields --></label>
+        <name>SBQQ__CalculatingFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Non-Current Quote Locked Fields --></label>
+        <name>SBQQ__NonCurrentQuoteLockedFields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Quote Layout</layout>
+        <sections>
+            <label>追加テキスト</label>
+            <section>Additional Text</section>
+        </sections>
+        <sections>
+            <label>割引情報</label>
+            <section>Discount Information</section>
+        </sections>
+        <sections>
+            <label>パートナー情報</label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label>見積オプション</label>
+            <section>Quote Options</section>
+        </sections>
+        <sections>
+            <label>再計算</label>
+            <section>Recalculating</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>qBrix Quote Layout</layout>
+        <sections>
+            <label><!-- Additional Text --></label>
+            <section>Additional Text</section>
+        </sections>
+        <sections>
+            <label><!-- Discount Information --></label>
+            <section>Discount Information</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Options --></label>
+            <section>Quote Options</section>
+        </sections>
+        <sections>
+            <label><!-- Recalculating --></label>
+            <section>Recalculating</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>見積番号</nameFieldLabel>
+    <quickActions>
+        <label><!-- Create Order --></label>
+        <name>SBQQ__CreateOrderLightning</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- The End Date must come after the Start Date. --></errorMessage>
+        <name>SBQQ__End_Date_Before_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Segment Term End Date must fall between Quote Start Date and Quote End Date --></errorMessage>
+        <name>SBQQ__Invalid_First_Segment_Term_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The subscription term must be a positive number. --></errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Preview_Approvals --></label>
+        <name>Preview_Approvals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CalculateQuote --></label>
+        <name>SBQQ__CalculateQuote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrderFromQuote --></label>
+        <name>SBQQ__CreateOrderFromQuote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EditLines --></label>
+        <name>SBQQ__EditLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GenerateDocument --></label>
+        <name>SBQQ__GenerateDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ImportLines --></label>
+        <name>SBQQ__ImportLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- IncludeDocument --></label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ModifyQuoteTerms --></label>
+        <name>SBQQ__ModifyQuoteTerms</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PreviewDocument --></label>
+        <name>SBQQ__PreviewDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshMultiplePrices --></label>
+        <name>SBQQ__RefreshMultiplePrices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshPrices --></label>
+        <name>SBQQ__RefreshPrices</name>
+    </webLinks>
+</CustomObjectTranslation>

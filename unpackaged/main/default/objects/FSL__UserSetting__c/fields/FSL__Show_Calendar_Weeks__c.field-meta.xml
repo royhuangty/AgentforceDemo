@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Show_Calendar_Weeks__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Show Calendar Weeks in Gantt</description>
+    <label>Show Calendar Weeks in Gantt</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

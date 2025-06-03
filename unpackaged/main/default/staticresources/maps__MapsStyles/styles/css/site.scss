@@ -1,0 +1,332 @@
+html, body {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+	background-color: #EAEAEA;
+}
+
+#projectWrap {
+	background-color: #fff;
+	height: 100%;
+	overflow-y: auto;
+	width: 100%;
+	max-width: 350px;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+
+	.plotted-boundary-unit-pad {
+		position: relative;
+		padding: 12px 12px 12px 16px;
+	}
+
+	.plotted-boundary-unit-pad-bottom-0 {
+		position: relative;
+		padding: 12px 12px 0 16px;
+	}
+
+	.plotted-boundary-unit-partial-divider {
+		height:1px;
+		background-color: $border-gray;
+		width:calc(100% - 16px);
+		margin-left: 16px;
+	}
+
+	table.plotted-boundary-unit-table {
+		
+		tr {
+
+			td {
+			    padding: 4px;
+
+			    .slds-form-element__label {
+			    	margin-right: 8px;
+			    }
+
+			    &.radius-traffic-day-wrap {
+			    	padding-top: 8px;
+			    }
+
+			    &.radius-traffic-time-range {
+			    	padding-top: 8px;
+			    }
+
+			    &:first-child {
+			    	padding-left:0;
+			    }
+
+			    &:last-child {
+			    	padding-right:0;
+			    }
+
+			    &.plotted-radius-travel-type-wrap {
+			    	width: 95px;
+			    }
+			}
+		}
+	}
+}
+
+.lds {
+
+	 .radius-fill-color-input .slds-input {
+		width: 80px;
+	    padding: 0 8px;
+	    text-align: center;
+	    background-color: $blue;
+	    color: #fff;
+	    border-color: rgba(0,0,0,0.16);
+	}
+
+	.radius-border-color-input .slds-input {
+		width: 80px;
+	    padding: 0 8px;
+	    text-align: center;
+	    background-color: $dark-blue;
+	    color: #fff;
+	    border-color: rgba(0,0,0,0.16);
+	}
+
+	.radius-time-field .slds-input {
+		width: 50px;
+		padding:0 8px 0 12px;
+	}
+}
+
+td.radius-traffic-value {
+	color: $dark-blue;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 9px !important;
+    width: 150px;
+}
+
+.plotted-radius-traffic-toggle-label {
+	padding-top:4px;
+}
+
+.radius-traffic-day-wrap {
+	vertical-align: top;
+
+	> div {
+	    float: left;
+	    width: 21px;
+	    text-align: center;
+	    height: 21px;
+	    cursor: pointer;
+	    line-height: 21px;
+	    color: $dark-blue;
+	    border-radius: 24px;
+	    margin-right: 2px;
+
+	    &:hover {
+	    	background-color: $gray;
+	    }
+
+	    &.active, &:active {
+	    	background-color: $light-blue;
+	    	color: #fff;
+	    }
+	}
+}
+
+.radius-traffic-time-scale {
+position: relative;
+
+	div {
+		text-align: center;
+		width: 25%;
+		float:left;
+		font-size: 9px;
+		position: relative;
+		padding-top: 10px;
+
+		&::after {
+			content: ' ';
+			position: absolute;
+			left: calc(50% - 1px);
+			height: 6px;
+			width:1px;
+			background-color: $sf-text;
+			opacity: .5;
+			top:0;
+		}
+	}
+}
+
+.lds {
+
+	.slds-button--neutral {
+
+		&.slds-button--icon-border {
+			padding-left:0;
+			padding-right:0;
+		}
+
+	}
+
+	.plotted-radius-remove-button {
+		position: absolute;
+		top: 2px;
+		right: 2px;
+	}
+
+	.plotted-boundary-radius-unit.slds-card+.plotted-boundary-radius-unit.slds-card {
+		margin-top: 8px;
+	}
+
+	.plotted-boundary-traffic-table {
+		margin-top: 16px;
+	}
+}
+
+.ma-divider {
+	width:100%;
+	height: 1px;
+	background-color: $border-gray;
+}
+
+.ma-form-control-wrap-range {
+  position: relative;
+
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+  /* Special styling for WebKit/Blink */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 17px;
+    width: 17px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+    transition: all .15s;
+
+    &:hover {
+      box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+      border-color: $medium-gray;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0,0,0,0.32);
+      border-color: $medium-gray;
+      margin-top: -8px;
+      height: 21px;
+      width: 21px;
+    }
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background: #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.16);
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $blue;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]::-ms-fill-lower {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: $blue;
+  }
+  input[type=range]::-ms-fill-upper {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 4px;
+    border: 0;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: $blue;
+  }
+}

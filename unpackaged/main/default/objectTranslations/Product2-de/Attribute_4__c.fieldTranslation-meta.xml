@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Color --></label>
+        <name>Attribute_4__c</name>
+        <picklistValues>
+            <masterLabel>Black</masterLabel>
+            <translation><!-- Black --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gray</masterLabel>
+            <translation><!-- Gray --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>White</masterLabel>
+            <translation><!-- White --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

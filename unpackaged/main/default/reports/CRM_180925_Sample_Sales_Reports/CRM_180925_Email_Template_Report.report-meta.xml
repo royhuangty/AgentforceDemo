@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EmailTemplate$Name</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TemplateType</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TotalDelivered</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TotalOpens</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TotalSent</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TotalHardBounced</field>
+    </columns>
+    <columns>
+        <field>EmailTemplate$TotalSoftBounced</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Which email template results in the best target engagement?</description>
+    <format>Summary</format>
+    <name>Email Template Engagement Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Email_Template__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EmailTemplate$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

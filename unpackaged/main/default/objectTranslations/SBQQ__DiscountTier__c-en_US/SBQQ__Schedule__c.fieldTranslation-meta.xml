@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Discount Schedule to which this tier belongs. --></help>
+        <label><!-- Schedule --></label>
+        <name>SBQQ__Schedule__c</name>
+        <relationshipLabel><!-- Discount Tiers --></relationshipLabel>
+    </CustomFieldTranslation>

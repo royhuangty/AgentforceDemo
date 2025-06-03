@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants access to all Survey features, apps, and functionality.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Survey - All Permissions</label>
+    <permissionSets>SDO_Platform_SurveyCreatorPSL</permissionSets>
+    <permissionSets>SDO_Platform_Survey_Access</permissionSets>
+    <permissionSets>SDO_Platform_Survey_Advanced_Features</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

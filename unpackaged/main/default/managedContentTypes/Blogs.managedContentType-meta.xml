@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedContentType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Official blog post.</description>
+    <developerName>Blogs</developerName>
+    <managedContentNodeTypes>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>true</isRequired>
+        <nodeLabel>Blog Title</nodeLabel>
+        <nodeName>BlogTitle</nodeName>
+        <nodeType>NAMEFIELD</nodeType>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Details</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Blog Detail</nodeLabel>
+        <nodeName>BlogDetail</nodeName>
+        <nodeType>RTE</nodeType>
+        <placeholderText>Detailed description</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Upload an image that sets the tone for this blog entry.</helpText>
+        <isLocalizable>false</isLocalizable>
+        <isRequired>true</isRequired>
+        <nodeLabel>Blog Main Image</nodeLabel>
+        <nodeName>BlogImageMain</nodeName>
+        <nodeType>IMG</nodeType>
+        <placeholderText>Main image for this blog entry.</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Second image for this blog entry.</helpText>
+        <isLocalizable>false</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Blog Secondary Image</nodeLabel>
+        <nodeName>BlogSecondaryImage</nodeName>
+        <nodeType>IMG</nodeType>
+        <placeholderText>This is a secondary image for the blog entry.</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Category</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Blog Category</nodeLabel>
+        <nodeName>BlogCategory</nodeName>
+        <nodeType>MTEXT</nodeType>
+        <placeholderText>Enter a Category..</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Flag</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Blog Flag</nodeLabel>
+        <nodeName>BlogFlag</nodeName>
+        <nodeType>MTEXT</nodeType>
+        <placeholderText>Enter details to flag to users..</placeholderText>
+    </managedContentNodeTypes>
+    <managedContentNodeTypes>
+        <helpText>Action button text goes here</helpText>
+        <isLocalizable>true</isLocalizable>
+        <isRequired>false</isRequired>
+        <nodeLabel>Action Text</nodeLabel>
+        <nodeName>ActionText</nodeName>
+        <nodeType>MTEXT</nodeType>
+        <placeholderText>Find out more, Act now or View More etc....</placeholderText>
+    </managedContentNodeTypes>
+    <masterLabel>Blog</masterLabel>
+</ManagedContentType>

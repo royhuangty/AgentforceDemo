@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>オンの場合、このステップのすべての承認は並行して行われます。この設定は、ネイティブ承認で高度な承認を使用するときにのみ有効になります。</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </CustomFieldTranslation>

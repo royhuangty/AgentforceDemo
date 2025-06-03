@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Price book that this discount schedule applies to. Only used in combination with Product lookup to assign product/price book specific schedule. --></help>
+        <label><!-- Price Book --></label>
+        <name>SBQQ__Pricebook__c</name>
+        <relationshipLabel><!-- Discount Schedules --></relationshipLabel>
+    </CustomFieldTranslation>

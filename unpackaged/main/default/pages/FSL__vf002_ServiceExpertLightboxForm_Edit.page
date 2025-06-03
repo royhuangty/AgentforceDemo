@@ -1,0 +1,74 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment" lightningStylesheets="true" extensions="FSL.ctrl002_ServiceExpertLightboxForm" >
+
+
+
+	<style>
+		body {
+			margin-top: -8px !important;
+		}
+	
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+		}
+
+		.labelCol{
+			width: 15% !important;
+		}
+		
+		input[type=submit] {
+			/*margin-left: 130px !important;
+			padding: 6px 10px !important;*/
+            margin-top: 3px !important;
+		}
+
+		.message {
+			margin-top: 8px !important;
+		}
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+/*        .pbBottomButtons .pbButtonb {
+            text-align: right !important;
+            padding-right: 16px;
+        }
+*/
+        .dataCol {
+            max-width: 330px;
+        }
+	</style>
+
+
+	  <apex:form >
+			
+			<apex:pageMessages ></apex:pageMessages>
+			
+			<apex:pageBlock mode="edit">
+				<apex:pageBlockButtons >
+					<apex:commandButton action="{!save}" value="{!$Label.FSL__SaveChanges}" />
+				</apex:pageBlockButtons>
+			     
+			   <apex:pageBlockSection title="{!$Label.FSL__ServiceInfo}" columns="2">
+                    <apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox}" var="d">
+                        <apex:inputField value="{!ServiceAppointment[d]}" required="{!d.Required}"/>
+                    </apex:repeat> 
+                 </apex:pageBlockSection>
+                
+                  <apex:pageBlockSection title="{!$Label.FSL__DateAndTime}" columns="2">
+                    <apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox_Time}" var="t">
+                        <apex:inputField value="{!ServiceAppointment[t]}" required="{!t.Required}"/>
+                    </apex:repeat> 
+                 </apex:pageBlockSection>
+                 <apex:pageBlockSection title="{!$Label.FSL__Address}" columns="2">
+                    <apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox_Address}" var="ad">
+                        <apex:inputField value="{!ServiceAppointment[ad]}" required="{!ad.Required}"/>
+                    </apex:repeat> 
+                 </apex:pageBlockSection>
+			</apex:pageBlock>
+		   
+		 </apex:form>
+
+
+</apex:page>

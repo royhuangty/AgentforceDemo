@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SDO - Partner Central</container>
+    <containerType>Network</containerType>
+    <label>Account Settings</label>
+    <navigationMenuItem>
+        <label>Account Information</label>
+        <menuItemBranding>
+            <tileImage>iconprofileinfo</tileImage>
+        </menuItemBranding>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/account-information</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Account Branding</label>
+        <menuItemBranding>
+            <tileImage>iconaccountbrand</tileImage>
+        </menuItemBranding>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/account-branding</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Member Management</label>
+        <menuItemBranding>
+            <tileImage>iconmemberdirectory</tileImage>
+        </menuItemBranding>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/member-management</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Order History</label>
+        <menuItemBranding>
+            <tileImage>iconorderhistory</tileImage>
+        </menuItemBranding>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/order-history</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Assets</label>
+        <menuItemBranding>
+            <tileImage>iconassets</tileImage>
+        </menuItemBranding>
+        <position>5</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/assets</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Invoices</label>
+        <menuItemBranding>
+            <tileImage>iconinvoices</tileImage>
+        </menuItemBranding>
+        <position>6</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/invoices</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Cases</label>
+        <menuItemBranding>
+            <tileImage>iconcases</tileImage>
+        </menuItemBranding>
+        <position>7</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/comm-my-account/account-settings/cases</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

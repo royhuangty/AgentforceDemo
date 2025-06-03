@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Override the record shown when a user clicks on a record. The Id field to use when navigating goes here. --></help>
+        <label><!-- Drilldown Id Field --></label>
+        <name>bmpyrckt__Drilldown_Id_Field__c</name>
+    </CustomFieldTranslation>

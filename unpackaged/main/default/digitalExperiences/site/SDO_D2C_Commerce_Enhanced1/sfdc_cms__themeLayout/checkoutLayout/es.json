@@ -1,0 +1,21 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Checkout Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "headingLabelText" : "Seleccione su ubicación",
+          "pickerButtonLabelText" : "Cambiar ubicación"
+        },
+        "id" : "75076302-ed51-4aff-bbb9-e6c1b9fafedf"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">© Copyright 2025 Salesforce.com, inc. | This is not a real company. </span></p><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">It is used for Salesforce demos. No orders will be processed.</span></p>"
+        },
+        "id" : "f3c1434f-d3ad-457a-92b4-046503284081"
+      } ]
+    }
+  },
+  "urlName" : "checkout-layout"
+}

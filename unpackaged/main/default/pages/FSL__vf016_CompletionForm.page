@@ -1,0 +1,86 @@
+<apex:page StandardController="ServiceAppointment" extensions="FSL.Ctrl016_CompletionForm" showHeader="false" applyBodyTag="false" applyHtmlTag="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />        
+        <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+        <apex:stylesheet value="{!$Resource.FSL__GeneralActionStyles}" />
+        <apex:stylesheet value="{!$Resource.FSL__vf015_ChangeServiceStatusCss}" />
+        <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+        <apex:includeScript value="{!$Resource.FSL__jSignature_min}" />
+        <apex:includeScript value="{!$Resource.FSL__jSignature_canvas_js}" />
+        <apex:includeScript value="/canvas/sdk/js/publisher.js" />
+        <script type='text/javascript' src='/support/console/31.0/integration.js' />
+        <apex:includeScript value="{!$Resource.FSL__quickaction_utils_js}" />
+        <apex:includeScript value="{!$Resource.FSL__VF016_JS}" />
+        <script type="text/javascript">
+        	
+            Sfdc.canvas.publisher.subscribe({name: "publisher.showPanel", onData:function(e) {
+                Sfdc.canvas.publisher.publish({name:"publisher.setValidForSubmit", payload:"true"});
+            }});
+
+            Sfdc.canvas.publisher.subscribe({ name: "publisher.post", onData: function(e) {
+                mobileViewPrepareToSave();
+            }});
+
+            var RemoteActions = {
+                updateService : '{!$RemoteAction.Ctrl016_CompletionForm.updateService}'
+        
+            };
+            $(document).ready(function(){
+                var status ='';
+                if(typeof Sfdc !== "undefined" && typeof sforce !== 'undefined' && sforce.one!==undefined){
+                        status=getQueryVariable('status');
+                }
+                else{
+                     status= $('.ToStatusVal').text();
+                }
+               
+                serviceWrapper.toStatus = status;
+                openSignCanvas();
+            });
+        </script>
+    </head>
+    <body>
+    	<div id='PinnedService' style="display:none">
+	    	<i class="fa fa-thumb-tack"></i>
+			<div id="PinnedText">{!$Label.PinnedServiceChangeStatus}</div>
+    	</div>
+        <div style="display:none">
+            <span class="serviceId">{!ServiceAppointment.Id}</span>
+            <span class="serviceStatus">{!ServiceAppointment.Status}</span>
+            <!-- <span class="serviceResource">{!ServiceAppointment.Resource__c}</span> -->
+            <span class="servicePinned">{!ServiceAppointment.Pinned__c}</span>
+            <!-- <span class="completedValue">{!completedVal}</span> -->
+            <!-- <span class="ToStatusVal">{!ToStatusVal}</span> -->
+            <!-- <span class="currentLat"></span> -->
+            <!-- <span class="currentLon"></span> -->
+        </div>
+        <div class="bs" style="display:none">
+            <header>
+                <h1>{!$Label.Completion_form}</h1>
+            </header>
+            <div class="success-msg-container text-center dn">
+                <div id="UpdatedStatusSeccessfully">
+                    <span id="SuccessUpdateMessage" class="sr-only"></span>
+                    <span>{!$Label.Updated_status_successfully}</span>
+                </div>
+            </div>
+             <div id="UpdatedStatusFailed"  style="display:none">
+           		 <div  class="inputLabel no-legal-statuses " role="alert" style="text-align: center; font-size:15px;"> 
+					<span >{!$Label.FailedToUpdateStatus}</span>	
+				</div>
+			</div>
+            <div id="BackToTheFirstPage">{!$Label.Back}</div>
+            <div class="signature-container" >
+                <div class="inputLabel" style="padding-top:11px" >{!$Label.Sign_to_approve}</div>
+                <div id="signature"></div>
+                <div class="compl-buttons btn-group-padding text-center">
+                    <div class="sig-page-button globalBlueButton approve-comp-btn">{!$Label.Save}</div>
+                    <div class="sig-page-button globalWhiteButton" onclick="$('#signature').jSignature('clear');">{!$Label.Clear}</div>
+               </div>
+            </div>
+        </div>
+        <apex:form >
+            <apex:actionFunction action="{!back}" name="backTest" oncomplete="Back()"/>
+        </apex:form> 
+    </body>
+</apex:page>

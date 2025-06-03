@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quy Tắc Công Việc</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Quy Tắc Công Việc --></value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Maximum Travel From Homebase Layout</layout>
+        <sections>
+            <label>Các trường</label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Resource Availability Layout</layout>
+        <sections>
+            <label>Nâng cao</label>
+            <section>Advanced</section>
+        </sections>
+        <sections>
+            <label>Lịch Giờ Nghỉ</label>
+            <section>Break Schedule</section>
+        </sections>
+        <sections>
+            <label>Thời Gian Di Chuyển (Trong chi phí tài nguyên)</label>
+            <section>Travel Time (At the expense of the resource)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Working Territories</layout>
+        <sections>
+            <label>Nâng cao</label>
+            <section>Advanced</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Tên Quy Tắc Công Việc</nameFieldLabel>
+    <recordTypes>
+        <description><!-- Set limits for the work capacity of service resources in a given service territory according to specified criteria. --></description>
+        <label><!-- Field Service - Work Capacity Rule --></label>
+        <name>FSL__Capacity_Limit_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Limits service resources based on a number of items such as service appointments, appointment durations, or custom field values --></description>
+        <label><!-- Field Service - Count Rule --></label>
+        <name>FSL__Count_Rule</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Matches a property between a service appointment object to a property cointained in a list in service resource object --></description>
+        <label><!-- Field Service - Extended Match --></label>
+        <name>FSL__Enhanced_Match_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ensures that the assigned resource for the service appointment is not one of the excluded resources --></description>
+        <label><!-- Field Service - Excluded Resources --></label>
+        <name>FSL__Excluded_Resources_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Match service resource working territories --></description>
+        <label><!-- Field Service - Working Territories --></label>
+        <name>FSL__Field_Working_Locations</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ensures that the service resource is available for a service appointment --></description>
+        <label><!-- Field Service - Service Resource Availability --></label>
+        <name>FSL__Gap_Rule_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Validates boolean property is set to true or false --></description>
+        <label><!-- Field Service - Match Boolean --></label>
+        <name>FSL__Match_Boolean_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Match crew size to  service parent minimum crew size --></description>
+        <label><!-- Field Service - Service Crew Resources Availability --></label>
+        <name>FSL__Match_Crew_Size_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Matches a property between a service appointment object and a service resource object --></description>
+        <label><!-- Field Service - Match Fields --></label>
+        <name>FSL__Match_Fields_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Matches the territory between a service appointment object and a service resource object with Relocation support --></description>
+        <label><!-- Field Service - Match Territory --></label>
+        <name>FSL__Match_Location_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Matches the required skills for a service appointment with the service resource&apos;s skills --></description>
+        <label><!-- Field Service - Match Skills --></label>
+        <name>FSL__Match_Skills_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Limits service resources travel distance\time from home --></description>
+        <label><!-- Field Service - Maximum Travel From Home --></label>
+        <name>FSL__Max_Travel_From_Home_To_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ensures that the assigned resource for the service appointment is one of the required resources --></description>
+        <label><!-- Field Service - Required Resources --></label>
+        <name>FSL__Required_Resources_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ensures that the service appointment is scheduled within the customer defined visiting hours. --></description>
+        <label><!-- Field Service - Service Appointment Visiting Hours --></label>
+        <name>FSL__Service_Visiting_Hours</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ensures that the service appointment is permitted to be scheduled on the time slots it is spread upon. --></description>
+        <label><!-- Field Service - TimeSlot Designated Work --></label>
+        <name>FSL__TimeSlot_Designated_Work</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Limits the scheduling time window according to service appointment datetime properties --></description>
+        <label><!-- Field Service - Match Time Rule --></label>
+        <name>FSL__Time_Rule_Service</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Time Operator should be &apos;Before or Equal To&apos; when Service Schedule Time Property is &apos;SchedEndTime&apos; --></errorMessage>
+        <name>FSL__Check_time_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Duration must be positive --></errorMessage>
+        <name>FSL__Greater_than_zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Maximum Travel from Home must be positive. --></errorMessage>
+        <name>FSL__Maximum_Travel_Must_Be_Positive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Minimum gap should not be negative --></errorMessage>
+        <name>FSL__Minimum_Gap_Positive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Time must be in the following format: HH:MM --></errorMessage>
+        <name>FSL__Start_Of_Day_Time_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Time must be in the following format: HH:MM --></errorMessage>
+        <name>FSL__Time_Format</name>
+    </validationRules>
+</CustomObjectTranslation>

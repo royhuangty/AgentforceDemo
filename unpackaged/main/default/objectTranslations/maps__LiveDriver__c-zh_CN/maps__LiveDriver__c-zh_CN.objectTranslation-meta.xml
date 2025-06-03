@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>地图实时司机</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Maps Live Driver Layout</layout>
+        <sections>
+            <label>司机远程信息处理警报</label>
+            <section>Driver Telematics Alerts</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>地图实时司机名称</nameFieldLabel>
+</CustomObjectTranslation>

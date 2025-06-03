@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>PMT Project Page Layout FY20-Q1</layout>
+        <sections>
+            <label><!-- Impact Assessment --></label>
+            <section>Impact Assessment</section>
+        </sections>
+        <sections>
+            <label><!-- Portfolio Management --></label>
+            <section>Portfolio Management</section>
+        </sections>
+        <sections>
+            <label><!-- Project Charter --></label>
+            <section>Project Charter</section>
+        </sections>
+        <sections>
+            <label><!-- Project Outline --></label>
+            <section>Project Outline</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>inov8__Create_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Phases --></label>
+        <name>inov8__Create_Phases</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Tasks --></label>
+        <name>inov8__Create_Tasks</name>
+    </quickActions>
+    <sharingReasons>
+        <label><!-- Project Member --></label>
+        <name>inov8__Project_Member</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Initial End date must be after Initial Start date. --></errorMessage>
+        <name>inov8__InitialStartDate_should_be_less</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Path to Green field should be used only for Late, At Risk or On Hold projects. Please use Health Comment for On Track projects --></errorMessage>
+        <name>inov8__Path_to_Green_should_be_blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SOX Comment should be blank if SOX Impact is not checked --></errorMessage>
+        <name>inov8__SOX_Comment_Blank_SOX_Impact_unchecked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SOX Comment should not be blank if SOX Impact is checked --></errorMessage>
+        <name>inov8__SOX_comment_not_null_when_SOX_checked</name>
+    </validationRules>
+</CustomObjectTranslation>

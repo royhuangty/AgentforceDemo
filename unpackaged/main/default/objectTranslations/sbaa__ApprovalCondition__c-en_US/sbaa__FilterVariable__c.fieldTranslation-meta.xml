@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Approval Variable to evaluate the Tested Field/Variable against --></help>
+        <label><!-- Filter Variable --></label>
+        <name>sbaa__FilterVariable__c</name>
+        <relationshipLabel><!-- Approval Condition (Filter Variable) --></relationshipLabel>
+    </CustomFieldTranslation>

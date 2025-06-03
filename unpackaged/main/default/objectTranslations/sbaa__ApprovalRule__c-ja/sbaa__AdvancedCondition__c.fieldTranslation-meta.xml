@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>[一致条件] が [カスタム] の場合にのみ入力できます。承認条件インデックス番号、AND、OR、および括弧の組み合わせを入力します ((123 AND 124) AND 125 など)。</help>
+        <label><!-- Advanced Condition --></label>
+        <name>sbaa__AdvancedCondition__c</name>
+    </CustomFieldTranslation>

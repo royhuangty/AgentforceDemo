@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Référencez l&#39;utilisateur auquel l&#39;approbation est attribuée.</help>
+        <label><!-- Assigned To --></label>
+        <name>sbaa__AssignedTo__c</name>
+        <relationshipLabel><!-- Approvals (Assigned To) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Based On</fullName>
+        <default>false</default>
+        <label>Based On</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Part Of</fullName>
+        <default>false</default>
+        <label>Part Of</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Status Reason</fullName>
+        <default>false</default>
+        <label>Status Reason</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reason Code</fullName>
+        <default>false</default>
+        <label>Reason Code</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reason Reference</fullName>
+        <default>false</default>
+        <label>Reason Reference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Derived From</fullName>
+        <default>false</default>
+        <label>Derived From</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__Task_start_date_less_than_end_date</fullName>
+    <active>true</active>
+    <description>Task Start date must be less than the Task End date</description>
+    <errorConditionFormula>NOT(ISNULL(inov8__Start_Date__c)) &amp;&amp; NOT(ISNULL(inov8__Due_Date__c)) &amp;&amp; inov8__Due_Date__c&lt;inov8__Start_Date__c</errorConditionFormula>
+    <errorMessage>End Date must be after Start Date.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- A Field Service Starter Kit package field: 
+When an admin creates or updates user records, the SFS Resource Type field on the user object allows the admin to assign permission sets to the user and determine whether a Service Resource record should be created and associated to the user as well. --></help>
+        <label><!-- SFS Resource Type --></label>
+        <name>FSSK__FSK_FSL_Resource_Type__c</name>
+        <picklistValues>
+            <masterLabel>Contractor Dispatcher (Community Dispatcher)</masterLabel>
+            <translation><!-- Contractor Dispatcher (Community Dispatcher) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatcher</masterLabel>
+            <translation><!-- Dispatcher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource &amp; Dispatcher (With Mobile)</masterLabel>
+            <translation><!-- Resource &amp; Dispatcher (With Mobile) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource &amp; Dispatcher (Without Mobile)</masterLabel>
+            <translation><!-- Resource &amp; Dispatcher (Without Mobile) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource (With Mobile)</masterLabel>
+            <translation><!-- Resource (With Mobile) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource (Without Mobile)</masterLabel>
+            <translation><!-- Resource (Without Mobile) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

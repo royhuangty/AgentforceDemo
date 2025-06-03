@@ -1,0 +1,9 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+Hallo,<br>Für Sie wurde ein Online-Fernmeeting angesetzt<br>Klicken Sie auf die Schaltfläche „Teilnehmen“, um die Meeting-Details anzuzeigen und am Meeting teilzunehmen.
+<p><a href="{!meeting_url}" target="_blank">Teilnehmen</a></p>
+</body>
+</html>

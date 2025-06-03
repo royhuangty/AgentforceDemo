@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Threshold 1 set the threshold in percentage from the org quota (either published platform events or delivered platform events) that will trigger log notifications and email alerts (based on email settings). 
+threshold 1 should be less than threshold 2. --></help>
+        <label><!-- Threshold 1 --></label>
+        <name>tspa__Threshold1__c</name>
+    </CustomFieldTranslation>

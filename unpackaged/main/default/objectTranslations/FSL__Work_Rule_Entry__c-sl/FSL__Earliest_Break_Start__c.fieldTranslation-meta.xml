@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Število minut od začetka razpoložljivosti vira storitve do najzgodnejšega dovoljenega začetnega časa odmora. Vnesite na primer 120, če želite načrtovati odmor vsaj dve uri po začetku dneva.</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

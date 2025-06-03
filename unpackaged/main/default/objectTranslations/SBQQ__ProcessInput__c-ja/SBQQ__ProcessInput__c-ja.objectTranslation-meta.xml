@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>プロセス入力</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Process Input Layout</layout>
+        <sections>
+            <label>商品条件</label>
+            <section>Product Filter</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>入力名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <name>SBQQ__ProductFieldAndOperatorSet</name>
+    </validationRules>
+</CustomObjectTranslation>

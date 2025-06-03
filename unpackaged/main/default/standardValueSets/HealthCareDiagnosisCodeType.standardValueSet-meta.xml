@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>ICD-10</fullName>
+        <default>true</default>
+        <label>ICD-10</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ICD-9</fullName>
+        <default>false</default>
+        <label>ICD-9</label>
+    </standardValue>
+</StandardValueSet>

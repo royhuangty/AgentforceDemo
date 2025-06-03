@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>en_US</fullName>
+        <default>false</default>
+        <label>English</label>
+    </customValue>
+    <customValue>
+        <fullName>fr</fullName>
+        <default>false</default>
+        <label>French</label>
+    </customValue>
+    <customValue>
+        <fullName>es</fullName>
+        <default>false</default>
+        <label>Spanish</label>
+    </customValue>
+    <description>Used by the product video object</description>
+    <masterLabel>B2B Product Video Locales</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

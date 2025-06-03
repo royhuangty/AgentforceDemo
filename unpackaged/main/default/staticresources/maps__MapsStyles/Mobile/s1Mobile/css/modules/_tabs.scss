@@ -1,0 +1,302 @@
+.ma-tab-link-group {
+   @include flexbox();
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.ma-tab-link {
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: 0;
+    padding: 0 1rem 2px;
+    @include transition(all .04s);
+    color: $text-sf;
+    text-align: center;
+}
+
+.ma-tab-link:focus, .ma-tab-link:hover {
+    text-decoration: none;
+    border-color: $blue;
+    color: $dark-blue;
+}
+
+.ma-tab-link.active {
+    border-bottom: 2px solid $light-blue;
+    color: $light-blue;
+    padding: 0 1rem;
+}
+
+.ma-tab-content {
+    display:none;
+}
+
+.ma-tab-content.active {
+    display:block;
+}
+
+.ma-tab-link-group-scoped {
+    @include flexbox();
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: $light-gray;
+    border: 1px solid $border-gray;
+    border-radius: $radius $radius 0 0;
+}
+
+.ma-tab-link-group-scoped .ma-tab-link {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    color: $text-sf;
+    background-clip: padding-box;
+    border-bottom:0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.ma-tab-link-group-scoped .ma-tab-link:first-child {
+    border-left: 0;
+    border-radius: $radius 0 0 0;
+}
+
+.ma-tab-content-group-scoped .ma-tab-content {
+    background-color: #fff;
+    border: 1px solid $border-gray;
+    border-top: 0;
+    border-radius: 0 0 $radius $radius;
+    padding: 1rem;
+}
+
+.ma-tab-link-group-scoped .ma-tab-link + .ma-tab-link {
+    margin-left: -1px;
+}
+
+.ma-tab-link-group-scoped .ma-tab-link.active {
+    background-color: $white;
+    color: $blue;
+    border-bottom:0;
+    box-shadow: 0 1px 0 0 $white;
+    border-color: $border-gray;
+}
+
+.ma-tab-link-group-scoped .ma-tab-link:focus, .ma-tab-link-group-scoped .ma-tab-link:hover {
+    text-decoration: none;
+    color: #005fb2;
+    border-color: #d8dde6;
+}
+
+
+
+//vertical tabs
+
+
+.ma-tab-vertical-wrap {
+    @include flexbox();
+}
+
+.ma-tab-vertical-wrap .ma-tab-link-group {
+    @include flex(0);
+  @include flexOrder(0);
+    @include flexDirection(column);
+    border-right: 1px solid $border-gray;
+    border-bottom:0;
+}
+
+.ma-tab-vertical-wrap .ma-tab-content-group {
+    @include flex(1);
+}
+
+.ma-tab-vertical-wrap .ma-tab-link {
+    border-right: 2px solid transparent;
+    width: 100%;
+    border-bottom: 0;
+    padding-right:2rem;
+    padding-left:1rem;
+}
+
+.ma-tab-vertical-wrap .ma-tab-link:hover {
+    box-shadow: -1px 0 0 0 $blue inset;
+    border-color: $blue;
+}
+
+.ma-tab-vertical-wrap .ma-tab-link.active {
+ box-shadow: -2px 0 0 0 $blue inset;
+     border-color: $blue;
+}
+
+
+
+
+//vertical tabs scoped
+
+.ma-tab-vertical-scoped-wrap {
+    @include flexbox();
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped {
+    @include flex(0);
+  @include flexOrder(0);
+    @include flexDirection(column);
+    border-radius: $radius 0 0 $radius;
+}
+
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link {
+    border-left:0;
+    border-right:0;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link:hover {
+    border-left:0;
+    border-right:0;
+    border-top: 1px solid $border-gray;
+    border-bottom: 1px solid $border-gray;
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link.active {
+    border: 1px solid #d8dde6;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 1px 0 0 0 #fff;
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link + .ma-tab-link {
+    margin-left:0;
+    margin-top:-1px;
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link:first-child {
+    border-radius: $radius 0 0 0;
+    border-right:0;
+    border-top: 1px solid transparent;
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-link-group-scoped .ma-tab-link:last-child {
+    border-radius: 0 0 0 $radius;
+    border-bottom: 1px solid transparent; 
+}
+
+
+.ma-tab-vertical-scoped-wrap .ma-tab-content-group-scoped {
+    @include flex(1);
+}
+
+.ma-tab-vertical-scoped-wrap .ma-tab-content-group-scoped .ma-tab-content {
+    border:0;
+    border-radius: 0 $radius $radius 0;
+}
+.ma-tab-vertical-scoped-wrap .ma-tab-content-group-scoped {
+    border: 1px solid $border-gray;
+    border-left:0;
+    border-radius: 0 $radius $radius 0 ;
+}
+
+
+// modal vertical navigation tabs
+
+
+.ma-modal .ma-tab-link-group {
+    background-color: $light-gray;
+    @include flex(0 165px);
+}
+
+.ma-modal .ma-tab-vertical-wrap .ma-tab-link:hover {
+
+    background-color: $gray;
+}
+
+.ma-modal .ma-tab-vertical-wrap .ma-tab-link.active {
+
+    background-color: $light-blue;
+    color: $white;
+}
+
+.ma-modal .ma-tab-vertical-wrap .ma-tab-link:first-child {
+    margin-top: 1rem;
+}
+
+.ma-modal .ma-tab-vertical-wrap .ma-tab-link:last-child {
+    margin-bottom: 1rem;
+}
+
+.ma-modal--tabbed .ma-modal-content {
+    overflow-y: hidden;
+}
+
+.ma-modal--tabbed .ma-tab-content {
+    max-height: 800px;
+    height: calc(100vh - 270px);
+    overflow-y: auto;
+}
+
+.ma-tab-link-group-offset .ma-tab-link:first-child {
+    margin-left: 2rem;
+}
+
+.ma-tab-link-group.ma-tab-link-group--centered {
+    justify-content: center;
+
+    .ma-tab-link.active {
+        box-shadow: 0 -1px 0 0 $light-blue inset;
+        border-color: $light-blue;
+        color: $light-blue;
+    }
+}
+
+.ma-tab-link-group.ma-tab-link-group--centered.ma-tab-link-group-sliding-border .ma-tab-link,
+.ma-tab-link-group.ma-tab-link-group--centered.ma-tab-link-group-sliding-border .ma-tab-link.active, 
+.ma-tab-link-group.ma-tab-link-group--centered.ma-tab-link-group-sliding-border .ma-tab-link:active, {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.ma-tab-link-group--even {
+
+    .ma-tab-link {
+        flex-grow: 1;
+    }
+}
+
+.slds-scope {
+
+    .slds-tabs_default {
+
+        .slds-tabs_default__nav {
+            border-bottom-width: 1px;
+
+            .slds-tabs_default__item {
+                font-size: 14px;
+                margin-bottom: -1px;
+                padding: 0;     
+                width: 33%;
+                text-align: center;
+                margin-left: 0;
+
+                .slds-tabs_default__link {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

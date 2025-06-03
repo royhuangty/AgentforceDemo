@@ -1,0 +1,4 @@
+<design:component label="B2B Commerce - Einstein Recommendations">
+    <design:attribute name="title" label="Title" description="Please define the header of the Component" default="Recently Viewed" placeholder="Recently Viewed"/>
+    <design:attribute name="recommender" label="Recommender type" description="Please define the header of the Component" datasource="RecentlyViewed,SimilarProducts,ComplementaryProducts,CustomersWhoBoughtAlsoBought,MostViewedByCategory,TopSellingByCategory,Upsell,TopSelling,PersonalizedForShopper" default="RecentlyViewed" />
+</design:component>

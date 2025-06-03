@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Service</fullName>
+        <default>false</default>
+        <label>Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network</fullName>
+        <default>false</default>
+        <label>Network</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Process</fullName>
+        <default>false</default>
+        <label>Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Software</fullName>
+        <default>false</default>
+        <label>Software</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hardware</fullName>
+        <default>false</default>
+        <label>Hardware</label>
+    </standardValue>
+</StandardValueSet>

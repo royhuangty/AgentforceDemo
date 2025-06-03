@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CONTACT.NAME</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.SDO_Status_Indicator__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.SDO_Volume__c</field>
+    </columns>
+    <description>Uses the demo-only &quot;Volume&quot; field to create a historical view of cases by channel.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Case.DateTime_Opened_c__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Channel History</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case.DateTime_Opened_c__c</dateColumn>
+        <interval>INTERVAL_LAST120</interval>
+    </timeFrameFilter>
+</Report>

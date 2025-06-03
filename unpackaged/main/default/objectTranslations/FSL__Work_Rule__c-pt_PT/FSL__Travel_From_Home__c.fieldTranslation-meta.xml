@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Determina quantos minutos antes do início do dia do calendário do recurso estão disponíveis para viajar (às custas do próprio recurso).
+Quando vazio, qualquer valor de viagem antes do início do dia de trabalho é válido.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

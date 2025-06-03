@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2B_Commerce_Solar_Product</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>Image_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.SKU</field>
+        <operation>equals</operation>
+        <value>S-100-ADC</value>
+    </filters>
+    <label>B2B Commerce Solar Product</label>
+</ListView>

@@ -1,0 +1,96 @@
+.warning-icon {
+  float: right;
+  color: #ffb75d;
+  font-size: 16px;
+  line-height: 1; }
+
+.marker-counter-wrap {
+  position: relative;
+  flex-shrink: 0; }
+  .marker-counter-wrap .marker-icon-wrap {
+    position: relative;
+    z-index: 5; }
+  .marker-counter-wrap .marker-counter {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Salesforce Sans";
+    line-height: 1; }
+
+.association-selection-card {
+  height: 375px; }
+
+.stop-selection-list {
+  border-top: 2px solid #dddbda;
+  overflow-y: auto; }
+
+.stop-selection-list_item {
+  border-bottom: 1px solid #dddbda;
+  padding-bottom: 13px; }
+  .stop-selection-list_item .slds-checkbox_add-button {
+    flex-shrink: 0; }
+  .stop-selection-list_item:last-child {
+    border-bottom: 0; }
+
+.stop-selection-distance-label {
+  line-height: 1; }
+
+.sidebar-header-wrap {
+  flex-shrink: 0; }
+
+.sidebar-table-wrap {
+  border-top: 1px solid #dddbda;
+  border-bottom: 1px solid #dddbda;
+  margin-bottom: 18px;
+  overflow-y: auto; }
+  .sidebar-table-wrap .slds-table tr {
+    cursor: pointer; }
+  .sidebar-table-wrap .slds-table.slds-table_cell-buffer tr > th:first-child,
+  .sidebar-table-wrap .slds-table.slds-table_cell-buffer tr > td:first-child {
+    padding-left: 16px; }
+
+.vehicle-col-inner {
+  max-width: 200px; }
+
+.day-table-wrap {
+  border-radius: 0 0 0 4px;
+  border-right: 1px solid #dddbda;
+  border-radius: 0 0 0 .25rem; }
+  .day-table-wrap #data-table .slds-is-sortable .slds-th__action:hover, .day-table-wrap #data-table .slds-is-sortable .slds-th__action:focus {
+    background-color: transparent; }
+    .day-table-wrap #data-table .slds-is-sortable .slds-th__action:hover .slds-is-sortable__icon, .day-table-wrap #data-table .slds-is-sortable .slds-th__action:focus .slds-is-sortable__icon {
+      display: none; }
+
+.leaflet-marker-pane .marker-counter-wrap {
+  margin-left: -7px;
+  margin-top: 6px;
+  width: 28px; }
+
+#maBodyContent {
+  padding: 0 !Important;
+  width: 100%; }
+  #maBodyContent .stop-event_empty-state {
+    width: 150px; }
+  #maBodyContent #map {
+    top: 20;
+    right: 40;
+    height: 100%;
+    width: 480; }
+
+.ma-body-content.is-active {
+  display: block !important;
+  /*update this in scss for all pages */ }
+
+th div {
+  resize: vertical; }
+
+td.highlighted {
+  background-color: #ecebea; }
+
+/*# sourceMappingURL=ma-page-stop-associations.css.map */

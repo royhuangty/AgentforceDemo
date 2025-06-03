@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Webangebots-Belegpostens</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Webangebots-Belegposten</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- LineEditor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor --></label>
+        <name>SBQQ__SegmentedLineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor Summary --></label>
+        <name>SBQQ__SegmentedLineEditorSummary</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Web Quote Line Layout</layout>
+        <sections>
+            <label>Rabattinformationen</label>
+            <section>Discount Information</section>
+        </sections>
+        <sections>
+            <label>Preisinformationen</label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label>Abonnementinformationen</label>
+            <section>Subscription Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nummer des Angebotsbelegpostens</nameFieldLabel>
+</CustomObjectTranslation>

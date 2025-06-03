@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_WEM_In_the_Past__c</fullName>
+    <description>*What*: Used to indicate if absence is in the past.  *Who*: Gregory Johnson. *When*: June 2022</description>
+    <formula>End &lt; Now()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>In the past?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

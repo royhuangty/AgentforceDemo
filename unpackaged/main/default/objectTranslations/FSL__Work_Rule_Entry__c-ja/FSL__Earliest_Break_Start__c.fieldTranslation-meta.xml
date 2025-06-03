@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>サービスリソースの対応可能状況の開始から許容される最も早い休憩開始時刻までの分数。たとえば、その日の開始から 2 時間以上後に休憩をスケジュールするには、「120」と入力します。</help>
+        <label><!-- Earliest Break Start (minutes) --></label>
+        <name>FSL__Earliest_Break_Start__c</name>
+    </CustomFieldTranslation>

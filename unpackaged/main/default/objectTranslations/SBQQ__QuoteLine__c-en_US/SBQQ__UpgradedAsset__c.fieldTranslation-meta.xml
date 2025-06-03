@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Asset being upgraded by this quote line. When the quote is contracted this asset will have its Usage End Date populated to indicate it&apos;s retired. --></help>
+        <label><!-- Upgraded Asset --></label>
+        <name>SBQQ__UpgradedAsset__c</name>
+        <relationshipLabel><!-- Quote Lines (Upgrade) --></relationshipLabel>
+    </CustomFieldTranslation>

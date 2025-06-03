@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Ρύθμιση χρήστη</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Ρυθμίσεις χρήστη</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Ρύθμιση χρήστη</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Ρυθμίσεις χρήστη</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Ρύθμισης χρήστη</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Ρυθμίσεων χρήστη</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>User Setting Layout</layout>
+        <sections>
+            <label>Προσαρμοσμένα φίλτρα</label>
+            <section>Custom Filters</section>
+        </sections>
+        <sections>
+            <label>Προτιμήσεις Gantt</label>
+            <section>Gantt Preferences</section>
+        </sections>
+        <sections>
+            <label>Μη διαθέσιμες προτιμήσεις μεταφοράς και απόθεσης</label>
+            <section>NA Drag&amp;Drop Preferences</section>
+        </sections>
+        <sections>
+            <label>Προτιμήσεις λίστας υπηρεσιών</label>
+            <section>Service List Prefernces</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Όνομα ρύθμισης χρήστη</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bestimmt, wie der Benutzer Optionen für Produkte wählt. Mit &quot;Klicken&quot; werden Kontrollkästchen für Optionen angezeigt. &quot;Hinzufügen&quot; zeigt eine Schaltfläche für vordefinierte Optionen, &quot;Dynamisch&quot; eine Schaltfläche für eine Liste aller aktiven Produkte an.</help>
+        <label><!-- Option Selection Method --></label>
+        <name>SBQQ__OptionSelectionMethod__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation>Addieren</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click</masterLabel>
+            <translation>Klicken</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dynamic</masterLabel>
+            <translation>Dynamisch</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

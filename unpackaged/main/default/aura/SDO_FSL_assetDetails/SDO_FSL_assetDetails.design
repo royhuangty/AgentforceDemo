@@ -1,0 +1,7 @@
+<design:component label="FSL - Asset Details (SDO_FSL_assetDetails)">
+    <design:attribute name="objectType" label="Object Type" datasource="Case, WorkOrder" default="Case"/>
+    <sfdc:objects>
+        <sfdc:object>Case</sfdc:object>
+        <sfdc:object>WorkOrder</sfdc:object>
+    </sfdc:objects>
+</design:component>

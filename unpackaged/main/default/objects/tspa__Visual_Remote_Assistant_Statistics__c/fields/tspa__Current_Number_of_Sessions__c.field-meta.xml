@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__Current_Number_of_Sessions__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Current Annual Session number based on session average value for last 30 days</description>
+    <externalId>false</externalId>
+    <label>Current Number of Sessions</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

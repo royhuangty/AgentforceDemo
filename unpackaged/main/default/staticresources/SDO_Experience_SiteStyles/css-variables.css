@@ -1,0 +1,51 @@
+/*
+ * VARIABLES
+ * 
+ * This CSS file contains variables that you can edit to change global elements, such as border-radius, 
+ * border colors, padding & margin, etc.
+ * 
+ * To return to the default theme's styles, add comments around the link to this stylesheet. 
+ *
+ * You may use this file as a foundation for any new work, but you may find it easier to start from 
+ * scratch.  Not all elements are defined in this file, as it was built to support the single design.
+ *
+ * CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/ 
+*/
+:root {
+  /* Colors */
+  --base-color-white: #ffffff;
+  --base-color-black: #000000;
+  /* Gray Colors */
+  --light-gray-background-color: #f4f4f4;
+  --light-gray-border-color: #dddddd;
+  --warm-gray-color: #c9c9c9;
+  --medium-gray-color: #666666;
+  --dark-gray-color: #333333;
+  /* Font Colors */
+  --text-default-color: token(colorTextDefault);
+  /* Font Weights */
+  --font-weight-lighter: lighter;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: bolder;
+  /* Font Sizes */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-xxl: 2rem; /* 32px */
+  --font-size-xxxl: 2.375rem; /* 38px */
+  /* Border Radius */
+  --border-radius-none: 0px; /* 0px */
+  --border-radius-xs: 4px; /* 4px */
+  --border-radius-sm: 6px; /* 6px */
+  --border-radius-md: 8px; /* 8px */
+  --border-radius-lg: 10px; /* 10px */
+  --border-radius-xl: 12px; /* 12px */
+  /* Hero Styles */
+  --hero-background-color: rgba(12, 15, 22, var(--hero-background-transparency));
+  --hero-border-radius: var(--hero-border-radius);
+}

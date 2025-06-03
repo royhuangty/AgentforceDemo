@@ -1,0 +1,229 @@
+<apex:page title="Custom Components" controller="maps.ComponentCon" extensions="maps.RemoteFunctions,maps.AdminAJAXResources">
+    <apex:slds />
+    <script type='text/javascript'>
+        var MARemoting = {
+            processAJAXRequest : '{!$RemoteAction.RemoteFunctions.processAJAXRequest}',
+            AdminStartUpAction: '{!$RemoteAction.AdminAJAXResources.AdminStartUpAction}'
+        }
+    </script>
+
+	<!-- jQuery -->
+    <apex:includeScript value="{!URLFOR($Resource.maps__Maps3rdPartyPlugins, 'jquery/jquery-3.6.0.min.js')}"/> 
+
+	<c:SFMaps />
+	<c:Shared />
+    <c:StaticResources />
+    <script type='text/javascript'>
+        MASystem.Labels = {
+            ...MASystem.SharedLabels,
+            ...MASystem.SRLabels
+        };
+
+        delete MASystem.SharedLabels;
+        delete MASystem.SRLabels;
+    </script>
+    
+    <!-- CSS -->
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsStyles, 'css/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsStyles, 'style.css')}"/>
+
+    <!-- Maps 2.0 UI - uses SASS in static resource -->
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.MapsStyles, 'styles/css/ma-ui.css')}" />
+    <!-- Maps Configuration Page Styling -->
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsFonts, 'styles.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.maps__MapsStyles, 'styles/css/ma-configuration-ui.css')}"/>
+    <style type='text/css'>
+    
+    	/* Component Rows */
+    	.component-row {
+    		cursor: pointer;
+    	}
+    	.component-row .data {
+    		text-align: center;
+    	}
+    	.component-row .data div {
+    		width: 20px;
+    		height: 20px;
+    		margin: 0 auto;
+    	}
+    	.component-row .data.checked div {
+    		background: transparent url('{!URLFOR($Resource.MapsStyles, 'images/checkbox-checked-32.png')}') no-repeat center;
+            background-size: 20px;
+    	}
+    	.component-row .data.unchecked div {
+    		background: transparent url('{!URLFOR($Resource.MapsStyles, 'images/checkbox-unchecked-32.png')}') no-repeat center;
+            background-size: 20px;
+    	}
+    	.component-row .data.loading div {
+    		background: transparent url('{!URLFOR($Resource.MapsStyles, 'images/chatter-loader.gif')}') no-repeat center;
+            background-size: 20px;
+    	}
+        .slds-table thead th {
+            background-color: #fafaf9;
+            color: #514f4d;
+            padding: 0.25rem 0.5rem;
+        }
+    </style>
+
+	<!-- JS -->
+	<script type='text/javascript'>
+	
+		/*************************
+		*	On Load
+		*************************/
+		$(function () {
+		
+			//send a request to get the available components
+			var processData = {
+				action	: 'getCustomComponents'
+            };
+            
+            Visualforce.remoting.Manager.invokeAction(MARemoting.AdminStartUpAction,
+                processData,
+                function(response, event){
+					if (response.success) {
+						if(response.securityError) {
+							alert(response.details);
+						} else {
+							//add each component to the components table
+							var $componentsTable = $('#components .data-body');
+							$.each(response.components, function (index, component) {
+							
+								//create a row
+								var $componentRow = $('#templates .component-row').clone().attr('data-id', component.Id);
+								$componentRow.find('.label').text(component.Name);
+								
+								//update the row based on selection status
+								if (component.Selected) {
+									$componentRow.find('.data').addClass('checked');	
+								}
+								else {
+									$componentRow.find('.data').addClass('unchecked');
+								}
+								
+								//add the row
+								$componentRow.appendTo($componentsTable);
+							});
+						} 
+					}
+					else {
+					}
+				},{buffer:false,escape:false}
+			);
+			
+			//handle clicking component rows
+			$('#components').on('click', '.component-row', function () {
+				var $row = $(this);
+			
+				//do nothing if this is currently loading
+				if ($row.find('.data').is('.loading')) {
+					return;
+				}
+				
+				//show loading
+				$row.find('.data').addClass('loading');
+				
+				//figure out the new status
+				var newStatus;
+                var oldStatus;
+				if ($row.find('.data').is('.checked')) {
+					$row.find('.data').removeClass('checked');
+					newStatus = 'unchecked';
+                    oldStatus = 'checked';
+				}
+				else if ($row.find('.data').is('.unchecked')) {
+					$row.find('.data').removeClass('unchecked');
+					newStatus = 'checked';
+                    oldStatus = 'unchecked';
+				}
+				
+				//send request to update the selected components
+				var processData = { 
+					action: 'updateCustomComponent',
+					id: $row.attr('data-id'),
+					status: newStatus
+	            };
+	            
+	            Visualforce.remoting.Manager.invokeAction(MARemoting.AdminStartUpAction,
+	                processData,
+	                function(response, event){
+                        if (event.status) {
+                            if (response && response.success) {
+						        $row.find('.data').removeClass('loading').addClass(newStatus);
+                            } else {
+                                $row.find('.data').removeClass('loading').addClass(oldStatus);
+                                var errMsg = MA.getProperty(response || {}, ['details'], false) || '{!JSENCODE($Label.Common_Refresh_And_Try_Again_Contact_Admin)}'
+                                alert('Unable to update:\n' + errMsg);
+                            }
+                        } else {
+                            $row.find('.data').removeClass('loading').addClass(oldStatus);
+                            var errMsg = MA.getProperty(response || {}, ['message'], false) || '{!JSENCODE($Label.Common_Refresh_And_Try_Again_Contact_Admin)}'
+                            alert('Unable to update:\n' + errMsg);
+                        }
+					},{buffer:false,escape:false}
+				);
+				
+			});
+		
+		});
+	
+	</script>
+	
+	<!-- Header -->
+    <div class="slds-scope">
+        <div class="slds-brand-band slds-brand-band_cover slds-brand-band_medium slds-p-around_medium">
+            <div class="flex-column full-height">
+                <!-- Header -->
+                <div class="slds-scope">
+                    <div class="slds-page-header slds-has-bottom-magnet">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure ma-slds-media__figure">
+                                <span class="slds-icon ma-icon ma-icon-Maps"></span>
+                                </div>
+                                <div class="slds-media__body">
+                                <p class="slds-text-title--caps slds-line-height--reset">Maps</p>
+                                <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match the Record Title">{!JSENCODE($Label.MA_Configuration)}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-grow-1">
+                    <div class="flex-shrink-0">
+                        <!--navigation-->
+                        <c:AdminHeader />
+                    </div>
+                    <div class="flex-grow-1 ma-settings-body-wrap">
+                        <table id='components' class='slds-table slds-table_bordered slds-table_cell-buffer'>
+                            <thead>
+                                <tr>
+                                    <th colspan='2'>{!JSENCODE($Label.MA_Available_Components)}</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data-body">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Templates -->
+	<div id='templates' style='display: none;'>
+		
+		<!-- Component Row -->
+		<table>
+			<tr class='component-row'>
+				<td class='label'></td>
+				<td class='data'><div></div></td>
+			</tr>
+		</table>
+		
+	</div>
+
+</apex:page>

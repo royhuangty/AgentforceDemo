@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Threshold 2 set the threshold in percentage from the org quota (either published platform events or delivered platform events) that will trigger an agent warning on top of the logs and email alerts.
+Threshold 2 should be higher than threshold 1. --></help>
+        <label><!-- Threshold 2 --></label>
+        <name>tspa__Threshold2__c</name>
+    </CustomFieldTranslation>

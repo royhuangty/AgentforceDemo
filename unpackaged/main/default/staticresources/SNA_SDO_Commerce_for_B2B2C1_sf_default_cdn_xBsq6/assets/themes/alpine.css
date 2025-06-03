@@ -1,0 +1,11 @@
+:root {
+    /* Reset header spacing properties */
+    --dxp-c-header-container-spacing-block-start: 0;
+    --dxp-c-header-container-spacing-inline-end: 0;
+    --dxp-c-header-container-spacing-block-end: 0;
+    --dxp-c-header-container-spacing-inline-start: 0;
+    --dxp-c-header-container-spacing-block-start-mobile: 0;
+    --dxp-c-header-container-spacing-inline-end-mobile: 0;
+    --dxp-c-header-container-spacing-block-end-mobile: 0;
+    --dxp-c-header-container-spacing-inline-start-mobile: 0;
+}

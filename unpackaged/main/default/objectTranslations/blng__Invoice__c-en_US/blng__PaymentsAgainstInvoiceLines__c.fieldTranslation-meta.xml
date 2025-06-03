@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Sum of payment amounts allocated to Invoice Lines in the Invoice. --></help>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </CustomFieldTranslation>

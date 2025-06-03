@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <measures>
+        <field>Work_Volume_by_Queue_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Work Volume</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Work_Volume_by_Queue_2.A</field>
+        <isDerived>false</isDerived>
+        <label>Work Volume</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>New_component1</waveVisualization>
+</WaveXmd>

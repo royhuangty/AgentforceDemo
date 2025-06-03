@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>ป้อนจำนวนนาทีที่แสดงถึงช่วงเวลาว่างระหว่างการนัดหมายบริการ จุดประสงค์นี้ช่วยลดช่องว่างให้เหลือน้อยที่สุดที่จะเท่ากับหรือมากกว่าค่าที่ป้อนเข้ามา</help>
+        <label><!-- Minimum Gap Duration (in minutes) --></label>
+        <name>FSL__Gap_Duration__c</name>
+    </CustomFieldTranslation>

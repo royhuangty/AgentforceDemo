@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MlDomain xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The intent set used for the Rider Bot</description>
+    <label>Rider Intents</label>
+    <mlIntents>
+        <developerName>Add_Note</developerName>
+        <label>Add Note</label>
+        <mlIntentUtterances>
+            <utterance>add a note</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>add a note to the appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>add note to job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Add note</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>notate work order</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>add customer note</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>make note</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Arrive</developerName>
+        <label>Arrive</label>
+        <mlIntentUtterances>
+            <utterance>arrived at appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>onsite</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>starting to work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>arrived at customer site</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>arrived onsite</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>at job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>starting work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>starting job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>here at customer</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>here onsite</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Arrived</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>work starting</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>at customer site</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job in progress</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Arrive</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;m here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>starting appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job starting</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>beginning work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>beginning</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>beginning job</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Cancel_Appointment</developerName>
+        <label>Cancel Appointment</label>
+        <mlIntentUtterances>
+            <utterance>remove appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cancel that</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>i have to cancel</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cancel appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cancel my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>i cant make it</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I cancel?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>lets cancel my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Sorry, but I need to cancel.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;m going to need to cancel my repair appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d better cancel that visit. I won&#39;t be home after all</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cancel</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>sorry, i cant make that appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to cancel</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I wanna cancel my scheduled home visit</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Where do I go to cancel my install?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to cancel my appointment for now. Something else came up.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let&#39;s cancel the installation for now. I&#39;m not quite ready yet</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to cancel my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cancel this</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How can I cancel?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Complete</developerName>
+        <label>Complete</label>
+        <mlIntentUtterances>
+            <utterance>finish job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>close job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>close work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job all set here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>work all set</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Complete</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;m done</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job completed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>complete job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment finished</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>completed my work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job done</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>done</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment completed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>work done</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>complete appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>job finished</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Completed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>finished</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>completed appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment done</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Confirm_Appointment</developerName>
+        <label>Confirm Appointment</label>
+        <mlIntentUtterances>
+            <utterance>Accept</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Accepted</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Confirm</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>dispatch</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>dispatch that</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>confirm that appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>confirm my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>that time works for me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>lets go with that time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>confirm the appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>that time is good</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>confirm that</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>customer confirmed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Confirmed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>that works</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>confirm appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>dispatched</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment time works</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment is dispatched</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>That sounds good</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>i can make that work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>that sounds good to me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment confirmed</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Get_Appointment_Status</developerName>
+        <label>Get Appointment Status</label>
+        <mlIntentUtterances>
+            <utterance>What&#39;s my appointment status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s my appointment ETA?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s your ETA?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What time is my appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my tech arrive?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Where is my tech?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What time will they get here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How far away is your technician?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s the ETA for the driver?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How far away is the driver right now?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>status of appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&#39;s the ETA?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>latest eta?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>current ETA</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>are you guys coming?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>my appointment status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&#39;s the latest status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Appointment Status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>latest status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>when will you show up?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>whats the status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>my status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is your ETA?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>whats the status of my appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>are we still ontime for my appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>when are you coming?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>get status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>get appointment status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>are we still on for the appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>ETA</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Greetings</developerName>
+        <label>Greetings</label>
+        <mlIntentUtterances>
+            <utterance>Hey Tracker</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hi Tracker</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Whats up Tracker</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Tracker</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hello</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Howdy</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hello Rider</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s up?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Sup</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>who are you?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Sup Rider</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how are you?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Are you there rider?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s up rider?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Sup man?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&#39;s happenin rider?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Yo</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hi Rider</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Greetings</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>You there?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>hello?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>anyone there?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hi</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Greetings Rider</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>yelllow</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what are you?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Main_Menu</developerName>
+        <label>Main Menu</label>
+        <mlIntentUtterances>
+            <utterance>Home</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Menu</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Go home</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>help!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you help me?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>main</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>fsl options</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>help</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>help me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>rider help</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Go back home</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Main Options</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Main Screen</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Start over</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>back to safety</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>main menu!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>main options</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>go back!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Back</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>rider main</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>help me!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Main Menu</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Go Back</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>start this whole thing over</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>New_Appointment</developerName>
+        <label>New Appointment</label>
+        <mlIntentUtterances>
+            <utterance>Please set new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to schedule an appt</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to book appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>May I please book a new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I book appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to schedule a service appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Send someone out here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Book appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what time can the man come about fixing my stuff</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please have a tech come out to my house.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>New appt pls</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule a service appt</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d like to schedule a new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I schedule a new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Book technician</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule a maintenance appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule a service appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>like to make a repair appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to schedule a thing</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I get someone to install my panels?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>New service appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Book time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hey I need to schedule an appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I make a Service appt</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Panel needs someone to replace</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My turbine is broken. I need someone to fix it.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My battery doesn&#39;t seem to be working. I need to get someone to fix it.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what time can the man come about my stuff?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need technician</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I schedule a new appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When is the earliest I can schedule service for my solar panels?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What are the times available for a Cirrus Energy technician to perform a service call?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>New visit</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Onsite help</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Help! I can&#39;t seem to turn on the tracking meter display. Can we plan another visit by your technician?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need appt</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hey Sunny, Can you get someone to my house? One of my solar panels is damaged</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to schedule time with a tech for my components including solar panels.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to schedule an appointment for service of my wind turbines</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to find a time for my installation</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to have you come out this week to install. Can you be here Friday afternoon?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you send me times to schedule an appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My roof is leaking! I think it may be the new solar panels. I need someone here ASAP!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>have for a visit?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Book time slot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Book me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Tech onsite</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule slot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Find time slot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I am looking to schedule an installation for my panels</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule an installation</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Onsite tech</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hi I would like to schedule a new appointment to install my solar panels.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you send me a repair person?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you send a maintenance person out?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you schedule a repair visit?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My solar panel needs repair, when can you come onsite?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When can you have someone onsite to fix my battery issues?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule an appointment to fix my wind turbine</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need onsite assistance. Can you help me?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to have somebody onsite to fix my solar panels. When can you be here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule appointment for you to fix my wind turbine</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When can you come onsite to fix my battery issues</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I schedule an appointment about getting my solar panels adjusted</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule an onsite resource to fix my solar panel. When can you be here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need somebody to come onsite to fix my turbine issue. When can you be here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I get somebody to come to my plan to adjust the solar panel?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule an appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to schedule an appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>stopped working</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>need to bring my in to fix</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule an appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to bring my for service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>needs some repair</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to schedule a visit for service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>stop by tomorrow morning so that you can check my</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>need you to take a look at my</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where can I bring my</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>broke down</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>needs to be checked</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you schedule someone to come to my home and take a look at my home energy system?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule service appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule a maintenance appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>schedule a service appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>like to make a repair appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>got damaged in a storm i need to bring it in for service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>lightning struck my can I bring it in for repairs</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>need to bring it in</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>damaged and i&#39;d like to bring it in for repair</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d like to schedule a maintenance appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>would like to schedule a repair appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>bring my for checkup</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>bring my in for service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>make an appointment for tomorrow</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>bring my in for regular maintenance</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need a technician to help fix my turbine</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>list schedule times</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What openings does your field service techs have for next week?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule tech</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule a new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Who can fix my panel?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what time can my thing be fixed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to book a new appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>when can my stuff be fixed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule a visit</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Home visit</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need tech</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Hi I need to set up an appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule visit</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Schedule time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need an appointment for my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>New appointment required</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>need appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need a technician to repair my broken turbine</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What would be a good time for a service tech to come look at our solar panel damage?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to schedule a repair for solar panels</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>New appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How do I make appt</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need a new appointment for someone to look at my wind turbine</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to schedule service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How can I schedule an appt?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Reject</developerName>
+        <label>Reject</label>
+        <mlIntentUtterances>
+            <utterance>Reject</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Rejected</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Reject that</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>reject this</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>reject that job</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>reject appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>reject job</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Reschedule_Appointment</developerName>
+        <label>Reschedule Appointment</label>
+        <mlIntentUtterances>
+            <utterance>Reschedule my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Reschedule</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Reschedule that</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I had a last minute thing come up. Can you reschedule?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Friday doesn&#39;t work for me after all. What other options do you have?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I like to sleep in. Can you come later instead?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you remind me when the technician will get to my house</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you also check on my wind turbine when you come out next week?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Which technician is visiting my home?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Change appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to change my time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I can&#39;t make today work!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Repair technician</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;m busy during my time now</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to change appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>that time doesn&#39;t work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can&#39;t make my time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you get here before noon?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Change my time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;m tied up today and can&#39;t make it</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>But I hope one of them is sent to me. -:)</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I can&#39;t do that day</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my service person get here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>i need a new slot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Technician help</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I forgot I’m not gonna be home tomorrow, what other options do you</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I reschedule my appointment to later today</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to change my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Reschedule tech</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you send me a reminder about our appointment the day before please?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I reschedule?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I forgot what address I gave you for tomorrow, can you tell me what you have on record?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When is my appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to switch this to start at 5</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you be here by 4pm for the appointment?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you change the time to be here 2 hours earlier? I have to leave early to pickup the kids</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>appointment doesn&#39;t work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to move our meeting to next week on Monday, ok?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>can I come in a different day?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can&#39;t make it at that time</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Is there another time you&#39;re available to fix my solar panel</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My existing appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to check on my appointment.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Move appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Rebook me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What other schedule options do you have</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can&#39;t make my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When is my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Reschedule appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When is my next appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you come out sometime next week instead?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I can&#39;t make our appointment work after all</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I don&#39;t want to install this wind turbine after all</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I can&#39;t make our appointment. How about we reschedule?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let&#39;s change the repair visit to a different day</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will the repair tech get here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell the tech that they just missed me?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you send out a maintenance crew later in the day instead?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&#39;s the name of the employee coming to my house today?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d better reschedule my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to reschedule for another day</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How long until the repair guy gets here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I don&#39;t need you to come out to my house anymore.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell the repair person to text me when they get here?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please tell the driver to go ahead and get started. I&#39;ll meet him outside a little later</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you move my appointment to later in the week?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d like another date for my appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Uh oh, I need to reschedule my solar panel install</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Select_Appointments</developerName>
+        <label>Select Appointments</label>
+        <mlIntentUtterances>
+            <utterance>view assignments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>view my work</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>show assignments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>my jobs</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>all jobs</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>show jobs</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>view appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What Service Appointments do I have?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>view all appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>show me my appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>select my appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>choose appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where are all my appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>select a different service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I see my appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what services do i have?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>view my appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>show me my meetings</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Choose Appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>see appointments</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>select a different appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what are my appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what appointments do I have?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>change appointment</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>select a different one</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Select</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What are my service appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Do i have upcoming appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where are my appointments?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Select Appointments</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Thanks</developerName>
+        <label>Thanks</label>
+        <mlIntentUtterances>
+            <utterance>Thank you</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Great</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>thanks rider</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>awesome</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Ok</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>thanks</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Great!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Awesome!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>thanks a lot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Thanks!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>okie dokie</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>sweet thanks</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>amazing! Thank you.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>cool</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <developerName>Transfer_to_Agent</developerName>
+        <label>Transfer to Agent</label>
+        <mlIntentUtterances>
+            <utterance>to talk to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>do not want to chat with a bot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I get to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I talk to a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want you to transfer me to a human right now</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>really need a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a real person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a chat agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer me to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to talk with someone else</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>a real person to chat with</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Help me now please!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I talk to a human?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why am I talking to a robot?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Are you a bot? I&#39;d like a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer to billing department</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Agent damn it</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let me chat with car</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to chat with customer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to talk with a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Talk to manager</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to chat with a rep</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Connect me to an agent!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Speak with supervisor</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to speak with customer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you transfer me?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Person please</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Connect me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I talk to a manager</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Do you have any real humans to can talk to?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Chat with supervisor</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Talk to an agent!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need an agent!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I talk with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Send me to your supervisor</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Give me an agent.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I talk to an agent?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Need to speak with support</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Connect agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Agent, please!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Contact agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to speak with support</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need to speak with an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>A human could do a better job here</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Speak with human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Agent please!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>bill is a smart guy, can you transfer me to him</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Just send me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I don&#39;t think you can help me</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Take me to a human, I don&#39;t want to talk to you</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Representative</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I just want to be transferred to someone who knows what they&#39;re saying</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you pls transfer me now?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I talk with someone</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to talk to a human!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let me chat with CSR</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I chat with person instead?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let me chat with customer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Speak to agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer me to a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Chat with human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Let me talkt o someone</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer manager</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>0</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Talk to a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Ugh I&#39;m tired of talking to a robot send me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Connect me to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Speak with person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Don&#39;t know how much I am paying you</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I don&#39;t love talking to a bot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I need help from an agent!</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Ask agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Just connect me to a human.</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can I ask someone?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I really need to be transferred</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to go to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer to supervisor</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a real person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer to agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>human being to talk to</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I&#39;d like to learn more about your solar solution. Do you have someone available that can walk me and my wife through the benefits and costs?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a real person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a chat agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a real person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer to agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>human being to talk to</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>a real person to chat with</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>to talk to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>do not want to chat with a bot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I get to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I talk to a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want you to transfer me to a human right now</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>really need a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>really need a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want you to transfer me to a human right now</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I talk to a person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>how do I get to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>do not want to chat with a bot</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>to talk to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>a real person to chat with</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to an agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>chat with a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>human being to talk to</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer to agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a human</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want a real person</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>send me to a live agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>transfer me to a chat agent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a human being</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>want to chat with a real person</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlSlotClasses>
+        <dataType>Text</dataType>
+        <description>The value set for Work Types that customers can schedule new service appointments for</description>
+        <developerName>Work_Type</developerName>
+        <extractionType>Value</extractionType>
+        <label>Work Type</label>
+        <mlSlotClassValues>
+            <value>Field Inspection</value>
+        </mlSlotClassValues>
+        <mlSlotClassValues>
+            <value>Battery Replacement</value>
+        </mlSlotClassValues>
+        <mlSlotClassValues>
+            <value>Site Survey</value>
+        </mlSlotClassValues>
+    </mlSlotClasses>
+</MlDomain>

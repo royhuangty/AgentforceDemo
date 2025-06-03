@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>La longueur de la durée d&#39;abonnement, qui s&#39;applique uniquement si le produit est un abonnement. Elle est copiée depuis la Durée d&#39;abonnement du produit associé lors de la génération de l&#39;élément de ligne.</help>
+        <label><!-- Default Subscription Term --></label>
+        <name>SBQQ__DefaultSubscriptionTerm__c</name>
+    </CustomFieldTranslation>

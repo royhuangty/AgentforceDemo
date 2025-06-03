@@ -1,0 +1,291 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "8e0e7f06-304f-4fec-a0dd-4fbef3f2111c",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><span style=\"color: rgb(230, 0, 0); font-size: 22px;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.AstroTrailheadXSmall.1}\" style=\"width: 64.1719px; height: 83.3438px;\">B2B Commerce on Lightning Experience</span></p>\n<p>This community features B2B Commerce on Lightning Experience,&nbsp;&nbsp;a complete commerce experience all in Lightning. You can browse and search for simple products, view product detail information, add to cart, and perform checkout. B2B Commerce on Lightning Experience uses standard objects (Price Books, Product, Orders).</p>\n<p><br></p>\n<p>The B2B Commerce Lightning storefront is accessible by user Lauren Bailey.</p>\n<p><br></p>\n<p><strong>Documentation</strong>:&nbsp;<a href=\"https://help.salesforce.com/articleView?id=b2b_comm_lex_intro.htm&amp;type=5\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(1, 134, 244);\">https://help.salesforce.com/articleView?id=b2b_comm_lex_intro.htm&amp;type=5</a></p>\n<p><br></p>\n<p><strong style=\"color: rgb(17, 17, 17);\">Demo Script:</strong><span style=\"color: rgb(17, 17, 17);\"> </span><a href=\"https://solutionscentral.io/posts/edit/d46533d0-359a-11eb-abf2-79f9832606b4\" rel=\"noopener noreferrer\" target=\"_blank\">https://solutionscentral.io/posts/edit/d46533d0-359a-11eb-abf2-79f9832606b4</a></p>\n<p><br></p>\n<p><strong style=\"font-size: 16px;\">Post Setup Steps</strong></p>\n<ol>\n <li>Index Search for the Storefront in the<strong> B2B Commerce Lightning Admin</strong> app</li>\n <li>Publish the <strong>B2BLightning</strong> Community.&nbsp;&nbsp;</li>\n</ol>\n<p><br></p>\n<p><strong style=\"font-size: 16px;\">Checkout</strong></p>\n<p>If wanting to demo a credit card transaction in checkout, select <strong>Visa</strong> and enter the following number: <strong style=\"color: rgb(0, 0, 0); background-color: transparent;\">4111111111111111</strong></p>\n<p><br></p>\n<p><span style=\"color: rgb(230, 0, 0); font-size: 20px;\">Additional </span><strong style=\"color: rgb(230, 0, 0); font-size: 20px;\">Setup Instructions</strong><span style=\"color: rgb(230, 0, 0); font-size: 20px;\"> as you scroll down the page.</span></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "c7715832-caa5-4e26-8c61-a57113c0db51",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\"><span style=\"color: rgb(68, 68, 68); font-family: verdana;\">Control Center</span></h1><p> </p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "a4213398-44c8-43e3-a3cc-1929ff7ccf37",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "100baca1-3b29-4607-ad13-c57c2dcbca6b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><strong style=\"color: rgb(230, 0, 0); font-size: 20px;\">Setup Instructions</strong></p><p><br></p><p><span style=\"color: rgb(230, 0, 0);\">On the </span><strong style=\"color: rgb(230, 0, 0);\">Cases</strong><span style=\"color: rgb(230, 0, 0);\"> tab is a </span><strong style=\"color: rgb(230, 0, 0);\">Record List component</strong><span style=\"color: rgb(230, 0, 0);\"> of cases. Click on the component and set the </span><strong style=\"color: rgb(230, 0, 0);\">Filter Name </strong><span style=\"color: rgb(230, 0, 0);\">to </span><strong style=\"color: rgb(230, 0, 0);\">My Cases</strong><span style=\"color: rgb(230, 0, 0);\">. </span></p><p><br></p><p><span style=\"color: rgb(230, 0, 0); font-size: 20px;\">Additional </span><strong style=\"color: rgb(230, 0, 0); font-size: 20px;\">Setup Instructions</strong><span style=\"color: rgb(230, 0, 0); font-size: 20px;\"> as you scroll down the page.</span></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "1e7e193d-b579-40c8-8318-a25b85670ae1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "a534511c-f984-44fa-90e5-06f0ba4ed15e",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "2fa89c0f-c272-4cff-8f96-649a99c091bc",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Orders"
+          }, {
+            "UUID" : "256ab44e-9b02-47ab-83a1-06ba9cecbff1",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "Frequently Ordered"
+          }, {
+            "UUID" : "f0439d9f-06d0-4f66-9402-37ab2991774a",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "3",
+            "tabName" : "Cases"
+          }, {
+            "UUID" : "fb3140df-3741-4f20-8229-b6bcdbef7e19",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "5dddd",
+            "tabName" : "Articles"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "a534511c-f984-44fa-90e5-06f0ba4ed15e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "accountId" : "",
+            "noOrderMessageText" : "After you place an order, you’ll find it here.",
+            "noResultsText" : "To view orders, adjust your filters.",
+            "numberOfMonthsForFilter" : 12,
+            "orderSummaryFieldMapping" : "[{\"entity\":\"OrderSummary\",\"name\":\"OrderNumber\",\"label\":\"Order Summary Number\",\"type\":\"Text(255)\"},{\"entity\":\"OrderSummary\",\"name\":\"OrderedDate\",\"label\":\"Ordered Date\",\"type\":\"Date/Time\"},{\"entity\":\"OrderSummary\",\"name\":\"Status\",\"label\":\"Status\",\"type\":\"Picklist\"},{\"entity\":\"OrderSummary\",\"name\":\"GrandTotalAmount\",\"label\":\"Total\",\"type\":\"Formula (Currency)\"}]",
+            "ordersListCount" : 25,
+            "ordersListFilter" : true,
+            "ordersListSortBy" : true,
+            "ordersListTitle" : "My Orders",
+            "reOrder" : true,
+            "reOrderLabel" : "START REORDER",
+            "showMoreLabel" : "Show More",
+            "viewDetails" : true,
+            "viewDetailsLabel" : "View Details",
+            "viewMoreOrderBehaviour" : "SHOW_MORE"
+          },
+          "componentName" : "b2b_buyer_builder:ordersList",
+          "id" : "fcf27f84-c1ce-4556-9708-dc8bfa5e94b6",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2fa89c0f-c272-4cff-8f96-649a99c091bc",
+        "regionLabel" : "Orders",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "addAllItemsToCartButtonBackgroundColor" : "",
+            "addAllItemsToCartButtonBackgroundHoverColor" : "",
+            "addAllItemsToCartButtonBorderColor" : "",
+            "addAllItemsToCartButtonBorderRadius" : "0",
+            "addAllItemsToCartButtonText" : "Add All Items To Cart",
+            "addAllItemsToCartButtonTextColor" : "",
+            "addAllItemsToCartButtonTextHoverColor" : "",
+            "addToCartButtonBackgroundColor" : "",
+            "addToCartButtonBackgroundHoverColor" : "",
+            "addToCartButtonBorderColor" : "",
+            "addToCartButtonBorderRadius" : "0",
+            "addToCartButtonText" : "Add To Cart",
+            "addToCartButtonTextColor" : "",
+            "addToCartButtonTextHoverColor" : "",
+            "emptyWishlistItemsBodyLabel" : "Add the products that you want to remember.",
+            "emptyWishlistItemsHeaderLabel" : "No items on this list yet",
+            "emptyWishlistsBodyLabel" : "Create lists of the products that you want to remember.",
+            "emptyWishlistsHeaderLabel" : "No lists yet",
+            "negotiatedPriceFontColor" : "rgb(79,79,79)",
+            "negotiatedPriceFontSize" : "small",
+            "newListButtonText" : "Create List",
+            "originalPriceFontColor" : "rgb(151, 151, 151)",
+            "originalPriceFontSize" : "small",
+            "productFieldMapping" : "",
+            "selectWishlistLabel" : "Click a list to open it.",
+            "showNegotiatedPrice" : true,
+            "showNewListButtonIcon" : true,
+            "showOriginalPrice" : true,
+            "showProductCounts" : true,
+            "showProductImage" : true,
+            "showSku" : true,
+            "skuLabel" : "SKU#",
+            "titleText" : "",
+            "unavailablePriceLabel" : "Price unavailable"
+          },
+          "componentName" : "b2b_buyer_builder:wishlistsManager",
+          "id" : "286c391e-9c94-4841-b145-86be78396e5a",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "256ab44e-9b02-47ab-83a1-06ba9cecbff1",
+        "regionLabel" : "Frequently Ordered",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "All_Cases",
+            "layout" : "FULL",
+            "pageSize" : 25,
+            "scope" : "Case",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "97393d75-83f7-4ac4-9031-56123975e201",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f0439d9f-06d0-4f66-9402-37ab2991774a",
+        "regionLabel" : "Cases",
+        "regionName" : "3",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "showTitle" : true,
+            "title" : "Top Articles",
+            "topicList" : [ ]
+          },
+          "componentName" : "forceCommunity:topArticleList",
+          "id" : "73d30fac-b679-4b37-971f-309926a61e8f",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fb3140df-3741-4f20-8229-b6bcdbef7e19",
+        "regionLabel" : "Articles",
+        "regionName" : "5dddd",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4b86823c-9fe5-4b74-bd79-987463ddf8e4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "addEntryText" : "Add Line",
+        "addToCartButtonBackgroundColor" : "",
+        "addToCartButtonBackgroundHoverColor" : "",
+        "addToCartButtonBorderColor" : "",
+        "addToCartButtonBorderRadius" : "20",
+        "addToCartButtonDisabledBackgroundColor" : "rgb(201, 199, 197)",
+        "addToCartButtonText" : "Add To Cart",
+        "addToCartButtonTextColor" : "",
+        "addToCartButtonTextHoverColor" : "",
+        "numberOfLineItemsToAddEachTime" : 1,
+        "numberOfLineItemsToStart" : 5,
+        "productPlaceholderText" : "Item SKU",
+        "productText" : "Product",
+        "quantityText" : "Quantity",
+        "showAddEntryIcon" : true,
+        "title" : "Quick Order"
+      },
+      "componentName" : "b2b_buyer_builder:quickOrderPage",
+      "id" : "759e3019-d2b3-4de2-b8ab-f729b5381776",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "compareType" : "equals",
+        "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}",
+        "featuredProductStyle" : "Tiled",
+        "featuredProductsBackgroundColor" : "rgba(255, 255, 255, 1)",
+        "featuredProductsBodyAlignment" : "Center",
+        "featuredProductsBodySize" : "Regular",
+        "featuredProductsBorderColor" : "rgba(212, 212, 212, 1)",
+        "featuredProductsComponentBackgroundColor" : "rgba(255, 255, 255, 1)",
+        "featuredProductsDescriptionColor" : "rgba(0, 0, 0, 1)",
+        "featuredProductsHeading" : "Featured Products",
+        "featuredProductsHeadingAlignment" : "Center",
+        "featuredProductsHeadingColor" : "rgba(0, 0, 0, 1)",
+        "featuredProductsHeadingSize" : "Large",
+        "featuredProductsPriceColor" : "rgba(0, 0, 0, 1)",
+        "featuredProductsSkuColor" : "rgba(0, 0, 0, 1)",
+        "includePrices" : true,
+        "productSource" : "SKU List",
+        "showDescription" : true,
+        "showHeading" : true,
+        "showSKU" : true,
+        "skuList" : "EB-5000,C-100,B-1000,A-1000"
+      },
+      "componentName" : "c:b2bFeaturedProducts",
+      "id" : "ddb03b7f-009d-4c99-85c3-a1a46d370eab",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e21a0300-e7e8-4ae3-a8ec-3848fcc94b53",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "7a87e395-87f9-458d-b741-3d9fd92a3044",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c00c4c9c-bcf5-4b89-bebd-f17d9fd66ecf",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "17228497-773c-4cea-9a43-a0155a8252fe",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

@@ -1,0 +1,17 @@
+.slds-scope {
+
+    .slds-button {
+        
+        .slds-button__icon--left, .slds-button__icon_left {
+            
+            &.ma-icon {
+                font-size: 14px;
+                height: 14px;
+                width: 14px;
+                float: left;
+                margin-top: 8px;
+                line-height: 1;
+            }
+        }
+    }    
+}

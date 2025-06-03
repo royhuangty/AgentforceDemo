@@ -1,0 +1,111 @@
+<apex:page showHeader="false" sidebar="false" standardController="WorkOrderLineItem" lightningStylesheets="true" extensions="FSL.ctrl0998_WorkOrderLineItemLightbox" >
+
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+    <apex:includeScript value="{!$Resource.FSL__CommonLightboxScripts}" />
+
+   <script>
+
+        $(function() {
+
+            renderRTLElsDirection($(this));
+            var newServiceId = '{!WorkOrderLineItem.Id}';
+            var newServiceName = '{!WorkOrderLineItem.LineItemNumber}';
+            window.parent.$('#CreateServiceLightboxHeader h1').text('Work Order ' + newServiceName + ':');
+            
+
+            if (window.parent.sforce.console.isInConsole()) {
+                
+                //window.parent.openConsoleTab()
+                var allLinks = $('a');
+                
+                for (var i=0; i<allLinks.length; i++) {
+                    (function(j) {
+                        $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                            e.preventDefault();
+                            window.parent.openConsoleTabFromModal(e.data.url);
+                            return;
+                        });
+
+                    }(i));
+                }
+                    
+                return;
+            }
+
+
+            $('a').attr('target','_blank');
+            
+            $('a').on('mouseover',function() {
+                $(this).attr('target','_blank');
+            });
+
+
+            window.navigateToUrl = function(url) {
+                if (window.parent.sforce.console.isInConsole()) {
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                } else {
+                    window.open(url);
+                }
+            };
+
+            // prevent popups on lookup fields
+            window.LookupHoverDetail.getHover = function() {
+                return {
+                    show: function() {},
+                    hide: function() {},
+                }
+            };
+
+        });
+
+    </script>
+
+    <style>
+        body .bPageBlock {
+            background: #fff !important;
+            border: 0 !important;
+        }
+        
+/*        input[type=submit] {
+            margin-left: 130px !important;
+            padding: 6px 10px !important;
+        }*/
+        
+        input[type=submit]:last-child {
+            margin-left: 6px !important;
+        }
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+/*        .pbBottomButtons .pbButtonb {
+            text-align: right !important;
+            padding-right: 16px;
+        }*/
+    </style>
+
+
+        <div id="CKSW_AccountDetailsForm">
+
+            <apex:form >
+                <apex:pageBlock mode="detail">
+
+                    <apex:pageBlockButtons >
+                            <apex:commandButton action="{!edit}" value="{!$Label.FSL__Edit}" rendered="{!isEditable}"/>
+                            <apex:commandButton action="{!refresh}" value="{!$Label.FSL__Refresh}" />
+                        </apex:pageBlockButtons>
+
+                    <apex:pageBlockSection title="{!$Label.FSL__WOLIFull}" columns="2">
+                        <apex:repeat value="{!$ObjectType.WorkOrderLineItem.FieldSets.FSL__Gantt_Lightbox}" var="d">
+                            <apex:outputField value="{!WorkOrderLineItem[d]}"/>
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+
+            </apex:form>
+
+        </div>
+
+
+</apex:page>

@@ -1,0 +1,30 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Error",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "imageInfo" : "{\"imageInfoV1\":{\"url\":\"https://sfdc-ckz-b2b.s3.amazonaws.com/SDO/w24-product/error_image.png\",\"altText\":\"\",\"contentKey\":\"\",\"contentType\":null}}"
+        },
+        "id" : "0b44735d-7ef9-4824-818e-ee64aef5292d"
+      }, {
+        "attributes" : {
+          "text" : "¡Libere el poder de los fallos!"
+        },
+        "id" : "f9d7629e-0b9a-485c-9082-4b5c389fc81c"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p><span style=\"color: rgb(51, 51, 51);\">¡Ups! Parece que nuestros elfos de la energía se están tomando un descanso para tomar café. Haremos que nuestros magos de la energía solucionen este problema en un santiamén. Inténtelo de nuevo más tarde.</span></p>"
+        },
+        "id" : "60f745c6-fa4f-4c99-93ab-d97335d61b70"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Error"
+        },
+        "id" : "dc4918fa-b073-4785-8ac1-45ef712db1af"
+      } ]
+    }
+  },
+  "urlName" : "error"
+}

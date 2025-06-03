@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>このトランザクションの計算で使用される収益スケジュールで選択された収益認識処理を参照します。</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </CustomFieldTranslation>

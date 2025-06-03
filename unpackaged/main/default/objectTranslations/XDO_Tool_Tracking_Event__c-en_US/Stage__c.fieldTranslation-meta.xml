@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates the progress of a Tracking Event record as it is processed by the services --></help>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Mixpanel Event</masterLabel>
+            <translation><!-- Mixpanel Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixpanel Profile</masterLabel>
+            <translation><!-- Mixpanel Profile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processed</masterLabel>
+            <translation><!-- Processed --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

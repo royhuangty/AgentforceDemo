@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>すべての値を追跡するか、前の追跡値からの変化のみを追跡するかを選択します。</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>すべての値</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>任意の変更</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

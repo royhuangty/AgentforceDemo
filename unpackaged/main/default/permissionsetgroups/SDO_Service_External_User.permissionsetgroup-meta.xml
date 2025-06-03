@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permissions for external users for service demos. Who: Katie Gannon. When: 2024</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Service - SDO External User Perms</label>
+    <permissionSets>SDO_Service_Base_Community_User_Access</permissionSets>
+    <permissionSets>SDO_Service_Service_Catalog_Community_User_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>eager</name>
+                    <type>decorator</type>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>height</name>
+                    <type>decorator</type>
+                    <value>480</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>icon</name>
+                    <type>decorator</type>
+                    <value>video</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <type>decorator</type>
+                    <value>Visual Remote Assistant - Video Dashboard</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>scrollable</name>
+                    <type>decorator</type>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>width</name>
+                    <type>decorator</type>
+                    <value>340</value>
+                </componentInstanceProperties>
+                <componentName>tspa:VideoSession</componentName>
+                <identifier>tspa_VideoSession</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>utilityItems</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>backgroundComponents</name>
+        <type>Background</type>
+    </flexiPageRegions>
+    <masterLabel>Visual Remote Assistant - Admin UtilityBar</masterLabel>
+    <template>
+        <name>one:utilityBarTemplateDesktop</name>
+        <properties>
+            <name>isLeftAligned</name>
+            <value>true</value>
+        </properties>
+    </template>
+    <type>UtilityBar</type>
+</FlexiPage>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Decoration added to text in standalone product rows in quote line editor (Click the icon for additional information) --></help>
+        <label><!-- Standalone Product Row Text Decoration --></label>
+        <name>SBQQ__StandaloneProductRowTextDecoration__c</name>
+        <picklistValues>
+            <masterLabel>line-through</masterLabel>
+            <translation><!-- line-through --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>none</masterLabel>
+            <translation><!-- none --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>overline</masterLabel>
+            <translation><!-- overline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>underline</masterLabel>
+            <translation><!-- underline --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

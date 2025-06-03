@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Real-time events driven from observer initiation in Salesforce.
+This platform events record is published from VRA managed automations.</description>
+    <eventType>HighVolume</eventType>
+    <label>VRA Observer</label>
+    <pluralLabel>VRA Observers</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

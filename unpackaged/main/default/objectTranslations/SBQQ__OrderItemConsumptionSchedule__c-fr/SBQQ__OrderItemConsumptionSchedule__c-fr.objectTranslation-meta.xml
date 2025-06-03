@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Planification de consommation de produit de commande</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planifications de consommation de produit de commande</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label>Informations sur la règle de facturation</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur la règle du Grand livre</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la comptabilisation du revenu</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informations fiscales</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de planification de consommation de </nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

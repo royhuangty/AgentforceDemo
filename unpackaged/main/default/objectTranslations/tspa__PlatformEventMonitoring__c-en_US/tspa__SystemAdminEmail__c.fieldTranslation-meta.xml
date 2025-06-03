@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The setting has a list of emails that will get the email with a notification about the platform events quota thresholds passed. It can have up to three email addresses, the emails must be separated by commas without spaces. --></help>
+        <label><!-- System admin emails --></label>
+        <name>tspa__SystemAdminEmail__c</name>
+    </CustomFieldTranslation>

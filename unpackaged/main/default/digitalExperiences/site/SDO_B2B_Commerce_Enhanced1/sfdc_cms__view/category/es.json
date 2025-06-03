@@ -1,0 +1,41 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Category",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "{!Search.Results.categoryName}"
+        },
+        "id" : "deba24b4-17e0-4b45-b252-804f0fab161f"
+      }, {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "1ee3a446-57a4-4371-851b-17438a9fc8cf"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "0631e884-9d77-45b0-bbfd-dea72956f7d3"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Añadir a carrito",
+          "incrementValueGuideText" : "En incrementos de {0}",
+          "maximumValueGuideText" : "Cantidad máxima: {0}",
+          "minimumValueGuideText" : "Cantidad mínima: {0}",
+          "quantitySelectorLabel" : "CANT.",
+          "viewOptionsButtonText" : "Ver opciones"
+        },
+        "id" : "494470cb-2e18-4364-9ee3-181058f7ba85"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "d0e628b6-5bc6-4fed-81c3-ecf972527a36"
+      } ]
+    }
+  },
+  "urlName" : "category"
+}

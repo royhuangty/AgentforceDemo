@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>SDO Partner Authenticated Users</audienceName>
+    <container>SDO - Partner Central</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>Profile.UserType</entityField>
+                <entityType>User</entityType>
+                <fieldValue>Guest</fieldValue>
+            </criterionValue>
+            <operator>NotEqual</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>374e47ce-b461-4060-b2e6-76d2f091afd2$#$508c145c-50a1-472a-ae21-754c59fc303b</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Support_HTML_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>b77e9d39-2724-41c9-9316-628ebd8f9bb7$#$3f9e07fb-1550-48bb-b24c-ad251006050d</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Community_Rich_Content_Editor_Component</targetValue>
+        </target>
+        <target>
+            <groupName>374e47ce-b461-4060-b2e6-76d2f091afd2$#$f71a9c64-4dd9-478e-9653-1b386b6a5726</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Support_Tab_Layout_New_Component</targetValue>
+        </target>
+        <target>
+            <groupName>b77e9d39-2724-41c9-9316-628ebd8f9bb7$#$07d5825b-ada0-4b64-8986-ecc16fd28cd2</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Community_Message_Notification_Component</targetValue>
+        </target>
+        <target>
+            <groupName>374e47ce-b461-4060-b2e6-76d2f091afd2$#$a07a62b7-4e85-40f4-81a3-926c890fe9a7</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Support_HTML_Editor_2_Component</targetValue>
+        </target>
+    </targets>
+</Audience>

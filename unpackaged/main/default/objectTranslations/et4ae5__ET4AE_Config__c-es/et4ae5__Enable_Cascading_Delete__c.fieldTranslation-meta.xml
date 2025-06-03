@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Elimina automáticamente registros de datos de seguimiento principales y secundarios cuando utilice la herramienta de Limpieza de datos de seguimiento. Para evitar límites regulados de Apex en trabajos de eliminación por lotes, desactive la eliminación en cascada.</help>
+        <label><!-- Enable Cascade-Delete --></label>
+        <name>et4ae5__Enable_Cascading_Delete__c</name>
+    </CustomFieldTranslation>

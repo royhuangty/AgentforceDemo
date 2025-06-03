@@ -1,0 +1,717 @@
+$navbarheight: 52px;
+
+#maMainNavbar {
+    background-color: #1589ee;
+    height:$navbarheight;
+    border-bottom: 0;
+    position: relative;
+    padding-right: 8px;
+    .slds-popover__body {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .ma-menu-item {
+        color: #fff;
+    }
+
+    .ma-menu-item-tab {
+        &.active {
+            box-shadow: 0 -3px 0 0 #fff inset;
+        }
+    }
+    
+    .ma-menu-bar.ma-menu-bar-secondary.background--blue .ma-menu-item {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .ma-menu-item--right {
+        margin-left: auto !important;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    #maMainNavbarMapAnythingLogo {
+    	img {
+    		width: 123px;
+    		height: auto;
+    		margin: 0 4px 5px 12px;
+            color: #fff;
+    	}
+    }
+    
+    .slds-button_icon-container {
+        i.slds-button__icon.ma-icon {
+            margin: 0px 0 0;
+            display: block;
+            line-height: 16px;
+            float: left;
+        }
+        
+        i.ma-icon.ma-icon-down.ma-icon-down--right.align-right {
+            font-size: 10px;
+            height: 10px;
+            margin: 4px 0px 0px 18px;
+            display: block;
+        }
+    }
+
+    .ma-main-navbar-item {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        height: $navbarheight;
+        line-height: $navbarheight;
+        padding: 0 12px;
+        color: rgba(255, 255, 255, 0.85);
+        background-clip: padding-box;
+        transition: all 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+        &:hover {
+            background-color: $mainnavbar-item-color-background-hover;
+            color: #fff;
+        }
+
+        &:active {
+            background-color: $color-brand-dark;
+            color: #fff;
+        }
+
+        &.is-active {
+            background-color: $color-brand-dark;
+            box-shadow: 0 -3px 0 0 #fff inset;
+            color: #fff;
+        }
+
+        .slds-button__icon {
+            font-size: 14px;
+            line-height: 1;
+            display: block;
+            float: left;
+            margin: 18px 8px 0 0;
+        }
+    }
+
+    .ma-main-navbar-icon-item {
+        font-size: 16px;
+        margin: 0 1px;
+        line-height: 11px;
+        color: #fff;
+
+        &:hover {
+            // border-color: $science_blue;
+            background-color: $science_blue;
+            color: #fff;
+        }
+
+        &:active, &.is-active {
+            background-color: $endeavour;
+            border-left-color: $endeavour;
+            border-right-color: $endeavour;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .ma-main-nav-separator {
+        margin: 0px 16px;
+        background-color: rgba(255,255,255,0.24);
+        width: 1px;
+        height: 32px;
+    }
+
+    .ma-main-nav-logo-separator {
+        @extend .ma-main-nav-separator;
+        margin: 0 12px;
+    }
+
+    .slds-form-element {
+
+	    .slds-input_inverse {
+	    	background-color: $ENDEAVOUR;
+	    	border-color: $ENDEAVOUR;
+	    	color: #fff;
+	    	padding-left:36px;
+
+	    	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	    	  color: $transparent-white-5;
+	    	}
+	    	&::-moz-placeholder { /* Firefox 19+ */
+	    	  color: $transparent-white-5;
+	    	}
+	    	&:-ms-input-placeholder { /* IE 10+ */
+	    	  color: $transparent-white-5;
+	    	}
+	    	&:-moz-placeholder { /* Firefox 18- */
+	    	  color: $transparent-white-5;
+	    	}
+	    }
+
+	    .slds-input__icon_right {
+	    	color: rgba(255,255,255,0.5);
+	    	font-size:14px;
+
+	    	&:hover {
+	    		color:#fff;
+	    	}
+	    }
+
+	    .slds-input__icon_left {
+	    	display:block;
+	    	font-size: 16px;
+	    	color: rgba(255,255,255,0.8);
+	    }
+	}
+}
+
+#mapTileDropdownWrap {
+    #mapTileDropdown {
+        position: absolute;
+        background-color: #0070d2;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+        width: auto;
+        height: auto;
+        top: 100%;
+        left: 50%;
+        margin-left: -397px;
+        max-width: 0;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -moz-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        -o-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        -webkit-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        z-index: 12;
+        display: none;
+    }
+    &:hover #mapTileDropdown {
+        max-width: 2000px;
+        max-height: 2000px;
+        opacity: 1;
+        visibility: visible;
+        -moz-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        -o-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        -webkit-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        display: block;
+        z-index: 13;
+    }
+    #mapTileDropdownMapWrap {
+        float: left;
+        padding: 16px 8px 10px 20px;
+        text-align: left;
+        max-height: 438px;
+        overflow-y: overlay;
+        .map-tile-label {
+            position: absolute;
+            z-index: 20;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            background-color: #16325c;
+            font-size: 12px;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: 0;
+            padding: 4px 8px;
+            -moz-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            -o-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            -webkit-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            .ma-icon {
+                display: none;
+                opacity: 0;
+                float: left;
+                width: 14px;
+                font-size: 14px;
+                height: 14px;
+                margin: 2px 6px 0 0;
+                max-width: 0;
+                max-height: 0;
+                overflow: hidden;
+                -moz-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                -o-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                -webkit-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            }
+        }
+        .label {
+            letter-spacing: 0;
+            text-transform: none;
+            line-height: 1;
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 0 16px;
+        }
+        .map-tile-row {
+            width: 100%;
+            float: left;
+            clear: both;
+        }
+        .map-tile-map-type {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            border-radius: 4px;
+            opacity: .7;
+            background-color: #f4f6f9;
+            float: left;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            overflow: hidden;
+            &.active {
+                opacity: 1;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+                .map-tile-label {
+                    background-color: #4194e4;
+                    line-height: 18px;
+                    .ma-icon {
+                        opacity: 1;
+                        max-width: 16px;
+                        max-height: 16px;
+                        display: block;
+                    }
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+             img {
+                display: block;
+                position: relative;
+                z-index: 10;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+#weatherTileDropdownWrap {
+    #weatherTileDropdown {
+        position: absolute;
+        background-color: #0070d2;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+        width: auto;
+        height: auto;
+        top: 100%;
+        left: 50%;
+        margin-left: -397px;
+        max-width: 0;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -moz-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        -o-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        -webkit-transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        transition: 0s visibility 0.1s, 0.1s opacity 0s, 0s max-width 0.1s, 0s max-height 0.1s;
+        z-index: 12;
+        display: none;
+    }
+    &:hover #weatherTileDropdown {
+        max-width: 2000px;
+        max-height: 2000px;
+        opacity: 1;
+        visibility: visible;
+        -moz-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        -o-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        -webkit-transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        transition: 0s visibility 0s, 0.1s opacity 0s, 0s max-width 0s, 0s max-height 0s;
+        display: block;
+        z-index: 13;
+    }
+    #mapTileDropdownWeatherWrap {
+        float: left;
+        padding: 16px 8px 10px 20px;
+        text-align: left;
+        
+        .map-tile-label {
+            position: absolute;
+            z-index: 20;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            background-color: #16325c;
+            font-size: 12px;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: 0;
+            padding: 4px 8px;
+            -moz-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            -o-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            -webkit-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            .ma-icon {
+                display: none;
+                opacity: 0;
+                float: left;
+                width: 14px;
+                font-size: 14px;
+                height: 14px;
+                margin: 2px 6px 0 0;
+                max-width: 0;
+                max-height: 0;
+                overflow: hidden;
+                -moz-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                -o-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                -webkit-transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+                transition: 0.2s max-width 0s, 0.2s max-height 0s, 0.2s opacity 0s;
+            }
+        }
+        .label {
+            letter-spacing: 0;
+            text-transform: none;
+            line-height: 1;
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 0 16px;
+        }
+        .map-tile-row {
+            width: 100%;
+            float: left;
+            clear: both;
+        }
+        .map-tile-weather {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            border-radius: 4px;
+            opacity: .7;
+            background-color: #f4f6f9;
+            float: left;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            overflow: hidden;
+            &.active {
+                opacity: 1;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+                .map-tile-label {
+                    background-color: #4194e4;
+                    line-height: 18px;
+                    .ma-icon {
+                        opacity: 1;
+                        max-width: 16px;
+                        max-height: 16px;
+                        display: block;
+                    }
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+             img {
+                display: block;
+                position: relative;
+                z-index: 10;
+                border-radius: 4px;
+                width: 120px;
+            }
+        }
+    }
+}
+
+
+.ma-dropdown-wrap {
+    .ma-dropdown-list {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 100%;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 7000;
+        min-width: 6rem;
+        max-width: 20rem;
+        -webkit-transition: visibility 0s linear 0.1s, opacity 0.1s linear 0s;
+        -moz-transition: visibility 0s linear 0.1s, opacity 0.1s linear 0s;
+        -ms-transition: visibility 0s linear 0.1s, opacity 0.1s linear 0s;
+        -o-transition: visibility 0s linear 0.1s, opacity 0.1s linear 0s;
+        transition: visibility 0s linear 0.1s, opacity 0.1s linear 0s;
+        min-width: calc(100% + 16px);
+        > ul {
+            background-color: #0070d2;
+            border: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 8px 0;
+            margin-top: 0;
+            list-style-type: none;
+            border-radius: 0.25rem;
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+            li {
+                line-height: 1.5;
+                text-transform: none;
+                color: #16325c;
+                letter-spacing: 0;
+                font-size: .875rem;
+                a {
+                    position: relative;
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-justify-content: flex-start;
+                    -ms-flex-pack: flex-start;
+                    justify-content: flex-start;
+                    padding: .5rem 2rem .5rem .75rem;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    font-size: .875rem;
+                    line-height: 1.5;
+                    min-width: 10rem;
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+            li:hover {
+                a {
+                    color: #fff;
+                    background-color: #1061b1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &:hover {
+        .ma-dropdown-list {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: visibility 0s linear 0s, opacity 0.1s linear;
+            -moz-transition: visibility 0s linear 0s, opacity 0.1s linear;
+            -ms-transition: visibility 0s linear 0s, opacity 0.1s linear;
+            -o-transition: visibility 0s linear 0s, opacity 0.1s linear;
+            transition: visibility 0s linear 0s, opacity 0.1s linear;
+        }
+    }
+}
+
+#toolbarSearchInputWrap.in {
+    #toolbarSearchInput {
+        background-color: #0050a0;
+    }
+}
+
+#toolbarSearchInputWrap {
+    width: 200px;
+    position: relative;
+    height: 33px;
+}
+
+#toolbarSearchFormControl {
+    max-width: 100%;
+    width: 1000px;
+    position: relative;
+    transform: translate(0, 0);
+    -moz-transition: 0.25s transform 0s, 0.25s max-width 0s;
+    -o-transition: 0.25s transform 0s, 0.25s max-width 0s;
+    -webkit-transition: 0.25s transform 0s, 0.25s max-width 0s;
+    transition: 0.25s transform 0s, 0.25s max-width 0s;
+}
+
+#toolbarSearchInput {
+    width: 100%;
+    border-color: transparent;
+    background-color: #0050a0;
+    color: #fff;
+    &:focus {
+        background: #0050a0 !important;
+        border-color: #0050a0 !important;
+    }
+}
+
+/* Weather Slider */
+td.weather-opacity-value {
+    color: #16325c;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 9px !important;
+    width: 150px;
+}
+
+.ma-form-control-wrap-range {
+    position: relative;
+    .weather-opacity {
+        background: #4194e4;
+    }
+}
+
+.weather-opacity-scale  {
+    div {
+        text-align: center;
+        width: 25%;
+        float: left;
+        font-size: 9px;
+        position: relative;
+        padding-top: 10px;
+        &::after {
+            content: ' ';
+            position: absolute;
+            left: calc(50% - 1px);
+            height: 6px;
+            width: 1px;
+            background-color: #54698d;
+            opacity: .5;
+            top: 0;
+        }
+    }
+}
+
+#searchPanelPositioner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    display: none;
+    transform: translate(320px, 0);
+    
+    &.in {
+        left:auto;
+        top:auto;
+        width:325px;
+        height:100%;
+        display:block;
+        transition: .35s all;
+        transform: translate(0, 0);
+        z-index: 1;
+    }
+    
+    &.overflow-visible {
+        overflow: visible;
+    }
+}
+
+#searchPanelWrap {
+    cursor: auto;
+    z-index: 120;
+    width: 320px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.32);
+}
+
+
+.ma-list {
+    margin: 0;
+    border-top: 1px solid #d8dde6;
+    .ma-list-item {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        margin: 0;
+        width: 100%;
+        padding: .5rem;
+        background-color: #ffffff;
+        &:hover {
+            background-color: #f4f6f9;
+            border-color: #d8dde6;
+            cursor: pointer;
+        }
+    }
+}
+
+#searchPanelPositioner {
+    .background--blue-3 {
+        background-color: #1061b1;
+        border-bottom: 1px solid #d8dde6;
+        color: #fff;
+        padding: .75rem;
+        button.on-background--blue-3 {
+            width: 32px;
+            height: 32px;
+            color: #fff;
+        }
+    }
+    .ma-list-item {
+        padding: 14px 12px;
+        border-bottom: 1px solid #d8dde6;
+    }
+}
+
+.ma-list-icon-left {
+    margin-right: .75rem;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.ma-list-icon-sm {
+    width: 24px;
+    color: #5876a3;
+}
+
+.ma-list-icon-sm .ma-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.ma-list-item-name {
+    color: #16325c;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: auto;
+}
+
+.ma-list-item-subtext {
+    color: #5876a3;
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: none;
+    white-space: auto;
+    letter-spacing: 0;
+}
+
+button.slds-button:hover + .slds-popover {
+    width: auto;
+    position: absolute;
+    max-width: 20rem;
+    max-height: 20rem;
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    transition: 0s max-width 0s, 0s max-height 0s, 0s visibility 0s, 0s overflow 0s, 0.2s opacity 0s;
+    left: 50%;
+    float: left;
+    top: calc(100% + 11px);
+    transform: translateX(-50%);
+}
+
+// .slds-grid div {
+//     position: relative;
+// }
+
+button.slds-button + .slds-popover {
+    left: 50%;
+    float: left;
+    top: calc(100% + 11px);
+    transform: translateX(-50%);
+}

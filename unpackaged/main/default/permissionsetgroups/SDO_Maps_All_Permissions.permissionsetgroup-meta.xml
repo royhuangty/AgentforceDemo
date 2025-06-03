@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: All Permissions needed to demonstrate Maps. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Maps - All Permissions</label>
+    <permissionSets>SDO_Maps_Base_Access</permissionSets>
+    <permissionSets>maps__Advanced</permissionSets>
+    <permissionSets>maps__LiveAdmin</permissionSets>
+    <permissionSets>maps__MapsAdmin</permissionSets>
+    <permissionSets>maps__MapsUser</permissionSets>
+    <permissionSets>maps__SFMaps</permissionSets>
+    <permissionSets>maps__TerritoryPlanning</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

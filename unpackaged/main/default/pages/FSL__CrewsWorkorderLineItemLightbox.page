@@ -1,0 +1,210 @@
+<apex:page showHeader="false" sidebar="false" standardController="WorkOrderLineItem" extensions="FSL.ctrl0998_WorkOrderLineItemLightbox" >
+
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />
+    <apex:includeScript value="{!$Resource.FSL__CMCommonLightboxScripts}" />
+
+    <script>
+
+        $(function() {
+
+            $('.btn').hide();
+
+            var newServiceId = '{!WorkOrderLineItem.Id}';
+            var newServiceName = '{!WorkOrderLineItem.LineItemNumber}';
+            window.parent.$('#CreateServiceLightboxHeader h1').text('Work Order ' + newServiceName + ':');
+
+            //handle link in console app
+            if (window.parent.sforce.console.isInConsole()) {
+               consoleAppHandleLinks();
+               return; 
+            }
+
+            $('a').attr('target','_blank');
+
+            $('a').on('mouseover',function() {
+                 //do not add target for 'showMoreList'
+                if (($(this).attr('href')) && ($(this).attr('href').indexOf('showMoreList') > -1)) {
+                    return;
+                }
+                $(this).attr('target','_blank');
+            });
+
+
+            window.navigateToUrl = function(url) {
+                if (window.parent.sforce.console.isInConsole()) {
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                } else {
+                    window.open(url);
+                }
+            };
+
+            // prevent popups on lookup fields
+            window.LookupHoverDetail.getHover = function() {
+                return {
+                    show: function() {},
+                    hide: function() {},
+                }
+            };
+
+
+            handleLinks();
+
+        });
+
+        function consoleAppHandleLinks() {
+
+               var allLinks = $('a');
+
+              for (var i=0; i<allLinks.length; i++) {
+                var currentLink = $(allLinks[i]);
+
+                // if the "show X more" is clicked, need to reattch handles as the DOM is destroyed and rebuilt
+               if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('showMoreList') > -1))) {
+       
+                 (function(j) {
+                    $(allLinks[j]).off('click');
+                    $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                      setTimeout(handleLinks,500);
+                      setTimeout(handleLinks,1500);
+                      setTimeout(handleLinks,3000);
+                      return;
+                    });
+                 }(i));
+
+                 continue;
+                }
+     
+               // if link is "del" or "show X more"
+              if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('delete') > -1)))
+                  continue;
+
+             (function(j) {
+                //W-15630542 extract url to open related list in console app
+                var extractedUrl = extractUrlIfScrUpMatch($(allLinks[j]).attr('href')); 
+                if (extractedUrl !== null)  {
+                    $(allLinks[j]).attr('href', extractedUrl);
+                }
+      
+                $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                    $(allLinks[j]).removeAttr('target');
+                    e.preventDefault();
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                    return;
+            });
+
+        }(i));
+      }
+    }
+
+
+
+
+        function handleLinks() {
+
+            var allLinks = $('a');
+            allLinks.off('click');
+            //handle link in console app
+            if (window.parent.sforce.console.isInConsole()) {
+               consoleAppHandleLinks();
+               return; 
+            }
+            // normal, tabbed view
+            for (var i=0; i<allLinks.length; i++) {
+
+                var currentLink = $(allLinks[i]);
+
+                // if the "show X more" is clicked, need to reattch handles as the DOM is destroyed and rebuilt
+                if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('showMoreList') > -1))) {
+
+                    (function(j) {
+                        $(allLinks[j]).removeAttr('target');
+                        $(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+                            setTimeout(handleLinks,500);
+                            setTimeout(handleLinks,1500);
+                            setTimeout(handleLinks,3000);
+                            return;
+                        });
+                    }(i));
+
+                    continue;
+                }
+
+
+                // if link is "del" or "show X more"
+                if ((currentLink.attr('href')) && ((currentLink.attr('href').indexOf('delete') > -1)))
+                    continue;
+
+                currentLink.attr('target','_blank');
+            }
+
+
+            window.navigateToUrl = function(url) {
+                if (window.parent.sforce.console.isInConsole()) {
+                    window.parent.openConsoleTabFromModal(e.data.url);
+                } else {
+                    window.open(url);
+                }
+            };
+
+            // prevent popups on lookup fields
+            window.LookupHoverDetail.getHover = function() {
+                return {
+                    show: function() {},
+                    hide: function() {},
+                }
+            };
+
+        }
+
+    </script>
+
+    <style>
+        body .bPageBlock {
+            background: #fff !important;
+            border: 0 !important;
+        }
+
+        input[type=submit] {
+            margin-left: 130px !important;
+            padding: 6px 10px !important;
+        }
+
+        input[type=submit]:last-child {
+            margin-left: 6px !important;
+        }
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+        input[name='new'][type='button'] {
+            display: none;
+        }
+    </style>
+
+
+    <div id="CKSW_AccountDetailsForm">
+
+        <apex:form >
+            <apex:pageBlock mode="detail">
+                <apex:pageBlockSection columns="2">
+                    <apex:repeat value="{!$ObjectType.WorkOrderLineItem.FieldSets.FSL__CrewManagment_Lightbox}" var="d">
+                        <apex:outputField value="{!WorkOrderLineItem[d]}"/>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+
+        </apex:form>
+
+        <br/><br/>
+
+        <apex:pageBlock mode="maindetail">
+            <apex:relatedList list="SkillRequirements"/>
+            <!--<apex:relatedList list="ResourcePreferences"/>-->
+            <apex:relatedList list="ServiceAppointments"/>
+        </apex:pageBlock>
+
+    </div>
+
+
+</apex:page>

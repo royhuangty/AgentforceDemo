@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    <validationRules>
+        <errorMessage><!-- The default availability should be between 0 to 100 --></errorMessage>
+        <name>inov8__Default_Availability_btwn_1_to_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Resource planning years in advance should be greater than 0 --></errorMessage>
+        <name>inov8__RP_Years_in_advance_greater_than_0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start month for fiscal year setting should be in between 1 and 12 --></errorMessage>
+        <name>inov8__Start_Month_between_1_and_12</name>
+    </validationRules>
+</CustomObjectTranslation>

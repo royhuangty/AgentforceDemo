@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ptnr_Onbd_Fmwk__Onboarding_Plan__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Onboarding Plan</label>
+    <referenceTo>Ptnr_Onbd_Fmwk__Onboarding__c</referenceTo>
+    <relationshipLabel>Onboarding Tasks</relationshipLabel>
+    <relationshipName>Onboarding_Tasks</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

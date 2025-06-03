@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Určuje, kolik minut po ukončení dne zdroje bude k dispozici k cestě (na náklady zdroje). Je-li prázdná, platí jakékoli množství cesty před začátkem práce.</help>
+        <label><!-- Travel To Home (minutes) --></label>
+        <name>FSL__Travel_To_Home__c</name>
+    </CustomFieldTranslation>

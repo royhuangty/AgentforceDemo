@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LearningItemAssignment$Assignee</field>
+    </columns>
+    <columns>
+        <field>LearningItemAssignment$Assignee.Manager.Name</field>
+    </columns>
+    <description>Analyze the distribution of assigned and self-enrolled users in a program.</description>
+    <filter>
+        <criteriaItems>
+            <column>LearningItemAssignment$LearningItem.EnablementProgram.Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>External</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LearningItemAssignment$AssignmentStatus</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$LearningItem.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$Assignee.Account.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LearningItemAssignment$EnrollmentType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Program Users by Enrollment Type</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>PRM_Program_Progress_sfdcSESv61__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

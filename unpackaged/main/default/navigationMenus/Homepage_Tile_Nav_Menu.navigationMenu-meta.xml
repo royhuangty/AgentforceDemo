@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SDO - B2B Commerce Enhanced</container>
+    <containerType>Network</containerType>
+    <label>B2B Homepage Tile Nav Menu</label>
+    <navigationMenuItem>
+        <label>My Account</label>
+        <menuItemBranding>
+            <tileImage>My_Account</tileImage>
+        </menuItemBranding>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/myprofile</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <defaultListViewId>mine</defaultListViewId>
+        <label>My Quotes</label>
+        <menuItemBranding>
+            <tileImage>My_Quotes</tileImage>
+        </menuItemBranding>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>Quote</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <defaultListViewId>mine</defaultListViewId>
+        <label>My Invoices</label>
+        <menuItemBranding>
+            <tileImage>My_Invoice</tileImage>
+        </menuItemBranding>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>Invoice</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>My Wish List</label>
+        <menuItemBranding>
+            <tileImage>My_Wish_List</tileImage>
+        </menuItemBranding>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/mylists</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

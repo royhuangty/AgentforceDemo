@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Power_Source__c</fullName>
+    <label>Power Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Electric</fullName>
+                <default>false</default>
+                <label>Electric</label>
+            </value>
+            <value>
+                <fullName>Solar</fullName>
+                <default>false</default>
+                <label>Solar</label>
+            </value>
+            <value>
+                <fullName>Wind</fullName>
+                <default>false</default>
+                <label>Wind</label>
+            </value>
+            <value>
+                <fullName>Water</fullName>
+                <default>false</default>
+                <label>Water</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

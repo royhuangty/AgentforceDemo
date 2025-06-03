@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Includes all permissions for Einstein for Service Demos. Who: Jesse Chase. When: 2021</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Service - Einstein for Service</label>
+    <permissionSets>SDO_Service_Agent_Helper_PSL</permissionSets>
+    <permissionSets>SDO_Service_Case_Classification</permissionSets>
+    <permissionSets>force__EinsteinAgent</permissionSets>
+    <permissionSets>force__EinsteinAgentCWU</permissionSets>
+    <permissionSets>force__EinsteinGPTPromptTemplateUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

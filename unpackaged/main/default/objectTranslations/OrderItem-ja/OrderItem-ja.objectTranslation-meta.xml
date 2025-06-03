@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Billing Order Product Layout</layout>
+        <sections>
+            <label>請求サイクル情報</label>
+            <section>Billing Frequency Information</section>
+        </sections>
+        <sections>
+            <label>請求メトリクス</label>
+            <section>Billing Metrics</section>
+        </sections>
+        <sections>
+            <label>請求ルール情報</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>計算グループ化情報</label>
+            <section>Calculation Grouping Information</section>
+        </sections>
+        <sections>
+            <label>GL ルール情報</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>請求書の実行情報</label>
+            <section>Invoice Run Info</section>
+        </sections>
+        <sections>
+            <label>価格情報</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>見積およびサブスクリプション情報</label>
+            <section>Quote and Subscription Information</section>
+        </sections>
+        <sections>
+            <label>収益認識情報</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>税金情報</label>
+            <section>Tax Information</section>
+        </sections>
+        <sections>
+            <label>使用量請求先情報</label>
+            <section>Usage Billing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Order Product Layout</layout>
+        <sections>
+            <label>契約情報</label>
+            <section>Contracting Information</section>
+        </sections>
+        <sections>
+            <label>価格情報</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>見積およびサブスクリプション情報</label>
+            <section>Quote and Subscription Information</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Can’t edit the bookings status on an activated order product. --></errorMessage>
+        <name>SBQQ__CannotChangeBookingIndicatorOnActivation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is Recurring, a Billing Type must be selected. --></errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Rule must be selected --></errorMessage>
+        <name>blng__BIllingRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Recognition Rule must be selected --></errorMessage>
+        <name>blng__RevenueRecognitionRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tax Rule must be selected --></errorMessage>
+        <name>blng__TaxRuleMustBeSelected</name>
+    </validationRules>
+</CustomObjectTranslation>

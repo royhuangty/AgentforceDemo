@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Territoire dans les paramètres utilisateur de gestion de l’équipe</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Territoires dans les paramètres utilisateur de gestion de l’équipe</value>
+    </caseValues>
+    
+    
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du territoire des paramètres utilisa</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

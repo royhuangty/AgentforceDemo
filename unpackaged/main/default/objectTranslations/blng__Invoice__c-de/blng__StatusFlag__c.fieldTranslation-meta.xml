@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Orange = aktive Rechnung mit Saldo; Grün = kein Saldo fällig; Rot = überfällig; Weiß = storniert</help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </CustomFieldTranslation>

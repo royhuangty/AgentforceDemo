@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Service Property --></label>
+        <name>FSL__Service_Property__c</name>
+        <picklistValues>
+            <masterLabel>ArrivalWindowEndTime</masterLabel>
+            <translation>WaktuAkhirJendelaKedatangan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ArrivalWindowStartTime</masterLabel>
+            <translation>WaktuMulaiJendelaKedatangan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedEndTime</masterLabel>
+            <translation>WaktuAkhirJadwal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SchedStartTime</masterLabel>
+            <translation>WaktuMulaiJadwal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceTerritory</masterLabel>
+            <translation>WilayahLayanan</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Appointment Status --></label>
+        <name>tsaa__AppointmentStatus__c</name>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cannot Complete</masterLabel>
+            <translation><!-- Cannot Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatched</masterLabel>
+            <translation><!-- Dispatched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

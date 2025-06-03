@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>すべてのトランザクションを取り込むには [オープン] を選択し、トランザクションをこれ以上取り込まないようにするには [完了] を選択します。</help>
+        <label><!-- Period Status --></label>
+        <name>blng__PeriodStatus__c</name>
+    </CustomFieldTranslation>

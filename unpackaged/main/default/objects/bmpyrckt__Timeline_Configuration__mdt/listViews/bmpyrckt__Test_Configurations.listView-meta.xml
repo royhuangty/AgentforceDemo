@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bmpyrckt__Test_Configurations</fullName>
+    <columns>DeveloperName</columns>
+    <columns>bmpyrckt__Parent_Object__c</columns>
+    <columns>bmpyrckt__Object_Name__c</columns>
+    <columns>bmpyrckt__Relationship_Name__c</columns>
+    <columns>bmpyrckt__Position_Date_Field__c</columns>
+    <columns>bmpyrckt__Detail_Field__c</columns>
+    <columns>bmpyrckt__Icon__c</columns>
+    <columns>bmpyrckt__Icon_Background_Colour__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>bmpyrckt__Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>bmpyrckt__Test__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Test Configurations</label>
+</ListView>

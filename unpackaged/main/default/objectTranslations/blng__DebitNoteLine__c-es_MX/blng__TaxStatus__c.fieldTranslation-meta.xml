@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Completado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>Error</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processing</masterLabel>
+            <translation>Procesando</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation>En cola</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warning</masterLabel>
+            <translation>Advertencia</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

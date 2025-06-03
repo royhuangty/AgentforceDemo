@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify object that sources value for use in determining whether the filter is hidden. --></help>
+        <label><!-- Hidden Source Object --></label>
+        <name>SBQQ__HiddenSourceObject__c</name>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

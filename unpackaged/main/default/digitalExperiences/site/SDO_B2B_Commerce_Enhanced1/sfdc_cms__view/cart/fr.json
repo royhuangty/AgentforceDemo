@@ -1,0 +1,129 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Cart",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Votre panier est vide"
+        },
+        "id" : "9221a8eb-198d-40cc-ad50-d40796b66af1"
+      }, {
+        "id" : "e995734e-b874-4915-8489-3c143c232257",
+        "attributes" : {
+          "text" : "Continuer vos achats"
+        }
+      }, {
+        "id" : "8b4ca9e6-0b0f-4f8c-bb01-c0fe85f5288d",
+        "attributes" : {
+          "text" : "Panier"
+        }
+      }, {
+        "id" : "73e74c1a-ce27-48c5-b1de-6fd3030f0d1d",
+        "attributes" : {
+          "text" : "Panier"
+        }
+      }, {
+        "id" : "809c81b5-95f0-46e8-b291-941fa98b6bca",
+        "attributes" : {
+          "text" : "({!Cart.Details.totalProductCount} article(s))"
+        }
+      }, {
+        "id" : "94d77005-afda-4ef6-9ed0-a2d805b75ccb",
+        "attributes" : {
+          "text" : "Vider le Panier"
+        }
+      }, {
+        "id" : "bb58c9ed-08ce-48cc-9bed-d7a97481f169",
+        "attributes" : {
+          "skuLabel" : "REF {0}",
+          "productFieldMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Code Produit:\",\"type\":\"STRING\"}]",
+          "promotionsAppliedSavingsButtonText" : "{amount} économisé",
+          "minimumValueGuideText" : "La quantité minimale est de {0}",
+          "maximumValueGuideText" : "La quantité maximale est de {0}",
+          "incrementValueGuideText" : "Vendu par tranches de {0}",
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "items" : "{!Cart.Items}"
+        }
+      }, {
+        "id" : "c75ea5fa-27ea-400c-a45b-a9e823f7e5fd",
+        "attributes" : {
+          "text" : "Afficher plus"
+        }
+      }, {
+        "id" : "af836e02-87be-428e-b678-9f5e2229c495",
+        "attributes" : {
+          "text" : "Récapitulatif"
+        }
+      }, {
+        "id" : "266856fe-5974-4f39-a13c-d4fa2a98458a",
+        "attributes" : {
+          "text" : "Sous-Total"
+        }
+      }, {
+        "id" : "2d25fc92-37b4-4ff9-8ed2-adc1f8e37670",
+        "attributes" : {
+          "text" : "Expédition"
+        }
+      }, {
+        "id" : "14224795-81fb-40ea-bf57-4c63d6e9bed4",
+        "attributes" : {
+          "text" : "Taxes"
+        }
+      }, {
+        "id" : "c59caad3-bdb0-4a1a-adb6-9c3ea21a7219",
+        "attributes" : {
+          "text" : "Codes Coupon"
+        }
+      }, {
+        "id" : "0d829b3e-efe3-409c-a78f-1fc16131c4c0",
+        "attributes" : {
+          "couponInputPlaceholderText" : "Entrer un code coupon...",
+          "applyCouponButtonText" : "Appliquer",
+          "applyCouponButtonProcessingText" : "Ajout en cours"
+        }
+      }, {
+        "id" : "46dc98d9-c3b0-429c-bc48-cc3703cc0645",
+        "attributes" : {
+          "sectionLabel" : "Commande express"
+        }
+      }, {
+        "id" : "73fb0548-a829-4db5-8307-71169ffba8d3",
+        "attributes" : {
+          "text" : "Promotions"
+        }
+      }, {
+        "id" : "7420671d-0740-4017-87d0-1219e0f02718",
+        "attributes" : {
+          "text" : "Taxe incluse"
+        }
+      }, {
+        "id" : "0d835258-5369-4038-8b47-a62a7bd1fc8a",
+        "attributes" : {
+          "text" : "Total"
+        }
+      }, {
+        "id" : "b1fb37ee-4f56-4d68-b31b-592dd5f05a44",
+        "attributes" : {
+          "termsAndConditionsTitleText" : "Termes et conditions"
+        }
+      }, {
+        "id" : "2574687b-7d32-48a8-8545-75339122e42f",
+        "attributes" : {
+          "text" : "Termes & Conditions"
+        }
+      }, {
+        "id" : "2e0f1157-ce7b-496d-8406-ef70554bc3d2",
+        "attributes" : {
+          "text" : "Facture"
+        }
+      }, {
+        "id" : "b956ec3c-07b5-424d-a880-cbf96f1246c3",
+        "attributes" : {
+          "text" : "Entrez un code promo"
+        }
+      } ]
+    }
+  },
+  "urlName" : "cart"
+}

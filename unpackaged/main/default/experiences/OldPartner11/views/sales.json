@@ -1,0 +1,260 @@
+{
+  "appPageId" : "e0fc7900-a10c-4a56-88d5-3300b25fd224",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e0108df3-c2a6-4d57-8e1e-b067ce894772",
+  "label" : "Sales",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3c68bb4c-97bb-4a3f-a706-dd5b184e7737",
+          "columns" : [ {
+            "UUID" : "1acfeaa4-d3ff-48a2-8721-0f6925a2e1d5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "9",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "43c0388b-a751-411a-b6c5-a3226f7c6f05",
+            "columnKey" : "6a122",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3c68bb4c-97bb-4a3f-a706-dd5b184e7737",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "b1a98525-7231-4cf1-9735-27bd35d7dd38",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "5ec35e4a-1cf5-475c-ba9c-1fd553c4ee36",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "b30d5",
+                "tabName" : "My Company's Sales"
+              }, {
+                "UUID" : "80a56e3f-745c-40c4-9d56-d8bab0da5592",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Registered"
+              }, {
+                "UUID" : "772e39b7-ccb8-4376-98fe-f5149d74b909",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Approved"
+              }, {
+                "UUID" : "905582e1-257c-4c1e-b545-2e36a056b0d0",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Rejected"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "b1a98525-7231-4cf1-9735-27bd35d7dd38",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "objectApiName" : "Opportunity"
+              },
+              "componentName" : "runtime_pipeline_inspector:pipelineInspectorHomeExperienceContainer",
+              "id" : "547fea29-f4af-44d9-861b-e9b33ec6897d",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "5ec35e4a-1cf5-475c-ba9c-1fd553c4ee36",
+            "regionLabel" : "My Company's Sales",
+            "regionName" : "b30d5",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : false,
+                "filterName" : "AllOpenLeads",
+                "layout" : "FULL",
+                "pageSize" : 10,
+                "scope" : "Lead",
+                "showActionBar" : false,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "aa3cfbac-5ee1-451d-9f6d-b6b6219aa6b1",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "80a56e3f-745c-40c4-9d56-d8bab0da5592",
+            "regionLabel" : "Registered",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : false,
+                "filterName" : "SDO_Experience_PRM_MyOpenDeals",
+                "layout" : "FULL",
+                "pageSize" : 10,
+                "scope" : "Opportunity",
+                "showActionBar" : false,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "8ed1daed-8311-4340-8ce7-da82e96d72fe",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "772e39b7-ccb8-4376-98fe-f5149d74b909",
+            "regionLabel" : "Approved",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : false,
+                "filterName" : "My_Rejected_Registrations",
+                "layout" : "FULL",
+                "pageSize" : 10,
+                "scope" : "Lead",
+                "showActionBar" : false,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : false,
+                "showPinnedList" : false,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "e8229a00-d4da-4c58-84b2-b6513f4e4dac",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "905582e1-257c-4c1e-b545-2e36a056b0d0",
+            "regionLabel" : "Rejected",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1acfeaa4-d3ff-48a2-8721-0f6925a2e1d5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "c23a08aa-ea03-4d95-ba48-1943e409dab5",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "346d52e7-1bae-4e83-8fd4-021030d5cd3a",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Activity"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "c23a08aa-ea03-4d95-ba48-1943e409dab5",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "canChangeSorting" : true,
+                "defaultFilter" : "",
+                "defaultSortOrderHomeFeed" : "Relevance",
+                "defaultSortOrderTopicsFeed" : "Relevance",
+                "feedDesign" : "DEFAULT",
+                "hasFeedSearch" : true,
+                "subjectId" : "{!recordId}",
+                "type" : "News"
+              },
+              "componentName" : "forceCommunity:forceCommunityFeed",
+              "id" : "0142a007-31d1-4141-8261-4b5ab89e190f",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "346d52e7-1bae-4e83-8fd4-021030d5cd3a",
+            "regionLabel" : "Activity",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "43c0388b-a751-411a-b6c5-a3226f7c6f05",
+        "regionLabel" : "Column 2",
+        "regionName" : "6a122",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9c15750f-b9e3-49af-91ec-55892f2ca0d8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Sales"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5a655808-56f2-4281-99d9-7a34387b2578",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8d8f9249-3b84-43ec-805a-cea800b4cdff",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "f0TmSXMIGnhnQhZNmk23G59Kn1CIgA",
+  "type" : "view",
+  "viewType" : "custom-sales"
+}

@@ -1,0 +1,125 @@
+.slds-scope {
+
+    #globalSearchInput {
+        // border-color: transparent;
+        // box-shadow: 0 2px 3px rgba(0,0,0,0.24), 0 -1px 0px rgba(0,0,0,0.02);
+
+        &:focus {
+            border-color: $light-blue;
+        }
+    }
+    
+    #searchPlacesQueryOutputHeader {
+        padding-top: 0;
+        background-color: #fff;
+        border-bottom:2px solid $border-gray;
+    }
+    
+    #searchPlacesQueryOutputBody {
+        background: $light-gray;
+        
+        > ul {
+            margin: 8px 0;
+            background-color: #fff;
+            border-top: 0;
+            
+            li {
+                h3 {
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                
+                &:last-child {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+
+    #globalSearchAutocompleteResults {
+        border-color: transparent;
+        border: 0;
+        box-shadow: 0 3px 4px rgba(0,0,0,0.32), 0 -1px 0px rgba(0,0,0,0.02);
+        min-width: 300px;
+        left: auto;
+        top: calc(100% + 1px);
+        right: 0;
+        min-height: 300px;
+        overflow-y: auto;
+        padding-top: 0;
+
+        .slds-media {
+            .slds-media__figure {
+                > img, > svg {
+                    max-height: 100%;
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .global-search-result-item--base-marker {
+                    svg {
+                        width: 13.797px;
+                        height: 24px;
+                        display:block;
+                        margin: 0 auto;
+                    }   
+                }
+            }
+        }
+
+        .slds-lookup__list {
+            max-height: none;
+            overflow: visible;
+            border-top: 1px solid $border-gray;
+            margin-top: .5rem;
+            
+            &:first-child {
+                border-top: 0;
+                padding-top:0;
+                margin-top:0;
+            }
+        }
+
+        .slds-section-title--divider, .slds-section-title_divider {
+            background-color: transparent;
+            display: block;
+        }
+
+        .slds-lookup__item-action--label {
+
+            .slds-icon {
+                color: $color-button-icon-fill;
+            }
+        }
+    }
+
+    .search-autocomplete-google-place-address {
+        font-size: 11px;
+        color: $sf-text;
+        opacity: 0.75;
+        padding-left: 3px;
+    }
+
+    #globalSearchAutocompleteSpinner {
+        border-radius: 4px !Important;
+    }
+
+    .global-search-result-item {
+        .slds-media__figure {
+            .slds-icon {
+                > img {
+                    max-width: 19.5px;
+                    max-height: 19.5px;
+                    margin: 4px auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Salesforce Maps Advanced Route Failed</name>
+    <style>none</style>
+    <subject>{!JSENCODE($Label.maps__mapAnythingGuideFailedToGenerate)}</subject>
+    <textOnly>{!JSENCODE($Label.maps__yourMapAnythingGuideFailedToGenerate)}
+
+{!JSENCODE($Label.maps__error)}:
+{!maps__AdvRouteTemplateUser__c.maps__LastFailedJobError__c}
+
+{!JSENCODE($Label.maps__templateCap)}:
+{!maps__AdvRouteTemplateUser__c.maps__AdvRouteTemplate__c}
+
+{!JSENCODE($Label.maps__processingDate)}:
+{!maps__AdvRouteTemplateUser__c.maps__DateProcessing__c}
+
+{!JSENCODE($Label.maps__youCanEditYourRoute)}:
+{!maps__AdvRouteTemplateUser__c.maps__BaseUrl__c}apex/maps__AdvRouteRep</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

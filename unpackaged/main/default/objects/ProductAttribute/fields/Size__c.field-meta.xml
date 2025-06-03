@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Size__c</fullName>
+    <label>Size</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1200 Watts</fullName>
+                <default>false</default>
+                <label>1200 Watts</label>
+            </value>
+            <value>
+                <fullName>1600 Watts</fullName>
+                <default>false</default>
+                <label>1600 Watts</label>
+            </value>
+            <value>
+                <fullName>26800 mAh (99 Wh)</fullName>
+                <default>false</default>
+                <label>26800 mAh (99 Wh)</label>
+            </value>
+            <value>
+                <fullName>19200 mAh (71.04 Wh)</fullName>
+                <default>false</default>
+                <label>19200 mAh (71.04 Wh)</label>
+            </value>
+            <value>
+                <fullName>10200 mAh (37.74 Wh)</fullName>
+                <default>false</default>
+                <label>10200 mAh (37.74 Wh)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

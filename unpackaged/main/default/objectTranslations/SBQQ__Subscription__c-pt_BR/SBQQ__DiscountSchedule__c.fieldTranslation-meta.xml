@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Especifique desc. em termos de % ou Valor a ser desc. do preço do produto usando a quant. comprada ou o termo. Defina faixas de quant./termo em níveis de difer. % de desc. O desc. é aplicado ao Preço de lista e o resultado é armazenado no Preço regular</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Subscriptions --></relationshipLabel>
+    </CustomFieldTranslation>

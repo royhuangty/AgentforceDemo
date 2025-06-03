@@ -1,0 +1,24 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Login",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "usernameLabel" : "Nom d'utilisateur",
+          "passwordLabel" : "Mot de passe",
+          "loginButtonLabel" : "Se connecter",
+          "forgotPasswordLabel" : "Mot de passe oublié ?",
+          "selfRegisterLabel" : "Vous n'êtes pas membre ?"
+        },
+        "id" : "c1ef97ca-fe2a-4cfa-a4db-5961be954386"
+      }, {
+        "id" : "cb59f321-9865-45d5-9f71-2d2c5d7e2a55",
+        "attributes" : {
+          "pageTitle" : "Se connecter"
+        }
+      } ]
+    }
+  },
+  "urlName" : "login"
+}

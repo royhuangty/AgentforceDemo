@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>EnblProgramTaskProgress.LearningItemProgress.Owner.Account.Id:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Number of Accounts</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>EnblProgramTaskProgress$CompletedPercent</field>
+    </columns>
+    <description>Analyze the distribution of accounts related to a program, based on users who are assigned to or enrolled in the program.</description>
+    <filter>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>External</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EnblProgramTaskProgress$LearningItemProgress.Owner.Account.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>-</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$EnblProgramTaskDefinition.EnablementProgram.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$LearningItemProgress.Owner.Account.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EnblProgramTaskProgress$LearningItemProgress.Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Program Enrollment by Account</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>PRM_Program_Task_Progress_sfdcSESv61__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EnblProgramTaskProgress$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

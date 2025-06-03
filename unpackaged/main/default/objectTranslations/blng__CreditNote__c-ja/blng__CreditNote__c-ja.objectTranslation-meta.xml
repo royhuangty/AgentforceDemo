@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>クレジットノート</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Credit Note Layout</layout>
+        <sections>
+            <label>残高の詳細</label>
+            <section>Balance Details</section>
+        </sections>
+        <sections>
+            <label>住所(税金)</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>クレジットノート番号</nameFieldLabel>
+    <quickActions>
+        <label><!-- Apply Tax --></label>
+        <name>blng__ApplyTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancel Tax --></label>
+        <name>blng__CancelTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Estimate Tax --></label>
+        <name>blng__EstimateTax</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ApplyTax --></label>
+        <name>blng__ApplyTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CancelTax --></label>
+        <name>blng__CancelTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EstimateTax --></label>
+        <name>blng__EstimateTax</name>
+    </webLinks>
+</CustomObjectTranslation>

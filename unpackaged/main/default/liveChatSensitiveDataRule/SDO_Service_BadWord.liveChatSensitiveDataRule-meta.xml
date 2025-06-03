@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatSensitiveDataRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionType>Replace</actionType>
+    <description>What: Block a bad word</description>
+    <enforceOn>7</enforceOn>
+    <isEnabled>true</isEnabled>
+    <pattern>bad word</pattern>
+    <priority>2</priority>
+    <processingType>RealTime</processingType>
+    <replacement>*** ****</replacement>
+    <version>ONE</version>
+</LiveChatSensitiveDataRule>

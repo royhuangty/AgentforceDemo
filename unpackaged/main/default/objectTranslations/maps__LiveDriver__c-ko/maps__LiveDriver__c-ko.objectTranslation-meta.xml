@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Maps 라이브 운전자</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Maps Live Driver Layout</layout>
+        <sections>
+            <label>운전자 Telematics 경고</label>
+            <section>Driver Telematics Alerts</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Maps 실시간 운전자 이름</nameFieldLabel>
+</CustomObjectTranslation>

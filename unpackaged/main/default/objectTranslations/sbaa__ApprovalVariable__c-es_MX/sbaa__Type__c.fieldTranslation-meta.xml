@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Cuando se selecciona Descuento, Variable de lista y Variable neta deben rellenarse. Cuando se selecciona Resumen, Campo agregado y Función agregada deben rellenarse.</help>
+        <label><!-- Type --></label>
+        <name>sbaa__Type__c</name>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation>Descuento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary</masterLabel>
+            <translation>Resumen</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

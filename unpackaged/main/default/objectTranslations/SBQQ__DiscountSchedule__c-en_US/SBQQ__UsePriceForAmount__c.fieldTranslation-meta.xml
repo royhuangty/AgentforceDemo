@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If checked, the user defined Discount Schedule&apos;s Discount Unit will be set to Price. --></help>
+        <label><!-- Use Price For Amount --></label>
+        <name>SBQQ__UsePriceForAmount__c</name>
+    </CustomFieldTranslation>

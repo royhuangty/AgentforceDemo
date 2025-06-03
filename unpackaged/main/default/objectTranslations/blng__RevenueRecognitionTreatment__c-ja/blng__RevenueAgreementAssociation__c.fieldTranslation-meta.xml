@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益スケジュールを収益契約に関連付けるためのオプションを選択します。</help>
+        <label><!-- Revenue Agreement Association --></label>
+        <name>blng__RevenueAgreementAssociation__c</name>
+    </CustomFieldTranslation>

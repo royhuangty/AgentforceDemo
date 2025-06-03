@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>EnblProgramTaskProgress</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on program items like exercises, milestones, and outcome progress. Overall program progress isn’t captured in this report.</description>
+    <label>Program Item Progress Summer &#39;24 (Partners)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CompletedOnDay</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CompletedPercent</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>EnblProgramTaskDefinition.CreatedBy</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsCompleted</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Result</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Target Day</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Day</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Task</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Name</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Task Category</displayNameOverride>
+            <field>EnblProgramTaskDefinition.TaskCategory</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Milestone Target</displayNameOverride>
+            <field>EnblProgramTaskDefinition.MilestoneTarget</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Name</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnablementProgram.Name</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Milestone An Outcome</displayNameOverride>
+            <field>EnblProgramTaskDefinition.IsMilestoneAnOutcome</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days In Progress</displayNameOverride>
+            <field>LearningItemProgress.DaysInProgress</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Name</displayNameOverride>
+            <field>LearningItemProgress.Owner.Name</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>LearningItemProgress.Owner.Email</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Task Status</displayNameOverride>
+            <field>LearningItemProgress.Status</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Task Completion Status</displayNameOverride>
+            <field>ProgressStatus</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Task Name</displayNameOverride>
+            <field>EnblProgramTaskDefinition.Exercise</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Section Name</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnblProgramSection.Sections</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sequenced Section with Count</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnblProgramSection.Name</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>ContributingRecordCount</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Sample Size</displayNameOverride>
+            <field>EnblProgramTaskDefinition.MinimumSampleSize</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Type</displayNameOverride>
+            <field>EnblProgramTaskDefinition.EnablementProgram.Type</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>LearningItemProgress.Owner.Account.Name</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account ID</displayNameOverride>
+            <field>LearningItemProgress.Owner.Account.Id</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Progress</displayNameOverride>
+            <field>LearningItemProgress.CompletedPercent</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program Status</displayNameOverride>
+            <field>LearningItemProgress.OverallTaskStatus</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Username</displayNameOverride>
+            <field>LearningItemProgress.Owner.Username</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>User</displayNameOverride>
+            <field>LearningItemProgress.Owner</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outcome Progress</displayNameOverride>
+            <field>LearningItemProgress.OutcomeProgressPercent</field>
+            <table>EnblProgramTaskProgress</table>
+        </columns>
+        <masterLabel>Enablement Program Task Progresses</masterLabel>
+    </sections>
+</ReportType>

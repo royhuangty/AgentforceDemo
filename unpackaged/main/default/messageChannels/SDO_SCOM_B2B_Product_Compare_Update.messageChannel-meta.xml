@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to pass product compare try update Events</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is the selected product</description>
+        <fieldName>productId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>This is a boolean value</description>
+        <fieldName>isIncluded</fieldName>
+    </lightningMessageFields>
+    <masterLabel>B2B Product Compare Update</masterLabel>
+</LightningMessageChannel>

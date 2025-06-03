@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Die Zahlung wird ausgeführt und die Rechnung ist gesperrt. Überprüfen Sie vor dem Freigeben, ob auf diese Rechnung bereits eine Zahlung geleistet wurde.</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Zahlungsmodus.
+ 1. &quot;Elektronisch&quot;, wenn Zahlungen/Erstattungen über das Zahlungs-Gateway erfolgen.
+ 2. &quot;Extern&quot;, wenn Zahlungen/Erstattungen manuell in bar oder mit Scheck erfolgen.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

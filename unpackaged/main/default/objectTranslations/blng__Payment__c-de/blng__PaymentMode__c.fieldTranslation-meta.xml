@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wählen Sie &quot;Elektronisch&quot; aus, wenn Zahlungen über Salesforce Billing erfolgen. Wählen Sie &quot;Extern&quot; aus, um eine Zahlung manuell einzugeben, die in einem anderen System verarbeitet wurde.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </CustomFieldTranslation>

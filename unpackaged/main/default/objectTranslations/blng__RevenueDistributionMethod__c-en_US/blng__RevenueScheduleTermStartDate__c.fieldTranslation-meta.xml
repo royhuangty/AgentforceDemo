@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Start date can be based on the object&apos;s start date or entered manually. For full recognition,
+        set it to None. --></help>
+        <label><!-- Revenue Schedule Term Start Date --></label>
+        <name>blng__RevenueScheduleTermStartDate__c</name>
+    </CustomFieldTranslation>

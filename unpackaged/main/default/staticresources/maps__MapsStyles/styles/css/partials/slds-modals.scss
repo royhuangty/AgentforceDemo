@@ -1,0 +1,131 @@
+.slds-scope {
+    .slds-modal{
+        &.slds-modal--xx-small {
+            .slds-modal__container {
+                max-width: 300px;
+            }
+        }
+        &.slds-modal--xxl {
+            .slds-modal__container {
+                max-width: 1400px;
+                width: 100%;
+                padding: 1rem 2rem;
+                
+                .slds-modal__header {
+                    .slds-button {
+                        &.slds-modal__close {
+                            top: 12px;
+                            right: 12px;
+                            color: $color-text-input-icon;
+                            
+                            &:hover, &:active, &:focus {
+                                color: $medium-gray;
+                            }
+                        }
+                    }
+                }
+                .ma-modal-nav-wrap {
+                    background-color: #FAFAFB;
+                    border-right: 1px solid #d8dde6;
+                    overflow: auto;
+                }
+                .slds-modal__content {
+                    min-height: calc(100vh - 200px);
+        
+                    &.slds-modal__content--no-overflow {
+                        overflow: hidden;
+                    }
+                    
+                    &.slds-modal__content-has-navigation {
+                        overflow: hidden;
+                        
+                        .ma-tab-content-group {
+                            position: relative; 
+                            height: 100%; 
+                            width: 100%; 
+                            
+                            .ma-tab-content {
+                                overflow: auto; 
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                display: none;
+                                
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media only screen and (max-width: $responsive-breakpoint-medium) {
+                
+                .slds-modal__container {
+                    padding:0;
+                    margin:0;
+                    
+                    .slds-modal__header {
+                        border-radius:0;
+                        
+                        .slds-button {
+                            &.slds-modal__close {
+                                top: 12px;
+                                right: 12px;
+                                color: $color-text-input-icon;
+                                
+                                &:hover, &:active, &:focus {
+                                    color: $medium-gray;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .slds-modal__content {
+                        .slds-col {
+                            &.ma-tab-link-group-filled {
+                                max-width: 212px !important;
+                                min-width: 212px !important;
+                                
+                                .slds-navigation-list--vertical__action {
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .slds-modal__footer {
+                        border-radius:0;
+                    }
+                }
+            }
+        }
+        .slds-modal__content {
+            &.slds-modal__content-has-navigation {
+                .slds-navigation-list--vertical {
+
+                    .slds-navigation-list--vertical__action {
+                        padding-left: .75rem;
+                        padding-right:2.25rem;
+                    }
+                }
+            }
+
+            .ma-wrapper {
+                position: fixed;
+
+                .slds-spinner_container {
+                    top: 119px;
+                    bottom: 58px;
+                }
+
+                .slds-notify_container .slds-notify {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Service_WEM_Assigned_to_me__c</fullName>
+    <description>*What*: Used to indicate if shift is assigned to user.  *Who*: Gregory Johnson. *When*: June 2022</description>
+    <formula>ServiceResource.RelatedRecordId = $User.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Assigned to me?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

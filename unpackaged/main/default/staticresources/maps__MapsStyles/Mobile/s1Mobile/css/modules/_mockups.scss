@@ -1,0 +1,368 @@
+
+.marker-map-layer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: auto;
+    right: 0;
+    max-width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    @include transition(.1s right, .1s top);
+
+    &.in {
+        opacity:1;
+        visibility: visible;
+    }
+
+    .ma-marker-dot, .ma-marker-square {
+        position: absolute;
+    }
+}
+
+.marker-tooltip-in .marker-map-layer {    
+    right: 34px;
+    top: -135px;
+}
+
+
+/*
+==============================================
+floating
+==============================================
+*/
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(-10px);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(-10px);  
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
+}
+
+@keyframes floating-shadow {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(10px) scale(.6,.6);  
+        opacity: .6;
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+
+@-webkit-keyframes floating-shadow {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(10px) scale(.6,.6); 
+        opacity: .6;
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
+}
+
+#maMasterWrap.marker-tooltip-in {
+    .map-marker.active {
+        animation-name: floating;
+        -webkit-animation-name: floating;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            border-radius: 50%;
+            z-index: -1;
+            top: 100%;
+            left: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-left: -50%;
+            animation-name: floating-shadow;
+            -webkit-animation-name: floating-shadow;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transform-origin: center;  
+            transform-origin: center;  
+        }
+    }
+}
+
+
+#mapMarker1 { 
+    top: 100px; 
+    left: 231px; 
+}
+
+#mapMarker2 { 
+    top: 10px; 
+    left: 23px; 
+}
+
+#mapMarker3 { 
+    top: 280px;
+    left: 120px; 
+}
+
+#mapMarker4 { 
+    top: 19px; 
+    left: 71px; 
+}
+
+#mapMarker5 { 
+    top: 220px;
+    left: 292px; 
+}
+
+
+#mapMarker6 { 
+    top: 303px; 
+    left: 211px; 
+}
+
+#mapMarker7 { 
+    top: 40px;
+    left: 301px; 
+}
+
+#mapMarker8 { 
+    top: 190px;
+    left: 31px; 
+}
+
+#mapMarker9 { 
+    top: 80px;
+    left: 211px; 
+}
+
+#mapMarker10 { 
+    top: 140px;
+    left: 205px; 
+}
+
+#mapMarker11 { 
+    top: 194px;
+    left: 61px; 
+}
+
+#mapMarker12 { 
+    top: 130px;
+    left: 291px; 
+}
+
+#mapMarker13 {
+    left: 48%;
+    bottom: 10%;
+}
+
+div#mapMarker14 {
+    right: 1%;
+    bottom: 20%;
+}
+
+div#mapMarker15 {
+    right: 11%;
+    bottom: 40%;
+}
+
+div#mapMarker16 {
+    left: 3%;
+    bottom: 24%;
+}
+
+div#mapMarker17 {
+    left: 21%;
+    bottom: 33%;
+}
+
+div#mapMarker18 {
+    left: 66%;
+    bottom: 19%;
+}
+
+div#mapMarker19 {
+    left: 71%;
+    bottom: 50%;
+}
+
+div#mapMarker20 {
+    left: 14%;
+    bottom: 50%;
+}
+
+div#mapMarker21 {
+    left: 26%;
+    bottom: 45%;
+}
+
+div#mapMarker22 {
+    bottom: 22%;
+    left: 22%;
+}
+
+div#mapMarker23 {
+    bottom: 40%;
+    left: 62%;
+}
+
+div#mapMarker24 {
+    left: 20%;
+    bottom: 37%;
+}
+
+div#leadsMarker1 {
+    left: 20%;
+    top: 20%;
+}
+
+div#leadsMarker2 {
+    left: 50%;
+    top: 70%;
+}
+
+div#leadsMarker3 {
+    top: 10%;
+    right: 70%;
+}
+
+div#leadsMarker4 {
+    left: 66%;
+    top: 30%;
+}
+
+div#leadsMarker5 {
+    top: 80%;
+    left: 6%;
+}
+
+div#leadsMarker6 {
+    left: 33%;
+    top: 50%;
+}
+
+div#leadsMarker7 {
+    top: 44%;
+    left: 14%;
+}
+
+div#leadsMarker8 {
+    top: 61%;
+    left: 3%;
+}
+
+div#leadsMarker9 {
+    left: 19%;
+    top: 59%;
+}
+
+div#leadsMarker10 {
+    left: 21%;
+    top: 56%;
+}
+
+div#leadsMarker11 {
+    left: 22%;
+    bottom: 24%;
+}
+
+div#leadsMarker12 {
+    left: 7%;
+    top: 49%;
+}
+
+div#leadsMarker13 {
+    left: 45%;
+    bottom: 8%;
+}
+
+div#leadsMarker14 {
+    left: 89%;
+    top: 65%;
+}
+
+div#leadsMarker15 {
+    left: 11%;
+    top: 45%;
+}
+
+div#leadsMarker16 {
+    left: 66%;
+    bottom: 1%;
+}
+
+div#leadsMarker17 {
+    left: 12%;
+    top: 55%;
+}
+
+div#markersAccounts {
+    z-index: 2;
+}
+
+div#markersLeads {
+    z-index: 1;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+.marker-tooltip-in .marker-map-layer {
+    right: 0;
+    top:0;
+}
+    .marker-map-layer {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: auto;
+        right: 0;
+        max-width: calc(100% - 442px);
+        visibility: hidden;
+        opacity: 0;
+        height: 100%;
+        @include transition(.1s right, .1s top);
+
+        &.in {
+            opacity:1;
+            visibility: visible;
+        }
+
+        .ma-marker-dot, .ma-marker-square {
+            position: absolute;
+        }
+    }
+
+    .marker-tooltip-in .marker-map-layer {
+        right: -70px;
+        top: 50px;
+    }
+
+}

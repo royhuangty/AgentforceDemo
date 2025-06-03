@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Данный параметр определяет количество минут до начала дня по календарю ресурса, доступное на дорогу (за счет ресурса).
+При наличии пустого значения любая дорога до начала рабочего дня является допустимой.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

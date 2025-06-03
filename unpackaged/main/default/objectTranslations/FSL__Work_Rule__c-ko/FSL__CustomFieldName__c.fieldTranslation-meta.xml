@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>계산 개체의 사용자 정의 필드 API 이름입니다.</help>
+        <label><!-- Custom Field Name --></label>
+        <name>FSL__CustomFieldName__c</name>
+    </CustomFieldTranslation>

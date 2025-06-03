@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalePricePerUnit</fullName>
+    <inlineHelpText>The actual price of each unit of the product that’s sold to the partner by the manufacturer.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>この項目は、今後のリリースで廃止される予定です</help>
+        <label><!-- Payment Process Status (deprecated) --></label>
+        <name>blng__PaymentProcessStatus__c</name>
+    </CustomFieldTranslation>

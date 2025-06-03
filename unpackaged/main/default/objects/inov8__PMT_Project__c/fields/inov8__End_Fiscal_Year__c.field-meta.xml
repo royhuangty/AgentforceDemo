@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>inov8__End_Fiscal_Year__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF($CustomMetadata.inov8__PMT_Setting__mdt.inov8__Default.inov8__Start_Month_of_Fiscal_Year__c!=1 &amp;&amp; Month(inov8__Deadline_formula__c ) &gt;= $CustomMetadata.inov8__PMT_Setting__mdt.inov8__Default.inov8__Start_Month_of_Fiscal_Year__c,
+&#39;FY&#39;&amp;RIGHT(TEXT(YEAR(inov8__Deadline_formula__c ) +1),2),
+&#39;FY&#39;&amp;RIGHT(TEXT(YEAR(inov8__Deadline_formula__c )),2)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>End Fiscal Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

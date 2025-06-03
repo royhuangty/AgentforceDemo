@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Bezieht sich auf die im Umsatzplan ausgewählte Verteilungsmethode. Beschreibt, wie Umsatz
+        über einen festgelegten Zeitraum, auf einmal oder einen manuell eingegebenen Zeitraum verteilt wird.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </CustomFieldTranslation>

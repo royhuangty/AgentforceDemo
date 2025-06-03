@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>クレジットノートの未返金額。税抜き。金額から返金額を差し引いた値に等しくなります。</help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </CustomFieldTranslation>

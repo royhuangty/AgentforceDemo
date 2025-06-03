@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Usage is matched with a consumption schedule if the records share the same Matching Attribute value. --></help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </CustomFieldTranslation>

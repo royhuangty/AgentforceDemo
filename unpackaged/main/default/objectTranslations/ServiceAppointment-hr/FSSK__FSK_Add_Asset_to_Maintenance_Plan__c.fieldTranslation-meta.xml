@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Add the installed Asset to the account maintenance plan upon completion --></help>
+        <label><!-- Add Asset to Account Maintenance Plan --></label>
+        <name>FSSK__FSK_Add_Asset_to_Maintenance_Plan__c</name>
+    </CustomFieldTranslation>

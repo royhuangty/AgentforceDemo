@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Grants permissions to all CRMA,Analytics Permissions. Who: Jesse Chase. When: Sept, 2021.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Analytics - Base Permissions</label>
+    <permissionSets>SDO_TCRM_PlusAdminPSL</permissionSets>
+    <permissionSets>SDO_TCRM_PlusUserPSL</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsAdmin</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsPlusAdmin</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsPlusUser</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

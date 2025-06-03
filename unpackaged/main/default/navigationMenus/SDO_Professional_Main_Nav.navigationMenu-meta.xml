@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SDO - Professional</container>
+    <containerType>Network</containerType>
+    <label>SDO Professional Main Nav</label>
+    <navigationMenuItem>
+        <label>Community</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Community Home</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/community</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Events</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/community/events</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Learning</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Learning Home</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/learning</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Training Courses</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>SDO_Community_Training_Course__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Articles</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/learning/blog</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Support</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Support Home</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/support</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Documentation</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/support/documentation</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Work Orders</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>WorkOrder</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Register a Product</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/support/register-product</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Contact Support</label>
+                <position>4</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/support/contactsupport</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>My Account</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>My Account Home</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Profile Information</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/personal-settings/profile/home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Security &amp; Privacy</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/settings/home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Messages</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/messages/Home</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Account Information</label>
+                <position>4</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/account-information</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Account Brand</label>
+                <position>5</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/account-branding</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Member Management</label>
+                <position>6</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/member-management</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Order History</label>
+                <position>7</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/order-history</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Assets</label>
+                <position>8</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/assets</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Invoices</label>
+                <position>9</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/invoices</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Cases</label>
+                <position>10</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/my-account/account-settings/cases</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+</NavigationMenu>

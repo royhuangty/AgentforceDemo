@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>จำนวนนาทีจากการเริ่มต้นของความพร้อมใช้งานของทรัพยากรบริการในเวลาเริ่มต้นหยุดพักล่าสุดที่อนุญาต ตัวอย่างเช่น ใส่ 300 เพื่อกำหนดเวลาสิ้นสุดให้กับการหยุดพักทานอาหารกลางวันไม่เกินห้าชั่วโมงหลังจากเริ่มต้นวัน</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

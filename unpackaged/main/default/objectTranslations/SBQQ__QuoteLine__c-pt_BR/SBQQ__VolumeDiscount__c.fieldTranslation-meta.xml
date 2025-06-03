@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Especifique os desc. por vol. com base em um % do preço do prod. a ser desc. usando a quant. comprada ou o termo. É possível definir os interv. de quant. ou termo em níveis de dif. % de desc. Também é possível aplicar cronogramas de desc. ao Termo da ass.</help>
+        <label><!-- Volume Discount --></label>
+        <name>SBQQ__VolumeDiscount__c</name>
+    </CustomFieldTranslation>

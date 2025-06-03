@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Complété s&#39;il est directement sous le dossier personnel d&#39;un utilisateur, sinon vide. S&#39;il est vide et que la référence au dossier est vide, il est affiché dans le dossier d&#39;entreprise. Si le dossier est complété, il peut être personnel ou d&#39;entreprise.</help>
+        <label><!-- User --></label>
+        <name>maps__User__c</name>
+        <relationshipLabel><!-- Maps Layers --></relationshipLabel>
+    </CustomFieldTranslation>

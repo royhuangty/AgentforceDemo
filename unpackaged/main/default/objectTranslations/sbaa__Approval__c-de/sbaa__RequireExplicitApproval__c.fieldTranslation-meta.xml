@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Standardmäßig werden durch das Genehmigen einer Genehmigung alle anderen Genehmigungen, die demselben Benutzer zugewiesen sind, automatisch genehmigt. Wenn dieses Kontrollkästchen aktiviert ist, wird eine Genehmigung, die von dieser Regel stammt, nicht automatisch genehmigt und muss explizit genehmigt werden.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Denotes this line as an auto-selected option of an upgrade bundle. --></help>
+        <label><!-- Carry-Over Line --></label>
+        <name>SBQQ__CarryoverLine__c</name>
+    </CustomFieldTranslation>

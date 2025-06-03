@@ -1,0 +1,129 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Cart",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Carrito"
+        },
+        "id" : "6fe4b294-df3a-4e32-9e1e-0c6ebc3866a7"
+      }, {
+        "attributes" : {
+          "text" : "Su carrito está vacío"
+        },
+        "id" : "f9240bac-92a9-4841-9356-2b6f3e0d262a"
+      }, {
+        "attributes" : {
+          "text" : "Seguir comprando"
+        },
+        "id" : "2eff34b7-793a-4c8b-80bd-7d6b99c59221"
+      }, {
+        "attributes" : {
+          "text" : "Carrito"
+        },
+        "id" : "90840905-2c86-4e6a-b4db-94643f678859"
+      }, {
+        "attributes" : {
+          "text" : "({!Cart.Details.totalProductCount} artículos)"
+        },
+        "id" : "c79815c0-74d6-48e7-9994-f882b3983cef"
+      }, {
+        "attributes" : {
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "incrementValueGuideText" : "Vendido en incrementos de {0}",
+          "items" : "{!Cart.Items}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "productFieldMapping" : "[{\"name\": \"ProductCode\",\"label\": \"Código del producto:\",\"type\": \"STRING\"},{\"name\": \"Description\",\"label\": \"Descripción:\",\"type\": \"TEXTAREA\"}]",
+          "promotionsAppliedSavingsButtonText" : "{amount} ahorrado",
+          "skuLabel" : "N.º de SKU"
+        },
+        "id" : "6880c40b-ab16-4b2e-8d8e-532294f4d06d"
+      }, {
+        "attributes" : {
+          "text" : "Mostrar más"
+        },
+        "id" : "c6251ec8-ecda-4104-9629-77f3c4215245"
+      }, {
+        "attributes" : {
+          "text" : "Borrar carrito"
+        },
+        "id" : "79cd7c82-2fa1-46f8-a065-e86785b982d8"
+      }, {
+        "attributes" : {
+          "text" : "Resumen"
+        },
+        "id" : "974f51f9-cf49-4a86-8fce-fa46307723aa"
+      }, {
+        "attributes" : {
+          "text" : "Precio original"
+        },
+        "id" : "b89e9d64-5190-4131-9647-dc7f6996ec58"
+      }, {
+        "attributes" : {
+          "text" : "Promociones"
+        },
+        "id" : "6805b704-55f5-4c4e-acd2-04288ac844ae"
+      }, {
+        "attributes" : {
+          "text" : "Envíos"
+        },
+        "id" : "64056efe-c7bf-4fee-b49e-2f0f98461225"
+      }, {
+        "attributes" : {
+          "text" : "Subtotal"
+        },
+        "id" : "d9b08877-8cc5-414a-b44e-bdb772da5fa7"
+      }, {
+        "attributes" : {
+          "text" : "Impuestos incluidos"
+        },
+        "id" : "ceee6c83-98ce-4098-a220-c01646c40aaf"
+      }, {
+        "attributes" : {
+          "text" : "Impuesto"
+        },
+        "id" : "c7831951-0aca-4624-b69d-96a20b1f8c5e"
+      }, {
+        "attributes" : {
+          "text" : "Total"
+        },
+        "id" : "58bd07e3-605e-41a7-a481-5d429d666e4c"
+      }, {
+        "attributes" : {
+          "termsAndConditionsTitleText" : "Condiciones"
+        },
+        "id" : "87a02703-8ebe-4c60-98e2-8cf823c75c95"
+      }, {
+        "attributes" : {
+          "text" : "Terms & Conditions"
+        },
+        "id" : "869cb826-d390-4a67-aa71-3c9cb1bc1170"
+      }, {
+        "attributes" : {
+          "applyCouponButtonProcessingText" : "Aplicando",
+          "applyCouponButtonText" : "Aplicar",
+          "couponInputPlaceholderText" : "Introducir un código de cupón..."
+        },
+        "id" : "6bfa9aff-e13f-47d4-9322-7f4e8e1e4bb5"
+      }, {
+        "attributes" : {
+          "text" : "Introducir un código de cupón"
+        },
+        "id" : "e62472d2-f4a6-4957-b6f3-30a418aa038c"
+      }, {
+        "attributes" : {
+          "text" : "Pasar por caja"
+        },
+        "id" : "cfe46fca-08b6-443e-9b84-5fd0bd2e0552"
+      }, {
+        "attributes" : {
+          "headerText" : "Los clientes también compraron"
+        },
+        "id" : "deb24b05-b6a2-4ff6-97bb-6a61835f915f"
+      } ]
+    }
+  },
+  "urlName" : "cart"
+}

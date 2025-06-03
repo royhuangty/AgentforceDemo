@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Internet Service --></label>
+        <name>Internet_Service__c</name>
+        <picklistValues>
+            <masterLabel>DSL</masterLabel>
+            <translation><!-- DSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiber optic</masterLabel>
+            <translation><!-- Fiber optic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

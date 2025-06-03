@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For OMS Community Users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SDO OMS External Permissions</label>
+    <permissionSets>SDO_OMS_Additional_Demo_Permissions</permissionSets>
+    <permissionSets>force__LightningOrderManagementAgent</permissionSets>
+    <permissionSets>force__LightningOrderManagementOperationsManager</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

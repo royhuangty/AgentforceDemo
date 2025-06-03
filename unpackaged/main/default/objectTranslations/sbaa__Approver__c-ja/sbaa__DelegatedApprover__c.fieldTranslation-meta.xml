@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>代理承認で使用され、この承認者の代理となる承認者をルックアップします</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <measures>
+        <field>Avg_Time_to_Close_Da_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg Time to Close (hrs)</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Time_to_Close_We_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to Close (hrs)</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Avg_Time_to_Close_Mo_1.A</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to Close (hrs)</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Avg_Time_to_Close</waveVisualization>
+</WaveXmd>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Capacity_Resource_of_Type_Crew</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(IsCapacityBased,ISPICKVAL(ResourceType, &#39;C&#39;))</errorConditionFormula>
+    <errorMessage>Capacity Resource Can&#39;t Be of Type Crew</errorMessage>
+</ValidationRule>

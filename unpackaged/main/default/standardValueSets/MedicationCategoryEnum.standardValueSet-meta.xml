@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Branded Product</fullName>
+        <default>false</default>
+        <label>Branded Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Therapeutic Moeity</fullName>
+        <default>false</default>
+        <label>Therapeutic Moeity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Generic Product</fullName>
+        <default>false</default>
+        <label>Generic Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Innovator Product</fullName>
+        <default>false</default>
+        <label>Innovator Product</label>
+    </standardValue>
+</StandardValueSet>

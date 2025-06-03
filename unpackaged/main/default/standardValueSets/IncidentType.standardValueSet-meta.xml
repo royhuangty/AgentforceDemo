@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Incident</fullName>
+        <default>false</default>
+        <label>Incident</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request for Change</fullName>
+        <default>false</default>
+        <label>Request for Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Out of Scope</fullName>
+        <default>false</default>
+        <label>Out of Scope</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fault/failure</fullName>
+        <default>false</default>
+        <label>Fault/failure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assistance/Inquiry</fullName>
+        <default>false</default>
+        <label>Assistance/Inquiry</label>
+    </standardValue>
+</StandardValueSet>

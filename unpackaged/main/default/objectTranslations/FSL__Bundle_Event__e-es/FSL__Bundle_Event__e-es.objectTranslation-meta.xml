@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Evento de paquete --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Eventos de paquetes --></value>
+    </caseValues>
+    
+    
+    <gender><!-- Masculine --></gender>
+</CustomObjectTranslation>

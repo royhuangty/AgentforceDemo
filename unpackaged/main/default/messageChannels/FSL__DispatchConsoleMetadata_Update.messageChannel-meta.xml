@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to pass the metadata</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>payload to send</description>
+        <fieldName>payload</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>action type</description>
+        <fieldName>action_type</fieldName>
+    </lightningMessageFields>
+    <masterLabel>DispatchConsoleMetadataUpdate</masterLabel>
+</LightningMessageChannel>

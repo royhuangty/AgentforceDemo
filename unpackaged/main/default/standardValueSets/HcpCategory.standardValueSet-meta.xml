@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Evaluation and Management</fullName>
+        <default>true</default>
+        <label>Evaluation and Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Anesthesia</fullName>
+        <default>false</default>
+        <label>Anesthesia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Surgery</fullName>
+        <default>false</default>
+        <label>Surgery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Radiology</fullName>
+        <default>false</default>
+        <label>Radiology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pathology and Laboratory</fullName>
+        <default>false</default>
+        <label>Pathology and Laboratory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medicine</fullName>
+        <default>false</default>
+        <label>Medicine</label>
+    </standardValue>
+</StandardValueSet>

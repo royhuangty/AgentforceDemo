@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox to aggregate quantities of all products using this schedule for the purpose of volume discount calculation. Slab discounts cannot be used for Cross Product discounts. --></help>
+        <label><!-- Cross Products --></label>
+        <name>SBQQ__CrossProducts__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,40 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Lookup",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Détails de la commande"
+        },
+        "id" : "9dc1e017-4b44-426a-a70a-4ab933d15b2b"
+      }, {
+        "attributes" : {
+          "richTextValue" : "<p class=\"slds-text-align_center\">Pour rechercher votre commande, saisissez les détails de la commande ou <a href=\"{!Site.basePath}/login?startURL={!Site.basePath}%2FOrderSummary%2FOrderSummary%2FDefault\">log in</a>.</p>"
+        },
+        "id" : "b9a5067e-8931-43ed-ac3d-c0b107fd4b85"
+      }, {
+        "attributes" : {
+          "emailFieldLabel" : "E-mail",
+          "lastNameFieldLabel" : "Nom",
+          "orderNumberFieldLabel" : "Numéro de commande",
+          "orderNumberFieldTooltip" : "Saisissez le numéro de commande figurant dans votre email de confirmation.",
+          "phoneNumberFieldLabel" : "Numéro de téléphone",
+          "validationFailureMessage" : "Quelque chose ne va pas. Vérifiez vos informations et réessayez."
+        },
+        "id" : "da2cf676-0dff-42ba-9f7b-511ce504a8fe"
+      }, {
+        "attributes" : {
+          "text" : "Afficher les détails de la commande"
+        },
+        "id" : "fc122a3d-fff9-4d29-8acb-ca3ea78fff77"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Recherche de commande"
+        },
+        "id" : "a9159303-6424-46d8-9b6d-36a3a9cf5318"
+      } ]
+    }
+  },
+  "urlName" : "order-lookup"
+}

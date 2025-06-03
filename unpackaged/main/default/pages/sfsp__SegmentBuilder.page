@@ -1,0 +1,76 @@
+<apex:page controller="sfsp.SalesPlanningHome" extensions="sfsp.SPMRemoteActions" action="{!checkOrgPermissions}" docType="html-5.0" title="Sales Planning - Segment Builder" showHeader="false" standardstylesheets="false" sidebar="false">
+
+    <style>
+        .noSidebarCell {
+            padding: 0px;
+        }
+
+        /* move action menus in front of spinners */
+        .slds-dropdown.slds-dropdown_actions {
+            z-index: 9999;
+        }
+    </style>
+
+    <!-- SPM SDK -->
+    <script>
+        const SPM = Object.assign({
+            SessionId: "{!$Api.Session_ID}"
+        }, JSON.parse("{!JSENCODE(viewData)}"));
+    </script>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <apex:outputPanel rendered="{!NOT(debug)}">
+            <link rel="stylesheet" href="{!URLFOR($Resource.sfsp__SegmentBuilder, 'dist/app.css')}"></link>
+            <script type="module" src="{!URLFOR($Resource.sfsp__SegmentBuilder, 'dist/bundle.js')}"></script>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!debug}">
+            <script type="module" src="https://localhost:5177/main.js"></script>
+        </apex:outputPanel>
+
+        <!-- Pendo -->
+        <apex:outputPanel layout="none" rendered="{!pendoEnabled}">
+            <script>
+                (function(apiKey){
+                    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+                    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+                    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                    y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                    z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+                    pendo.initialize({
+                        visitor: { 
+                            id: '{!JSENCODE($User.Id)}',
+                            email: '{!JSENCODE($User.Email)}',
+                            firstName: '{!JSENCODE($User.FirstName)}',
+                            lastName: '{!JSENCODE($User.LastName)}',
+                            userName: '{!JSENCODE($User.Username)}',
+                            userAgent: window.navigator.userAgent
+                        },
+                        account: { 
+                            id: '{!JSENCODE($Organization.Id)}',
+                            name: '{!JSENCODE($Organization.Name)}'
+                        }
+                    });
+                })('{!JSENCODE(pendoKey)}');
+            </script>
+        </apex:outputPanel>
+
+        <!-- Pendo Disabled -->
+        <apex:outputPanel layout="none" rendered="{!pendoEnabled == false}">
+            <script>
+                var pendo = {
+                    track(){
+                    }
+                };
+            </script>
+        </apex:outputPanel>
+
+    </head>
+
+    <body>
+        <div class="slds-scope" id="vue-root"></div>
+    </body>
+</apex:page>

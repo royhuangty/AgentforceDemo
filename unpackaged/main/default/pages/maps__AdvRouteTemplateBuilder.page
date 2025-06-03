@@ -1,0 +1,15 @@
+<apex:page controller="maps.AdvRoute" standardstylesheets="false" showHeader="true" title="Salesforce Maps Advanced Visit Plan Builder" sidebar="false">
+
+    <c:Oops rendered="{! useMapsOopsPage }" />
+    <apex:outputPanel rendered="{! !useMapsOopsPage }">
+        <c:AdvRouteLabels />
+        <c:AdvRouteUtils vueType="templateBuilder" />
+        <apex:outputPanel layout="none" rendered="{! $User.UIThemeDisplayed != 'Theme3' }">
+            <style>
+                html {
+                    overflow: hidden;
+                }
+            </style>
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:page>

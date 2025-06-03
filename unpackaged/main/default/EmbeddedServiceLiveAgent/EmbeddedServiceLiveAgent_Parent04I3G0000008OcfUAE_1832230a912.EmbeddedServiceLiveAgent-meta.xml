@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceLiveAgent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <embeddedServiceConfig>SDO_B2B_Commerce_Lightning_Bot</embeddedServiceConfig>
+    <embeddedServiceQuickActions>
+        <embeddedServiceLiveAgent>EmbeddedServiceLiveAgent_Parent04I3G0000008OcfUAE_1832230a912</embeddedServiceLiveAgent>
+        <order>1</order>
+        <quickActionDefinition>Snapins_Contact_PrechatQuickAction_08h3G0000008OY5_1662725958221</quickActionDefinition>
+        <quickActionType>Prechat</quickActionType>
+    </embeddedServiceQuickActions>
+    <embeddedServiceQuickActions>
+        <embeddedServiceLiveAgent>EmbeddedServiceLiveAgent_Parent04I3G0000008OcfUAE_1832230a912</embeddedServiceLiveAgent>
+        <order>2</order>
+        <quickActionDefinition>Snapins_Case_PrechatQuickAction_08h3G0000008OY5_1662725958823</quickActionDefinition>
+        <quickActionType>Prechat</quickActionType>
+    </embeddedServiceQuickActions>
+    <enabled>true</enabled>
+    <fontSize>Medium</fontSize>
+    <isOfflineCaseEnabled>false</isOfflineCaseEnabled>
+    <isQueuePositionEnabled>false</isQueuePositionEnabled>
+    <liveChatButton>SDO_B2B_Commerce_Chat_Buttons</liveChatButton>
+    <liveChatDeployment>SDO_Service_Live_Agent_Community_Chat</liveChatDeployment>
+    <masterLabel>EmbeddedServiceLiveAgent_Parent04I3G0000008OcfUAE_1832230a912</masterLabel>
+    <prechatEnabled>true</prechatEnabled>
+    <scenario>Service</scenario>
+</EmbeddedServiceLiveAgent>

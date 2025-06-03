@@ -1,0 +1,65 @@
+<apex:page sidebar="false" showHeader="false" standardController="FSL__Service_Goal__c" extensions="FSL.ctrl112_ResourcePriorityFieldChooser">
+	<apex:includeScript value="{!$Resource.FSL__angular150min}" />
+  <apex:includeScript value="{!$Resource.FSL__js112_ResourcePriorityFieldChooser}" />
+<script>
+	var CurrentObjectName = '{!JSENCODE(ObjectName)}';	
+  var strCurrentObject = '{!JSENCODE(strCurrentObject)}';
+	//var ServiceGoalCustomPriorityFieldName  = '{!JSENCODE(PriorityFieldName)}';
+    var ServiceGoalCustomPriorityFieldName  = '{!$ObjectType.Service_Goal__c.Fields.Resource_Priority_Field__c.Name}';
+	
+  var RemoteActions = {
+    getObjectNumericFields : '{!$RemoteAction.ctrl112_ResourcePriorityFieldChooser.getObjectNumericFields}',
+    SaveFieldNameOnServiceGoal : '{!$RemoteAction.ctrl112_ResourcePriorityFieldChooser.SaveFieldNameOnServiceGoal}'
+  };
+
+  initalize();
+	function initalize() {
+    strregularexpression = '&quot;';
+    re = new RegExp(strregularexpression,"g");
+    strAccountWithValidChars = strCurrentObject.replace(re, '\"');
+    objFields = JSON.parse(strAccountWithValidChars);
+    ObjectId = objFields.Id;
+    ResourcePriorityField = objFields[ServiceGoalCustomPriorityFieldName];
+  }
+</script>
+
+  <style>
+    
+    #NumericFields{
+        display:inline;
+    }
+    
+    #SaveBtn{
+      margin-left: 10px;
+      /* W-9828376 */
+      width: 50px;
+      cursor: pointer;
+      color: #333;
+      /* margin: 1px; */
+      padding: 2px 3px;
+      border: 1px solid #b5b5b5;
+      border-bottom-color: #7f7f7f;
+      background: #e8e8e9 url('/img/alohaSkin/btn_sprite.png') repeat-x right top;
+      font-weight: bold;
+      font-size: .9em;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      }
+      
+      
+      #ExternalScope{
+          padding: 10px;
+      }
+    
+  </style>
+
+<div ng-app="ResourcePriorityFieldSelector" id="ExternalScope">
+    <div ng-controller="ResourcePriorityFieldController">
+        <div id='NumericFields'>{!JSENCODE($Label.ResourcePriorityField)}</div>
+        <select ng-model="selectedResourcePriorityField" ng-options="key as value for (key,value) in numericFieldsArray">
+        </select>
+        <button id="SaveBtn" ng-click="btnSaveClicked()" title="{!JSENCODE($Label.Save)}">{!JSENCODE($Label.Save)}</button>
+    </div>
+</div>
+</apex:page>

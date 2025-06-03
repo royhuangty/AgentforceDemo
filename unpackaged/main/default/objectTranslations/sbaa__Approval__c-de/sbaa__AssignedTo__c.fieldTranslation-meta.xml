@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Nachschlagefeld für den Benutzer, dem die Genehmigung zugewiesen ist</help>
+        <label><!-- Assigned To --></label>
+        <name>sbaa__AssignedTo__c</name>
+        <relationshipLabel><!-- Approvals (Assigned To) --></relationshipLabel>
+    </CustomFieldTranslation>

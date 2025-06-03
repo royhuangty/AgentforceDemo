@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Tipo de programación.
+Una vez - El Programador de pagos solo se realizará una vez.
+Diario - El Programador de pagos se repetirá de forma continua diariamente</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </CustomFieldTranslation>

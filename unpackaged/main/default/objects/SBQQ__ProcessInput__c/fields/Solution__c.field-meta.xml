@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution__c</fullName>
+    <label>Solution</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kits</fullName>
+                <default>true</default>
+                <label>Kits</label>
+            </value>
+            <value>
+                <fullName>Turbines</fullName>
+                <default>false</default>
+                <label>Turbines</label>
+            </value>
+            <value>
+                <fullName>Batteries</fullName>
+                <default>false</default>
+                <label>Batteries</label>
+            </value>
+            <value>
+                <fullName>Battery Tools</fullName>
+                <default>false</default>
+                <label>Battery Tools</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Software Licenses</fullName>
+                <default>false</default>
+                <label>Software Licenses</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

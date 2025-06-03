@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Instantâneo de saldo da conta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Instantâneos de saldo da conta</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Account Balance Snapshot Layout</layout>
+        <sections>
+            <label>Informações de CreditNote</label>
+            <section>CreditNote Information</section>
+        </sections>
+        <sections>
+            <label>Informações de DebitNote</label>
+            <section>DebitNote Information</section>
+        </sections>
+        <sections>
+            <label>Informações da fatura</label>
+            <section>Invoice Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do instantâneo do saldo da conta</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Entrez le nombre d&#39;enregistrements à supprimer par lot. Supprimez jusqu&#39;à 2 000 enregistrements par lot.</help>
+        <label><!-- Tracking Data Cleanup Batch Size --></label>
+        <name>et4ae5__Tracking_Data_Clean_Up_Batch_Size__c</name>
+    </CustomFieldTranslation>

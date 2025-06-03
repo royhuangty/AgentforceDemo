@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpportunitySettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoActivateNewReminders>true</autoActivateNewReminders>
+    <customizableProductSchedulesEnabled>false</customizableProductSchedulesEnabled>
+    <doesEnforceStandardOpportunitySaveLogic>true</doesEnforceStandardOpportunitySaveLogic>
+    <enableExpandedPipelineInspectionSetup>true</enableExpandedPipelineInspectionSetup>
+    <enableFindSimilarOpportunities>true</enableFindSimilarOpportunities>
+    <enableForecastCategoryMetrics>true</enableForecastCategoryMetrics>
+    <enableOpportunityFieldHistoryTracking>true</enableOpportunityFieldHistoryTracking>
+    <enableOpportunityInsightsInMobile>false</enableOpportunityInsightsInMobile>
+    <enableOpportunityTeam>true</enableOpportunityTeam>
+    <enablePipelineChangesMetrics>true</enablePipelineChangesMetrics>
+    <enablePipelineInspection>true</enablePipelineInspection>
+    <enablePipelineInspectionFlow>false</enablePipelineInspectionFlow>
+    <enablePipelineInspectionSingleCategoryRollup>true</enablePipelineInspectionSingleCategoryRollup>
+    <enableRevenueInsights>false</enableRevenueInsights>
+    <enableServiceCaseInsights>false</enableServiceCaseInsights>
+    <enableUpdateReminders>true</enableUpdateReminders>
+    <findSimilarOppFilter>
+        <similarOpportunitiesDisplayColumns>OPPORTUNITY.NAME</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesDisplayColumns>ACCOUNT.NAME</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesDisplayColumns>OPPORTUNITY.STAGE_NAME</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesDisplayColumns>OPPORTUNITY.AMOUNT</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesDisplayColumns>OPPORTUNITY.CLOSE_DATE</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesDisplayColumns>CORE.USERS.FULL_NAME</similarOpportunitiesDisplayColumns>
+        <similarOpportunitiesMatchFields>OPPORTUNITY.ACCOUNT</similarOpportunitiesMatchFields>
+        <similarOpportunitiesMatchFields>Opportunity.OpportunityCompetitors</similarOpportunitiesMatchFields>
+        <similarOpportunitiesMatchFields>Opportunity.OpportunityLineItems</similarOpportunitiesMatchFields>
+        <similarOpportunitiesMatchFields>Opportunity.OpportunityContactRoles</similarOpportunitiesMatchFields>
+    </findSimilarOppFilter>
+    <oppAmountDealMotionEnabled>true</oppAmountDealMotionEnabled>
+    <oppCloseDateDealMotionEnabled>true</oppCloseDateDealMotionEnabled>
+    <promptToAddProducts>false</promptToAddProducts>
+    <pushCountEnabled>true</pushCountEnabled>
+    <simpleOppCreateFromContact>true</simpleOppCreateFromContact>
+    <simpleOppCreateFromEvent>true</simpleOppCreateFromEvent>
+</OpportunitySettings>

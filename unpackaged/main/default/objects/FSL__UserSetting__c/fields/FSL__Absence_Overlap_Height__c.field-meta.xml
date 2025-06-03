@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Absence_Overlap_Height__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Set the height of overlapping resource absences on the Gantt</description>
+    <label>Absence Overlap Height</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>full</fullName>
+                <default>false</default>
+                <label>full</label>
+            </value>
+            <value>
+                <fullName>partial</fullName>
+                <default>true</default>
+                <label>partial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

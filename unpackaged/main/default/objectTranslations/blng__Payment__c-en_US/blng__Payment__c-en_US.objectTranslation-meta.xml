@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Layout</layout>
+        <sections>
+            <label><!-- Allocations / Unallocations --></label>
+            <section>Allocations / Unallocations</section>
+        </sections>
+        <sections>
+            <label><!-- Balance --></label>
+            <section>Balance</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Run Information --></label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label><!-- Refunds --></label>
+            <section>Refunds</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+</CustomObjectTranslation>

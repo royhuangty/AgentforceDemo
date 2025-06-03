@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CspTrustedSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canAccessCamera>false</canAccessCamera>
+    <canAccessMicrophone>false</canAccessMicrophone>
+    <context>Communities</context>
+    <description>coldbrew_waterfall_1403_scratch_live_preview_salesforce_experience_com Trusted Site Added Via Community Builder</description>
+    <endpointUrl>https://coldbrew-waterfall-1403.scratch.live-preview.salesforce-experience.com</endpointUrl>
+    <isActive>true</isActive>
+    <isApplicableToConnectSrc>true</isApplicableToConnectSrc>
+    <isApplicableToFontSrc>true</isApplicableToFontSrc>
+    <isApplicableToFrameSrc>true</isApplicableToFrameSrc>
+    <isApplicableToImgSrc>true</isApplicableToImgSrc>
+    <isApplicableToMediaSrc>true</isApplicableToMediaSrc>
+    <isApplicableToStyleSrc>true</isApplicableToStyleSrc>
+</CspTrustedSite>

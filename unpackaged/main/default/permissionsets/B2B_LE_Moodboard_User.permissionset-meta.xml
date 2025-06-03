@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides store users with the ability to create B2B Moodboard records.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>B2B LE Moodboard User</label>
+    <classAccesses>
+        <apexClass>B2B_Moodboard_Controller</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>B2B_Moodboard_Util</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>B2B_Mood_Board__c.Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>B2B_Mood_Board__c.Mood_Board_Data__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>B2B_Mood_Board__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApexRestServices</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApiEnabled</name>
+    </userPermissions>
+</PermissionSet>

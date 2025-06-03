@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfsp__SalesAssignmentObject__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Sales Assignment Object</label>
+    <referenceTo>sfsp__SalesAssignmentObject__c</referenceTo>
+    <relationshipLabel>Sales Assignment Objects</relationshipLabel>
+    <relationshipName>SalesAssignmentObjects</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

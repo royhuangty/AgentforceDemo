@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Calculates the number of days since this project was created. --></help>
+        <label><!-- Project Age --></label>
+        <name>Project_Age__c</name>
+    </CustomFieldTranslation>

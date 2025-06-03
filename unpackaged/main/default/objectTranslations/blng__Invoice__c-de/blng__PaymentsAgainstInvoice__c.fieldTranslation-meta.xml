@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Summe der Zahlungsbeträge, die dem Rechnungskopf zugeordnet sind. Sollte nur verwendet werden, wenn keine Zuordnungen auf Postenebene verwendet werden.</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </CustomFieldTranslation>

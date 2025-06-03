@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordActionDeployment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasComponents>false</hasComponents>
+    <hasGuidedActions>true</hasGuidedActions>
+    <hasOmniscripts>false</hasOmniscripts>
+    <hasRecommendations>false</hasRecommendations>
+    <masterLabel>SDO_Service_Contact_Default_deployment</masterLabel>
+</RecordActionDeployment>

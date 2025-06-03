@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>ICU Ward</fullName>
+        <default>false</default>
+        <label>ICU Ward</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Facility</fullName>
+        <default>false</default>
+        <label>Facility</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Building</fullName>
+        <default>false</default>
+        <label>Building</label>
+    </standardValue>
+    <standardValue>
+        <fullName>House</fullName>
+        <default>false</default>
+        <label>House</label>
+    </standardValue>
+</StandardValueSet>

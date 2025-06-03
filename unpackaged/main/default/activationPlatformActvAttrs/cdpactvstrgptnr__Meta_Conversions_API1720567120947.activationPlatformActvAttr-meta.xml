@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatformActvAttr xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activationPlatform>cdpactvstrgptnr__Meta_Conversions_API</activationPlatform>
+    <destinationName>client_ip_address</destinationName>
+    <isFromSourceObject>false</isFromSourceObject>
+    <isRequired>false</isRequired>
+    <masterLabel>Client IP Address</masterLabel>
+</ActivationPlatformActvAttr>

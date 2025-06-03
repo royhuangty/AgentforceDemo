@@ -1,0 +1,2 @@
+<apex:page StandardController="SBQQ__Quote__c" extensions="SDO_CPQ_Q2COrderNow" action="{!orderNow}">
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Triggers a delayed send on the send time</description>
+    <environments>Default</environments>
+    <label>MCC_ScheduledSend</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

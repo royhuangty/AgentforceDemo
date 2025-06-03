@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Conferencing --></label>
+        <name>Attribute_1__c</name>
+        <picklistValues>
+            <masterLabel>Conference Room-in-a-Box</masterLabel>
+            <translation><!-- Conference Room-in-a-Box --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Projectors</masterLabel>
+            <translation><!-- Projectors --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

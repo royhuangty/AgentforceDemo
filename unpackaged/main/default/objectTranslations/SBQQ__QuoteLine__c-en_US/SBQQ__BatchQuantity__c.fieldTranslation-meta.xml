@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If products are sold in batches, this stores the quantity in each batch, defaulted from the product. --></help>
+        <label><!-- Batch Quantity --></label>
+        <name>SBQQ__BatchQuantity__c</name>
+    </CustomFieldTranslation>

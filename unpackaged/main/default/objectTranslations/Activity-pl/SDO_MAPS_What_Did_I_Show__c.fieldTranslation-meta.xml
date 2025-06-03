@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- What Did I Show? --></label>
+        <name>SDO_MAPS_What_Did_I_Show__c</name>
+        <picklistValues>
+            <masterLabel>Product A</masterLabel>
+            <translation><!-- Product A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product B</masterLabel>
+            <translation><!-- Product B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product C</masterLabel>
+            <translation><!-- Product C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product D</masterLabel>
+            <translation><!-- Product D --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

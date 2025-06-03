@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Users_Work_Order__c</fullName>
+    <formula>Contact.Id =  $User.ContactId</formula>
+    <label>Current User&#39;s Work Order</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

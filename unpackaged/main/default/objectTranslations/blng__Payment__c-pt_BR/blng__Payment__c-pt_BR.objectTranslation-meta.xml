@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pagamento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pagamentos</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Layout</layout>
+        <sections>
+            <label>Alocações / desalocações</label>
+            <section>Allocations / Unallocations</section>
+        </sections>
+        <sections>
+            <label>Saldo</label>
+            <section>Balance</section>
+        </sections>
+        <sections>
+            <label>Informações da execução de pagamento</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>Reembolsos</label>
+            <section>Refunds</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número do pagamento</nameFieldLabel>
+    <quickActions>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+</CustomObjectTranslation>

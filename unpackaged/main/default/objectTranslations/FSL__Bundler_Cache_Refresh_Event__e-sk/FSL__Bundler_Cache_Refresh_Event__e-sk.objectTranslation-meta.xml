@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosť obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Udalosti obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosť obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Udalosti obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosti obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Udalostí obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosti obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Udalostiam obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosťou obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Udalosťami obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value><!-- Udalosti obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value><!-- Udalostiach obnovenia vyrovnávacej pamäte nástroja na balenie --></value>
+    </caseValues>
+    
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>L&#39;ID de transaction utilisé pour identifier ce remboursement dans la passerelle de paiement</help>
+        <label><!-- Payment Gateway Transaction ID --></label>
+        <name>blng__PaymentGatewayTransactionID__c</name>
+    </CustomFieldTranslation>

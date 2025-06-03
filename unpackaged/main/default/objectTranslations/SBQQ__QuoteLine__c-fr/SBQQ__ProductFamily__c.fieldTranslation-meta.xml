@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Méth. de class./regroup./org. dans Salesforce (selon qu&#39;il s&#39;agit d&#39;une famille de produits nouvelle ou existante). De plus, ce champ peut être utilisé lors de la sélect. des prod. pour filtrer le prod. ou l&#39;unité de gestion de stock produit approprié.</help>
+        <label><!-- Product Family --></label>
+        <name>SBQQ__ProductFamily__c</name>
+    </CustomFieldTranslation>

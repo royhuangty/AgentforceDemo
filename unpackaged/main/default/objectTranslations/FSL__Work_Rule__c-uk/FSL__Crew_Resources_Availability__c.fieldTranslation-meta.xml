@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>При встановленні відбувається пор. поля мін. розміру ком. у роб. замовленні або елементі рядку роб. замовлення з наявними доступними учасниками ком. обслуговування.
+В протилежному випадку пор. мін. роз. ком. з полем роз. ком. у ком. з обслуговування.</help>
+        <label><!-- Consider Service Crew Membership --></label>
+        <name>FSL__Crew_Resources_Availability__c</name>
+    </CustomFieldTranslation>

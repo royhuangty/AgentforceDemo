@@ -1,0 +1,56 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Category",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "addToCartButtonText" : "Ajouter au panier",
+          "incrementValueGuideText" : "La quantité incrémentielle est {0}",
+          "maximumValueGuideText" : "La quantité maximale est {0}",
+          "minimumValueGuideText" : "La quantité minimale est {0}",
+          "quantitySelectorLabel" : "Qté",
+          "viewOptionsButtonText" : "Voir les options",
+          "addToCartButtonProcessingText" : "Ajout..."
+        },
+        "id" : "f15dcd04-2836-426c-8598-be4eaa90ed55"
+      }, {
+        "id" : "6726b74b-3897-45a6-98ad-d7a1b3080e40",
+        "attributes" : {
+          "headerText" : "Acheter par catégorie"
+        }
+      }, {
+        "id" : "4460aeab-9600-45c8-80c2-28dd6e63a670",
+        "attributes" : {
+          "text" : "{!Search.Results.categoryName}"
+        }
+      }, {
+        "id" : "1e4f250b-cd77-43c2-8de0-5a70a91d65db",
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        }
+      }, {
+        "id" : "0a6204fe-c3c3-4afc-86e9-d39c8057a863",
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        }
+      }, {
+        "id" : "91a262f0-ed14-4162-9990-fa36e127402c",
+        "attributes" : {
+          "headerText" : "Meilleures ventes de la catégorie"
+        }
+      }, {
+        "id" : "d90c4e24-d913-4ec3-9a00-61e3d6d9ca8c",
+        "attributes" : {
+          "headerText" : "Les plus consultés dans la catégorie"
+        }
+      }, {
+        "id" : "5cffb731-aad2-4d61-8e07-974adb86f16b",
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        }
+      } ]
+    }
+  },
+  "urlName" : "category"
+}

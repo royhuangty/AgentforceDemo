@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Assets</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ASSET.SERIAL_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ASSET.PURCHASE_DATE</columns>
+    <columns>ASSET.USAGE_END_DATE</columns>
+    <columns>Entitlement_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>My Assets</label>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Imposta la pianificazione in modo da includere o escludere dalle considerazioni relative a Riduci al minimo il percorso il primo e l&#39;ultimo percorso della giornata, da e verso la residenza della risorsa di servizio</help>
+        <label><!-- Exclude Home Base Travel --></label>
+        <name>FSL__Ignore_Home_Base_Coordinates__c</name>
+    </CustomFieldTranslation>

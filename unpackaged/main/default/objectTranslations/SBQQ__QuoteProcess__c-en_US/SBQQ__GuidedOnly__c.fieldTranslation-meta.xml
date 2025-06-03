@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select the checkbox if you want quotes covered by this process forced into guided product selection; otherwise, this defaults to ad-hoc filtering. --></help>
+        <label><!-- Guided Only --></label>
+        <name>SBQQ__GuidedOnly__c</name>
+    </CustomFieldTranslation>

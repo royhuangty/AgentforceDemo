@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Total additional discounts extended to this line item. Additional discount is defined as discount extended on top of volume discount or negotiated prices. --></help>
+        <label><!-- Additional Disc. --></label>
+        <name>SBQQ__AdditionalDiscount__c</name>
+    </CustomFieldTranslation>

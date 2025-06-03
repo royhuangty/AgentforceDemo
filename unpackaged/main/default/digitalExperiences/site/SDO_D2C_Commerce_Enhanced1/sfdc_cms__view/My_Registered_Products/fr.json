@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "My Registered Products",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "Mes produits enregistrés"
+        },
+        "id" : "8eaba8cd-3f7c-428b-b081-8f754645483e"
+      } ]
+    }
+  },
+  "urlName" : "my-registered-products"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Font style of standalone product rows in quote line editor (Click the icon for additional information) --></help>
+        <label><!-- Standalone Product Row Font Style --></label>
+        <name>SBQQ__StandaloneProductRowFontStyle__c</name>
+        <picklistValues>
+            <masterLabel>italic</masterLabel>
+            <translation><!-- italic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>normal</masterLabel>
+            <translation><!-- normal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>oblique</masterLabel>
+            <translation><!-- oblique --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

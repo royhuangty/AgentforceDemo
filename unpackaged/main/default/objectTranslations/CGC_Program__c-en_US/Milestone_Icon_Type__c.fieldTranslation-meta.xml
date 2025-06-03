@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Milestone Icon Type --></label>
+        <name>Milestone_Icon_Type__c</name>
+        <picklistValues>
+            <masterLabel>Icon</masterLabel>
+            <translation><!-- Icon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Progress Ring</masterLabel>
+            <translation><!-- Progress Ring --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

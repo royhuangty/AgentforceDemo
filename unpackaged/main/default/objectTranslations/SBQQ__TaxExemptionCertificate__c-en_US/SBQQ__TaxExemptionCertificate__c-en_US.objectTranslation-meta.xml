@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Tax Exemption Certificate Layout</layout>
+        <sections>
+            <label><!-- Company Information --></label>
+            <section>Company Information</section>
+        </sections>
+        <sections>
+            <label><!-- Tax Certificate --></label>
+            <section>Tax Certificate</section>
+        </sections>
+        <sections>
+            <label><!-- Tax Certificate Details --></label>
+            <section>Tax Certificate Details</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

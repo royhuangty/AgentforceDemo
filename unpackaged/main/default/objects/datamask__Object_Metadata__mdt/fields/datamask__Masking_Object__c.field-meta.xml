@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>datamask__Masking_Object__c</fullName>
+    <deprecated>false</deprecated>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Masking Object</label>
+    <referenceTo>datamask__Masking_Object__mdt</referenceTo>
+    <relationshipLabel>Object Metadata</relationshipLabel>
+    <relationshipName>Object_Metadata</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

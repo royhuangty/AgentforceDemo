@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveDataset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <application>Field_Service_Analytics</application>
+    <masterLabel>ServiceAppointment</masterLabel>
+    <templateAssetSourceName>ServiceAppointment</templateAssetSourceName>
+    <type>default</type>
+</WaveDataset>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益認識総勘定元帳処理</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Invoice total (excluding tax) --></help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </CustomFieldTranslation>

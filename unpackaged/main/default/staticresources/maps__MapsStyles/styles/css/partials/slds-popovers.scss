@@ -1,0 +1,118 @@
+.slds-scope {
+	.slds-popover {
+		
+		.slds-popover__body{
+			&.has-highlighted-text {
+				color: $light-gray;
+				
+				.tooltip-highlighted-text {
+					font-weight: bold;
+					font-style: italic;
+					color: #fff;
+				}
+			}
+		}
+		&.slds-popover--positioned-right-input-width-field {
+			position: absolute;
+			left: calc(100% + 16px);
+			top: 15px;
+			display: block;
+			width:300px;
+		}
+	}
+
+	.slds-form-element--has-hover-tooltip {
+		.slds-popover--tooltip, .slds-popover_tooltip {
+			position: absolute;
+			visibility: hidden;
+			overflow: hidden;
+			max-width:0;
+			max-height:0;
+			opacity: 0;
+			transition: 0s all 0s;
+			// transition: 0.2s opacity 0s, 0s max-height 0.2s, 0s max-width 0.2s, 0s visibility 0.2s, 0s overflow 1;
+			
+			.slds-popover__body {
+				max-height:0;
+				max-width:0;
+				transition: 0s max-width .2s, 0s max-height .2s;
+			}
+		}
+
+		&:hover, &.hover {
+			.slds-popover--tooltip, .slds-popover_tooltip {
+				visibility: visible;
+				overflow:visible;
+				max-width:1000px;
+				max-height:1000px;
+				opacity: 1;
+				transition: 0.2s opacity 0s, 0s max-height 0s, 0s max-width 0s, 0s visibility 0s, 0s overflow 0s;
+				display: block;
+
+				::after {
+					z-index:90000000;
+				}
+
+				::before {
+					z-index:90000000;
+				}
+				
+				.slds-popover__body {
+					max-height:none;
+					max-width:none;
+				}
+			}			
+		}
+	}
+	
+	.has-hover-tooltip {
+		position: relative;	
+
+		.slds-popover--tooltip, .slds-popover_tooltip {
+			position: absolute;
+			visibility: hidden;
+			overflow: hidden;
+			max-width:0;
+			max-height:0;
+			opacity: 0;
+			transition: 0s all;
+			// transition: 0.2s opacity 0s, 0s max-height 0.2s, 0s max-width 0.2s, 0s visibility 0.2s;
+		}
+		
+		&:hover {
+			.slds-popover--tooltip, .slds-popover_tooltip {
+				visibility: visible;
+				overflow:visible;
+				max-width:1000px;
+				max-height:1000px;
+				opacity: 1;
+				transition: 0.2s opacity 0s, 0s max-height 0s, 0s max-width 0s, 0s visibility 0s;
+
+				::after {
+					z-index:90000000;
+				}
+
+				::before {
+					z-index:90000000;
+				}				
+			}
+		}
+		
+		&.hover-tooltip-750-delay {
+			
+			&:hover {
+				.slds-popover--tooltip, .slds-popover_tooltip {
+					transition: 0.2s opacity .75s, 0s max-height .75s, 0s max-width .75s, 0s visibility .75s;
+				}
+			}
+		}
+	} 
+	
+	.hover-tooltip-large-icon-button {
+		.slds-popover {
+			&.slds-nubbin--top {
+				position:absolute;
+			}
+		}
+	}
+}

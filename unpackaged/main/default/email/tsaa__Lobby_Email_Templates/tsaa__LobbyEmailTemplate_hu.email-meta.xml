@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>LobbyEmailTemplate-hu</name>
+    <style>none</style>
+    <subject>Vizuális távolsági segéd meghívása</subject>
+    <textOnly>Üdv,
+! Ütemezve van egy online távolsági ülésed
+Kattints a „Csatlakozás” gombra az ülés részleteinek megtekintéséhez és a belépéshez.
+
+{!meeting_url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

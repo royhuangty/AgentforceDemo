@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>収益スケジュールで選択された分配方法を参照します。収益を分散 (設定された期間全体に分散、
+        すべて一度に分散、または手動で入力された期間全体に分散) する方法を説明します。</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </CustomFieldTranslation>

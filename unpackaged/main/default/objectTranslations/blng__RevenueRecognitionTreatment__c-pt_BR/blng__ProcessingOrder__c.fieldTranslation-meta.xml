@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Digite 1 se esse tratamento de receita deve ser processado antes de todos os outros tratamentos, 2 se deve ser o segundo a ser processado etc.</help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </CustomFieldTranslation>

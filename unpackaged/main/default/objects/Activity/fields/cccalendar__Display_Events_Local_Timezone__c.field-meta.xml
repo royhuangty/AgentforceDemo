@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cccalendar__Display_Events_Local_Timezone__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Check to display event&#39;s local timezone in event details</description>
+    <inlineHelpText>Check to display event&#39;s local timezone in event details</inlineHelpText>
+    <label>Display Event&#39;s Local Timezone</label>
+    <type>Checkbox</type>
+</CustomField>

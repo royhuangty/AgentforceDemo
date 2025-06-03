@@ -1,0 +1,266 @@
+<apex:page setup="true" controller="maps.LiveAppSettings" title="Live App Settings" extensions="maps.LiveAppRemoteFunctions,maps.LiveAPI">
+
+    <apex:outputPanel layout="none" rendered="{! !featureEnabled }">
+        <!-- <div style="text-align: center; padding-top: 1rem;">
+            You do not have a license to use this feature
+        </div> -->
+        <c:MissingLicense />
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!featureEnabled}">
+        <apex:form >
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            
+            <apex:sectionHeader title="Live App Settings" />
+            
+            <apex:outputPanel id="SettingsPanel">
+                <apex:pageBlock title="Settings" mode="edit">
+                    
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton value="Save" rerender="SettingsPanel" action="{!doSaveSettings}"  />
+                    </apex:pageBlockButtons>
+                    
+                    <apex:pageBlockSection columns="1">
+                        <apex:pageBlockSectionItem >
+                            Authorization Token
+                            <apex:inputText value="{!LiveAuthToken}" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    
+                </apex:pageBlock>
+            </apex:outputPanel>
+            
+            
+            
+            <apex:outputPanel id="ButtonsPanel">
+                <apex:pageBlock title="Settings" mode="edit">
+                    
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton value="Save" rerender="SettingsPanel" onclick="PostButtonSettings();"  />
+                    </apex:pageBlockButtons>
+                    
+                    
+                    <apex:pageBlockSection title="Red" columns="1">
+                        <apex:pageBlockSectionItem >
+                            Active
+                            <apex:inputCheckbox id="red_active" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Title
+                            <apex:inputText id="red_title" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Icon
+                            <apex:selectList size="1" id="red_icon">
+                                <apex:selectOptions value="{!IconOptions}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Description
+                            <apex:inputText id="red_description" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    
+                    
+                    
+                    <apex:pageBlockSection title="Blue" columns="1">
+                        <apex:pageBlockSectionItem >
+                            Active
+                            <apex:inputCheckbox id="blue_active" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Title
+                            <apex:inputText id="blue_title" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Icon
+                            <apex:selectList size="1" id="blue_icon">
+                                <apex:selectOptions value="{!IconOptions}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Description
+                            <apex:inputText id="blue_description" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    
+                    
+                    
+                    <apex:pageBlockSection title="Yellow" columns="1">
+                        <apex:pageBlockSectionItem >
+                            Active
+                            <apex:inputCheckbox id="yellow_active" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Title
+                            <apex:inputText id="yellow_title" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Icon
+                            <apex:selectList size="1" id="yellow_icon">
+                                <apex:selectOptions value="{!IconOptions}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Description
+                            <apex:inputText id="yellow_description" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    
+                    
+                    
+                    <apex:pageBlockSection title="Green" columns="1">
+                        <apex:pageBlockSectionItem >
+                            Active
+                            <apex:inputCheckbox id="green_active" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Title
+                            <apex:inputText id="green_title" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Icon
+                            <apex:selectList size="1" id="green_icon">
+                                <apex:selectOptions value="{!IconOptions}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            Description
+                            <apex:inputText id="green_description" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+
+
+
+
+                    
+                </apex:pageBlock>
+            </apex:outputPanel>
+            
+            <script>
+            
+                $(function() {
+                    GetButtonSettings();
+                });
+                
+                
+                function GetButtonSettings()
+                {
+                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.LiveAppRemoteFunctions.GetButtonSettings}', 
+                        function(result, event){
+                            
+                            if (result.message)
+                            {
+                                if (result.message.liveappsettings)
+                                {
+                                    //if (result.message.liveappsettings.settings)
+                                    //{
+                                        for (var i =0; i < result.message.liveappsettings.length; i++)
+                                        {
+                                            var buttonSetting = result.message.liveappsettings[i];
+                                            
+                                            if (buttonSetting.eventType == 'red_button_press')
+                                            {
+                                                $("[id*='red_active']" ).prop( "checked", buttonSetting.isVisible );
+                                                $("[id*='red_title']" ).val(buttonSetting.title);
+                                                $("[id*='red_icon']" ).val(buttonSetting.icon);
+                                                $("[id*='red_description']" ).val(buttonSetting.description);
+                                            }
+                                            else if (buttonSetting.eventType == 'blue_button_press')
+                                            {
+                                                $("[id*='blue_active']" ).prop( "checked", buttonSetting.isVisible );
+                                                $("[id*='blue_title']" ).val(buttonSetting.title);
+                                                $("[id*='blue_icon']" ).val(buttonSetting.icon);
+                                                $("[id*='blue_description']" ).val(buttonSetting.description);
+                                            }
+                                            else if (buttonSetting.eventType == 'yellow_button_press')
+                                            {
+                                                $("[id*='yellow_active']" ).prop( "checked", buttonSetting.isVisible );
+                                                $("[id*='yellow_title']" ).val(buttonSetting.title);
+                                                $("[id*='yellow_icon']" ).val(buttonSetting.icon);
+                                                $("[id*='yellow_description']" ).val(buttonSetting.description);
+                                            }
+                                            else if (buttonSetting.eventType == 'green_button_press')
+                                            {
+                                                $("[id*='green_active']" ).prop( "checked", buttonSetting.isVisible );
+                                                $("[id*='green_title']" ).val(buttonSetting.title);
+                                                $("[id*='green_icon']" ).val(buttonSetting.icon);
+                                                $("[id*='green_description']" ).val(buttonSetting.description);
+                                            }
+                                            
+                                        }
+                                    //}
+                                }
+                            }
+                            
+                        }, 
+                        {escape: true}
+                    );
+                }
+                
+                function PostButtonSettings()
+                {
+                    var PostData = {
+                        "settings": 
+                            [
+                                {
+                                    "isVisible": $("[id*='red_active']" ).prop( "checked"),
+                                    "description": $("[id*='red_description']" ).val(),
+                                    "eventType": "red_button_press",
+                                    "icon": $("[id*='red_icon']" ).val(),
+                                    "title": $("[id*='red_title']" ).val()
+                                },
+                                {
+                                    "isVisible": $("[id*='blue_active']" ).prop( "checked"),
+                                    "description": $("[id*='blue_description']" ).val(),
+                                    "eventType": "blue_button_press",
+                                    "icon": $("[id*='blue_icon']" ).val(),
+                                    "title": $("[id*='blue_title']" ).val()
+                                },
+                                {
+                                    "isVisible": $("[id*='yellow_active']" ).prop( "checked"),
+                                    "description": $("[id*='yellow_description']" ).val(),
+                                    "eventType": "yellow_button_press",
+                                    "icon": $("[id*='yellow_icon']" ).val(),
+                                    "title": $("[id*='yellow_title']" ).val()
+                                },
+                                {
+                                    "isVisible": $("[id*='green_active']" ).prop( "checked"),
+                                    "description": $("[id*='green_description']" ).val(),
+                                    "eventType": "green_button_press",
+                                    "icon": $("[id*='green_icon']" ).val(),
+                                    "title": $("[id*='green_title']" ).val()
+                                }
+                            ]
+                    };
+                    
+                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.LiveAppRemoteFunctions.PostButtonSettings}', 
+                        JSON.stringify(PostData),
+                        function(result, event){
+                            if (event.status) {
+                                if (result.status || result.success) {
+                                    alert('Success! ' + result.message);
+                                } else {
+                                    if (result.error) {
+                                        alert('Failed to save: ' + result.error.message);
+                                    } else {
+                                        alert(result.message);
+                                    }
+                                }
+                            } else {
+                                alert('Failed to save: ' + event.message);
+                            }
+                        }, 
+                        {escape: true}
+                    );
+                }
+                
+                
+            </script>
+        
+            
+            
+        </apex:form>
+    </apex:outputPanel>
+</apex:page>

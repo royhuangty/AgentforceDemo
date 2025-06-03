@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Καθορίζει πόσα λεπτά πριν από την έναρξη της ημερολογιακής ημέρας του πόρου θα είναι διαθέσιμα για μεταφορές (με δαπάνες του πόρου).
+Όταν είναι κενό, είναι έγκυρος οποιοσδήποτε χρόνος μεταφορών πριν από την έναρξη της εργάσιμης ημέρας.</help>
+        <label><!-- Travel From Home (minutes) --></label>
+        <name>FSL__Travel_From_Home__c</name>
+    </CustomFieldTranslation>

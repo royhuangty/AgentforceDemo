@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true" />
+    <measures>
+        <field>CaseDetailTable_Agen_1.PctFirstContactResolution</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% First Contact Resolution</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseDetailTable_Agen_1.TotalCases</field>
+        <isDerived>false</isDerived>
+        <label># Cases</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseDetailTable_Agen_1.TotalCasesClosed</field>
+        <isDerived>false</isDerived>
+        <label>Total Cases Closed</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseDetailTable_Agen_1.AvgTimetoFirstClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to First Close (hrs)</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>CaseDetailTable_Agen_1.AvgTimetoClose</field>
+        <isDerived>false</isDerived>
+        <label>Avg. Time to Close (hrs)</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Case_Detail_Table_Agents</waveVisualization>
+</WaveXmd>

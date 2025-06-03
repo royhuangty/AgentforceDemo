@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認ルール</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Approval Rule Layout</layout>
+        <sections>
+            <label>基本設定</label>
+            <section>Basic Settings</section>
+        </sections>
+        <sections>
+            <label>条件</label>
+            <section>Conditions</section>
+        </sections>
+        <sections>
+            <label>メール通知</label>
+            <section>Email Notifications</section>
+        </sections>
+        <sections>
+            <label>除外</label>
+            <section>Exclusions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>ルール名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

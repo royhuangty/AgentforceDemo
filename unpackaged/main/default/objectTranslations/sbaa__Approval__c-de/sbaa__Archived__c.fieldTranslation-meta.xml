@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Wenn &quot;Archivierte Genehmigungen&quot; aktiviert ist, zeigt dies an, dass diese Genehmigung archiviert ist</help>
+        <label><!-- Archived --></label>
+        <name>sbaa__Archived__c</name>
+    </CustomFieldTranslation>

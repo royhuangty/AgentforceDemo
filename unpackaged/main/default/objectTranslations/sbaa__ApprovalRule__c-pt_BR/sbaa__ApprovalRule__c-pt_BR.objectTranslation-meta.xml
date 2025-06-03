@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Regra de aprovação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Regras de aprovação</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Rule Layout</layout>
+        <sections>
+            <label>Configurações básicas</label>
+            <section>Basic Settings</section>
+        </sections>
+        <sections>
+            <label>Condições</label>
+            <section>Conditions</section>
+        </sections>
+        <sections>
+            <label>Notificações por email</label>
+            <section>Email Notifications</section>
+        </sections>
+        <sections>
+            <label>Exclusões</label>
+            <section>Exclusions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da regra</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

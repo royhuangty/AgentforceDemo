@@ -1,0 +1,119 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "Réf. #",
+          "productDetailSummaryFieldMapping" : "[{\"name\":\"Description\",\"label\":\"\",\"type\":\"TEXTAREA\"}]"
+        },
+        "id" : "f6c5b24f-7cde-47a7-9a5d-d9cf1ec11a1e"
+      }, {
+        "id" : "e206ae2b-6aa5-4f9a-8e3b-13756692a2e5",
+        "attributes" : {
+          "slot3PriceLabel" : "Prix final",
+          "unavailablePriceLabel" : "Prix indisponible",
+          "taxIncludedLabel" : "Taxe Incluse",
+          "lastLowestPriceLabel" : "Dernier prix le plus bas :"
+        }
+      }, {
+        "id" : "44dc30c0-2d38-45ad-adf4-5a0dc33bfedf",
+        "attributes" : {
+          "text" : "Options disponibles"
+        }
+      }, {
+        "id" : "5d952da4-c604-4822-86e1-bb1d566f2b0a",
+        "attributes" : {
+          "text" : "Remises de niveau"
+        }
+      }, {
+        "id" : "911c7903-3bef-4e96-977d-1efe5acedc06",
+        "attributes" : {
+          "quantityRowLabel" : "Quantité",
+          "discountRowLabel" : "Remise par unité"
+        }
+      }, {
+        "id" : "21d7f9fa-75ea-4ccc-b8a1-e66d7559b7a8",
+        "attributes" : {
+          "addToCartButtonText" : "Ajouter au panier",
+          "addToCartButtonProcessingText" : "Ajout...",
+          "outOfStockText" : "En rupture de stock",
+          "minimumValueGuideText" : "La quantité minimale est de {0}",
+          "maximumValueGuideText" : "La quantité maximale est de {0}",
+          "incrementValueGuideText" : "La quantité d'incrément est de {0}",
+          "quantitySelectorLabel" : "Quantité",
+          "addToListButtonText" : "❤️"
+        }
+      }, {
+        "id" : "61889398-8f1d-4419-a3be-092cd2c182c4",
+        "attributes" : {
+          "text" : "Détails techniques"
+        }
+      }, {
+        "id" : "09ae1d9b-252a-46d0-bcbe-a4fc1cb7e7ce",
+        "attributes" : {
+          "productDetailDataContentMapping" : "[{\"name\":\"ProductCode\",\"label\":\"Code produit\",\"type\":\"STRING\"},{\"name\":\"Family\",\"label\":\"Gamme de produits\",\"type\":\"PICKLIST\"},{\"name\":\"Power_Source__c\",\"label\":\"Source d'alimentation\",\"type\":\"PICKLIST\"},{\"name\":\"GFCI_Safety_Circuit__c\",\"label\":\"Circuit de sécurité GFCI\",\"type\":\"PICKLIST\"},{\"name\":\"Warranty__c\",\"label\":\"Garantie\",\"type\":\"PICKLIST\"}]"
+        }
+      }, {
+        "id" : "12fead69-5cf9-4c2a-9bec-c4a853e67e11",
+        "attributes" : {
+          "taxIncludedLabel" : "Taxes incluses",
+          "unavailablePriceLabel" : "Prix non disponible",
+          "lastLowestPriceLabel" : "Dernier prix le plus bas :",
+          "outOfStockText" : "En rupture de stock",
+          "minimumValueGuideText" : "La quantité minimale est de {0}",
+          "maximumValueGuideText" : "La quantité maximale est de {0}",
+          "incrementValueGuideText" : "La quantité d'incrément est de {0}",
+          "quantitySelectorLabel" : "QTÉ"
+        }
+      }, {
+        "id" : "c03a0adf-194a-406e-8fbf-ea468ffa56f2",
+        "attributes" : {
+          "text" : "Souvent achetés ensemble"
+        }
+      }, {
+        "id" : "2d0d4974-9919-4bcb-89ee-66dec690d9c8",
+        "attributes" : {
+          "buttonLabel" : "Ajouter les articles sélectionnés au panier"
+        }
+      }, {
+        "id" : "04832ee5-b4d6-4120-a098-3c4612debf6b",
+        "attributes" : {
+          "text" : "{!Product.Details.fields.Name}"
+        }
+      }, {
+        "id" : "8c08f224-335f-40e2-93ad-b59374e528bb",
+        "attributes" : {
+          "text" : "La quantité minimale est de {!Product.Details.purchaseQuantityRule.minimum} • La quantité maximale est de {!Product.Details.purchaseQuantityRule.maximum} • Vendue par incréments de {!Product.Details.purchaseQuantityRule.increment}"
+        }
+      }, {
+        "id" : "e7564bd0-c815-437c-9448-34938d1925b3",
+        "attributes" : {
+          "richTextValue" : "<p><span style=\"font-size: 14px;\">{!Product.Details.fields.RT_Description__c}</span></p>"
+        }
+      }, {
+        "id" : "913f5ad7-38a2-48b6-a4a7-475a4ce7ce88",
+        "attributes" : {
+          "overflowMenuLabel" : "Plus"
+        }
+      }, {
+        "id" : "6c9e920f-9155-4f8d-81eb-a6af3cc2d298",
+        "attributes" : {
+          "text" : "Qu'est-ce que le CRM et comment ça marche ?"
+        }
+      }, {
+        "id" : "593777b0-3d98-4f54-9daf-cbb9b224467d",
+        "attributes" : {
+          "text" : "Qu'est-ce que le CRM (Customer Relationship Management) et comment fonctionne le CRM ? Regardez cette vidéo pour voir comment le CRM vous aide à suivre tout ce qui concerne vos clients et vos clients potentiels afin que vous puissiez établir d'excellentes relations avec eux."
+        }
+      }, {
+        "id" : "ada21197-22ec-414f-b98f-26e517fea8bb",
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        }
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

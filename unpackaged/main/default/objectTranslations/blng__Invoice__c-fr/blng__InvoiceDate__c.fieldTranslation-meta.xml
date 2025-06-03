@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Lance la date d&#39;échéance et la période de reporting financier</help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </CustomFieldTranslation>

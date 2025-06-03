@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Business objectives: Requested solution description and expected result. Mention if this is a global solution or call out if there is any variation by region. --></help>
+        <label><!-- Business Case --></label>
+        <name>inov8__Business_Case__c</name>
+    </CustomFieldTranslation>

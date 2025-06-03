@@ -1,0 +1,558 @@
+<apex:page sidebar="false" showHeader="false" controller="FSL.EmergencyWizardController">
+	<apex:outputPanel rendered="{!chinaMap}">
+		<div style="font-size: 18px; margin: 50px auto; text-align: center;">
+			This action is not supported in your area
+		</div>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!!chinaMap}">
+    
+	    <c:ChatterAction ></c:ChatterAction>
+
+		<apex:stylesheet value="{!$Resource.FSL__ANEmergencyStyles}" />
+		<apex:includeScript value="{!$Resource.FSL__AngularMoment}" />
+		<apex:includeScript value="{!$Resource.FSL__ANEmergencyBundleJs}" />
+
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.FSL__LightningDesignSystem, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+	    <html class="{{emergencyWizard.isExplorer()}}" ng-app="emergencyApp" ng-controller="mainController as emergencyWizard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	        <service-form show-back-button="true"
+						  show-assign-to-me="false"
+						  title-without-object="{!JSENCODE($Label.EmergencyDispatch)}"
+						  title-with-object="{!JSENCODE($Label.EmergencyDispatchFor)}"
+						  action-button-text="{!JSENCODE($Label.EmergencyDispatch)}"
+						  apex-class-name="'{!ClassName}'"
+						  handle-slr="true"
+						  on-first-stage-completed="emergencyWizard.onFirstStageCompleted(result)"
+						  control="emergencyWizard.controlServiceForm"
+						  geocoding-must-succeed="true"
+						  hide-dates="true"
+						  ng-class="{'map-page': !emergencyWizard.isInForm(), 'rtlDirection' : emergencyWizard.isRtlDirection}">
+
+	        	<main-content class="ng-cloak">
+
+	                <button
+	                    class="AN-candidate-toggle"
+	                    ng-show="!emergencyWizard.error && ((!emergencyWizard.hideMap && emergencyWizard.areCandidatesAvailable && !emergencyWizard.showConfirmBox) || emergencyWizard.partialResults.length > 0)"
+	                    ng-click="emergencyWizard.showCandidates = !emergencyWizard.showCandidates">
+	                        {!JSENCODE($Label.Candidates)}
+	                </button>
+
+
+					<span id="AN-red-cpu" ng-show="emergencyWizard.partialResults.length > 0"></span>
+
+		            <!-- loading banner -->
+		            <div id="AN-loading-banner" ng-show="emergencyWizard.activityText" ng-cloak="">
+		                <span class="MainTitle">{{ emergencyWizard.activityText }}</span>
+		            </div>
+
+		            <!-- center on service button -->
+		            <div id="AN-CenterMap" ng-click="emergencyWizard.centerMap()" title="{!JSENCODE($Label.CenterMapOnService)}">
+		                <svg aria-hidden="true" class="slds-icon AN-lds-icon">
+		                     <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#checkin')}"></use>
+		                 </svg>
+		            </div>
+
+		            <!-- show traffic -->
+		            <div id="AN-TraffocButton" ng-class="{'AN-TrafficOn': emergencyWizard.trafficOn}" ng-click="emergencyWizard.toggleTraffic()" title="{!JSENCODE($Label.ToggleTrafficLayer)}">
+		                <svg aria-hidden="true" class="slds-icon AN-lds-icon">
+		                     <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/custom-sprite/svg/symbols.svg#custom31')}"></use>
+		                 </svg>
+		            </div>
+
+		            <!-- list of candidate (sliding box) -->
+		            <div id="AN-candidates-container" ng-class="{'AN-show-candidates': emergencyWizard.showCandidates, 'AN-NoMap' : emergencyWizard.hideMap}">
+
+
+						<div id="AN-PartialResults" ng-show="emergencyWizard.partialResults.length > 0">
+							<div>{!JSENCODE($Label.particalCouldntProcessAll)} <u ng-show="emergencyWizard.userHasAdminPermissions" ng-click="emergencyWizard.showPartialData = !emergencyWizard.showPartialData">{!JSENCODE($Label.ShowDetails)}</u></div>
+
+							<div ng-show="emergencyWizard.showPartialData">
+								<ul>
+									<li ng-repeat="partial in emergencyWizard.partialResults">
+										{{ emergencyWizard.generatePartialResult(partial) }}
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+
+		                <div tabindex="0" ng-repeat="candidate in ([emergencyWizard.candidates] | eta:emergencyWizard.breadcrumbs : emergencyWizard.scheduleWhen)" class="AN-slot-container" ng-show="emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id].isValidSlot">
+		                    <img ng-hide="emergencyWizard.isServiceCrew(candidate)" ng-src="{{emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id].photo || '{!$Resource.DefaultResourcePhoto}' }}" title="{{ candidate.Resource.Resource.Name }}" />
+		                    <div ng-show="emergencyWizard.isServiceCrew(candidate)" class="CrewPhotoIcon"></div>
+
+							<span tabindex="0" class="resourceLink" ng-bind="candidate.Resource.Resource.Name" ng-click="emergencyWizard.openLink(candidate.Id)"></span>
+							<span class="AN-preferred-resource-list" ng-repeat="(key, value) in emergencyWizard.getPreferredResources()" ng-show="value[candidate.Id]">{{key}}</span>
+
+							<span ng-show="emergencyWizard.isCurrentServiceEmergency(candidate.Id)" title="{!JSENCODE($Label.EmergencyTooltip)}">
+								<svg aria-hidden="true" class="slds-icon emergencyOnService">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#connected_apps')}"></use>
+								</svg>
+							</span>
+							<span ng-show="emergencyWizard.isCurrentServicePinned(candidate.Id)" title="{!JSENCODE($Label.EmergencyPinnedTooltip)}">
+								<svg aria-hidden="true" class="slds-icon pinnedServiceIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#lock')}"></use>
+								</svg>
+							</span>
+							<span ng-show="emergencyWizard.isCurrentServiceInJeopardy(candidate.Id)" title="{!JSENCODE($Label.EmergencyInJeopardyTooltip)}">
+								<svg aria-hidden="true" class="slds-icon inJeopardyServiceIcon">
+									<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#notification')}"></use>
+								</svg>
+							</span>
+							<br/>
+
+		                    <span class="AN-arrival" ng-show="emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id].duration">
+		                        {!JSENCODE($Label.ETAWiz)} {{emergencyWizard.setBreadcrumbLabel(emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id])}}
+		                        ({{emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id].distance.text}})
+		                    </span>
+
+		                    <span class="AN-arrival" ng-hide="emergencyWizard.breadcrumbs[candidate.Resource.Resource.Id].duration">
+		                        {!JSENCODE($Label.CantCalcETA)}
+		                    </span>
+
+
+							<svg tabindex="0" aria-hidden="true" ng-hide="emergencyWizard.hideMap" class="slds-icon" ng-click="emergencyWizard.centerMap(candidate.Resource)" fsl-key-press="fsl-key-press">
+								 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#checkin')}"></use>
+							 </svg>
+
+							<div fsl-key-press="fsl-key-press" tabindex="0" class="AN-currentServiceLinkCandidates"
+								  ng-show="emergencyWizard.getCurrentServices()[candidate.Resource.Resource.Id]"
+								  ng-click="emergencyWizard.openLink(emergencyWizard.getCurrentServices()[candidate.Resource.Resource.Id].Id)">
+								{{ '{!JSENCODE($Label.CurrentService)}'.replace('$0', emergencyWizard.getCurrentServices()[candidate.Resource.Resource.Id].AppointmentNumber) }}
+							</div>
+
+							<div tabindex="0" class="AN-currentServiceLinkCandidates" ng-show="!!emergencyWizard.getNextServices()[candidate.Resource.Resource.Id] && !emergencyWizard.getCurrentServices()[candidate.Resource.Resource.Id]"
+								  ng-click="emergencyWizard.openLink(emergencyWizard.getNextServices()[candidate.Resource.Resource.Id].Id)" fsl-key-press="fsl-key-press">
+								{{ '{!JSENCODE($Label.NextService)}'.replace('$0', emergencyWizard.getNextServices()[candidate.Resource.Resource.Id].AppointmentNumber).replace('$1', emergencyWizard.getNextServices()[candidate.Resource.Resource.Id].startingIn) }}
+							</div>
+
+
+
+		                    <div fsl-key-press="fsl-key-press" tabindex="0" class="AN-shcedule-button" 
+		                    	ng-click="emergencyWizard.scheduleResource(candidate.Resource)">{!JSENCODE($Label.Dispatch)}</div>
+		                </div>
+		            </div>
+
+
+		            <div id="AN-Sentence">
+		                <policy-selector></policy-selector>
+		            </div>
+
+
+		            <!-- scheduling box and confirm -->
+		            <div id="AN-ScheduleConfirmOverlay" ng-class="{'AN-ShowOverlay': emergencyWizard.showConfirmBox || emergencyWizard.error || emergencyWizard.serviceAfterSchedule || emergencyWizard.showServicePage}">
+
+						<!-- service page box -->
+						<div id="AN-ServicePage" class="AN-ServicePageShow" ng-show="emergencyWizard.showServicePage">
+							<h1>
+								{{ '{!JSENCODE($Label.EmergencyCurrentSrvFor)}'.replace('$0',emergencyWizard.showServicePage.ServiceResources[0].ServiceResource.Name) }}
+								<svg ng-click="emergencyWizard.showServicePage = false" aria-hidden="true" class="slds-icon AN-close-box">
+									 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+								 </svg>
+							</h1>
+
+							<iframe ng-src="{{ emergencyWizard.servicePageUrl }}"></iframe>
+
+						</div>
+
+
+
+		                <div id="AN-ScheduleConfirm" ng-class="{'AN-ShowConfirm': emergencyWizard.showConfirmBox || emergencyWizard.error || emergencyWizard.serviceAfterSchedule , 'emergency-full' : emergencyWizard.serviceAfterSchedule}">
+
+		                    <!-- Success message after dispatch -->
+		                    <div ng-show="emergencyWizard.serviceAfterSchedule">
+		                        <div class="AN-ConfirmContent AN-DispatchedBox">
+		                            <svg aria-hidden="true" class="slds-icon AN-CheckSvg">
+		                                 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#check')}"></use>
+		                             </svg>
+		                            {{ emergencyWizard.generateResultsText() }}
+		                        </div>
+
+		                        <div class="AN-BlueButton" ng-show="emergencyWizard.showViewService()" ng-click="emergencyWizard.viewService()">
+		                            {!$Label.View_Service}
+		                        </div>
+		                    </div>
+
+
+		                    <!-- error box -->
+		                    <div ng-show="emergencyWizard.error">
+		                        <h1>
+		                            {!$Label.EmergencyWizardTitlePopip}
+		                            <svg ng-click="emergencyWizard.error = null" aria-hidden="true" class="slds-icon AN-close-box" ng-show="!emergencyWizard.isCriticalError()">
+		                                 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+		                             </svg>
+		                        </h1>
+
+		                        <div class="AN-ConfirmContent">
+		                            {{ emergencyWizard.error }}
+		                        </div>
+		                    </div>
+
+
+		                    <!-- Confirm box before dispatch -->
+		                    <div ng-show="emergencyWizard.showConfirmBox && emergencyWizard.serviceAfterSchedule === null">
+
+		                        <h1>
+		                            {!$Label.ConfirmEmergencyDispatch}
+		                            <svg ng-click="emergencyWizard.showConfirmBox = false" aria-hidden="true" class="slds-icon AN-close-box">
+		                                 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+		                             </svg>
+		                        </h1>
+
+		                        <div class="AN-ConfirmContent">
+
+		                            <img ng-src="{{emergencyWizard.breadcrumbs[emergencyWizard.scheduleToThisResource.id].photo}}" class="AN-PhotoInConfirmBox" />
+		                            {{ emergencyWizard.generateConfirmText() }}<br/><br/>
+
+									<div ng-show="emergencyWizard.allowChatterPosting">
+										<input id="shouldPostToChatter" type="checkbox" ng-model="emergencyWizard.shouldPostToChatter"></input>
+										<label for="shouldPostToChatter" ng-bind="emergencyWizard.chatterCheckboxLabel"></label>
+										<textarea ng-disabled="!emergencyWizard.shouldPostToChatter" ng-model="emergencyWizard.chatterPost"></textarea>
+									</div>
+
+		                        </div>
+
+		                        <div class="AN-BlueButton" ng-click="emergencyWizard.dispatchService()">
+		                            <span ng-show="emergencyWizard.showLoadingAfterDispatch">{!JSENCODE($Label.DispatchingLoad)}</span>
+		                            <span ng-hide="emergencyWizard.showLoadingAfterDispatch">{!JSENCODE($Label.ConfirmAndDispatch)}</span>
+		                        </div>
+
+		                    </div>
+
+
+		                </div>
+		            </div>
+
+
+		            <!-- map -->
+		            <div id="ActionBody" ng-hide="emergencyWizard.hideMap">
+		                <ui-gmap-google-map control="emergencyWizard.googleMap" center='emergencyWizard.map.center' zoom='emergencyWizard.map.zoom' options="{streetViewControl: false, mapTypeControl: false}">
+
+		                    <!-- service marker -->
+		                    <ui-gmap-marker idKey="emergencyWizard.service.id" coords="emergencyWizard.service.coords" options="emergencyWizard.serviceMarkerOptions"></ui-gmap-marker>
+
+		                    <!-- last know positions marker -->
+		                    <ui-gmap-marker ng-repeat="marker in emergencyWizard.breadcrumbs | ValidMarkers" ng-init="marker.schedule=emergencyWizard.scheduleResource" ng-show="marker.isValidSlot" idKey="marker.id" coords="marker.coords"
+		                        options="emergencyWizard.candidateMarkersOptions[marker.id]" click="emergencyWizard.setCurrentOpenedInfoBox(marker.id); emergencyWizard.getRoute(marker.id, marker.coords)">
+		                        
+	                        <!-- info box for each breadcrumb -->
+	                        <ui-gmap-window control="marker" closeClick="emergencyWizard.setCurrentOpenedInfoBox()" show="emergencyWizard.getCurrentOpenedInfoBox() === marker.id">
+	                            <div class="AN-info-window-tooltip">
+	                                <h1>
+										<span class="resourceLink" ng-click="$parent.emergencyWizard.openLink($parent.marker.id)">{{marker.name}}</span>
+										<span class="AN-preferred-resource-list" ng-show="$parent.emergencyWizard.getPreferredResources()[$parent.emergencyWizard.preferredTypes[0]][$parent.marker.id]">{{emergencyWizard.preferredTypes[0]}}</span>
+										<span class="AN-preferred-resource-list" ng-show="$parent.emergencyWizard.getPreferredResources()[$parent.emergencyWizard.preferredTypes[1]][$parent.marker.id]">{{emergencyWizard.preferredTypes[1]}}</span>
+										<span class="AN-preferred-resource-list" ng-show="$parent.emergencyWizard.getPreferredResources()[$parent.emergencyWizard.preferredTypes[2]][$parent.marker.id]">{{emergencyWizard.preferredTypes[2]}}</span>
+									</h1>
+
+									<div>
+										<span ng-show="$parent.emergencyWizard.isCurrentServiceEmergency($parent.marker.id)" title="{!JSENCODE($Label.EmergencyTooltip)}">
+											<svg aria-hidden="true" class="slds-icon emergencyOnService">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#connected_apps')}"></use>
+											</svg>
+										</span>
+										<span ng-show="$parent.emergencyWizard.isCurrentServicePinned($parent.marker.id)" title="{!JSENCODE($Label.EmergencyPinnedTooltip)}">
+											<svg aria-hidden="true" class="slds-icon pinnedServiceIcon">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#lock')}"></use>
+											</svg>
+										</span>
+										<span ng-show="$parent.emergencyWizard.isCurrentServiceInJeopardy($parent.marker.id)" title="{!JSENCODE($Label.EmergencyInJeopardyTooltip)}">
+											<svg aria-hidden="true" class="slds-icon inJeopardyServiceIcon">
+												<use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#notification')}"></use>
+											</svg>
+										</span>
+									</div>
+
+
+									<div class="emergency-today-services" ng-show="!!$parent.emergencyWizard.getCurrentServices()[$parent.marker.id] || (!!$parent.emergencyWizard.getNextServices()[$parent.marker.id] && !!!$parent.emergencyWizard.getCurrentServices()[$parent.marker.id])">
+
+										<div class="AN-currentserviceLink" ng-show="!!$parent.emergencyWizard.getCurrentServices()[$parent.marker.id]"
+											 ng-click="$parent.emergencyWizard.openLink($parent.emergencyWizard.getCurrentServices()[$parent.marker.id].Id)">
+											{{ '{!JSENCODE($Label.CurrentService)}'.replace('$0', emergencyWizard.getCurrentServices()[marker.id].AppointmentNumber) }}
+										</div>
+
+										<div class="AN-currentserviceLink" ng-show="!!$parent.emergencyWizard.getNextServices()[$parent.marker.id] && !!!$parent.emergencyWizard.getCurrentServices()[$parent.marker.id]"
+											 ng-click="$parent.emergencyWizard.openLink($parent.emergencyWizard.getNextServices()[$parent.marker.id].Id)">
+											{{ '{!JSENCODE($Label.NextService)}'.replace('$0', emergencyWizard.getNextServices()[marker.id].AppointmentNumber).replace('$1', emergencyWizard.getNextServices()[marker.id].startingIn) }}
+										</div>
+
+										<!--<div ng-hide="!!$parent.emergencyWizard.getNextServices()[$parent.marker.id] || !!$parent.emergencyWizard.getCurrentServices()[$parent.marker.id]">-->
+											<!--{!JSENCODE($Label.NoAppsSchedTodays)}-->
+										<!--</div>-->
+									</div>
+
+
+	                                {!JSENCODE($Label.DistanceWiz)} {{ marker.distance.text || '{!JSENCODE($Label.NA)}'}}<br/>
+	                                {!JSENCODE($Label.ETAWiz)} {{emergencyWizard.setBreadcrumbLabel(marker)}}<br/>
+	                                <div class="AN-SourceLine"> {!JSENCODE($Label.SourceWiz)} {{marker.origin}}</div>
+
+									<div class="resource-fieldset">
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[0].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[0].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[0].Type != 'REFERENCE'">
+													{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[0]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[0].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[0].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[0])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[0]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[1].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[1].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[1].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[1]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[1].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[1].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[1])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[1]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[2].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[2].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[2].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[2]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[2].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[2].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[2])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[2]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[3].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[3].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[3].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[3]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[3].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[3].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[3])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[3]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[4].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[4].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[4].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[4]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[4].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[4].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[4])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[4]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[5].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[5].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[5].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[5]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[5].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[5].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[5])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[5]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[6].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[6].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[6].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[6]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[6].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[6].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[6])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[6]}}
+													</span>
+											</div>
+
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[7].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[7].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[7].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[7]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[7].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[7].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[7])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[7]}}
+													</span>
+											</div>
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[8].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[8].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[8].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[8]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[8].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[8].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[8])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[8]}}
+													</span>
+											</div>
+
+
+											<div ng-show="$parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[9].FullAPIName]">
+												{{$parent.$parent.emergencyWizard.resourcesFieldSet[9].Label}}:
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[9].Type != 'REFERENCE'">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[9]}}
+													</span>
+
+												<span ng-show="$parent.$parent.emergencyWizard.resourcesFieldSet[9].Type == 'REFERENCE'"
+													  ng-click="$parent.$parent.emergencyWizard.openLink($parent.$parent.emergencyWizard.candidates[$parent.marker.id][$parent.$parent.emergencyWizard.resourcesFieldSet[9].FullAPIName])"
+													  ng-class="emergencyWizard.getServiceInfoRowClass($parent.$parent.emergencyWizard.resourcesFieldSet[9])">
+														{{$parent.$parent.emergencyWizard.candidates[marker.id] | displayEmergencyFieldSetField : $parent.$parent.emergencyWizard.resourcesFieldSet[9]}}
+													</span>
+											</div>
+									</div>
+
+	                                <div class="AN-shcedule-button-info-window" ng-click="$parent.emergencyWizard.scheduleResource($parent.marker)">{!JSENCODE($Label.Dispatch)}</div>
+	                            </div>
+	                        </ui-gmap-window>
+
+	                    </ui-gmap-marker>
+
+	                    <!-- path from resource to service, will be drawn when clicking on a marker -->
+	                    <ui-gmap-polyline stroke="emergencyWizard.pathStrokeOption" path="emergencyWizard.getCurrentPath()"></ui-gmap-polyline>
+
+	                </ui-gmap-google-map>
+	            </div>
+        	</main-content>
+        </service-form>
+
+	    </html>
+
+	    <script>
+
+			svg4everybody();
+			
+			// W-8557852
+			window.sharedCustomLabels = window.sharedCustomLabels || {};
+			window.sharedCustomLabels.titleWithObject = "{!JSENCODE($Label.EmergencyDispatchFor)}"
+			window.sharedCustomLabels.titleWithoutObject = "{!JSENCODE($Label.EmergencyDispatchFor)}"
+			window.sharedCustomLabels.actionButtonText = "{!JSENCODE($Label.EmergencyDispatch)}"
+
+	        var emergency = {
+	                remoteActions: {
+	                    getBreadcrumbs:     	'{!$RemoteAction.EmergencyWizardController.getBreadcrumbs2}',
+	                    getPolicies:        	'{!$RemoteAction.EmergencyWizardController.getPolicies}',
+						saveConsecutiveService: '{!$RemoteAction.EmergencyWizardController.saveConsecutiveService}',
+						getO2Polyline :         '{!$RemoteAction.EmergencyWizardController.getO2Polyline}'
+	                },
+
+	                icons: {
+	                    workOrder:          '{!URLFOR($Resource.wo_red)}',
+	                    breadcrumb:         '{!URLFOR($Resource.fsl_livepos_grey)}',
+	                },
+
+	                labels: {
+	                    FindingCandidates:      '{!JSENCODE($Label.FindingCandidatesWiz)}',
+	                    NA:                     '{!JSENCODE($Label.NA)}',
+	                    Minutes:                '{!JSENCODE($Label.Minutes)}',
+	                    NoSlotsChooseAnother:   '{!JSENCODE($Label.NoSlotsChooseAnother)}',
+	                    FinidingLocations:      '{!JSENCODE($Label.FinidingLocations)}',
+	                    CalculatingETA:         '{!JSENCODE($Label.CalculatingETA)}',
+	                    WizardChatterPost:      '{!JSENCODE($Label.WizardChatterPost)}',
+	                    ServiceDispatchedTo:    '{!JSENCODE($Label.ServiceDispatchedTo)}',
+	                    ConfirmBeforeDispatch:  '{!JSENCODE($Label.ConfirmBeforeDispatch)}',
+	                    WizardUnableToGeocode:  '{!JSENCODE($Label.WizardUnableToGeocode)}',
+	                    EmergencyErrorOccurred: '{!JSENCODE($Label.EmergencyErrorOccurred)}',
+	                    EmergencyNoTransition:  '{!JSENCODE($Label.EmergencyNoTransition)}',
+	                    EmergencyWizardPolicySelector:  '{!JSENCODE($Label.EmergencyWizardPolicySelector)}',
+	                    asapWizard:             '{!JSENCODE($Label.asapWizard)}',
+	                    afterService:           '{!JSENCODE($Label.afterService)}',
+	                    EWNoUpdatedBreadCrumbs: '{!JSENCODE($Label.EWNoUpdatedBreadCrumbs)}',
+						HoursMinsEmergency:		'{!JSENCODE($Label.HoursMinsEmergency)}',
+						HoursMinsShortEmergency:'{!JSENCODE($Label.HoursMinsShortEmergency)}',
+						MinsEmergency:			'{!JSENCODE($Label.MinsEmergency)}',
+						MinsEmergencyLong:		'{!JSENCODE($Label.MinsEmergencyLong)}',
+	                    emergency_no_latlong:	'{!JSENCODE($Label.emergency_no_latlong)}',
+                        EmergencyWizardChatter: '{!JSENCODE($Label.EmergencyWizardChatter)}',
+                        EmergencyWizardChatterParent: '{!JSENCODE($Label.EmergencyWizardChatterParent)}',
+						EnableO2Service : '{!JSENCODE($Label.O2_Is_Not_Enabled_Error_Message_For_ServiceTerritory)}',
+						MilesDistanceUnitShort : '{!JSENCODE($Label.MilesDistanceUnitShort)}',
+						KmDistanceUnitShort: '{!JSENCODE($Label.KmDistanceUnitShort)}',
+						FtDistanceUnitShort: '{!JSENCODE($Label.FtDistanceUnitShort)}',
+						MeterDistanceUnitShort : '{!JSENCODE($Label.MeterDistanceUnitShort)}',
+
+
+						partialResults: {
+                            IS_CANDIDATE: '{!JSENCODE($Label.PartialResult_IS_CANDIDATE)}',
+                            RAW_MATRIX: '{!JSENCODE($Label.PartialResult_RAW_MATRIX)}',
+                            ADVANCED_MATRIX: '{!JSENCODE($Label.PartialResult_ADVANCED_MATRIX)}',
+                            GRADES: '{!JSENCODE($Label.PartialResult_GRADES)}',
+                            AB_INTERVALS: '{!JSENCODE($Label.PartialResult_AB_INTERVALS)}',
+                        }
+	                },
+
+					objectNames: {
+	                    emergency: 			'{!$ObjectType.ServiceAppointment.Fields.Emergency__c.Name}',
+	                    pinned: 			'{!$ObjectType.ServiceAppointment.Fields.Pinned__c.Name}',
+	                    inJeopardy: 		'{!$ObjectType.ServiceAppointment.Fields.InJeopardy__c.Name}',
+	                    territoryHideMap: 	'{!$ObjectType.ServiceTerritory.Fields.Hide_Emergency_Map__c.Name}',
+	                    efficiency: 		'{!$ObjectType.ServiceResource.Fields.Efficiency__c.Name}',
+	                    PictureLink: 		'{!$ObjectType.ServiceResource.Fields.Picture_Link__C.Name}',
+					},
+
+	                defaultPhoto:           '{!$Resource.DefaultResourcePhoto}',
+	                defaultCandidateMarker: '{!$Resource.fsl_livepos_grey}',
+	                distanceUnit:           '{!distanceUnit}',
+	                now:                    parseInt('{!timeNow}'),
+	                policy:                 '{!policy}',
+	                goodGrade:              parseInt('{!goodGrade}') || 30,
+	                medicoreGrade:          parseInt('{!medicoreGrade}') || 60,
+                    allowChatterPosting:	{!allowChatterPosting},
+            		chatterDestination:		'{!chatterDestination}',
+					shouldPin:				{!shouldPin},
+	        },
+			
+			sessionId = '{!$Api.Session_ID}';
+			
+	        bootstrap.UpdatePermissionSetsBootstrap('emergencyApp','emergencyApp');
+	        
+	    </script>   
+    </apex:outputPanel>
+
+</apex:page>

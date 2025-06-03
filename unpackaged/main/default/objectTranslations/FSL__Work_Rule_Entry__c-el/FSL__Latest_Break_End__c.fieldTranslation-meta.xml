@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ο αριθμός των λεπτών από την έναρξη της διαθεσιμότητας πόρου υπηρεσίας έως την τελευταία επιτρεπόμενη ώρα λήξης διαλείμματος. Π.χ., πληκτρολογήστε 300 για να προγραμματίσετε διάλειμμα για γεύμα που θα λήγει έως και πέντε ώρες μετά την έναρξη της ημέρας.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,142 @@
+<apex:page showHeader="false" sidebar="false" standardController="ServiceAppointment"  lightningStylesheets="true" extensions="FSL.ctrl002_ServiceExpertLightboxForm">
+
+	<apex:includeScript value="{!$Resource.FSL__jQuery}" />
+	<apex:includeScript value="{!$Resource.FSL__CommonLightboxScripts}" />
+
+	
+	<script>
+	
+		$(function() {
+
+			if (window.location.search.indexOf('updateGantt') > -1) {
+				window.parent.__updateGantt();
+			}
+
+			renderRTLElsDirection($(this));
+
+			var newServiceId = '{!ServiceAppointment.Id}';
+			var newServiceName = '{!ServiceAppointment.AppointmentNumber}';
+			window.parent.$('#CreateServiceLightboxHeader h1').text('Service ' + newServiceName + ':');
+			
+
+			if (window.parent.sforce.console.isInConsole()) {
+				
+				//window.parent.openConsoleTab()
+				var allLinks = $('a');
+				
+				for (var i=0; i<allLinks.length; i++) {
+					(function(j) {
+						$(allLinks[j]).on('click',{ url: $(allLinks[j]).attr('href') },function(e) {
+							e.preventDefault();
+							window.parent.openConsoleTabFromModal(e.data.url);
+							return;
+						});
+
+						
+					}(i));
+				}
+
+				window.navigateToUrl = function(url) {
+					window.parent.openConsoleTabFromModal(url);
+				}
+					
+				return;
+			}
+
+
+			$('a').attr('target','_blank');
+			
+			$('a').on('mouseover',function() {
+				$(this).attr('target','_blank');
+			});
+
+
+			window.navigateToUrl = function(url) {
+				if (window.parent.sforce.console.isInConsole()) {
+					window.parent.openConsoleTabFromModal(e.data.url);
+				} else {
+					window.open(url);
+				}
+			};
+
+			// prevent popups on lookup fields
+			window.LookupHoverDetail.getHover = function() {
+				return {
+					show: function() {},
+					hide: function() {},
+				}
+			};
+	
+		});
+
+
+		
+	</script>
+
+	<style>
+		body .bPageBlock {
+			background: #fff !important;
+			border: 0 !important;
+		}
+		
+		input[type=submit] {/*
+			margin-left: 130px !important;
+			padding: 6px 10px !important;*/
+		}
+		
+		input[type=submit]:last-child {
+			margin-left: 6px !important;
+		}
+
+		.pbSubheader h3 {
+			display: inline-block;
+		}
+
+/*		.pbBottomButtons .pbButtonb {
+		    text-align: right !important;
+		    padding-right: 16px;
+		}*/
+
+		.shadowDiv {
+			display: none;
+		}
+
+	</style>
+
+
+		<apex:form >
+
+			<apex:pageBlock mode="maindetail">
+				<apex:pageBlockButtons >
+					<apex:commandButton action="{!edit}" value="{!$Label.FSL__Edit}" rendered="{!isEditable}"/>
+					<apex:commandButton action="{!refresh}" value="{!$Label.FSL__Refresh}" />
+				</apex:pageBlockButtons>
+
+			   <apex:pageBlockSection title="{!$Label.FSL__ServiceInfo}" columns="2">
+					<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox}" var="d">
+						<apex:outputField value="{!ServiceAppointment[d]}" />
+						<!-- this should be put above ^ rendered="{!IF(d.Type != 'phone' ,true,false)}" -->
+						<!-- this \/ does not work well (showing only val without label) -->
+						<!-- <support:clickToDial number="{!ServiceAppointment[d]}" entityId="{!$User.Id}" rendered="{!IF(d.Type = 'phone' ,true,false)}"/> -->
+					</apex:repeat>
+				 </apex:pageBlockSection>
+
+				  <apex:pageBlockSection title="{!$Label.FSL__DateAndTime}" columns="2">
+					<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox_Time}" var="t">
+						<apex:outputField value="{!ServiceAppointment[t]}"/>
+					</apex:repeat>
+				 </apex:pageBlockSection>
+				 <apex:pageBlockSection title="{!$Label.FSL__Address}" columns="2">
+					<apex:repeat value="{!$ObjectType.ServiceAppointment.FieldSets.FSL__Service_Lightbox_Address}" var="ad">
+						<apex:outputField value="{!ServiceAppointment[ad]}"/>
+					</apex:repeat>
+				 </apex:pageBlockSection>
+
+			</apex:pageBlock>
+
+			<!-- Strange error in managed package only, http://help.salesforce.com/HTViewSolution?id=000170999 -->
+			<apex:outputText value="{!ServiceAppointment.AppointmentNumber}" rendered="false"/>
+
+		 </apex:form>
+
+</apex:page>

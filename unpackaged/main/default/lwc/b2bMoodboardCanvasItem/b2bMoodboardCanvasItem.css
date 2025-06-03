@@ -1,0 +1,54 @@
+.draggable {
+  cursor: move;
+}
+
+.dragging {
+  opacity: 0.1;
+  z-index: 9999;
+}
+
+.moodboard-item {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* color: #fff; */
+  background-position-x: center;
+  background-position-y: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  font-size: 15px;
+  /* text-align: center; */
+  border: 1px solid #ececec;
+  /* TODO: ADD RESIZE AT A LATER DATE */
+  /* resize: both; */
+  /* overflow: hidden; */
+}
+
+.moodboard-item .containerInner {
+  height: 150px;
+  width: 150px;
+  background-size: contain !important;
+}
+
+.moodboard-item .containerInner .detailTooltip {
+  position: absolute;
+  left: 105%;
+  top: 0;
+}
+
+.moodboard-item .containerInner .detailOverlay {
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.moodboard-item .containerInner .detailOverlay .prodName,
+.moodboard-item .containerInner .detailOverlay .prodSKU,
+.moodboard-item .containerInner .detailOverlay .prodPrice {
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

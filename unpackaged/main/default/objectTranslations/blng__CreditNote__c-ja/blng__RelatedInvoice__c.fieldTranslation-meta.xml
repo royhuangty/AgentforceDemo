@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Source Invoice --></label>
+        <lookupFilter>
+            <errorMessage><!-- Draft Invoices would not be available --></errorMessage>
+            <informationalMessage><!-- Draft Invoices would not be available --></informationalMessage>
+        </lookupFilter>
+        <name>blng__RelatedInvoice__c</name>
+        <relationshipLabel><!-- Credit Notes --></relationshipLabel>
+    </CustomFieldTranslation>

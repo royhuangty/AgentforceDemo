@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If the customer has defined visiting hours, select them here. --></help>
+        <label><!-- Operating Hours --></label>
+        <name>SDO_Operating_Hours__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </CustomFieldTranslation>

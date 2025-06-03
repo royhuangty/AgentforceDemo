@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Field on Lookup Object corresponding to Product Action Type picklist. Field must be a Picklist or Text. --></help>
+        <label><!-- Lookup Type Field --></label>
+        <name>SBQQ__LookupTypeField__c</name>
+        <picklistValues>
+            <masterLabel>SBQQ__Type__c</masterLabel>
+            <translation><!-- SBQQ__Type__c --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

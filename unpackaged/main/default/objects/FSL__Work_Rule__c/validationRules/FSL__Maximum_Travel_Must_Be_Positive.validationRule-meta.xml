@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL__Maximum_Travel_Must_Be_Positive</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.DeveloperName = &#39;Max_Travel_From_Home_To_Service&#39; &amp;&amp; FSL__Maximum_Travel_From_Home__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>FSL__Maximum_Travel_From_Home__c</errorDisplayField>
+    <errorMessage>Maximum Travel from Home must be positive.</errorMessage>
+</ValidationRule>

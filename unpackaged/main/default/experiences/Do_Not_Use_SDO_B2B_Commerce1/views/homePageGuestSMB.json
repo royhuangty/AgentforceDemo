@@ -1,0 +1,191 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4f755d56-de7c-4448-9ac6-0f739df20c1c",
+  "label" : "Home Page Guest SMB",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "efd253a7-1bc1-4a56-95ec-99ef11c3e129",
+          "columns" : [ {
+            "UUID" : "1b8cf13c-607a-4dcb-9c15-7e566bd46f73",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "efd253a7-1bc1-4a56-95ec-99ef11c3e129",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p style=\"text-align: center;\"><span style=\"font-size: 24px;\">Product Categories</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "bdaa62e5-2985-4811-b8a1-df16ad8e8be9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "default",
+            "tileMenuEditor" : "B2B_Storefront",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "e697f8fb-e461-4967-ada3-83d0c8726f11",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1b8cf13c-607a-4dcb-9c15-7e566bd46f73",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "192d478e-4c0b-494d-9c29-013bd911d649",
+          "columns" : [ {
+            "UUID" : "2a60a96c-ff53-4c36-9359-31a7c1994cb7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "192d478e-4c0b-494d-9c29-013bd911d649",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "compareType" : "equals",
+            "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}",
+            "featuredProductStyle" : "Tiled",
+            "featuredProductsBackgroundColor" : "rgba(255, 255, 255, 1)",
+            "featuredProductsBodyAlignment" : "Center",
+            "featuredProductsBodySize" : "Regular",
+            "featuredProductsBorderColor" : "rgba(212, 212, 212, 1)",
+            "featuredProductsComponentBackgroundColor" : "rgba(255, 255, 255, 1)",
+            "featuredProductsDescriptionColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsHeading" : "Featured Products",
+            "featuredProductsHeadingAlignment" : "Center",
+            "featuredProductsHeadingColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsHeadingSize" : "Large",
+            "featuredProductsPriceColor" : "rgba(0, 0, 0, 1)",
+            "featuredProductsSkuColor" : "rgba(0, 0, 0, 1)",
+            "includePrices" : true,
+            "productSource" : "SKU List",
+            "showDescription" : true,
+            "showHeading" : true,
+            "showSKU" : true,
+            "skuList" : "CBU-1,CBU-2,CBU-3,CBU-4"
+          },
+          "componentName" : "c:b2bFeaturedProducts",
+          "id" : "2b3b11c9-15d8-4696-a1f5-6e9c21871d1f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2a60a96c-ff53-4c36-9359-31a7c1994cb7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6db3ddce-1a6a-4d8b-9062-1c15a5c12620",
+          "columns" : [ {
+            "UUID" : "ba72d0c1-da2b-412d-9706-68a317636e07",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6db3ddce-1a6a-4d8b-9062-1c15a5c12620",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"color: rgb(230, 0, 0); font-size: 20px;\">Setup Instructions</strong></p><p><br></p><p><span style=\"color: rgb(230, 0, 0); font-size: 14px;\">In the footer section below is&nbsp;&nbsp;an </span><strong style=\"color: rgb(230, 0, 0); font-size: 14px;\">Embedded Service Component</strong><span style=\"color: rgb(230, 0, 0); font-size: 14px;\">.&nbsp;&nbsp;Click on the component to open the config area. For </span><strong style=\"color: rgb(230, 0, 0); font-size: 14px;\">Chat Deployment</strong><span style=\"color: rgb(230, 0, 0); font-size: 14px;\"> re-select </span><strong style=\"color: rgb(230, 0, 0); font-size: 14px;\">B2B_Commerce_Lightning_Bot</strong><span style=\"color: rgb(230, 0, 0); font-size: 14px;\">.</span></p><p><br></p><p><span style=\"color: rgb(230, 0, 0);\">You will need to&nbsp;&nbsp;also need to do this in a non-Home Page page.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "68ac2ba2-3438-43a4-ad8e-43c677132858",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ba72d0c1-da2b-412d-9706-68a317636e07",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f697015e-4501-4c79-9a6d-395178e8acf6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "690c89db-b7a9-4750-8734-fa88c10ebcff",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9e67962d-2903-46ca-b37c-0d78a6d72bab",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Variable de resumen</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Variables de resumen</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Summary Variable Layout</layout>
+        <sections>
+            <label>Información compuesta</label>
+            <section>Composite Information</section>
+        </sections>
+        <sections>
+            <label>Información de filtro</label>
+            <section>Filter Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de variable</nameFieldLabel>
+</CustomObjectTranslation>

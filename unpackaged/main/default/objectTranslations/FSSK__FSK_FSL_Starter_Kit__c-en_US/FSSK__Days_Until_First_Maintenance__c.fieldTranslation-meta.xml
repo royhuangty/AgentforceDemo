@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Number of days until the first asset maintenance work order date --></help>
+        <label><!-- Days Until First Maintenance --></label>
+        <name>FSSK__Days_Until_First_Maintenance__c</name>
+    </CustomFieldTranslation>

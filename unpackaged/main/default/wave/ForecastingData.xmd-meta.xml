@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataset>ForecastingData</dataset>
+    <dimensions>
+        <field>Category</field>
+        <isDerived>false</isDerived>
+        <label>Forecast Measures</label>
+        <members>
+            <color>#1674d9</color>
+            <label>Closed</label>
+            <member>Actual</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <color>#23B0E6</color>
+            <label>Einstein Prediction</label>
+            <member>Predicted</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <color>#e14da3</color>
+            <label>Commit</label>
+            <member>CommitForecast</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <color>#F18233</color>
+            <label>Best Case</label>
+            <member>BestCaseForecast</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <measures>
+        <field>FJD</field>
+        <formatCustomFormat>[&quot;FJD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (FJD)</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>MXN</field>
+        <formatCustomFormat>[&quot;MXN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MXN)</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>STD</field>
+        <formatCustomFormat>[&quot;STD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (STD)</label>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>LVL</field>
+        <formatCustomFormat>[&quot;LVL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LVL)</label>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>SCR</field>
+        <formatCustomFormat>[&quot;SCR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SCR)</label>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>CDF</field>
+        <formatCustomFormat>[&quot;CDF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CDF)</label>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>BBD</field>
+        <formatCustomFormat>[&quot;BBD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BBD)</label>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>HNL</field>
+        <formatCustomFormat>[&quot;HNL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (HNL)</label>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>UGX</field>
+        <formatCustomFormat>[&quot;UGX #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (UGX)</label>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>MXV</field>
+        <formatCustomFormat>[&quot;MXV #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MXV)</label>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <measures>
+        <field>ZAR</field>
+        <formatCustomFormat>[&quot;ZAR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZAR)</label>
+        <sortIndex>10</sortIndex>
+    </measures>
+    <measures>
+        <field>STN</field>
+        <formatCustomFormat>[&quot;STN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (STN)</label>
+        <sortIndex>11</sortIndex>
+    </measures>
+    <measures>
+        <field>CUC</field>
+        <formatCustomFormat>[&quot;CUC #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CUC)</label>
+        <sortIndex>12</sortIndex>
+    </measures>
+    <measures>
+        <field>BSD</field>
+        <formatCustomFormat>[&quot;BSD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BSD)</label>
+        <sortIndex>13</sortIndex>
+    </measures>
+    <measures>
+        <field>SDD</field>
+        <formatCustomFormat>[&quot;SDD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SDD)</label>
+        <sortIndex>14</sortIndex>
+    </measures>
+    <measures>
+        <field>SDG</field>
+        <formatCustomFormat>[&quot;SDG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SDG)</label>
+        <sortIndex>15</sortIndex>
+    </measures>
+    <measures>
+        <field>IQD</field>
+        <formatCustomFormat>[&quot;IQD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (IQD)</label>
+        <sortIndex>16</sortIndex>
+    </measures>
+    <measures>
+        <field>GMD</field>
+        <formatCustomFormat>[&quot;GMD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GMD)</label>
+        <sortIndex>17</sortIndex>
+    </measures>
+    <measures>
+        <field>TWD</field>
+        <formatCustomFormat>[&quot;TWD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TWD)</label>
+        <sortIndex>18</sortIndex>
+    </measures>
+    <measures>
+        <field>RSD</field>
+        <formatCustomFormat>[&quot;RSD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (RSD)</label>
+        <sortIndex>19</sortIndex>
+    </measures>
+    <measures>
+        <field>MYR</field>
+        <formatCustomFormat>[&quot;MYR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MYR)</label>
+        <sortIndex>20</sortIndex>
+    </measures>
+    <measures>
+        <field>FKP</field>
+        <formatCustomFormat>[&quot;FKP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (FKP)</label>
+        <sortIndex>21</sortIndex>
+    </measures>
+    <measures>
+        <field>XOF</field>
+        <formatCustomFormat>[&quot;XOF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (XOF)</label>
+        <sortIndex>22</sortIndex>
+    </measures>
+    <measures>
+        <field>UYU</field>
+        <formatCustomFormat>[&quot;UYU #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (UYU)</label>
+        <sortIndex>23</sortIndex>
+    </measures>
+    <measures>
+        <field>CVE</field>
+        <formatCustomFormat>[&quot;CVE #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CVE)</label>
+        <sortIndex>24</sortIndex>
+    </measures>
+    <measures>
+        <field>OMR</field>
+        <formatCustomFormat>[&quot;OMR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (OMR)</label>
+        <sortIndex>25</sortIndex>
+    </measures>
+    <measures>
+        <field>KES</field>
+        <formatCustomFormat>[&quot;KES #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KES)</label>
+        <sortIndex>26</sortIndex>
+    </measures>
+    <measures>
+        <field>SEK</field>
+        <formatCustomFormat>[&quot;SEK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SEK)</label>
+        <sortIndex>27</sortIndex>
+    </measures>
+    <measures>
+        <field>BTN</field>
+        <formatCustomFormat>[&quot;BTN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BTN)</label>
+        <sortIndex>28</sortIndex>
+    </measures>
+    <measures>
+        <field>GNF</field>
+        <formatCustomFormat>[&quot;GNF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GNF)</label>
+        <sortIndex>29</sortIndex>
+    </measures>
+    <measures>
+        <field>MZN</field>
+        <formatCustomFormat>[&quot;MZN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MZN)</label>
+        <sortIndex>30</sortIndex>
+    </measures>
+    <measures>
+        <field>MZM</field>
+        <formatCustomFormat>[&quot;MZM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MZM)</label>
+        <sortIndex>31</sortIndex>
+    </measures>
+    <measures>
+        <field>SVC</field>
+        <formatCustomFormat>[&quot;SVC #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SVC)</label>
+        <sortIndex>32</sortIndex>
+    </measures>
+    <measures>
+        <field>ARS</field>
+        <formatCustomFormat>[&quot;ARS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ARS)</label>
+        <sortIndex>33</sortIndex>
+    </measures>
+    <measures>
+        <field>QAR</field>
+        <formatCustomFormat>[&quot;QAR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (QAR)</label>
+        <sortIndex>34</sortIndex>
+    </measures>
+    <measures>
+        <field>NLG</field>
+        <formatCustomFormat>[&quot;NLG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NLG)</label>
+        <sortIndex>35</sortIndex>
+    </measures>
+    <measures>
+        <field>THB</field>
+        <formatCustomFormat>[&quot;THB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (THB)</label>
+        <sortIndex>36</sortIndex>
+    </measures>
+    <measures>
+        <field>UZS</field>
+        <formatCustomFormat>[&quot;UZS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (UZS)</label>
+        <sortIndex>37</sortIndex>
+    </measures>
+    <measures>
+        <field>XPF</field>
+        <formatCustomFormat>[&quot;XPF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (XPF)</label>
+        <sortIndex>38</sortIndex>
+    </measures>
+    <measures>
+        <field>BDT</field>
+        <formatCustomFormat>[&quot;BDT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BDT)</label>
+        <sortIndex>39</sortIndex>
+    </measures>
+    <measures>
+        <field>LYD</field>
+        <formatCustomFormat>[&quot;LYD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LYD)</label>
+        <sortIndex>40</sortIndex>
+    </measures>
+    <measures>
+        <field>KWD</field>
+        <formatCustomFormat>[&quot;KWD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KWD)</label>
+        <sortIndex>41</sortIndex>
+    </measures>
+    <measures>
+        <field>RUB</field>
+        <formatCustomFormat>[&quot;RUB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (RUB)</label>
+        <sortIndex>42</sortIndex>
+    </measures>
+    <measures>
+        <field>ISK</field>
+        <formatCustomFormat>[&quot;ISK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ISK)</label>
+        <sortIndex>43</sortIndex>
+    </measures>
+    <measures>
+        <field>BEF</field>
+        <formatCustomFormat>[&quot;BEF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BEF)</label>
+        <sortIndex>44</sortIndex>
+    </measures>
+    <measures>
+        <field>MKD</field>
+        <formatCustomFormat>[&quot;MKD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MKD)</label>
+        <sortIndex>45</sortIndex>
+    </measures>
+    <measures>
+        <field>RUR</field>
+        <formatCustomFormat>[&quot;RUR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (RUR)</label>
+        <sortIndex>46</sortIndex>
+    </measures>
+    <measures>
+        <field>DZD</field>
+        <formatCustomFormat>[&quot;DZD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (DZD)</label>
+        <sortIndex>47</sortIndex>
+    </measures>
+    <measures>
+        <field>PAB</field>
+        <formatCustomFormat>[&quot;PAB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PAB)</label>
+        <sortIndex>48</sortIndex>
+    </measures>
+    <measures>
+        <field>SGD</field>
+        <formatCustomFormat>[&quot;SGD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SGD)</label>
+        <sortIndex>49</sortIndex>
+    </measures>
+    <measures>
+        <field>KGS</field>
+        <formatCustomFormat>[&quot;KGS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KGS)</label>
+        <sortIndex>50</sortIndex>
+    </measures>
+    <measures>
+        <field>XAF</field>
+        <formatCustomFormat>[&quot;XAF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (XAF)</label>
+        <sortIndex>51</sortIndex>
+    </measures>
+    <measures>
+        <field>ATS</field>
+        <formatCustomFormat>[&quot;ATS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ATS)</label>
+        <sortIndex>52</sortIndex>
+    </measures>
+    <measures>
+        <field>CHF</field>
+        <formatCustomFormat>[&quot;CHF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CHF)</label>
+        <sortIndex>53</sortIndex>
+    </measures>
+    <measures>
+        <field>HRK</field>
+        <formatCustomFormat>[&quot;HRK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (HRK)</label>
+        <sortIndex>54</sortIndex>
+    </measures>
+    <measures>
+        <field>ITL</field>
+        <formatCustomFormat>[&quot;ITL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ITL)</label>
+        <sortIndex>55</sortIndex>
+    </measures>
+    <measures>
+        <field>DJF</field>
+        <formatCustomFormat>[&quot;DJF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (DJF)</label>
+        <sortIndex>56</sortIndex>
+    </measures>
+    <measures>
+        <field>TZS</field>
+        <formatCustomFormat>[&quot;TZS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TZS)</label>
+        <sortIndex>57</sortIndex>
+    </measures>
+    <measures>
+        <field>ADP</field>
+        <formatCustomFormat>[&quot;ADP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ADP)</label>
+        <sortIndex>58</sortIndex>
+    </measures>
+    <measures>
+        <field>VND</field>
+        <formatCustomFormat>[&quot;VND #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (VND)</label>
+        <sortIndex>59</sortIndex>
+    </measures>
+    <measures>
+        <field>AUD</field>
+        <formatCustomFormat>[&quot;AUD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AUD)</label>
+        <sortIndex>60</sortIndex>
+    </measures>
+    <measures>
+        <field>KHR</field>
+        <formatCustomFormat>[&quot;KHR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KHR)</label>
+        <sortIndex>61</sortIndex>
+    </measures>
+    <measures>
+        <field>IDR</field>
+        <formatCustomFormat>[&quot;IDR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (IDR)</label>
+        <sortIndex>62</sortIndex>
+    </measures>
+    <measures>
+        <field>KYD</field>
+        <formatCustomFormat>[&quot;KYD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KYD)</label>
+        <sortIndex>63</sortIndex>
+    </measures>
+    <measures>
+        <field>BWP</field>
+        <formatCustomFormat>[&quot;BWP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BWP)</label>
+        <sortIndex>64</sortIndex>
+    </measures>
+    <measures>
+        <field>SHP</field>
+        <formatCustomFormat>[&quot;SHP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SHP)</label>
+        <sortIndex>65</sortIndex>
+    </measures>
+    <measures>
+        <field>CYP</field>
+        <formatCustomFormat>[&quot;CYP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CYP)</label>
+        <sortIndex>66</sortIndex>
+    </measures>
+    <measures>
+        <field>TJS</field>
+        <formatCustomFormat>[&quot;TJS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TJS)</label>
+        <sortIndex>67</sortIndex>
+    </measures>
+    <measures>
+        <field>AED</field>
+        <formatCustomFormat>[&quot;AED #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AED)</label>
+        <sortIndex>68</sortIndex>
+    </measures>
+    <measures>
+        <field>RWF</field>
+        <formatCustomFormat>[&quot;RWF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (RWF)</label>
+        <sortIndex>69</sortIndex>
+    </measures>
+    <measures>
+        <field>DKK</field>
+        <formatCustomFormat>[&quot;DKK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (DKK)</label>
+        <sortIndex>70</sortIndex>
+    </measures>
+    <measures>
+        <field>BGL</field>
+        <formatCustomFormat>[&quot;BGL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BGL)</label>
+        <sortIndex>71</sortIndex>
+    </measures>
+    <measures>
+        <field>ZWD</field>
+        <formatCustomFormat>[&quot;ZWD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZWD)</label>
+        <sortIndex>72</sortIndex>
+    </measures>
+    <measures>
+        <field>BGN</field>
+        <formatCustomFormat>[&quot;BGN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BGN)</label>
+        <sortIndex>73</sortIndex>
+    </measures>
+    <measures>
+        <field>MMK</field>
+        <formatCustomFormat>[&quot;MMK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MMK)</label>
+        <sortIndex>74</sortIndex>
+    </measures>
+    <measures>
+        <field>NOK</field>
+        <formatCustomFormat>[&quot;NOK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NOK)</label>
+        <sortIndex>75</sortIndex>
+    </measures>
+    <measures>
+        <field>ZWG</field>
+        <formatCustomFormat>[&quot;ZWG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZWG)</label>
+        <sortIndex>76</sortIndex>
+    </measures>
+    <measures>
+        <field>ZWL</field>
+        <formatCustomFormat>[&quot;ZWL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZWL)</label>
+        <sortIndex>77</sortIndex>
+    </measures>
+    <measures>
+        <field>YUM</field>
+        <formatCustomFormat>[&quot;YUM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (YUM)</label>
+        <sortIndex>78</sortIndex>
+    </measures>
+    <measures>
+        <field>LKR</field>
+        <formatCustomFormat>[&quot;LKR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LKR)</label>
+        <sortIndex>79</sortIndex>
+    </measures>
+    <measures>
+        <field>CZK</field>
+        <formatCustomFormat>[&quot;CZK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CZK)</label>
+        <sortIndex>80</sortIndex>
+    </measures>
+    <measures>
+        <field>IEP</field>
+        <formatCustomFormat>[&quot;IEP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (IEP)</label>
+        <sortIndex>81</sortIndex>
+    </measures>
+    <measures>
+        <field>GRD</field>
+        <formatCustomFormat>[&quot;GRD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GRD)</label>
+        <sortIndex>82</sortIndex>
+    </measures>
+    <measures>
+        <field>XCD</field>
+        <formatCustomFormat>[&quot;XCD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (XCD)</label>
+        <sortIndex>83</sortIndex>
+    </measures>
+    <measures>
+        <field>HTG</field>
+        <formatCustomFormat>[&quot;HTG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (HTG)</label>
+        <sortIndex>84</sortIndex>
+    </measures>
+    <measures>
+        <field>AFA</field>
+        <formatCustomFormat>[&quot;AFA #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AFA)</label>
+        <sortIndex>85</sortIndex>
+    </measures>
+    <measures>
+        <field>XCG</field>
+        <formatCustomFormat>[&quot;XCG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (XCG)</label>
+        <sortIndex>86</sortIndex>
+    </measures>
+    <measures>
+        <field>BHD</field>
+        <formatCustomFormat>[&quot;BHD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BHD)</label>
+        <sortIndex>87</sortIndex>
+    </measures>
+    <measures>
+        <field>SIT</field>
+        <formatCustomFormat>[&quot;SIT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SIT)</label>
+        <sortIndex>88</sortIndex>
+    </measures>
+    <measures>
+        <field>PTE</field>
+        <formatCustomFormat>[&quot;PTE #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PTE)</label>
+        <sortIndex>89</sortIndex>
+    </measures>
+    <measures>
+        <field>KZT</field>
+        <formatCustomFormat>[&quot;KZT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KZT)</label>
+        <sortIndex>90</sortIndex>
+    </measures>
+    <measures>
+        <field>SZL</field>
+        <formatCustomFormat>[&quot;SZL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SZL)</label>
+        <sortIndex>91</sortIndex>
+    </measures>
+    <measures>
+        <field>YER</field>
+        <formatCustomFormat>[&quot;YER #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (YER)</label>
+        <sortIndex>92</sortIndex>
+    </measures>
+    <measures>
+        <field>AFN</field>
+        <formatCustomFormat>[&quot;AFN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AFN)</label>
+        <sortIndex>93</sortIndex>
+    </measures>
+    <measures>
+        <field>BYB</field>
+        <formatCustomFormat>[&quot;BYB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BYB)</label>
+        <sortIndex>94</sortIndex>
+    </measures>
+    <measures>
+        <field>AWG</field>
+        <formatCustomFormat>[&quot;AWG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AWG)</label>
+        <sortIndex>95</sortIndex>
+    </measures>
+    <measures>
+        <field>NPR</field>
+        <formatCustomFormat>[&quot;NPR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NPR)</label>
+        <sortIndex>96</sortIndex>
+    </measures>
+    <measures>
+        <field>MNT</field>
+        <formatCustomFormat>[&quot;MNT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MNT)</label>
+        <sortIndex>97</sortIndex>
+    </measures>
+    <measures>
+        <field>GBP</field>
+        <formatCustomFormat>[&quot;GBP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GBP)</label>
+        <sortIndex>98</sortIndex>
+    </measures>
+    <measures>
+        <field>BYN</field>
+        <formatCustomFormat>[&quot;BYN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BYN)</label>
+        <sortIndex>99</sortIndex>
+    </measures>
+    <measures>
+        <field>GBT</field>
+        <formatCustomFormat>[&quot;GBT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GBT)</label>
+        <sortIndex>100</sortIndex>
+    </measures>
+    <measures>
+        <field>HUF</field>
+        <formatCustomFormat>[&quot;HUF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (HUF)</label>
+        <sortIndex>101</sortIndex>
+    </measures>
+    <measures>
+        <field>BYR</field>
+        <formatCustomFormat>[&quot;BYR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BYR)</label>
+        <sortIndex>102</sortIndex>
+    </measures>
+    <measures>
+        <field>BIF</field>
+        <formatCustomFormat>[&quot;BIF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BIF)</label>
+        <sortIndex>103</sortIndex>
+    </measures>
+    <measures>
+        <field>BZD</field>
+        <formatCustomFormat>[&quot;BZD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BZD)</label>
+        <sortIndex>104</sortIndex>
+    </measures>
+    <measures>
+        <field>MOP</field>
+        <formatCustomFormat>[&quot;MOP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MOP)</label>
+        <sortIndex>105</sortIndex>
+    </measures>
+    <measures>
+        <field>NAD</field>
+        <formatCustomFormat>[&quot;NAD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NAD)</label>
+        <sortIndex>106</sortIndex>
+    </measures>
+    <measures>
+        <field>SKK</field>
+        <formatCustomFormat>[&quot;SKK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SKK)</label>
+        <sortIndex>107</sortIndex>
+    </measures>
+    <measures>
+        <field>TMM</field>
+        <formatCustomFormat>[&quot;TMM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TMM)</label>
+        <sortIndex>108</sortIndex>
+    </measures>
+    <measures>
+        <field>PEN</field>
+        <formatCustomFormat>[&quot;PEN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PEN)</label>
+        <sortIndex>109</sortIndex>
+    </measures>
+    <measures>
+        <field>WST</field>
+        <formatCustomFormat>[&quot;WST #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (WST)</label>
+        <sortIndex>110</sortIndex>
+    </measures>
+    <measures>
+        <field>ZIG</field>
+        <formatCustomFormat>[&quot;ZIG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZIG)</label>
+        <sortIndex>111</sortIndex>
+    </measures>
+    <measures>
+        <field>TMT</field>
+        <formatCustomFormat>[&quot;TMT #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TMT)</label>
+        <sortIndex>112</sortIndex>
+    </measures>
+    <measures>
+        <field>FRF</field>
+        <formatCustomFormat>[&quot;FRF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (FRF)</label>
+        <sortIndex>113</sortIndex>
+    </measures>
+    <measures>
+        <field>CLF</field>
+        <formatCustomFormat>[&quot;CLF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CLF)</label>
+        <sortIndex>114</sortIndex>
+    </measures>
+    <measures>
+        <field>GTQ</field>
+        <formatCustomFormat>[&quot;GTQ #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GTQ)</label>
+        <sortIndex>115</sortIndex>
+    </measures>
+    <measures>
+        <field>CLP</field>
+        <formatCustomFormat>[&quot;CLP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CLP)</label>
+        <sortIndex>116</sortIndex>
+    </measures>
+    <measures>
+        <field>TND</field>
+        <formatCustomFormat>[&quot;TND #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TND)</label>
+        <sortIndex>117</sortIndex>
+    </measures>
+    <measures>
+        <field>SLE</field>
+        <formatCustomFormat>[&quot;SLE #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SLE)</label>
+        <sortIndex>118</sortIndex>
+    </measures>
+    <measures>
+        <field>SLL</field>
+        <formatCustomFormat>[&quot;SLL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SLL)</label>
+        <sortIndex>119</sortIndex>
+    </measures>
+    <measures>
+        <field>DOP</field>
+        <formatCustomFormat>[&quot;DOP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (DOP)</label>
+        <sortIndex>120</sortIndex>
+    </measures>
+    <measures>
+        <field>KMF</field>
+        <formatCustomFormat>[&quot;KMF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KMF)</label>
+        <sortIndex>121</sortIndex>
+    </measures>
+    <measures>
+        <field>GEL</field>
+        <formatCustomFormat>[&quot;GEL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GEL)</label>
+        <sortIndex>122</sortIndex>
+    </measures>
+    <measures>
+        <field>MAD</field>
+        <formatCustomFormat>[&quot;MAD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MAD)</label>
+        <sortIndex>123</sortIndex>
+    </measures>
+    <measures>
+        <field>AZM</field>
+        <formatCustomFormat>[&quot;AZM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AZM)</label>
+        <sortIndex>124</sortIndex>
+    </measures>
+    <measures>
+        <field>TOP</field>
+        <formatCustomFormat>[&quot;TOP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TOP)</label>
+        <sortIndex>125</sortIndex>
+    </measures>
+    <measures>
+        <field>AZN</field>
+        <formatCustomFormat>[&quot;AZN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AZN)</label>
+        <sortIndex>126</sortIndex>
+    </measures>
+    <measures>
+        <field>PGK</field>
+        <formatCustomFormat>[&quot;PGK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PGK)</label>
+        <sortIndex>127</sortIndex>
+    </measures>
+    <measures>
+        <field>CNH</field>
+        <formatCustomFormat>[&quot;CNH #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CNH)</label>
+        <sortIndex>128</sortIndex>
+    </measures>
+    <measures>
+        <field>UAH</field>
+        <formatCustomFormat>[&quot;UAH #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (UAH)</label>
+        <sortIndex>129</sortIndex>
+    </measures>
+    <measures>
+        <field>ERN</field>
+        <formatCustomFormat>[&quot;ERN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ERN)</label>
+        <sortIndex>130</sortIndex>
+    </measures>
+    <measures>
+        <field>TPE</field>
+        <formatCustomFormat>[&quot;TPE #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TPE)</label>
+        <sortIndex>131</sortIndex>
+    </measures>
+    <measures>
+        <field>MRO</field>
+        <formatCustomFormat>[&quot;MRO #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MRO)</label>
+        <sortIndex>132</sortIndex>
+    </measures>
+    <measures>
+        <field>CNY</field>
+        <formatCustomFormat>[&quot;CNY #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CNY)</label>
+        <sortIndex>133</sortIndex>
+    </measures>
+    <measures>
+        <field>MRU</field>
+        <formatCustomFormat>[&quot;MRU #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MRU)</label>
+        <sortIndex>134</sortIndex>
+    </measures>
+    <measures>
+        <field>BMD</field>
+        <formatCustomFormat>[&quot;BMD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BMD)</label>
+        <sortIndex>135</sortIndex>
+    </measures>
+    <measures>
+        <field>PHP</field>
+        <formatCustomFormat>[&quot;PHP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PHP)</label>
+        <sortIndex>136</sortIndex>
+    </measures>
+    <measures>
+        <field>PYG</field>
+        <formatCustomFormat>[&quot;PYG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PYG)</label>
+        <sortIndex>137</sortIndex>
+    </measures>
+    <measures>
+        <field>JMD</field>
+        <formatCustomFormat>[&quot;JMD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (JMD)</label>
+        <sortIndex>138</sortIndex>
+    </measures>
+    <measures>
+        <field>GWP</field>
+        <formatCustomFormat>[&quot;GWP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GWP)</label>
+        <sortIndex>139</sortIndex>
+    </measures>
+    <measures>
+        <field>ESP</field>
+        <formatCustomFormat>[&quot;ESP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ESP)</label>
+        <sortIndex>140</sortIndex>
+    </measures>
+    <measures>
+        <field>COP</field>
+        <formatCustomFormat>[&quot;COP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (COP)</label>
+        <sortIndex>141</sortIndex>
+    </measures>
+    <measures>
+        <field>USD</field>
+        <formatCustomFormat>[&quot;USD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (USD)</label>
+        <sortIndex>142</sortIndex>
+    </measures>
+    <measures>
+        <field>ETB</field>
+        <formatCustomFormat>[&quot;ETB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ETB)</label>
+        <sortIndex>143</sortIndex>
+    </measures>
+    <measures>
+        <field>VEB</field>
+        <formatCustomFormat>[&quot;VEB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (VEB)</label>
+        <sortIndex>144</sortIndex>
+    </measures>
+    <measures>
+        <field>SOS</field>
+        <formatCustomFormat>[&quot;SOS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SOS)</label>
+        <sortIndex>145</sortIndex>
+    </measures>
+    <measures>
+        <field>VEF</field>
+        <formatCustomFormat>[&quot;VEF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (VEF)</label>
+        <sortIndex>146</sortIndex>
+    </measures>
+    <measures>
+        <field>VUV</field>
+        <formatCustomFormat>[&quot;VUV #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (VUV)</label>
+        <sortIndex>147</sortIndex>
+    </measures>
+    <measures>
+        <field>LAK</field>
+        <formatCustomFormat>[&quot;LAK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LAK)</label>
+        <sortIndex>148</sortIndex>
+    </measures>
+    <measures>
+        <field>BND</field>
+        <formatCustomFormat>[&quot;BND #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BND)</label>
+        <sortIndex>149</sortIndex>
+    </measures>
+    <measures>
+        <field>ZMK</field>
+        <formatCustomFormat>[&quot;ZMK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZMK)</label>
+        <sortIndex>150</sortIndex>
+    </measures>
+    <measures>
+        <field>LRD</field>
+        <formatCustomFormat>[&quot;LRD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LRD)</label>
+        <sortIndex>151</sortIndex>
+    </measures>
+    <measures>
+        <field>ALL</field>
+        <formatCustomFormat>[&quot;ALL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ALL)</label>
+        <sortIndex>152</sortIndex>
+    </measures>
+    <measures>
+        <field>GHC</field>
+        <formatCustomFormat>[&quot;GHC #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GHC)</label>
+        <sortIndex>153</sortIndex>
+    </measures>
+    <measures>
+        <field>MTL</field>
+        <formatCustomFormat>[&quot;MTL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MTL)</label>
+        <sortIndex>154</sortIndex>
+    </measures>
+    <measures>
+        <field>VES</field>
+        <formatCustomFormat>[&quot;VES #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (VES)</label>
+        <sortIndex>155</sortIndex>
+    </measures>
+    <measures>
+        <field>ZMW</field>
+        <formatCustomFormat>[&quot;ZMW #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ZMW)</label>
+        <sortIndex>156</sortIndex>
+    </measures>
+    <measures>
+        <field>TRL</field>
+        <formatCustomFormat>[&quot;TRL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TRL)</label>
+        <sortIndex>157</sortIndex>
+    </measures>
+    <measures>
+        <field>ILS</field>
+        <formatCustomFormat>[&quot;ILS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ILS)</label>
+        <sortIndex>158</sortIndex>
+    </measures>
+    <measures>
+        <field>GHS</field>
+        <formatCustomFormat>[&quot;GHS #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GHS)</label>
+        <sortIndex>159</sortIndex>
+    </measures>
+    <measures>
+        <field>GYD</field>
+        <formatCustomFormat>[&quot;GYD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GYD)</label>
+        <sortIndex>160</sortIndex>
+    </measures>
+    <measures>
+        <field>BOB</field>
+        <formatCustomFormat>[&quot;BOB #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BOB)</label>
+        <sortIndex>161</sortIndex>
+    </measures>
+    <measures>
+        <field>MDL</field>
+        <formatCustomFormat>[&quot;MDL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MDL)</label>
+        <sortIndex>162</sortIndex>
+    </measures>
+    <measures>
+        <field>AMD</field>
+        <formatCustomFormat>[&quot;AMD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AMD)</label>
+        <sortIndex>163</sortIndex>
+    </measures>
+    <measures>
+        <field>TRY</field>
+        <formatCustomFormat>[&quot;TRY #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TRY)</label>
+        <sortIndex>164</sortIndex>
+    </measures>
+    <measures>
+        <field>LBP</field>
+        <formatCustomFormat>[&quot;LBP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LBP)</label>
+        <sortIndex>165</sortIndex>
+    </measures>
+    <measures>
+        <field>JOD</field>
+        <formatCustomFormat>[&quot;JOD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (JOD)</label>
+        <sortIndex>166</sortIndex>
+    </measures>
+    <measures>
+        <field>HKD</field>
+        <formatCustomFormat>[&quot;HKD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (HKD)</label>
+        <sortIndex>167</sortIndex>
+    </measures>
+    <measures>
+        <field>EUR</field>
+        <formatCustomFormat>[&quot;EUR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (EUR)</label>
+        <sortIndex>168</sortIndex>
+    </measures>
+    <measures>
+        <field>LSL</field>
+        <formatCustomFormat>[&quot;LSL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LSL)</label>
+        <sortIndex>169</sortIndex>
+    </measures>
+    <measures>
+        <field>CAD</field>
+        <formatCustomFormat>[&quot;CAD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CAD)</label>
+        <sortIndex>170</sortIndex>
+    </measures>
+    <measures>
+        <field>BOV</field>
+        <formatCustomFormat>[&quot;BOV #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BOV)</label>
+        <sortIndex>171</sortIndex>
+    </measures>
+    <measures>
+        <field>EEK</field>
+        <formatCustomFormat>[&quot;EEK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (EEK)</label>
+        <sortIndex>172</sortIndex>
+    </measures>
+    <measures>
+        <field>MUR</field>
+        <formatCustomFormat>[&quot;MUR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MUR)</label>
+        <sortIndex>173</sortIndex>
+    </measures>
+    <measures>
+        <field>ROL</field>
+        <formatCustomFormat>[&quot;ROL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ROL)</label>
+        <sortIndex>174</sortIndex>
+    </measures>
+    <measures>
+        <field>GIP</field>
+        <formatCustomFormat>[&quot;GIP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (GIP)</label>
+        <sortIndex>175</sortIndex>
+    </measures>
+    <measures>
+        <field>RON</field>
+        <formatCustomFormat>[&quot;RON #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (RON)</label>
+        <sortIndex>176</sortIndex>
+    </measures>
+    <measures>
+        <field>NGN</field>
+        <formatCustomFormat>[&quot;NGN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NGN)</label>
+        <sortIndex>177</sortIndex>
+    </measures>
+    <measures>
+        <field>CRC</field>
+        <formatCustomFormat>[&quot;CRC #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CRC)</label>
+        <sortIndex>178</sortIndex>
+    </measures>
+    <measures>
+        <field>PKR</field>
+        <formatCustomFormat>[&quot;PKR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PKR)</label>
+        <sortIndex>179</sortIndex>
+    </measures>
+    <measures>
+        <field>ANG</field>
+        <formatCustomFormat>[&quot;ANG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (ANG)</label>
+        <sortIndex>180</sortIndex>
+    </measures>
+    <measures>
+        <field>SRD</field>
+        <formatCustomFormat>[&quot;SRD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SRD)</label>
+        <sortIndex>181</sortIndex>
+    </measures>
+    <measures>
+        <field>LTL</field>
+        <formatCustomFormat>[&quot;LTL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LTL)</label>
+        <sortIndex>182</sortIndex>
+    </measures>
+    <measures>
+        <field>SAR</field>
+        <formatCustomFormat>[&quot;SAR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SAR)</label>
+        <sortIndex>183</sortIndex>
+    </measures>
+    <measures>
+        <field>TTD</field>
+        <formatCustomFormat>[&quot;TTD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (TTD)</label>
+        <sortIndex>184</sortIndex>
+    </measures>
+    <measures>
+        <field>MVR</field>
+        <formatCustomFormat>[&quot;MVR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MVR)</label>
+        <sortIndex>185</sortIndex>
+    </measures>
+    <measures>
+        <field>SRG</field>
+        <formatCustomFormat>[&quot;SRG #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SRG)</label>
+        <sortIndex>186</sortIndex>
+    </measures>
+    <measures>
+        <field>INR</field>
+        <formatCustomFormat>[&quot;INR #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (INR)</label>
+        <sortIndex>187</sortIndex>
+    </measures>
+    <measures>
+        <field>KRW</field>
+        <formatCustomFormat>[&quot;KRW #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (KRW)</label>
+        <sortIndex>188</sortIndex>
+    </measures>
+    <measures>
+        <field>JPY</field>
+        <formatCustomFormat>[&quot;JPY #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (JPY)</label>
+        <sortIndex>189</sortIndex>
+    </measures>
+    <measures>
+        <field>AOA</field>
+        <formatCustomFormat>[&quot;AOA #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (AOA)</label>
+        <sortIndex>190</sortIndex>
+    </measures>
+    <measures>
+        <field>PLN</field>
+        <formatCustomFormat>[&quot;PLN #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (PLN)</label>
+        <sortIndex>191</sortIndex>
+    </measures>
+    <measures>
+        <field>SBD</field>
+        <formatCustomFormat>[&quot;SBD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SBD)</label>
+        <sortIndex>192</sortIndex>
+    </measures>
+    <measures>
+        <field>CSD</field>
+        <formatCustomFormat>[&quot;CSD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (CSD)</label>
+        <sortIndex>193</sortIndex>
+    </measures>
+    <measures>
+        <field>LUF</field>
+        <formatCustomFormat>[&quot;LUF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (LUF)</label>
+        <sortIndex>194</sortIndex>
+    </measures>
+    <measures>
+        <field>MWK</field>
+        <formatCustomFormat>[&quot;MWK #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MWK)</label>
+        <sortIndex>195</sortIndex>
+    </measures>
+    <measures>
+        <field>MGA</field>
+        <formatCustomFormat>[&quot;MGA #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MGA)</label>
+        <sortIndex>196</sortIndex>
+    </measures>
+    <measures>
+        <field>FIM</field>
+        <formatCustomFormat>[&quot;FIM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (FIM)</label>
+        <sortIndex>197</sortIndex>
+    </measures>
+    <measures>
+        <field>DEM</field>
+        <formatCustomFormat>[&quot;DEM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (DEM)</label>
+        <sortIndex>198</sortIndex>
+    </measures>
+    <measures>
+        <field>MGF</field>
+        <formatCustomFormat>[&quot;MGF #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (MGF)</label>
+        <sortIndex>199</sortIndex>
+    </measures>
+    <measures>
+        <field>BAM</field>
+        <formatCustomFormat>[&quot;BAM #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BAM)</label>
+        <sortIndex>200</sortIndex>
+    </measures>
+    <measures>
+        <field>EGP</field>
+        <formatCustomFormat>[&quot;EGP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (EGP)</label>
+        <sortIndex>201</sortIndex>
+    </measures>
+    <measures>
+        <field>SSP</field>
+        <formatCustomFormat>[&quot;SSP #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (SSP)</label>
+        <sortIndex>202</sortIndex>
+    </measures>
+    <measures>
+        <field>NIO</field>
+        <formatCustomFormat>[&quot;NIO #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NIO)</label>
+        <sortIndex>203</sortIndex>
+    </measures>
+    <measures>
+        <field>NZD</field>
+        <formatCustomFormat>[&quot;NZD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (NZD)</label>
+        <sortIndex>204</sortIndex>
+    </measures>
+    <measures>
+        <field>BRL</field>
+        <formatCustomFormat>[&quot;BRL #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (BRL)</label>
+        <sortIndex>205</sortIndex>
+    </measures>
+    <measures>
+        <field>DefaultCurrency</field>
+        <formatCustomFormat>[&quot;USD #,##0.00&quot;,1]</formatCustomFormat>
+        <formatDecimalDigits>2</formatDecimalDigits>
+        <isDerived>true</isDerived>
+        <label>Amount (USD)</label>
+        <sortIndex>206</sortIndex>
+    </measures>
+</WaveXmd>

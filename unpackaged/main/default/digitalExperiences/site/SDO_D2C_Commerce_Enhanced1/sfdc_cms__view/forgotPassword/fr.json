@@ -1,0 +1,24 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Forgot Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "cancelButtonLabel" : "Annuler",
+          "instructionsLabel" : "Pour réinitialiser votre mot de passe, saisissez votre nom d'utilisateur. Nous vous enverrons un lien de réinitialisation de mot de passe à l'adresse e-mail associée à votre compte.",
+          "submitButtonLabel" : "Réinitialiser",
+          "titleLabel" : "Mot de passe oublié ?",
+          "usernameLabel" : "Nom d'utilisateur"
+        },
+        "id" : "6c1f016d-ea6f-4aa6-b138-c6d30162edc3"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Mot de passe oublié"
+        },
+        "id" : "ef78b304-5916-412f-8efe-59dad2a4ee77"
+      } ]
+    }
+  },
+  "urlName" : "forgot-password"
+}

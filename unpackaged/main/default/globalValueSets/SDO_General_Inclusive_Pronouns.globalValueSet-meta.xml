@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>He/Him/His</fullName>
+        <default>false</default>
+        <label>He/Him/His</label>
+    </customValue>
+    <customValue>
+        <fullName>She/Her/Hers</fullName>
+        <default>false</default>
+        <label>She/Her/Hers</label>
+    </customValue>
+    <customValue>
+        <fullName>They/Them/Theirs</fullName>
+        <default>false</default>
+        <label>They/Them/Theirs</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other/Ask Me</label>
+    </customValue>
+    <masterLabel>Inclusive Pronouns</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

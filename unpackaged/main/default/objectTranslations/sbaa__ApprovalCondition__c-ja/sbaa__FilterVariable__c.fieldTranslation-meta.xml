@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>テスト対象項目/変数を評価する基準となる承認変数</help>
+        <label><!-- Filter Variable --></label>
+        <name>sbaa__FilterVariable__c</name>
+        <relationshipLabel><!-- Approval Condition (Filter Variable) --></relationshipLabel>
+    </CustomFieldTranslation>

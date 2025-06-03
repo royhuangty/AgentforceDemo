@@ -1,0 +1,73 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "70946b16-cfd2-4179-8e86-e453c3ff3719",
+  "label" : "Cart Upload",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8f5e398f-2580-451e-be87-889612dedd85",
+          "columns" : [ {
+            "UUID" : "1032f504-f8ae-4e62-907b-eb6092c8bd73",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8f5e398f-2580-451e-be87-889612dedd85",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "componentTitle" : "Cart Upload",
+            "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}",
+            "emailResults" : true,
+            "showEmailResultsCheckbox" : true
+          },
+          "componentName" : "c:cartUpload",
+          "id" : "04d5c878-726c-42b7-931e-9291c2d84825",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1032f504-f8ae-4e62-907b-eb6092c8bd73",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e90cc974-b96f-4fe4-9736-1df622b67402",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Cart Upload"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6602b808-97d8-4d77-ba02-47eb9ad142bd",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "051b9aa6-982d-4886-af54-d08317cd4e85",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-cart-upload"
+}

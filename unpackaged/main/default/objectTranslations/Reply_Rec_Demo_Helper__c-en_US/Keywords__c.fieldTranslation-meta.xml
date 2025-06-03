@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Key word(s) that will trigger the related suggestions. Can enter several comma separated values. Note that each must be a single word though --></help>
+        <label><!-- Keywords --></label>
+        <name>Keywords__c</name>
+    </CustomFieldTranslation>

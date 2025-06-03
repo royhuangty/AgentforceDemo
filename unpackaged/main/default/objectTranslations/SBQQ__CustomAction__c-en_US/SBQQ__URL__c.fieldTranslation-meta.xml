@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specify URL to navigate to. You have access to Line, Group, and Quote record fields dependent on selected location. Examples: http://www.salesforce.com, http://www.yoursite.com/{!Id}, or /{!SBQQ__Quote__c.Name}/{!SBQQ__YourCustomVar__c} --></help>
+        <label><!-- URL --></label>
+        <name>SBQQ__URL__c</name>
+    </CustomFieldTranslation>

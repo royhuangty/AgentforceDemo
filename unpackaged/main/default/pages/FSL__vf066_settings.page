@@ -1,0 +1,906 @@
+<apex:page controller="FSL.SettingsController" extensions="FSL.SettingsSharingController,FSL.SettingsSchedulingController,FSL.SettingsLifeCycleController,FSL.SettingsOptimizationController,FSL.PermissionsController,FSL.GanttStreamingChannel,FSL.SchedulingRecipesController,FSL.FeatureTracking" standardStylesheets="false" showHeader="true" sidebar="false" title="Field Service Settings">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Field Service Settings</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            <script type='text/javascript' src='{!$Site.BaseUrl}/support/console/63.0/integration.js'></script>
+
+            <apex:stylesheet value="{!$Resource.FSL__fsl_salesforce_lightning_design_system_vf_min}" />
+            <apex:stylesheet value="{!$Resource.FSL__settingsStyles}" />
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__salesforceSansFonts, 'css/SalesforceSansFont.css')}" />
+            <apex:stylesheet value="{!$Resource.FSL__jqueryui_datepicker_styles}" />
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__FontAwesome44, 'css/font-awesome.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.css')}" />
+        </head>
+
+        <body>
+            <div class="fsl">
+                <div id="SettingsBody" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-app="SettingsApp" ng-controller="settingsCtrl as settings"  class="ng-cloak">
+
+                    <div id="settings-loader-screen" ng-show="!settings.finishedLoadingSettings()">
+                        <img id="sf-logo-loading" src="{!$Resource.SalesfoceLogo}" /><br/><br/>
+                        {!JSENCODE($Label.LoadingSettingsPage)}<br/><br/>
+
+                        <img id="sf-loading" src="{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}" />
+                    </div>
+
+                    <div id="settings-optimization-hide" ng-show="settings.permissionsMissingShouldHide">
+                        <div class="side-bar-hide"></div>
+                        <div class="tabs-hide"></div>
+                    </div>  
+
+                        <div class="slds-notify_container slds-is-absolute" ng-show="showSandboxAlertMsg">
+                            <div class="slds-notify slds-notify_toast slds-theme_warning" role="status">
+                              <span class="slds-assistive-text">warning</span>
+                              <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+                                </svg>
+                              </span>
+                              <div class="slds-notify__content">
+                                    <h2 class="slds-text-heading_small" ng-show="labelForSingularError">{{labelForSingularError}}</h2>
+                                    <h2 class="slds-text-heading_small" ng-show="labelForPluralError">{{labelForPluralError}}</h2>
+                                </div>
+                                <div class="slds-notify__close" ng-click="showSandboxAlertMsg = false">
+                                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close">
+                                      <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                        <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Close</span>
+                                    </button>
+                                  </div>
+                              </div>
+                        </div>       
+
+                    <div id="SettingsMenu">
+                        <div class="fslSearchBoxContainer">
+                            <input type="text" placeholder="Search" ng-model="settings.searchPattern" />
+                            <svg aria-hidden="true" class="custom-slds-icon searchIconSettings" ng-hide="settings.searchPattern">
+                                 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                             </svg>
+                            <svg aria-hidden="true" class="custom-slds-icon searchIconSettings" ng-show="settings.searchPattern" ng-click="settings.searchPattern = null">
+                                 <use xlink:href="{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                             </svg>
+                        </div>
+                        <div class="menuItem"
+                             ng-repeat="item in settings.menu | menuFilter:settings.searchPattern:1 track by $index"
+                             ng-init="item.show = false"
+                             ng-click="settings.switchPage($event, item, $index)">
+                            <collapse-box item="item"></collapse-box>
+                            <span class="blueHover" ng-class="{'setting-selected' : settings.selectedItem == item}" >
+                                <highlight color="ffe000" search="settings.searchPattern"  content="item.title"></highlight>
+                                <beta-feature ng-if="item.isBeta"></beta-feature>
+                            </span>
+
+                            <!-- 2nd level -->
+                            <div>
+                                <div class="subMenuItem blueHover"
+                                     ng-repeat="subItem in item.items | menuFilter:settings.searchPattern:2 track by $index"
+                                     ng-class="['menu-setting-item', subItem.dynamicClass ]"
+                                     ng-init="subItem.show = false"
+                                     ng-show="item.show"
+                                     ng-click="settings.switchPageAndTab($event, item, subItem, $parent.$index, $index)">
+
+                                        <collapse-box item="subItem"></collapse-box>
+
+                                        <highlight ng-class="{'setting-selected-subitem' : settings.selectedItemTab.name == subItem.tabName}"
+                                                   color="ffe000" search="settings.searchPattern"
+                                                   content="subItem.title">
+                                        </highlight>
+
+                                        <!-- 3rd level -->
+                                        <div class="subMenuItem subImaSheloMenu blueHover"
+                                             ng-repeat="subSubItem in subItem.items | menuFilter:settings.searchPattern:3 track by $index"
+                                             ng-show="subItem.show"
+                                             ng-click="settings.switchPageAndTab($event, item, subItem, $parent.$parent.$index, $parent.$index, subSubItem.id)">
+                                                <highlight color="ffe000" search="settings.searchPattern" content="subSubItem.title"></highlight>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- setting page, including tabs -->
+                    <div id="SettingsForm">
+                       <form-with-tabs
+                               ng-repeat="form in settings.menu track by $index"
+                               menu-item="form"
+                               ng-show="settings.selectedItem == form"
+                               selected-tab="settings.selectedItemTab">
+                       </form-with-tabs>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+    </html>
+
+    <apex:form >
+        <apex:actionFunction action="{!startAuthorization}" name="startAuthorization" />
+    </apex:form>
+
+    <script src="/soap/ajax/63.0/connection.js" type="text/javascript"></script>
+
+
+    <script>
+
+        var settings = {
+
+            isO2EngineOn: {!isO2EngineOn},
+            isO2ForAllTerritoriesOn: {!isO2ForAllTerritoriesOn},
+            onBoardingLink: '{!$Page.OnboardingWizard}',
+            healthCheckLink: '{!$Page.Integrity_Checker}',
+            checkSvg: '{!$Resource.checkSvg}',
+            astroWithTree: '{!URLFOR($Resource.FSLSettingsGraphics, 'AstroLookingView.png')}',
+            astroWithIphone: '{!URLFOR($Resource.FSLSettingsGraphics, 'easy.png')}',
+            astroHiking: '{!URLFOR($Resource.FSLSettingsGraphics, 'guided.png')}',
+            healthCheckSvg: '{!URLFOR($Resource.FSLSettingsGraphics, 'health.png')}',
+
+            icons: {
+                down: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#down')}",
+                arrowdown: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#arrowdown')}",
+                arrowup: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#arrowup')}",
+                check: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#check')}",
+                delete: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#delete')}",
+                up: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#up')}",
+                left: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#left')}",
+                right: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#right')}",
+                remove: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#remove')}",
+                loading: "{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}",
+                error: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/action-sprite/svg/symbols.svg#error')}",
+                process: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/standard-sprite/svg/symbols.svg#process')}",
+                close: "{!URLFOR($Resource.LightningDesignSystem, 'assets/icons/utility-sprite/svg/symbols.svg#close')}",
+                dragdrop: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#drag_and_drop')}",
+                search: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#search')}",
+                clear: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#clear')}",
+                add: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#add')}",
+                recipe: "{!URLFOR($Resource.LightningDesignDystemIcons, 'custom-sprite/svg/symbols.svg#custom18')}",
+                sort: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#sort')}",
+                edit: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#edit')}",
+                info: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#info')}",
+                warning: "{!URLFOR($Resource.LightningDesignDystemIcons, 'utility-sprite/svg/symbols.svg#warning')}",
+                spinner: "{!URLFOR($Resource.LightningDesignSystem, 'assets/images/spinners/slds_spinner.gif')}",
+            },
+
+            images: {
+                dispatcher: '{!URLFOR($Resource.dispatcher)}',
+                admin: '{!URLFOR($Resource.admin)}',
+                resource: '{!URLFOR($Resource.resource)}',
+                guest: '{!URLFOR($Resource.guest)}',
+                agent: '{!URLFOR($Resource.agent)}',
+                community: '{!URLFOR($Resource.community)}',
+                dispatchercommunity: '{!URLFOR($Resource.dispatchercommunity)}',
+                bundlePerms: '{!URLFOR($Resource.bundlePerms)}',
+                integration: '{!URLFOR($Resource.integrationps)}',
+                aIAgent: '{!URLFOR($Resource.aIAgent)}',
+            },
+
+            menu: [
+                {
+                    title: '{!JSENCODE($Label.GettingStarted)}',
+                    service: 'gettingStartedService',
+                    hideFooter: true,
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.Home)}',
+                            items: [],
+                            tabName: 'GettingStarted_gettingStarted',
+                            directive: 'getting-started-getting-started'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.PermissionSets)}',
+                            items: [],
+                            tabName: 'GettingStarted_permissions',
+                            directive: 'getting-started-permission-sets'
+                        }
+                    ]
+                },
+                {
+                    title: '{!JSENCODE($Label.ServiceAppointmentLifecycle)}',
+                    service: 'serviceAppointmentLifeCycleService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.Creation)}',
+                            items: [],
+                            tabName: 'serviceAppointment_creation',
+                            directive: 'life-cycle-creation'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.StatusDefinitions)}',
+                            items: [],
+                            tabName: 'serviceAppointment_definitions',
+                            directive: 'life-cycle-status-definitions'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.StatusTransitions)}',
+                            keywords: 'תזוזה, מעבר',
+                            items: [],
+                            tabName: 'serviceAppointment_transition',
+                            directive: 'life-cycle-status-transition'
+                        }
+                    ]
+                },
+
+                {
+                    title: '{!JSENCODE($Label.GlobalActions)}',
+                    keywords: 'service appointment, lifecycle',
+                    service: 'globalActionsService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.Derivations)}',
+                            items: [],
+                            tabName: 'globalActions_derivations',
+                            directive: 'global-actions-derivations'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.AppointmentBooking)}',
+                            items: [],
+                            tabName: 'globalActions_booking',
+                            directive: 'global-actions-booking'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.EmergencyWizard)}',
+                            items: [],
+                            tabName: 'globalActions_ui',
+                            directive: 'global-actions-emergency'
+                        }
+                    ]
+                },
+
+                {
+                    title: '{!JSENCODE($Label.Scheduling55)}',
+                    service: 'schedulingService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.GeneralLogika)}',
+                            items: [],
+                            tabName: 'scheduling_logic',
+                            directive: 'scheduling-logic'
+                        },
+                        {
+                            title:  '{!JSENCODE($Label.SchedulingPolicies2)}',
+                            items: [],
+                            tabName: 'scheduling_policies',
+                            directive: 'scheduling-policies'
+                        },
+                        {
+                            title:  '{!JSENCODE($Label.DynamicGantt)}',
+                            items: [],
+                            tabName: 'scheduling_dynamic_gantt',
+                            directive: 'scheduling-dynamic-gantt'
+                        },
+                        {
+                            title:  '{!JSENCODE($Label.Routing)}',
+                            items: [],
+                            tabName: 'scheduling_routing',
+                            directive: 'scheduling-routing'
+                        },
+                        {
+                            title:  '{!JSENCODE($Label.SchedulingBundling)}',
+                            items: [],
+                            tabName: 'scheduling_bundling',
+                            directive: 'scheduling-bundling'  
+                           // dynamicClass : 'hide-bundle' //  this is hidden until is getIsBundleFieldsDeployed is checked
+                        },
+                        {
+                            title:  '{!JSENCODE($Label.SchedulingAvailability)}',
+                            items: [],
+                            tabName: 'scheduling_availability',
+                            directive: 'scheduling-availability'
+                        }
+                    ]
+                },
+
+                {
+                    title: '{!JSENCODE($Label.DispatcheronsoleI)}',
+                    service: 'dispatcherConsoleUIService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.GanttConfigurations)}',
+                            items: [
+                                // {
+                                //     title: '{!JSENCODE($Label.Configure21)}',
+                                //     id: '__configure'
+                                // },
+                                // {
+                                //     title: '{!JSENCODE($Label.MonthlyView33)}',
+                                //     id: '__monthly'
+                                // },
+                                // {
+                                //     title: '{!JSENCODE($Label.ResourceCalodner)}',
+                                //     id: '__calendar'
+                                // },
+                                // {
+                                //     title: '{!JSENCODE($Label.Customize552)}',
+                                //     id: '__customize'
+                                // },
+                            ],
+                            tabName: 'scheduling_consoleUi',
+                            directive: 'scheduling-dispatcher-ui'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.GanttUpdates)}',
+                            items: [],
+                            tabName: 'gantt_live_updates',
+                            directive: 'gantt-live-updates'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.CustomActions)}',
+                            items: [],
+                            tabName: 'custom_actions',
+                            directive: 'custom_actions'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Map55)}',
+                            items: [],
+                            tabName: 'map-ui',
+                            directive: 'map-ui'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Dispatch_Copilot)}',
+                            items: [],
+                            tabName: 'dispatch-copilot',
+                            directive: 'dispatch-copilot'
+                        }
+                    ]
+                },
+
+                {
+                    title: '{!JSENCODE($Label.Optimization6)}',
+                    service: 'optimizationService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.Activation1)}',
+                            items: [],
+                            tabName: 'optimization_activation',
+                            directive: 'optimization-activation'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Logic22)}',
+                            items: [
+                                {
+                                    title: '{!JSENCODE($Label.Optimization6)}',
+                                    id: '__bgo-opt'
+                                },
+                                {
+                                    title: '{!JSENCODE($Label.RDOptimize)}',
+                                    id: '__rso-opt'
+                                },
+                            ],
+                            tabName: 'optimization_logic',
+                            directive: 'optimization-logic'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Scheduled1Jobs)}',
+                            items: [],
+                            tabName: 'optimization_jobs',
+                            directive: 'optimization-jobs',
+                            dynamicClass : 'hide-scheduled-jobs' 
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Scheduled1Jobs)}',
+                            items: [],
+                            tabName: 'optimization_jobs_enhancements',
+                            directive: 'optimization-jobs-enhancements',
+                            dynamicClass : 'hide-scheduled-jobs-enhancements' 
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Advanced1Parameters)}',
+                            items: [],
+                            tabName: 'optimization_advanced',
+                            directive: 'optimization-parameters'
+                        },
+                      
+                    ]
+                },
+
+                {
+                    title: '{!JSENCODE($Label.Dispatch)}',
+                    keywords: 'service appointment, lifecycle',
+                    service: 'dispatchService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.Drip4Feed)}',
+                            items: [],
+                            tabName: 'dispatch_drip',
+                            directive: 'dispatch-drip-feed'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Scheduled1Jobs)}',
+                            items: [
+                               {
+                                   title: '{!JSENCODE($Label.AutoMention245)}',
+                                   id: '__automention'
+                               }
+                            ],
+                            tabName: 'dispatch_auto',
+                            directive: 'dispatch-automation'
+                        },
+                    ]
+                },
+                {
+                    title: '{!JSENCODE($Label.Sharing13)}',
+                    keywords: 'service appointment, lifecycle',
+                    service: 'sharingService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.User3erritories)}',
+                            items: [],
+                            tabName: 'sharing_userTerritories',
+                            directive: 'sharing-user-territories'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Scheduled1Jobs)}',
+                            items: [
+                                {
+                                    title: '{!JSENCODE($Label.Sharing2Triggers)}',
+                                    id: '__sharingtriggers'
+                                },
+                                {
+                                    title: '{!JSENCODE($Label.tbssj)}',
+                                    id: '__tbssj'
+                                }
+                            ],
+                            tabName: 'sharing_auto',
+                            directive: 'sharing-automation'
+                        },
+                        {
+                            title: '{!JSENCODE($Label.Calendar3Sync)}',
+                            items: [],
+                            tabName: 'sharing_sync',
+                            directive: 'sharing-calendar-sync'
+                        },
+                    ]
+                },
+                {
+                    title: '{!JSENCODE($Label.Automated_Scheduling)}',
+                    keywords: 'scheduling recipes',
+                    service: 'schedulingRecipesService',
+                    items: [
+                        {
+                            title: '{!JSENCODE($Label.SchedulingRecipes)}',
+                            items: [],
+                            tabName: 'schedulingrecipes',
+                            directive: 'scheduling-recipes'
+                        }
+                    ],
+                    hideFooter: true,
+                    isBeta: false
+                }
+            ]
+        };
+
+       // isSchedulingBundlingEnabledAndActivePromise Res = undefined;
+
+        // isSchedulingBundlingEnabledAndActivePromise = new Promise((resolve, reject) => {
+  
+        //     Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.SettingsController.getIsBundlerFeatureActiveAndActive}" ,function(res) {
+            
+        //         isSchedulingBundlingEnabledAndActivePromiseRes = res;
+            
+        //         resolve("isSchedulingBundlingEnabledAndActive set");
+
+        //     });
+        // });
+
+        // isSchedulingBundlingEnabledPromiseRes = undefined;
+
+        // isSchedulingBundlingEnabledPromise = new Promise((resolve, reject) => {
+  
+        //     Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.SettingsController.getIsBundlerFeatureActive}" ,function(res) {
+            
+        //     isSchedulingBundlingEnabledPromiseRes = res;
+            
+        //     resolve("isSchedulingBundlingEnabled set");
+
+        //     });
+        // });
+
+        /*
+        isSchedulingBundlingFieldEnabled = false;
+
+        Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.SettingsController.getIsBundleFieldsDeployed}" ,function(res) {
+          
+            isSchedulingBundlingFieldEnabled = res;
+
+            if(isSchedulingBundlingFieldEnabled) {
+
+                $('.hide-bundle.tab-setting-item').css('display','inline-block');
+                $('.hide-bundle.menu-setting-item').css('display','block');
+                
+            }
+        }, function(e) { });   
+        */
+        
+        isEnableScheduledJobsEnhancements = false;
+
+        Visualforce.remoting.Manager.invokeAction("{!$RemoteAction.SettingsController.getIsEnableScheduledJobsEnhancements}" ,function(res) {
+          
+          isEnableScheduledJobsEnhancements = res;
+
+          if(isEnableScheduledJobsEnhancements) {
+
+              $('.hide-scheduled-jobs-enhancements.tab-setting-item').css('display','inline-block');
+              $('.hide-scheduled-jobs-enhancements.menu-setting-item').css('display','block');
+              
+          } else {
+              // old
+              $('.hide-scheduled-jobs.tab-setting-item').css('display','inline-block');
+              $('.hide-scheduled-jobs.menu-setting-item').css('display','block');
+
+          }
+      }, function(e) { });
+
+
+
+
+
+        var remoteActions = {
+
+            setLiveBundleFeatureActive:         '{!$RemoteAction.SettingsController.setLiveBundleFeatureActive}',
+            getIsLiveBundleFeatureActive:       '{!$RemoteAction.SettingsController.getIsLiveBundleFeatureActive}',
+            setLiveBundleWaitTime:              '{!$RemoteAction.SettingsController.setLiveBundleWaitTime}',
+            getLiveBundleWaitTime:              '{!$RemoteAction.SettingsController.getLiveBundleWaitTime}',
+            getIsBundlerFeatureActiveAndActive: '{!$RemoteAction.SettingsController.getIsBundlerFeatureActiveAndActive}',
+            getIsBundlerFeatureActive:          '{!$RemoteAction.SettingsController.getIsBundlerFeatureActive}',
+            getIsBundleFieldsDeployed:          '{!$RemoteAction.SettingsController.getIsBundleFieldsDeployed}',
+            getIsEnableScheduledJobsEnhancements:'{!$RemoteAction.SettingsController.getIsEnableScheduledJobsEnhancements}',
+            getIsSFSAIAgentPermissionEnabled:     '{!$RemoteAction.SettingsController.getIsSFSAIAgentPermissionEnabled}',
+            hasAtLeastOneBundle:                '{!$RemoteAction.SettingsController.hasAtLeastOneBundle}',
+            isBundleTurnedOff:                  '{!$RemoteAction.SettingsController.isBundleTurnedOff}',
+            getScheduledJobsEnhancementsMaxGroups:'{!$RemoteAction.SettingsController.getScheduledJobsEnhancementsMaxGroups}',
+            getSJEnhancementsMaxTerritoryGroups:'{!$RemoteAction.SettingsController.getSJEnhancementsMaxTerritoryGroups}',
+            sharingLoadData:                    '{!$RemoteAction.SettingsSharingController.loadData}',
+            saveSettings:                       '{!$RemoteAction.SettingsController.saveSettings}',
+            restoreDefaultSettings:             '{!$RemoteAction.SettingsController.restoreDefaultSettings}',
+            getAllSettings:                     '{!$RemoteAction.SettingsController.getAllSettings}',
+            getAllBooleanFields:                '{!$RemoteAction.SettingsController.getAllBooleanFields}',
+            getTerritoriesRelatedToAutomator:   '{!$RemoteAction.SettingsController.getTerritoriesRelatedToAutomator}',
+            runJobNow:                          '{!$RemoteAction.SettingsController.runJobNow}',
+            searchUsers:                        '{!$RemoteAction.SettingsController.searchUsers}',
+            registerSLR:                        '{!$RemoteAction.SettingsController.registerSLR}',
+            updateBundleCacheRedis:             '{!$RemoteAction.SettingsController.updateBundleCacheRedis}',
+            toggleBundleNightlyTrigger:         '{!$RemoteAction.SettingsController.toggleBundleNightlyTrigger}',
+            nightlyBundleTriggerStatus:         '{!$RemoteAction.SettingsController.nightlyBundleTriggerStatus}',
+            checkBundleConfigPolicy:            '{!$RemoteAction.SettingsController.checkBundleConfigPolicy}',
+            getBundleNightlyCronExp:            '{!$RemoteAction.SettingsController.getBundleNightlyCronExp}',
+            getBundlePerms:                     '{!$RemoteAction.SettingsController.getBundlePerms}',
+            getBundleAutomaticPoliciesExists:   '{!$RemoteAction.SettingsController.getBundleAutomaticPoliciesExists}',
+            checkAddBundleDefault:              '{!$RemoteAction.SettingsController.checkAddBundleDefault}',
+            getApexClassesAndVisualForce:       '{!$RemoteAction.SettingsController.getApexClassesAndVisualForce}',
+            shouldRefreshSLRToken:              '{!$RemoteAction.SettingsController.shouldRefreshSLRToken}',
+            searchTerritories:                  '{!$RemoteAction.SettingsController.searchTerritories}',
+            searchOperatingHours:               '{!$RemoteAction.SettingsController.searchOperatingHours}',
+            getReportsWithGeolocationCols:      '{!$RemoteAction.SettingsController.getReportsWithGeolocationCols}',
+            updateReadonly226CustomSetting:     '{!$RemoteAction.SettingsController.updateReadonly226CustomSetting}',
+            upsertCustomPermissionsToSupportGanttCustomizations: '{!$RemoteAction.SettingsController.upsertCustomPermissionsToSupportGanttCustomizations}',
+
+            nightlyAvailabilityTriggerStatus:    '{!$RemoteAction.SettingsController.nightlyAvailabilityTriggerStatus}',
+            verifyRemoteSites:                   '{!$RemoteAction.SettingsController.verifyRemoteSites}',
+            getNightlyAvailabilityCronExp:       '{!$RemoteAction.SettingsController.getNightlyAvailabilityCronExp}',
+            toggleAvailabilityNightlyTrigger:    '{!$RemoteAction.SettingsController.toggleAvailabilityNightlyTrigger}',
+            getAvailabilityHorizon:              '{!$RemoteAction.SettingsController.getAvailabilityHorizon}',
+            setValueCustomSettingsHorizon:       '{!$RemoteAction.SettingsController.setValueCustomSettingsHorizon}',
+            getSavedTestsForEasyLsToO2:          '{!$RemoteAction.SettingsController.getSavedTestsForEasyLsToO2}',
+            getTestsForEasyLsToO2:               '{!$RemoteAction.SettingsController.getTestsForEasyLsToO2}',
+            saveTestsForEasyLsToO2:              '{!$RemoteAction.SettingsController.saveTestsForEasyLsToO2}',
+            useEnhancedOptimization:             '{!$RemoteAction.SettingsController.useEnhancedOptimization}',
+            handleTestAcknowledged:              '{!$RemoteAction.SettingsController.handleTestAcknowledged}',
+            workCapacitySharing:                 '{!$RemoteAction.SettingsController.workCapacitySharing}',
+            enableFlow:                          '{!$RemoteAction.SettingsController.enableFlow}',
+            workCapacitySharing:                 '{!$RemoteAction.SettingsController.workCapacitySharing}',
+            enablePushServiceSetting:            '{!$RemoteAction.SettingsController.enablePushServiceSetting}',
+            registerCustomObject:                '{!$RemoteAction.SettingsController.registerCustomObject}',
+            getDashboardsForCopilot:             '{!$RemoteAction.SettingsController.getDashboardsForCopilot}',
+
+
+            // SettingsLifeCycleController
+            ServiceLifeCycle: {
+                LoadData:                       '{!$RemoteAction.SettingsLifeCycleController.loadData}',
+            },
+
+
+            // SettingsSchedulingController
+            schedulingLoadData:                 '{!$RemoteAction.SettingsSchedulingController.loadData}',
+
+
+            // SettingsOptimizationController
+            getOrgProperties:                   '{!$RemoteAction.SettingsOptimizationController.getProfileVariables}',
+            createOptUser:                      '{!$RemoteAction.SettingsOptimizationController.createOptUser}',
+            isSandBoxAndOptimizationActive:     '{!$RemoteAction.SettingsOptimizationController.isSandBoxAndOptimizationActive}',
+            
+
+            // PermissionsController
+            WriteToLog:                         '{!$RemoteAction.PermissionsController.WriteToLog}',
+            AssignAdminToUser:                  '{!$RemoteAction.PermissionsController.AssignAdminToUser}',
+            GetPermissionSetDescription:        '{!$RemoteAction.PermissionsController.GetPermissionSetDescription}',
+            createAndUpdatePermissionSet:       '{!$RemoteAction.PermissionsController.createAndUpdatePermissionSet}',
+            createAndUpdatePermissionSetAsync:  '{!$RemoteAction.PermissionsController.createAndUpdatePermissionSetAsync}',
+            validatePS:                         '{!$RemoteAction.PermissionsController.validatePS}',
+            getPermissionSetsNamespaces:        '{!$RemoteAction.PermissionsController.getPermissionSetsNamespaces}',
+
+
+            // GanttStreamingChannel
+            validatePushTopics:                 '{!$RemoteAction.GanttStreamingChannel.validatePushTopics}',
+            updatePushTopics:                   '{!$RemoteAction.GanttStreamingChannel.createPushTopics}',
+            checkObjectSharingStatus:           '{!$RemoteAction.GanttStreamingChannel.checkObjectSharingStatus}',
+
+
+            // SchedulingRecipesController
+            loadSchedulingRecipesData:          '{!$RemoteAction.SchedulingRecipesController.loadSchedulingRecipesData}',
+            loadOptimizationJobsEnhancementsData: '{!$RemoteAction.SchedulingRecipesController.loadOptimizationJobsEnhancementsData}',
+            deleteSchedulingRecipe:             '{!$RemoteAction.SchedulingRecipesController.deleteSchedulingRecipe}',
+            saveSchedulingRecipe:               '{!$RemoteAction.SchedulingRecipesController.saveSchedulingRecipe}',
+            saveSchedulingRecipes:              '{!$RemoteAction.SchedulingRecipesController.saveSchedulingRecipes}',
+
+            // FeatureTracking
+            updateGeneralFSLHealthCount: '{!$RemoteAction.FeatureTracking.updateGeneralFSLHealthVfCount}',
+
+            // OptimizationEnvironments
+            getOptimizationEnvironments: '{!$RemoteAction.SettingsController.getOptimizationEnvironments}',
+
+            getNonReadableServiceAppointmentFields: '{!$RemoteAction.SettingsController.getNonReadableServiceAppointmentFields}',
+            addReadPermissionToIntegrationPs: '{!$RemoteAction.SettingsController.addReadPermissionToIntegrationPs}',
+
+        };
+
+        var fieldNames = {
+
+            calendarSync: {
+                fromSFCalendar: '{!$ObjectType.Synchronize__c.Fields.From_Salesforce__c.Name}',
+                toSFCalendar: '{!$ObjectType.Synchronize__c.Fields.To_Salesforce__c.Name}',
+                outlookCategoryName: '{!$ObjectType.Synchronize__c.Fields.Display_Name__c.Name}'
+            },
+
+            AuthorizationInfo: {
+                Auth_Date__c : '{!$ObjectType.Authorization_Info__c.fields.Auth_Date__c.Name}',
+                Auth_Result__c : '{!$ObjectType.Authorization_Info__c.fields.Auth_Result__c.Name}',
+                Username__c : '{!$ObjectType.Authorization_Info__c.fields.Username__c.Name}',
+                Custom_URL__c: '{!$ObjectType.Authorization_Info__c.fields.Custom_URL__c.Name}'
+            },
+
+            triggerConf: {
+                Description__c: '{!$ObjectType.Trigger_Configurations__c.Fields.Description__c.Name}',
+                Run__c: '{!$ObjectType.Trigger_Configurations__c.Fields.Run__c.Name}'
+            },
+
+            statusTransitions : {
+                From_Status__c : '{!$ObjectType.Service_Legal_Statuses__c.Fields.From_Status__c.Name}',
+                To_Status__c : '{!$ObjectType.Service_Legal_Statuses__c.Fields.To_Status__c.Name}',
+                Allowed_Profiles__c : '{!$ObjectType.Service_Legal_Statuses__c.Fields.Allowed_Profiles__c.Name}',
+                Custom_VF__c:'{!$ObjectType.Service_Legal_Statuses__c.Fields.Custom_VF__c.Name}'
+            },
+
+            SchedulingPolicyName: '{!$ObjectType.Scheduling_Policy__c.Name}',
+
+            ObjectMappingObjName: '{!$ObjectType.ObjectMapping__c.Name}',
+
+            ServiceTerritory: {
+                System_Jobs__c: '{!$ObjectType.ServiceTerritory.Fields.System_Jobs__c.Name}',
+                ParentTerritoryId: '{!$ObjectType.ServiceTerritory.Fields.ParentTerritoryId.Name}',
+                O2_Enabled__c: '{!$ObjectType.ServiceTerritory.Fields.O2_Enabled__c.Name}', 
+                TopLevelTerritoryId: '{!$ObjectType.ServiceTerritory.Fields.TopLevelTerritoryId.Name}'
+            },
+
+            General_Config__c : {
+                Value__c: '{!$ObjectType.General_Config__c.Fields.Value__c.Name}',
+                Run__c: '{!$ObjectType.General_Config__c.Fields.Run__c.Name}'
+            },
+
+            Automator_Config__c: {
+                Allow_No_Location__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_No_Location__c.Name}',
+                Allow_Locations__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_Locations__c.Name}',
+                Allow_Time_Horizon__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_Time_Horizon__c.Name}',
+                Allow_Time_Span_Back__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_Time_Span_Back__c.Name}',
+                Allow_Scheduling_Policy__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_Scheduling_Policy__c.Name}',
+                Allow_Filter_Field__c: '{!$ObjectType.Automator_Config__c.Fields.Allow_Filter_Field__c.Name}',
+                One_Location_Mandatory__c: '{!$ObjectType.Automator_Config__c.Fields.One_Location_Mandatory__c.Name}',
+                Class_Name__c: '{!$ObjectType.Automator_Config__c.Fields.Class_Name__c.Name}',
+                Cron_Expression__c: '{!$ObjectType.Automator_Config__c.Fields.Cron_Expression__c.Name}',
+                Date_Range__c: '{!$ObjectType.Automator_Config__c.Fields.Date_Range__c.Name}',
+                Email_Notification__c: '{!$ObjectType.Automator_Config__c.Fields.Email_Notification__c.Name}',
+                Enabled__c: '{!$ObjectType.Automator_Config__c.Fields.Enabled__c.Name}',
+                Filter_Field__c: '{!$ObjectType.Automator_Config__c.Fields.Filter_Field__c.Name}',
+                Label__c: '{!$ObjectType.Automator_Config__c.Fields.Label__c.Name}',
+                Max_Objects_Count__c: '{!$ObjectType.Automator_Config__c.Fields.Max_Objects_Count__c.Name}',
+                No_Location__c: '{!$ObjectType.Automator_Config__c.Fields.No_Location__c.Name}',
+                Scheduling_Policy_Id__c: '{!$ObjectType.Automator_Config__c.Fields.Scheduling_Policy_Id__c.Name}',
+                Time_Span_Backward__c: '{!$ObjectType.Automator_Config__c.Fields.Time_Span_Backward__c.Name}',
+                Time_Span_Forward__c: '{!$ObjectType.Automator_Config__c.Fields.Time_Span_Forward__c.Name}',
+                Horizons__c: '{!$ObjectType.Automator_Config__c.Fields.Horizons__c.Name}',
+                Secondary_Type__c: '{!$ObjectType.Automator_Config__c.Fields.Secondary_Type__c.Name}',
+                Stay_Scheduled_Services_By_Boolean__c: '{!$ObjectType.Automator_Config__c.Fields.Stay_Scheduled_Services_By_Boolean__c.Name}',
+                Notification_Username__c: '{!$ObjectType.Automator_Config__c.Fields.Notification_Username__c.Name}',
+                Timezone__c: '{!$ObjectType.Automator_Config__c.Fields.Timezone__c.Name}',
+                Is_Decompose_Territories__c:  '{!$ObjectType.Automator_Config__c.Fields.Is_Decompose_Territories__c.Name}',
+                Decompose_Territories__c:  '{!$ObjectType.Automator_Config__c.Fields.Decompose_Territories__c.Name}'
+            },
+
+            Logic_Settings__c: {
+                Pinned_Statuses_SF__c: '{!$ObjectType.Logic_Settings__c.Fields.Pinned_Statuses_SF__c.Name}',
+                Use_SLR__c: '{!$ObjectType.Logic_Settings__c.Fields.Use_SLR__c.Name}',
+                Use_Predictive__c: '{!$ObjectType.Logic_Settings__c.Fields.Use_Predictive__c.Name}',
+                Show_Register_Btn__c: '{!$ObjectType.Logic_Settings__c.Fields.Show_Register_Btn__c.Name}',
+                Enable_Optimization_Insights__c: '{!$ObjectType.Logic_Settings__c.Fields.Enable_Optimization_Insights__c.Name}',
+                Enable_service_appointment_sliding__c: '{!$ObjectType.Logic_Settings__c.Fields.Enable_service_appointment_sliding__c.Name}',
+                Enhanced_sliding_by_territory__c: '{!$ObjectType.Logic_Settings__c.Fields.Enhanced_sliding_by_territory__c.Name}',
+                Keep_Scheduled_By_Bool_For_AB_Schedule__c: '{!$ObjectType.Logic_Settings__c.Fields.Keep_Scheduled_By_Bool_For_AB_Schedule__c.Name}',
+                Enable_Reshuffle__c: '{!$ObjectType.Logic_Settings__c.Fields.Enable_Reshuffle__c.Name}',
+                Visiting_hours_timezone_from_oh__c: '{!$ObjectType.Logic_Settings__c.Fields.Visiting_hours_timezone_from_oh__c.Name}',
+                Flow_overlap_detection__c: '{!$ObjectType.Logic_Settings__c.Fields.Flow_overlap_detection__c.Name}',
+                Use_O2_for_all_territories__c: '{!$ObjectType.Logic_Settings__c.Fields.Use_O2_for_all_territories__c.Name}',
+                Use_O2_as_fallback_engine__c: '{!$ObjectType.Logic_Settings__c.Fields.Use_O2_as_fallback_engine__c.Name}',
+            },
+
+            Geocode_Settings__c: {
+                Use_SFMaps__c: '{!$ObjectType.Geocode_Settings__c.Fields.Use_SFMaps__c.Name}',
+            },
+
+            OptimizationSettings__c: {
+                Max_Runtime_Single_Service__c: '{!$ObjectType.OptimizationSettings__c.Fields.Max_Runtime_Single_Service__c.Name}',
+                Pinned_Statuses__c: '{!$ObjectType.OptimizationSettings__c.Fields.Pinned_Statuses__c.Name}',
+                Use_Edge__c: '{!$ObjectType.OptimizationSettings__c.Fields.Use_Edge__c.Name}',              
+                Stay_Scheduled_Services_By_Boolean__c: '{!$ObjectType.OptimizationSettings__c.Fields.Stay_Scheduled_Services_By_Boolean__c.Name}',              
+            },
+
+            ObjectMapping__c: {
+                Active__c: '{!$ObjectType.ObjectMapping__c.fields.Active__c.Name}',
+                City__c: '{!$ObjectType.ObjectMapping__c.fields.City__c.Name}',
+                Country__c: '{!$ObjectType.ObjectMapping__c.fields.Country__c.Name}',
+                label__c: '{!$ObjectType.ObjectMapping__c.fields.label__c.Name}',
+                Latitude__c: '{!$ObjectType.ObjectMapping__c.fields.Latitude__c.Name}',
+                Territory__c: '{!$ObjectType.ObjectMapping__c.fields.Territory__c.Name}',
+                Longitude__c: '{!$ObjectType.ObjectMapping__c.fields.Longitude__c.Name}',
+                ObjectID__c: '{!$ObjectType.ObjectMapping__c.fields.ObjectID__c.Name}',
+                State__c: '{!$ObjectType.ObjectMapping__c.fields.State__c.Name}',
+                Street__c: '{!$ObjectType.ObjectMapping__c.fields.Street__c.Name}',
+                Zipcode__c: '{!$ObjectType.ObjectMapping__c.fields.Zipcode__c.Name}',
+                Early_Start__c: '{!$ObjectType.ObjectMapping__c.fields.Early_Start__c.Name}',
+                Due_Date__c: '{!$ObjectType.ObjectMapping__c.fields.Due_Date__c.Name}',
+                Default_Type__c: '{!$ObjectType.ObjectMapping__c.fields.Default_Type__c.Name}',
+                Scheduling_Policy__c: '{!$ObjectType.ObjectMapping__c.fields.Scheduling_Policy__c.Name}'
+            },
+
+            CustomGanttAction: {
+                Class__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Class__c.Name}',
+                Display_Order__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Display_Order__c.Name}',
+                Required_Custom_Permission__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Required_Custom_Permission__c.Name}',
+                Section__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Section__c.Name}',
+                Visualforce_Page__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Visualforce_Page__c.Name}',
+                Icon__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Icon__c.Name}',
+                Label__c: '{!$ObjectType.Custom_Gantt_Action__c.Fields.Label__c.Name}',
+            },
+
+            Scheduling_Policy__c: {
+                Daily_Optimization__c: '{!$ObjectType.Scheduling_Policy__c.Fields.Daily_Optimization__c.Name}'
+            },
+
+            SchedulingRecipe__c: {
+                Semi_Automated__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Semi_Automated__c.Name}',
+                Description__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Description__c.Name}',
+                Active__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Active__c.Name}',
+                Criteria__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Criteria__c.Name}',
+                Criteria__r: '{!$ObjectType.SchedulingRecipe__c.Fields.Criteria__c.RelationshipName}',
+                Expected_Behavior__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Expected_Behavior__c.Name}',
+                Post_Actions__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Post_Actions__c.Name}',
+                Priority__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Priority__c.Name}',
+                Scenario_Specific__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Scenario_Specific__c.Name}',
+                Scenario_Type__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Scenario_Type__c.Name}',
+                Scheduling_Policy__c: '{!$ObjectType.SchedulingRecipe__c.Fields.Scheduling_Policy__c.Name}',
+                LKL_Threshold__c: '{!$ObjectType.SchedulingRecipe__c.Fields.LKL_Threshold__c.Name}'
+            },
+
+            Criteria__c: {
+                Criteria_Items__c: '{!$ObjectType.Criteria__c.Fields.Criteria_Items__c.Name}',
+                Logic__c: '{!$ObjectType.Criteria__c.Fields.Logic__c.Name}',
+                Object_Type__c: '{!$ObjectType.Criteria__c.Fields.Object_Type__c.Name}',
+                User_Type__c: '{!$ObjectType.Criteria__c.Fields.User_Type__c.Name}',
+                Territories__c: '{!$ObjectType.Criteria__c.Fields.Territories__c.Name}',
+                Work_Types__c: '{!$ObjectType.Criteria__c.Fields.Work_Types__c.Name}'
+            },
+
+            ServiceAppointment: {
+                Status: '{!$ObjectType.ServiceAppointment.Fields.Status.Name}',
+                StatusCategory: '{!$ObjectType.ServiceAppointment.Fields.StatusCategory.Name}',
+                InJeopardyReason__c: '{!$ObjectType.ServiceAppointment.Fields.InJeopardyReason__c.Name}'
+            },
+
+            MapReport__c: {
+                Color__c: '{!$ObjectType.MapReport__c.Fields.Color__c.Name}',
+                Icon__c: '{!$ObjectType.MapReport__c.Fields.Icon__c.Name}',
+                Report_Id__c: '{!$ObjectType.MapReport__c.Fields.Report_Id__c.Name}',
+            },
+
+            FSLHealth_Event__e: {
+                json__c: '{!$ObjectType.FSLHealth_Event__e.Fields.json__c.Name}',
+                Test_Status__c: '{!$ObjectType.FSLHealth_Event__e.Fields.Test_Status__c.Name}'
+            },
+
+        };
+
+        var schedulingRecipesConstants = {
+                scenarioTypesCancelled : "{!scenarioTypesCancelled}",
+                scenarioTypesShortened : "{!scenarioTypesShortened}",
+                scenarioTypesLengthened : "{!scenarioTypesLengthened}",
+                scenarioTypesEmergency : "{!scenarioTypesEmergency}"
+            },
+
+            authorizationInfo = JSON.parse('{!authorizationInfo}'),
+            sessionId = "{!$Api.Session_ID}",
+            profile = "{!JSENCODE($Profile.Name)}",
+            isOptimizationProfileExist = '{!isOptimizationProfileExist}',
+            currentProfileName = '{!JSENCODE(currentProfileName)}',
+            orgNameSpace = '{!orgNameSpace}',
+            orgNamespacePrefix = '{!orgNamespacePrefix}',
+            isUserAdmin  = {!isAdmin},
+            globalIcon = "{!$Resource.LightningDesignDystemIcons}",
+            rdoOptimizationSettings = '{!rdoOptimizationSettings}',
+            rdoEsoOptimizationSettings = '{!rdoEsoOptimizationSettings}',
+            inDayOptimizationSettings = '{!inDayOptimizationSettings}',
+            inDayEsoOptimizationSettings = '{!inDayEsoOptimizationSettings}',
+            bgoOptimizationSettings = '{!bgoOptimizationSettings}',
+            bgoEsoOptimizationSettings = '{!bgoEsoOptimizationSettings}',
+            shouldShowHealthChecker = JSON.parse('{!shouldShowHealthChecker}'),
+            baseUrl = window.location.origin,
+            maxTerritoriesPerAutomator = {!maxTerritoriesPerAutomator},
+            useEdgeFMA = {!useEdgeFMA},
+            UseSFMapsFMA = {!UseSFMapsFMA},
+            forceESOFMA = {!forceESOFMA},
+            isOptimizationEnvironmentPickerEnabled = '{!isOptimizationEnvironmentPickerEnabled}';
+            isOrgInManagedPackageContext = JSON.parse('{!isOrgInManagedPackageContext}');
+
+        sforce.connection.sessionId = "{!$Api.Session_ID}";
+/*
+        settings.menu.push({
+            title:  '{!JSENCODE($Label.HealthCheckSettingTab)}',
+            keywords: 'health check integrity',
+            service: 'healthCheckService',
+            items: [
+                {
+                    title:  '{!JSENCODE($Label.HealthCheckSettingTab)}',
+                    items: [],
+                    tabName: 'GettingStarted_healthCheck_General',
+                    directive: 'health-check'
+                },
+            ],
+            hideFooter: true,
+            isBeta: false,
+            hideTabs: true,
+        });
+*/
+    </script>
+
+    <apex:includeScript value="{!$Resource.FSL__cometd}" />
+    <apex:includeScript value="{!$Resource.FSL__cometdReplayExtension}" />
+    <apex:includeScript value="{!$Resource.FSL__jQuery}" />    
+    <apex:includeScript value="{!$Resource.FSL__jqueryCometd}" />
+    <apex:includeScript value="{!$Resource.FSL__MomentJS}" />
+    <apex:includeScript value="{!$Resource.FSL__MomentTimezone}" />
+    <apex:includeScript value="{!$Resource.FSL__svg4everybody_min}" />
+    <script>svg4everybody();</script>
+    <apex:includeScript value="{!$Resource.FSL__angular150min}" />
+    <apex:includeScript value="{!$Resource.FSL__settingsBundle}" />
+    <apex:includeScript value="{!$Resource.FSL__bootstrap}" />
+    <apex:includeScript value="{!$Resource.FSL__angularUILatest}" />
+	<apex:includeScript value="{!$Resource.FSL__jqueryUI}" />
+    <apex:includeScript value="{!$Resource.FSL__sortable_min}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__dhtmlx510, 'dhtmlx.js')}" />
+    <!-- includes for nomnoml graph -->
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/zepto.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/underscore.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/underscore.skanaar.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/dagre.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/skanaar.canvas.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/vector.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/nomnoml.jison.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/nomnoml.parser.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/nomnoml.layouter.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'libs/nomnoml.renderer.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FSL__nomnoml_angular, 'angular-nomnoml.js')}" />
+
+</apex:page>

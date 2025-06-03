@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Se marcadas, todas as aprovações na etapa acontecerão em paralelo. Essa configuração entra em vigor apenas ao usar o Advanced Approvals com aprovações nativas.</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </CustomFieldTranslation>

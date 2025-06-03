@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>일정 정책</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    <nameFieldLabel>일정 예약 정책 이름</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
+        <name>FSL__Deny_Objectives_Negative_Weight</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Deep_Clone --></label>
+        <name>FSL__Deep_Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- test2 --></label>
+        <name>FSL__test2</name>
+    </webLinks>
+</CustomObjectTranslation>

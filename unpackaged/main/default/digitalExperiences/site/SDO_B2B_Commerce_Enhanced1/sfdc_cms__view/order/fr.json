@@ -1,0 +1,10 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order",
+  "contentBody" : {
+    "component" : {
+      "children" : [ ]
+    }
+  },
+  "urlName" : "order"
+}

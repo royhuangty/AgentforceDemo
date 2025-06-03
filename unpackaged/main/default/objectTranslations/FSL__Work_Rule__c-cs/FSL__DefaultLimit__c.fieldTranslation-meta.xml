@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Limit pro počet. Limit pro zdroj služby tuto hodnotu přepíše.</help>
+        <label><!-- Default Limit --></label>
+        <name>FSL__DefaultLimit__c</name>
+    </CustomFieldTranslation>

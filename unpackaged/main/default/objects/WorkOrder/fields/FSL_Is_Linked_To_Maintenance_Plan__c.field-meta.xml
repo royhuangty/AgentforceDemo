@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL_Is_Linked_To_Maintenance_Plan__c</fullName>
+    <formula>NOT(ISBLANK(MaintenancePlanId))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Linked To Maintenance Plan</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

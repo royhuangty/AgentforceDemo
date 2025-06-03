@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Ist diese Einstellung festgelegt, überschreibt der Wert dieses Felds die Genehmigungsbedingungen</help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Name</translation>
+        </picklistValues>
+    </CustomFieldTranslation>

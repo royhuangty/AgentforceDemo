@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Si cette option est sélectionnée, les quantités des options de produits d&#39;offres groupées sont incluses dans l&#39;étendue d&#39;agrégation.</help>
+        <label><!-- Include Bundled Quantities --></label>
+        <name>SBQQ__IncludeBundledProducts__c</name>
+    </CustomFieldTranslation>

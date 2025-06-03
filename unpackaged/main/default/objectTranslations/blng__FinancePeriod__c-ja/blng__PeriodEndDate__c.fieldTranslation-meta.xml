@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>財務期間の終了日を選択します。</help>
+        <label><!-- Period End Date --></label>
+        <name>blng__PeriodEndDate__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tspa__All_Notifications</fullName>
+    <columns>NAME</columns>
+    <columns>tspa__isOpened__c</columns>
+    <columns>tspa__sessionType__c</columns>
+    <columns>tspa__sessionId__c</columns>
+    <columns>tspa__sendingMethod__c</columns>
+    <columns>tspa__customerLink__c</columns>
+    <columns>tspa__agentLink__c</columns>
+    <columns>tspa__Observer_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Notifications</label>
+</ListView>

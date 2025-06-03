@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Броят минути от началото на наличието на ресурса за обслужването до най-късния час на допустим край на прекъсването. Напр. въведете 300 за планиране на обедна почивка, която да приключи не повече от пет часа след стартиране на деня.</help>
+        <label><!-- Latest Break End (minutes) --></label>
+        <name>FSL__Latest_Break_End__c</name>
+    </CustomFieldTranslation>

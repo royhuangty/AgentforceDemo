@@ -1,0 +1,59 @@
+#selectFolderPopup {
+    .ma-modal-container {
+        .ma-modal-content {
+            @media screen and (min-width: 769px) {
+                min-height: 60vh;
+            }
+
+            .ma-breadcrumb-inner {
+                display: flex;
+                padding: 1rem;
+
+                .ma-breadcrumb-back {
+                    margin-right: .5rem;
+                }
+            }
+
+            #MAFoldersWrapper {
+                .ma-folders {
+                    padding-left: 0;
+
+                    .ma-folder-list-item {
+                        margin-left: 0;
+
+                        .ma-folder-item {
+                            &:active {
+                                background-color: $light-gray;
+                            }
+
+                            .ma-folder-drilldown {
+                                flex-grow: 0;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }       
+    }
+}
+
+#saveShapePopup {
+    .ma-folder-item {
+        flex-direction: column;
+        padding-left: 0;
+
+        .ma-button {
+            border-color: $light-gray;
+            margin-bottom: .5rem;
+            display: flex;
+            align-items: center;
+            background-color: $light-gray;
+
+            &::before {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

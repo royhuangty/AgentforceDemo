@@ -1,0 +1,54 @@
+<apex:page showHeader="false" sidebar="false" standardController="ResourceAbsence" lightningStylesheets="true" extensions="FSL.ctrl012_AbsenceLightboxForm">
+
+    <style>
+        body {
+            margin-top: -8px !important;
+        }
+
+        body .bPageBlock {
+            background: #fff !important;
+            border: 0 !important;
+            overflow-x: hidden;
+        }
+
+        input[type=submit] {
+            margin-top: 3px !important;
+        }
+
+        .message {
+            margin-top: 8px !important;
+        }
+
+        .pbSubheader h3 {
+            display: inline-block;
+        }
+
+    </style>
+
+
+    <div id="CKSW_AccountDetailsForm">
+
+        <apex:form >
+
+            <apex:pageMessages ></apex:pageMessages>
+
+            <apex:pageBlock mode="edit">
+
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="{!$Label.FSL__SaveChanges}" />
+                </apex:pageBlockButtons>
+
+                <apex:pageBlockSection title="{!$Label.FSL__Absence}" columns="2">
+                    <apex:repeat value="{!$ObjectType.ResourceAbsence.FieldSets.FSL__Resource_Absence_Lightbox}" var="d">
+                        <apex:inputField value="{!ResourceAbsence[d]}" required="{!d.Required}"/>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+
+            </apex:pageBlock>
+
+        </apex:form>
+
+    </div>
+
+
+</apex:page>

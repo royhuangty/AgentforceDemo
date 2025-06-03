@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help>Määrittää minimitauon alkamisajan (muodossa: {HH:MM}) luodakseen taukoja.
+Jätä tämä kenttä tyhjäksi, jos et halua luoda taukoja.</help>
+        <label><!-- Break Start --></label>
+        <name>FSL__Break_Start__c</name>
+    </CustomFieldTranslation>

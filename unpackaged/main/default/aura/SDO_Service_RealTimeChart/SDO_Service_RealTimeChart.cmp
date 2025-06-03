@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="enableConsoleLogging" type="Boolean" default="true" /> <!-- Flip this attribute before distributing - should only be true for debugging -->
+    
+    <ltng:require scripts="{!$Resource.SDO_Service_ChartJS23}" afterScriptsLoaded="{!c.scriptsLoaded}" />
+    <aura:attribute name="feedName" type="String"/>
+    <aura:attribute name="randomNumber" type="String"/>
+	
+	<canvas aura:id="chart" style="width: 288px; height: 184px;"></canvas>
+    
+</aura:component>

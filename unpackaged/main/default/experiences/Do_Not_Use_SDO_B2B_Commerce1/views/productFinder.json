@@ -1,0 +1,71 @@
+{
+  "appPageId" : "c137d4c3-cac9-43e0-b786-33aaaf4bb35c",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "50b0c29b-0914-4cc0-831b-78c300a19656",
+  "label" : "Product Finder",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5387ec3e-e627-4baa-8ce8-09b9572d8f8f",
+          "columns" : [ {
+            "UUID" : "05610e44-1792-48f1-beca-26dbd77de656",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5387ec3e-e627-4baa-8ce8-09b9572d8f8f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "SDO_Commerce_GuidedSelling"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "40a0637f-835d-46ce-b43f-94957c76a7ed",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "05610e44-1792-48f1-beca-26dbd77de656",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1808a714-090e-4e15-ba25-132770a0f66e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Product Finder"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5c9b39b7-6624-4560-b2eb-748d2a84e8d6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c3b2cc6c-45e0-4b84-9100-dbe305f3d8a9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-product-finder"
+}

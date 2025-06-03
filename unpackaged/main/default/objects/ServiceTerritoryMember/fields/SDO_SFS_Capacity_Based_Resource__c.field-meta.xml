@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_SFS_Capacity_Based_Resource__c</fullName>
+    <formula>ServiceResource.IsCapacityBased</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Capacity Based Resource</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

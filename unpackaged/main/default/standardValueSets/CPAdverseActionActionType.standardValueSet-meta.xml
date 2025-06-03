@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Administrative Disciplinary Action</fullName>
+        <default>false</default>
+        <label>Administrative Disciplinary Action</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Misdemeanor Conviction</fullName>
+        <default>false</default>
+        <label>Misdemeanor Conviction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Court Order</fullName>
+        <default>false</default>
+        <label>Court Order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Probationary License</fullName>
+        <default>false</default>
+        <label>Probationary License</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Felony Conviction</fullName>
+        <default>false</default>
+        <label>Felony Conviction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Malpractice Judgment</fullName>
+        <default>false</default>
+        <label>Malpractice Judgment</label>
+    </standardValue>
+</StandardValueSet>
