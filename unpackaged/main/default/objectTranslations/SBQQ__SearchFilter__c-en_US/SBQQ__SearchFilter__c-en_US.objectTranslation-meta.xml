@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Search Filter Layout</layout>
         <sections>
@@ -27,4 +15,16 @@
         <errorMessage><!-- You must select Hidden Source Object when Hidden Source Field is selected. --></errorMessage>
         <name>SBQQ__Require_hidden_object_for_hidden_field</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

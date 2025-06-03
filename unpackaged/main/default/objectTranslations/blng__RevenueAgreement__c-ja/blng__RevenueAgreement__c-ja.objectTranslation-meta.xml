@@ -4,22 +4,6 @@
         <plural>false</plural>
         <value>収益契約</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>RevenueAgreement Layout</layout>
         <sections>
@@ -27,5 +11,21 @@
             <section>Revenue Amount Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>収益契約名</nameFieldLabel>
 </CustomObjectTranslation>

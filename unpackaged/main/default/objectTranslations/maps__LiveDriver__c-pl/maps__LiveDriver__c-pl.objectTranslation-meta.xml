@@ -60,25 +60,6 @@
         <plural>true</plural>
         <value>Kierowcach Maps Live</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Live Driver Layout</layout>
@@ -87,5 +68,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Mapuje na żywo nazwisko kierowcy</nameFieldLabel>
 </CustomObjectTranslation>

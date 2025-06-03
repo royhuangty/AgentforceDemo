@@ -60,14 +60,6 @@
         <plural>true</plural>
         <value>Konfiguracjach okresu promocyjnego Zaawansowanych tras Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
@@ -76,5 +68,13 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Konfiguracja nazwy okresu promocyjnego M</nameFieldLabel>
 </CustomObjectTranslation>

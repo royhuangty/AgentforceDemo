@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>Maps 고급 프로모션 기간 구성</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps 고급 기능 프로모션 기간 구성 이름</nameFieldLabel>
 </CustomObjectTranslation>

@@ -40,16 +40,6 @@
         <plural>true</plural>
         <value>Maps Advanced-Routenruhetagen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -58,5 +48,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Maps Advanced-Routenruhetage</nameFieldLabel>
 </CustomObjectTranslation>

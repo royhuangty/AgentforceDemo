@@ -8,25 +8,6 @@
         <plural>true</plural>
         <value>Bestuurders Maps Live</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Live Driver Layout</layout>
@@ -35,5 +16,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Naam bestuurder live Maps</nameFieldLabel>
 </CustomObjectTranslation>

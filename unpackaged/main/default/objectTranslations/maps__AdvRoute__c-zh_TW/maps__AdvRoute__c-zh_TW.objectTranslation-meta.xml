@@ -4,26 +4,6 @@
         <plural>false</plural>
         <value>Maps Advanced 路線</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Layout</layout>
         <sections>
@@ -35,5 +15,25 @@
             <section>Route Date/Time</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced 路線名稱</nameFieldLabel>
 </CustomObjectTranslation>

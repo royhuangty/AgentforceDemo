@@ -8,19 +8,6 @@
         <plural>true</plural>
         <value>Niveaux de prix</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Price Tier Layout</layout>
@@ -29,6 +16,19 @@
             <section>Price Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom du niveau</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

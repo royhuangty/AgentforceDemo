@@ -4,23 +4,6 @@
         <plural>false</plural>
         <value>収益認識処理</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>名前</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- If Revenue Schedule Creation is not Order Product Activation, Revenue Agreement Association must be “Not Applicable” or “Manual” --></errorMessage>
@@ -54,4 +37,21 @@
         <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
         <name>blng__Processing_Order_Cannot_be_negative</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

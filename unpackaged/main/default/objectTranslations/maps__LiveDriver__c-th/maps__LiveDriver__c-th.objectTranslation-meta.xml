@@ -4,25 +4,6 @@
         <plural>false</plural>
         <value>ผู้ขับขี่ตัวจริงใน Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Live Driver Layout</layout>
         <sections>
@@ -30,5 +11,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>ชื่อผู้ขับขี่ตัวจริงใน Maps</nameFieldLabel>
 </CustomObjectTranslation>

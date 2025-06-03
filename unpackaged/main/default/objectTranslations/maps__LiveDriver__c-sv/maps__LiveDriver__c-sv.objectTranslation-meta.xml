@@ -30,25 +30,6 @@
         <plural>true</plural>
         <value>Maps-liveförare</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Live Driver Layout</layout>
@@ -57,5 +38,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Namn på Maps-liveförare</nameFieldLabel>
 </CustomObjectTranslation>

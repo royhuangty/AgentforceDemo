@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Termos e condições</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nº da condição</nameFieldLabel>
     <validationRules>
@@ -25,4 +18,11 @@
         <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

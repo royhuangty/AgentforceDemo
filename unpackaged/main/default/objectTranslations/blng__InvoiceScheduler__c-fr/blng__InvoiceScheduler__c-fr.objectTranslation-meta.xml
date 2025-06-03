@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Planificateurs de facturation</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Invoice Scheduler Layout</layout>
@@ -36,6 +20,22 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom du planificateur de facturation</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

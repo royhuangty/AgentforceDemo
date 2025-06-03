@@ -4,21 +4,6 @@
         <plural>false</plural>
         <value>契約価格</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>契約価格番号</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- You must enter either Discount, Price, or Discount Schedule. --></errorMessage>
@@ -36,4 +21,19 @@
         <errorMessage><!-- You must specify either product or filter field --></errorMessage>
         <name>SBQQ__Product_or_filter_required</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

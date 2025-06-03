@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Select a dependency type. --></errorMessage>
         <name>FSL__Dependency_Is_Required</name>
@@ -25,4 +20,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

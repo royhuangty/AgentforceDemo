@@ -8,19 +8,6 @@
         <plural>true</plural>
         <value>Condições de erro</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Error Condition Layout</layout>
@@ -46,4 +33,17 @@
         <errorMessage><!-- You must specify either Tested Field or Tested Variable. --></errorMessage>
         <name>SBQQ__Tested_field_or_variable_required</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

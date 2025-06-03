@@ -30,16 +30,6 @@
         <plural>true</plural>
         <value>Fridager i Maps Advanced-rute</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -48,5 +38,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Navn på fridager i Maps Advanced-rute</nameFieldLabel>
 </CustomObjectTranslation>

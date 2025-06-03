@@ -40,19 +40,6 @@
         <plural>true</plural>
         <value>Rechnungsläufen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Invoice Run Layout</layout>
@@ -70,4 +57,17 @@
         <label><!-- Post_All_Invoices --></label>
         <name>blng__Post_All_Invoices</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

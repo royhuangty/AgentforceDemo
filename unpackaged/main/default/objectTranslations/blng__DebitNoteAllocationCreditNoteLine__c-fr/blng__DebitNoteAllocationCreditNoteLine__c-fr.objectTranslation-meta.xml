@@ -8,29 +8,6 @@
         <plural>true</plural>
         <value>Allocations de note de débit (ligne de note de crédit)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
@@ -43,6 +20,29 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Allocation de note de débit (ligne de no</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

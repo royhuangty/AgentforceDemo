@@ -8,21 +8,6 @@
         <plural>true</plural>
         <value>Horarios laborales en vivo de Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Live Working Hours Layout</layout>
@@ -31,5 +16,20 @@
             <section>Working Hours</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de horario laboral en vivo de Map</nameFieldLabel>
 </CustomObjectTranslation>

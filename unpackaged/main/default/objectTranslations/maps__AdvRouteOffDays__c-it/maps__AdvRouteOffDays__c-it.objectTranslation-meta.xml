@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Giorni di riposo Percorso di Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -26,6 +16,16 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome giorni di riposo Percorso di Maps A</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

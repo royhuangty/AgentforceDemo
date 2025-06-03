@@ -8,26 +8,6 @@
         <plural>true</plural>
         <value>Rotas de mapas avançados</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Layout</layout>
@@ -40,5 +20,25 @@
             <section>Route Date/Time</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome da rota avançada do Maps</nameFieldLabel>
 </CustomObjectTranslation>

@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Scripts personalizados</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Custom Script Layout</layout>
@@ -24,5 +16,13 @@
             <section>Transpiling</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do script</nameFieldLabel>
 </CustomObjectTranslation>

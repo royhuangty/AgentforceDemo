@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>การกำหนดค่าช่วงเวลาการโปรโมตใน Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>ชื่อการกำหนดค่าช่วงเวลาการโปรโมตใน Maps </nameFieldLabel>
 </CustomObjectTranslation>

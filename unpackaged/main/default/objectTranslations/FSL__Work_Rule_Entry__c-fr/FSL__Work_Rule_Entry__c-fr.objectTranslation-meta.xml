@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Entrées de règle de travail</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Resource Availability Layout</layout>
@@ -27,5 +22,10 @@
         <label><!-- Field Service - Service Resource Availability --></label>
         <name>FSL__Gap_Rule_Service</name>
     </recordTypes>
+    
+    
+    
+    
+    
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

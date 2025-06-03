@@ -8,15 +8,15 @@
         <plural>true</plural>
         <value>Formatos de importação</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nº do formato de importação</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- More than 1 unique key defined in Import Column. --></errorMessage>
         <name>SBQQ__Num_Unique_Key_is_not_one</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

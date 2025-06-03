@@ -4,19 +4,6 @@
         <plural>false</plural>
         <value>ルックアップクエリ</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Lookup Query Layout</layout>
         <sections>
@@ -37,4 +24,17 @@
         <errorMessage><!-- Tested Value is required if Match Type = Static Value. Tested Object and Tested Field are required if Match Type = Field Value. Tested Configuration Attribute is required if Match Type = Configuration Attribute. --></errorMessage>
         <name>SBQQ__Match_Type_Validation</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

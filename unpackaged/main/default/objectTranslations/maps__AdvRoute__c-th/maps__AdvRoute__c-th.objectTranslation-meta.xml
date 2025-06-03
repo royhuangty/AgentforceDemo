@@ -4,26 +4,6 @@
         <plural>false</plural>
         <value>เส้นทางใน Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Layout</layout>
         <sections>
@@ -35,5 +15,25 @@
             <section>Route Date/Time</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>ชื่อเส้นทางใน Maps Advanced</nameFieldLabel>
 </CustomObjectTranslation>

@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Crew Managment Resource Lightbox --></label>
         <name>FSL__CrewManagment_Lightbox</name>
@@ -77,4 +50,31 @@
         <errorMessage><!-- Resource travel speed must be greater than 0. --></errorMessage>
         <name>FSL__Resource_travel</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

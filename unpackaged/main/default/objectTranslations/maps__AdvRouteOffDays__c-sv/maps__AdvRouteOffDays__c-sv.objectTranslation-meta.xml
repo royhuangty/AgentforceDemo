@@ -30,16 +30,6 @@
         <plural>true</plural>
         <value>Fria dagar i Maps Advanced-rutt</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -48,5 +38,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Namn på lediga dagar för Maps Advanced-r</nameFieldLabel>
 </CustomObjectTranslation>

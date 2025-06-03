@@ -4,13 +4,6 @@
         <plural>false</plural>
         <value>Maps Advanced ルート出力種別</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
         <sections>
@@ -18,5 +11,12 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced ルート出力種別名</nameFieldLabel>
 </CustomObjectTranslation>

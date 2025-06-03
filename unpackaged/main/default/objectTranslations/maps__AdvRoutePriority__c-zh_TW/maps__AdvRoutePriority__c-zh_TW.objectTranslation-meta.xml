@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>Maps Advanced 路線優先順序</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Priority Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Filters</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced 路線優先順序名稱</nameFieldLabel>
 </CustomObjectTranslation>

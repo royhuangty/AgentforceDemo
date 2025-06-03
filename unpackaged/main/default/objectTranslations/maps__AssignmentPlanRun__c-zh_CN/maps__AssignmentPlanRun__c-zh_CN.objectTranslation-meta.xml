@@ -4,22 +4,6 @@
         <plural>false</plural>
         <value>地图分配计划运行</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Assignment Plan Run</layout>
         <sections>
@@ -35,5 +19,21 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>地图分配计划运行名称</nameFieldLabel>
 </CustomObjectTranslation>

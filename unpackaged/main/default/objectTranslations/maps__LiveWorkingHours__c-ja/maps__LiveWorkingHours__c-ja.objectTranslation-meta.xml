@@ -4,21 +4,6 @@
         <plural>false</plural>
         <value>Maps ライブ勤務時間</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Live Working Hours Layout</layout>
         <sections>
@@ -26,5 +11,20 @@
             <section>Working Hours</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps ライブ勤務時間名</nameFieldLabel>
 </CustomObjectTranslation>

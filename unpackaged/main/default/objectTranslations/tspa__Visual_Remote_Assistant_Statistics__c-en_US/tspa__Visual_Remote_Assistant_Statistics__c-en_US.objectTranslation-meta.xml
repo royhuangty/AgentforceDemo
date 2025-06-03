@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- The minimum value is 1. --></errorMessage>
         <name>tspa__Value_Greater_Than_1</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

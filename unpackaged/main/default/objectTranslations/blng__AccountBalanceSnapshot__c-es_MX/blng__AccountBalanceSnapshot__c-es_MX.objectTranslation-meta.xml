@@ -8,31 +8,6 @@
         <plural>true</plural>
         <value>Instantáneas de balance de cuentas</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Account Balance Snapshot Layout</layout>
@@ -49,5 +24,30 @@
             <section>Invoice Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de instantánea de balance de cuen</nameFieldLabel>
 </CustomObjectTranslation>

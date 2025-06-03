@@ -60,25 +60,6 @@
         <plural>true</plural>
         <value>Динамических водителях Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Live Driver Layout</layout>
@@ -87,5 +68,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Динамическое имя водителя Maps</nameFieldLabel>
 </CustomObjectTranslation>

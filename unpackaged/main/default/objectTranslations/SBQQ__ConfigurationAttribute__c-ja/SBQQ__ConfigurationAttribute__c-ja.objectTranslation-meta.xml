@@ -4,23 +4,6 @@
         <plural>false</plural>
         <value>設定属性</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>属性の名前</nameFieldLabel>
     <recordTypes>
         <description><!-- Configuration Attribute associated to a product --></description>
@@ -40,4 +23,21 @@
         <errorMessage><!-- Product is required. --></errorMessage>
         <name>SBQQ__Product_is_required_if_not_global</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

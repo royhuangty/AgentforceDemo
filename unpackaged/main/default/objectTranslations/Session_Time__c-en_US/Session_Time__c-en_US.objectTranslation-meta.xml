@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Session Times</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Session Time Layout</layout>
         <sections>
@@ -22,5 +15,12 @@
             <section>Manual Items</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

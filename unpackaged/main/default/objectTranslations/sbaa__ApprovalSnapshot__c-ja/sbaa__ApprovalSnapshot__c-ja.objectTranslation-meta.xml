@@ -4,13 +4,6 @@
         <plural>false</plural>
         <value>承認スナップショット</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Approval Snapshot Layout</layout>
         <sections>
@@ -18,5 +11,12 @@
             <section>Approved Value Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>承認スナップショット番号</nameFieldLabel>
 </CustomObjectTranslation>

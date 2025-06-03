@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Métodos de distribución de ingresos</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nombre</nameFieldLabel>
     <validationRules>
@@ -68,4 +58,14 @@
         <errorMessage><!-- Term Start Date  is required when Distribution Method = Monthly / Daily --></errorMessage>
         <name>blng__TermStartDateIsRequired</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

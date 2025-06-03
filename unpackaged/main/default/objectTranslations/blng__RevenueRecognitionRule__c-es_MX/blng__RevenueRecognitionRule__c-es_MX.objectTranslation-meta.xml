@@ -8,10 +8,6 @@
         <plural>true</plural>
         <value>Reglas de reconocimiento de ingresos</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nombre</nameFieldLabel>
     <quickActions>
@@ -22,4 +18,8 @@
         <label><!-- ValidateRevenueRecognitionTreatments --></label>
         <name>blng__ValidateRevenueRecognitionTreatments</name>
     </webLinks>
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>GL 処理</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>GL Treatment Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Credit and Debit Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>名前</nameFieldLabel>
 </CustomObjectTranslation>

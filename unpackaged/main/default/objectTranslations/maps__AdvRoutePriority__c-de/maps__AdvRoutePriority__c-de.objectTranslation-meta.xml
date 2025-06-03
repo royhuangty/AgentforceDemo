@@ -40,14 +40,6 @@
         <plural>true</plural>
         <value>Maps Advanced-Routenprioritäten</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Priority Layout</layout>
@@ -56,5 +48,13 @@
             <section>Filters</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Maps Advanced-Routenpriorität</nameFieldLabel>
 </CustomObjectTranslation>

@@ -40,17 +40,6 @@
         <plural>true</plural>
         <value><!-- Genehmigungsbedingungen --></value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Approval Condition Layout</layout>
@@ -72,4 +61,15 @@
         <errorMessage><!-- You must provide a value for either Tested Field or Tested Variable. --></errorMessage>
         <name>sbaa__Tested_Target_Validation</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

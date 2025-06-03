@@ -4,21 +4,6 @@
         <plural>false</plural>
         <value>プロセス入力</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Process Input Layout</layout>
         <sections>
@@ -31,4 +16,19 @@
         <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
         <name>SBQQ__ProductFieldAndOperatorSet</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

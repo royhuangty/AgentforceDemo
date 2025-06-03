@@ -40,11 +40,6 @@
         <plural>true</plural>
         <value>Arbeitsregeleinträgen</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Resource Availability Layout</layout>
@@ -59,4 +54,9 @@
         <label><!-- Field Service - Service Resource Availability --></label>
         <name>FSL__Gap_Rule_Service</name>
     </recordTypes>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

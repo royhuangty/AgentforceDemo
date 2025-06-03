@@ -4,14 +4,14 @@
         <plural>false</plural>
         <value>インポート列</value>
     </caseValues>
-    
-    
-    
-    
-    
     <nameFieldLabel>列の名前</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Column Index must start from 1. --></errorMessage>
         <name>SBQQ__Column_index_must_start_from_1</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

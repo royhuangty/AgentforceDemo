@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Timeline Configuration Layout</layout>
         <sections>
@@ -45,4 +27,22 @@
         <errorMessage><!-- External Objects cannot be used in the timeline. Timeline supports standard and custom objects only. --></errorMessage>
         <name>bmpyrckt__No_External_Objects_Allowed</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

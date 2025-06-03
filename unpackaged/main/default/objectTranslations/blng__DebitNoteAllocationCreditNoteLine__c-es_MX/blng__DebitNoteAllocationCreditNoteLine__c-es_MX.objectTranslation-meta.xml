@@ -8,29 +8,6 @@
         <plural>true</plural>
         <value>Asignaciones de nota de débito (Partida de nota de crédito)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
@@ -43,5 +20,28 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Asignación de nota de débito (Partida de</nameFieldLabel>
 </CustomObjectTranslation>

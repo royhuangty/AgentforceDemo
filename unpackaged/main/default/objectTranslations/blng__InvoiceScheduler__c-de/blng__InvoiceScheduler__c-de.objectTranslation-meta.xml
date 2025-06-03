@@ -40,22 +40,6 @@
         <plural>true</plural>
         <value>Rechnungsplanungen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Invoice Scheduler Layout</layout>
@@ -68,5 +52,21 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Rechnungsplanung</nameFieldLabel>
 </CustomObjectTranslation>

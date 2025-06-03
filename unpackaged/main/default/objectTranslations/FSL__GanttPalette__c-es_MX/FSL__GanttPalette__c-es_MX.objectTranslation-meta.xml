@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Paletas de Gantt</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nombre de paleta de gantt</nameFieldLabel>
     <sharingReasons>
@@ -23,4 +18,9 @@
         <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
         <name>FSL__Color_Level_validation</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

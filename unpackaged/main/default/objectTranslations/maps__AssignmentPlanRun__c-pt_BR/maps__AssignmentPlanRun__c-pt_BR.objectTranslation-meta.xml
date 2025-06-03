@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Execuções de plano de atribuição de mapas</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Assignment Plan Run</layout>
@@ -40,5 +24,21 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome da execução do plano de atribuição </nameFieldLabel>
 </CustomObjectTranslation>

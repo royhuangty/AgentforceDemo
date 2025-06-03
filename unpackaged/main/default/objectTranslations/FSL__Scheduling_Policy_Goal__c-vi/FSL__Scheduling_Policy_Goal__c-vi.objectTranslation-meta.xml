@@ -8,13 +8,13 @@
         <plural>true</plural>
         <value><!-- Mục Tiêu Chính Sách Lập Kế Hoạch --></value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>Tên Mục Tiêu Chính Sách Lên Lịch</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

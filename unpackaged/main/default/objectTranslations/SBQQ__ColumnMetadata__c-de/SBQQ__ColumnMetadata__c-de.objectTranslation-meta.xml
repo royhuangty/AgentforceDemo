@@ -40,15 +40,15 @@
         <plural>true</plural>
         <value>Spaltenmetadaten</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Spalten-Metadatennummer</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Field Column Size cannot be less than 67. --></errorMessage>
         <name>SBQQ__ValidateMinimumPixelSize</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

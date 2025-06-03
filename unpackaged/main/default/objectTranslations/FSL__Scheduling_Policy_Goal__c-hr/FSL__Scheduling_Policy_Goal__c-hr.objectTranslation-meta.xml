@@ -60,14 +60,14 @@
         <plural>true</plural>
         <value>Ciljevima politike raspoređivanja</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Naziv cilja politike raspoređivanja</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

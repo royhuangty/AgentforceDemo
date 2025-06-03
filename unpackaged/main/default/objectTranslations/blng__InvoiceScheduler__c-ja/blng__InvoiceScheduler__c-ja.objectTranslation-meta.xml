@@ -4,22 +4,6 @@
         <plural>false</plural>
         <value>請求書スケジューラ</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Invoice Scheduler Layout</layout>
         <sections>
@@ -31,5 +15,21 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>請求書スケジューラ名</nameFieldLabel>
 </CustomObjectTranslation>

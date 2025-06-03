@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value><!-- Chính Sách Lên Lịch --></value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>Tên Chính Sách Lên Lịch</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
@@ -29,4 +21,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

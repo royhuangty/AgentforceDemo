@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Einstein Agent Helpers</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Einstein Agent Helper Layout</layout>
         <sections>
@@ -29,5 +19,15 @@
             <section>Rule</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

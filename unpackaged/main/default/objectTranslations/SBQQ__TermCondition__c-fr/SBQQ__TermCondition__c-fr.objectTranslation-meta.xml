@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Conditions de la durée</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>N° de condition</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -26,4 +19,11 @@
         <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

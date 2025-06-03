@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Vrije dagen route Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -26,5 +16,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Naam vrije dagen route Maps Advanced</nameFieldLabel>
 </CustomObjectTranslation>

@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>SDO - Campaign Default</layout>
         <sections>
@@ -106,4 +96,14 @@
         <label><!-- Send_Single_Pardot_Email --></label>
         <name>pi__Send_Single_Pardot_Email</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

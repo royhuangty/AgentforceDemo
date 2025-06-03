@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Dépendances de rendez-vous</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom de la dépendance de rendez-vous</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -36,4 +31,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

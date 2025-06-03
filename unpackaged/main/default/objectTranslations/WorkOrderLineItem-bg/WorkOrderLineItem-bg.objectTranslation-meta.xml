@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Crew Managment Lightbox --></label>
         <name>FSL__CrewManagment_Lightbox</name>
@@ -28,4 +24,8 @@
         <label><!-- SendEmail --></label>
         <name>SendEmail</name>
     </quickActions>
+    
+    
+    
+    
 </CustomObjectTranslation>

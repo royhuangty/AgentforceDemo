@@ -4,26 +4,6 @@
         <plural>false</plural>
         <value>Maps デバッグログ</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Debug Log Layout</layout>
         <sections>
@@ -39,5 +19,25 @@
             <section>Related Records</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>名前</nameFieldLabel>
 </CustomObjectTranslation>

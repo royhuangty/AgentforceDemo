@@ -8,31 +8,6 @@
         <plural>true</plural>
         <value>Allocations de note de débit (ligne de facture)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Debit Note Allocation Layout</layout>
@@ -45,6 +20,31 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Chiffre de répartition</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

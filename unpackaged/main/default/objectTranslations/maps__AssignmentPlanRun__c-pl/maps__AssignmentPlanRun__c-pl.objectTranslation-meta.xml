@@ -60,22 +60,6 @@
         <plural>true</plural>
         <value>Uruchomieniach planu przypisania Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Assignment Plan Run</layout>
@@ -92,5 +76,21 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nazwa uruchomienia planu przypisania Map</nameFieldLabel>
 </CustomObjectTranslation>

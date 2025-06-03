@@ -4,22 +4,6 @@
         <plural>false</plural>
         <value>免税証明書</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Tax Exemption Certificate Layout</layout>
         <sections>
@@ -35,5 +19,21 @@
             <section>Tax Certificate Details</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>免税証明書名</nameFieldLabel>
 </CustomObjectTranslation>

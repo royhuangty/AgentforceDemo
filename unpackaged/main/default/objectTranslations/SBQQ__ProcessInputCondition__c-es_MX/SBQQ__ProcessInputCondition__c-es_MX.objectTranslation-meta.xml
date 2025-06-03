@@ -8,12 +8,6 @@
         <plural>true</plural>
         <value>Condiciones de entrada de proceso</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Process Input Condition Layout</layout>
@@ -22,5 +16,11 @@
             <section>Filter Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de condiciones de entrada de proc</nameFieldLabel>
 </CustomObjectTranslation>

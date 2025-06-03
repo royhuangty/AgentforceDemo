@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Regras de configuração</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nº da regra</nameFieldLabel>
     <validationRules>
@@ -32,4 +22,14 @@
         <errorMessage><!-- The maximum supported Bundle Level is 1. --></errorMessage>
         <name>SBQQ__Ensure_supported_nested_level</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

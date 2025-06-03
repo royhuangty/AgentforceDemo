@@ -1,31 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <quickActions>
         <label><!-- Complete Task --></label>
         <name>inov8__Complete_Task</name>
@@ -38,4 +12,30 @@
         <errorMessage><!-- End Date must be after Start Date. --></errorMessage>
         <name>inov8__Task_start_date_less_than_end_date</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

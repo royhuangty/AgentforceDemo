@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Condition Level only supported for Validation, Alert and Selection product rules. --></errorMessage>
         <name>SBQQ__Ensure_rule_type_nested_level</name>
@@ -22,4 +12,14 @@
         <errorMessage><!-- The maximum supported Bundle Level is 1. --></errorMessage>
         <name>SBQQ__Ensure_supported_nested_level</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

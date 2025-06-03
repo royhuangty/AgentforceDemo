@@ -4,14 +4,14 @@
         <plural>false</plural>
         <value>列メタデータ</value>
     </caseValues>
-    
-    
-    
-    
-    
     <nameFieldLabel>列メタデータ番号</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Field Column Size cannot be less than 67. --></errorMessage>
         <name>SBQQ__ValidateMinimumPixelSize</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

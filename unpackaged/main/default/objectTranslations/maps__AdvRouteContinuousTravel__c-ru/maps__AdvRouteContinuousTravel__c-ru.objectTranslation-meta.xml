@@ -60,33 +60,6 @@
         <plural>true</plural>
         <value>Непрерывных движениях маршрута Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Maps Advanced Route Continuous Travel Layout</layout>
@@ -103,5 +76,32 @@
             <section>Travel Dates</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Имя непрерывного движения планировщика M</nameFieldLabel>
 </CustomObjectTranslation>

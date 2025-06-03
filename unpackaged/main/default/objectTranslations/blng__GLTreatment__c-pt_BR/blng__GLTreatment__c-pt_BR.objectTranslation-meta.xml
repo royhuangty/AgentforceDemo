@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Tratamentos de GL</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>GL Treatment Layout</layout>
@@ -24,5 +16,13 @@
             <section>Credit and Debit Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome</nameFieldLabel>
 </CustomObjectTranslation>

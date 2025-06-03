@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Gantt-paletten</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <nameFieldLabel>Naam van Gantt-palet</nameFieldLabel>
     <sharingReasons>
@@ -23,4 +18,9 @@
         <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
         <name>FSL__Color_Level_validation</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

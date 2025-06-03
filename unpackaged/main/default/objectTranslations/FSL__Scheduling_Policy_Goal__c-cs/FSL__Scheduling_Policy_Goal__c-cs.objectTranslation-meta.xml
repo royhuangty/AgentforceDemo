@@ -60,14 +60,14 @@
         <plural>true</plural>
         <value>Cílích zásad plánování</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Cílový název zásad pro plánování</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

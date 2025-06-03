@@ -8,23 +8,6 @@
         <plural>true</plural>
         <value>Tratamientos de reconocimiento de ingresos</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nombre</nameFieldLabel>
     <validationRules>
@@ -59,4 +42,21 @@
         <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
         <name>blng__Processing_Order_Cannot_be_negative</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

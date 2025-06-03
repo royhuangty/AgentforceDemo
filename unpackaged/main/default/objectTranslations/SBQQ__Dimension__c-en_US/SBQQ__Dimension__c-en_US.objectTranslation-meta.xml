@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Can’t create MDQ price dimensions for evergreen or renewable/evergreen products. --></errorMessage>
         <name>SBQQ__Cannot_Create_PriceDimension_Evergreen</name>
@@ -23,4 +8,19 @@
         <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

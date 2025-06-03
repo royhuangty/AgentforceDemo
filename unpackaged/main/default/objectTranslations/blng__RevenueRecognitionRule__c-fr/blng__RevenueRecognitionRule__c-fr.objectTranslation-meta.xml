@@ -8,10 +8,6 @@
         <plural>true</plural>
         <value>Règles de comptabilisation du revenu</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom</nameFieldLabel>
     <quickActions>
@@ -23,4 +19,8 @@
         <label><!-- ValidateRevenueRecognitionTreatments --></label>
         <name>blng__ValidateRevenueRecognitionTreatments</name>
     </webLinks>
+    
+    
+    
+    
 </CustomObjectTranslation>

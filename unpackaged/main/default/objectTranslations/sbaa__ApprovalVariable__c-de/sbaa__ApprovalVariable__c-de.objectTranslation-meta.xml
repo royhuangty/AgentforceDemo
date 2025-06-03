@@ -40,17 +40,6 @@
         <plural>true</plural>
         <value><!-- Genehmigungsvariablen --></value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Variablenname</nameFieldLabel>
     <validationRules>
@@ -61,4 +50,15 @@
         <errorMessage><!-- Values for Aggregate Field and Aggregate Function are required for Summary Variables --></errorMessage>
         <name>sbaa__Summary_Variable_Required_Fields</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

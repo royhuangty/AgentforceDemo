@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Scheduling Policies</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>Scheduling Policy Name</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
@@ -30,4 +22,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

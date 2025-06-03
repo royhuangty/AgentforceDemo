@@ -4,13 +4,13 @@
         <plural>false</plural>
         <value>排程原則目標</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>排程原則目標名稱</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

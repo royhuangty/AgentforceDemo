@@ -8,14 +8,14 @@
         <plural>true</plural>
         <value>Цели на правила за планиране</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Име на целта на правилата за планиране</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

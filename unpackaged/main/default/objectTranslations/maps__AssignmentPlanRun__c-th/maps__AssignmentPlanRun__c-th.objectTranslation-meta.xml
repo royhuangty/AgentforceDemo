@@ -4,22 +4,6 @@
         <plural>false</plural>
         <value>การเรียกใช้แผนการมอบหมายใน Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Assignment Plan Run</layout>
         <sections>
@@ -35,5 +19,21 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>ชื่อการเรียกใช้แผนการมอบหมายใน Maps</nameFieldLabel>
 </CustomObjectTranslation>

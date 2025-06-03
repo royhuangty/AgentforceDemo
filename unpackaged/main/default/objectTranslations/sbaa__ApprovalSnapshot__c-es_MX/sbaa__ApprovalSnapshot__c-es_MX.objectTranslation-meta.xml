@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Instantáneas de aprobación</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Approval Snapshot Layout</layout>
@@ -23,5 +16,12 @@
             <section>Approved Value Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nº de instantánea de aprobación</nameFieldLabel>
 </CustomObjectTranslation>

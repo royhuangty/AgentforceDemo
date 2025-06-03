@@ -4,13 +4,6 @@
         <plural>false</plural>
         <value>ประเภทของเอาต์พุตเส้นทางใน Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
         <sections>
@@ -18,5 +11,12 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>ชื่อประเภทของเอาต์พุตเส้นทางในแผนที่ขั้น</nameFieldLabel>
 </CustomObjectTranslation>

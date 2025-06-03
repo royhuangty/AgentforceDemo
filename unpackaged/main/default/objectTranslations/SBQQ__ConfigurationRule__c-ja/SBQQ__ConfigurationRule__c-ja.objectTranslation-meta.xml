@@ -4,16 +4,6 @@
         <plural>false</plural>
         <value>設定ルール</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>ルール番号</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Condition Level only supported for Validation, Alert and Selection product rules. --></errorMessage>
@@ -27,4 +17,14 @@
         <errorMessage><!-- The maximum supported Bundle Level is 1. --></errorMessage>
         <name>SBQQ__Ensure_supported_nested_level</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

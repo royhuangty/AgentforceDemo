@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <recordTypes>
         <description><!-- Configuration Attribute associated to a product --></description>
         <label><!-- Configuration Attribute --></label>
@@ -35,4 +18,21 @@
         <errorMessage><!-- Product is required. --></errorMessage>
         <name>SBQQ__Product_is_required_if_not_global</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

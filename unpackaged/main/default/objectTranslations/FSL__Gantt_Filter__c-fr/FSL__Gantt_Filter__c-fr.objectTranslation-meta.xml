@@ -8,21 +8,21 @@
         <plural>true</plural>
         <value>Filtres de Gantt</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du filtre de Gantt</nameFieldLabel>
     <sharingReasons>
         <label><!-- FSL Public Custom Filter --></label>
         <name>FSL__FSL_Public_Custom_Filter</name>
     </sharingReasons>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -8,21 +8,6 @@
         <plural>true</plural>
         <value>Preços contratados</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Número do preço do contratado</nameFieldLabel>
     <validationRules>
@@ -41,4 +26,19 @@
         <errorMessage><!-- You must specify either product or filter field --></errorMessage>
         <name>SBQQ__Product_or_filter_required</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

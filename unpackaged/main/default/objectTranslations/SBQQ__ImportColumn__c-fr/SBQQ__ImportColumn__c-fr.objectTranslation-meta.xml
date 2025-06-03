@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Colonnes d&#39;importation</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom de la colonne</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -20,4 +15,9 @@
         <errorMessage><!-- Column Index must start from 1. --></errorMessage>
         <name>SBQQ__Column_index_must_start_from_1</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

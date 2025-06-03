@@ -30,11 +30,6 @@
         <plural>true</plural>
         <value>Εξαρτήσεων ραντεβού</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Όνομα εξάρτησης ραντεβού</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -58,4 +53,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

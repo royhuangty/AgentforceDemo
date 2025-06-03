@@ -8,18 +8,6 @@
         <plural>true</plural>
         <value>Actions de produit</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Product Action Layout</layout>
@@ -34,4 +22,16 @@
         <errorMessage><!-- Value Attribute required since the Value Field is a global Configuration Attribute field. --></errorMessage>
         <name>SBQQ__Value_attr_required_if_global_field</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

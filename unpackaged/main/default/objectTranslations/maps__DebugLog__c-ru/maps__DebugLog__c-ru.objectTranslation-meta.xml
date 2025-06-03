@@ -60,26 +60,6 @@
         <plural>true</plural>
         <value>Журналах отладки Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Debug Log Layout</layout>
@@ -96,5 +76,25 @@
             <section>Related Records</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Имя</nameFieldLabel>
 </CustomObjectTranslation>

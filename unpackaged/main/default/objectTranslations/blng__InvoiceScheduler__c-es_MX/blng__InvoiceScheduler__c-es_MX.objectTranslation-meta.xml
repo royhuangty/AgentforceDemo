@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Programadores de facturas</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Invoice Scheduler Layout</layout>
@@ -36,5 +20,21 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de programador de facturas</nameFieldLabel>
 </CustomObjectTranslation>

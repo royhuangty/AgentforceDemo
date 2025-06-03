@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>计划策略</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>计划策略名称</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
@@ -25,4 +17,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

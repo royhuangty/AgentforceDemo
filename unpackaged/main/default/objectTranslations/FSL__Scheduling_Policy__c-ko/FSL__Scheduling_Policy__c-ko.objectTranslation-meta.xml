@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>일정 정책</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>일정 예약 정책 이름</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
@@ -25,4 +17,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

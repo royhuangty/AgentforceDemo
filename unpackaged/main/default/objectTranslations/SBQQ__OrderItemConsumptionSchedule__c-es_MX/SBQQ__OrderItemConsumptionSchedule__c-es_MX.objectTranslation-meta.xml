@@ -8,28 +8,6 @@
         <plural>true</plural>
         <value>Programaciones de consumo de productos de pedido</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Billing Order Product Consumption Schedule Layout</layout>
@@ -50,5 +28,27 @@
             <section>Tax Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de programación de consumo de pro</nameFieldLabel>
 </CustomObjectTranslation>

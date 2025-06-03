@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- You must enter either Discount, Price, or Discount Schedule. --></errorMessage>
         <name>SBQQ__Discount_or_price_required</name>
@@ -31,4 +16,19 @@
         <errorMessage><!-- You must specify either product or filter field --></errorMessage>
         <name>SBQQ__Product_or_filter_required</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -40,10 +40,6 @@
         <plural>true</plural>
         <value>Umsatzrealisierungsregeln</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Name</nameFieldLabel>
     <quickActions>
@@ -54,4 +50,8 @@
         <label><!-- ValidateRevenueRecognitionTreatments --></label>
         <name>blng__ValidateRevenueRecognitionTreatments</name>
     </webLinks>
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,14 +8,14 @@
         <plural>true</plural>
         <value>Scheduling Policy Objectives</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>Scheduling Policy Goal Name</nameFieldLabel>
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -4,25 +4,6 @@
         <plural>false</plural>
         <value>Maps ライブ運転者</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Live Driver Layout</layout>
         <sections>
@@ -30,5 +11,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps ライブ運転者名</nameFieldLabel>
 </CustomObjectTranslation>

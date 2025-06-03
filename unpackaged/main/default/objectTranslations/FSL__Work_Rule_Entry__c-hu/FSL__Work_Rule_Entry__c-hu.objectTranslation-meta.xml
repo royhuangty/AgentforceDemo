@@ -612,11 +612,6 @@
         <possessive>Second</possessive>
         <value>Munkaszabály-bejegyzések</value>
     </caseValues>
-    
-    
-    
-    
-    
     <layouts>
         <layout>Resource Availability Layout</layout>
         <sections>
@@ -630,5 +625,10 @@
         <label><!-- Field Service - Service Resource Availability --></label>
         <name>FSL__Gap_Rule_Service</name>
     </recordTypes>
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Traitements du Grand livre</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>GL Treatment Layout</layout>
@@ -24,6 +16,14 @@
             <section>Credit and Debit Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

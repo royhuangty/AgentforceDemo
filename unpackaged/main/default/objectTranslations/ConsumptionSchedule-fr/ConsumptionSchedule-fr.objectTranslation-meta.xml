@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Compact Layout --></label>
         <name>SBQQ__CompactLayout</name>
@@ -16,4 +11,9 @@
             <section>Salesforce Billing Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,25 +8,6 @@
         <plural>true</plural>
         <value>Conductores en vivo de Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Live Driver Layout</layout>
@@ -35,5 +16,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de conductor en vivo de Maps</nameFieldLabel>
 </CustomObjectTranslation>

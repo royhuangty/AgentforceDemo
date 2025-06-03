@@ -4,13 +4,13 @@
         <plural>false</plural>
         <value>เป้าหมายของนโยบายการจัดตารางเวลา</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>ชื่อเป้าหมายนโยบายการจัดตารางเวลา</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

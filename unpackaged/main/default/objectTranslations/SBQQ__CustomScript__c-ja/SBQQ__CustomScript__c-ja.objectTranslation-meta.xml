@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>カスタムスクリプト</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Custom Script Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Transpiling</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>スクリプト名</nameFieldLabel>
 </CustomObjectTranslation>

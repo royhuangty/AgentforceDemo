@@ -4,18 +4,6 @@
         <plural>false</plural>
         <value>サマリー変数</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Summary Variable Layout</layout>
         <sections>
@@ -27,5 +15,17 @@
             <section>Filter Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>変数名</nameFieldLabel>
 </CustomObjectTranslation>

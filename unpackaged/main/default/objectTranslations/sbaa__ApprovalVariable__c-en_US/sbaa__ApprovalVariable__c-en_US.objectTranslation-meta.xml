@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Values for List Variable and Net Variable are required for Discount Variables --></errorMessage>
         <name>sbaa__Discount_Variable_Required_Fields</name>
@@ -19,4 +8,15 @@
         <errorMessage><!-- Values for Aggregate Field and Aggregate Function are required for Summary Variables --></errorMessage>
         <name>sbaa__Summary_Variable_Required_Fields</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

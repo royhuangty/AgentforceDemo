@@ -4,18 +4,6 @@
         <plural>false</plural>
         <value>支払スケジューラ</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Payment Scheduler Layout</layout>
         <sections>
@@ -27,5 +15,17 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>支払スケジューラ名</nameFieldLabel>
 </CustomObjectTranslation>

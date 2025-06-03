@@ -4,21 +4,6 @@
         <plural>false</plural>
         <value>地图实时工作时间</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Live Working Hours Layout</layout>
         <sections>
@@ -26,5 +11,20 @@
             <section>Working Hours</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>地图实时工作时间名称</nameFieldLabel>
 </CustomObjectTranslation>

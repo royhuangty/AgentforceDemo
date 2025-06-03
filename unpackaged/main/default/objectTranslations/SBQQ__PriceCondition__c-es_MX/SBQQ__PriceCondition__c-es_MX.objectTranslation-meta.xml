@@ -8,20 +8,6 @@
         <plural>true</plural>
         <value>Condiciones de precios</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Price Condition Layout</layout>
@@ -47,4 +33,18 @@
         <errorMessage><!-- You must specify either field or tested variable. --></errorMessage>
         <name>SBQQ__Tested_field_or_variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

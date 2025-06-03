@@ -8,23 +8,6 @@
         <plural>true</plural>
         <value>Knowledge</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>SDO - Community Knowledge</layout>
         <sections>
@@ -108,5 +91,22 @@
         <label><!-- KCSArticle --></label>
         <name>SDO_Knowledge_KCSArticle</name>
     </recordTypes>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

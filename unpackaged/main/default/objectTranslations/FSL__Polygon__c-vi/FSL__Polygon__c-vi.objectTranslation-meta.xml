@@ -8,18 +8,18 @@
         <plural>true</plural>
         <value><!-- Hình Đa Giác Trên Bản Đồ --></value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>Tên Hình Đa Giác</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
         <name>FSL__Polygon_Color_HEX_Format</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

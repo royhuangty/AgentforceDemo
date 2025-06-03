@@ -4,18 +4,6 @@
         <plural>false</plural>
         <value>商品アクション</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Product Action Layout</layout>
         <sections>
@@ -28,4 +16,16 @@
         <errorMessage><!-- Value Attribute required since the Value Field is a global Configuration Attribute field. --></errorMessage>
         <name>SBQQ__Value_attr_required_if_global_field</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

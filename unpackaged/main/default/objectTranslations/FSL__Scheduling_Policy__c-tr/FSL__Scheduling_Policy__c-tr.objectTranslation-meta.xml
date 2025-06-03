@@ -216,14 +216,6 @@
         <possessive>Second</possessive>
         <value>Zamanlama Politikalarınızda</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>Zamanlama Politikası Adı</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
@@ -237,4 +229,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

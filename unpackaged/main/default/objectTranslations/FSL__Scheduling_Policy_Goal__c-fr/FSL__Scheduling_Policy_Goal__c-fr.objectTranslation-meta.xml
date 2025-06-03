@@ -8,10 +8,6 @@
         <plural>true</plural>
         <value>Objectifs de stratégie de planification</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom de l’objectif de la stratégie de pla</nameFieldLabel>
     <startsWith>Vowel</startsWith>
@@ -19,4 +15,8 @@
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

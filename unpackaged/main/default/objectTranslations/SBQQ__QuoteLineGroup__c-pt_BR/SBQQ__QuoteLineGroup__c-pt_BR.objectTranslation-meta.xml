@@ -8,27 +8,6 @@
         <plural>true</plural>
         <value>Grupos de linhas de cotação</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Line Editor --></label>
         <name>SBQQ__LineEditor</name>
@@ -43,4 +22,25 @@
         <label><!-- CalculateQuoteFromQuoteLineGroup --></label>
         <name>SBQQ__CalculateQuoteFromQuoteLineGroup</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

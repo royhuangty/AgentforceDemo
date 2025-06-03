@@ -60,19 +60,19 @@
         <plural>true</plural>
         <value>Mapách polygonu</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Název polygonu</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
         <name>FSL__Polygon_Color_HEX_Format</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

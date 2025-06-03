@@ -40,14 +40,6 @@
         <plural>true</plural>
         <value>Hauptbuchverfahren</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>GL Treatment Layout</layout>
@@ -56,5 +48,13 @@
             <section>Credit and Debit Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name</nameFieldLabel>
 </CustomObjectTranslation>

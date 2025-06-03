@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Tipi di output Percorso di Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
@@ -23,6 +16,13 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome tipo di output Percorso di Maps Adv</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

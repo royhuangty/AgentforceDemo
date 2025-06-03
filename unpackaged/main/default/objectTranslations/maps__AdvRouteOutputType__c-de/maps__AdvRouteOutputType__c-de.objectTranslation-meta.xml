@@ -40,13 +40,6 @@
         <plural>true</plural>
         <value>Maps Advanced-Routenausgabetypen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
@@ -55,5 +48,12 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name des Maps Advanced-Routenausgabetyps</nameFieldLabel>
 </CustomObjectTranslation>

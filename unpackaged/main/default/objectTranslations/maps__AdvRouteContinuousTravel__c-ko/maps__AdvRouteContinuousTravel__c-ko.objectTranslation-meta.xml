@@ -4,33 +4,6 @@
         <plural>false</plural>
         <value>Maps Advanced Route 지속 이동</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Continuous Travel Layout</layout>
         <sections>
@@ -46,5 +19,32 @@
             <section>Travel Dates</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Planner 연속 이동 이름</nameFieldLabel>
 </CustomObjectTranslation>

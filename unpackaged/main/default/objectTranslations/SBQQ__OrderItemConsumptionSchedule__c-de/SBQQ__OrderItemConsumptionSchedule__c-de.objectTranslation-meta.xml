@@ -40,28 +40,6 @@
         <plural>true</plural>
         <value>Auftragsposten-Verbrauchsregelungen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Billing Order Product Consumption Schedule Layout</layout>
@@ -82,5 +60,27 @@
             <section>Tax Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Auftragsposten-Verbrauchsregelu</nameFieldLabel>
 </CustomObjectTranslation>

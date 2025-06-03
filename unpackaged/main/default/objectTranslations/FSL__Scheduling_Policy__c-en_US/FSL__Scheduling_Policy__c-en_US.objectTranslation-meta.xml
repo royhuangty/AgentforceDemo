@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
         <name>FSL__Deny_Objectives_Negative_Weight</name>
@@ -20,4 +12,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

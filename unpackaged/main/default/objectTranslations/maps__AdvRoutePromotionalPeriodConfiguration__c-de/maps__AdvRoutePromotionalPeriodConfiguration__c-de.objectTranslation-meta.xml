@@ -40,14 +40,6 @@
         <plural>true</plural>
         <value>Maps Advanced-Sonderangebotszeitraum-Konfigurationen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
@@ -56,5 +48,13 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Maps Advanced-Sonderangebotszei</nameFieldLabel>
 </CustomObjectTranslation>

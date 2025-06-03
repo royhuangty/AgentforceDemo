@@ -30,14 +30,14 @@
         <plural>true</plural>
         <value>Mål för schemaläggningspolicy</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Neuter</gender>
     <nameFieldLabel>Namn på mål för schemaläggningspolicy</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

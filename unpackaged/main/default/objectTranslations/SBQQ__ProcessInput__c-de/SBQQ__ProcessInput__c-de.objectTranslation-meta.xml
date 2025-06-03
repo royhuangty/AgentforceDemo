@@ -40,21 +40,6 @@
         <plural>true</plural>
         <value>Prozesseingaben</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Process Input Layout</layout>
@@ -68,4 +53,19 @@
         <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
         <name>SBQQ__ProductFieldAndOperatorSet</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

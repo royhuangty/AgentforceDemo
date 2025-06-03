@@ -30,22 +30,6 @@
         <plural>true</plural>
         <value>Maps-tildelingsplankørsler</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Assignment Plan Run</layout>
@@ -62,5 +46,21 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Navn på Maps-tildelingsplankørsel</nameFieldLabel>
 </CustomObjectTranslation>

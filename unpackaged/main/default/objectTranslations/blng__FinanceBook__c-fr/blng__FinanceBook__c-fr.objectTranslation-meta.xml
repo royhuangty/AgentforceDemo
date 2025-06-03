@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Livres de financement</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du livre de finance</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -20,4 +15,9 @@
         <label><!-- Create_Finance_Periods --></label>
         <name>blng__Create_Finance_Periods</name>
     </webLinks>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

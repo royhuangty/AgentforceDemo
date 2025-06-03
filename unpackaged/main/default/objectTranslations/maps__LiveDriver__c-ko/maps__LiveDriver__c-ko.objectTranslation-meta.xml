@@ -4,25 +4,6 @@
         <plural>false</plural>
         <value>Maps 라이브 운전자</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Live Driver Layout</layout>
         <sections>
@@ -30,5 +11,24 @@
             <section>Driver Telematics Alerts</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps 실시간 운전자 이름</nameFieldLabel>
 </CustomObjectTranslation>

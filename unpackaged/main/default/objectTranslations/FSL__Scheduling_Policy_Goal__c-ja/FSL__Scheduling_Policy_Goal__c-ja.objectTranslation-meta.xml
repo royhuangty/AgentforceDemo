@@ -4,13 +4,13 @@
         <plural>false</plural>
         <value>スケジュールポリシーの目的</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>スケジュールポリシー内容名</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

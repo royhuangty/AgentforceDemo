@@ -40,27 +40,6 @@
         <plural>true</plural>
         <value>Gruppen von Angebotsbelegposten</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Line Editor --></label>
         <name>SBQQ__LineEditor</name>
@@ -75,4 +54,25 @@
         <label><!-- CalculateQuoteFromQuoteLineGroup --></label>
         <name>SBQQ__CalculateQuoteFromQuoteLineGroup</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

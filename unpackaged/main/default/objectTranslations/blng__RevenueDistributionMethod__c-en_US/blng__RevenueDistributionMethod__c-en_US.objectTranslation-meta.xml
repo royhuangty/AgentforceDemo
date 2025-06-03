@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Cannot select Manual on Revenue Schedule Term Start Date or Revenue Schedule End Date when Revenue Transaction Creation Process is Automatic --></errorMessage>
         <name>blng__CannotSpecifyRevDatesifTransTypeAutomati</name>
@@ -58,4 +48,14 @@
         <errorMessage><!-- Term Start Date  is required when Distribution Method = Monthly / Daily --></errorMessage>
         <name>blng__TermStartDateIsRequired</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

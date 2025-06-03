@@ -8,19 +8,6 @@
         <plural>true</plural>
         <value>Níveis de preço</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Price Tier Layout</layout>
@@ -29,5 +16,18 @@
             <section>Price Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do nível</nameFieldLabel>
 </CustomObjectTranslation>

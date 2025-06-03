@@ -48,14 +48,14 @@
         <plural>true</plural>
         <value>Obiectivelor politicilor de programare</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Neuter</gender>
     <nameFieldLabel>Nume obiectiv politică de programare</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

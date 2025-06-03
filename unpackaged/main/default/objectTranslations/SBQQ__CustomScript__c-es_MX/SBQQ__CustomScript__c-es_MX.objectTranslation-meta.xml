@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Secuencias de comandos personalizadas</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Custom Script Layout</layout>
@@ -24,5 +16,13 @@
             <section>Transpiling</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de secuencia de comandos</nameFieldLabel>
 </CustomObjectTranslation>

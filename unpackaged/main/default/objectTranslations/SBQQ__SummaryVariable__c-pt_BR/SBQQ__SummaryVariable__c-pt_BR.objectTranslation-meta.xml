@@ -8,18 +8,6 @@
         <plural>true</plural>
         <value>Variáveis de resumo</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Summary Variable Layout</layout>
@@ -32,5 +20,17 @@
             <section>Filter Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome da variável</nameFieldLabel>
 </CustomObjectTranslation>

@@ -40,11 +40,6 @@
         <plural>true</plural>
         <value>Gantt-Paletten</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Name der Gantt-Palette</nameFieldLabel>
     <sharingReasons>
@@ -55,4 +50,9 @@
         <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
         <name>FSL__Color_Level_validation</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -40,22 +40,6 @@
         <plural>true</plural>
         <value>Umsatzvereinbarungen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>RevenueAgreement Layout</layout>
@@ -64,5 +48,21 @@
             <section>Revenue Amount Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Umsatzvereinbarung</nameFieldLabel>
 </CustomObjectTranslation>

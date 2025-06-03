@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Dias de folga de rota de mapas avançados</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -26,5 +16,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome dos dias de folga de rota do Maps A</nameFieldLabel>
 </CustomObjectTranslation>

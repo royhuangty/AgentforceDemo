@@ -40,19 +40,6 @@
         <plural>true</plural>
         <value>Preisklassen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Price Tier Layout</layout>
@@ -61,5 +48,18 @@
             <section>Price Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Klasse</nameFieldLabel>
 </CustomObjectTranslation>

@@ -4,16 +4,6 @@
         <plural>false</plural>
         <value>地图高级路线休息日</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
         <sections>
@@ -21,5 +11,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced 路线休息日名称</nameFieldLabel>
 </CustomObjectTranslation>

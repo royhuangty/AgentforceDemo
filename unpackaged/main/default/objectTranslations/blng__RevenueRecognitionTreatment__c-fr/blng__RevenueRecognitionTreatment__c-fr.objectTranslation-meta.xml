@@ -8,23 +8,6 @@
         <plural>true</plural>
         <value>Traitements comptable de chiffre d&#39;affaires</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -60,4 +43,21 @@
         <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
         <name>blng__Processing_Order_Cannot_be_negative</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

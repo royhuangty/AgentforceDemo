@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Prioridades de Rutas de Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Priority Layout</layout>
@@ -24,5 +16,13 @@
             <section>Filters</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de Prioridad de Ruta de Maps Adva</nameFieldLabel>
 </CustomObjectTranslation>

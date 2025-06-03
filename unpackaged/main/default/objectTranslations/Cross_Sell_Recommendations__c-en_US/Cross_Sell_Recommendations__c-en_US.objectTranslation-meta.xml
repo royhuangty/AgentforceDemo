@@ -8,16 +8,16 @@
         <plural>true</plural>
         <value>Cross-SellRecommendations</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- Cannot have the product as part of its own recommendation --></errorMessage>
         <name>impossible_recommendation_on_itself</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -4,21 +4,6 @@
         <plural>false</plural>
         <value>価格ディメンション</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>ディメンション名</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Can’t create MDQ price dimensions for evergreen or renewable/evergreen products. --></errorMessage>
@@ -28,4 +13,19 @@
         <label><!-- Translate --></label>
         <name>SBQQ__Translate</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

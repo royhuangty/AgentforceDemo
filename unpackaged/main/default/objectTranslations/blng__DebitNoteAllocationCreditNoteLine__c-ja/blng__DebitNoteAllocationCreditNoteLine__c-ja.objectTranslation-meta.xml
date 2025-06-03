@@ -4,29 +4,6 @@
         <plural>false</plural>
         <value>デビットノート割り当て (クレジットノート品目)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
         <sections>
@@ -38,5 +15,28 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>デビットノート割り当て (クレジットノート品目)</nameFieldLabel>
 </CustomObjectTranslation>

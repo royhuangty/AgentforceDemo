@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- Can&apos;t edit the FSLDemoTools Master data --></errorMessage>
         <name>FSLDemoTools_Fields</name>
@@ -20,4 +12,12 @@
         <errorMessage><!-- Cannot save Service Territory Member of type secondary with Operating Hours or Address --></errorMessage>
         <name>FSL__Secondary_STM</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

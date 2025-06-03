@@ -4,13 +4,6 @@
         <plural>false</plural>
         <value>契約条件</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>条件番号</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- You may not select both field and variable to test. Create separate conditions to test against field and variable. --></errorMessage>
@@ -20,4 +13,11 @@
         <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

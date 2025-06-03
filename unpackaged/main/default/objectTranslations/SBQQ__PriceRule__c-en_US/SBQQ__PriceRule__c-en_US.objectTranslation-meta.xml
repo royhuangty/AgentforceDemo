@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <webLinks>
         <label><!-- CloneWithRelated --></label>
         <name>SBQQ__CloneWithRelated</name>
@@ -18,4 +8,14 @@
         <label><!-- CloneWithRelatedClassic --></label>
         <name>SBQQ__CloneWithRelatedClassic</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

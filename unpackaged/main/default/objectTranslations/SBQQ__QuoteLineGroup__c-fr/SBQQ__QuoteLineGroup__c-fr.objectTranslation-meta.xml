@@ -8,27 +8,6 @@
         <plural>true</plural>
         <value>Groupes de ligne de devis</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <fieldSets>
         <label><!-- Line Editor --></label>
         <name>SBQQ__LineEditor</name>
@@ -44,4 +23,25 @@
         <label><!-- CalculateQuoteFromQuoteLineGroup --></label>
         <name>SBQQ__CalculateQuoteFromQuoteLineGroup</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

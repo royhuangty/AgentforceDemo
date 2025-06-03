@@ -8,18 +8,6 @@
         <plural>true</plural>
         <value>Programadores de pagamentos</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Payment Scheduler Layout</layout>
@@ -32,5 +20,17 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do agendador de pagamento</nameFieldLabel>
 </CustomObjectTranslation>

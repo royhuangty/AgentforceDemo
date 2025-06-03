@@ -4,19 +4,6 @@
         <plural>false</plural>
         <value>価格層</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Price Tier Layout</layout>
         <sections>
@@ -24,5 +11,18 @@
             <section>Price Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>階層名</nameFieldLabel>
 </CustomObjectTranslation>

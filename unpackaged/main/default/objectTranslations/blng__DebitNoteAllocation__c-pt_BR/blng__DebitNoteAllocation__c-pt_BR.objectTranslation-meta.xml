@@ -8,31 +8,6 @@
         <plural>true</plural>
         <value>Alocações de nota de débito (Linha de fatura)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Debit Note Allocation Layout</layout>
@@ -45,5 +20,30 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Número da alocação</nameFieldLabel>
 </CustomObjectTranslation>

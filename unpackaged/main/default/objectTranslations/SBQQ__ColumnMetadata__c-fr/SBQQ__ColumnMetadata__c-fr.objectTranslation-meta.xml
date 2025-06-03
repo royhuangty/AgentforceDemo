@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Métadonnées de colonne</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nombre de métadonnées de colonne</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -20,4 +15,9 @@
         <errorMessage><!-- Field Column Size cannot be less than 67. --></errorMessage>
         <name>SBQQ__ValidateMinimumPixelSize</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

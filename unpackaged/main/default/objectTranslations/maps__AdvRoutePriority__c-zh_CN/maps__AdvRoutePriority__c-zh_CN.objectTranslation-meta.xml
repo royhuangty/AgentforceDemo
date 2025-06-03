@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>地图高级路线优先级</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Route Priority Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Filters</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced 路线优先级名称</nameFieldLabel>
 </CustomObjectTranslation>

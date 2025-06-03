@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Formats d&#39;importation</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>N° de format d&#39;importation</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -20,4 +15,9 @@
         <errorMessage><!-- More than 1 unique key defined in Import Column. --></errorMessage>
         <name>SBQQ__Num_Unique_Key_is_not_one</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

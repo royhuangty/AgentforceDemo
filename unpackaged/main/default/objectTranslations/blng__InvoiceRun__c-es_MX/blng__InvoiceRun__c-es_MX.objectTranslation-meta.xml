@@ -8,19 +8,6 @@
         <plural>true</plural>
         <value>Ejecuciones de facturas</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Invoice Run Layout</layout>
@@ -38,4 +25,17 @@
         <label><!-- Post_All_Invoices --></label>
         <name>blng__Post_All_Invoices</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

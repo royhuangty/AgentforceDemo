@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>スケジュールポリシー</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>スケジュールポリシー名</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Policy objectives weight can not be negative --></errorMessage>
@@ -25,4 +17,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,19 +8,6 @@
         <plural>true</plural>
         <value>Actions de prix</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Price Action Layout</layout>
@@ -39,4 +26,17 @@
         <errorMessage><!-- Price Action Target Object does not match Evaluation Scope --></errorMessage>
         <name>SBQQ__Target_Object_Validation</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

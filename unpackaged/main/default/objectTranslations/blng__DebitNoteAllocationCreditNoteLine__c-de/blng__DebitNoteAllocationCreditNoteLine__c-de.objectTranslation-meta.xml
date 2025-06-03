@@ -40,29 +40,6 @@
         <plural>true</plural>
         <value>Belastungsanzeigezuordnungen (Gutschriftsanzeigeposten)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Debit Note Allocation (Credit Note Line) Layout</layout>
@@ -75,5 +52,28 @@
             <section>Tax Rules and Treatments</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Belastungsanzeigezuordnung (Gutschriftsa</nameFieldLabel>
 </CustomObjectTranslation>

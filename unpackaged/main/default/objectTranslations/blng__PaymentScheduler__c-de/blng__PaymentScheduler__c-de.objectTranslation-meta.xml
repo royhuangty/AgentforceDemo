@@ -40,18 +40,6 @@
         <plural>true</plural>
         <value>Zahlungsplanungen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Payment Scheduler Layout</layout>
@@ -64,5 +52,17 @@
             <section>Weekly Configuration</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name der Zahlungsplanung</nameFieldLabel>
 </CustomObjectTranslation>

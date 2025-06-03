@@ -4,11 +4,6 @@
         <plural>false</plural>
         <value>팔레트</value>
     </caseValues>
-    
-    
-    
-    
-    
     <nameFieldLabel>Gantt 팔레트 이름</nameFieldLabel>
     <sharingReasons>
         <label><!-- FSL Public Gantt Palette --></label>
@@ -18,4 +13,9 @@
         <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
         <name>FSL__Color_Level_validation</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

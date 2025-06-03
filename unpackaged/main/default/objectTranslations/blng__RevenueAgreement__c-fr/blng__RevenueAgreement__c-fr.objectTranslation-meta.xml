@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Accords sur le chiffre d&#39;affaires</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>RevenueAgreement Layout</layout>
@@ -32,6 +16,22 @@
             <section>Revenue Amount Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom de l’accord sur les revenus</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

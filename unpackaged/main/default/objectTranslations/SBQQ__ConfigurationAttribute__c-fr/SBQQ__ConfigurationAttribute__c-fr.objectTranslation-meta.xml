@@ -8,23 +8,6 @@
         <plural>true</plural>
         <value>Attribut de configuration</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom de l&#39;attribut</nameFieldLabel>
     <recordTypes>
@@ -46,4 +29,21 @@
         <errorMessage><!-- Product is required. --></errorMessage>
         <name>SBQQ__Product_is_required_if_not_global</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

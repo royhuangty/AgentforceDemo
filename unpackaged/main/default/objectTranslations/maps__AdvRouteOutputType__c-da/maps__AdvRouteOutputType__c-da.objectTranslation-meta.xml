@@ -30,13 +30,6 @@
         <plural>true</plural>
         <value>Maps Advanced Route-outputtyper</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
@@ -45,5 +38,12 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced Route-outputtypenavn</nameFieldLabel>
 </CustomObjectTranslation>

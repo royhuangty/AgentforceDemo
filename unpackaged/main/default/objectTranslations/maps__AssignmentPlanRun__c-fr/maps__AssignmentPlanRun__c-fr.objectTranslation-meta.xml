@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Exécutions de plan d&#39;attribution Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Assignment Plan Run</layout>
@@ -40,6 +24,22 @@
             <section>Run Statistics</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom de l&#39;exécution du plan d&#39;attribution</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

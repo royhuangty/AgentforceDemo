@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Condiciones</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nº de condición</nameFieldLabel>
     <validationRules>
@@ -25,4 +18,11 @@
         <errorMessage><!-- You must select either field or variable to test. --></errorMessage>
         <name>SBQQ__Field_or_Variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

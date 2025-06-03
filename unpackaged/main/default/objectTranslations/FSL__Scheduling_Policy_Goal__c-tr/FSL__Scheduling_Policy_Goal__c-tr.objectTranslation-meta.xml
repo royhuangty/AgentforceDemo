@@ -216,13 +216,13 @@
         <possessive>Second</possessive>
         <value>Zamanlama Politikası Hedeflerinizde</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>Zamanlama Politikası Hedef Adı</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

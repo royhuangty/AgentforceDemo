@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Installed QBrixes</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>xDO_InstalledQBrixLayout</layout>
         <sections>
@@ -26,5 +19,12 @@
             <section>QBrix Module Name</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

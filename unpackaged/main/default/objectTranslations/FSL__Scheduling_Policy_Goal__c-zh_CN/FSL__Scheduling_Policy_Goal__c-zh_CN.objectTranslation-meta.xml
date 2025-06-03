@@ -4,13 +4,13 @@
         <plural>false</plural>
         <value>计划策略目标</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>计划策略目标名称</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

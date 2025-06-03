@@ -4,14 +4,6 @@
         <plural>false</plural>
         <value>地图高级促销期配置</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
         <sections>
@@ -19,5 +11,13 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Maps Advanced 促销期配置名称</nameFieldLabel>
 </CustomObjectTranslation>

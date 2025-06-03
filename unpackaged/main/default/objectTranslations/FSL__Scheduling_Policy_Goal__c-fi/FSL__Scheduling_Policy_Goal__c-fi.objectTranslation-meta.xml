@@ -396,13 +396,13 @@
         <possessive>Second</possessive>
         <value>Ajoituskäytännön tavoitteitasi</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>Ajoituskäytännön tavoitteen nimi</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

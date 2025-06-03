@@ -8,21 +8,6 @@
         <plural>true</plural>
         <value>Prix contractés</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Numéro du prix contracté</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -42,4 +27,19 @@
         <errorMessage><!-- You must specify either product or filter field --></errorMessage>
         <name>SBQQ__Product_or_filter_required</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

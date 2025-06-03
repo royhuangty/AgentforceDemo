@@ -8,10 +8,6 @@
         <plural>true</plural>
         <value>Sources de mise à niveau</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom de la source</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -19,4 +15,8 @@
         <errorMessage><!-- Conversion Rate must be represented as a ratio of the format &quot;Upgrade Source:Upgrade Product&quot;. --></errorMessage>
         <name>SBQQ__Conversion_Rate_Must_Fit_Ratio_Format</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

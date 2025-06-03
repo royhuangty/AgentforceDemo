@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Uitvoertypen route Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Maps Advanced Route Output Type Layout</layout>
@@ -23,5 +16,12 @@
             <section>Field Mappings</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Naam uitvoertype route Maps Advanced</nameFieldLabel>
 </CustomObjectTranslation>

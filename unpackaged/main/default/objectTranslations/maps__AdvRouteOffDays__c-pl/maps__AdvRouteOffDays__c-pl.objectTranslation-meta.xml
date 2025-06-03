@@ -60,16 +60,6 @@
         <plural>true</plural>
         <value>Wolnych dniach Zaawansowanych tras Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Maps Advanced Route Off Days Layout</layout>
@@ -78,5 +68,15 @@
             <section>Date Range</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nazwa dni wolnych tras Maps Advanced</nameFieldLabel>
 </CustomObjectTranslation>

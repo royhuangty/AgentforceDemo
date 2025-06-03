@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value><!-- Bảng Màu Gantt --></value>
     </caseValues>
-    
-    
-    
-    
-    
     <nameFieldLabel>Tên Bảng Màu Gantt</nameFieldLabel>
     <sharingReasons>
         <label><!-- FSL Public Gantt Palette --></label>
@@ -22,4 +17,9 @@
         <errorMessage><!-- Color level value cannot be less than 4 or greater than 15 --></errorMessage>
         <name>FSL__Color_Level_validation</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

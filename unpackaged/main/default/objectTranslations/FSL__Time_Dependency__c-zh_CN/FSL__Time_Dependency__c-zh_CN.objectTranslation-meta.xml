@@ -4,11 +4,6 @@
         <plural>false</plural>
         <value>预约依赖性</value>
     </caseValues>
-    
-    
-    
-    
-    
     <nameFieldLabel>预约依赖性名称</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Select a dependency type. --></errorMessage>
@@ -30,4 +25,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

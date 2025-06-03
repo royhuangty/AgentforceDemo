@@ -60,26 +60,6 @@
         <plural>true</plural>
         <value>Zaawansowanych trasach Maps</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Route Layout</layout>
@@ -92,5 +72,25 @@
             <section>Route Date/Time</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nazwa trasy Maps Advanced</nameFieldLabel>
 </CustomObjectTranslation>

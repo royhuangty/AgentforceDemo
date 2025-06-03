@@ -8,21 +8,6 @@
         <plural>true</plural>
         <value>Exécutions de paiement</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom de l’exécution de paiement</nameFieldLabel>
     <startsWith>Vowel</startsWith>
@@ -30,4 +15,19 @@
         <label><!-- CleanUpPaymentRun --></label>
         <name>blng__CleanUpPaymentRun</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

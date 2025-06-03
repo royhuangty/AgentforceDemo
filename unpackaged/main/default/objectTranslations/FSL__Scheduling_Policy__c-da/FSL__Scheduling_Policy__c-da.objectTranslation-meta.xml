@@ -30,14 +30,6 @@
         <plural>true</plural>
         <value>Planlægningspolitikker</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Navn på planlægningspolitik</nameFieldLabel>
     <validationRules>
@@ -52,4 +44,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

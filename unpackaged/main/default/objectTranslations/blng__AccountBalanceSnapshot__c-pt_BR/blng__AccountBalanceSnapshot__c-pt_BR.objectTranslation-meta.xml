@@ -8,31 +8,6 @@
         <plural>true</plural>
         <value>Instantâneos de saldo da conta</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Account Balance Snapshot Layout</layout>
@@ -49,5 +24,30 @@
             <section>Invoice Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do instantâneo do saldo da conta</nameFieldLabel>
 </CustomObjectTranslation>

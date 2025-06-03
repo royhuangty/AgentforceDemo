@@ -60,14 +60,14 @@
         <plural>true</plural>
         <value>Cieľoch metódy plánovania</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Názov cieľa metódy plánovania</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

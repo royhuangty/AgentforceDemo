@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Approval Condition Layout</layout>
         <sections>
@@ -30,4 +19,15 @@
         <errorMessage><!-- You must provide a value for either Tested Field or Tested Variable. --></errorMessage>
         <name>sbaa__Tested_Target_Validation</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

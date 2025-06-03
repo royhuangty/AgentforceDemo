@@ -40,14 +40,6 @@
         <plural>true</plural>
         <value>Planungsrichtlinien</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Name der Planungsrichtlinie</nameFieldLabel>
     <validationRules>
@@ -62,4 +54,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,26 +8,6 @@
         <plural>true</plural>
         <value>Lignes de remboursement (paiement)</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Numéro de ligne de remboursement</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -35,4 +15,24 @@
         <errorMessage><!-- We can not modify the Refund Amount --></errorMessage>
         <name>blng__Rule_on_Refund_Amount</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Acordos de receita</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>RevenueAgreement Layout</layout>
@@ -32,5 +16,21 @@
             <section>Revenue Amount Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do acordo de receita</nameFieldLabel>
 </CustomObjectTranslation>

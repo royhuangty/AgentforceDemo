@@ -40,14 +40,14 @@
         <plural>true</plural>
         <value>Planungsrichtlinienzielen</value>
     </caseValues>
-    
-    
-    
-    
     <gender>Neuter</gender>
     <nameFieldLabel>Name des Planungsrichtlinienziels</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Weight can&apos;t have zero value --></errorMessage>
         <name>FSL__Not_Zero</name>
     </validationRules>
+    
+    
+    
+    
 </CustomObjectTranslation>

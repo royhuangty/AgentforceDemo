@@ -48,16 +48,6 @@
         <plural>true</plural>
         <value>Obiectivelor serviciilor</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>ASAP Layout</layout>
@@ -174,4 +164,14 @@
         <errorMessage><!-- Resource Priority Field should not be empty --></errorMessage>
         <name>FSL__Resource_Priority_Not_Null</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

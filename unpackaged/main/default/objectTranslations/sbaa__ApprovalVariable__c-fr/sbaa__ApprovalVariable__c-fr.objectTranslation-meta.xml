@@ -8,17 +8,6 @@
         <plural>true</plural>
         <value>Variables d’approbation</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Nom de la variable</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -30,4 +19,15 @@
         <errorMessage><!-- Values for Aggregate Field and Aggregate Function are required for Summary Variables --></errorMessage>
         <name>sbaa__Summary_Variable_Required_Fields</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

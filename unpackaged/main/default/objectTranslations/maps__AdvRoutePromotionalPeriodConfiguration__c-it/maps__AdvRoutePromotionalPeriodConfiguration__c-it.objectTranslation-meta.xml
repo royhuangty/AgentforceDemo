@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Configurazioni periodo promozione di Maps Advanced</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Maps Advanced Promotional Period Config Layout</layout>
@@ -24,6 +16,14 @@
             <section>Default Values</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome configurazione periodo promozione d</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

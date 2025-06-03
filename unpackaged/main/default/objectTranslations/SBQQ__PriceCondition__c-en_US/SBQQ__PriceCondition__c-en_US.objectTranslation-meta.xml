@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Price Condition Layout</layout>
         <sections>
@@ -37,4 +23,18 @@
         <errorMessage><!-- You must specify either field or tested variable. --></errorMessage>
         <name>SBQQ__Tested_field_or_variable</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -4,10 +4,6 @@
         <plural>false</plural>
         <value>収益認識ルール</value>
     </caseValues>
-    
-    
-    
-    
     <nameFieldLabel>名前</nameFieldLabel>
     <quickActions>
         <label><!-- Validate Revenue Recognition Treatments --></label>
@@ -17,4 +13,8 @@
         <label><!-- ValidateRevenueRecognitionTreatments --></label>
         <name>blng__ValidateRevenueRecognitionTreatments</name>
     </webLinks>
+    
+    
+    
+    
 </CustomObjectTranslation>

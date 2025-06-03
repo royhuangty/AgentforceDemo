@@ -8,15 +8,6 @@
         <plural>true</plural>
         <value>Polygones de carte</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du polygone</nameFieldLabel>
     <startsWith>Consonant</startsWith>
@@ -24,4 +15,13 @@
         <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
         <name>FSL__Polygon_Color_HEX_Format</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

@@ -8,14 +8,6 @@
         <plural>true</plural>
         <value>Правила за планиране</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <nameFieldLabel>Име на правилата за планиране</nameFieldLabel>
     <validationRules>
@@ -30,4 +22,12 @@
         <label><!-- test2 --></label>
         <name>FSL__test2</name>
     </webLinks>
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

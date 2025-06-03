@@ -8,31 +8,6 @@
         <plural>true</plural>
         <value>Instantanés du solde du compte</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Account Balance Snapshot Layout</layout>
@@ -49,6 +24,31 @@
             <section>Invoice Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nom d’instantané du solde du compte</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

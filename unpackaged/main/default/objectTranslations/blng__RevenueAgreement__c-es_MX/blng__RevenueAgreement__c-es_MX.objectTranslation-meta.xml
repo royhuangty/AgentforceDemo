@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Acuerdos de ingresos</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>RevenueAgreement Layout</layout>
@@ -32,5 +16,21 @@
             <section>Revenue Amount Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nombre de acuerdo de ingresos</nameFieldLabel>
 </CustomObjectTranslation>

@@ -8,12 +8,6 @@
         <plural>true</plural>
         <value>Bundle Items</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- The quantity offered must be greater than zero --></errorMessage>
@@ -23,4 +17,10 @@
         <errorMessage><!-- Cannot have the bundle source product as part of its own bundle !!! --></errorMessage>
         <name>avoid_items_on_itself</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

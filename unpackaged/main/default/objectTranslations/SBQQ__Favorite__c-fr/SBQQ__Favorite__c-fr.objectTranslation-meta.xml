@@ -8,13 +8,13 @@
         <plural>true</plural>
         <value>Favoris</value>
     </caseValues>
-    
-    
-    
     <fieldSets>
         <label><!-- FavoritesManager --></label>
         <name>SBQQ__FavoritesManager</name>
     </fieldSets>
+    
+    
+    
     <gender>Masculine</gender>
     <nameFieldLabel>Nom du favori</nameFieldLabel>
     <startsWith>Consonant</startsWith>

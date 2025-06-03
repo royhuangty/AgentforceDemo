@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <validationRules>
         <errorMessage><!-- If Revenue Schedule Creation is not Order Product Activation, Revenue Agreement Association must be “Not Applicable” or “Manual” --></errorMessage>
         <name>blng__AGREEMENT_ASSOC_VALIDONLYFOROPACTIVATION</name>
@@ -49,4 +32,21 @@
         <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
         <name>blng__Processing_Order_Cannot_be_negative</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

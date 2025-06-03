@@ -40,22 +40,6 @@
         <plural>true</plural>
         <value>Steuerbefreiungszertifikaten</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Tax Exemption Certificate Layout</layout>
@@ -72,5 +56,21 @@
             <section>Tax Certificate Details</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name des Steuerbefreiungszertifikats</nameFieldLabel>
 </CustomObjectTranslation>

@@ -4,17 +4,6 @@
         <plural>false</plural>
         <value>承認変数</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>変数名</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Values for List Variable and Net Variable are required for Discount Variables --></errorMessage>
@@ -24,4 +13,15 @@
         <errorMessage><!-- Values for Aggregate Field and Aggregate Function are required for Summary Variables --></errorMessage>
         <name>sbaa__Summary_Variable_Required_Fields</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

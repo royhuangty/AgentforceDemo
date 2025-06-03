@@ -40,29 +40,6 @@
         <plural>true</plural>
         <value>Weiterleitbaren Objekten der Maps Advanced-Route</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Maps Advanced Route Routable Object Layout</layout>
@@ -75,5 +52,28 @@
             <section>Promo Windows</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Name des weiterleitbaren Objekts der Map</nameFieldLabel>
 </CustomObjectTranslation>

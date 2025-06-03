@@ -8,22 +8,6 @@
         <plural>true</plural>
         <value>Certificados de isenção fiscal</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Tax Exemption Certificate Layout</layout>
@@ -40,5 +24,21 @@
             <section>Tax Certificate Details</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nome do certificado de isenção de impost</nameFieldLabel>
 </CustomObjectTranslation>

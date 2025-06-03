@@ -8,16 +8,6 @@
         <plural>true</plural>
         <value>Tujuan Layanan</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>ASAP Layout</layout>
         <sections>
@@ -133,4 +123,14 @@
         <errorMessage><!-- Resource Priority Field should not be empty --></errorMessage>
         <name>FSL__Resource_Priority_Not_Null</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

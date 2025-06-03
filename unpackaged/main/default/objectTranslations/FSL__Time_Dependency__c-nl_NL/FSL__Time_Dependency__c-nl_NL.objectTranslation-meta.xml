@@ -8,11 +8,6 @@
         <plural>true</plural>
         <value>Afhankelijkheden van afspraken</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Naam van afhankelijkheid van afspraak</nameFieldLabel>
     <validationRules>
@@ -35,4 +30,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

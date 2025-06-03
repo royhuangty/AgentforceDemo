@@ -48,11 +48,6 @@
         <plural>true</plural>
         <value>Intrărilor de regulă de lucru</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Resource Availability Layout</layout>
@@ -67,4 +62,9 @@
         <label><!-- Field Service - Service Resource Availability --></label>
         <name>FSL__Gap_Rule_Service</name>
     </recordTypes>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

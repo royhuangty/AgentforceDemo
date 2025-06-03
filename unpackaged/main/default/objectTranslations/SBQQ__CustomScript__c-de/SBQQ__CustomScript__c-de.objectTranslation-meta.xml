@@ -40,14 +40,6 @@
         <plural>true</plural>
         <value>Benutzerdefinierten Skripts</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Neuter</gender>
     <layouts>
         <layout>Custom Script Layout</layout>
@@ -56,5 +48,13 @@
             <section>Transpiling</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Skriptname</nameFieldLabel>
 </CustomObjectTranslation>

@@ -4,18 +4,18 @@
         <plural>false</plural>
         <value>地図の多角形</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <nameFieldLabel>多角形の名前</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Polygon color must be in hexadecimal format: (for example: #ffffff) --></errorMessage>
         <name>FSL__Polygon_Color_HEX_Format</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

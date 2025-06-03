@@ -40,13 +40,6 @@
         <plural>true</plural>
         <value><!-- Genehmigungs-Snapshots --></value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
     <gender>Masculine</gender>
     <layouts>
         <layout>Approval Snapshot Layout</layout>
@@ -55,5 +48,12 @@
             <section>Approved Value Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Nummer des Genehmigungs-Snapshot</nameFieldLabel>
 </CustomObjectTranslation>

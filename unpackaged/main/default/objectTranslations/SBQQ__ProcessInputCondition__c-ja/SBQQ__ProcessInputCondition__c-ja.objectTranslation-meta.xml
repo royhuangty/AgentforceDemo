@@ -4,12 +4,6 @@
         <plural>false</plural>
         <value>プロセス入力条件</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Process Input Condition Layout</layout>
         <sections>
@@ -17,5 +11,11 @@
             <section>Filter Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>プロセス入力条件名</nameFieldLabel>
 </CustomObjectTranslation>

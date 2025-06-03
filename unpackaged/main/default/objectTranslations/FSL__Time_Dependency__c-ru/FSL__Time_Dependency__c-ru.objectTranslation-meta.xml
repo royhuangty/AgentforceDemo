@@ -60,11 +60,6 @@
         <plural>true</plural>
         <value>Зависимостях встречи</value>
     </caseValues>
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <nameFieldLabel>Имя зависимости встречи</nameFieldLabel>
     <validationRules>
@@ -87,4 +82,9 @@
         <errorMessage><!-- It is not allowed to change any of the service appointments in the relationship --></errorMessage>
         <name>FSL__Service_Appointment_2_Not_Changed</name>
     </validationRules>
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

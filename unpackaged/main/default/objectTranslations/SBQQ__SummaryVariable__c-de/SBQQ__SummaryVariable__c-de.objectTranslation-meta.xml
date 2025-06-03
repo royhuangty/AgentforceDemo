@@ -40,18 +40,6 @@
         <plural>true</plural>
         <value>Zusammenfassungsvariablen</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <gender>Feminine</gender>
     <layouts>
         <layout>Summary Variable Layout</layout>
@@ -64,5 +52,17 @@
             <section>Filter Information</section>
         </sections>
     </layouts>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <nameFieldLabel>Variablenname</nameFieldLabel>
 </CustomObjectTranslation>

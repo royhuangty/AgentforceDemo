@@ -8,23 +8,6 @@
         <plural>true</plural>
         <value>Demo Milestones and Exercises</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <recordTypes>
         <label><!-- Exercise --></label>
         <name>Exercise</name>
@@ -33,5 +16,22 @@
         <label><!-- Milestone --></label>
         <name>Milestone</name>
     </recordTypes>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
